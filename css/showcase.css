@@ -39,7 +39,7 @@ header {
       display: inline-block;
       margin: 8px; }
       header ul li a {
-        color: #00cb3f;
+        color: #EF4C4F;
         text-decoration: none;
         transition: .2s; }
         header ul li a:hover {
@@ -65,14 +65,14 @@ header {
   .hero a {
     font-size: 20px;
     cursor: pointer;
-    color: #00cb3f;
+    color: #EF4C4F;
     font-weight: 600;
     padding: 0.75em 1.25em;
     border-radius: 5px;
-    border: 1px solid #00cb3f;
+    border: 1px solid #EF4C4F;
     transition: .2s; }
     .hero a:hover {
-      background: #00cb3f;
+      background: #EF4C4F;
       color: #fff;
       box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22); }
   .hero img {
