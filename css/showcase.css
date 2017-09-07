@@ -35,6 +35,8 @@ header {
     color: #31363A;
     padding: 0;
     margin: 0; }
+    header ul #logo {
+      margin-bottom: 10px; }
     header ul li {
       display: inline-block;
       margin: 8px; }
@@ -46,11 +48,11 @@ header {
           color: #2D2D2D; }
 
 .hero {
-  padding-top: 40px;
+  padding-top: 20px;
   position: relative;
   z-index: 1; }
   .hero .upper {
-    padding-bottom: 80px; }
+    margin-bottom: 50px; }
   .hero h1 {
     font-size: 48px;
     margin-bottom: 0;
@@ -61,7 +63,7 @@ header {
     font-size: 20px;
     color: #899095;
     padding-top: 10px;
-    padding-bottom: 60px; }
+    padding-bottom: 40px; }
   .hero a {
     font-size: 20px;
     cursor: pointer;
