@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+$color: #31363A;
+$w: #fff;
+$blue: #4B89FB;
+$bg: #FAF9F8;
+$darkbg: #2D2D2D;
+$special: #EF4C4F;
+
+html, body {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  color: $color;
+  width: 100vw;
+  height: 100%;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+h1, h2{
+  font-family: inherit;
+}
+
+body {
+  background: $w;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  padding: 40px 0;
+  position: relative;
+  z-index: 1;
+
+  ul {
+    list-style-type: none;
+    color: $color;
+    padding: 0;
+    margin: 0;
+
+  #logo {
+    margin-bottom: 10px;
+  }
+
+    li {
+      display: inline-block;
+      margin: 8px;
+      a {
+        color: $special;
+        text-decoration: none;
+        transition: .2s;
+
+        &:hover{
+          color: $darkbg;
+        }
+      }
+    }
+  }
+}
+
+.hero{
+  padding-top: 20px;
+  position: relative;
+  z-index: 1;
+
+  .upper{
+    margin-bottom: 50px;
+  }
+
+  h1{
+    font-size: 48px;
+    margin-bottom: 0;
+    font-weight: 900;
+  }
+
+  p{
+    width: 66.666%;
+    margin: 0 auto;
+    font-size: 20px;
+    color: #899095;
+    padding-top: 10px;
+    padding-bottom: 40px;
+  }
+
+  a{
+    font-size: 20px;
+    cursor: pointer;
+    color: $special;
+    font-weight: 600;
+    padding: 0.75em 1.25em;
+    border-radius: 5px;
+    border: 1px solid $special;
+    transition: .2s;
+
+    &:hover{
+      background: $special;
+      color: $w;
+      box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+    }
+  }
+
+  img{
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+}
+
+.features{
+  padding-top: 80px;
+  position: relative;
+  z-index: 1;
+  min-height: 50vh;
+  max-height: auto;
+  width: 100%;
+  background: $bg;
+
+  h2, p{
+    text-align: left;
+  }
+}
+
+.pm{
+  height: 50vh;
+  width: 100%;
+  background: $darkbg;
+}
+
+footer{
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  background: #171717;
+  height: 20vh;
+  width: 100%;
+
+  p{
+    color: $w;
+  }
+
+  .emoji{
+    font-size: 4rem;
+    color: $w;
+  }
+
+  .copyright{
+    color: #fff;
+    opacity: .4;
+
+    a{
+      color: $w;
+      opacity: 1;
+    }
+  }
+
+  &:hover{
+    text-decoration:none;
+  }
+}
+
+.top{
+  z-index: 20;
+}

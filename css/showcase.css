@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Lato");
+html, body {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  color: #31363A;
+  width: 100vw;
+  height: 100%; }
+
+* {
+  box-sizing: border-box; }
+
+h1, h2 {
+  font-family: inherit; }
+
+body {
+  background: #fff;
+  width: 100%;
+  height: 100%; }
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center; }
+
+header {
+  width: 100%;
+  padding: 40px 0;
+  position: relative;
+  z-index: 1; }
+  header ul {
+    list-style-type: none;
+    color: #31363A;
+    padding: 0;
+    margin: 0; }
+    header ul #logo {
+      margin-bottom: 10px; }
+    header ul li {
+      display: inline-block;
+      margin: 8px; }
+      header ul li a {
+        color: #EF4C4F;
+        text-decoration: none;
+        transition: .2s; }
+        header ul li a:hover {
+          color: #2D2D2D; }
+
+.hero {
+  padding-top: 20px;
+  position: relative;
+  z-index: 1; }
+  .hero .upper {
+    margin-bottom: 50px; }
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 0;
+    font-weight: 900; }
+  .hero p {
+    width: 66.666%;
+    margin: 0 auto;
+    font-size: 20px;
+    color: #899095;
+    padding-top: 10px;
+    padding-bottom: 40px; }
+  .hero a {
+    font-size: 20px;
+    cursor: pointer;
+    color: #EF4C4F;
+    font-weight: 600;
+    padding: 0.75em 1.25em;
+    border-radius: 5px;
+    border: 1px solid #EF4C4F;
+    transition: .2s; }
+    .hero a:hover {
+      background: #EF4C4F;
+      color: #fff;
+      box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22); }
+  .hero img {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.features {
+  padding-top: 80px;
+  position: relative;
+  z-index: 1;
+  min-height: 50vh;
+  max-height: auto;
+  width: 100%;
+  background: #FAF9F8; }
+  .features h2, .features p {
+    text-align: left; }
+
+.pm {
+  height: 50vh;
+  width: 100%;
+  background: #2D2D2D; }
+
+footer {
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  background: #171717;
+  height: 20vh;
+  width: 100%; }
+  footer p {
+    color: #fff; }
+  footer .emoji {
+    font-size: 4rem;
+    color: #fff; }
+  footer .copyright {
+    color: #fff;
+    opacity: .4; }
+    footer .copyright a {
+      color: #fff;
+      opacity: 1; }
+  footer:hover {
+    text-decoration: none; }
+
+.top {
+  z-index: 20; }

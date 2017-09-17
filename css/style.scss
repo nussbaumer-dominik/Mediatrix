@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+$color: #31363A;
+$main: #EF4C4F;
+$darkbg: #2D2D2D;
+
+//traffic-light color
+$ampel: #333;
+$color1: #FF0000; //red
+$color2: #FFFF00; //yellow
+$color3: #00FF00; //green
+
+html, body {
+  height: 100%;
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #fff;
+  color: black;
+  font-size: 16px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.wrap {
+  width: 100%;
+  height: 100vh;
+  background: white;
+  overflow: hidden;
+
+  .circle {
+    background: $main;
+    position: absolute;
+    overflow: hidden;
+    height: 10000px;
+    width: 10000px;
+    top: -9097px;
+    border-radius: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+  }
+}
+  header {
+    width: 100%;
+    padding: 40px 0 0 0;
+    position: absolute;
+    bottom: 78vh;
+
+    ul {
+      list-style-type: none;
+      color: white;
+      padding: 0;
+      margin: 0;
+
+    #logo {
+      margin-bottom: 10px;
+    }
+
+    li {
+      display: inline-block;
+      margin: 8px;
+      a {
+        color: $color;
+        text-decoration: none;
+        transition: .2s;
+
+        &:hover{
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.landing {
+  padding-top: 20px;
+  position: absolute;
+  width: 100%;
+  bottom: -20.2vh;
+
+  .upper {
+    margin-bottom: 50px;
+  }
+
+  h1 {
+    font-size: 48px;
+    margin-bottom: 0;
+    font-weight: 900;
+    color: white;
+  }
+
+  p {
+    width: 66.666%;
+    margin: 0 auto;
+    font-size: 20px;
+    color: #f3f3f3;
+    padding-top: 10px;
+    padding-bottom: 40px;
+  }
+
+  img{
+  }
+
+  a {
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    padding: 0.75em 1.25em;
+    border-radius: 5px;
+    border: 1px solid white;
+    transition: .2s;
+
+    &:hover {
+      background: white;
+      color: $main;
+    }
+  }
+}
+
+.features {
+  position: relative;
+  height: 50vh;
+  width: 100%;
+}
+
+.status {
+  position: relative;
+  height: 50vh;
+  width: 100%;
+  margin: 0 auto;
+
+  .ampel {
+    position: relative;
+    display: block;
+    left: 50%;
+    top: 50%;
+    margin-left: -60px;
+    margin-top: -160px;
+    background-color: $ampel;
+    width: 120px;
+    height: 320px;
+    border-radius: 30px;
+  }
+
+  input {
+    //remove default style
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    position: relative;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    top: 20px;
+    margin-left: -40px;
+    background-color: grey;
+    vertical-align: middle;
+    border-radius: 100%;
+    display: block;
+  }
+}
+
+#color1 {
+  background-color: darken($color1, 15%);
+  //animation: blink1 1s step-end infinite;
+}
+
+#color2 {
+  background-color: darken($color2, 15%);
+  //animation: blink1 1s step-end infinite;
+}
+
+#color3 {
+  //background-color: darken($color3, 15%);
+  animation: blink3 1s step-end infinite;
+}
+
+
+@keyframes blink1 {
+  0% {
+    background-color: $color1;
+  }
+
+  50% {
+    background-color: darken($color1,15%);
+  }
+}
+
+@keyframes blink2 {
+  0% {
+    background-color: $color2;
+  }
+
+  50% {
+    background-color: darken($color2,15%);
+  }
+}
+
+@keyframes blink3 {
+  0% {
+    background-color: $color3;
+  }
+
+  50% {
+    background-color: darken($color3,15%);
+  }
+}
