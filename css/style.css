@@ -4,7 +4,8 @@ html, body {
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   background: #fff;
-  color: black; }
+  color: black;
+  font-size: 16px; }
 
 body {
   overflow-x: hidden; }
@@ -13,12 +14,16 @@ body {
   box-sizing: border-box; }
 
 .container {
-  max-width: 980px;
+  width: 980px;
+  max-width: 90%;
   margin: 0 auto;
   text-align: center; }
+  @media (max-width: 40em) {
+    .container {
+      width: 120vw; } }
 
 .wrap {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: white;
   overflow: hidden; }
@@ -32,12 +37,22 @@ body {
     border-radius: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, 0); }
+    @media (max-width: 40em) {
+      .wrap .circle {
+        position: relative;
+        height: 100%;
+        top: 0;
+        border-radius: 0; } }
 
 header {
   width: 100%;
   padding: 40px 0 0 0;
   position: absolute;
-  bottom: 78vh; }
+  bottom: 7.7%; }
+  @media (max-width: 40em) {
+    header {
+      position: relative;
+      bottom: 20px; } }
   header ul {
     list-style-type: none;
     color: white;
@@ -60,37 +75,66 @@ header {
   position: absolute;
   width: 100%;
   bottom: -20.2vh; }
+  @media (max-width: 40em) {
+    .landing {
+      bottom: 5vh;
+      position: relative; } }
   .landing .upper {
     margin-bottom: 50px; }
+    @media (max-width: 40em) {
+      .landing .upper {
+        margin-bottom: 35px; } }
   .landing h1 {
-    font-size: 48px;
-    margin-bottom: 0;
     font-weight: 900;
     color: white; }
+  @media (max-width: 40em) {
+    .landing img {
+      width: 80vw; } }
   .landing p {
     width: 66.666%;
+    height: auto;
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 1.2rem;
     color: #f3f3f3;
-    padding-top: 10px;
-    padding-bottom: 40px; }
+    padding-bottom: 40px;
+    line-height: 1.9; }
+    @media (max-width: 40em) {
+      .landing p {
+        padding-bottom: 0;
+        line-height: 1.7; } }
   .landing a {
     font-size: 20px;
     cursor: pointer;
     color: white;
     font-weight: 600;
-    padding: 0.75em 1.25em;
+    padding: 0.70em 1.20em;
     border-radius: 5px;
-    border: 1px solid white;
+    border: 2px solid white;
     transition: .2s; }
+    @media (max-width: 40em) {
+      .landing a {
+        display: none; } }
     .landing a:hover {
       background: white;
       color: #EF4C4F; }
+
+.columns p {
+  line-height: 1.9; }
 
 .features {
   position: relative;
   height: 50vh;
   width: 100%; }
+  @media (max-width: 40em) {
+    .features {
+      height: auto;
+      margin-top: 20px; } }
+  @media (min-width: 40em) {
+    .features {
+      margin-top: 22%; } }
+  @media (min-width: 90em) {
+    .features {
+      margin-top: 0; } }
 
 .status {
   position: relative;
@@ -100,28 +144,47 @@ header {
   .status .ampel {
     position: relative;
     display: block;
-    left: 50%;
-    top: 50%;
-    margin-left: -60px;
-    margin-top: -160px;
+    margin: 0 auto;
     background-color: #333;
     width: 120px;
     height: 320px;
     border-radius: 30px; }
+    @media (max-width: 40em) {
+      .status .ampel {
+        width: 80px;
+        height: 200px;
+        border-radius: 20px; } }
   .status input {
     -webkit-appearance: none;
     -moz-appearance: none;
     position: relative;
-    left: 50%;
     width: 80px;
     height: 80px;
     line-height: 80px;
     top: 20px;
-    margin-left: -40px;
+    margin-left: 20px;
     background-color: grey;
     vertical-align: middle;
     border-radius: 100%;
     display: block; }
+    @media (max-width: 40em) {
+      .status input {
+        width: 40px;
+        height: 40px;
+        top: 25px; } }
+
+.approve {
+  position: relative;
+  height: 50vh;
+  width: 100%;
+  margin: 0 auto; }
+  .approve .mair {
+    border-radius: 50%;
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+    background-image: url("../images/Mair.jpg");
+    background-size: cover; }
 
 #color1 {
   background-color: #b30000; }

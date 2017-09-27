@@ -6,9 +6,27 @@ $darkbg: #2D2D2D;
 
 //traffic-light color
 $ampel: #333;
-$color1: #FF0000;//red
-$color2: #FFFF00;//yellow
-$color3: #00FF00;//green
+$color1: #FF0000; //red
+$color2: #FFFF00; //yellow
+$color3: #00FF00; //green
+
+//Breakpoints
+$breakpoints: (
+  md: 40em,
+  lg: 90em
+);
+
+@mixin break($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+@mixin breaksm($size) {
+  @media (max-width: map-get($breakpoints, $size) ) {
+    @content;
+  }
+}
 
 html, body {
   height: 100%;
@@ -16,6 +34,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   background: #fff;
   color: black;
+  font-size: 16px;
 }
 
 body {
@@ -27,13 +46,18 @@ body {
 }
 
 .container {
-  max-width: 980px;
+  width: 980px;
+  max-width: 90%;
   margin: 0 auto;
   text-align: center;
+
+  @include breaksm(md) {
+    width: 120vw;
+  }
 }
 
 .wrap {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: white;
   overflow: hidden;
@@ -48,13 +72,25 @@ body {
     border-radius: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
+
+    @include breaksm(md) {
+      position: relative;
+      height: 100%;
+      top: 0;
+      border-radius: 0;
+    }
   }
 }
   header {
     width: 100%;
     padding: 40px 0 0 0;
     position: absolute;
-    bottom: 78vh;
+    bottom: 7.7%;
+
+    @include breaksm(md) {
+      position: relative;
+      bottom: 20px;
+    }
 
     ul {
       list-style-type: none;
@@ -69,6 +105,7 @@ body {
     li {
       display: inline-block;
       margin: 8px;
+
       a {
         color: $color;
         text-decoration: none;
@@ -88,27 +125,43 @@ body {
   width: 100%;
   bottom: -20.2vh;
 
+  @include breaksm(md) {
+    bottom: 5vh;
+    position: relative;
+  }
+
   .upper {
     margin-bottom: 50px;
+
+    @include breaksm(md) {
+      margin-bottom: 35px;
+    }
   }
 
   h1 {
-    font-size: 48px;
-    margin-bottom: 0;
     font-weight: 900;
     color: white;
   }
 
-  p {
-    width: 66.666%;
-    margin: 0 auto;
-    font-size: 20px;
-    color: #f3f3f3;
-    padding-top: 10px;
-    padding-bottom: 40px;
+  img {
+    @include breaksm(md) {
+      width: 80vw;
+    }
   }
 
-  img{
+  p {
+    width: 66.666%;
+    height: auto;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #f3f3f3;
+    padding-bottom: 40px;
+    line-height: 1.9;
+
+    @include breaksm(md) {
+      padding-bottom: 0;
+      line-height: 1.7;
+    }
   }
 
   a {
@@ -116,10 +169,14 @@ body {
     cursor: pointer;
     color: white;
     font-weight: 600;
-    padding: 0.75em 1.25em;
+    padding: 0.70em 1.20em;
     border-radius: 5px;
-    border: 1px solid white;
+    border: 2px solid white;
     transition: .2s;
+
+    @include breaksm(md) {
+      display: none;
+    }
 
     &:hover {
       background: white;
@@ -128,10 +185,30 @@ body {
   }
 }
 
+.columns {
+
+  p {
+    line-height: 1.9;
+  }
+}
+
 .features {
   position: relative;
   height: 50vh;
   width: 100%;
+
+  @include breaksm(md) {
+    height: auto;
+    margin-top: 20px;
+  }
+
+  @include break(md) {
+    margin-top: 22%;
+  }
+
+  @include break(lg) {
+    margin-top: 0;
+  }
 }
 
 .status {
@@ -143,14 +220,17 @@ body {
   .ampel {
     position: relative;
     display: block;
-    left: 50%;
-    top: 50%;
-    margin-left: -60px;
-    margin-top: -160px;
+    margin: 0 auto;
     background-color: $ampel;
     width: 120px;
     height: 320px;
     border-radius: 30px;
+
+    @include breaksm(md) {
+      width: 80px;
+      height: 200px;
+      border-radius: 20px;
+    }
   }
 
   input {
@@ -158,18 +238,38 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
 
-    //make the traffic lights appear
     position: relative;
-    left: 50%;
     width: 80px;
     height: 80px;
     line-height: 80px;
     top: 20px;
-    margin-left: -40px;
+    margin-left: 20px;
     background-color: grey;
     vertical-align: middle;
     border-radius: 100%;
     display: block;
+
+    @include breaksm(md) {
+      width: 40px;
+      height: 40px;
+      top: 25px;
+    }
+  }
+}
+
+.approve {
+  position: relative;
+  height: 50vh;
+  width: 100%;
+  margin: 0 auto;
+
+  .mair{
+    border-radius: 50%;
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+    background-image: url("../images/Mair.jpg");
+    background-size: cover;
   }
 }
 
