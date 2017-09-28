@@ -25,34 +25,34 @@ body {
 .wrap {
   width: 100%;
   height: 100vh;
-  background: white;
-  overflow: hidden; }
+  background: white; }
   .wrap .circle {
     background: #EF4C4F;
-    position: absolute;
+    position: relative;
     overflow: hidden;
-    height: 10000px;
-    width: 10000px;
-    top: -9097px;
-    border-radius: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0); }
+    height: 100%;
+    width: 100%; }
+  .wrap .curve_white {
+    position: absolute;
+    margin: auto;
+    left: -2px;
+    right: -2px;
+    bottom: 0;
+    display: block;
+    height: 180px;
+    background-image: url(../images/bg-waves-white.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    transform: rotateY(180deg); }
     @media (max-width: 40em) {
-      .wrap .circle {
-        position: relative;
-        height: 100%;
-        top: 0;
-        border-radius: 0; } }
+      .wrap .curve_white {
+        display: none; } }
 
 header {
   width: 100%;
   padding: 40px 0 0 0;
-  position: absolute;
-  bottom: 7.7%; }
-  @media (max-width: 40em) {
-    header {
-      position: relative;
-      bottom: 20px; } }
+  position: relative; }
   header ul {
     list-style-type: none;
     color: white;
@@ -72,25 +72,14 @@ header {
 
 .landing {
   padding-top: 20px;
-  position: absolute;
-  width: 100%;
-  bottom: -20.2vh; }
-  @media (max-width: 40em) {
-    .landing {
-      bottom: 5vh;
-      position: relative; } }
+  position: relative;
+  width: 100%; }
   .landing .upper {
     margin-bottom: 50px; }
-    @media (max-width: 40em) {
-      .landing .upper {
-        margin-bottom: 35px; } }
   .landing h1 {
     font-weight: 900;
     font-size: 48px;
     color: white; }
-  @media (max-width: 40em) {
-    .landing img {
-      width: 80vw; } }
   .landing p {
     width: 66.666%;
     height: auto;
@@ -102,7 +91,11 @@ header {
     @media (max-width: 40em) {
       .landing p {
         padding-bottom: 0;
-        line-height: 1.7; } }
+        line-height: 1.7;
+        width: 95%; } }
+  @media (max-width: 40em) {
+    .landing img {
+      width: 80vw; } }
   .landing a {
     font-size: 20px;
     cursor: pointer;
@@ -130,13 +123,7 @@ header {
   @media (max-width: 40em) {
     .features {
       height: auto;
-      margin-top: 20px; } }
-  @media (min-width: 40em) and (max-height: 768px) {
-    .features {
-      margin-top: 22%; } }
-  @media (min-width: 90em) {
-    .features {
-      margin-top: 0; } }
+      padding: 50px 0; } }
 
 .team {
   margin-bottom: 100px; }
