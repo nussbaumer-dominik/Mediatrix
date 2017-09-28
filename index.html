@@ -79,16 +79,16 @@
               Die Anwendung ermöglicht Präsentierenden, während der Präsentation Geräte wie Mikrofone, Beamer und Scheinwerfer zu steuern. Voreinstellung können per Klick abgerufen werden, so kann sich der Vortragende vollkommen auf seine Präsentation konzentrieren.
             </p>
           </div>
-          <div class="small-12 large-6 columns">
-
+          <div class="small-12 large-6 columns flex-center">
+            <img src="images/extensive.png" alt="Extensive">
           </div>
-          <div class="small-12 large-6 columns">
-
+          <div class="small-12 large-6 columns flex-center">
+            <img src="images/intuitive2.png" alt="">
           </div>
           <div class="small-12 large-6 columns">
             <h2>Intuitiv</h2>
             <p>
-              Mediatrix vereint alle Bedienoberflächen eines AV-Systems eines Präsentationsraums in einer Webapplikation. Das intuitiv zu bedienenden Userinterface ist besonders an unerfahrene Nutzer angepasst. Erfahrene Nutzer können allerdings erweiterte Optionen einblenden. So kann jeder seine Präsentation mit wenig Aufwand eindrucksvoll gestalten.
+              Mediatrix vereint alle Bedienoberflächen eines AV-Systems eines Präsentationsraums in einer Webapplikation. Das intuitiv bedienbare Userinterface ist besonders an unerfahrene Nutzer angepasst. Erfahrene Nutzer können allerdings erweiterte Optionen einblenden. So kann jeder seine Präsentation mit wenig Aufwand eindrucksvoll gestalten.
             </p>
           </div>
           <div class="small-12 large-6 columns">
@@ -97,8 +97,8 @@
               Das gesamte System, inklusive AV-Geräte wird in ein Serverrack eingebaut und nimmt daher nicht viel Platz ein. Alle notwendigen Buchsen sind leicht zugänglich und gegen Störgeräusche beim Umstecken gesichert.
             </p>
           </div>
-          <div class="small-12 large-6 columns">
-
+          <div class="small-12 large-6 columns flex-center">
+            <img src="images/compact.png" width="200px" alt="">
           </div>
         </div>
       </div>
@@ -159,5 +159,32 @@
       </div>
     </section>
 
+
+    <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+      });
+    </script>
   </body>
 </html>

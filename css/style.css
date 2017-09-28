@@ -75,6 +75,8 @@ header {
         color: #31363A;
         text-decoration: none;
         transition: .2s; }
+        header ul li a:visited {
+          color: #31363A; }
         header ul li a:hover {
           color: white; }
 
@@ -133,6 +135,11 @@ header {
     .features {
       height: auto;
       padding: 50px 0; } }
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .team {
   margin-bottom: 100px;

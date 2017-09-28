@@ -130,6 +130,10 @@ body {
         text-decoration: none;
         transition: .2s;
 
+        &:visited{
+          color: $color;
+        }
+
         &:hover{
           color: white;
         }
@@ -209,13 +213,19 @@ body {
   padding: 50px;
 
   .columns {
-    padding: 30px .9375rem; 
+    padding: 30px .9375rem;
   }
 
   @include breaksm(md) {
     height: auto;
     padding: 50px 0;
   }
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .team {
