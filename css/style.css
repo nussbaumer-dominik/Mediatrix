@@ -36,7 +36,7 @@ body {
     overflow: hidden;
     height: 100%;
     width: 100%; }
-  .wrap .curve_white {
+  .wrap .wave_white {
     position: absolute;
     margin: auto;
     left: -2px;
@@ -50,10 +50,10 @@ body {
     background-size: cover;
     transform: rotateY(180deg); }
     @media (max-width: 40em) {
-      .wrap .curve_white {
+      .wrap .wave_white {
         display: none; } }
     @media (min-height: 0) and (max-height: 840px) {
-      .wrap .curve_white {
+      .wrap .wave_white {
         bottom: calc(-20% - 1px); } }
 
 header {
@@ -152,6 +152,8 @@ header {
 .team {
   margin-bottom: 100px;
   text-align: center; }
+  .team img {
+    border-radius: 10px; }
   .team .names div {
     display: inline-block;
     margin: 10px 30px; }
@@ -198,8 +200,27 @@ header {
         top: 25px; } }
 
 footer {
-  background: #222;
-  height: 30%; }
+  background: #171717;
+  width: 101vw;
+  height: 45vh; }
+  footer .wave_black {
+    position: relative;
+    z-index: 10;
+    margin: auto;
+    top: -120px;
+    display: block;
+    height: 120px;
+    background-image: url(../images/bg-waves-black.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    transform: rotateY(180deg); }
+    @media (max-width: 40em) {
+      footer .wave_black {
+        display: none; } }
+    @media (min-height: 0) and (max-height: 840px) {
+      footer .wave_black {
+        bottom: calc(-20% - 1px); } }
 
 #color1 {
   background-color: #b30000; }
