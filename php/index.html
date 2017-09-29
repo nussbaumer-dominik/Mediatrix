@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Get Json data</title>
+  </head>
+  <body>
+  </body>
+  <script>
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       document.body.innerHTML = JSON.parse(this.responseText);
+    }
+  };
+  xhttp.open("GET", "data.json", true);
+  xhttp.send();
+  </script>
+</html>

@@ -212,8 +212,37 @@ body {
   height: auto;
   padding: 50px;
 
-  .columns {
+  .columns{
     padding: 30px .9375rem;
+  }
+
+  .f1{
+
+
+    @include breaksm(md) {
+      div:nth-child(1){
+        order: 2;
+      }
+    }
+  }
+
+  .f2{
+
+    @include breaksm(md) {
+      div:nth-child(2){
+        order: 1;
+      }
+    }
+  }
+
+  .f3{
+
+
+    @include breaksm(md) {
+      div:nth-child(1){
+        order: 2;
+      }
+    }
   }
 
   @include breaksm(md) {
@@ -290,23 +319,9 @@ body {
   }
 }
 
-.approve {
-  position: relative;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  height: 50vh;
-  width: 100%;
-  margin: 0 auto;
-
-  .mair{
-    border-radius: 50%;
-    margin: 0 auto;
-    height: 200px;
-    width: 200px;
-    background-image: url("../images/Mair.jpg");
-    background-size: cover;
-  }
+footer{
+  background: #222;
+  height: 30%;
 }
 
 #color1 {
