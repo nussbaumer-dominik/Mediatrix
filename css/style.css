@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 html, body {
   height: 100%;
   width: 100%;
@@ -121,6 +122,10 @@ header {
       background: white;
       color: #EF4C4F; }
 
+@media (max-width: 40em) {
+  .columns {
+    text-align: center; } }
+
 .columns p {
   line-height: 1.9; }
 
@@ -160,7 +165,7 @@ header {
 
 .status {
   position: relative;
-  height: 50vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -202,11 +207,16 @@ header {
 footer {
   background: #171717;
   width: 101vw;
-  height: 45vh; }
+  height: 55vh;
+  color: white; }
+  @media (min-height: 0) and (max-height: 840px) {
+    footer {
+      width: 100vw; } }
   footer .wave_black {
     position: relative;
     z-index: 10;
     margin: auto;
+    box-sizing: border-box;
     top: -120px;
     display: block;
     height: 120px;
@@ -220,7 +230,37 @@ footer {
         display: none; } }
     @media (min-height: 0) and (max-height: 840px) {
       footer .wave_black {
-        bottom: calc(-20% - 1px); } }
+        display: none;
+        top: 0;
+        bottom: 0; } }
+  footer .foot_top {
+    padding: 4.5rem 2.5vw;
+    margin: 4.5rem auto 4.5rem auto; }
+    @media (max-width: 40em) {
+      footer .foot_top {
+        margin: 2rem auto 2rem auto; } }
+    footer .foot_top a {
+      float: left; }
+      footer .foot_top a h1 {
+        font-size: 3em;
+        line-height: 67px; }
+    footer .foot_top h1 {
+      right: 0;
+      font-family: "Montserrat" !important;
+      float: right; }
+  footer .foot_bottom {
+    padding: 0 2.5vw;
+    color: #F9f9f9; }
+    footer .foot_bottom .float_left {
+      color: #F9f9f9;
+      text-decoration: underline;
+      float: left; }
+      footer .foot_bottom .float_left:hover {
+        text-decoration: none; }
+    footer .foot_bottom .float_right {
+      color: #F9f9f9;
+      text-decoration: underline;
+      float: right; }
 
 #color1 {
   background-color: #b30000; }

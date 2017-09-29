@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 $color: #31363A;
 $main: #EF4C4F;
@@ -202,6 +203,10 @@ body {
 
 .columns {
 
+  @include breaksm(md) {
+    text-align: center;
+  }
+
   p {
     line-height: 1.9;
   }
@@ -275,7 +280,7 @@ body {
 
 .status {
   position: relative;
-  height: 50vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -326,12 +331,18 @@ body {
 footer{
   background: #171717;
   width: 101vw;
-  height: 45vh;
+  height: 55vh;
+  color: white;
+
+  @media (min-height: 0) and (max-height: 840px){
+    width: 100vw;
+  }
 
   .wave_black {
     position: relative;
     z-index: 10;
     margin: auto;
+    box-sizing: border-box;
     top: -120px;
 
     display: block;
@@ -348,8 +359,54 @@ footer{
     }
 
     @media (min-height: 0) and (max-height: 840px){
-      //display: none;
-      bottom: calc(-20% - 1px);
+      display: none;
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  .foot_top{
+    padding: 4.5rem 2.5vw;
+    margin: 4.5rem auto 4.5rem auto;
+
+    @include breaksm(md) {
+      margin: 2rem auto 2rem auto;
+    }
+
+    a{
+      float: left;
+
+      h1{
+        font-size: 3em;
+        line-height: 67px;
+      }
+    }
+
+    h1{
+      right: 0;
+      font-family: "Montserrat" !important;
+      float: right;
+    }
+  }
+
+  .foot_bottom{
+    padding: 0 2.5vw;
+    color: #F9f9f9;
+
+    .float_left{
+      color: #F9f9f9;
+      text-decoration: underline;
+      float: left;
+
+      &:hover{
+        text-decoration: none;
+      }
+    }
+
+    .float_right{
+      color: #F9f9f9;
+      text-decoration: underline;
+      float: right;
     }
   }
 }
