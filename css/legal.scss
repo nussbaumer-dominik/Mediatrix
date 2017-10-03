@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+$color: #31363A;
+$main: #EF4C4F;
+$darkbg: #2D2D2D;
+
+//traffic-light color
+$ampel: #222;
+$color1: #FF0000; //red
+$color2: #FFFF00; //yellow
+$color3: #00FF00; //green
+
+//Breakpoints
+$breakpoints: (
+  md: 40em,
+  lg: 90em
+);
+
+@mixin break($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+@mixin breakmd($size) {
+  @media (min-width: map-get($breakpoints, $size)) and (max-height: 768px) {
+    @content;
+  }
+}
+
+@mixin breaksm($size) {
+  @media (max-width: map-get($breakpoints, $size) ) {
+    @content;
+  }
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Open Sans', 'Montserrat', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #fff;
+  color: black;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container{
+  width: 980px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+header{
+  width: 100%;
+  height: 60vh;
+  padding-bottom: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $main;
+  color: white;
+
+  @media (min-height: 0) and (max-height: 840px){
+    height: 80vh;
+    padding-bottom: 25vh;
+  }
+
+  figure{
+    width: 100px;
+    position: absolute;
+    left: 25vw;
+
+    a{
+      height: 76px;
+    }
+
+    @include breaksm(md) {
+      display: none;
+    }
+  }
+
+  .wave_white {
+    position: absolute;
+    margin: auto;
+    left: -2px;
+    right: -2px;
+    bottom: 40vh;
+
+    display: block;
+    height: 180px;
+    width: 101vw;
+    background-image: url(../images/bg-waves-white.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    transform: rotateY(180deg);
+
+    @include breaksm(md) {
+      display: none;
+    }
+
+    @media (min-height: 0) and (max-height: 840px){
+      bottom: 20vh;
+    }
+  }
+}
+
+section{
+
+  @include breaksm(md) {
+    padding: 30px 0 30px 0;
+  }
+}
