@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Mediatrix | Dashboard</title>
+        <link rel="stylesheet" href="css/material.css">
+        <link rel="stylesheet" href="css/snackbar.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/dashboard.css">
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="side-nav">
+                <ul>
+                    <li><a href="#" id="camera"><i class="fa fa-video-camera" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-volume-off" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-desktop" aria-hidden="true"></i></a></li>
+                </ul>
+
+                <div class="avatar">
+                  <div class="img"></div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="flex-container">
+                    <div class="box" id="dmxbox">
+                      <h1>Licht</h1>
+                      <div class="flex-wrapper">
+                        <input type="range" min="0" max="255" value="80" class="slider">
+                        <p class="p1">Licht</p>
+                        <input type="range" min="0" max="255" value="150" class="slider" >
+                        <p class="p2">Licht</p>
+                        <input type="range" min="0" max="255" value="10" class="slider" id="slider2">
+                        <p class="p3">Licht</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <span style="display: none;" class="btn" data-toggle="snackbar" data-content="message" data-timeout=0>Snackbar</span>
+        </div>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src="js/snackbar.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

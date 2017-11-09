@@ -1,0 +1,103 @@
+html, body {
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #22272B;
+}
+
+.parent {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.left {
+    background-color: #22272B;
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+}
+
+.right {
+    background-color: #FFF;
+    height: 100vh;
+    width: 50vw;
+    background: url(../images/Raspberry2.jpg);
+    background-size: cover;
+}
+
+.box {
+    width: 30vw;
+    height: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.login{
+    width: 60%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.login input[type="submit"]{
+    width: 100px;
+    height: 30px;
+    background-color: #4B89FB;
+    border: none;
+    color: #FFF;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+}
+
+.login input[type="text"], .login input[type="password"]{
+    border: 2px solid #DEE1E4;
+    color: #FFF;
+    background-color: transparent;
+    font-size: 12px;
+    padding: 12px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: white;
+}
+
+/* Media Queries */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}

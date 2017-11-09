@@ -1,0 +1,19 @@
+{
+  "name":"IO", "code":"",
+
+  "Sources":[
+    { "name":"HDMI1", "code":"" },
+    { "name":"HDMI2", "code":"" },
+    { "name":"Computer1", "code":"" },
+    { "name":"Computer2", "code":"" },
+    { "name":"Video", "code":"" }
+  ],
+
+  "Nav":[
+    { "name":"Up", "code":"" },
+    { "name":"Down", "code":"" },
+    { "name":"Left", "code":"" },
+    { "name":"Right", "code":"" },
+    { "name":"Ok", "code":"" }
+  ]
+}

@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #fff;
+  color: white;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: 100vw;
+  background-image: url(../images/planeinforest.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1{
+  font-size: 20em;
+  font-family: 'Montserrat';
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: -70px;
+  letter-spacing: 75px;
+}
+
+@media (max-width: 375px) {
+  h1{
+    font-size: 6em;
+    top: 0px;
+    text-align: center;
+    letter-spacing: 25px;
+  }
+}
+
+p{
+  font-size: 2.3em;
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translate(-50%);
+}
