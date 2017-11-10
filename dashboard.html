@@ -58,7 +58,7 @@
 
             $.ajax({
               url: "php/send.php",
-              data: {"channel" : 2, "value" : val},
+              data: {"channel" : id, "value" : val},
               success: function(result){
                 console.log("success");
               },
