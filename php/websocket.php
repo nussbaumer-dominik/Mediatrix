@@ -13,8 +13,7 @@ require __DIR__ . '/../vendor/autoload.php';
               new Application()
           )
       ),
-        10000,
-      "192.168.1.85"
+        10000
   );
 
   $server->run();
