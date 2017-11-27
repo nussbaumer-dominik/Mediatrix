@@ -1,0 +1,20 @@
+{
+  "name": "websocket_test",
+  "version": "1.0.0",
+  "description": "Test eines Websocket Servers",
+  "main": "websocket_server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test",
+    "websocket"
+  ],
+  "author": "Dominik Nußbaumer",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.15.2",
+    "ws": "^3.3.2"
+  }
+}

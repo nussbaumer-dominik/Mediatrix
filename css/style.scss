@@ -14,6 +14,7 @@ $color3: #00FF00; //green
 //Breakpoints
 $breakpoints: (
   md: 40em,
+  ml: 64em,
   lg: 90em
 );
 
@@ -224,7 +225,7 @@ body {
   .f1{
 
 
-    @include breaksm(md) {
+    @include breaksm(ml) {
       div:nth-child(1){
         order: 2;
       }
@@ -233,7 +234,7 @@ body {
 
   .f2{
 
-    @include breaksm(md) {
+    @include breaksm(ml) {
       div:nth-child(2){
         order: 1;
       }
@@ -243,14 +244,14 @@ body {
   .f3{
 
 
-    @include breaksm(md) {
+    @include breaksm(ml) {
       div:nth-child(1){
         order: 2;
       }
     }
   }
 
-  @include breaksm(md) {
+  @include breaksm(ml) {
     height: auto;
     padding: 50px 0;
   }

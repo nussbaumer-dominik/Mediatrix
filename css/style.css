@@ -125,7 +125,6 @@ header {
 @media (max-width: 40em) {
   .columns {
     text-align: center; } }
-
 .columns p {
   line-height: 1.9; }
 
@@ -135,16 +134,16 @@ header {
   padding: 50px; }
   .features .columns {
     padding: 30px .9375rem; }
-  @media (max-width: 40em) {
+  @media (max-width: 64em) {
     .features .f1 div:nth-child(1) {
       order: 2; } }
-  @media (max-width: 40em) {
+  @media (max-width: 64em) {
     .features .f2 div:nth-child(2) {
       order: 1; } }
-  @media (max-width: 40em) {
+  @media (max-width: 64em) {
     .features .f3 div:nth-child(1) {
       order: 2; } }
-  @media (max-width: 40em) {
+  @media (max-width: 64em) {
     .features {
       height: auto;
       padding: 50px 0; } }
@@ -276,15 +275,15 @@ footer {
     background-color: #FF0000; }
   50% {
     background-color: #b30000; } }
-
 @keyframes blink2 {
   0% {
     background-color: #FFFF00; }
   50% {
     background-color: #b3b300; } }
-
 @keyframes blink3 {
   0% {
     background-color: #00FF00; }
   50% {
     background-color: #00b300; } }
+
+/*# sourceMappingURL=style.css.map */
