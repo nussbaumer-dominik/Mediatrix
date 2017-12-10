@@ -1,5 +1,11 @@
 {
+    "autoload": {
+        "psr-4": {
+            "Mediatrix\\": "src"
+        }
+    },
     "require": {
-        "ddeboer/imap": "^0.5.2"
+        "cboden/ratchet": "^0.4.0",
+        "adldap2/adldap2": "^8.0"
     }
 }
