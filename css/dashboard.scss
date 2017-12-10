@@ -150,15 +150,22 @@ a{
 
   .slider {
     -webkit-appearance: none;
+    -moz-appearance: none;
     position: relative;
     width: 80%;
     height: 4px;
     background: $accent;
     outline: none;
     -webkit-transition: .2s;
+    transition: .2s;
     transform: rotate(-90deg);
     display: block;
     top: 220px;
+  }
+
+  .slider::-moz-range-track{
+    background: $accent;
+    width: 4px;
   }
 
   .p1{
@@ -187,7 +194,7 @@ a{
 
   .slider::-webkit-slider-thumb{
     -webkit-appearance: none;
-    appearance: none;
+    -moz-appearance: none;
     width: 70px;
     height: 50px;
     border-radius: 5px;
@@ -202,7 +209,7 @@ a{
 
   .slider::-moz-range-thumb{
     -webkit-appearance: none;
-    appearance: none;
+    -moz-appearance: none;
     width: 70px;
     height: 50px;
     border-radius: 5px;
