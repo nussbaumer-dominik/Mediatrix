@@ -15,10 +15,10 @@ use Ratchet\ConnectionInterface;
 class Application implements  MessageComponentInterface {
     protected $client;
     protected $scheinwerfer;
-    protected $ini;
+    private $FILE = "../../conf/Mediatrix.json";
 
     public function __construct() {
-        $this->ini = new Ini($this);
+        $this->iniMe();
     }
 
     public function onOpen(ConnectionInterface $conn) {
@@ -85,5 +85,35 @@ class Application implements  MessageComponentInterface {
         }
     }
 
+    public function iniMe(){
+
+        try {
+            $ini = file_get_contents($this->FILE, true);
+            $ini = json_decode($ini, true);
+
+            $scheinwerfer = array();
+
+            foreach($ini["DMX"] as $entry){
+
+                array_push($scheinwerfer,
+                    new Scheinwerfer(array(
+                            "hue" => $entry["hue"]
+                        )
+                    )
+                );
+
+            }
+
+            $this->scheinwerfer = $scheinwerfer;
+
+            //print_r($scheinwerfer);
+
+        }catch (Exception $ex){
+            echo $ex->getMessage();
+            throw new Exception("Error open and parsing ini-Json");
+        }
+
+
+    }
 
 }

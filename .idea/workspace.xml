@@ -1,812 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/src/Login.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/composer.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/AbstractConnectionDecorator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/App.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/ComponentInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/ConnectionInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Http/CloseResponseTrait.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Http/HttpRequestParser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Http/HttpServer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Http/HttpServerInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Http/OriginCheck.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Http/Router.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/MessageComponentInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/MessageInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Server/EchoServer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Server/FlashPolicy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Server/IoConnection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Server/IoServer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Server/IpBlackList.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Session/Serialize/HandlerInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Session/Serialize/PhpBinaryHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Session/Serialize/PhpHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Session/SessionProvider.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Session/Storage/Proxy/VirtualProxy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Session/Storage/VirtualSessionStorage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Wamp/Exception.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Wamp/JsonException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Wamp/ServerProtocol.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Wamp/Topic.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Wamp/TopicManager.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Wamp/WampConnection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Wamp/WampServer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Wamp/WampServerInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/WebSocket/ConnContext.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/WebSocket/MessageCallableInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/WebSocket/MessageComponentInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/WebSocket/WsConnection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/WebSocket/WsServer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/WebSocket/WsServerInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/autobahn/bin/fuzzingserver.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/autobahn/fuzzingclient-all.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/autobahn/fuzzingclient-profile.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/autobahn/fuzzingclient-quick.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/helpers/Ratchet/AbstractMessageComponentTestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/helpers/Ratchet/Mock/Component.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/helpers/Ratchet/Mock/Connection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/helpers/Ratchet/Mock/ConnectionDecorator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/helpers/Ratchet/Mock/WampComponent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/helpers/Ratchet/NullComponent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/helpers/Ratchet/Wamp/Stub/WsWampServerInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/helpers/Ratchet/WebSocket/Stub/WsMessageComponentInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/AbstractConnectionDecoratorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Http/HttpRequestParserTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Http/HttpServerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Http/OriginCheckTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Http/RouterTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Server/EchoServerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Server/FlashPolicyComponentTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Server/IoConnectionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Server/IoServerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Server/IpBlackListComponentTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Session/Serialize/PhpHandlerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Session/SessionComponentTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Session/Storage/VirtualSessionStoragePDOTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Wamp/ServerProtocolTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Wamp/TopicManagerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Wamp/TopicTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Wamp/WampConnectionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Wamp/WampServerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/evenement/evenement/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/evenement/evenement/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/evenement/evenement/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/evenement/evenement/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/evenement/evenement/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/evenement/evenement/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/evenement/evenement/doc/00-intro.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/evenement/evenement/doc/01-api.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/evenement/evenement/doc/02-plugin-system.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/evenement/evenement/examples/benchmark-emit-no-arguments.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/evenement/evenement/examples/benchmark-emit-once.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/evenement/evenement/examples/benchmark-emit-one-argument.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/evenement/evenement/examples/benchmark-emit.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/evenement/evenement/examples/benchmark-remove-listener-once.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/evenement/evenement/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/evenement/evenement/src/Evenement/EventEmitter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/evenement/evenement/src/Evenement/EventEmitterInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/evenement/evenement/src/Evenement/EventEmitterTrait.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/evenement/evenement/tests/Evenement/Tests/EventEmitterTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/evenement/evenement/tests/Evenement/Tests/Listener.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/evenement/evenement/tests/Evenement/Tests/functions.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/AppendStream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/BufferStream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/CachingStream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/DroppingStream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/FnStream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/InflateStream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/LazyOpenStream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/LimitStream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/MessageTrait.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/MultipartStream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/NoSeekStream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/PumpStream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/Request.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/Response.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/ServerRequest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/Stream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/StreamDecoratorTrait.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/StreamWrapper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/UploadedFile.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/Uri.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/UriNormalizer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/UriResolver.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/functions.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/functions_include.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/psr/http-message/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/psr/http-message/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/psr/http-message/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/psr/http-message/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/psr/http-message/src/MessageInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/psr/http-message/src/RequestInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/psr/http-message/src/ResponseInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/psr/http-message/src/ServerRequestInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/psr/http-message/src/StreamInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/psr/http-message/src/UploadedFileInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/psr/http-message/src/UriInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Handshake/ClientNegotiator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Handshake/NegotiatorInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Handshake/RequestVerifier.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Handshake/ResponseVerifier.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Handshake/ServerNegotiator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Messaging/CloseFrameChecker.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Messaging/DataInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Messaging/Frame.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Messaging/FrameInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Messaging/Message.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Messaging/MessageBuffer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Messaging/MessageInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/AbResultsTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/ab/clientRunner.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/ab/fuzzingclient.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/ab/fuzzingserver.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/ab/run_ab_tests.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/ab/startServer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/unit/Handshake/RequestVerifierTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/unit/Handshake/ResponseVerifierTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/unit/Handshake/ServerNegotiatorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/unit/Messaging/FrameTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/unit/Messaging/MessageBufferTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/unit/Messaging/MessageTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/cache/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/cache/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/cache/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/cache/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/cache/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/cache/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/cache/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/cache/src/ArrayCache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/cache/src/CacheInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/cache/tests/ArrayCacheTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/cache/tests/CallableStub.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/cache/tests/TestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/examples/01-one.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/examples/02-concurrent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/examples/03-cached.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/examples/04-query-a-and-aaaa.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/BadServerException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/Config/Config.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/Config/FilesystemFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/Config/HostsFile.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/Model/HeaderBag.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/Model/Message.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/Model/Record.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/Protocol/BinaryDumper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/Protocol/Parser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/Query/CachedExecutor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/Query/CancellationException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/Query/Executor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/Query/ExecutorInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/Query/HostsFileExecutor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/Query/Query.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/Query/RecordBag.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/Query/RecordCache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/Query/RetryExecutor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/Query/TimeoutException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/Query/TimeoutExecutor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/RecordNotFoundException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/Resolver/Factory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/src/Resolver/Resolver.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/tests/CallableStub.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/tests/Config/FilesystemFactoryTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/tests/Config/HostsFileTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/tests/Fixtures/etc/resolv.conf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/tests/FunctionalResolverTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/tests/Model/MessageTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/tests/Protocol/BinaryDumperTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/tests/Protocol/ParserTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/tests/Query/CachedExecutorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/tests/Query/ExecutorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/tests/Query/HostsFileExecutorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/tests/Query/RecordBagTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/tests/Query/RecordCacheTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/tests/Query/RetryExecutorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/tests/Query/TimeoutExecutorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/tests/Resolver/FactoryTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/tests/Resolver/ResolveAliasesTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/tests/Resolver/ResolverTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/dns/tests/TestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/src/ExtEventLoop.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/src/Factory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/src/LibEvLoop.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/src/LibEventLoop.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/src/LoopInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/src/StreamSelectLoop.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/src/Tick/FutureTickQueue.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/src/Tick/NextTickQueue.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/src/Timer/Timer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/src/Timer/TimerInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/src/Timer/Timers.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/tests/AbstractLoopTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/tests/CallableStub.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/tests/ExtEventLoopTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/tests/LibEvLoopTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/tests/LibEventLoopTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/tests/StreamSelectLoopTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/tests/TestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/tests/Timer/AbstractTimerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/tests/Timer/ExtEventTimerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/tests/Timer/LibEvTimerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/tests/Timer/LibEventTimerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/tests/Timer/StreamSelectTimerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/tests/Timer/TimersTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/tests/bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/event-loop/travis-init.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise-timer/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise-timer/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise-timer/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise-timer/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise-timer/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise-timer/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise-timer/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise-timer/src/TimeoutException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise-timer/src/functions.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise-timer/tests/CallableStub.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise-timer/tests/FunctionRejectTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise-timer/tests/FunctionResolveTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise-timer/tests/FunctionTimeoutTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise-timer/tests/TestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise-timer/tests/TimeoutExceptionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/src/CancellablePromiseInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/src/CancellationQueue.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/src/Deferred.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/src/Exception/LengthException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/src/ExtendedPromiseInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/src/FulfilledPromise.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/src/LazyPromise.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/src/Promise.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/src/PromiseInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/src/PromisorInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/src/RejectedPromise.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/src/UnhandledRejectionException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/src/functions.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/src/functions_include.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/CancellationQueueTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/DeferredTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/FulfilledPromiseTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/FunctionAllTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/FunctionAnyTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/FunctionCheckTypehintTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/FunctionMapTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/FunctionRaceTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/FunctionReduceTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/FunctionRejectTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/FunctionResolveTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/FunctionSomeTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/LazyPromiseTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseAdapter/CallbackPromiseAdapter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseAdapter/PromiseAdapterInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseTest/CancelTestTrait.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseTest/FullTestTrait.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseTest/NotifyTestTrait.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseTest/PromiseFulfilledTestTrait.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseTest/PromisePendingTestTrait.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseTest/PromiseRejectedTestTrait.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseTest/PromiseSettledTestTrait.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseTest/RejectTestTrait.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseTest/ResolveTestTrait.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/RejectedPromiseTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/Stub/CallableStub.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/TestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/fixtures/SimpleFulfilledTestPromise.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/fixtures/SimpleFulfilledTestThenable.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/fixtures/SimpleRejectedTestPromise.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/fixtures/SimpleTestCancellable.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/promise/tests/fixtures/SimpleTestCancellableThenable.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/examples/01-echo-server.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/examples/02-chat-server.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/examples/03-http-server.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/examples/11-http-client.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/examples/12-https-client.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/examples/21-netcat-client.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/examples/22-http-client.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/examples/91-benchmark-server.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/examples/99-generate-self-signed.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/examples/localhost.pem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/examples/localhost_swordfish.pem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/src/Connection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/src/ConnectionInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/src/Connector.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/src/ConnectorInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/src/DnsConnector.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/src/FixedUriConnector.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/src/LimitingServer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/src/SecureConnector.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/src/SecureServer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/src/Server.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/src/ServerInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/src/StreamEncryption.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/src/TcpConnector.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/src/TcpServer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/src/TimeoutConnector.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/src/UnixConnector.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/src/UnixServer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/tests/ConnectorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/tests/DnsConnectorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/tests/FixedUriConnectorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/tests/FunctionalConnectorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/tests/FunctionalSecureServerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/tests/FunctionalTcpServerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/tests/IntegrationTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/tests/LimitingServerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/tests/SecureConnectorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/tests/SecureIntegrationTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/tests/SecureServerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/tests/ServerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/tests/Stub/CallableStub.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/tests/Stub/ConnectionStub.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/tests/Stub/ServerStub.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/tests/TcpConnectorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/tests/TcpServerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/tests/TestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/tests/TimeoutConnectorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/tests/UnixConnectorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/socket/tests/UnixServerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/examples/benchmark-throughput.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/examples/cat.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/src/CompositeStream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/src/DuplexResourceStream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/src/DuplexStreamInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/src/ReadableResourceStream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/src/ReadableStreamInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/src/ThroughStream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/src/Util.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/src/WritableResourceStream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/src/WritableStreamInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/tests/CallableStub.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/tests/CompositeStreamTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/tests/DuplexResourceStreamIntegrationTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/tests/DuplexResourceStreamTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/tests/EnforceBlockingWrapper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/tests/FunctionalInternetTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/tests/ReadableResourceStreamTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/tests/Stub/ReadableStreamStub.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/tests/TestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/tests/ThroughStreamTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/tests/UtilTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/tests/WritableStreamResourceTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react/stream/tests/bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/AcceptHeader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/AcceptHeaderItem.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/ApacheRequest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/BinaryFileResponse.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Cookie.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Exception/ConflictingHeadersException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Exception/RequestExceptionInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Exception/SuspiciousOperationException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/ExpressionRequestMatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/AccessDeniedException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/FileException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/FileNotFoundException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/UnexpectedTypeException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/UploadException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/File.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/MimeType/ExtensionGuesser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/MimeType/ExtensionGuesserInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/MimeType/FileBinaryMimeTypeGuesser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/MimeType/FileinfoMimeTypeGuesser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/MimeType/MimeTypeExtensionGuesser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/MimeType/MimeTypeGuesser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/MimeType/MimeTypeGuesserInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Stream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/UploadedFile.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/FileBag.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/HeaderBag.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/IpUtils.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/JsonResponse.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/ParameterBag.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/RedirectResponse.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Request.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/RequestMatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/RequestMatcherInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/RequestStack.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Response.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/ResponseHeaderBag.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/ServerBag.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Attribute/AttributeBag.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Attribute/AttributeBagInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Attribute/NamespacedAttributeBag.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Flash/AutoExpireFlashBag.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Flash/FlashBag.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Flash/FlashBagInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Session.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/SessionBagInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/SessionInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/MemcacheSessionHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/MemcachedSessionHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/MongoDbSessionHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/NativeFileSessionHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/NativeSessionHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/NullSessionHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/PdoSessionHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/WriteCheckSessionHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/MetadataBag.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/MockArraySessionStorage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/MockFileSessionStorage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/PhpBridgeSessionStorage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Proxy/AbstractProxy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Proxy/NativeProxy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Proxy/SessionHandlerProxy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/SessionStorageInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/StreamedResponse.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/AcceptHeaderItemTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/AcceptHeaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/ApacheRequestTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/BinaryFileResponseTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/CookieTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/ExpressionRequestMatcherTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/File/FakeFile.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/File/FileTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/File/Fixtures/.unknownextension" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/File/Fixtures/directory/.empty" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/File/Fixtures/other-file.example" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/File/Fixtures/test" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/File/Fixtures/test.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/File/MimeType/MimeTypeTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/File/UploadedFileTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/FileBagTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/HeaderBagTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/IpUtilsTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/JsonResponseTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/ParameterBagTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/RedirectResponseTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/RequestMatcherTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/RequestStackTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/RequestTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/ResponseHeaderBagTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/ResponseTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/ResponseTestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/ServerBagTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Attribute/AttributeBagTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Attribute/NamespacedAttributeBagTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Flash/AutoExpireFlashBagTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Flash/FlashBagTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/SessionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/MemcacheSessionHandlerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/MemcachedSessionHandlerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/MongoDbSessionHandlerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/NativeFileSessionHandlerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/NativeSessionHandlerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/NullSessionHandlerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/PdoSessionHandlerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/WriteCheckSessionHandlerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/MetadataBagTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/MockArraySessionStorageTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/MockFileSessionStorageTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/NativeSessionStorageTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/PhpBridgeSessionStorageTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Proxy/AbstractProxyTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Proxy/NativeProxyTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/Session/Storage/Proxy/SessionHandlerProxyTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/StreamedResponseTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/schema/http-status-codes.rng" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/schema/iana-registry.rng" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/Mbstring.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/Resources/unidata/lowerCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/Resources/unidata/upperCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Annotation/Route.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/CompiledRoute.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/DependencyInjection/RoutingResolverPass.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Exception/ExceptionInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Exception/InvalidParameterException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Exception/MethodNotAllowedException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Exception/MissingMandatoryParametersException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Exception/ResourceNotFoundException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Exception/RouteNotFoundException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Generator/ConfigurableRequirementsInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Generator/Dumper/GeneratorDumper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Generator/Dumper/GeneratorDumperInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Generator/Dumper/PhpGeneratorDumper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Generator/UrlGenerator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Generator/UrlGeneratorInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Loader/AnnotationClassLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Loader/AnnotationDirectoryLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Loader/AnnotationFileLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Loader/ClosureLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Loader/DependencyInjection/ServiceRouterLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Loader/DirectoryLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Loader/ObjectRouteLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Loader/PhpFileLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Loader/XmlFileLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Loader/YamlFileLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Loader/schema/routing/routing-1.0.xsd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/DumperCollection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/DumperRoute.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/MatcherDumper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/MatcherDumperInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/PhpMatcherDumper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/StaticPrefixCollection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/RedirectableUrlMatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/RedirectableUrlMatcherInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/RequestMatcherInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/TraceableUrlMatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/UrlMatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/UrlMatcherInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/RequestContext.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/RequestContextAwareInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Route.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/RouteCollection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/RouteCollectionBuilder.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/RouteCompiler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/RouteCompilerInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Router.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/RouterInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Annotation/RouteTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/CompiledRouteTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/DependencyInjection/RoutingResolverPassTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/AnnotatedClasses/AbstractClass.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/AnnotatedClasses/BarClass.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/AnnotatedClasses/BazClass.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/AnnotatedClasses/FooClass.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/AnnotatedClasses/FooTrait.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/CustomCompiledRoute.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/CustomRouteCompiler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/CustomXmlFileLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/OtherAnnotatedClasses/NoStartTagClass.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/OtherAnnotatedClasses/VariadicClass.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/RedirectableUrlMatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/annotated.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/bad_format.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/bar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/directory/recurse/routes1.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/directory/recurse/routes2.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/directory/routes3.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/directory_import/import.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher1.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher2.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher3.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher4.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher5.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher6.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher7.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/empty.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/file_resource.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/foo.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/foo1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/incomplete.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/list_defaults.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/list_in_list_defaults.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/list_in_map_defaults.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/list_null_values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/map_defaults.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/map_in_list_defaults.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/map_in_map_defaults.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/map_null_values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/missing_id.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/missing_path.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/namespaceprefix.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/nonesense_resource_plus_path.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/nonesense_type_without_resource.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/nonvalid.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/nonvalid.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/nonvalid2.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/nonvalidkeys.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/nonvalidnode.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/nonvalidroute.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/null_values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/scalar_defaults.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/special_route_name.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/validpattern.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/validpattern.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/validpattern.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/validresource.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/validresource.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/validresource.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/with_define_path_variable.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/withdoctype.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Generator/Dumper/PhpGeneratorDumperTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Generator/UrlGeneratorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Loader/AbstractAnnotationLoaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Loader/AnnotationClassLoaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Loader/AnnotationDirectoryLoaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Loader/AnnotationFileLoaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Loader/ClosureLoaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Loader/DirectoryLoaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Loader/ObjectRouteLoaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Loader/PhpFileLoaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Loader/XmlFileLoaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Loader/YamlFileLoaderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Matcher/Dumper/DumperCollectionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Matcher/Dumper/PhpMatcherDumperTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Matcher/Dumper/StaticPrefixCollectionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Matcher/RedirectableUrlMatcherTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Matcher/TraceableUrlMatcherTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Matcher/UrlMatcherTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/RequestContextTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/RouteCollectionBuilderTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/RouteCollectionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/RouteCompilerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/RouteTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/RouterTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/symfony/routing/phpunit.xml.dist" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/Ini.php" afterPath="$PROJECT_DIR$/php/src/Ini.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/Mediatrix.json" afterPath="$PROJECT_DIR$/php/src/Mediatrix.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/Scheinwerfer.php" afterPath="$PROJECT_DIR$/php/src/Scheinwerfer.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/composer.json" afterPath="$PROJECT_DIR$/php/unnötig/composer.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/composer.lock" afterPath="$PROJECT_DIR$/php/unnötig/composer.lock" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/data.json" afterPath="$PROJECT_DIR$/php/unnötig/data.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/emailHandler.php" afterPath="$PROJECT_DIR$/php/unnötig/emailHandler.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/index.html" afterPath="$PROJECT_DIR$/php/unnötig/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/send.php" afterPath="$PROJECT_DIR$/php/src/send.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/test.php" afterPath="$PROJECT_DIR$/php/unnötig/test.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/autoload.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/autoload.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/composer/ClassLoader.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/composer/ClassLoader.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/composer/LICENSE" afterPath="$PROJECT_DIR$/php/unnötig/vendor/composer/LICENSE" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/composer/autoload_classmap.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/composer/autoload_namespaces.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/composer/autoload_psr4.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/composer/autoload_real.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/composer/autoload_static.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/php/unnötig/vendor/composer/installed.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/.gitignore" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/.gitignore" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/.scrutinizer.yml" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/.scrutinizer.yml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/.travis.yml" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/.travis.yml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/LICENSE" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/LICENSE" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/README.md" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/composer.json" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/composer.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/composer.lock" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/composer.lock" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/phpunit.xml.dist" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/phpunit.xml.dist" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Connection.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Connection.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Exception/AuthenticationFailedException.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Exception/AuthenticationFailedException.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Exception/Exception.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Exception/Exception.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Exception/MailboxDoesNotExistException.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Exception/MailboxDoesNotExistException.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Exception/MessageDeleteException.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Exception/MessageDeleteException.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Exception/MessageDoesNotExistException.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Exception/MessageDoesNotExistException.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Exception/MessageMoveException.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Exception/MessageMoveException.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Mailbox.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Mailbox.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Message.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Message.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Message/Attachment.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Message/Attachment.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Message/EmailAddress.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Message/EmailAddress.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Message/Headers.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Message/Headers.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Message/Part.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Message/Part.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/MessageIterator.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/MessageIterator.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Parameters.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Parameters.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/AbstractCondition.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/AbstractCondition.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/Date/AbstractDate.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/Date/AbstractDate.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/Date/After.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/Date/After.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/Date/Before.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/Date/Before.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/Date/On.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/Date/On.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/Email/AbstractEmail.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/Email/AbstractEmail.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/Email/FromAddress.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/Email/FromAddress.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/Email/To.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/Email/To.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/Flag/Answered.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/Flag/Answered.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/Flag/Flagged.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/Flag/Flagged.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/Flag/Recent.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/Flag/Recent.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/Flag/Seen.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/Flag/Seen.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/Flag/Unanswered.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/Flag/Unanswered.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/Flag/Unflagged.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/Flag/Unflagged.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/Flag/Unseen.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/Flag/Unseen.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/LogicalOperator/All.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/LogicalOperator/All.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/LogicalOperator/OrConditions.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/LogicalOperator/OrConditions.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/State/Deleted.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/State/Deleted.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/State/NewMessage.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/State/NewMessage.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/State/Old.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/State/Old.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/State/Undeleted.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/State/Undeleted.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/Text/AbstractText.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/Text/AbstractText.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/Text/Body.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/Text/Body.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/Text/Keyword.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/Text/Keyword.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/Text/Subject.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/Text/Subject.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/Text/Text.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/Text/Text.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Search/Text/Unkeyword.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Search/Text/Unkeyword.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/SearchExpression.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/SearchExpression.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/src/Server.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/src/Server.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/tests/AbstractTest.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/tests/AbstractTest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/tests/ConnectionTest.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/tests/ConnectionTest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/tests/MailboxTest.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/tests/MailboxTest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/tests/MessageTest.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/tests/MessageTest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/tests/ServerTest.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/tests/ServerTest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/tests/bootstrap.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/tests/bootstrap.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/tests/fixtures/attachment_encoded_filename" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/tests/fixtures/attachment_encoded_filename" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/tests/fixtures/attachment_no_disposition" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/tests/fixtures/attachment_no_disposition" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/imap/tests/fixtures/email_address" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/imap/tests/fixtures/email_address" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/transcoder/.gitignore" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/transcoder/.gitignore" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/transcoder/.travis.yml" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/transcoder/.travis.yml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/transcoder/LICENSE" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/transcoder/LICENSE" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/transcoder/README.md" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/transcoder/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/transcoder/composer.json" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/transcoder/composer.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/transcoder/phpunit.xml.dist" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/transcoder/phpunit.xml.dist" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/transcoder/src/Exception/ExtensionMissingException.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/transcoder/src/Exception/ExtensionMissingException.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/transcoder/src/Exception/IllegalCharacterException.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/transcoder/src/Exception/IllegalCharacterException.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/transcoder/src/Exception/UndetectableEncodingException.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/transcoder/src/Exception/UndetectableEncodingException.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/transcoder/src/Exception/UnsupportedEncodingException.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/transcoder/src/Exception/UnsupportedEncodingException.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/transcoder/src/IconvTranscoder.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/transcoder/src/IconvTranscoder.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/transcoder/src/MbTranscoder.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/transcoder/src/MbTranscoder.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/transcoder/src/Transcoder.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/transcoder/src/Transcoder.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/transcoder/src/TranscoderInterface.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/transcoder/src/TranscoderInterface.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/transcoder/tests/IconvTranscoderTest.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/transcoder/tests/IconvTranscoderTest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/transcoder/tests/MbTranscoderTest.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/transcoder/tests/MbTranscoderTest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/vendor/ddeboer/transcoder/tests/TranscoderTest.php" afterPath="$PROJECT_DIR$/php/unnötig/vendor/ddeboer/transcoder/tests/TranscoderTest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/websocket.php" afterPath="$PROJECT_DIR$/php/src/websocket.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Mediatrix.iml" afterPath="$PROJECT_DIR$/.idea/Mediatrix.iml" />
+    <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="Create Login class">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/Mediatrix.conf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/php/src/Mediatrix.json" afterPath="$PROJECT_DIR$/conf/Mediatrix.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/src/Login.php" afterPath="$PROJECT_DIR$/php/src/Login.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -824,8 +25,8 @@
       <file leaf-file-name="websocket.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+            <state relative-caret-position="68">
+              <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="44" />
               <folding>
                 <element signature="e#7#35#0#PHP" expanded="true" />
               </folding>
@@ -836,8 +37,8 @@
       <file leaf-file-name="Login.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="267">
+              <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -846,7 +47,50 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-102">
+            <state relative-caret-position="1734">
+              <caret line="108" column="14" lean-forward="false" selection-start-line="108" selection-start-column="14" selection-end-line="108" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mediatrix.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ini.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/src/Ini.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="629">
+                <caret line="37" column="3" lean-forward="false" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Scheinwerfer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/src/Scheinwerfer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -867,6 +111,8 @@
         <option value="$PROJECT_DIR$/php/src/websocket.php" />
         <option value="$PROJECT_DIR$/php/composer.json" />
         <option value="$PROJECT_DIR$/php/src/login.php" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/php/src/Application.php" />
         <option value="$PROJECT_DIR$/php/src/Login.php" />
       </list>
     </option>
@@ -882,10 +128,12 @@
     </gulpfiles>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/js/node_modules" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1742" />
-    <option name="y" value="-11" />
+    <option name="x" value="-7" />
     <option name="width" value="814" />
     <option name="height" value="867" />
   </component>
@@ -915,18 +163,12 @@
             <path>
               <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="php" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="conf" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="php" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="test_js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -938,8 +180,13 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\HTL\Mediatrix\conf" />
+      <recent name="C:\xampp\htdocs\HTL\Mediatrix\php" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\HTL\Mediatrix\php\src" />
       <recent name="C:\xampp\htdocs\HTL\Mediatrix" />
@@ -974,24 +221,31 @@
       <workItem from="1512419698648" duration="736000" />
       <workItem from="1512464455381" duration="31000" />
       <workItem from="1512675800678" duration="2637000" />
+      <workItem from="1513241689753" duration="3177000" />
+      <workItem from="1513259850477" duration="14000" />
+      <workItem from="1513695810001" duration="364000" />
+      <workItem from="1513847034780" duration="3283000" />
+      <workItem from="1514367553701" duration="12000" />
+      <workItem from="1514367667457" duration="73000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3831000" />
+    <option name="totallyTimeSpent" value="10754000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21801706" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23521851" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26565874" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30282637" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -999,7 +253,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1009,11 +263,180 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Create Login class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Login class" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="44" />
+          <folding>
+            <element signature="e#7#35#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1836">
+          <caret line="108" column="14" lean-forward="false" selection-start-line="108" selection-start-column="14" selection-end-line="108" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Ini.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="629">
+            <caret line="37" column="3" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Scheinwerfer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="44" />
+          <folding>
+            <element signature="e#7#35#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="38" column="20" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#35#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="29" column="48" lean-forward="false" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="44" />
+          <folding>
+            <element signature="e#7#35#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="48" lean-forward="true" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding>
+            <element signature="e#7#35#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1028,7 +451,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1054,7 +476,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1080,7 +501,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1098,7 +518,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1106,7 +525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1114,7 +532,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1122,7 +539,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1130,18 +546,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Mediatrix.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Mediatrix.json" />
     <entry file="file://$PROJECT_DIR$/php/info.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1162,31 +570,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json" />
+    <entry file="file://$PROJECT_DIR$/composer.lock" />
     <entry file="file://$PROJECT_DIR$/test_js/ws_test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1194,32 +586,81 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/showcase_Alternative.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="629">
+            <caret line="37" column="3" lean-forward="false" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Scheinwerfer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Ini.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/Mediatrix.json" />
+    <entry file="file://$PROJECT_DIR$/conf/Mediatrix.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1734">
+          <caret line="108" column="14" lean-forward="false" selection-start-line="108" selection-start-column="14" selection-end-line="108" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        <state relative-caret-position="68">
+          <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="44" />
           <folding>
             <element signature="e#7#35#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="267">
+          <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
           <folding />
         </state>
       </provider>
