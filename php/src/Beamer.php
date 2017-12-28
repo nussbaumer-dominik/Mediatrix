@@ -16,7 +16,6 @@ class Beamer
 
     public function __construct(array $source, array $powerCode)
     {
-        print_r($source);
         foreach ($source as $k => $s){
             $source[$k]['nextActive'] = false;
             $source[$k]['lasSendA'] = false;
