@@ -29,7 +29,7 @@ NAME				=	DMX
 #	one for each extension. Use this variable to specify this directory.
 #
 
-INI_DIR				=	/etc/php/7.0/apache2/conf.d
+INI_DIR				=	/etc/php/7.0/cli/conf.d
 
 
 #
