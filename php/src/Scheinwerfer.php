@@ -9,7 +9,9 @@ class Scheinwerfer{
 
     function __constructor(array $channels){
       $this->channels = $channels;
-        $this->dmx = new DMX();
+      $this->dmx = new DMX();
+
+      var_dump($this->dmx);
     }
 
     function dimmen(int $val): boolean{
