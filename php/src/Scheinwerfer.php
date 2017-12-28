@@ -2,6 +2,8 @@
 
 namespace Mediatrix;
 
+use DMX;
+
 class Scheinwerfer{
 
     private $channels = array();
