@@ -7,7 +7,8 @@ class Scheinwerfer{
     private $channels = array();
     private $dmx;
 
-    function __constructor(array $channels){
+
+    function __construct(array $channels){
       $this->channels = $channels;
       $this->dmx = new DMX();
 
