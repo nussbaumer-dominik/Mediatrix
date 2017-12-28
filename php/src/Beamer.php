@@ -35,22 +35,20 @@ class Beamer
     {
 
         //print_r(array_search(true, array_column($this->source, 'lastUsed')));
-        print_r($this->source);
+        echo "Beamer changed Source \n";
         return true;
 
     }
 
     function on()
     {
-        echo "Beamer on: ";
-        print_r($this->powerCode);
+        echo "Beamer on \n";
         return true;
     }
 
     function off()
     {
-        echo "Beamer off: ";
-        print_r($this->powerCode);
+        echo "Beamer off\n";
         return true;
     }
 
