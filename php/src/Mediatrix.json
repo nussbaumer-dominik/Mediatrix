@@ -1,0 +1,32 @@
+{
+  "dmx":
+  {
+    "0":{
+      "hue":1
+    },
+    "1":{
+      "hue":2
+    }
+  },
+  "beamer":
+  {
+    "source":{
+      "0":{
+        "a":"gjkdsf",
+        "b":"suzfsudghfisd"
+      },
+      "1":{
+        "a":"gjkdsf",
+        "b":"suzfsudghfisd"
+      }
+    },
+    "power":{
+      "a":"lisdfhisdf",
+      "b":"ilsgflisdfgilgsafilg"
+    }
+  },
+  "av":
+  {
+
+  }
+}
