@@ -15,7 +15,8 @@ use Ratchet\ConnectionInterface;
 class Application implements  MessageComponentInterface {
     protected $client;
     protected $scheinwerfer;
-    private $FILE = "../../conf/Mediatrix.json";
+    private $FILE = "Mediatrix.json";
+    private $beamer;
 
     public function __construct() {
         $this->iniMe();
@@ -43,7 +44,20 @@ class Application implements  MessageComponentInterface {
         if(isset($commands["dmx"])){
             $this->sendDmx($commands["dmx"]);
         }elseif (isset($commands["beamer"])){
-            $from->send("beamer");
+            $beamerCom = $commands["beamer"];
+
+            if(isset($beamerCom['on'])){
+                $this->beamer->on();
+            }
+
+            if (isset($beamerCom['off'])){
+                $this->beamer->off();
+            }
+
+            if (isset($beamerCom['source'])){
+                $this->beamer->changeSource();
+            }
+
         }elseif (isset($commands["av"])){
             $from->send("av");
         }else{
@@ -93,7 +107,7 @@ class Application implements  MessageComponentInterface {
 
             $scheinwerfer = array();
 
-            foreach($ini["DMX"] as $entry){
+            foreach($ini["dmx"] as $entry){
 
                 array_push($scheinwerfer,
                     new Scheinwerfer(array(
@@ -106,7 +120,9 @@ class Application implements  MessageComponentInterface {
 
             $this->scheinwerfer = $scheinwerfer;
 
-            //print_r($scheinwerfer);
+            $this->beamer = new Beamer($ini['beamer']['source'],$ini['beamer']['power']);
+
+
 
         }catch (Exception $ex){
             echo $ex->getMessage();

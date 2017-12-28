@@ -1,5 +1,5 @@
 {
-  "DMX":
+  "dmx":
   {
     "1":{
       "hue":1
@@ -7,5 +7,26 @@
     "2":{
       "hue":2
     }
+  },
+  "beamer":
+  {
+    "source":{
+      "1":{
+        "a":"gjkdsf",
+        "b":"suzfsudghfisd"
+      },
+      "2":{
+        "a":"gjkdsf",
+        "b":"suzfsudghfisd"
+      }
+    },
+    "power":{
+      "a":"lisdfhisdf",
+      "b":"ilsgflisdfgilgsafilg"
+    }
+  },
+  "av":
+  {
+
   }
 }

@@ -6,9 +6,9 @@
  * Time: 21:53
  */
 
-namespace Mediatrix\src;
+namespace Mediatrix;
 
-require __DIR__ . '/../vendor/autoload.php';
+//require __DIR__ . '/../vendor/autoload.php';
 
 class Login
 {
@@ -51,6 +51,23 @@ class Login
         }
 
     }
+
+    /**
+     * @return array
+     */
+    public function getConfig()
+    {
+        return $this->config;
+    }
+
+    /**
+     * @param array $config
+     */
+    public function setConfig($config)
+    {
+        $this->config = $config;
+    }
+
 
 }
 
