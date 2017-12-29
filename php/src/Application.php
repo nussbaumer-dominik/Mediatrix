@@ -111,7 +111,7 @@ class Application implements  MessageComponentInterface {
 
                 array_push($scheinwerfer,
                     new Scheinwerfer(array(
-                            "hue" => $entry["hue"]
+                            "hue" => $entry["hue"]-1
                         )
                     )
                 );
