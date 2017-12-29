@@ -16,12 +16,12 @@ class Scheinwerfer{
       var_dump($this->dmx);
     }
 
-    function dimmen(int $val): boolean{
+    function dimmen(int $val){
       $this->dmx->sendChannel(array(
         $this->channels["hue"] => $val
       ));
 
-      return true;
+
     }
 
     function on(): boolean{
