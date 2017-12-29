@@ -20,6 +20,8 @@ class Scheinwerfer{
       $this->dmx->sendChannel(array(
         $this->channels["hue"] => $val
       ));
+
+      return true;
     }
 
     function on(): boolean{
