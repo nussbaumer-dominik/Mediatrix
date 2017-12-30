@@ -31,6 +31,8 @@ class Application implements  MessageComponentInterface {
             $this->client = $conn;
 
             echo "New connection! ({$conn->resourceId})\n";
+
+            $conn->send('Ini-String');
         }else{
             $conn->send("Already a connection");
             $conn->close();

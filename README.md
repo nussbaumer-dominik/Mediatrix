@@ -3,6 +3,7 @@
 WS command structure (JSON):
 ```JSON 
 {
+"jwt":"ilsdugfilsagufisgf",
 "dmx":
   {
       "scheinwerfer1":
@@ -34,5 +35,20 @@ WS command structure (JSON):
        "source":1/0
        "volume":255
   }
+}
+```
+
+Response JSON structure
+```
+{
+    "success":false,
+    "error":"Login fehlgeschlagen"
+}
+```
+
+Ini JSON structure
+```
+{
+
 }
 ```
