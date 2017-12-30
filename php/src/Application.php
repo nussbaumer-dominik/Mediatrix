@@ -8,6 +8,8 @@
 
 namespace Mediatrix;
 
+use Firebase\JWT\ExpiredException;
+use Firebase\JWT\JWT;
 use Ratchet\MessageComponentInterface;
 use Ratchet\ConnectionInterface;
 
@@ -17,6 +19,7 @@ class Application implements  MessageComponentInterface {
     protected $scheinwerfer;
     private $FILE = "Mediatrix.json";
     private $beamer;
+    private $key;
 
     public function __construct() {
         $this->iniMe();
@@ -39,31 +42,43 @@ class Application implements  MessageComponentInterface {
     public function onMessage(ConnectionInterface $from, $msg) {
         echo "Got Massage: {$msg} from: {$from->resourceId}\n";
 
-        $commands = json_decode($msg, true);
+        try{
 
-        if(isset($commands["dmx"])){
-            $this->sendDmx($commands["dmx"]);
-        }elseif (isset($commands["beamer"])){
-            $beamerCom = $commands["beamer"];
+            $commands = json_decode($msg, true);
 
-            if(isset($beamerCom['on'])){
-                $this->beamer->on();
+            echo JWT::decode($commands['jwt'],$this->key, array('HS512'));
+
+            if(isset($commands["dmx"])){
+                $this->sendDmx($commands["dmx"]);
+            }elseif (isset($commands["beamer"])){
+                $beamerCom = $commands["beamer"];
+
+                if(isset($beamerCom['on'])){
+                    $this->beamer->on();
+                }
+
+                if (isset($beamerCom['off'])){
+                    $this->beamer->off();
+                }
+
+                if (isset($beamerCom['source'])){
+                    $this->beamer->changeSource();
+                }
+
+            }elseif (isset($commands["av"])){
+                $from->send("av");
+            }else{
+                $from->send("Unrecognized Command");
             }
 
-            if (isset($beamerCom['off'])){
-                $this->beamer->off();
-            }
+        }catch(ExpiredException $ex){
+            $from->send('Session Expired');
+            $from->close();
 
-            if (isset($beamerCom['source'])){
-                $this->beamer->changeSource();
-            }
-
-        }elseif (isset($commands["av"])){
-            $from->send("av");
-        }else{
-            $from->send("Unrecognized Command");
+            echo 'Session expired: '.$ex->getMessage();
+        }catch (\Exception $ex){
+            echo 'There was an Error'-$ex->getMessage();
         }
-
 
     }
 
@@ -104,6 +119,8 @@ class Application implements  MessageComponentInterface {
         try {
             $ini = file_get_contents($this->FILE, true);
             $ini = json_decode($ini, true);
+
+            $this->key = Key::getKey();
 
             $scheinwerfer = array();
 
