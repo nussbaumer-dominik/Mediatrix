@@ -2,8 +2,214 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/paragonie/random_compat/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/paragonie/random_compat/build-phar.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/paragonie/random_compat/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/paragonie/random_compat/dist/random_compat.phar.pubkey" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/paragonie/random_compat/dist/random_compat.phar.pubkey.asc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/paragonie/random_compat/lib/byte_safe_strings.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/paragonie/random_compat/lib/cast_to_int.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/paragonie/random_compat/lib/error_polyfill.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/paragonie/random_compat/lib/random.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/paragonie/random_compat/lib/random_bytes_com_dotnet.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/paragonie/random_compat/lib/random_bytes_dev_urandom.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/paragonie/random_compat/lib/random_bytes_libsodium.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/paragonie/random_compat/lib/random_bytes_libsodium_legacy.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/paragonie/random_compat/lib/random_bytes_mcrypt.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/paragonie/random_compat/lib/random_int.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/paragonie/random_compat/other/build_phar.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/paragonie/random_compat/psalm-autoload.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/paragonie/random_compat/psalm.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/react/stream/tests/bootstrap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Storage/Handler/MemcacheSessionHandler.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Storage/Handler/NativeSessionHandler.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Storage/Handler/WriteCheckSessionHandler.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Storage/Proxy/NativeProxy.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/MemcacheSessionHandlerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/NativeSessionHandlerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/WriteCheckSessionHandlerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/Session/Storage/Proxy/NativeProxyTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/symfony/polyfill-php70/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/symfony/polyfill-php70/Php70.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/symfony/polyfill-php70/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/symfony/polyfill-php70/Resources/stubs/AssertionError.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/symfony/polyfill-php70/Resources/stubs/Error.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/symfony/polyfill-php70/Resources/stubs/ParseError.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/symfony/polyfill-php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/symfony/polyfill-php70/Resources/stubs/TypeError.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/symfony/polyfill-php70/bootstrap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/vendor/symfony/polyfill-php70/composer.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/composer.lock" afterPath="$PROJECT_DIR$/php/composer.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/src/Login.php" afterPath="$PROJECT_DIR$/php/src/Login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/.travis.yml" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/docs/query-builder.md" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/docs/query-builder.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/docs/quick-start.md" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/docs/quick-start.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Auth/BindException.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Auth/BindException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Auth/Guard.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Auth/Guard.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Configuration/ConfigurationException.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Configuration/ConfigurationException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Configuration/DomainConfiguration.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Configuration/DomainConfiguration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Configuration/Validators/ArrayValidator.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Configuration/Validators/ArrayValidator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Configuration/Validators/BooleanValidator.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Configuration/Validators/BooleanValidator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Configuration/Validators/IntegerValidator.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Configuration/Validators/IntegerValidator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Configuration/Validators/StringOrNullValidator.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Configuration/Validators/StringOrNullValidator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Configuration/Validators/Validator.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Configuration/Validators/Validator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Connections/Ldap.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Connections/Ldap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Connections/Provider.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Connections/Provider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/BatchModification.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/BatchModification.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/Computer.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/Computer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/Concerns/HasAttributes.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/Concerns/HasAttributes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/Concerns/HasMemberOf.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/Concerns/HasMemberOf.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/Contact.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/Contact.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/Container.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/Container.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/Entry.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/Entry.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/Factory.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/Factory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/Group.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/Group.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/Model.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/Model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/ModelDoesNotExistException.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/ModelDoesNotExistException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/ModelNotFoundException.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/ModelNotFoundException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/OrganizationalUnit.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/OrganizationalUnit.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/Printer.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/Printer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/RootDse.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/RootDse.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/User.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/UserPasswordIncorrectException.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/UserPasswordIncorrectException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/UserPasswordPolicyException.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Models/UserPasswordPolicyException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Query/Builder.php" afterPath="$PROJECT_DIR$/php/vendor/adldap2/adldap2/src/Query/Builder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/cboden/ratchet/.travis.yml" afterPath="$PROJECT_DIR$/php/vendor/cboden/ratchet/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/cboden/ratchet/CHANGELOG.md" afterPath="$PROJECT_DIR$/php/vendor/cboden/ratchet/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/cboden/ratchet/composer.json" afterPath="$PROJECT_DIR$/php/vendor/cboden/ratchet/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/cboden/ratchet/src/Ratchet/App.php" afterPath="$PROJECT_DIR$/php/vendor/cboden/ratchet/src/Ratchet/App.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/cboden/ratchet/src/Ratchet/ConnectionInterface.php" afterPath="$PROJECT_DIR$/php/vendor/cboden/ratchet/src/Ratchet/ConnectionInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/cboden/ratchet/src/Ratchet/Http/Router.php" afterPath="$PROJECT_DIR$/php/vendor/cboden/ratchet/src/Ratchet/Http/Router.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/cboden/ratchet/src/Ratchet/Wamp/ServerProtocol.php" afterPath="$PROJECT_DIR$/php/vendor/cboden/ratchet/src/Ratchet/Wamp/ServerProtocol.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/cboden/ratchet/tests/unit/Http/RouterTest.php" afterPath="$PROJECT_DIR$/php/vendor/cboden/ratchet/tests/unit/Http/RouterTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/cboden/ratchet/tests/unit/Wamp/ServerProtocolTest.php" afterPath="$PROJECT_DIR$/php/vendor/cboden/ratchet/tests/unit/Wamp/ServerProtocolTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/php/vendor/composer/autoload_classmap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/composer/autoload_files.php" afterPath="$PROJECT_DIR$/php/vendor/composer/autoload_files.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/php/vendor/composer/autoload_psr4.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/php/vendor/composer/autoload_static.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/php/vendor/composer/installed.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/illuminate/support/Arr.php" afterPath="$PROJECT_DIR$/php/vendor/illuminate/support/Arr.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/illuminate/support/Collection.php" afterPath="$PROJECT_DIR$/php/vendor/illuminate/support/Collection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/illuminate/support/Composer.php" afterPath="$PROJECT_DIR$/php/vendor/illuminate/support/Composer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/illuminate/support/Facades/Notification.php" afterPath="$PROJECT_DIR$/php/vendor/illuminate/support/Facades/Notification.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/illuminate/support/Facades/Route.php" afterPath="$PROJECT_DIR$/php/vendor/illuminate/support/Facades/Route.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/illuminate/support/InteractsWithTime.php" afterPath="$PROJECT_DIR$/php/vendor/illuminate/support/InteractsWithTime.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/illuminate/support/Optional.php" afterPath="$PROJECT_DIR$/php/vendor/illuminate/support/Optional.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/illuminate/support/Pluralizer.php" afterPath="$PROJECT_DIR$/php/vendor/illuminate/support/Pluralizer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/illuminate/support/Str.php" afterPath="$PROJECT_DIR$/php/vendor/illuminate/support/Str.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/illuminate/support/Testing/Fakes/EventFake.php" afterPath="$PROJECT_DIR$/php/vendor/illuminate/support/Testing/Fakes/EventFake.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/illuminate/support/Testing/Fakes/MailFake.php" afterPath="$PROJECT_DIR$/php/vendor/illuminate/support/Testing/Fakes/MailFake.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/illuminate/support/Testing/Fakes/NotificationFake.php" afterPath="$PROJECT_DIR$/php/vendor/illuminate/support/Testing/Fakes/NotificationFake.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/illuminate/support/Traits/Macroable.php" afterPath="$PROJECT_DIR$/php/vendor/illuminate/support/Traits/Macroable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/illuminate/support/helpers.php" afterPath="$PROJECT_DIR$/php/vendor/illuminate/support/helpers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/react/cache/.travis.yml" afterPath="$PROJECT_DIR$/php/vendor/react/cache/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/react/cache/CHANGELOG.md" afterPath="$PROJECT_DIR$/php/vendor/react/cache/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/react/cache/README.md" afterPath="$PROJECT_DIR$/php/vendor/react/cache/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/react/cache/composer.json" afterPath="$PROJECT_DIR$/php/vendor/react/cache/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/react/cache/tests/TestCase.php" afterPath="$PROJECT_DIR$/php/vendor/react/cache/tests/TestCase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/react/promise-timer/CHANGELOG.md" afterPath="$PROJECT_DIR$/php/vendor/react/promise-timer/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/react/promise-timer/README.md" afterPath="$PROJECT_DIR$/php/vendor/react/promise-timer/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/react/promise-timer/composer.json" afterPath="$PROJECT_DIR$/php/vendor/react/promise-timer/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/react/promise-timer/tests/FunctionResolveTest.php" afterPath="$PROJECT_DIR$/php/vendor/react/promise-timer/tests/FunctionResolveTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/react/promise-timer/tests/TestCase.php" afterPath="$PROJECT_DIR$/php/vendor/react/promise-timer/tests/TestCase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/react/socket/.travis.yml" afterPath="$PROJECT_DIR$/php/vendor/react/socket/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/react/socket/CHANGELOG.md" afterPath="$PROJECT_DIR$/php/vendor/react/socket/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/react/socket/README.md" afterPath="$PROJECT_DIR$/php/vendor/react/socket/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/react/socket/src/Connection.php" afterPath="$PROJECT_DIR$/php/vendor/react/socket/src/Connection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/react/socket/tests/TcpConnectorTest.php" afterPath="$PROJECT_DIR$/php/vendor/react/socket/tests/TcpConnectorTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/react/stream/.travis.yml" afterPath="$PROJECT_DIR$/php/vendor/react/stream/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/react/stream/CHANGELOG.md" afterPath="$PROJECT_DIR$/php/vendor/react/stream/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/react/stream/README.md" afterPath="$PROJECT_DIR$/php/vendor/react/stream/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/react/stream/composer.json" afterPath="$PROJECT_DIR$/php/vendor/react/stream/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/react/stream/phpunit.xml.dist" afterPath="$PROJECT_DIR$/php/vendor/react/stream/phpunit.xml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/react/stream/src/DuplexResourceStream.php" afterPath="$PROJECT_DIR$/php/vendor/react/stream/src/DuplexResourceStream.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/react/stream/src/ReadableResourceStream.php" afterPath="$PROJECT_DIR$/php/vendor/react/stream/src/ReadableResourceStream.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/AcceptHeaderItem.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/AcceptHeaderItem.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/BinaryFileResponse.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/BinaryFileResponse.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/CHANGELOG.md" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Cookie.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Cookie.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/File/Exception/AccessDeniedException.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/File/Exception/AccessDeniedException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/File/Exception/FileNotFoundException.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/File/Exception/FileNotFoundException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/File/Exception/UnexpectedTypeException.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/File/Exception/UnexpectedTypeException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/File/File.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/File/File.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/File/MimeType/FileBinaryMimeTypeGuesser.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/File/MimeType/FileBinaryMimeTypeGuesser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/File/MimeType/FileinfoMimeTypeGuesser.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/File/MimeType/FileinfoMimeTypeGuesser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/File/UploadedFile.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/File/UploadedFile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/HeaderBag.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/HeaderBag.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/IpUtils.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/IpUtils.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/JsonResponse.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/JsonResponse.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/RedirectResponse.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/RedirectResponse.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Request.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Request.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/RequestMatcher.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/RequestMatcher.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Response.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Response.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Attribute/AttributeBag.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Attribute/AttributeBag.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Attribute/NamespacedAttributeBag.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Attribute/NamespacedAttributeBag.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Flash/AutoExpireFlashBag.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Flash/AutoExpireFlashBag.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Flash/FlashBag.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Flash/FlashBag.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Storage/Handler/AbstractSessionHandler.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Storage/Handler/AbstractSessionHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Storage/Handler/MongoDbSessionHandler.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Storage/Handler/MongoDbSessionHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Storage/Handler/NativeFileSessionHandler.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Storage/Handler/NativeFileSessionHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Storage/Handler/PdoSessionHandler.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Storage/Handler/PdoSessionHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Storage/MetadataBag.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Storage/MetadataBag.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Storage/MockArraySessionStorage.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Storage/MockArraySessionStorage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Storage/MockFileSessionStorage.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Storage/MockFileSessionStorage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/StreamedResponse.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/StreamedResponse.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/CookieTest.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/CookieTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/HeaderBagTest.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/HeaderBagTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/IpUtilsTest.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/IpUtilsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/ParameterBagTest.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/ParameterBagTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/RequestTest.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/RequestTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/ResponseHeaderBagTest.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/ResponseHeaderBagTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/ResponseTest.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/ResponseTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/ServerBagTest.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/ServerBagTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/Session/Attribute/AttributeBagTest.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/Session/Attribute/AttributeBagTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/AbstractSessionHandlerTest.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/AbstractSessionHandlerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/MemcachedSessionHandlerTest.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/MemcachedSessionHandlerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/MongoDbSessionHandlerTest.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/MongoDbSessionHandlerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/NativeFileSessionHandlerTest.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/NativeFileSessionHandlerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/PdoSessionHandlerTest.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/Session/Storage/Handler/PdoSessionHandlerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/Session/Storage/NativeSessionStorageTest.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/Session/Storage/NativeSessionStorageTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/Session/Storage/PhpBridgeSessionStorageTest.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/Tests/Session/Storage/PhpBridgeSessionStorageTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/composer.json" afterPath="$PROJECT_DIR$/php/vendor/symfony/http-foundation/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/CHANGELOG.md" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/CompiledRoute.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/CompiledRoute.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/DependencyInjection/RoutingResolverPass.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/DependencyInjection/RoutingResolverPass.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Exception/MethodNotAllowedException.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Exception/MethodNotAllowedException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Loader/AnnotationFileLoader.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Loader/AnnotationFileLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Loader/Configurator/CollectionConfigurator.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Loader/Configurator/CollectionConfigurator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Loader/Configurator/ImportConfigurator.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Loader/Configurator/ImportConfigurator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Loader/Configurator/RouteConfigurator.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Loader/Configurator/RouteConfigurator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Loader/Configurator/RoutingConfigurator.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Loader/Configurator/RoutingConfigurator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Loader/Configurator/Traits/AddTrait.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Loader/Configurator/Traits/AddTrait.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Loader/Configurator/Traits/RouteTrait.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Loader/Configurator/Traits/RouteTrait.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Loader/YamlFileLoader.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Loader/YamlFileLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Matcher/Dumper/DumperRoute.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Matcher/Dumper/DumperRoute.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Matcher/Dumper/PhpMatcherDumper.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Matcher/Dumper/PhpMatcherDumper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Matcher/Dumper/StaticPrefixCollection.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Matcher/Dumper/StaticPrefixCollection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/RequestContext.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/RequestContext.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Route.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Route.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/RouteCollectionBuilder.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/RouteCollectionBuilder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/RouteCompiler.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/RouteCompiler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher0.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher0.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher1.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher1.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher2.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher3.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher3.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher4.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher4.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher5.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher5.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher6.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher6.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher7.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher7.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Generator/Dumper/PhpGeneratorDumperTest.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Generator/Dumper/PhpGeneratorDumperTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Loader/AnnotationFileLoaderTest.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Loader/AnnotationFileLoaderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Matcher/Dumper/PhpMatcherDumperTest.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Matcher/Dumper/PhpMatcherDumperTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Matcher/RedirectableUrlMatcherTest.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/Matcher/RedirectableUrlMatcherTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/RouteCompilerTest.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/Tests/RouteCompilerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/routing/composer.json" afterPath="$PROJECT_DIR$/php/vendor/symfony/routing/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/translation/MessageSelector.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/translation/MessageSelector.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/vendor/symfony/translation/Tests/MessageSelectorTest.php" afterPath="$PROJECT_DIR$/php/vendor/symfony/translation/Tests/MessageSelectorTest.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,8 +237,8 @@
       <file leaf-file-name="Login.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="102" column="12" lean-forward="false" selection-start-line="102" selection-start-column="12" selection-end-line="102" selection-end-column="12" />
+            <state relative-caret-position="85">
+              <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -74,7 +280,7 @@
         <entry file="file://$PROJECT_DIR$/test_js/login_test.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+              <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -105,7 +311,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="331">
               <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-              <folding />
+              <folding>
+                <marker date="1514666667841" expanded="true" signature="123:263" ph=" A proxy object representing a connection to the application ..." />
+                <marker date="1514666667841" expanded="true" signature="305:418" ph=" Send data to the connection ..." />
+                <marker date="1514666667841" expanded="true" signature="455:489" ph=" Close the connection ..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -276,7 +486,7 @@
       <workItem from="1513847034780" duration="3283000" />
       <workItem from="1514367553701" duration="12000" />
       <workItem from="1514367667457" duration="18536000" />
-      <workItem from="1514658888207" duration="6020000" />
+      <workItem from="1514658888207" duration="6796000" />
     </task>
     <task id="LOCAL-00001" summary="Create Login class">
       <created>1514367750010</created>
@@ -404,22 +614,35 @@
       <option name="project" value="LOCAL" />
       <updated>1514666210498</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="php Login">
+      <created>1514666342651</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1514666342651</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fixed Login php">
+      <created>1514666439449</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1514666439449</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35237000" />
+    <option name="totallyTimeSpent" value="36013000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23843187" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30282637" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -459,7 +682,9 @@
     <MESSAGE value="changed Readme" />
     <MESSAGE value="create Login test html" />
     <MESSAGE value="change Login test html" />
-    <option name="LAST_COMMIT_MESSAGE" value="change Login test html" />
+    <MESSAGE value="php Login" />
+    <MESSAGE value="fixed Login php" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed Login php" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -732,14 +957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/unnötig/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -760,7 +977,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
           <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
+          <folding>
+            <marker date="1514666667841" expanded="true" signature="123:263" ph=" A proxy object representing a connection to the application ..." />
+            <marker date="1514666667841" expanded="true" signature="305:418" ph=" Send data to the connection ..." />
+            <marker date="1514666667841" expanded="true" signature="455:489" ph=" Close the connection ..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -820,15 +1041,23 @@
     <entry file="file://$PROJECT_DIR$/test_js/login_test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="102" column="12" lean-forward="false" selection-start-line="102" selection-start-column="12" selection-end-line="102" selection-end-column="12" />
+        <state relative-caret-position="85">
+          <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
           <folding />
         </state>
       </provider>

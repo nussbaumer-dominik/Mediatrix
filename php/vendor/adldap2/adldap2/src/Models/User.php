@@ -11,6 +11,13 @@ use Adldap\Models\Concerns\HasUserAccountControl;
 use Adldap\Models\Concerns\HasLastLogonAndLogOff;
 use Illuminate\Contracts\Auth\Authenticatable;
 
+/**
+ * Class User
+ *
+ * Represents an LDAP user.
+ *
+ * @package Adldap\Models
+ */
 class User extends Entry implements Authenticatable
 {
     use HasDescription,
@@ -815,19 +822,20 @@ class User extends Entry implements Authenticatable
     /**
      * Sets the users thumbnail photo.
      *
-     * @param string $string
+     * @param string $data
+     * @param bool   $encode
      *
      * @return $this
      */
-    public function setThumbnail($string)
+    public function setThumbnail($data, $encode = true)
     {
-        if (!base64_decode($string, $strict = true)) {
+        if ($encode && !base64_decode($data, $strict = true)) {
             // If the string we're given is not base 64 encoded, then
             // we will encode it before setting it on the user.
-            $string = base64_encode($string);
+            $data = base64_encode($data);
         }
 
-        return $this->setAttribute($this->schema->thumbnail(), $string);
+        return $this->setAttribute($this->schema->thumbnail(), $data);
     }
 
     /**
@@ -1013,7 +1021,7 @@ class User extends Entry implements Authenticatable
     }
 
     /**
-     * Change the password of the current user. This must be performed over SSL.
+     * Change the password of the current user. This must be performed over SSL / TLS.
      *
      * Throws an exception on failure.
      *

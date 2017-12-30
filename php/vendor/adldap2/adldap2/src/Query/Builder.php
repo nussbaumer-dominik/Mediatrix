@@ -3,9 +3,9 @@
 namespace Adldap\Query;
 
 use Closure;
-use InvalidArgumentException;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
+use InvalidArgumentException;
 use Adldap\Utilities;
 use Adldap\Models\Model;
 use Adldap\Schemas\SchemaInterface;
@@ -76,18 +76,11 @@ class Builder
     protected $dn;
 
     /**
-     * Determines whether or not to search LDAP recursively.
+     * The default query type.
      *
-     * @var bool
+     * @var string
      */
-    protected $recursive = true;
-
-    /**
-     * Determines whether or not to search LDAP on the base scope.
-     *
-     * @var bool
-     */
-    protected $read = false;
+    protected $type = 'search';
 
     /**
      * Determines whether or not to return LDAP results in their raw array format.
@@ -128,10 +121,10 @@ class Builder
      * Constructor.
      *
      * @param ConnectionInterface  $connection
-     * @param Grammar              $grammar
+     * @param Grammar|null         $grammar
      * @param SchemaInterface|null $schema
      */
-    public function __construct(ConnectionInterface $connection, Grammar $grammar, SchemaInterface $schema = null)
+    public function __construct(ConnectionInterface $connection, Grammar $grammar = null, SchemaInterface $schema = null)
     {
         $this->setConnection($connection)
             ->setGrammar($grammar)
@@ -155,13 +148,13 @@ class Builder
     /**
      * Sets the current filter grammar.
      *
-     * @param Grammar $grammar
+     * @param Grammar|null $grammar
      *
      * @return Builder
      */
-    public function setGrammar(Grammar $grammar)
+    public function setGrammar(Grammar $grammar = null)
     {
-        $this->grammar = $grammar;
+        $this->grammar = $grammar ?: new Grammar();
 
         return $this;
     }
@@ -336,20 +329,13 @@ class Builder
      */
     public function query($query)
     {
-        $dn = $this->getDn();
-
-        $selects = $this->getSelects();
-
-        if ($this->read) {
-            // If read is true, we'll perform a read search, retrieving one record.
-            $results = $this->connection->read($dn, $query, $selects, false, $this->limit);
-        } elseif ($this->recursive) {
-            // If recursive is true, we'll perform a recursive search.
-            $results = $this->connection->search($dn, $query, $selects, false, $this->limit);
-        } else {
-            // Read and recursive is false, we'll return a listing.
-            $results = $this->connection->listing($dn, $query, $selects, false, $this->limit);
-        }
+        $results = $this->connection->{$this->type}(
+            $this->getDn(),
+            $query,
+            $this->getSelects(),
+            $onlyAttributes = false,
+            $this->limit
+        );
 
         return $this->newProcessor()->process($results);
     }
@@ -1253,31 +1239,39 @@ class Builder
     }
 
     /**
-     * Sets the recursive property to tell the search whether or not to search recursively.
+     * Set the query to search on the base distinguished name.
      *
-     * @param bool $recursive
+     * This will result in one record being returned.
      *
      * @return Builder
      */
-    public function recursive($recursive = true)
+    public function read()
     {
-        $this->recursive = (bool) $recursive;
+        $this->type = 'read';
 
         return $this;
     }
 
     /**
-     * Sets the recursive property to tell the search
-     * whether or not to search on the base scope and
-     * return a single entry.
-     *
-     * @param bool $read
+     * Set the query to search one level on the base distinguished name.
      *
      * @return Builder
      */
-    public function read($read = true)
+    public function listing()
     {
-        $this->read = (bool) $read;
+        $this->type = 'listing';
+
+        return $this;
+    }
+
+    /**
+     * Sets the query to search the entire directory on the base distinguished name.
+     *
+     * @return Builder
+     */
+    public function recursive()
+    {
+        $this->type = 'search';
 
         return $this;
     }
