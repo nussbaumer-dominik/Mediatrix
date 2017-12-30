@@ -27,7 +27,7 @@ class Login
 
     public function __construct()
     {
-        $this->ldap = new \Adldap\Adldap($this->config);
+        //$this->ldap = new \Adldap\Adldap($this->config);
         $this->key = base64_decode(Key::getKey());
 
 
