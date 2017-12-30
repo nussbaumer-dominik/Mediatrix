@@ -100,7 +100,7 @@ class Login
 
 
 }
-
+echo "test";
 $l = new Login();
 
 $l->login('3827','k?2Z=_3Q');
