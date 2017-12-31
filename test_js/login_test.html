@@ -9,8 +9,22 @@
 <form action="../../Mediatrix/php/src/Login.php" method="post">
     <input type="text" name="username">
     <input type="password" name="password">
-    <button type="submit">Submit</button>
+    <button type="button" id="btn">Submit</button>
 </form>
+
+<script>
+    function reqListener() {
+        console.log(this.responseJSON.jwt);
+    }
+
+    document.getElementById("btn").addEventListener('click', function(){
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", reqListener);
+        oReq.open("GET", "/Login");
+        oReq.send();
+    });
+
+</script>
 
 </body>
 </html>
