@@ -52,6 +52,8 @@ class Application implements  MessageComponentInterface {
 
             echo "2\n";
 
+            print_r($commands);
+
             print_r(JWT::decode($commands['jwt'],$this->key, array('HS512')));
 
             echo "3\n";
