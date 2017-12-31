@@ -15,6 +15,10 @@
         console.log(e.data);
     };
 
+    var url = new URL(window.location);
+    var params = new URLSearchParams(url.search);
+
+    var jwt = params.get('jwt');
 
 </script>
 </body>
