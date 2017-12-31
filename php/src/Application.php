@@ -87,7 +87,7 @@ class Application implements  MessageComponentInterface {
         }catch (\Exception $ex){
             $from->send('Wrong or no jwt');
             //$from->close();
-            echo 'There was an Error: '.$ex->getMessage();
+            echo 'There was an Error: '.$ex->getMessage().' '.$ex->getCode();
         }
 
     }
