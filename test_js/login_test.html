@@ -20,7 +20,7 @@
     document.getElementById("btn").addEventListener('click', function(){
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", reqListener);
-        oReq.open("GET", "/Login");
+        oReq.open("GET", "/Mediatrix/php/src/Login.php");
         oReq.send();
     });
 
