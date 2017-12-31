@@ -15,7 +15,9 @@
 <script>
     function reqListener() {
         var resp = JSON.parse(this.response);
-        console.log(resp['jwt']);
+        if(resp['jwt'] != null && resp['jwt'] != "undefined"){
+            window.location.href = "/Mediatrix/test_js/ws_ttest.html?jwt="+resp['jwt'];
+        }
     }
 
     document.getElementById("btn").addEventListener('click', function(){
