@@ -86,7 +86,7 @@ class Application implements  MessageComponentInterface {
             echo 'Session expired: '.$ex->getMessage();
         }catch (\Exception $ex){
             $from->send('Wrong or no jwt');
-            $from->close();
+            //$from->close();
             echo 'There was an Error: '.$ex->getMessage();
         }
 
