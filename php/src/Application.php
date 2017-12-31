@@ -48,7 +48,7 @@ class Application implements  MessageComponentInterface {
 
             $commands = json_decode($msg, true);
 
-            echo JWT::decode($commands['jwt'],$this->key, array('HS512'));
+            JWT::decode($commands['jwt'],$this->key, array('HS512'));
 
             if(isset($commands["dmx"])){
                 $this->sendDmx($commands["dmx"]);
@@ -79,7 +79,7 @@ class Application implements  MessageComponentInterface {
 
             echo 'Session expired: '.$ex->getMessage();
         }catch (\Exception $ex){
-            echo 'There was an Error'-$ex->getMessage();
+            echo 'There was an Error: '-$ex->getMessage();
         }
 
     }
