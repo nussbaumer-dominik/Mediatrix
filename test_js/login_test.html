@@ -14,7 +14,8 @@
 
 <script>
     function reqListener() {
-        console.log(this);
+        var resp = JSON.parse(this.response);
+        console.log(resp['jwt']);
     }
 
     document.getElementById("btn").addEventListener('click', function(){

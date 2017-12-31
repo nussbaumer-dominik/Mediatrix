@@ -73,8 +73,8 @@
       <file leaf-file-name="login_test.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_js/login_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="22" column="54" lean-forward="false" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+            <state relative-caret-position="187">
+              <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -291,7 +291,7 @@
       <workItem from="1513847034780" duration="3283000" />
       <workItem from="1514367553701" duration="12000" />
       <workItem from="1514367667457" duration="18536000" />
-      <workItem from="1514658888207" duration="19095000" />
+      <workItem from="1514658888207" duration="19227000" />
     </task>
     <task id="LOCAL-00001" summary="Create Login class">
       <created>1514367750010</created>
@@ -489,11 +489,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514679334365</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="changed Login test">
+      <created>1514679424525</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1514679424525</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48312000" />
+    <option name="totallyTimeSpent" value="48444000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -921,8 +928,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_js/login_test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="54" lean-forward="false" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+        <state relative-caret-position="187">
+          <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
           <folding />
         </state>
       </provider>
