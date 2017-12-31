@@ -8,7 +8,7 @@
 
 namespace Mediatrix;
 
-require __DIR__ . '../vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 use Firebase\JWT\JWT;
 
