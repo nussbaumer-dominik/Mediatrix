@@ -8,9 +8,9 @@
 
 namespace Mediatrix;
 
-require __DIR__ . '/../vendor/autoload.php';
-
 use Firebase\JWT\JWT;
+
+require __DIR__ . '/../vendor/autoload.php';
 
 class Login
 {
@@ -33,6 +33,10 @@ class Login
 
     }
 
+    /**
+     * @param $username
+     * @param $password
+     */
     public function login($username, $password){
 
         try {
