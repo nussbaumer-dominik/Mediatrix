@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/src/Login.php" afterPath="$PROJECT_DIR$/php/src/Login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_js/login_test.html" afterPath="$PROJECT_DIR$/test_js/login_test.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -74,8 +73,8 @@
       <file leaf-file-name="login_test.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_js/login_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+            <state relative-caret-position="192">
+              <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -292,7 +291,7 @@
       <workItem from="1513847034780" duration="3283000" />
       <workItem from="1514367553701" duration="12000" />
       <workItem from="1514367667457" duration="18536000" />
-      <workItem from="1514658888207" duration="18927000" />
+      <workItem from="1514658888207" duration="19006000" />
     </task>
     <task id="LOCAL-00001" summary="Create Login class">
       <created>1514367750010</created>
@@ -476,11 +475,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514678824472</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="changed Login test">
+      <created>1514679261528</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1514679261528</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48144000" />
+    <option name="totallyTimeSpent" value="48223000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -535,7 +541,8 @@
     <MESSAGE value="fixed Login php" />
     <MESSAGE value="debug Login php" />
     <MESSAGE value="added firebase jwt" />
-    <option name="LAST_COMMIT_MESSAGE" value="added firebase jwt" />
+    <MESSAGE value="changed Login test" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed Login test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -907,8 +914,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_js/login_test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        <state relative-caret-position="192">
+          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
           <folding />
         </state>
       </provider>
