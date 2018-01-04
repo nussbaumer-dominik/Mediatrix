@@ -131,13 +131,11 @@ class Application implements  MessageComponentInterface {
 
             foreach($ini["dmx"] as $entry){
 
-                array_push($scheinwerfer,""
-                    /*
+                array_push($scheinwerfer,
                     new Scheinwerfer(array(
                             "hue" => $entry["hue"]-1
                         )
                     )
-                     */
                 );
 
             }

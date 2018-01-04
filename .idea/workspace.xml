@@ -4,10 +4,6 @@
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/src/Login.php" afterPath="$PROJECT_DIR$/php/src/Login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/src/generateKey.php" afterPath="$PROJECT_DIR$/php/src/generateKey.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_js/login_test.html" afterPath="$PROJECT_DIR$/test_js/login_test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_js/ws_test.html" afterPath="$PROJECT_DIR$/test_js/ws_test.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-323">
-              <caret line="52" column="69" lean-forward="false" selection-start-line="52" selection-start-column="69" selection-end-line="52" selection-end-column="69" />
+            <state relative-caret-position="124">
+              <caret line="133" column="41" lean-forward="false" selection-start-line="133" selection-start-column="41" selection-end-line="133" selection-end-column="41" />
               <folding>
                 <element signature="e#111#145#0#PHP" expanded="true" />
               </folding>
@@ -104,7 +100,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generateKey.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="generateKey.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/generateKey.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
@@ -153,9 +149,9 @@
         <option value="$PROJECT_DIR$/test_js/login_test.html" />
         <option value="$PROJECT_DIR$/test_js/ws_test.html" />
         <option value="$PROJECT_DIR$/php/vendor/firebase/php-jwt/src/JWT.php" />
-        <option value="$PROJECT_DIR$/php/src/Application.php" />
         <option value="$PROJECT_DIR$/php/src/Login.php" />
         <option value="$PROJECT_DIR$/php/src/generateKey.php" />
+        <option value="$PROJECT_DIR$/php/src/Application.php" />
       </list>
     </option>
   </component>
@@ -575,11 +571,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514722728016</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Fixed JWT-Authentication">
+      <created>1515102386531</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1515102386532</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62672000" />
+    <option name="totallyTimeSpent" value="62783000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -650,7 +653,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create Login class" />
     <MESSAGE value="php" />
     <MESSAGE value="repositioned json" />
     <MESSAGE value="changed Beamer" />
@@ -675,7 +677,8 @@
     <MESSAGE value="Application php" />
     <MESSAGE value="fix Application php" />
     <MESSAGE value="debug Application php" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug Application php" />
+    <MESSAGE value="Fixed JWT-Authentication" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed JWT-Authentication" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1009,16 +1012,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="52" column="69" lean-forward="false" selection-start-line="52" selection-start-column="69" selection-end-line="52" selection-end-column="69" />
-          <folding>
-            <element signature="e#111#145#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1040,6 +1033,16 @@
         <state relative-caret-position="51">
           <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="133" column="41" lean-forward="false" selection-start-line="133" selection-start-column="41" selection-end-line="133" selection-end-column="41" />
+          <folding>
+            <element signature="e#111#145#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
