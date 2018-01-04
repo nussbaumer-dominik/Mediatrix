@@ -6,6 +6,4 @@
  * Time: 21:00
  */
 
-echo base64_encode(openssl_random_pseudo_bytes(64));
-
-print_r(hash_algos());
+echo base64_encode(openssl_random_pseudo_bytes(64))."\n";

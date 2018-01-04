@@ -24,6 +24,7 @@ class Login
         ],
     ];
     private $key;
+    private $expireSec = 10;
 
     public function __construct()
     {
@@ -60,13 +61,13 @@ class Login
                     'jti'  => base64_encode(random_bytes(32)),          // Json Token Id: an unique identifier for the token
                     'iss'  => "Mediatrix",       // Issuer
                     'nbf'  => time(),        // Not before
-                    'exp'  => time()+120,           // Expire
+                    'exp'  => time()+$this->expireSec,           // Expire
                     'data' => [                  // Data related to the signer used
-                        'userName' => $username, // User name
+                        'userName' => $username // User name
                     ]
                 ];
 
-                $jwt = JWT::encode($data, $this->key, 'HS512');
+                $jwt = JWT::encode($data, $this->key,'HS256');
 
                 $unencodedArray = ['jwt' => $jwt];
                 echo json_encode($unencodedArray);

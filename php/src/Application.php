@@ -48,9 +48,9 @@ class Application implements  MessageComponentInterface {
 
             $commands = json_decode($msg, true);
 
-            print_r(JWT::decode($commands['jwt'],$this->key, array('HS512')));
+            $jwt = $commands['jwt'];
 
-            echo "3\n";
+            JWT::decode($commands['jwt'],$this->key, array("HS256"));
 
             if(isset($commands["dmx"])){
                 $this->sendDmx($commands["dmx"]);
@@ -79,12 +79,10 @@ class Application implements  MessageComponentInterface {
             $from->send('Session Expired');
             $from->close();
 
-            echo 'Session expired: '.$ex->getMessage();
+            echo 'Session expired: '.$ex->getMessage()."\n";
         }catch (\Exception $ex){
             $from->send('Wrong or no jwt');
-            //$from->close();
-            echo 'There was an Error: '.$ex->getMessage().' '.$ex->getCode().' '.$ex->getLine().' '.$ex->getFile()."\n";
-            echo $this->key;
+            echo 'There was an Error: '.$ex->getMessage().' '.$ex->getFile().' '.$ex->getLine()."\n";
         }
 
     }
@@ -127,17 +125,19 @@ class Application implements  MessageComponentInterface {
             $ini = file_get_contents($this->FILE, true);
             $ini = json_decode($ini, true);
 
-            $this->key = Key::getKey();
+            $this->key = base64_decode(Key::getKey());
 
             $scheinwerfer = array();
 
             foreach($ini["dmx"] as $entry){
 
-                array_push($scheinwerfer,
+                array_push($scheinwerfer,""
+                    /*
                     new Scheinwerfer(array(
                             "hue" => $entry["hue"]-1
                         )
                     )
+                     */
                 );
 
             }
