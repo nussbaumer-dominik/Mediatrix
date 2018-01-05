@@ -24,6 +24,7 @@ class DMX : public Php::Base {
         static void sendChannel(Php::Parameters &params){
 
             ola::InitLogging(ola::OLA_LOG_WARN, ola::OLA_LOG_STDERR);
+
             ola::DmxBuffer buffer; // A DmxBuffer to hold the data.
 
             //Create Client-Options
@@ -43,7 +44,7 @@ class DMX : public Php::Base {
                 exit(1);
             }
 
-
+            //Go through all passed Channels and set Value
             for (auto const& x : params[0])
             {
                 int c = x.first;
