@@ -11,7 +11,7 @@ require __DIR__ . '/../vendor/autoload.php';
         new Application()
     );
 
-    $ws->enableKeepAlive(new \React\EventLoop\StreamSelectLoop());
+    $ws->enableKeepAlive(new \React\EventLoop\StreamSelectLoop(),2);
 
   $server = IoServer::factory(
       new HttpServer(
