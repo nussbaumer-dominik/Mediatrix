@@ -33,7 +33,7 @@ class DMX : public Php::Base {
             //Set Autostart of Ola to true
             options::autostart = true;
 
-            std::cerr << "test" << endl;
+            PHP::out << "test" << endl;
 
             // Create a new client.
             ola::client::StreamingClient ola_client((options));
