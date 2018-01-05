@@ -26,10 +26,16 @@ class DMX : public Php::Base {
             ola::InitLogging(ola::OLA_LOG_WARN, ola::OLA_LOG_STDERR);
             ola::DmxBuffer buffer; // A DmxBuffer to hold the data.
 
+            //Create Client-Options
+            ola::client::StreamingClient::Options options = ola::client::StreamingClient::Options();
+
+            //Set Autostart of Ola to true
+            options::autostart = true;
+
+            std::cerr << "test" << endl;
 
             // Create a new client.
-            ola::client::StreamingClient ola_client(
-            (ola::client::StreamingClient::Options()));
+            ola::client::StreamingClient ola_client((options));
 
             // Setup the client, this connects to the server
             if (!ola_client.Setup()) {

@@ -50,7 +50,7 @@ class Application implements  MessageComponentInterface {
 
             $jwt = $commands['jwt'];
 
-            JWT::decode($commands['jwt'],$this->key, array("HS256"));
+            JWT::decode($jwt,$this->key, array("HS256"));
 
             if(isset($commands["dmx"])){
                 $this->sendDmx($commands["dmx"]);

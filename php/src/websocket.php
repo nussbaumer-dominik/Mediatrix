@@ -7,15 +7,11 @@ use Ratchet\WebSocket\WsServer;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-    $ws = new WsServer(
-        new Application()
-    );
-
-    $ws->enableKeepAlive(new \React\EventLoop\StreamSelectLoop(),2);
-
   $server = IoServer::factory(
       new HttpServer(
-          $ws
+          new WsServer(
+              new Application()
+          )
       ),
         10000
   );
