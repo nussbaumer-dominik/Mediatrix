@@ -56,8 +56,8 @@
       <file leaf-file-name="DMX.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cpp/DMX.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="35" column="39" lean-forward="true" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+            <state relative-caret-position="468">
+              <caret line="115" column="2" lean-forward="true" selection-start-line="115" selection-start-column="2" selection-end-line="115" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -304,7 +304,7 @@
       <workItem from="1514367553701" duration="12000" />
       <workItem from="1514367667457" duration="18536000" />
       <workItem from="1514658888207" duration="22987000" />
-      <workItem from="1515150984459" duration="8318000" />
+      <workItem from="1515150984459" duration="8469000" />
     </task>
     <task id="LOCAL-00001" summary="Create Login class">
       <created>1514367750010</created>
@@ -642,11 +642,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515172967131</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="debug c++">
+      <created>1515173727168</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1515173727168</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72805000" />
+    <option name="totallyTimeSpent" value="72956000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1091,8 +1098,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cpp/DMX.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="35" column="39" lean-forward="true" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+        <state relative-caret-position="468">
+          <caret line="115" column="2" lean-forward="true" selection-start-line="115" selection-start-column="2" selection-end-line="115" selection-end-column="2" />
           <folding />
         </state>
       </provider>

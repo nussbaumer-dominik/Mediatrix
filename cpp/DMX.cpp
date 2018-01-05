@@ -98,7 +98,6 @@ class DMX : public Php::Base {
 
 };
 
-/*
 int main(int, char *[]){
     map <int, int> c;        // empty map container
 
@@ -113,12 +112,11 @@ int main(int, char *[]){
 
     DMX::sendChannel(c);
 
-    DMX::blackout();
-
-    DMX::noBlackout();
+//    DMX::blackout();
+//
+//    DMX::noBlackout();
 }
 
-*/
 /**
  *  tell the compiler that the get_module is a pure C function
  */
