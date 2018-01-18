@@ -77,6 +77,8 @@ class Application implements  MessageComponentInterface {
                 $from->send('{"success":"false","err":"Unrecognized Command"}');
             }
 
+            var_dump($result);
+
             $from->send($result);
 
         }catch(ExpiredException $ex){

@@ -31,11 +31,21 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+            <state relative-caret-position="208">
+              <caret line="79" column="30" lean-forward="false" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
               <folding>
                 <element signature="e#111#149#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConnectionInterface.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/vendor/cboden/ratchet/src/Ratchet/ConnectionInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -252,14 +262,7 @@
       <workItem from="1514658888207" duration="22987000" />
       <workItem from="1515150984459" duration="10041000" />
       <workItem from="1516214076651" duration="42000" />
-      <workItem from="1516297251788" duration="5552000" />
-    </task>
-    <task id="LOCAL-00008" summary="typo in Scheinwerfer construct">
-      <created>1514456036092</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1514456036092</updated>
+      <workItem from="1516297251788" duration="5902000" />
     </task>
     <task id="LOCAL-00009" summary="add use to Scheinwerfer">
       <created>1514457356731</created>
@@ -597,11 +600,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516305379792</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Application debug catch">
+      <created>1516305436814</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1516305436814</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80122000" />
+    <option name="totallyTimeSpent" value="80472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -848,13 +858,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/test.php" />
-    <entry file="file://$PROJECT_DIR$/php/vendor/cboden/ratchet/src/Ratchet/ConnectionInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Mediatrix.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -1035,10 +1038,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/php/vendor/cboden/ratchet/src/Ratchet/ConnectionInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+        <state relative-caret-position="208">
+          <caret line="79" column="30" lean-forward="false" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
           <folding>
             <element signature="e#111#149#0#PHP" expanded="true" />
           </folding>
