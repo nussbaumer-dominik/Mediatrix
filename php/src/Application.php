@@ -53,7 +53,8 @@ class Application implements  MessageComponentInterface {
             JWT::decode($jwt,$this->key, array("HS256"));
 
             if(isset($commands["dmx"])){
-                $this->sendDmx($commands["dmx"]);
+                $result = $this->sendDmx($commands["dmx"]);
+                $from->send($result);
             }elseif (isset($commands["beamer"])){
                 $beamerCom = $commands["beamer"];
 
@@ -72,16 +73,16 @@ class Application implements  MessageComponentInterface {
             }elseif (isset($commands["av"])){
                 $from->send("av");
             }else{
-                $from->send("Unrecognized Command");
+                $from->send('{"success":"false","err":"Unrecognized Command"}');
             }
 
         }catch(ExpiredException $ex){
-            $from->send('Session Expired');
+            $from->send('{"success":"false","err":"Session Expired"}');
             $from->close();
 
             echo 'Session expired: '.$ex->getMessage()."\n";
         }catch (\Exception $ex){
-            $from->send('Wrong or no jwt');
+            $from->send('{"success":"false","err":"Wrong or no jwt"}');
             echo 'There was an Error: '.$ex->getMessage().' '.$ex->getFile().' '.$ex->getLine()."\n";
         }
 
