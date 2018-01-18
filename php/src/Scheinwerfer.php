@@ -15,9 +15,12 @@ class Scheinwerfer{
     }
 
     function dimmen(int $val){
-      return json_decode($this->dmx->sendChannel(array(
+      $r = json_decode($this->dmx->sendChannel(array(
         $this->channels["hue"] => $val
       )));
+
+      echo "dimmen: ";
+      var_dump($r);
 
 
     }
