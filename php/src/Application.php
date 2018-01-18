@@ -57,7 +57,7 @@ class Application implements  MessageComponentInterface {
             JWT::decode($jwt,$this->key, array("HS256"));
 
             if(isset($commands["dmx"])){
-                $result = $this->sendDmx($commands["dmx"]);
+                $this->sendDmx($commands["dmx"]);
             }elseif (isset($commands["beamer"])){
                 $beamerCom = $commands["beamer"];
 
