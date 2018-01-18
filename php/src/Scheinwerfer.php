@@ -19,10 +19,7 @@ class Scheinwerfer{
         $this->channels["hue"] => $val
       ))));
 
-      echo "dimmen: ";
-      var_dump($r);
-
-
+      return $r;
     }
 
     function on(){
