@@ -31,8 +31,8 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="51" column="76" lean-forward="false" selection-start-line="51" selection-start-column="76" selection-end-line="51" selection-end-column="76" />
+            <state relative-caret-position="316">
+              <caret line="85" column="49" lean-forward="false" selection-start-line="85" selection-start-column="49" selection-end-line="85" selection-end-column="49" />
               <folding>
                 <element signature="e#111#149#0#PHP" expanded="true" />
               </folding>
@@ -273,14 +273,7 @@
       <workItem from="1514658888207" duration="22987000" />
       <workItem from="1515150984459" duration="10041000" />
       <workItem from="1516214076651" duration="42000" />
-      <workItem from="1516297251788" duration="9100000" />
-    </task>
-    <task id="LOCAL-00020" summary="fixed Login php">
-      <created>1514666439449</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1514666439449</updated>
+      <workItem from="1516297251788" duration="9421000" />
     </task>
     <task id="LOCAL-00021" summary="fixed Login php">
       <created>1514667171565</created>
@@ -618,11 +611,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516308179640</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Application add return">
+      <created>1516309480046</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1516309480046</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83670000" />
+    <option name="totallyTimeSpent" value="83991000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -682,7 +682,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="create Login test html" />
     <MESSAGE value="change Login test html" />
     <MESSAGE value="php Login" />
     <MESSAGE value="fixed Login php" />
@@ -707,7 +706,8 @@
     <MESSAGE value="add return to dmx part of Application" />
     <MESSAGE value="Application debug catch" />
     <MESSAGE value="Application debug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Application debug" />
+    <MESSAGE value="Application add return" />
+    <option name="LAST_COMMIT_MESSAGE" value="Application add return" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1059,8 +1059,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="51" column="76" lean-forward="false" selection-start-line="51" selection-start-column="76" selection-end-line="51" selection-end-column="76" />
+        <state relative-caret-position="316">
+          <caret line="85" column="49" lean-forward="false" selection-start-line="85" selection-start-column="49" selection-end-line="85" selection-end-column="49" />
           <folding>
             <element signature="e#111#149#0#PHP" expanded="true" />
           </folding>

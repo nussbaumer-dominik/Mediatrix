@@ -81,9 +81,11 @@ class Application implements  MessageComponentInterface {
                 $from->send('{"success":"false","err":"Unrecognized Command"}');
             }
 
-            var_dump($result);
-
-            $from->send($result);
+            if(count($result)>1){
+                foreach ($result as $r){
+                    $from->send(json_encode($r));
+                }
+            }
 
         }catch(ExpiredException $ex){
             $from->send('{"success":"false","err":"Session Expired"}');
