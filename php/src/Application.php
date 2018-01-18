@@ -48,6 +48,8 @@ class Application implements  MessageComponentInterface {
 
         try{
 
+            $result = "test";
+
             $commands = json_decode($msg, true);
 
             $jwt = $commands['jwt'];
