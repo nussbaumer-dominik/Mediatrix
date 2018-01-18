@@ -17,7 +17,7 @@ class Scheinwerfer{
     }
 
     function dimmen(int $val){
-      $this->dmx->sendChannel(array(
+      return $this->dmx->sendChannel(array(
         $this->channels["hue"] => $val
       ));
 
@@ -25,13 +25,13 @@ class Scheinwerfer{
     }
 
     function on(): boolean{
-      $this->dmx::sendChannel(array(
+      return $this->dmx::sendChannel(array(
         $this->channels["hue"] => 255
       ));
     }
 
     function off(): boolean {
-      $this->dmx::sendChannel(array(
+      return $this->dmx::sendChannel(array(
         $this->channels["hue"] => 0
       ));
     }
