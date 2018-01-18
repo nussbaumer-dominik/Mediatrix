@@ -48,7 +48,8 @@ class Application implements  MessageComponentInterface {
 
         try{
 
-            $result = "test";
+            $result = array();
+            array_push($result, json_decode('{"success":"true","err":""}'));
 
             $commands = json_decode($msg, true);
 
@@ -57,7 +58,8 @@ class Application implements  MessageComponentInterface {
             JWT::decode($jwt,$this->key, array("HS256"));
 
             if(isset($commands["dmx"])){
-                $result = $this->sendDmx($commands["dmx"]);
+                $r = $this->sendDmx($commands["dmx"]);
+                $r->success?:array_push($result,$r);
             }elseif (isset($commands["beamer"])){
                 $beamerCom = $commands["beamer"];
 
