@@ -21,7 +21,7 @@ class DMX : public Php::Base {
         static const unsigned int UNIVERSE = 0; // UNIVERSE to use for sending data
 
     public:
-        static void sendChannel(Php::Parameters &params){
+        static Php::Value sendChannel(Php::Parameters &params){
 
             ola::InitLogging(ola::OLA_LOG_WARN, ola::OLA_LOG_STDERR);
 
@@ -40,7 +40,7 @@ class DMX : public Php::Base {
 
             // Setup the client, this connects to the server
             if (!ola_client.Setup()) {
-                std::cerr << "Setup failed" << endl;
+                return "{'success':'false','err':'Setup failed'}";
                 exit(1);
             }
 
@@ -53,15 +53,16 @@ class DMX : public Php::Base {
             }
 
             if (!ola_client.SendDmx(UNIVERSE, buffer)) {
-                cout << "Send DMX failed" << endl;
+                return "{'success':'false','err':'Send DMX failed'}";
                 exit(1);
             }
 
             cout << "DMX-Singal sent" << endl;
+            return "{'success':'true','err':''}";
 
         }
 
-        static void blackout(){
+        static Php::Value blackout(){
             ola::InitLogging(ola::OLA_LOG_WARN, ola::OLA_LOG_STDERR);
             ola::DmxBuffer buffer; // A DmxBuffer to hold the data.
             buffer.Blackout(); // Set all channels to 0
@@ -98,6 +99,7 @@ class DMX : public Php::Base {
 
 };
 
+/*
 int main(int, char *[]){
     map <int, int> c;        // empty map container
 
@@ -112,11 +114,12 @@ int main(int, char *[]){
 
     DMX::sendChannel(c);
 
-//    DMX::blackout();
-//
-//    DMX::noBlackout();
+    DMX::blackout();
+
+    DMX::noBlackout();
 }
 
+*/
 /**
  *  tell the compiler that the get_module is a pure C function
  */
