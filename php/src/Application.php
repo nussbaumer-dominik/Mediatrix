@@ -57,7 +57,7 @@ class Application implements  MessageComponentInterface {
             JWT::decode($jwt,$this->key, array("HS256"));
 
             if(isset($commands["dmx"])){
-                $this->sendDmx($commands["dmx"]);
+                $result = $this->sendDmx($commands["dmx"]);
             }elseif (isset($commands["beamer"])){
                 $beamerCom = $commands["beamer"];
 
@@ -127,8 +127,14 @@ class Application implements  MessageComponentInterface {
     {
         foreach($dmx as $dev){
             echo "sendDmx: ".(json_encode($dev))."\n";
-            $this->scheinwerfer[$dev["id"]]->dimmen($dev["hue"]);
+            $result = $this->scheinwerfer[$dev["id"]]->dimmen($dev["hue"]);
+
+            if(!$result['success']){
+                return $result;
+            }
         }
+
+        return '{"success":"true","err":""}';
     }
 
     public function iniMe(){
