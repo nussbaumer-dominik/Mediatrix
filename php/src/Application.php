@@ -8,8 +8,10 @@
 
 namespace Mediatrix;
 
+use Firebase\JWT\BeforeValidException;
 use Firebase\JWT\ExpiredException;
 use Firebase\JWT\JWT;
+use Firebase\JWT\SignatureInvalidException;
 use Ratchet\MessageComponentInterface;
 use Ratchet\ConnectionInterface;
 
@@ -54,7 +56,6 @@ class Application implements  MessageComponentInterface {
 
             if(isset($commands["dmx"])){
                 $result = $this->sendDmx($commands["dmx"]);
-                $from->send($result);
             }elseif (isset($commands["beamer"])){
                 $beamerCom = $commands["beamer"];
 
@@ -76,12 +77,18 @@ class Application implements  MessageComponentInterface {
                 $from->send('{"success":"false","err":"Unrecognized Command"}');
             }
 
+            $from->send($result);
+
         }catch(ExpiredException $ex){
             $from->send('{"success":"false","err":"Session Expired"}');
             $from->close();
 
             echo 'Session expired: '.$ex->getMessage()."\n";
-        }catch (\Exception $ex){
+        }catch (SignatureInvalidException $ex){
+            $from->send('{"success":"false","err":"Wrong or no jwt"}');
+            echo 'There was an Error: '.$ex->getMessage().' '.$ex->getFile().' '.$ex->getLine()."\n";
+        }
+        catch (BeforeValidException $ex){
             $from->send('{"success":"false","err":"Wrong or no jwt"}');
             echo 'There was an Error: '.$ex->getMessage().' '.$ex->getFile().' '.$ex->getLine()."\n";
         }
