@@ -129,6 +129,7 @@ class Application implements  MessageComponentInterface {
             echo "sendDmx: ".(json_encode($dev))."\n";
             $result = $this->scheinwerfer[$dev["id"]]->dimmen($dev["hue"]);
 
+            echo "sendDmx";
             var_dump($result);
 
             if(!$result['success']){
