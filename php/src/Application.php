@@ -132,7 +132,7 @@ class Application implements  MessageComponentInterface {
             echo "sendDmx";
             var_dump($result);
 
-            if(!$result['success']){
+            if(!$result->success){
                 return $result;
             }
         }
