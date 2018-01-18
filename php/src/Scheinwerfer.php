@@ -15,22 +15,22 @@ class Scheinwerfer{
     }
 
     function dimmen(int $val){
-      return $this->dmx->sendChannel(array(
+      return json_decode($this->dmx->sendChannel(array(
         $this->channels["hue"] => $val
-      ));
+      )));
 
 
     }
 
-    function on(): boolean{
-      return $this->dmx::sendChannel(array(
+    function on(){
+      return json_decode($this->dmx::sendChannel(array(
         $this->channels["hue"] => 255
-      ));
+      )));
     }
 
-    function off(): boolean {
-      return $this->dmx::sendChannel(array(
+    function off(){
+      return json_decode($this->dmx::sendChannel(array(
         $this->channels["hue"] => 0
-      ));
+      )));
     }
 }
