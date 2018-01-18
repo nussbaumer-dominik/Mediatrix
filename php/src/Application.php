@@ -84,14 +84,14 @@ class Application implements  MessageComponentInterface {
             $from->close();
 
             echo 'Session expired: '.$ex->getMessage()."\n";
-        }catch (SignatureInvalidException $ex){
+        }/*catch (SignatureInvalidException $ex){
             $from->send('{"success":"false","err":"Wrong or no jwt"}');
             echo 'There was an Error: '.$ex->getMessage().' '.$ex->getFile().' '.$ex->getLine()."\n";
         }
         catch (BeforeValidException $ex){
             $from->send('{"success":"false","err":"Wrong or no jwt"}');
             echo 'There was an Error: '.$ex->getMessage().' '.$ex->getFile().' '.$ex->getLine()."\n";
-        }
+        }*/
 
     }
 
