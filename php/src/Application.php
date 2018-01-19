@@ -17,9 +17,11 @@ use Ratchet\ConnectionInterface;
 
 
 class Application implements  MessageComponentInterface {
-    protected $client;
-    protected $scheinwerfer;
+
     private $FILE = "Mediatrix.json";
+
+    private $client;
+    private $scheinwerfer;
     private $beamer;
     private $key;
 
@@ -29,6 +31,8 @@ class Application implements  MessageComponentInterface {
 
     public function onOpen(ConnectionInterface $conn) {
         // Store the new connection to send messages to later
+
+        //check if there is already a connection
         if(!isset($this->client)) {
             $this->client = $conn;
 
@@ -48,18 +52,25 @@ class Application implements  MessageComponentInterface {
 
         try{
 
+            //init return array
             $result = array();
             array_push($result, json_decode('{"success":"true","err":""}'));
 
+            //decode command json
             $commands = json_decode($msg, true);
 
+            //Check JWT
             $jwt = $commands['jwt'];
 
             JWT::decode($jwt,$this->key, array("HS256"));
 
+            //check if dmx command was passed
             if(isset($commands["dmx"])){
+
                 $r = $this->sendDmx($commands["dmx"]);
                 $r->success?:array_push($result,$r);
+
+            //check if beamer command was passed
             }elseif (isset($commands["beamer"])){
                 $beamerCom = $commands["beamer"];
 
@@ -75,31 +86,34 @@ class Application implements  MessageComponentInterface {
                     $this->beamer->changeSource();
                 }
 
+            //check if av command was passed
             }elseif (isset($commands["av"])){
                 $from->send("av");
+
+            //if nothing from  was right, no command recognized
             }else{
                 $from->send('{"success":"false","err":"Unrecognized Command"}');
             }
 
+            //check if an error was added to the return array
             if(count($result)>1){
+
+                //send each error to the client
                 foreach ($result as $r){
                     $from->send(json_encode($r));
                 }
             }
 
+        //If Session Expired send error message
         }catch(ExpiredException $ex){
             $from->send('{"success":"false","err":"Session Expired"}');
             $from->close();
 
             echo 'Session expired: '.$ex->getMessage()."\n";
-        }/*catch (SignatureInvalidException $ex){
-            $from->send('{"success":"false","err":"Wrong or no jwt"}');
+        }catch (\Exception $ex){
+            $from->send('{"success":"false","err":"There was an Error"}');
             echo 'There was an Error: '.$ex->getMessage().' '.$ex->getFile().' '.$ex->getLine()."\n";
         }
-        catch (BeforeValidException $ex){
-            $from->send('{"success":"false","err":"Wrong or no jwt"}');
-            echo 'There was an Error: '.$ex->getMessage().' '.$ex->getFile().' '.$ex->getLine()."\n";
-        }*/
 
     }
 
@@ -126,6 +140,7 @@ class Application implements  MessageComponentInterface {
 
     /**
      * @param array $dmx
+     * @return array Result-Array
      */
     private function sendDmx(array $dmx)
     {
@@ -171,9 +186,9 @@ class Application implements  MessageComponentInterface {
 
 
 
-        }catch (Exception $ex){
+        }catch (\Exception $ex){
             echo $ex->getMessage();
-            throw new Exception("Error open and parsing ini-Json");
+            throw new \Exception("Error open and parsing ini-Json");
         }
 
 

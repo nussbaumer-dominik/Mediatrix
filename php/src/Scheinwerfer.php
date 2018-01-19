@@ -11,7 +11,7 @@ class Scheinwerfer{
 
     function __construct(array $channels){
       $this->channels = $channels;
-      $this->dmx = new \DMX();
+      //$this->dmx = new \DMX();
     }
 
     function dimmen(int $val){
