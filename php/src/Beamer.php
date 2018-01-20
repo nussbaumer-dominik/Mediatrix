@@ -47,13 +47,18 @@ class Beamer
     {
         echo "Beamer on \n";
 
-        return true;
+        $code = $this->powerCode['lastSendA'] ? $this->powerCode['b']:$this->powerCode['a'];
+
+        $this->powerCode['lastSendA'] = !$this->powerCode['lastSendA'];
+
+        return $this->ir->send($code,5);
     }
 
     function off()
     {
         echo "Beamer off\n";
-        return true;
+
+        return $this->on();
     }
 
 
