@@ -13,6 +13,7 @@ class Beamer
 {
     private $source = array();
     private $powerCode = array();
+    private $ir;
 
     public function __construct(array $source, array $powerCode)
     {
@@ -29,6 +30,8 @@ class Beamer
         $powerCode['lasSendA'] = false;
 
         $this->powerCode = $powerCode;
+
+        $this->ir = new \IR();
     }
 
     function changeSource()
@@ -43,6 +46,7 @@ class Beamer
     function on()
     {
         echo "Beamer on \n";
+
         return true;
     }
 
