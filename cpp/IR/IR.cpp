@@ -57,7 +57,7 @@ class IR: public Php::Base {
  *  tell the compiler that the get_module is a pure C function
  */
 extern "C" {
-    
+
     /**
      *  Function that is called by PHP right after the PHP process
      *  has started, and that returns an address of an internal PHP
@@ -65,14 +65,14 @@ extern "C" {
      *
      *  @return void*   a pointer to an address that is understood by PHP
      */
-    PHPCPP_EXPORT void *get_module() 
+    PHPCPP_EXPORT void *get_module()
     {
         // static(!) Php::Extension object that should stay in memory
         // for the entire duration of the process (that's why it's static)
         static Php::Extension extension("IR", "1.0");
-        
+
         Php::Class<IR> ir("IR");
-        ir.method<&IR::send> ("send", {Php::ByVal("codes", Php::Type::Array)});
+        ir.method<&IR::send> ("send", {Php::ByVal("code", Php::Type::Array)});
         ir.method<&IR::read> ("read");
 
         // add the class to the extension
