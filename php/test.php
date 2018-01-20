@@ -8,6 +8,6 @@
 
 
 
-$ir = new IR();
+$ir = new \IR();
 
 $ir->send('kjsdgfiueribsipudfzh9pautgieurhfgpudfgz9üerzitguehrtguezfg9peptg',5);
