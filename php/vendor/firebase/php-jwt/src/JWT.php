@@ -75,6 +75,7 @@ class JWT
         }
         $tks = explode('.', $jwt);
         if (count($tks) != 3) {
+            print_r($tks);
             throw new UnexpectedValueException('Wrong number of segments');
         }
         list($headb64, $bodyb64, $cryptob64) = $tks;
