@@ -53,7 +53,10 @@ class Beamer
 
         $this->powerCode['lastSendA'] = !$this->powerCode['lastSendA'];
 
-        return $this->ir->send($code,5);
+        $r =  $this->ir->send($code,5);
+
+        var_dump($r);
+        return $r;
     }
 
     function off()
