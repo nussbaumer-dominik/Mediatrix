@@ -59,10 +59,6 @@ class Application implements  MessageComponentInterface {
             //decode command json
             $commands = json_decode($msg, true);
 
-            echo "Commands: ";
-
-            var_dump($commands);
-
             //Check JWT
             $jwt = $commands['jwt'];
 
