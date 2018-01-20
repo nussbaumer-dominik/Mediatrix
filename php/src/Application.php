@@ -75,7 +75,8 @@ class Application implements  MessageComponentInterface {
                 $r->success?:array_push($result,$r);
 
             //check if beamer command was passed
-            }elseif (isset($commands["beamer"])){
+            }
+            if (isset($commands["beamer"])){
                 $beamerCom = $commands["beamer"];
 
                 var_dump($beamerCom);
@@ -93,11 +94,14 @@ class Application implements  MessageComponentInterface {
                 }
 
             //check if av command was passed
-            }elseif (isset($commands["av"])){
+            }
+            if (isset($commands["av"])){
                 $from->send("av");
 
             //if nothing from  was right, no command recognized
-            }else{
+            }
+
+            if(!(isset($commands["dmx"])&&isset($commands["beamer"])&&isset($commands["av"]))){
                 $from->send('{"success":"false","err":"Unrecognized Command"}');
             }
 
