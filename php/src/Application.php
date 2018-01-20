@@ -61,7 +61,7 @@ class Application implements  MessageComponentInterface {
 
             echo "Commands: ";
 
-            print_r($commands);
+            var_dump($commands);
 
             //Check JWT
             $jwt = $commands['jwt'];
