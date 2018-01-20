@@ -7,6 +7,8 @@
  */
 
 
+$dmx = new \DMX();
+
 
 $ir = new \IR();
 
