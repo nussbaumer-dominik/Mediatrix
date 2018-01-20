@@ -78,6 +78,8 @@ class Application implements  MessageComponentInterface {
             }elseif (isset($commands["beamer"])){
                 $beamerCom = $commands["beamer"];
 
+                var_dump($beamerCom);
+
                 if(isset($beamerCom['on'])){
                     $this->beamer->on();
                 }
