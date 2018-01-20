@@ -1,6 +1,9 @@
 #include <wiringPi.h>
 #include <wiringSerial.h>
-
+#include <iostream>
+#include <string>
+#include <cerrno>
+#include <sstream>
 
 #include <phpcpp.h>
 
