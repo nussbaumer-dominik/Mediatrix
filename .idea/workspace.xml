@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/src/Beamer.php" afterPath="$PROJECT_DIR$/php/src/Beamer.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +18,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
@@ -40,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Beamer.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Beamer.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="60" column="27" lean-forward="true" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+            <state relative-caret-position="226">
+              <caret line="49" column="35" lean-forward="false" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -136,11 +136,11 @@
         <option value="$PROJECT_DIR$/cpp/DMX/DMX.cpp" />
         <option value="$PROJECT_DIR$/cpp/IR/IR.cpp" />
         <option value="$PROJECT_DIR$/php/src/Mediatrix.json" />
-        <option value="$PROJECT_DIR$/php/src/Beamer.php" />
         <option value="$PROJECT_DIR$/php/src/Login.php" />
         <option value="$PROJECT_DIR$/test_js/ws_test.html" />
         <option value="$PROJECT_DIR$/php/vendor/firebase/php-jwt/src/JWT.php" />
         <option value="$PROJECT_DIR$/php/src/Application.php" />
+        <option value="$PROJECT_DIR$/php/src/Beamer.php" />
       </list>
     </option>
   </component>
@@ -272,14 +272,7 @@
       <workItem from="1515150984459" duration="10041000" />
       <workItem from="1516214076651" duration="42000" />
       <workItem from="1516297251788" duration="14727000" />
-      <workItem from="1516458312671" duration="17318000" />
-    </task>
-    <task id="LOCAL-00059" summary="Application debug">
-      <created>1516306301621</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1516306301621</updated>
+      <workItem from="1516458312671" duration="17456000" />
     </task>
     <task id="LOCAL-00060" summary="Application debug">
       <created>1516306491486</created>
@@ -617,11 +610,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516491738204</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="debug beamerCom Applications php">
+      <created>1516491907123</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1516491907123</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106615000" />
+    <option name="totallyTimeSpent" value="106753000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1008,14 +1008,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="60" column="27" lean-forward="true" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_js/ws_test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1066,6 +1058,14 @@
           <folding>
             <element signature="e#111#149#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="49" column="35" lean-forward="false" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
