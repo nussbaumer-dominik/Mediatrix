@@ -72,7 +72,10 @@ extern "C" {
         static Php::Extension extension("IR", "1.0");
 
         Php::Class<IR> ir("IR");
-        ir.method<&IR::send> ("send", {Php::ByVal("code", Php::Type::Array)});
+        ir.method<&IR::send> ("send", {
+            Php::ByVal("code", Php::Type::String),
+            Php::ByVal("times", Php::Type::Numeric)
+        });
         ir.method<&IR::send> ("read");
 
         // add the class to the extension
