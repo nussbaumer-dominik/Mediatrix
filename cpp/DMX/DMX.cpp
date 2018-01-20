@@ -140,8 +140,6 @@ extern "C" {
         // for the entire duration of the process (that's why it's static)
         static Php::Extension extension("DMX", "1.0");
 
-        ohgoösdifghöodfig
-
         Php::Class<DMX> dmx("DMX");
         dmx.method<&DMX::sendChannel> ("sendChannel", {Php::ByVal("channels", Php::Type::Array)});
         dmx.method<&DMX::blackout> ("blackout");
