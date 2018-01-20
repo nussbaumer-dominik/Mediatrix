@@ -148,6 +148,8 @@ class Application implements  MessageComponentInterface {
      */
     private function sendDmx(array $dmx)
     {
+        $result = array();
+
         foreach($dmx as $dev){
 
             if(is_array($dev)) {
@@ -159,6 +161,9 @@ class Application implements  MessageComponentInterface {
             }
         }
 
+        if(count($result)>1){
+            return array("success"=>false,"err"=>"Can't send DMX-Signal");
+        }
         return array("success"=>true,"err"=>"");
     }
 

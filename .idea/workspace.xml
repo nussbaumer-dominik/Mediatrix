@@ -21,8 +21,8 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="160" column="8" lean-forward="false" selection-start-line="160" selection-start-column="8" selection-end-line="160" selection-end-column="8" />
+            <state relative-caret-position="216">
+              <caret line="164" column="71" lean-forward="false" selection-start-line="164" selection-start-column="71" selection-end-line="164" selection-end-column="71" />
               <folding>
                 <element signature="e#111#149#0#PHP" expanded="true" />
               </folding>
@@ -272,14 +272,7 @@
       <workItem from="1515150984459" duration="10041000" />
       <workItem from="1516214076651" duration="42000" />
       <workItem from="1516297251788" duration="14727000" />
-      <workItem from="1516458312671" duration="16821000" />
-    </task>
-    <task id="LOCAL-00055" summary="add return to dmx part of Application">
-      <created>1516304384918</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1516304384918</updated>
+      <workItem from="1516458312671" duration="16967000" />
     </task>
     <task id="LOCAL-00056" summary="Application debug catch">
       <created>1516305379792</created>
@@ -617,11 +610,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516491065118</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="fix call of scheinwerfer class in application php">
+      <created>1516491408226</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1516491408226</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106118000" />
+    <option name="totallyTimeSpent" value="106264000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1061,8 +1061,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="160" column="8" lean-forward="false" selection-start-line="160" selection-start-column="8" selection-end-line="160" selection-end-column="8" />
+        <state relative-caret-position="216">
+          <caret line="164" column="71" lean-forward="false" selection-start-line="164" selection-start-column="71" selection-end-line="164" selection-end-column="71" />
           <folding>
             <element signature="e#111#149#0#PHP" expanded="true" />
           </folding>
