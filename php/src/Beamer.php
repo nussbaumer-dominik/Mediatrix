@@ -19,7 +19,7 @@ class Beamer
     {
         foreach ($source as $k => $s){
             $source[$k]['nextActive'] = false;
-            $source[$k]['lasSendA'] = false;
+            $source[$k]['lastSendA'] = false;
         }
 
         $source[0]['nextActive'] = true;
@@ -27,7 +27,7 @@ class Beamer
         $this->source = $source;
 
 
-        $powerCode['lasSendA'] = false;
+        $powerCode['lastSendA'] = false;
 
         $this->powerCode = $powerCode;
 
