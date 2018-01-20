@@ -78,15 +78,18 @@ class Application implements  MessageComponentInterface {
                 var_dump($beamerCom);
 
                 if(isset($beamerCom['on'])){
-                    $this->beamer->on();
+                    $r = $this->beamer->on();
+                    $r->success?:array_push($result,$r);
                 }
 
                 if (isset($beamerCom['off'])){
-                    $this->beamer->off();
+                    $r = $this->beamer->off();
+                    $r->success?:array_push($result,$r);
                 }
 
                 if (isset($beamerCom['source'])){
-                    $this->beamer->changeSource();
+                    $r = $this->beamer->changeSource();
+                    $r->success?:array_push($result,$r);
                 }
 
             //check if av command was passed
