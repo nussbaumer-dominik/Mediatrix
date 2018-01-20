@@ -21,8 +21,8 @@
       <file leaf-file-name="IR.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -283,14 +283,7 @@
       <workItem from="1515150984459" duration="10041000" />
       <workItem from="1516214076651" duration="42000" />
       <workItem from="1516297251788" duration="14727000" />
-      <workItem from="1516458312671" duration="12233000" />
-    </task>
-    <task id="LOCAL-00039" summary="debug Application php">
-      <created>1514722544676</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1514722544676</updated>
+      <workItem from="1516458312671" duration="13093000" />
     </task>
     <task id="LOCAL-00040" summary="debug Application php">
       <created>1514722728016</created>
@@ -628,11 +621,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516481085124</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="fix IR class cpp">
+      <created>1516481633301</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1516481633301</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101530000" />
+    <option name="totallyTimeSpent" value="102390000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -692,7 +692,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="debug Application php" />
     <MESSAGE value="Fixed JWT-Authentication" />
     <MESSAGE value="Reactivate DMX" />
     <MESSAGE value="Change TEst-JS to Server Address" />
@@ -717,7 +716,8 @@
     <MESSAGE value="add IR cpp to Beamer" />
     <MESSAGE value="debug IR class php" />
     <MESSAGE value="fix IR class cpp" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix IR class cpp" />
+    <MESSAGE value="change ttyUSB device" />
+    <option name="LAST_COMMIT_MESSAGE" value="change ttyUSB device" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1072,8 +1072,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        <state relative-caret-position="195">
+          <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
           <folding />
         </state>
       </provider>
