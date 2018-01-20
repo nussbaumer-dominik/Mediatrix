@@ -24,7 +24,7 @@ class Login
         ],
     ];
     private $key;
-    private $expireSec = 10;
+    private $expireSec = 3600;
 
     public function __construct()
     {
