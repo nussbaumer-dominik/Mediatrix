@@ -14,6 +14,7 @@ class IR: public Php::Base {
      static Php::Value send(Php::Parameters &params){
 
         string timesStr = params[1];
+        int times = params[1];
 
         if(timesStr.length()==1){
             timesStr = "0"+timesStr;
@@ -31,7 +32,7 @@ class IR: public Php::Base {
         delay(20);
 
         //convert given code to string
-        string code= params[0];
+        string code = params[0];
 
         //send code to IR-Device
         serialPrintf(fd,("p"+code+"]:").c_str());
