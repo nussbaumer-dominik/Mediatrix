@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class IR: public Php::Base {
+class IR : public Php::Base {
     public:
      static Php::Value send(Php::Parameters &params){
 
