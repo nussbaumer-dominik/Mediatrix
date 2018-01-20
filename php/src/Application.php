@@ -149,6 +149,7 @@ class Application implements  MessageComponentInterface {
     private function sendDmx(array $dmx)
     {
         $result = array();
+        array_push($result,array("success"=>true,"err"=>""));
 
         foreach($dmx as $dev){
 
@@ -162,9 +163,9 @@ class Application implements  MessageComponentInterface {
         }
 
         if(count($result)>1){
-            return array("success"=>false,"err"=>"Can't send DMX-Signal");
+            return $result[1];
         }
-        return array("success"=>true,"err"=>"");
+        return $result;
     }
 
     public function iniMe(){
