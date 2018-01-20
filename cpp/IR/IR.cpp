@@ -48,7 +48,7 @@ class IR: public Php::Base {
      }
 
      static Php::Value read(){
-
+        return "";
      }
 }
 
