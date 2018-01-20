@@ -71,7 +71,7 @@ class Application implements  MessageComponentInterface {
             //check if dmx command was passed
             if(isset($commands["dmx"])){
 
-                $r = $this->sendDmx($commands["dmx"]["scheinwerfer"]);
+                $r = $this->sendDmx($commands["dmx"]);
                 $r->success?:array_push($result,$r);
 
             //check if beamer command was passed
@@ -149,15 +149,17 @@ class Application implements  MessageComponentInterface {
     private function sendDmx(array $dmx)
     {
         foreach($dmx as $dev){
-            $result = $this->scheinwerfer[$dev["id"]]->dimmen($dev["hue"]);
 
+            if(is_array($dev)) {
+                $r = $this->scheinwerfer[$dev["id"]]->dimmen($dev["hue"]);
 
-            if(!$result->success){
-                return $result;
+                if(!$r->success){
+                    array_push($result,$r);
+                }
             }
         }
 
-        return '{"success":"true","err":""}';
+        return array("success"=>true,"err"=>"");
     }
 
     public function iniMe(){
