@@ -74,7 +74,10 @@ extern "C" {
         Php::Class<IR> ir("IR");
         ir.method<&IR::send> ("send", {Php::ByVal("codes", Php::Type::Array)});
         ir.method<&IR::read> ("read");
-        
+
+        // add the class to the extension
+        extension.add(std::move(ir));
+
         // return the extension
         return extension;
     }
