@@ -75,8 +75,6 @@ class Application implements  MessageComponentInterface {
             if (isset($commands["beamer"])){
                 $beamerCom = $commands["beamer"];
 
-                var_dump($beamerCom);
-
                 if(isset($beamerCom['on'])){
                     $r = $this->beamer->on();
                     $r->success?:array_push($result,$r);
@@ -100,7 +98,7 @@ class Application implements  MessageComponentInterface {
             //if nothing from  was right, no command recognized
             }
 
-            if(!(isset($commands["dmx"])&&isset($commands["beamer"])&&isset($commands["av"]))){
+            if(!(isset($commands["dmx"]) || isset($commands["beamer"]) || isset($commands["av"]))){
                 $from->send('{"success":"false","err":"Unrecognized Command"}');
             }
 
