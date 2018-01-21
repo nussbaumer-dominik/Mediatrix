@@ -51,7 +51,7 @@ class Beamer
 
         $this->powerCode['lastSendA'] = !$this->powerCode['lastSendA'];
 
-        return $this->ir->send($code,5);
+        return json_decode(str_replace("'",'"',$this->ir->send($code,5)));
 
     }
 
