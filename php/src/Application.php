@@ -170,7 +170,7 @@ class Application implements  MessageComponentInterface {
         if(count($result)>1){
             return $result[1];
         }
-        return $result;
+        return $result[0];
     }
 
     public function iniMe(){
