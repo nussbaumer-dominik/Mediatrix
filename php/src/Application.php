@@ -79,7 +79,7 @@ class Application implements  MessageComponentInterface {
 
                 if(isset($beamerCom['on'])){
                     $r = $this->beamer->on();
-                    print_r((bool)$r->success);
+                    print_r($r->success);
                     (bool)$r->success?:array_push($result,$r);
                 }
 
