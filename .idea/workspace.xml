@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cpp/test.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/src/Mediatrix.json" afterPath="$PROJECT_DIR$/php/src/Mediatrix.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cpp/IR/IR.cpp" afterPath="$PROJECT_DIR$/cpp/IR/IR.cpp" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,8 +22,18 @@
       <file leaf-file-name="IR.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="28" />
+            <state relative-caret-position="216">
+              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cpp/test.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="37" column="28" lean-forward="false" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -60,7 +71,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mediatrix.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Mediatrix.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Mediatrix.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="248">
@@ -149,8 +160,9 @@
         <option value="$PROJECT_DIR$/php/src/Scheinwerfer.php" />
         <option value="$PROJECT_DIR$/php/src/Beamer.php" />
         <option value="$PROJECT_DIR$/php/src/Application.php" />
-        <option value="$PROJECT_DIR$/cpp/IR/IR.cpp" />
         <option value="$PROJECT_DIR$/php/src/Mediatrix.json" />
+        <option value="$PROJECT_DIR$/cpp/IR/IR.cpp" />
+        <option value="$PROJECT_DIR$/cpp/test.cpp" />
       </list>
     </option>
   </component>
@@ -205,18 +217,6 @@
             <path>
               <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="cpp" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="DMX" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="cpp" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="IR" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="php" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -246,16 +246,17 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\HTL\Mediatrix\php\src" />
-      <recent name="C:\xampp\htdocs\HTL\Mediatrix\conf" />
-      <recent name="C:\xampp\htdocs\HTL\Mediatrix\php" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\HTL\Mediatrix\cpp\IR" />
       <recent name="C:\xampp\htdocs\HTL\Mediatrix\cpp\DMX" />
       <recent name="C:\xampp\htdocs\HTL\Mediatrix\php\src" />
       <recent name="C:\xampp\htdocs\HTL\Mediatrix" />
+      <recent name="C:\xampp\htdocs\HTL\Mediatrix\php" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\HTL\Mediatrix\cpp" />
+      <recent name="C:\xampp\htdocs\HTL\Mediatrix\php\src" />
+      <recent name="C:\xampp\htdocs\HTL\Mediatrix\conf" />
       <recent name="C:\xampp\htdocs\HTL\Mediatrix\php" />
     </key>
   </component>
@@ -300,14 +301,7 @@
       <workItem from="1516214076651" duration="42000" />
       <workItem from="1516297251788" duration="14727000" />
       <workItem from="1516458312671" duration="21972000" />
-      <workItem from="1516560885104" duration="38000" />
-    </task>
-    <task id="LOCAL-00085" summary="debug IR class php">
-      <created>1516473056171</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1516473056171</updated>
+      <workItem from="1516560885104" duration="450000" />
     </task>
     <task id="LOCAL-00086" summary="debug IR class php">
       <created>1516473453484</created>
@@ -645,11 +639,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516495210851</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="change IR code in json">
+      <created>1516560940631</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1516560940647</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111307000" />
+    <option name="totallyTimeSpent" value="111719000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -709,8 +710,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix IR cpp" />
-    <MESSAGE value="add IR cpp to Beamer" />
     <MESSAGE value="debug IR class php" />
     <MESSAGE value="fix IR class cpp" />
     <MESSAGE value="change ttyUSB device" />
@@ -734,20 +733,15 @@
     <MESSAGE value="copy Power codes into json" />
     <MESSAGE value="add main methode in IR cpp" />
     <MESSAGE value="debug IR cpp" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug IR cpp" />
+    <MESSAGE value="change IR code in json" />
+    <MESSAGE value="add read test cpp" />
+    <option name="LAST_COMMIT_MESSAGE" value="add read test cpp" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_js/ws_test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1023,6 +1017,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1060,18 +1055,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Mediatrix.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
           <caret line="24" column="153" lean-forward="false" selection-start-line="24" selection-start-column="153" selection-end-line="24" selection-end-column="153" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpp/test.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="37" column="28" lean-forward="false" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
           <folding />
         </state>
       </provider>

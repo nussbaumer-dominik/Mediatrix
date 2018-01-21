@@ -44,7 +44,7 @@ class IR : public Php::Base {
 
         //send amount of repetitions of the code to the IR-Device
         serialPrintf(fd, ("w"+timesStr+":").c_str());
-        delay(10000);
+        delay(150*times);
 
         return "{'success':'true','err':''}";
      }
