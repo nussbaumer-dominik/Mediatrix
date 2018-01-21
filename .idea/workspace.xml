@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/src/Beamer.php" afterPath="$PROJECT_DIR$/php/src/Beamer.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -274,14 +272,7 @@
       <workItem from="1515150984459" duration="10041000" />
       <workItem from="1516214076651" duration="42000" />
       <workItem from="1516297251788" duration="14727000" />
-      <workItem from="1516458312671" duration="18610000" />
-    </task>
-    <task id="LOCAL-00070" summary="Application add return">
-      <created>1516309792521</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1516309792521</updated>
+      <workItem from="1516458312671" duration="18631000" />
     </task>
     <task id="LOCAL-00071" summary="add return and comment in Application">
       <created>1516350468463</created>
@@ -619,11 +610,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516493081065</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="debug Application">
+      <created>1516493212900</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1516493212900</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107907000" />
+    <option name="totallyTimeSpent" value="107928000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -683,7 +681,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Application debug" />
     <MESSAGE value="Application add return" />
     <MESSAGE value="add return and comment in Application" />
     <MESSAGE value="write send IR cpp" />
@@ -708,7 +705,8 @@
     <MESSAGE value="debug Beamer php" />
     <MESSAGE value="add return in beamercoms" />
     <MESSAGE value="clean up" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean up" />
+    <MESSAGE value="debug Application" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug Application" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
