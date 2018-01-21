@@ -107,6 +107,8 @@ class Application implements  MessageComponentInterface {
             //check if an error was added to the return array
             if(count($result)>1){
 
+                array_shift($result);
+
                 //send each error to the client
                 foreach ($result as $r){
                     $from->send(json_encode($r));

@@ -19,6 +19,8 @@ class Scheinwerfer{
         $this->channels["hue"] => $val
       ))));
 
+      var_dump($r);
+
       return $r;
     }
 
