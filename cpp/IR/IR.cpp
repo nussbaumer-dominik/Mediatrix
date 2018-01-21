@@ -44,7 +44,7 @@ class IR : public Php::Base {
 
         //send amount of repetitions of the code to the IR-Device
         serialPrintf(fd, ("w"+timesStr+":").c_str());
-        delay(150*times);
+        delay(10000);
 
         return "{'success':'true','err':''}";
      }
@@ -54,13 +54,6 @@ class IR : public Php::Base {
      }
 };
 
-int main(int, char *[]){
-
-    Php::Value v1 = "114b424280221008101910081008100810081008100810081008100810081008101910081008100810081008100810081008100810191008100810081019100810081019100810081008100810081008100810081008101910081019101910191019100810081019100810191008101910191019101910";
-
-    IR::send(v1);
-}
-}
 
 /**
  *  tell the compiler that the get_module is a pure C function
