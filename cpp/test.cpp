@@ -22,9 +22,11 @@ int main()
 		printf("Passt\n");
 */
 
-/*
+
 		//Serial write
 		int fd = serialOpen("/dev/ttyUSB0", 9600);
+
+/*
 		serialPrintf(fd, "174c4242802210081019100810081");
 		serialFlush (fd);
 		delay(2000);
