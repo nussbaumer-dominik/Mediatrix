@@ -102,6 +102,8 @@ class Application implements  MessageComponentInterface {
                 $from->send('{"success":"false","err":"Unrecognized Command"}');
             }
 
+            var_dump($result);
+
             //check if an error was added to the return array
             if(count($result)>1){
 
