@@ -68,9 +68,7 @@ class Application implements  MessageComponentInterface {
             if(isset($commands["dmx"])){
 
                 $r = $this->sendDmx($commands["dmx"]);
-
-                print_r((bool)$r['success']);
-                (bool)$r['success']?:array_push($result,$r);
+                $r['success']?:array_push($result,$r);
 
             //check if beamer command was passed
             }
@@ -79,19 +77,17 @@ class Application implements  MessageComponentInterface {
 
                 if(isset($beamerCom['on'])){
                     $r = $this->beamer->on();
-                    echo "TEs: ";
-                    print_r($r->success);
-                    (bool)$r->success?:array_push($result,$r);
+                    $r->success?:array_push($result,$r);
                 }
 
                 if (isset($beamerCom['off'])){
                     $r = $this->beamer->off();
-                    (bool)$r->success?:array_push($result,$r);
+                    $r->success?:array_push($result,$r);
                 }
 
                 if (isset($beamerCom['source'])){
                     $r = $this->beamer->changeSource();
-                    (bool)$r->success?:array_push($result,$r);
+                    $r->success?:array_push($result,$r);
                 }
 
             //check if av command was passed

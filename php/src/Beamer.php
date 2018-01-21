@@ -53,7 +53,6 @@ class Beamer
 
         $r = json_decode(str_replace("'",'"',$this->ir->send($code,5)));
 
-        var_dump($r);
         return $r;
 
     }
