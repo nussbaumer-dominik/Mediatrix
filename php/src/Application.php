@@ -79,19 +79,18 @@ class Application implements  MessageComponentInterface {
 
                 if(isset($beamerCom['on'])){
                     $r = $this->beamer->on();
+                    echo "TEs: ";
                     print_r($r->success);
                     (bool)$r->success?:array_push($result,$r);
                 }
 
                 if (isset($beamerCom['off'])){
                     $r = $this->beamer->off();
-                    print_r((bool)$r->success);
                     (bool)$r->success?:array_push($result,$r);
                 }
 
                 if (isset($beamerCom['source'])){
                     $r = $this->beamer->changeSource();
-                    print_r((bool)$r->success);
                     (bool)$r->success?:array_push($result,$r);
                 }
 
@@ -106,8 +105,6 @@ class Application implements  MessageComponentInterface {
             if(!(isset($commands["dmx"]) || isset($commands["beamer"]) || isset($commands["av"]))){
                 $from->send('{"success":"false","err":"Unrecognized Command"}');
             }
-
-            var_dump($result);
 
             //check if an error was added to the return array
             if(count($result)>1){
