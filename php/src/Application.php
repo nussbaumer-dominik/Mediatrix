@@ -69,8 +69,8 @@ class Application implements  MessageComponentInterface {
 
                 $r = $this->sendDmx($commands["dmx"]);
 
-                print_r((bool)$r->success);
-                (bool)$r->success?:array_push($result,$r);
+                print_r((bool)$r['success']);
+                (bool)$r['success']?:array_push($result,$r);
 
             //check if beamer command was passed
             }
