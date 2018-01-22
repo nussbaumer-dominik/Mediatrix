@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+//variables START
+$color: #1E283D;
+$main: #EF4C4F;
+$bg: #F5F6FA;
+$sidebar: #2B3545;
+$sidebar_hov: #2B4656;
+$accent: #E4E9F2;
+
+//traffic-light color
+$ampel: #222;
+
+$skewDeg: 18deg;
+$magicVH: 32.4vh; // this number is magic and depends on skew angle
+//variables END
+
+// mixins START
+@mixin skew($side: right, $deg: -20deg, $right: -15px, $left: -15px, $width: 30px, $bg: #fff) {
+    position: relative;
+
+    &:before {
+        z-index: 10;
+        content: '';
+        position: relative;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+
+        @if $side == right {
+            left: $right;
+        }
+        @else if $side == left {
+            left: $left;
+        }
+
+        display: block;
+        width: $width;
+        background: $bg;
+        -webkit-transform: skew($deg);
+            -ms-transform: skew($deg);
+                transform: skew($deg);
+    }
+}
+// mixins END
+
+html, body{
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body{
+  background-color: $color;
+  color: $bg;
+}
+
+a{
+  color: inherit;
+}
+
+.main{
+
+  .parent{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    background-color: #2C2F34;
+    position: relative;
+    overflow: hidden;
+
+    .left{
+      z-index: 100;
+      width: 45vw;
+      height: 100%;
+      background-color: $accent;
+      @include skew($bg: $accent, $deg: -10deg, $right: calc(45vw - 130px), $width: 20vw);
+      /*width: 50vw;
+      height: 100%;
+      background-color: #2196F3;
+      -webkit-transform: skewX($skewDeg*-1);
+      transform: skewX($skewDeg*-1);
+      position: absolute;
+      top:0;
+      left: -11vw;*/
+      position: relative;
+      color: #2C2F34;
+
+      .avatar{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    .right{
+      position: absolute;
+      width: 45vw;
+      right: 0;
+      top: 0;
+      height: 100%;
+
+      .avatar{
+        position: absolute;
+        right: 40%;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%) !important;
+      }
+    }
+  }
+}
+
+.avatar{
+    width: 128px;
+    height: 128px;
+    background-image: linear-gradient(to right, #4481eb 0%, #04befe 100%);
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    border-radius: 50%;
+}

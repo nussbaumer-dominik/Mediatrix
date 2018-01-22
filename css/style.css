@@ -125,6 +125,7 @@ header {
 @media (max-width: 40em) {
   .columns {
     text-align: center; } }
+
 .columns p {
   line-height: 1.9; }
 
@@ -275,15 +276,15 @@ footer {
     background-color: #FF0000; }
   50% {
     background-color: #b30000; } }
+
 @keyframes blink2 {
   0% {
     background-color: #FFFF00; }
   50% {
     background-color: #b3b300; } }
+
 @keyframes blink3 {
   0% {
     background-color: #00FF00; }
   50% {
     background-color: #00b300; } }
-
-/*# sourceMappingURL=style.css.map */
