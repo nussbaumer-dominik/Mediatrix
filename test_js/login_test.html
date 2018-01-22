@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="../../Mediatrix/php/src/Login.php" method="post">
+    <input type="text" name="username">
+    <input type="password" name="password">
+    <button type="button" id="btn">Submit</button>
+</form>
+
+<script>
+    function reqListener() {
+        var resp = JSON.parse(this.response);
+        if(resp['jwt'] != null && resp['jwt'] != "undefined"){
+            window.location.href = "../test_js/ws_test.html?jwt="+resp['jwt'];
+        }
+    }
+
+    document.getElementById("btn").addEventListener('click', function(){
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", reqListener);
+        oReq.open("GET", "../php/src/Login.php");
+        oReq.send();
+    });
+
+</script>
+
+</body>
+</html>
