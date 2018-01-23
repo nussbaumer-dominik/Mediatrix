@@ -37,6 +37,9 @@ int main()
 		delay(1000);
 */
 		//read
+		serialPrintf(fd, ":~:");
+        serialFlush (fd);
+
 		serialPrintf(fd, "l01:");
 		serialFlush(fd);
 		int n1 = serialDataAvail(fd);
