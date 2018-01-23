@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cpp/test.cpp" afterPath="$PROJECT_DIR$/cpp/test.cpp" />
+      <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,7 +28,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cpp/test.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="394">
@@ -48,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="78" column="45" lean-forward="false" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
+            <state relative-caret-position="-1333">
+              <caret line="127" column="107" lean-forward="false" selection-start-line="127" selection-start-column="107" selection-end-line="127" selection-end-column="107" />
               <folding>
                 <element signature="e#111#149#0#PHP" expanded="true" />
               </folding>
@@ -163,10 +163,10 @@
         <option value="$PROJECT_DIR$/php/vendor/firebase/php-jwt/src/JWT.php" />
         <option value="$PROJECT_DIR$/php/src/Scheinwerfer.php" />
         <option value="$PROJECT_DIR$/php/src/Beamer.php" />
-        <option value="$PROJECT_DIR$/php/src/Application.php" />
         <option value="$PROJECT_DIR$/php/src/Mediatrix.json" />
         <option value="$PROJECT_DIR$/cpp/IR/IR.cpp" />
         <option value="$PROJECT_DIR$/cpp/test.cpp" />
+        <option value="$PROJECT_DIR$/php/src/Application.php" />
       </list>
     </option>
   </component>
@@ -217,12 +217,6 @@
               <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="cpp" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="cpp" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="IR" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
@@ -313,14 +307,7 @@
       <workItem from="1516458312671" duration="21972000" />
       <workItem from="1516560885104" duration="608000" />
       <workItem from="1516732797857" duration="310000" />
-      <workItem from="1516733368020" duration="2307000" />
-    </task>
-    <task id="LOCAL-00091" summary="debug cpp">
-      <created>1516488158709</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1516488158724</updated>
+      <workItem from="1516733368020" duration="5154000" />
     </task>
     <task id="LOCAL-00092" summary="debug cpp">
       <created>1516488288184</created>
@@ -658,11 +645,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516735594436</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="add reset in test.cpp">
+      <created>1516736026863</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1516736026864</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114494000" />
+    <option name="totallyTimeSpent" value="117341000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -723,7 +717,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix IR class cpp" />
     <MESSAGE value="change ttyUSB device" />
     <MESSAGE value="debug cpp" />
     <MESSAGE value="fix cpp" />
@@ -748,7 +741,8 @@
     <MESSAGE value="change IR code in json" />
     <MESSAGE value="add read test cpp" />
     <MESSAGE value="change ttyUSB1 to ttyUSBir" />
-    <option name="LAST_COMMIT_MESSAGE" value="change ttyUSB1 to ttyUSBir" />
+    <MESSAGE value="add reset in test.cpp" />
+    <option name="LAST_COMMIT_MESSAGE" value="add reset in test.cpp" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1048,16 +1042,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="78" column="45" lean-forward="false" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
-          <folding>
-            <element signature="e#111#149#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Mediatrix.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -1074,6 +1058,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cpp/test.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -1082,11 +1074,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpp/test.cpp">
+    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="-1333">
+          <caret line="127" column="107" lean-forward="false" selection-start-line="127" selection-start-column="107" selection-end-line="127" selection-end-column="107" />
+          <folding>
+            <element signature="e#111#149#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

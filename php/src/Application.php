@@ -14,6 +14,7 @@ use Firebase\JWT\JWT;
 use Firebase\JWT\SignatureInvalidException;
 use Ratchet\MessageComponentInterface;
 use Ratchet\ConnectionInterface;
+use function Sodium\add;
 
 
 class Application implements  MessageComponentInterface {
@@ -47,6 +48,10 @@ class Application implements  MessageComponentInterface {
         }
     }
 
+    /**
+     * @param ConnectionInterface $from
+     * @param string $msg
+     */
     public function onMessage(ConnectionInterface $from, $msg) {
         echo "Got Massage: {$msg} from: {$from->resourceId}\n";
 
@@ -99,7 +104,7 @@ class Application implements  MessageComponentInterface {
             }
 
             if(!(isset($commands["dmx"]) || isset($commands["beamer"]) || isset($commands["av"]))){
-                $from->send('{"success":"false","err":"Unrecognized Command"}');
+                $from->send(json_encode($this->addLiveStatus(array("success"=>false,"err"=>"Unrecognized Command"))));
             }
 
             //check if an error was added to the return array
@@ -109,18 +114,18 @@ class Application implements  MessageComponentInterface {
 
                 //send each error to the client
                 foreach ($result as $r){
-                    $from->send(json_encode($r));
+                    $from->send(json_encode($this->addLiveStatus($r)));
                 }
             }
 
         //If Session Expired send error message
         }catch(ExpiredException $ex){
-            $from->send('{"success":"false","err":"Session Expired"}');
+            $from->send(json_encode($this->addLiveStatus(array("success"=>false, "err"=>"Session Expired"))));
             $from->close();
 
             echo 'Session expired: '.$ex->getMessage()."\n";
         }catch (\Exception $ex){
-            $from->send('{"success":"false","err":"There was an Error"}');
+            $from->send(json_encode($this->addLiveStatus(array("success"=>false, "err"=>"There was an Error"))));
             echo 'There was an Error: '.$ex->getMessage().' '.$ex->getFile().' '.$ex->getLine()."\n";
         }
 
@@ -173,7 +178,13 @@ class Application implements  MessageComponentInterface {
         return $result[0];
     }
 
-    public function iniMe(){
+    private function addLiveStatus($result){
+
+
+        return $result;
+    }
+
+    private function iniMe(){
 
         try {
             $ini = file_get_contents($this->FILE, true);
