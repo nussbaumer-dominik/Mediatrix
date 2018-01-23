@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cpp/test.cpp" afterPath="$PROJECT_DIR$/cpp/test.cpp" />
+    <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="add read test cpp">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/cpp/test.cpp" afterPath="$PROJECT_DIR$/cpp/test.cpp" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,7 +12,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <executablePath>composer</executablePath>
   </component>
@@ -21,8 +21,8 @@
       <file leaf-file-name="IR.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="738">
+              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -31,8 +31,8 @@
       <file leaf-file-name="test.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cpp/test.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="43" column="37" lean-forward="true" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+            <state relative-caret-position="178">
+              <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -73,7 +73,7 @@
       <file leaf-file-name="Mediatrix.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Mediatrix.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
+            <state relative-caret-position="432">
               <caret line="24" column="153" lean-forward="false" selection-start-line="24" selection-start-column="153" selection-end-line="24" selection-end-column="153" />
               <folding />
             </state>
@@ -130,6 +130,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -241,7 +246,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="C:/Daten/Schule/HTL/5bi/SEW/git/server" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
@@ -300,21 +305,9 @@
       <workItem from="1516214076651" duration="42000" />
       <workItem from="1516297251788" duration="14727000" />
       <workItem from="1516458312671" duration="21972000" />
-      <workItem from="1516560885104" duration="553000" />
-    </task>
-    <task id="LOCAL-00087" summary="fix IR class cpp">
-      <created>1516481085124</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1516481085124</updated>
-    </task>
-    <task id="LOCAL-00088" summary="fix IR class cpp">
-      <created>1516481633301</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1516481633301</updated>
+      <workItem from="1516560885104" duration="608000" />
+      <workItem from="1516732797857" duration="310000" />
+      <workItem from="1516733368020" duration="659000" />
     </task>
     <task id="LOCAL-00089" summary="change ttyUSB device">
       <created>1516487608384</created>
@@ -645,22 +638,36 @@
       <option name="project" value="LOCAL" />
       <updated>1516561338898</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="add read test cpp">
+      <created>1516561446302</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1516561446302</updated>
+    </task>
+    <task id="LOCAL-00137" summary="add read test cpp">
+      <created>1516734018465</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1516734018467</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111822000" />
+    <option name="totallyTimeSpent" value="112846000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21079692" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2159383" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26379544" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26344085" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30227518" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -967,7 +974,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1016,7 +1022,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1056,7 +1061,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Mediatrix.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
+        <state relative-caret-position="432">
           <caret line="24" column="153" lean-forward="false" selection-start-line="24" selection-start-column="153" selection-end-line="24" selection-end-column="153" />
           <folding />
         </state>
@@ -1064,16 +1069,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="738">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cpp/test.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="43" column="37" lean-forward="true" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+        <state relative-caret-position="178">
+          <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
           <folding />
         </state>
       </provider>
