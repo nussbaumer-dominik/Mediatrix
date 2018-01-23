@@ -10,7 +10,7 @@ WS command structure (JSON):
       {
         "id": 1,
         "hue": 255
-      }
+      },
       "scheinwerfer2":
       {
         "id": 2,
@@ -22,13 +22,13 @@ WS command structure (JSON):
       },
       "blackout":1,
       "noblackout":1      
-  }
+  },
 "beamer":
   {
        "on":1,
        "off":1,
        "source":1
-  }
+  },
  "av":
   {
        "mode":1/2/3/4,
@@ -43,7 +43,7 @@ Response JSON structure
 {
     "success":false,
     "error":"Login fehlgeschlagen"
-}
+},
 ```
 
 Ini JSON structure
