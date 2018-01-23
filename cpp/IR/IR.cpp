@@ -21,7 +21,7 @@ class IR : public Php::Base {
         }
 
         //open serial connection to IR-Device
-        int fd = serialOpen("/dev/ttyUSB1", 9600);
+        int fd = serialOpen("/dev/ttyUSBir", 9600);
 
         if(fd == -1){
             return "{'success':'false','err':'Can not open Serial Connection to IR-Device'}";
