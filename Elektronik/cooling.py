@@ -23,7 +23,7 @@ if __name__ == '__main__':
     # Script has been called directly
     id = '10-000801a96106'
     t = gettemp(id)/float(1000)
-    print "Temp : " + '{:.3f}'.format(t)
+    print "Momentantemperatur : " + '{:.3f}'.format(t)
 
 
 
