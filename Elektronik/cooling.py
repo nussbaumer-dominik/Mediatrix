@@ -22,12 +22,16 @@ def gettemp(id):
 if __name__ == '__main__':
     # Script has been called directly
     id = '10-000801a96106'
-    t = gettemp(id)/float(1000)
-    print "Momentantemperatur : " + '{:.3f}'.format(t)
+    mt = gettemp(id)/float(1000)    #Momentantemperatur
+    print "Momentantemperatur : " + '{:.3f}'.format(mt)
 
 
-
-
+# Lüftersteuerung
+def fanCon(mt):
+    st = 35.0           #Solltemperatur in Grad Celsius
+    maxspeed = 3800     #Maximale Geschwindigkeit des Lüfters in RPM
+    if mt > st:
+        rpm = ''
 
 
 
@@ -57,13 +61,10 @@ def pwm():
 
 
     return
-
-def fanCon(t):
-    try:
-        rpm = ''
-
-        if t >= 30:
-
-    return
 """
+
+
+
+
+
 
