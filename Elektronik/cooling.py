@@ -25,6 +25,14 @@ if __name__ == '__main__':
     t = gettemp(id)/float(1000)
     print "Temp : " + '{:.3f}'.format(t)
 
+
+
+
+
+
+
+"""
+
 def pwm():
 
     import RPi.GPIO as GPIO
@@ -57,4 +65,5 @@ def fanCon(t):
         if t >= 30:
 
     return
+"""
 
