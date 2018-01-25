@@ -27,8 +27,7 @@ body{
 header{
     position: fixed;
     padding: 30px;
-    width: 100vw;
-    height: 90px;
+    height: 10vh;
 }
 
 header .menu-inner{

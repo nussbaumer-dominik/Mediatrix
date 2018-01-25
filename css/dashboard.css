@@ -143,15 +143,19 @@ a {
   .box h1 {
     text-align: center; }
   .box .buttons {
-    width: 50%; }
+    width: 50%;
+    position: relative;
+    top: -100px;
+    left: 200px; }
     .box .buttons ul {
       list-style-type: none; }
       .box .buttons ul li {
         width: 100%;
         text-align: center;
-        padding: 10px 20px;
+        padding: 15px 20px;
         border-radius: 10px;
-        border: 4px solid #1E283D; }
+        border: 4px solid #1E283D;
+        cursor: pointer; }
       .box .buttons ul li:nth-child(1), .box .buttons ul li:nth-child(2), .box .buttons ul li:nth-child(3) {
         margin-bottom: 10px; }
   .box .wrapper {
@@ -199,6 +203,10 @@ a {
   .box .p2 {
     left: 50px; }
   .box .p3 {
+    left: 170px; }
+  .box .p4 {
+    left: 50px; }
+  .box .p5 {
     left: 170px; }
   .box .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
