@@ -34,7 +34,7 @@ class IR : public Php::Base {
         //convert given code to string
         string code = params[0];
 
-        std::cout << ("p"+code+"]:").c_str() << endl;
+        Php::out << ("p"+code+"]:").c_str() << endl;
 
         //send code to IR-Device
         serialPrintf(fd,("p"+code+"]:").c_str());
