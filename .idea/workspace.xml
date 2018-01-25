@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/Login.php" afterPath="$PROJECT_DIR$/php/src/Login.php" />
       <change beforePath="$PROJECT_DIR$/php/src/createDB.php" afterPath="$PROJECT_DIR$/php/src/createDB.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -74,10 +73,10 @@
       <file leaf-file-name="createDB.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="198">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
-                <marker date="1516903074007" expanded="true" signature="152:255" ph="create table... preset" />
+                <marker date="1516903215280" expanded="true" signature="152:269" ph="create table... preset" />
               </folding>
             </state>
           </provider>
@@ -270,14 +269,7 @@
       <workItem from="1516732797857" duration="310000" />
       <workItem from="1516733368020" duration="6880000" />
       <workItem from="1516787628112" duration="1535000" />
-      <workItem from="1516899543436" duration="3448000" />
-    </task>
-    <task id="LOCAL-00103" summary="fix call of scheinwerfer class in application php">
-      <created>1516491065118</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1516491065118</updated>
+      <workItem from="1516899543436" duration="3580000" />
     </task>
     <task id="LOCAL-00104" summary="fix call of scheinwerfer class in application php">
       <created>1516491408226</created>
@@ -615,11 +607,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516903096010</updated>
     </task>
-    <option name="localTasksCounter" value="152" />
+    <task id="LOCAL-00152" summary="write cerateDB">
+      <created>1516903107628</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1516903107628</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124050000" />
+    <option name="totallyTimeSpent" value="124182000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1040,10 +1039,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="198">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <marker date="1516903074007" expanded="true" signature="152:255" ph="create table... preset" />
+            <marker date="1516903215280" expanded="true" signature="152:269" ph="create table... preset" />
           </folding>
         </state>
       </provider>

@@ -8,7 +8,7 @@
 
 $sqlite = new \SQLite3("../sqlite/db.sqlite");
 
-$sqlite->exec('create table preset(
+$sqlite->exec('create table if not exists preset(
 	id INT AUTO_INCREMENT primary key,
     json string not null,
     user_id string
