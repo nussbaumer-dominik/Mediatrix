@@ -270,14 +270,7 @@
       <workItem from="1516732797857" duration="310000" />
       <workItem from="1516733368020" duration="6880000" />
       <workItem from="1516787628112" duration="1535000" />
-      <workItem from="1516899543436" duration="3434000" />
-    </task>
-    <task id="LOCAL-00102" summary="debug JWT">
-      <created>1516490728176</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1516490728176</updated>
+      <workItem from="1516899543436" duration="3448000" />
     </task>
     <task id="LOCAL-00103" summary="fix call of scheinwerfer class in application php">
       <created>1516491065118</created>
@@ -615,11 +608,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516902171061</updated>
     </task>
-    <option name="localTasksCounter" value="151" />
+    <task id="LOCAL-00151" summary="write cerateDB">
+      <created>1516903096010</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1516903096010</updated>
+    </task>
+    <option name="localTasksCounter" value="152" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124036000" />
+    <option name="totallyTimeSpent" value="124050000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -680,7 +680,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change websocket address test_js" />
     <MESSAGE value="debug JWT" />
     <MESSAGE value="fix call of scheinwerfer class in application php" />
     <MESSAGE value="debug beamerCom Applications php" />
@@ -705,7 +704,8 @@
     <MESSAGE value="add sqlite db" />
     <MESSAGE value="change to SQlite3" />
     <MESSAGE value="add cerateDB" />
-    <option name="LAST_COMMIT_MESSAGE" value="add cerateDB" />
+    <MESSAGE value="write cerateDB" />
+    <option name="LAST_COMMIT_MESSAGE" value="write cerateDB" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

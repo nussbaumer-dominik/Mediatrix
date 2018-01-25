@@ -74,7 +74,7 @@ class Login
                 $unencodedArray = ['jwt' => $jwt];
                 echo json_encode($unencodedArray);
 
-                $sqlite = new \SQLite3("sqlite/db.sqlite");
+                $sqlite = new \SQLite3("../sqlite/db.sqlite");
 
 
             }else{

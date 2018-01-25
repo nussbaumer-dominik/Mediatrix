@@ -7,3 +7,10 @@
  */
 
 $sqlite = new \SQLite3("../sqlite/db.sqlite");
+
+$sqlite->exec('create table preset(
+	id INT AUTO_INCREMENT primary key,
+    json string not null,
+    user_id string
+);');
+
