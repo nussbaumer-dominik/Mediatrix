@@ -25,6 +25,12 @@ class Application implements  MessageComponentInterface {
     private $scheinwerfer;
     private $beamer;
     private $key;
+    private $defaultPresets = '{
+            "0": {
+                "name":"",
+                
+            }
+        }';
 
     public function __construct() {
         $this->iniMe();
@@ -179,7 +185,7 @@ class Application implements  MessageComponentInterface {
     }
 
     private function getIniString(){
-
+        //$sqlite = new \SQLite3("../sqlite/db.sqlite");
 
         return array(
                 "presets" => array(
