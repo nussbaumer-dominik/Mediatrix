@@ -9,7 +9,7 @@ html, body{
 body{
     width: 100vw;
     height: 100vh;
-    background: #fff;
+    background: #EF4C4F;
 }
 
 *{
@@ -18,7 +18,7 @@ body{
 
 .main{
     display: flex;
-    height: 100vh;
+    height: 60vh;
     width: 100vw;
     justify-content: center;
     align-items: center;
@@ -39,19 +39,23 @@ header .menu-inner{
     line-height: 30px;
 }
 
-header .menu-inner span{
-    color: #000;
+header .menu-inner .avatar{
+    background-image: url(../images/Mediatrix_Hut.png);
 }
 
 .box{
     width: 400px;
     height: 400px;
-    background: #EF4C4F;
-    color: #fff;
+    background: white;
+    color: #1E283D;
+    z-index: 10;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     box-shadow: 0px 70px 120px -30px rgba(142, 144, 128, .6), 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -67,26 +71,93 @@ input[type="text"], input[type="password"]{
     margin-bottom: 20px;
     font-size: 16px;
     padding: 5px;
-    color: #fff;
+    color: #1E283D;
     background: transparent;
-    border: 2px solid #fff;
+    border: 2px solid #1E283D;
     border-radius: 5px;
     outline: none;
 }
 
 input[type="submit"]{
-    width: 70px
+    padding: 15px 45px;
+    color: white;
+    font-size: 1.4rem;
+    text-align: center;
+    border-radius: 10px;
+    background: #EF4C4F;
+    outline: none;
+    border: none;
+    transition: .35s;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, .2)
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #fff;
+  color: #1E283D;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-  color: #fff;
+  color: #1E283D;
 }
 :-ms-input-placeholder { /* IE 10+ */
-  color: #fff;
+  color: #1E283D;
 }
 :-moz-placeholder { /* Firefox 18- */
-  color: #fff;
+  color: #1E283D;
+}
+
+.wave{
+    background: white;
+    height: 40vh;
+    width: 100%;
+}
+
+.wave_white {
+  position: absolute;
+  margin: auto;
+  left: -2px;
+  right: -2px;
+  bottom: 40vh;
+
+  display: block;
+  height: 180px;
+  background-image: url(../images/bg-waves-white.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  transform: rotateY(180deg);
+}
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575px) {
+    .box{
+        width: 300px;
+        height: 300px;
+    }
+
+    .wave{
+
+    }
+
+    .wave_white{
+        width: 100%;
+        bottom: calc(25vh - 1px);
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767px) {
+
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991px) {
+
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199px) {
+
 }
