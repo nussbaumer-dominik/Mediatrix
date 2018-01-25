@@ -39,7 +39,7 @@ class Application implements  MessageComponentInterface {
 
             echo "New connection! ({$conn->resourceId})\n";
 
-            $conn->send('Ini-String');
+            $conn->send(json_encode($this->addLiveStatus($this->getIniString())));
         }else{
             $conn->send("Already a connection");
             $conn->close();
@@ -177,6 +177,21 @@ class Application implements  MessageComponentInterface {
         }
         return $result[0];
     }
+
+    private function getIniString(){
+
+
+        return array(
+                "presets" => array(
+
+                    ),
+                "dmx" => array(
+
+                    ),
+                ""
+            );
+    }
+
 
     private function addLiveStatus($result){
 

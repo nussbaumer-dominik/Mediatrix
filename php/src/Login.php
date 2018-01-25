@@ -74,6 +74,9 @@ class Login
                 $unencodedArray = ['jwt' => $jwt];
                 echo json_encode($unencodedArray);
 
+                $sqlite = new \SQLiteDatabase("../../sqlite/db.sqlite");
+
+
             }else{
                 echo "Login false";
             }
