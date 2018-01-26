@@ -19,6 +19,8 @@ class Login
         'default' => [
             'domain_controllers'    => ['10.0.0.209'],
             'base_dn'               => 'ou=Users,dc=htlw3r,dc=ac,dc=at',
+            'admin_username'        => '3827',
+            'admin_password'        => 'k?2Z=_3Q',
 
             'use_tls'               => false
         ],
@@ -41,8 +43,8 @@ class Login
     public function login($username, $password){
 
         try {
-            /*
 
+/*
             // Connect to the provider you specified in your configuration.
             $provider = $this->ldap->connect('default');
 
@@ -50,10 +52,10 @@ class Login
                 echo ("Login success");
             } else {
                 echo "Login false";
-                //print_r($provider);
-            }
+                print_r($provider);
+            }*/
 
-            */
+
 
             if(true){
                 $data = [
@@ -72,17 +74,18 @@ class Login
                 $unencodedArray = ['jwt' => $jwt];
                 echo json_encode($unencodedArray);
 
+
             }else{
                 echo "Login false";
             }
 
         } catch (\Adldap\Auth\UsernameRequiredException $e) {
-            echo ("error: ".$e->getMessage());
+            echo ("error User: ".$e->getMessage());
         } catch (\Adldap\Auth\PasswordRequiredException $e) {
             // The user didn't supply a password.
-            echo ("error: ".$e->getMessage());
+            echo ("error Passwd: ".$e->getMessage());
         }catch (\Adldap\Auth\BindException $e){
-            echo ("error: ".$e->getMessage());
+            echo ("error Bind: ".$e->getMessage());
         }
 
     }

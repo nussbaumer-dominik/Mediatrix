@@ -24,7 +24,7 @@ int main()
 
 
 		//Serial write
-		int fd = serialOpen("/dev/ttyUSB0", 9600);
+		int fd = serialOpen("/dev/ttyUSBir", 9600);
 
 /*
 		serialPrintf(fd, "174c4242802210081019100810081");
@@ -37,7 +37,10 @@ int main()
 		delay(1000);
 */
 		//read
-		serialPrintf(fd, "s:");
+		serialPrintf(fd, ":~:");
+        serialFlush (fd);
+
+		serialPrintf(fd, "l01:");
 		serialFlush(fd);
 		int n1 = serialDataAvail(fd);
 		int c = serialGetchar(fd);
