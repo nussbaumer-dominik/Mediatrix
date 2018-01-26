@@ -195,6 +195,17 @@ a {
   .box .mikro2-slider-text {
     left: 15px;
     font-size: 24px; }
+  .box #licht1-slider {
+    left: -120px; }
+  .box .licht1-slider-text {
+    left: 15px;
+    font-size: 24px; }
+  .box #licht2-slider {
+    left: 0px;
+    margin-top: -52.5px; }
+  .box .licht2-slider-text {
+    left: 15px;
+    font-size: 24px; }
   .box .slider::-moz-range-track {
     background: #1E283D;
     width: 4px; }
