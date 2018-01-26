@@ -25,7 +25,7 @@ window.onload = function() {
         console.log(this.value + " " + this.id + " " + this.getAttribute(
             "data-id"));
         var data = {
-            "jwt": "ilsdugfilsagufisgf",
+            "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1MTY5NjA2MDcsImp0aSI6InVuV0NyN21EUHVqQlFvNFZ3R0dpbnU0YzNqOXpCeXltdzg5dHRldk1UbnM9IiwiaXNzIjoiTWVkaWF0cml4IiwibmJmIjoxNTE2OTYwNjA3LCJleHAiOjE1MTY5NjQyMDcsImRhdGEiOnsidXNlck5hbWUiOiIzODI3In19.Qr4OJCGeaEdPG4C8yDODwizZj3B51gwi2lUd802YUFw",
             "dmx": {
                 "scheinwerfer": {
                     "id": this.getAttribute("data-id"),
