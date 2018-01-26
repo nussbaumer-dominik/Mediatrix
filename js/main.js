@@ -1,72 +1,60 @@
 window.onload = function() {
 
-    // Get references to elements on the page.
     var socketStatus = document.getElementById('status');
 
+    var socket = new WebSocket('ws://localhost:10000');
 
-    // Create a new WebSocket.
-    var socket = new WebSocket(
-        'ws://localhost:10000');
-
-
-    // Handle any errors that occur.
     socket.onerror = function(error) {
         console.log('WebSocket Error: ' + error);
     };
 
-
-    // Show a connected message when the WebSocket is opened.
     socket.onopen = function(event) {
         socketStatus.innerHTML = 'Connected to: ' + event.currentTarget
             .url;
         socketStatus.className = 'open';
     };
 
-
-    // Handle messages sent by the server.
     socket.onmessage = function(event) {
         var message = event.data;
-        messagesList.innerHTML +=
-            '<li class="received"><span>Received: </span>' + message +
-            '</li>';
     };
 
-
-    // Show a disconnected message when the WebSocket is closed.
     socket.onclose = function(event) {
-        socketStatus.innerHTML = 'Disconnected from WebSocket.';
-        socketStatus.className = 'closed';
+        //
     };
 
+    // Daten des Sliders auslesen
+    function lightSlider() {
+        console.log(this.value + " " + this.id + " " + this.getAttribute(
+            "data-id"));
+        var data = {
+            "jwt": "ilsdugfilsagufisgf",
+            "dmx": {
+                "scheinwerfer": {
+                    "id": this.getAttribute("data-id"),
+                    "hue": this.value
+                }
+            }
+        };
 
-    // Send a message when the form is submitted.
-    form.onsubmit = function(e) {
-        e.preventDefault();
+        socket.send(data);
+    }
 
-        // Retrieve the message from the textarea.
-        var message = messageField.value;
+    var lightSliders = document.getElementsByClassName('lightSlider');
 
-        // Send the message through the WebSocket.
-        socket.send(message);
+    // EventListener zu den Licht Slidern hinzufügen
+    for (var i = 0; i < lightSliders.length; i++) {
+        lightSliders[i].addEventListener('change', lightSlider, false);
+    }
 
-        // Add the message to the messages list.
-        messagesList.innerHTML +=
-            '<li class="sent"><span>Sent: </span>' + message + '</li>';
-
-        // Clear out the message field.
-        messageField.value = '';
-
-        return false;
-    };
 
 };
 
-
+/*
 $(".slider").change(function() {
     var val = $(this).val();
     var id = $(this).attr("data-id");
 
-    console.log("sending request: " + id + ":" + val); * /
+    console.log("sending request: " + id + ":" + val);
 
     $.ajax({
         url: "php/send.php",
