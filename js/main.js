@@ -1,8 +1,6 @@
 window.onload = function() {
 
-    var socketStatus = document.getElementById('status');
-
-    var socket = new WebSocket('ws://localhost:10000');
+    var socket = new WebSocket('ws://192.168.1.85:10000');
 
     socket.onerror = function(error) {
         console.log('WebSocket Error: ' + error);
@@ -37,6 +35,7 @@ window.onload = function() {
         };
 
         socket.send(data);
+        console.log(data);
     }
 
     var lightSliders = document.getElementsByClassName('lightSlider');
@@ -48,27 +47,5 @@ window.onload = function() {
 
 
 };
-
-/*
-$(".slider").change(function() {
-    var val = $(this).val();
-    var id = $(this).attr("data-id");
-
-    console.log("sending request: " + id + ":" + val);
-
-    $.ajax({
-        url: "php/send.php",
-        data: {
-            "channel": id,
-            "value": val
-        },
-        success: function(result) {
-            console.log("success");
-        },
-        error: function(result) {
-            console.log("error");
-        }
-    });
-})
 
 //socket.close();
