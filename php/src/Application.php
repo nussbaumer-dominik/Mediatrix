@@ -224,6 +224,8 @@ class Application implements  MessageComponentInterface {
                     )
                 );
 
+                var_dump($entry['rot']);
+
             }
 
             $this->scheinwerfer = $scheinwerfer;
