@@ -47,6 +47,8 @@ class Beamer
 
         $index = array_search($next,$this->source);
 
+        var_dump($next);
+
         //get code
         $code = $next['lastSendA'] ? $next['b']:$next['a'];
 
