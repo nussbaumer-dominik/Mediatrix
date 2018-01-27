@@ -217,14 +217,24 @@ class Application implements  MessageComponentInterface {
 
             foreach($ini["dmx"] as $entry){
 
-                array_push($scheinwerfer,
-                    new Scheinwerfer(array(
-                            "hue" => $entry["hue"]-1
-                        )
-                    )
-                );
+                if(isset($entry["rot"])){
 
-                var_dump($entry['rot']);
+                    array_push($scheinwerfer,
+                        new RGBWScheinwerfer(array(
+                                "hue" => $entry["hue"] - 1
+                            )
+                        )
+                    );
+
+                }else {
+
+                    array_push($scheinwerfer,
+                        new Scheinwerfer(array(
+                                "hue" => $entry["hue"] - 1
+                            )
+                        )
+                    );
+                }
 
             }
 
