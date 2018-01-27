@@ -34,8 +34,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+            <state relative-caret-position="162">
+              <caret line="25" column="303" lean-forward="false" selection-start-line="25" selection-start-column="303" selection-end-line="25" selection-end-column="303" />
               <folding />
             </state>
           </provider>
@@ -224,14 +224,7 @@
       <workItem from="1516733368020" duration="6880000" />
       <workItem from="1516787628112" duration="1535000" />
       <workItem from="1516899543436" duration="3580000" />
-      <workItem from="1517039735177" duration="73000" />
-    </task>
-    <task id="LOCAL-00105" summary="fix call of scheinwerfer class in application php">
-      <created>1516491554870</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1516491554870</updated>
+      <workItem from="1517039735177" duration="211000" />
     </task>
     <task id="LOCAL-00106" summary="fix call of scheinwerfer class in application php">
       <created>1516491625462</created>
@@ -569,11 +562,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516960732945</updated>
     </task>
-    <option name="localTasksCounter" value="154" />
+    <task id="LOCAL-00154" summary="add onmessage to main.js">
+      <created>1517039845611</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1517039845611</updated>
+    </task>
+    <option name="localTasksCounter" value="155" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125489000" />
+    <option name="totallyTimeSpent" value="125627000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1613" height="873" extended-state="0" />
@@ -635,7 +635,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix call of scheinwerfer class in application php" />
     <MESSAGE value="debug beamerCom Applications php" />
     <MESSAGE value="fix Beamer php" />
     <MESSAGE value="change parameters IR cpp" />
@@ -660,7 +659,8 @@
     <MESSAGE value="add cerateDB" />
     <MESSAGE value="write cerateDB" />
     <MESSAGE value="change jwt" />
-    <option name="LAST_COMMIT_MESSAGE" value="change jwt" />
+    <MESSAGE value="add onmessage to main.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="add onmessage to main.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -987,8 +987,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+        <state relative-caret-position="162">
+          <caret line="25" column="303" lean-forward="false" selection-start-line="25" selection-start-column="303" selection-end-line="25" selection-end-column="303" />
           <folding />
         </state>
       </provider>

@@ -23,7 +23,7 @@ window.onload = function() {
         console.log(this.value + " " + this.id + " " + this.getAttribute(
             "data-id"));
         var data = {
-            "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1MTY5NjA2MDcsImp0aSI6InVuV0NyN21EUHVqQlFvNFZ3R0dpbnU0YzNqOXpCeXltdzg5dHRldk1UbnM9IiwiaXNzIjoiTWVkaWF0cml4IiwibmJmIjoxNTE2OTYwNjA3LCJleHAiOjE1MTY5NjQyMDcsImRhdGEiOnsidXNlck5hbWUiOiIzODI3In19.Qr4OJCGeaEdPG4C8yDODwizZj3B51gwi2lUd802YUFw",
+            "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1MTcwMzk4OTAsImp0aSI6IkRZdW5mNTNuWDY1eWNkV0daRTU3aGFnbUVuc1wvaGRUejVCczdYbDVqdCtnPSIsImlzcyI6Ik1lZGlhdHJpeCIsIm5iZiI6MTUxNzAzOTg5MCwiZXhwIjoxNTE3MDQzNDkwLCJkYXRhIjp7InVzZXJOYW1lIjoiMzgyNyJ9fQ.5F739shj3o75hYtx6U-_1d0LH2iQMC6xJUBtxGU17zk",
             "dmx": {
                 "scheinwerfer": {
                     "id": this.getAttribute("data-id"),
