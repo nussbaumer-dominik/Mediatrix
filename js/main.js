@@ -2,19 +2,19 @@ window.onload = function() {
 
     var socket = new WebSocket('ws://192.168.1.85:10000');
 
-    socket.onerror = function(error) {
+    socket.onError = function(error) {
         console.log('WebSocket Error: ' + error);
     };
 
-    socket.onopen = function(event) {
+    socket.onOpen = function(event) {
         console.log("open")
     };
 
-    socket.onclose = function(event) {
+    socket.onClose = function(event) {
         //
     };
 
-    socket.onmessage = function (event){
+    socket.onMessage = function (event){
         console.log(event);
     };
 
@@ -39,10 +39,9 @@ window.onload = function() {
     var lightSliders = document.getElementsByClassName('lightSlider');
 
     // EventListener zu den Licht Slidern hinzufügen
-    for (var i = 0; i < lightSliders.length; i++) {
-        lightSliders[i].addEventListener('change', lightSlider, false);
+    for (var ls in lightSliders) {
+        ls.addEventListener('change', lightSlider, false);
     }
-
 
 };
 
