@@ -19,7 +19,7 @@ use function Sodium\add;
 
 class Application implements  MessageComponentInterface {
 
-    private $FILE = "Mediatrix.json";
+    private $FILE = "../conf/Mediatrix.json";
 
     private $client;
     private $scheinwerfer;
