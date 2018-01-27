@@ -7,20 +7,18 @@ window.onload = function() {
     };
 
     socket.onopen = function(event) {
-        socketStatus.innerHTML = 'Connected to: ' + event.currentTarget
-            .url;
-        socketStatus.className = 'open';
-    };
-
-    socket.onmessage = function(event) {
-        var message = event.data;
+        console.log("open")
     };
 
     socket.onclose = function(event) {
         //
     };
 
-    // Daten des Sliders auslesen
+    socket.onmessage = function (event){
+        console.log(event);
+    }
+
+    // Daten des Sliders auslesen und abschicken
     function lightSlider() {
         console.log(this.value + " " + this.id + " " + this.getAttribute(
             "data-id"));
