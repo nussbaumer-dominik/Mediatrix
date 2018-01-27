@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
+    <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="change jwt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
     </list>
@@ -34,8 +34,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="25" column="303" lean-forward="false" selection-start-line="25" selection-start-column="303" selection-end-line="25" selection-end-column="303" />
+            <state relative-caret-position="236">
+              <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -224,14 +224,7 @@
       <workItem from="1516733368020" duration="6880000" />
       <workItem from="1516787628112" duration="1535000" />
       <workItem from="1516899543436" duration="3580000" />
-      <workItem from="1517039735177" duration="211000" />
-    </task>
-    <task id="LOCAL-00106" summary="fix call of scheinwerfer class in application php">
-      <created>1516491625462</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1516491625462</updated>
+      <workItem from="1517039735177" duration="757000" />
     </task>
     <task id="LOCAL-00107" summary="debug beamerCom Applications php">
       <created>1516491738204</created>
@@ -569,11 +562,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517039845611</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="change jwt">
+      <created>1517039971279</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1517039971279</updated>
+    </task>
+    <option name="localTasksCounter" value="156" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125627000" />
+    <option name="totallyTimeSpent" value="126173000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1613" height="873" extended-state="0" />
@@ -658,9 +658,9 @@
     <MESSAGE value="change to SQlite3" />
     <MESSAGE value="add cerateDB" />
     <MESSAGE value="write cerateDB" />
-    <MESSAGE value="change jwt" />
     <MESSAGE value="add onmessage to main.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="add onmessage to main.js" />
+    <MESSAGE value="change jwt" />
+    <option name="LAST_COMMIT_MESSAGE" value="change jwt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -987,8 +987,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="25" column="303" lean-forward="false" selection-start-line="25" selection-start-column="303" selection-end-line="25" selection-end-column="303" />
+        <state relative-caret-position="236">
+          <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
           <folding />
         </state>
       </provider>

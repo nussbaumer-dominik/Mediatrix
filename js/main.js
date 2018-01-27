@@ -16,7 +16,7 @@ window.onload = function() {
 
     socket.onmessage = function (event){
         console.log(event);
-    }
+    };
 
     // Daten des Sliders auslesen und abschicken
     function lightSlider() {
@@ -26,13 +26,13 @@ window.onload = function() {
             "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1MTcwMzk4OTAsImp0aSI6IkRZdW5mNTNuWDY1eWNkV0daRTU3aGFnbUVuc1wvaGRUejVCczdYbDVqdCtnPSIsImlzcyI6Ik1lZGlhdHJpeCIsIm5iZiI6MTUxNzAzOTg5MCwiZXhwIjoxNTE3MDQzNDkwLCJkYXRhIjp7InVzZXJOYW1lIjoiMzgyNyJ9fQ.5F739shj3o75hYtx6U-_1d0LH2iQMC6xJUBtxGU17zk",
             "dmx": {
                 "scheinwerfer": {
-                    "id": this.getAttribute("data-id"),
+                    "id": parseInt(this.getAttribute("data-id")),
                     "hue": this.value
                 }
             }
         };
 
-        socket.send(data);
+        socket.send(JSON.parse(data));
         console.log(data);
     }
 
