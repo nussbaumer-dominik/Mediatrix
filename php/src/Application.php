@@ -31,6 +31,7 @@ class Application implements  MessageComponentInterface {
                 
             }
         }';
+    private $registerd;
 
     public function __construct() {
         $this->iniMe();
@@ -42,6 +43,7 @@ class Application implements  MessageComponentInterface {
         //check if there is already a connection
         if(!isset($this->client)) {
             $this->client = $conn;
+            $this->registerd = false;
 
             echo "New connection! ({$conn->resourceId})\n";
 
@@ -77,58 +79,67 @@ class Application implements  MessageComponentInterface {
 
             var_dump($jwt);
 
+            //handle registration and send ini string
             if(isset($commands["ini"])){
-                $from->send(json_encode($this->addLiveStatus($this->getIniString($jwt))));
+                $from->send(json_encode($this->addLiveStatus($this->getIniString($jwt['data']['username']))));
+                $this->registerd = true;
+                echo "Connection {$from->resourceId} registered, Ini-String sent\n";
                 return;
             }
 
-            //check if dmx command was passed
-            if(isset($commands["dmx"])){
+            //check if user has registered
+            if($this->registerd) {
+                //check if dmx command was passed
+                if (isset($commands["dmx"])) {
 
-                $r = $this->sendDmx($commands["dmx"]);
-                $r['success']?:array_push($result,$r);
+                    $r = $this->sendDmx($commands["dmx"]);
+                    $r['success'] ?: array_push($result, $r);
 
-            //check if beamer command was passed
-            }
-            if (isset($commands["beamer"])){
-                $beamerCom = $commands["beamer"];
+                    //check if beamer command was passed
+                }
+                if (isset($commands["beamer"])) {
+                    $beamerCom = $commands["beamer"];
 
-                if(isset($beamerCom['on'])){
-                    $r = $this->beamer->on();
-                    $r->success?:array_push($result,$r);
+                    if (isset($beamerCom['on'])) {
+                        $r = $this->beamer->on();
+                        $r->success ?: array_push($result, $r);
+                    }
+
+                    if (isset($beamerCom['off'])) {
+                        $r = $this->beamer->off();
+                        $r->success ?: array_push($result, $r);
+                    }
+
+                    if (isset($beamerCom['source'])) {
+                        $r = $this->beamer->changeSource();
+                        $r->success ?: array_push($result, $r);
+                    }
+
+                    //check if av command was passed
+                }
+                if (isset($commands["av"])) {
+                    $from->send("av");
+
+                    //if nothing from  was right, no command recognized
                 }
 
-                if (isset($beamerCom['off'])){
-                    $r = $this->beamer->off();
-                    $r->success?:array_push($result,$r);
+                if (!(isset($commands["dmx"]) || isset($commands["beamer"]) || isset($commands["av"]))) {
+                    $from->send(json_encode($this->addLiveStatus(array("success" => false, "err" => "Unrecognized Command"))));
                 }
 
-                if (isset($beamerCom['source'])){
-                    $r = $this->beamer->changeSource();
-                    $r->success?:array_push($result,$r);
+                //check if an error was added to the return array
+                if (count($result) > 1) {
+
+                    array_shift($result);
+
+                    //send each error to the client
+                    foreach ($result as $r) {
+                        $from->send(json_encode($this->addLiveStatus($r)));
+                    }
                 }
-
-            //check if av command was passed
-            }
-            if (isset($commands["av"])){
-                $from->send("av");
-
-            //if nothing from  was right, no command recognized
-            }
-
-            if(!(isset($commands["dmx"]) || isset($commands["beamer"]) || isset($commands["av"]))){
-                $from->send(json_encode($this->addLiveStatus(array("success"=>false,"err"=>"Unrecognized Command"))));
-            }
-
-            //check if an error was added to the return array
-            if(count($result)>1){
-
-                array_shift($result);
-
-                //send each error to the client
-                foreach ($result as $r){
-                    $from->send(json_encode($this->addLiveStatus($r)));
-                }
+            }else{
+                $from->send(json_encode($this->addLiveStatus(array("success"=>false, "err"=>"Couldn't register"))));
+                echo "Couldn't register {$from->resourceId}\n";
             }
 
         //If Session Expired send error message
@@ -191,15 +202,48 @@ class Application implements  MessageComponentInterface {
         return $result[0];
     }
 
-    private function getIniString(){
+    private function getIniString($usr){
+
+        /*
+         * PRESETS:
+         */
         $sqlite = new \SQLite3("../sqlite/db.sqlite");
 
+        $stm = $sqlite->prepare('SLECT * FROM preset WHERE user_id = :id');
+        $stm->bindValue(':id',$usr);
+
+        $result = $stm->execute();
+
+        //check if there was data in the database
+        if($result->numColumns() > 0){
+            $presets = array();
+            while($res = $result->fetchArray()){
+                array_push($presets, $res['json']);
+            }
+
+        }else{
+
+            $presets = $this->defaultPresets;
+
+        }
+
+
+        /*
+         * DMX:
+         */
+
+
+        /*
+         * BEAMER:
+         */
+
+        /*
+         * AV:
+         */
 
 
         return array(
-                "presets" => array(
-
-                    ),
+                "presets" => $presets,
                 "dmx" => array(
 
                     ),

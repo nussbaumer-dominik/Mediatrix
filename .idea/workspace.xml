@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
-      <change beforePath="$PROJECT_DIR$/php/src/RGBWScheinwerfer.php" afterPath="$PROJECT_DIR$/php/src/RGBWScheinwerfer.php" />
-      <change beforePath="$PROJECT_DIR$/php/src/Scheinwerfer.php" afterPath="$PROJECT_DIR$/php/src/Scheinwerfer.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,11 +44,21 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="77" column="27" lean-forward="false" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
+            <state relative-caret-position="939">
+              <caret line="248" column="22" lean-forward="true" selection-start-line="248" selection-start-column="22" selection-end-line="248" selection-end-column="22" />
               <folding>
                 <element signature="e#111#149#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ini.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/src/Ini.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3">
+              <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -62,6 +69,18 @@
             <state relative-caret-position="288">
               <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createDB.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <marker date="1516959607274" expanded="true" signature="152:269" ph="create table... if" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -101,26 +120,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="461">
               <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Beamer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="21" column="45" lean-forward="true" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="createDB.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -344,13 +343,6 @@
       <workItem from="1516787628112" duration="1535000" />
       <workItem from="1516899543436" duration="3580000" />
       <workItem from="1517039735177" duration="757000" />
-    </task>
-    <task id="LOCAL-00115" summary="add return in beamercoms">
-      <created>1516492839438</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1516492839438</updated>
     </task>
     <task id="LOCAL-00116" summary="add return in beamercoms">
       <created>1516492890630</created>
@@ -688,11 +680,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517084828906</updated>
     </task>
-    <option name="localTasksCounter" value="164" />
+    <task id="LOCAL-00164" summary="write rgb Scheinwerfer and jwt at connection">
+      <created>1517093209928</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1517093209928</updated>
+    </task>
+    <option name="localTasksCounter" value="165" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137813000" />
+    <option name="totallyTimeSpent" value="139142000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -766,7 +765,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="debug Application" />
     <MESSAGE value="debug return" />
     <MESSAGE value="fix return" />
     <MESSAGE value="add cout to IR cpp" />
@@ -791,7 +789,8 @@
     <MESSAGE value="change conf File" />
     <MESSAGE value="change USB device IR cpp" />
     <MESSAGE value="debug rgb Scheinwerfer" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug rgb Scheinwerfer" />
+    <MESSAGE value="write rgb Scheinwerfer and jwt at connection" />
+    <option name="LAST_COMMIT_MESSAGE" value="write rgb Scheinwerfer and jwt at connection" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -823,13 +822,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/Mediatrix.json" />
     <entry file="file://$PROJECT_DIR$/conf/Mediatrix.conf" />
-    <entry file="file://$PROJECT_DIR$/php/src/Ini.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cpp/test.origin">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1037,14 +1029,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
@@ -1111,14 +1095,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Scheinwerfer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1127,10 +1103,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Ini.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3">
+          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <marker date="1516959607274" expanded="true" signature="152:269" ph="create table... if" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="77" column="27" lean-forward="false" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
+        <state relative-caret-position="939">
+          <caret line="248" column="22" lean-forward="true" selection-start-line="248" selection-start-column="22" selection-end-line="248" selection-end-column="22" />
           <folding>
             <element signature="e#111#149#0#PHP" expanded="true" />
           </folding>
