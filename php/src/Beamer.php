@@ -38,16 +38,12 @@ class Beamer
     {
         echo "change Source \n";
 
-        var_dump($this->source);
-
         //get next active Source
         $next = array_filter($this->source,function ($el){
             return $el['nextActive'] == true;
-        });
+        })[0];
 
         $index = array_search($next,$this->source);
-
-        var_dump($next);
 
         //get code
         $code = $next['lastSendA'] ? $next['b']:$next['a'];

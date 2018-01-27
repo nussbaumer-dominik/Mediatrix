@@ -74,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+              <caret line="38" column="32" lean-forward="false" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -280,20 +280,6 @@
       <workItem from="1516787628112" duration="1535000" />
       <workItem from="1516899543436" duration="3580000" />
       <workItem from="1517039735177" duration="757000" />
-    </task>
-    <task id="LOCAL-00108" summary="debug beamerCom Applications php">
-      <created>1516491907123</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1516491907123</updated>
-    </task>
-    <task id="LOCAL-00109" summary="debug beamerCom Applications php">
-      <created>1516492047930</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1516492047930</updated>
     </task>
     <task id="LOCAL-00110" summary="debug beamerCom Applications php">
       <created>1516492080291</created>
@@ -624,11 +610,25 @@
       <option name="project" value="LOCAL" />
       <updated>1517076781014</updated>
     </task>
-    <option name="localTasksCounter" value="157" />
+    <task id="LOCAL-00157" summary="debug change Source php">
+      <created>1517077611870</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1517077611870</updated>
+    </task>
+    <task id="LOCAL-00158" summary="debug change Source php">
+      <created>1517077814431</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1517077814431</updated>
+    </task>
+    <option name="localTasksCounter" value="159" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127632000" />
+    <option name="totallyTimeSpent" value="128101000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -702,7 +702,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change parameters IR cpp" />
     <MESSAGE value="debug Beamer php" />
     <MESSAGE value="add return in beamercoms" />
     <MESSAGE value="clean up" />
@@ -727,7 +726,8 @@
     <MESSAGE value="change jwt" />
     <MESSAGE value="merged Frontend" />
     <MESSAGE value="finish change Source php" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish change Source php" />
+    <MESSAGE value="debug change Source php" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug change Source php" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1062,7 +1062,7 @@
     <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+          <caret line="38" column="32" lean-forward="false" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
           <folding />
         </state>
       </provider>
