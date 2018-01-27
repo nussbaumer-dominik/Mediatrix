@@ -5,8 +5,8 @@ namespace Mediatrix;
 
 class Scheinwerfer{
 
-    private $channels = array();
-    private $dmx;
+    protected $channels = array();
+    protected $dmx;
 
 
     function __construct(array $channels){
@@ -15,7 +15,7 @@ class Scheinwerfer{
     }
 
     function dimmen(int $val){
-      $r = json_decode(str_replace("'",'"',$this->dmx->sendChannel(array(
+      $r = json_decode(str_replace("'",'"',$this->dmx::sendChannel(array(
         $this->channels["hue"] => $val
       ))));
 

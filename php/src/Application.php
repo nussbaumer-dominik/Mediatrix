@@ -45,7 +45,7 @@ class Application implements  MessageComponentInterface {
 
             echo "New connection! ({$conn->resourceId})\n";
 
-            $conn->send(json_encode($this->addLiveStatus($this->getIniString())));
+
         }else{
             $conn->send("Already a connection");
             $conn->close();
@@ -73,7 +73,14 @@ class Application implements  MessageComponentInterface {
             //Check JWT
             $jwt = $commands['jwt'];
 
-            JWT::decode($jwt,$this->key, array("HS256"));
+            $jwt = JWT::decode($jwt,$this->key, array("HS256"));
+
+            var_dump($jwt);
+
+            if(isset($commands["ini"])){
+                $from->send(json_encode($this->addLiveStatus($this->getIniString($jwt))));
+                return;
+            }
 
             //check if dmx command was passed
             if(isset($commands["dmx"])){
@@ -185,7 +192,9 @@ class Application implements  MessageComponentInterface {
     }
 
     private function getIniString(){
-        //$sqlite = new \SQLite3("../sqlite/db.sqlite");
+        $sqlite = new \SQLite3("../sqlite/db.sqlite");
+
+
 
         return array(
                 "presets" => array(
@@ -221,7 +230,10 @@ class Application implements  MessageComponentInterface {
 
                     array_push($scheinwerfer,
                         new RGBWScheinwerfer(array(
-                                "hue" => $entry["hue"] - 1
+                                "r" => $entry["rot"] - 1,
+                                "g" => $entry["rot"] - 1,
+                                "b" => $entry["rot"] - 1,
+                                "w" => $entry["weiss"] - 1
                             )
                         )
                     );
