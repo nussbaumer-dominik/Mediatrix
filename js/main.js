@@ -32,7 +32,7 @@ window.onload = function() {
             }
         };
 
-        socket.send(JSON.parse(data));
+        socket.send(JSON.stringify(data));
         console.log(data);
     }
 
