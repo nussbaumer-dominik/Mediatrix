@@ -37,9 +37,19 @@ class Beamer
     function changeSource()
     {
 
-        //print_r(array_search(true, array_column($this->source, 'lastUsed')));
-        echo "Beamer changed Source \n";
-        return true;
+        $next = array_filter($this->source,function ($el){
+            return $el['nextActive'] == true;
+        });
+
+        $index = array_find($next,$this->source);
+
+        $code = $next['lastSendA'] ? $next['b']:$next['a'];
+
+        $next['lastSendA'] = !$next['lastSendA'];
+
+        $r = json_decode(str_replace("'",'"',$this->ir->send($code,5)));
+
+
 
     }
 
