@@ -44,11 +44,11 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="341" column="14" lean-forward="true" selection-start-line="341" selection-start-column="14" selection-end-line="341" selection-end-column="14" />
+            <state relative-caret-position="345">
+              <caret line="313" column="27" lean-forward="false" selection-start-line="313" selection-start-column="27" selection-end-line="313" selection-end-column="27" />
               <folding>
                 <element signature="e#111#149#0#PHP" expanded="true" />
-                <marker date="1517141998127" expanded="true" signature="6875:6915" ph="SELECT * FRO... preset" />
+                <marker date="1517142251487" expanded="true" signature="6875:6915" ph="SELECT * FRO... preset" />
               </folding>
             </state>
           </provider>
@@ -109,8 +109,8 @@
       <file leaf-file-name="Scheinwerfer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Scheinwerfer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="60" column="31" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="31" />
+            <state relative-caret-position="507">
+              <caret line="64" column="1" lean-forward="true" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -349,13 +349,6 @@
       <workItem from="1516787628112" duration="1535000" />
       <workItem from="1516899543436" duration="3580000" />
       <workItem from="1517039735177" duration="757000" />
-    </task>
-    <task id="LOCAL-00133" summary="debug IR cpp">
-      <created>1516495210851</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1516495210851</updated>
     </task>
     <task id="LOCAL-00134" summary="change IR code in json">
       <created>1516560940631</created>
@@ -693,11 +686,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517141449468</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="reformat and comment">
+      <created>1517142040598</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1517142040598</updated>
+    </task>
+    <option name="localTasksCounter" value="183" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147304000" />
+    <option name="totallyTimeSpent" value="147535000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -771,7 +771,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add sqlite db" />
     <MESSAGE value="change to SQlite3" />
     <MESSAGE value="add cerateDB" />
     <MESSAGE value="write cerateDB" />
@@ -796,7 +795,8 @@
     <MESSAGE value="add on and off to RGBScheinwerfer" />
     <MESSAGE value="fix unset of blackout" />
     <MESSAGE value="debug iniString" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug iniString" />
+    <MESSAGE value="reformat and comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="reformat and comment" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1059,14 +1059,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="35" column="17" lean-forward="false" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
@@ -1109,14 +1101,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Scheinwerfer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="60" column="31" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-252">
@@ -1136,13 +1120,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="35" column="17" lean-forward="false" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Scheinwerfer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="64" column="1" lean-forward="true" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="341" column="14" lean-forward="true" selection-start-line="341" selection-start-column="14" selection-end-line="341" selection-end-column="14" />
+        <state relative-caret-position="345">
+          <caret line="313" column="27" lean-forward="false" selection-start-line="313" selection-start-column="27" selection-end-line="313" selection-end-column="27" />
           <folding>
             <element signature="e#111#149#0#PHP" expanded="true" />
-            <marker date="1517141998127" expanded="true" signature="6875:6915" ph="SELECT * FRO... preset" />
+            <marker date="1517142251487" expanded="true" signature="6875:6915" ph="SELECT * FRO... preset" />
           </folding>
         </state>
       </provider>
