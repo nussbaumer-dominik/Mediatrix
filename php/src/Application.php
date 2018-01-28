@@ -81,7 +81,7 @@ class Application implements  MessageComponentInterface {
 
             //handle registration and send ini string
             if(isset($commands["ini"])){
-                $from->send(json_encode($this->addLiveStatus($this->getIniString($jwt['data']['username']))));
+                $from->send(json_encode($this->addLiveStatus($this->getIniString($jwt->data->username))));
                 $this->registerd = true;
                 echo "Connection {$from->resourceId} registered, Ini-String sent\n";
                 return;
@@ -138,8 +138,8 @@ class Application implements  MessageComponentInterface {
                     }
                 }
             }else{
-                $from->send(json_encode($this->addLiveStatus(array("success"=>false, "err"=>"Couldn't register"))));
-                echo "Couldn't register {$from->resourceId}\n";
+                $from->send(json_encode($this->addLiveStatus(array("success"=>false, "err"=>"Not registered"))));
+                echo "{$from->resourceId} send a message but was not registered\n";
             }
 
         //If Session Expired send error message

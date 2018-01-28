@@ -44,8 +44,8 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="939">
-              <caret line="248" column="22" lean-forward="true" selection-start-line="248" selection-start-column="22" selection-end-line="248" selection-end-column="22" />
+            <state relative-caret-position="345">
+              <caret line="83" column="101" lean-forward="false" selection-start-line="83" selection-start-column="101" selection-end-line="83" selection-end-column="101" />
               <folding>
                 <element signature="e#111#149#0#PHP" expanded="true" />
               </folding>
@@ -200,11 +200,11 @@
     <handled-path value="$PROJECT_DIR$/js/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7.1" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="y" value="-7" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1883" />
+    <option name="y" value="-23" />
     <option name="width" value="1613" />
-    <option name="height" value="873" />
+    <option name="height" value="867" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -343,13 +343,6 @@
       <workItem from="1516787628112" duration="1535000" />
       <workItem from="1516899543436" duration="3580000" />
       <workItem from="1517039735177" duration="757000" />
-    </task>
-    <task id="LOCAL-00116" summary="add return in beamercoms">
-      <created>1516492890630</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1516492890630</updated>
     </task>
     <task id="LOCAL-00117" summary="clean up">
       <created>1516492991014</created>
@@ -687,11 +680,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517093209928</updated>
     </task>
-    <option name="localTasksCounter" value="165" />
+    <task id="LOCAL-00165" summary="write Preset get iniString php">
+      <created>1517094544517</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1517094544517</updated>
+    </task>
+    <option name="localTasksCounter" value="166" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139142000" />
+    <option name="totallyTimeSpent" value="139500000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -765,7 +765,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="debug return" />
     <MESSAGE value="fix return" />
     <MESSAGE value="add cout to IR cpp" />
     <MESSAGE value="copy Power codes into json" />
@@ -790,7 +789,8 @@
     <MESSAGE value="change USB device IR cpp" />
     <MESSAGE value="debug rgb Scheinwerfer" />
     <MESSAGE value="write rgb Scheinwerfer and jwt at connection" />
-    <option name="LAST_COMMIT_MESSAGE" value="write rgb Scheinwerfer and jwt at connection" />
+    <MESSAGE value="write Preset get iniString php" />
+    <option name="LAST_COMMIT_MESSAGE" value="write Preset get iniString php" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1131,8 +1131,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="939">
-          <caret line="248" column="22" lean-forward="true" selection-start-line="248" selection-start-column="22" selection-end-line="248" selection-end-column="22" />
+        <state relative-caret-position="345">
+          <caret line="83" column="101" lean-forward="false" selection-start-line="83" selection-start-column="101" selection-end-line="83" selection-end-column="101" />
           <folding>
             <element signature="e#111#149#0#PHP" expanded="true" />
           </folding>
