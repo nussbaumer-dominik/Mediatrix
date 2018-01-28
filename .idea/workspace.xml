@@ -56,8 +56,8 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="82" column="101" lean-forward="false" selection-start-line="82" selection-start-column="85" selection-end-line="82" selection-end-column="101" />
+            <state relative-caret-position="594">
+              <caret line="80" column="53" lean-forward="true" selection-start-line="80" selection-start-column="53" selection-end-line="80" selection-end-column="53" />
               <folding>
                 <element signature="e#111#149#0#PHP" expanded="true" />
                 <marker date="1517165943654" expanded="true" signature="6875:6915" ph="SELECT * FRO... preset" />
@@ -82,10 +82,10 @@
       <file leaf-file-name="savePreset.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/savePreset.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="95" lean-forward="false" selection-start-line="30" selection-start-column="95" selection-end-line="30" selection-end-column="95" />
+            <state relative-caret-position="180">
+              <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
               <folding>
-                <marker date="1517167050234" expanded="true" signature="372:427" ph="INSERT INTO preset... " />
+                <marker date="1517167339951" expanded="true" signature="395:450" ph="INSERT INTO preset... " />
               </folding>
             </state>
           </provider>
@@ -94,8 +94,8 @@
       <file leaf-file-name="ws_test.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_js/ws_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="34" column="52" lean-forward="false" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+            <state relative-caret-position="417">
+              <caret line="35" column="44" lean-forward="false" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -104,8 +104,8 @@
       <file leaf-file-name="Login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="33" column="49" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="49" />
+            <state relative-caret-position="345">
+              <caret line="32" column="58" lean-forward="true" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -358,20 +358,6 @@
       <workItem from="1516787628112" duration="1535000" />
       <workItem from="1516899543436" duration="3580000" />
       <workItem from="1517039735177" duration="757000" />
-    </task>
-    <task id="LOCAL-00155" summary="change jwt">
-      <created>1517039971279</created>
-      <option name="number" value="00155" />
-      <option name="presentableId" value="LOCAL-00155" />
-      <option name="project" value="LOCAL" />
-      <updated>1517039971279</updated>
-    </task>
-    <task id="LOCAL-00156" summary="finish change Source php">
-      <created>1517076781014</created>
-      <option name="number" value="00156" />
-      <option name="presentableId" value="LOCAL-00156" />
-      <option name="project" value="LOCAL" />
-      <updated>1517076781014</updated>
     </task>
     <task id="LOCAL-00157" summary="debug change Source php">
       <created>1517077611870</created>
@@ -702,11 +688,25 @@
       <option name="project" value="LOCAL" />
       <updated>1517166801863</updated>
     </task>
-    <option name="localTasksCounter" value="204" />
+    <task id="LOCAL-00204" summary="debug savePreset">
+      <created>1517167059712</created>
+      <option name="number" value="00204" />
+      <option name="presentableId" value="LOCAL-00204" />
+      <option name="project" value="LOCAL" />
+      <updated>1517167059712</updated>
+    </task>
+    <task id="LOCAL-00205" summary="change testjs">
+      <created>1517167266644</created>
+      <option name="number" value="00205" />
+      <option name="presentableId" value="LOCAL-00205" />
+      <option name="project" value="LOCAL" />
+      <updated>1517167266644</updated>
+    </task>
+    <option name="localTasksCounter" value="206" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154763000" />
+    <option name="totallyTimeSpent" value="155055000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -780,7 +780,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="finish change Source php" />
     <MESSAGE value="debug change Source php" />
     <MESSAGE value="change conf File" />
     <MESSAGE value="change USB device IR cpp" />
@@ -805,7 +804,8 @@
     <MESSAGE value="write savePreset" />
     <MESSAGE value="add save Button to testjs" />
     <MESSAGE value="debug savePreset" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug savePreset" />
+    <MESSAGE value="change testjs" />
+    <option name="LAST_COMMIT_MESSAGE" value="change testjs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1123,14 +1123,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="33" column="49" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -1141,18 +1133,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_js/ws_test.html">
+    <entry file="file://$PROJECT_DIR$/php/src/Login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="34" column="52" lean-forward="false" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+        <state relative-caret-position="345">
+          <caret line="32" column="58" lean-forward="true" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="82" column="101" lean-forward="false" selection-start-line="82" selection-start-column="85" selection-end-line="82" selection-end-column="101" />
+        <state relative-caret-position="594">
+          <caret line="80" column="53" lean-forward="true" selection-start-line="80" selection-start-column="53" selection-end-line="80" selection-end-column="53" />
           <folding>
             <element signature="e#111#149#0#PHP" expanded="true" />
             <marker date="1517165943654" expanded="true" signature="6875:6915" ph="SELECT * FRO... preset" />
@@ -1160,12 +1152,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test_js/ws_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="35" column="44" lean-forward="false" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/savePreset.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="95" lean-forward="false" selection-start-line="30" selection-start-column="95" selection-end-line="30" selection-end-column="95" />
+        <state relative-caret-position="180">
+          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
           <folding>
-            <marker date="1517167050234" expanded="true" signature="372:427" ph="INSERT INTO preset... " />
+            <marker date="1517167339951" expanded="true" signature="395:450" ph="INSERT INTO preset... " />
           </folding>
         </state>
       </provider>

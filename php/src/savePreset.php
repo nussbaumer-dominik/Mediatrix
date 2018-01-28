@@ -13,6 +13,8 @@ require __DIR__ . '/../vendor/autoload.php';
 
 try {
 
+    var_dump($_POST);
+
     $userId = JWT::decode($_POST['jwt'], base64_decode(Key::getKey()), array("HS256"))->data->userName;
 
     $sqlite = new \SQLite3("../sqlite/db.sqlite");
