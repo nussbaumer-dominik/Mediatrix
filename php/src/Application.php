@@ -289,7 +289,9 @@ class Application implements  MessageComponentInterface {
         /*
          * DMX:
          */
-        var_dump($this->scheinwerfer);
+        foreach ($this->scheinwerfer as $dev){
+            var_dump($dev->getChannels());
+        }
 
 
 

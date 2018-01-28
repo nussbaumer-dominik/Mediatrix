@@ -10,13 +10,13 @@ class Scheinwerfer
     protected $dmx;
 
 
-    function __construct(array $channels)
+    public function __construct(array $channels)
     {
         $this->channels = $channels;
         $this->dmx = new \DMX();
     }
 
-    function dimmen(int $val)
+    public function dimmen(int $val): array
     {
         return json_decode(
             str_replace("'", '"',
@@ -29,7 +29,7 @@ class Scheinwerfer
         );
     }
 
-    function on()
+    public function on(): array
     {
         return json_decode(
             str_replace("'", '"',
@@ -42,7 +42,7 @@ class Scheinwerfer
         );
     }
 
-    function off()
+    public function off(): array
     {
         return json_decode(
             str_replace("'", '"',
@@ -53,5 +53,13 @@ class Scheinwerfer
                 )
             )
         );
+    }
+
+    /**
+     * @return array
+     */
+    public function getChannels(): array
+    {
+        return $this->channels;
     }
 }
