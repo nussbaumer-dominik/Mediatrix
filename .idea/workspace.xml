@@ -44,11 +44,11 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="237" column="17" lean-forward="true" selection-start-line="237" selection-start-column="17" selection-end-line="237" selection-end-column="17" />
+            <state relative-caret-position="399">
+              <caret line="291" column="38" lean-forward="false" selection-start-line="291" selection-start-column="38" selection-end-line="291" selection-end-column="38" />
               <folding>
                 <element signature="e#111#149#0#PHP" expanded="true" />
-                <marker date="1517138374454" expanded="true" signature="6875:6915" ph="SELECT * FRO... preset" />
+                <marker date="1517138831141" expanded="true" signature="6875:6915" ph="SELECT * FRO... preset" />
               </folding>
             </state>
           </provider>
@@ -343,13 +343,6 @@
       <workItem from="1516787628112" duration="1535000" />
       <workItem from="1516899543436" duration="3580000" />
       <workItem from="1517039735177" duration="757000" />
-    </task>
-    <task id="LOCAL-00129" summary="copy Power codes into json">
-      <created>1516494278348</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1516494278348</updated>
     </task>
     <task id="LOCAL-00130" summary="add main methode in IR cpp">
       <created>1516494840472</created>
@@ -687,11 +680,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517138143190</updated>
     </task>
-    <option name="localTasksCounter" value="178" />
+    <task id="LOCAL-00178" summary="fix unset of blackout">
+      <created>1517138441047</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1517138441047</updated>
+    </task>
+    <option name="localTasksCounter" value="179" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143785000" />
+    <option name="totallyTimeSpent" value="144245000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -765,7 +765,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="try Php::out in cpp" />
     <MESSAGE value="deaktivate Ldap" />
     <MESSAGE value="add sqlite db" />
     <MESSAGE value="change to SQlite3" />
@@ -790,7 +789,8 @@
     <MESSAGE value="reformat Scheinwerfer" />
     <MESSAGE value="add resgistration to testjs" />
     <MESSAGE value="add on and off to RGBScheinwerfer" />
-    <option name="LAST_COMMIT_MESSAGE" value="add on and off to RGBScheinwerfer" />
+    <MESSAGE value="fix unset of blackout" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix unset of blackout" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1132,11 +1132,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="237" column="17" lean-forward="true" selection-start-line="237" selection-start-column="17" selection-end-line="237" selection-end-column="17" />
+        <state relative-caret-position="399">
+          <caret line="291" column="38" lean-forward="false" selection-start-line="291" selection-start-column="38" selection-end-line="291" selection-end-column="38" />
           <folding>
             <element signature="e#111#149#0#PHP" expanded="true" />
-            <marker date="1517138374454" expanded="true" signature="6875:6915" ph="SELECT * FRO... preset" />
+            <marker date="1517138831141" expanded="true" signature="6875:6915" ph="SELECT * FRO... preset" />
           </folding>
         </state>
       </provider>

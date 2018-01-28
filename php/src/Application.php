@@ -289,7 +289,7 @@ class Application implements  MessageComponentInterface {
         /*
          * DMX:
          */
-
+        var_dump($this->scheinwerfer);
 
 
 
