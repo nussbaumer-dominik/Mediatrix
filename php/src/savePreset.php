@@ -17,7 +17,7 @@ try {
 
     $userId = JWT::decode($_POST['jwt'], base64_decode(Key::getKey()), array("HS256"))->data->userName;
 
-    $sqlite = new \SQLite3("../sqlite/db.sqlite");
+    $sqlite = new \SQLite3("/../../sqlite/db.sqlite");
 
     $stm = $sqlite->prepare("INSERT INTO preset(json,user_id) VALUES (:json,:userId);");
 

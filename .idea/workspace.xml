@@ -4,6 +4,7 @@
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
+      <change beforePath="$PROJECT_DIR$/php/src/savePreset.php" afterPath="$PROJECT_DIR$/php/src/savePreset.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,14 +54,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="597">
-              <caret line="294" column="25" lean-forward="false" selection-start-line="294" selection-start-column="25" selection-end-line="294" selection-end-column="25" />
+            <state relative-caret-position="327">
+              <caret line="279" column="44" lean-forward="true" selection-start-line="279" selection-start-column="44" selection-end-line="279" selection-end-column="44" />
               <folding>
                 <element signature="e#111#149#0#PHP" expanded="true" />
-                <marker date="1517167732292" expanded="true" signature="6925:6965" ph="SELECT * FRO... preset" />
+                <marker date="1517167787637" expanded="true" signature="6912:6952" ph="SELECT * FRO... preset" />
               </folding>
             </state>
           </provider>
@@ -79,13 +80,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="savePreset.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="savePreset.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/savePreset.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="32" column="120" lean-forward="false" selection-start-line="32" selection-start-column="120" selection-end-line="32" selection-end-column="120" />
+            <state relative-caret-position="252">
+              <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
               <folding>
-                <marker date="1517167597314" expanded="true" signature="395:450" ph="INSERT INTO preset... " />
+                <marker date="1517167905606" expanded="true" signature="399:454" ph="INSERT INTO preset... " />
               </folding>
             </state>
           </provider>
@@ -189,8 +190,8 @@
         <option value="$PROJECT_DIR$/php/src/Scheinwerfer.php" />
         <option value="$PROJECT_DIR$/php/test.php" />
         <option value="$PROJECT_DIR$/test_js/ws_test.html" />
-        <option value="$PROJECT_DIR$/php/src/savePreset.php" />
         <option value="$PROJECT_DIR$/php/src/Application.php" />
+        <option value="$PROJECT_DIR$/php/src/savePreset.php" />
       </list>
     </option>
   </component>
@@ -358,13 +359,6 @@
       <workItem from="1516787628112" duration="1535000" />
       <workItem from="1516899543436" duration="3580000" />
       <workItem from="1517039735177" duration="757000" />
-    </task>
-    <task id="LOCAL-00160" summary="change conf File">
-      <created>1517078552301</created>
-      <option name="number" value="00160" />
-      <option name="presentableId" value="LOCAL-00160" />
-      <option name="project" value="LOCAL" />
-      <updated>1517078552301</updated>
     </task>
     <task id="LOCAL-00161" summary="change USB device IR cpp">
       <created>1517080027698</created>
@@ -702,11 +696,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517167613577</updated>
     </task>
-    <option name="localTasksCounter" value="209" />
+    <task id="LOCAL-00209" summary="debug savePreset">
+      <created>1517167741482</created>
+      <option name="number" value="00209" />
+      <option name="presentableId" value="LOCAL-00209" />
+      <option name="project" value="LOCAL" />
+      <updated>1517167741482</updated>
+    </task>
+    <option name="localTasksCounter" value="210" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155441000" />
+    <option name="totallyTimeSpent" value="155613000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1149,23 +1150,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/savePreset.php">
+    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="32" column="120" lean-forward="false" selection-start-line="32" selection-start-column="120" selection-end-line="32" selection-end-column="120" />
+        <state relative-caret-position="327">
+          <caret line="279" column="44" lean-forward="true" selection-start-line="279" selection-start-column="44" selection-end-line="279" selection-end-column="44" />
           <folding>
-            <marker date="1517167597314" expanded="true" signature="395:450" ph="INSERT INTO preset... " />
+            <element signature="e#111#149#0#PHP" expanded="true" />
+            <marker date="1517167787637" expanded="true" signature="6912:6952" ph="SELECT * FRO... preset" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
+    <entry file="file://$PROJECT_DIR$/php/src/savePreset.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="294" column="25" lean-forward="false" selection-start-line="294" selection-start-column="25" selection-end-line="294" selection-end-column="25" />
+        <state relative-caret-position="252">
+          <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
           <folding>
-            <element signature="e#111#149#0#PHP" expanded="true" />
-            <marker date="1517167732292" expanded="true" signature="6925:6965" ph="SELECT * FRO... preset" />
+            <marker date="1517167905606" expanded="true" signature="399:454" ph="INSERT INTO preset... " />
           </folding>
         </state>
       </provider>

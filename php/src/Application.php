@@ -266,7 +266,7 @@ class Application implements  MessageComponentInterface {
         /*
          * PRESETS:
          */
-        try {
+
             $sqlite = new \SQLite3("../sqlite/db.sqlite");
 
             $stm = $sqlite->prepare('SELECT * FROM preset WHERE user_id = :id');
@@ -279,7 +279,7 @@ class Application implements  MessageComponentInterface {
             //check if there was data in the database
             if ($result->numColumns() > 3) {
                 $presets = array();
-                echo "Test";;
+                echo "Test";
                 while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
 
                     array_push($presets, $res['json']);
@@ -290,10 +290,8 @@ class Application implements  MessageComponentInterface {
                 $presets = $this->defaultPresets;
 
             }
-        }
-        catch(Exception $ex){
-            echo "Error";
-        }
+
+
 
 
         /*
