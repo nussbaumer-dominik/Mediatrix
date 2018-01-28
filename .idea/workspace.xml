@@ -34,8 +34,8 @@
       <file leaf-file-name="IR.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
+            <state relative-caret-position="702">
+              <caret line="52" column="18" lean-forward="true" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -99,8 +99,8 @@
       <file leaf-file-name="Scheinwerfer.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Scheinwerfer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+            <state relative-caret-position="504">
+              <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -344,13 +344,6 @@
       <workItem from="1516787628112" duration="1535000" />
       <workItem from="1516899543436" duration="3580000" />
       <workItem from="1517039735177" duration="757000" />
-    </task>
-    <task id="LOCAL-00124" summary="debug return">
-      <created>1516493786387</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1516493786387</updated>
     </task>
     <task id="LOCAL-00125" summary="debug return">
       <created>1516493854415</created>
@@ -688,11 +681,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517136554772</updated>
     </task>
-    <option name="localTasksCounter" value="173" />
+    <task id="LOCAL-00173" summary="add string replace in on and off Scheinwerfer php">
+      <created>1517136704019</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1517136704019</updated>
+    </task>
+    <option name="localTasksCounter" value="174" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142102000" />
+    <option name="totallyTimeSpent" value="142311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -766,7 +766,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change IR code in json" />
     <MESSAGE value="add read test cpp" />
     <MESSAGE value="change ttyUSB1 to ttyUSBir" />
     <MESSAGE value="add reset in test.cpp" />
@@ -791,7 +790,8 @@
     <MESSAGE value="fix typo in select" />
     <MESSAGE value="refactor code and add comments" />
     <MESSAGE value="add blackout and no blackout dmx" />
-    <option name="LAST_COMMIT_MESSAGE" value="add blackout and no blackout dmx" />
+    <MESSAGE value="add string replace in on and off Scheinwerfer php" />
+    <option name="LAST_COMMIT_MESSAGE" value="add string replace in on and off Scheinwerfer php" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1053,14 +1053,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/RGBWScheinwerfer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1133,10 +1125,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="52" column="18" lean-forward="true" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Scheinwerfer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+        <state relative-caret-position="504">
+          <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
           <folding />
         </state>
       </provider>
