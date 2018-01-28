@@ -207,7 +207,7 @@ class Application implements  MessageComponentInterface {
          */
         $sqlite = new \SQLite3("../sqlite/db.sqlite");
 
-        $stm = $sqlite->prepare('SLECT * FROM preset WHERE user_id = :id');
+        $stm = $sqlite->prepare('SELECT * FROM preset WHERE user_id = :id');
         $stm->bindValue(':id',$usr);
 
         $result = $stm->execute();
