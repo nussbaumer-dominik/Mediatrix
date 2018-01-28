@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
+    <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="debug username out of jwt php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
     </list>
@@ -44,8 +44,8 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="83" column="103" lean-forward="false" selection-start-line="83" selection-start-column="103" selection-end-line="83" selection-end-column="103" />
+            <state relative-caret-position="489">
+              <caret line="79" column="31" lean-forward="false" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
               <folding>
                 <element signature="e#111#149#0#PHP" expanded="true" />
               </folding>
@@ -343,13 +343,6 @@
       <workItem from="1516787628112" duration="1535000" />
       <workItem from="1516899543436" duration="3580000" />
       <workItem from="1517039735177" duration="757000" />
-    </task>
-    <task id="LOCAL-00118" summary="clean up">
-      <created>1516493081065</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1516493081065</updated>
     </task>
     <task id="LOCAL-00119" summary="debug Application">
       <created>1516493212900</created>
@@ -687,11 +680,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517134086983</updated>
     </task>
-    <option name="localTasksCounter" value="167" />
+    <task id="LOCAL-00167" summary="debug username out of jwt php">
+      <created>1517134230999</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1517134230999</updated>
+    </task>
+    <option name="localTasksCounter" value="168" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139655000" />
+    <option name="totallyTimeSpent" value="139753000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -765,7 +765,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add cout to IR cpp" />
     <MESSAGE value="copy Power codes into json" />
     <MESSAGE value="add main methode in IR cpp" />
     <MESSAGE value="debug IR cpp" />
@@ -790,7 +789,8 @@
     <MESSAGE value="write rgb Scheinwerfer and jwt at connection" />
     <MESSAGE value="write Preset get iniString php" />
     <MESSAGE value="fix username out of jwt php" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix username out of jwt php" />
+    <MESSAGE value="debug username out of jwt php" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug username out of jwt php" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1131,8 +1131,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="83" column="103" lean-forward="false" selection-start-line="83" selection-start-column="103" selection-end-line="83" selection-end-column="103" />
+        <state relative-caret-position="489">
+          <caret line="79" column="31" lean-forward="false" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
           <folding>
             <element signature="e#111#149#0#PHP" expanded="true" />
           </folding>

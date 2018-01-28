@@ -77,7 +77,7 @@ class Application implements  MessageComponentInterface {
 
             $jwt = JWT::decode($jwt,$this->key, array("HS256"));
 
-            var_dump($jwt);
+            var_dump($jwt->data);
 
             //handle registration and send ini string
             if(isset($commands["ini"])){
