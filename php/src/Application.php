@@ -270,8 +270,6 @@ class Application implements  MessageComponentInterface {
         $stm = $sqlite->prepare('SELECT * FROM preset WHERE user_id = :id');
         $stm->bindValue(':id',$usr);
 
-        var_dump($stm);
-
         $result = $stm->execute();
 
 

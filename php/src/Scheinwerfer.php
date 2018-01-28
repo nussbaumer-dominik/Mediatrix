@@ -16,7 +16,7 @@ class Scheinwerfer
         $this->dmx = new \DMX();
     }
 
-    public function dimmen(int $val): array
+    public function dimmen(int $val)
     {
         return json_decode(
             str_replace("'", '"',
@@ -29,7 +29,7 @@ class Scheinwerfer
         );
     }
 
-    public function on(): array
+    public function on()
     {
         return json_decode(
             str_replace("'", '"',
@@ -42,7 +42,7 @@ class Scheinwerfer
         );
     }
 
-    public function off(): array
+    public function off()
     {
         return json_decode(
             str_replace("'", '"',
