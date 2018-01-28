@@ -11,7 +11,8 @@ use Firebase\JWT\JWT;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-try {
+
+
 
     var_dump($_POST);
 
@@ -28,7 +29,3 @@ try {
 
     echo $result->numColumns();
 
-}
-catch (\Exception $ex){
-    echo "Error: {$ex->getCode()} {$ex->getMessage()} {$ex->getFile()}: Line {$ex->getLine()}: {$ex->getTraceAsString()}";
-}
