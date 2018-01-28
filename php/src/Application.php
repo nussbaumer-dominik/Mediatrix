@@ -275,7 +275,8 @@ class Application implements  MessageComponentInterface {
         //check if there was data in the database
         if($result->numColumns() > 0){
             $presets = array();
-            while($res = $result->fetchArray()){
+            echo "Test"
+;            while($res = $result->fetchArray()){
                 var_dump($res);
                 array_push($presets, $res['json']);
             }
