@@ -289,8 +289,16 @@ class Application implements  MessageComponentInterface {
         /*
          * DMX:
          */
-        foreach ($this->scheinwerfer as $dev){
-            var_dump($dev->getChannels());
+        $dmx = array();
+
+        foreach ($this->scheinwerfer as $key=>$dev){
+
+
+            $dmx["scheinwerfer{$key}"] = array(
+                "id" => $key,
+                "numberChannels" => count($dev->getChannels())
+            );
+
         }
 
 
@@ -304,13 +312,10 @@ class Application implements  MessageComponentInterface {
          */
 
 
-        return array(
+        return array("ini" => array(
                 "presets" => $presets,
-                "dmx" => array(
-
-                    ),
-                ""
-            );
+                "dmx" => $dmx
+        ));
     }
 
 
