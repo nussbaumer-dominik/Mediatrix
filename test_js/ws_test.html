@@ -20,6 +20,10 @@
 
     var jwt = params.get('jwt');
 
+    //make registration
+
+    conn.send('{"jwt":"'+jwt+'","ini":1}');
+
 </script>
 </body>
 </html>
