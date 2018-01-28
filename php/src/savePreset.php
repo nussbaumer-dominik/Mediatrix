@@ -30,5 +30,5 @@ try {
 
 }
 catch (\Exception $ex){
-    echo "Error: {$ex->getCode()} {$ex->getMessage()} {$ex->getFile()}: Line {$ex->getLine()}";
+    echo "Error: {$ex->getCode()} {$ex->getMessage()} {$ex->getFile()}: Line {$ex->getLine()}: {$ex->getTraceAsString()}";
 }
