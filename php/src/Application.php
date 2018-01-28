@@ -277,7 +277,8 @@ class Application implements  MessageComponentInterface {
         //check if there was data in the database
         if($result->numColumns() > 0){
             $presets = array();
-            echo "Test"
+            echo "Test";
+            var_dump($result);
 ;            while($res = $result->fetchArray(SQLITE3_ASSOC)){
                 var_dump($res);
                 array_push($presets, $res['json']);
