@@ -328,11 +328,20 @@ class Application implements  MessageComponentInterface {
     private function iniMe(){
 
         try {
+
+            //open Ini JSON-File
             $ini = file_get_contents($this->FILE, true);
             $ini = json_decode($ini, true);
 
+            //get Key form Key-class and set it
             $this->key = base64_decode(Key::getKey());
 
+            //set default mPResets
+            $this->defaultPresets = $ini['defaultPresets'];
+
+            /*
+             * DMX:
+             */
             $scheinwerfer = array();
 
             foreach($ini["dmx"] as $entry){
@@ -363,7 +372,13 @@ class Application implements  MessageComponentInterface {
 
             $this->scheinwerfer = $scheinwerfer;
 
+
+            /*
+             * BEAMER:
+             */
             $this->beamer = new Beamer($ini['beamer']['source'],$ini['beamer']['power']);
+
+
 
 
 
