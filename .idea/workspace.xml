@@ -94,8 +94,8 @@
       <file leaf-file-name="ws_test.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_js/ws_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="35" column="20" lean-forward="true" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+            <state relative-caret-position="435">
+              <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -358,13 +358,6 @@
       <workItem from="1516787628112" duration="1535000" />
       <workItem from="1516899543436" duration="3580000" />
       <workItem from="1517039735177" duration="757000" />
-    </task>
-    <task id="LOCAL-00151" summary="write cerateDB">
-      <created>1516903096010</created>
-      <option name="number" value="00151" />
-      <option name="presentableId" value="LOCAL-00151" />
-      <option name="project" value="LOCAL" />
-      <updated>1516903096010</updated>
     </task>
     <task id="LOCAL-00152" summary="write cerateDB">
       <created>1516903107628</created>
@@ -702,11 +695,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517166241271</updated>
     </task>
-    <option name="localTasksCounter" value="200" />
+    <task id="LOCAL-00200" summary="add save Button to testjs">
+      <created>1517166458442</created>
+      <option name="number" value="00200" />
+      <option name="presentableId" value="LOCAL-00200" />
+      <option name="project" value="LOCAL" />
+      <updated>1517166458442</updated>
+    </task>
+    <option name="localTasksCounter" value="201" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154158000" />
+    <option name="totallyTimeSpent" value="154256000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -780,7 +780,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change jwt" />
     <MESSAGE value="merged Frontend" />
     <MESSAGE value="finish change Source php" />
     <MESSAGE value="debug change Source php" />
@@ -805,7 +804,8 @@
     <MESSAGE value="add test.php" />
     <MESSAGE value="debug Preset iniString" />
     <MESSAGE value="write savePreset" />
-    <option name="LAST_COMMIT_MESSAGE" value="write savePreset" />
+    <MESSAGE value="add save Button to testjs" />
+    <option name="LAST_COMMIT_MESSAGE" value="add save Button to testjs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1164,8 +1164,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_js/ws_test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="35" column="20" lean-forward="true" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+        <state relative-caret-position="435">
+          <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
           <folding />
         </state>
       </provider>

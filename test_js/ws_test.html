@@ -29,7 +29,7 @@
 
 
 
-    window.getElementById('savePreset').addEventListener('click',function (event){
+    document.getElementById('savePreset').addEventListener('click',function (event){
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", function(){console.log(this.responseText)});
         oReq.open("POST", "../php/src/savePreset");
