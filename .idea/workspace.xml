@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/test.php" afterPath="$PROJECT_DIR$/php/test.php" />
+      <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,20 +53,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="290" column="9" lean-forward="true" selection-start-line="267" selection-start-column="8" selection-end-line="290" selection-end-column="9" />
+            <state relative-caret-position="252">
+              <caret line="277" column="36" lean-forward="false" selection-start-line="277" selection-start-column="36" selection-end-line="277" selection-end-column="36" />
               <folding>
                 <element signature="e#111#149#0#PHP" expanded="true" />
-                <marker date="1517165411171" expanded="true" signature="6875:6915" ph="SELECT * FRO... preset" />
+                <marker date="1517165943654" expanded="true" signature="6875:6915" ph="SELECT * FRO... preset" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/test.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
@@ -179,8 +179,8 @@
         <option value="$PROJECT_DIR$/php/src/RGBWScheinwerfer.php" />
         <option value="$PROJECT_DIR$/php/src/Scheinwerfer.php" />
         <option value="$PROJECT_DIR$/php/src/savePreset.php" />
-        <option value="$PROJECT_DIR$/php/src/Application.php" />
         <option value="$PROJECT_DIR$/php/test.php" />
+        <option value="$PROJECT_DIR$/php/src/Application.php" />
       </list>
     </option>
   </component>
@@ -348,13 +348,6 @@
       <workItem from="1516787628112" duration="1535000" />
       <workItem from="1516899543436" duration="3580000" />
       <workItem from="1517039735177" duration="757000" />
-    </task>
-    <task id="LOCAL-00148" summary="change to SQlite3">
-      <created>1516901884055</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1516901884055</updated>
     </task>
     <task id="LOCAL-00149" summary="change to SQlite3">
       <created>1516901996503</created>
@@ -692,11 +685,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517165729789</updated>
     </task>
-    <option name="localTasksCounter" value="197" />
+    <task id="LOCAL-00197" summary="add test.php">
+      <created>1517165790833</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1517165790833</updated>
+    </task>
+    <option name="localTasksCounter" value="198" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153504000" />
+    <option name="totallyTimeSpent" value="153668000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1138,17 +1138,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="290" column="9" lean-forward="true" selection-start-line="267" selection-start-column="8" selection-end-line="290" selection-end-column="9" />
-          <folding>
-            <element signature="e#111#149#0#PHP" expanded="true" />
-            <marker date="1517165411171" expanded="true" signature="6875:6915" ph="SELECT * FRO... preset" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -1156,6 +1145,17 @@
           <folding>
             <marker date="1517165780598" expanded="true" signature="180:200" ph="SELECT * FRO... preset" />
             <marker date="1517165780598" expanded="true" signature="180:202" ph="SELECT * FRO... preset" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="277" column="36" lean-forward="false" selection-start-line="277" selection-start-column="36" selection-end-line="277" selection-end-column="36" />
+          <folding>
+            <element signature="e#111#149#0#PHP" expanded="true" />
+            <marker date="1517165943654" expanded="true" signature="6875:6915" ph="SELECT * FRO... preset" />
           </folding>
         </state>
       </provider>

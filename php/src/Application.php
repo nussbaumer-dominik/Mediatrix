@@ -272,10 +272,10 @@ class Application implements  MessageComponentInterface {
 
         $result = $stm->execute();
 
-
+        var_dump($result->numColumns());
         //TODO: fix fetchedRows
         //check if there was data in the database
-        if($result->numColumns() > 0){
+        if($result->numColumns() > 3){
             $presets = array();
             echo "Test";
 
