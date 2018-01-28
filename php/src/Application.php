@@ -14,6 +14,7 @@ use Firebase\JWT\JWT;
 use Firebase\JWT\SignatureInvalidException;
 use Ratchet\MessageComponentInterface;
 use Ratchet\ConnectionInterface;
+use Ratchet\Wamp\Exception;
 use function Sodium\add;
 
 
@@ -265,29 +266,33 @@ class Application implements  MessageComponentInterface {
         /*
          * PRESETS:
          */
-        $sqlite = new \SQLite3("../sqlite/db.sqlite");
+        try {
+            $sqlite = new \SQLite3("../sqlite/db.sqlite");
 
-        $stm = $sqlite->prepare('SELECT * FROM preset WHERE user_id = :id');
-        $stm->bindParam(':id',$usr);
+            $stm = $sqlite->prepare('SELECT * FROM preset WHERE user_id = :id');
+            $stm->bindParam(':id', $usr);
 
-        $result = $stm->execute();
+            $result = $stm->execute();
 
-        var_dump($result->numColumns());
-        //TODO: fix fetchedRows
-        //check if there was data in the database
-        if($result->numColumns() > 3){
-            $presets = array();
-            echo "Test";
+            var_dump($result->numColumns());
+            //TODO: fix fetchedRows
+            //check if there was data in the database
+            if ($result->numColumns() > 3) {
+                $presets = array();
+                echo "Test";;
+                while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
 
-;            while($res = $result->fetchArray(SQLITE3_ASSOC)){
+                    array_push($presets, $res['json']);
+                }
 
-                array_push($presets, $res['json']);
+            } else {
+
+                $presets = $this->defaultPresets;
+
             }
-
-        }else{
-
-            $presets = $this->defaultPresets;
-
+        }
+        catch(Exception $ex){
+            echo "Error";
         }
 
 
