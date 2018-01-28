@@ -9,6 +9,11 @@
     var conn = new WebSocket('ws://192.168.1.85:10000');
     conn.onopen = function(e) {
         console.log("Connection established!");
+
+        //make registration
+
+        conn.send('{"jwt":"'+jwt+'","ini":1}');
+
     };
 
     conn.onmessage = function(e) {
@@ -20,9 +25,6 @@
 
     var jwt = params.get('jwt');
 
-    //make registration
-
-    conn.send('{"jwt":"'+jwt+'","ini":1}');
 
 </script>
 </body>
