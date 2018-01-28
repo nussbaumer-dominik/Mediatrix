@@ -77,11 +77,9 @@ class Application implements  MessageComponentInterface {
 
             $jwt = JWT::decode($jwt,$this->key, array("HS256"));
 
-            var_dump($jwt->data);
-
             //handle registration and send ini string
             if(isset($commands["ini"])){
-                $from->send(json_encode($this->addLiveStatus($this->getIniString($jwt->data['username']))));
+                $from->send(json_encode($this->addLiveStatus($this->getIniString($jwt->data->userName))));
                 $this->registerd = true;
                 echo "Connection {$from->resourceId} registered, Ini-String sent\n";
                 return;
