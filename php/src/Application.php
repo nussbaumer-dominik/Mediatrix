@@ -272,7 +272,7 @@ class Application implements  MessageComponentInterface {
 
         $result = $stm->execute();
 
-        var_dump($result->numColumns());
+        var_dump($result);
         var_dump($this->defaultPresets);
 
         //check if there was data in the database
