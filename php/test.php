@@ -17,6 +17,6 @@ $result = $stm->execute();
 var_dump($result->numColumns());
 
  while($res = $result->fetchArray(SQLITE3_ASSOC)){
-
+        echo "Jetzt\n";
         print_r($res);
     }
