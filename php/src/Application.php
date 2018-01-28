@@ -268,12 +268,12 @@ class Application implements  MessageComponentInterface {
         $sqlite = new \SQLite3("../sqlite/db.sqlite");
 
         $stm = $sqlite->prepare('SELECT * FROM preset WHERE user_id = :id');
-        $stm->bindValue(':id',$usr);
+        $stm->bindParam(':id',$usr);
 
         $result = $stm->execute();
 
 
-
+        //TODO: fix fetchedRows
         //check if there was data in the database
         if($result->numColumns() > 0){
             $presets = array();
@@ -351,16 +351,26 @@ class Application implements  MessageComponentInterface {
             foreach($ini["dmx"] as $entry){
 
                 if(isset($entry["rot"])){
-
-                    array_push($scheinwerfer,
-                        new RGBWScheinwerfer(array(
-                                "r" => $entry["rot"] - 1,
-                                "g" => $entry["rot"] - 1,
-                                "b" => $entry["rot"] - 1,
-                                "w" => $entry["weiss"] - 1
+                    if(count($entry) == 4) {
+                        array_push($scheinwerfer,
+                            new RGBWScheinwerfer(array(
+                                    "r" => $entry["rot"] - 1,
+                                    "g" => $entry["rot"] - 1,
+                                    "b" => $entry["rot"] - 1,
+                                    "w" => $entry["weiss"] - 1
+                                )
                             )
-                        )
-                    );
+                        );
+                    }else{
+                        array_push($scheinwerfer,
+                            new RGBWScheinwerfer(array(
+                                    "r" => $entry["rot"] - 1,
+                                    "g" => $entry["rot"] - 1,
+                                    "b" => $entry["rot"] - 1
+                                )
+                            )
+                        );
+                    }
 
                 }else {
 
