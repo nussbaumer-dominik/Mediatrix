@@ -23,13 +23,13 @@ class Scheinwerfer{
     }
 
     function on(){
-      return json_decode($this->dmx::sendChannel(array(
+      return json_decode(str_replace("'",'"',$this->dmx::sendChannel(array(
         $this->channels["hue"] => 255
       )));
     }
 
     function off(){
-      return json_decode($this->dmx::sendChannel(array(
+      return json_decode(str_replace("'",'"',$this->dmx::sendChannel(array(
         $this->channels["hue"] => 0
       )));
     }
