@@ -313,8 +313,6 @@ class Application implements  MessageComponentInterface {
          * AV:
          */
 
-        var_dump($presets);
-
         return array("ini" => array(
                 "presets" => $presets,
                 "dmx" => $dmx
