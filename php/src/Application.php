@@ -81,7 +81,7 @@ class Application implements  MessageComponentInterface {
 
             //handle registration and send ini string
             if(isset($commands["ini"])){
-                $from->send(json_encode($this->addLiveStatus($this->getIniString($jwt->data->username))));
+                $from->send(json_encode($this->addLiveStatus($this->getIniString($jwt->data['username']))));
                 $this->registerd = true;
                 echo "Connection {$from->resourceId} registered, Ini-String sent\n";
                 return;

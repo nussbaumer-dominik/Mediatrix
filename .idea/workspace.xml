@@ -45,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
-              <caret line="83" column="101" lean-forward="false" selection-start-line="83" selection-start-column="101" selection-end-line="83" selection-end-column="101" />
+              <caret line="83" column="103" lean-forward="false" selection-start-line="83" selection-start-column="103" selection-end-line="83" selection-end-column="103" />
               <folding>
                 <element signature="e#111#149#0#PHP" expanded="true" />
               </folding>
@@ -343,13 +343,6 @@
       <workItem from="1516787628112" duration="1535000" />
       <workItem from="1516899543436" duration="3580000" />
       <workItem from="1517039735177" duration="757000" />
-    </task>
-    <task id="LOCAL-00117" summary="clean up">
-      <created>1516492991014</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1516492991014</updated>
     </task>
     <task id="LOCAL-00118" summary="clean up">
       <created>1516493081065</created>
@@ -687,11 +680,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517094544517</updated>
     </task>
-    <option name="localTasksCounter" value="166" />
+    <task id="LOCAL-00166" summary="fix username out of jwt php">
+      <created>1517134086983</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1517134086983</updated>
+    </task>
+    <option name="localTasksCounter" value="167" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139500000" />
+    <option name="totallyTimeSpent" value="139655000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -765,7 +765,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix return" />
     <MESSAGE value="add cout to IR cpp" />
     <MESSAGE value="copy Power codes into json" />
     <MESSAGE value="add main methode in IR cpp" />
@@ -790,7 +789,8 @@
     <MESSAGE value="debug rgb Scheinwerfer" />
     <MESSAGE value="write rgb Scheinwerfer and jwt at connection" />
     <MESSAGE value="write Preset get iniString php" />
-    <option name="LAST_COMMIT_MESSAGE" value="write Preset get iniString php" />
+    <MESSAGE value="fix username out of jwt php" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix username out of jwt php" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1132,7 +1132,7 @@
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="83" column="101" lean-forward="false" selection-start-line="83" selection-start-column="101" selection-end-line="83" selection-end-column="101" />
+          <caret line="83" column="103" lean-forward="false" selection-start-line="83" selection-start-column="103" selection-end-line="83" selection-end-column="103" />
           <folding>
             <element signature="e#111#149#0#PHP" expanded="true" />
           </folding>
