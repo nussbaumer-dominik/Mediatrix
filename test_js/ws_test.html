@@ -33,7 +33,7 @@
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", function(){console.log(this.responseText)});
         oReq.open("POST", "../php/src/savePreset.php");
-        oReq.send();
+        oReq.send('json={"test":1}&jwt='+jwt);
     })
 
 
