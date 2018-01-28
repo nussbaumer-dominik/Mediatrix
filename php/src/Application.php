@@ -69,13 +69,19 @@ class Application implements  MessageComponentInterface {
             $result = array();
             array_push($result, json_decode('{"success":"true","err":""}'));
 
+
+
             //decode command json
             $commands = json_decode($msg, true);
+
+
 
             //Check JWT
             $jwt = $commands['jwt'];
 
             $jwt = JWT::decode($jwt,$this->key, array("HS256"));
+
+
 
             //handle registration and send ini string
             if(isset($commands["ini"])){
@@ -85,9 +91,16 @@ class Application implements  MessageComponentInterface {
                 return;
             }
 
+
+
+
             //check if user has registered
             if($this->registerd) {
-                //check if dmx command was passed
+
+
+                /*
+                 * DMX:
+                 */
                 if (isset($commands["dmx"])) {
 
                     $r = $this->sendDmx($commands["dmx"]);
@@ -95,6 +108,11 @@ class Application implements  MessageComponentInterface {
 
                     //check if beamer command was passed
                 }
+
+
+                /*
+                 * Beamer:
+                 */
                 if (isset($commands["beamer"])) {
                     $beamerCom = $commands["beamer"];
 
@@ -113,17 +131,26 @@ class Application implements  MessageComponentInterface {
                         $r->success ?: array_push($result, $r);
                     }
 
-                    //check if av command was passed
+
                 }
+
+
+                /*
+                 * AV:
+                 */
                 if (isset($commands["av"])) {
                     $from->send("av");
-
-                    //if nothing from  was right, no command recognized
                 }
 
+
+                /*
+                 * No Command recognized
+                 */
                 if (!(isset($commands["dmx"]) || isset($commands["beamer"]) || isset($commands["av"]))) {
                     $from->send(json_encode($this->addLiveStatus(array("success" => false, "err" => "Unrecognized Command"))));
                 }
+
+
 
                 //check if an error was added to the return array
                 if (count($result) > 1) {
@@ -135,18 +162,31 @@ class Application implements  MessageComponentInterface {
                         $from->send(json_encode($this->addLiveStatus($r)));
                     }
                 }
+
+
+
             }else{
+                //User has not registered
+
                 $from->send(json_encode($this->addLiveStatus(array("success"=>false, "err"=>"Not registered"))));
                 echo "{$from->resourceId} send a message but was not registered\n";
             }
 
-        //If Session Expired send error message
+
+
+
         }catch(ExpiredException $ex){
+            //Session Expired send error message
+
             $from->send(json_encode($this->addLiveStatus(array("success"=>false, "err"=>"Session Expired"))));
             $from->close();
 
             echo 'Session expired: '.$ex->getMessage()."\n";
+
+
         }catch (\Exception $ex){
+            //Any error occurred
+
             $from->send(json_encode($this->addLiveStatus(array("success"=>false, "err"=>"There was an Error"))));
             echo 'There was an Error: '.$ex->getMessage().' '.$ex->getFile().' '.$ex->getLine()."\n";
         }
@@ -229,6 +269,8 @@ class Application implements  MessageComponentInterface {
         /*
          * DMX:
          */
+
+
 
 
         /*
