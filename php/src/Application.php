@@ -272,11 +272,13 @@ class Application implements  MessageComponentInterface {
 
         $result = $stm->execute();
 
+        var_dump($result->numColumns());
+
         //check if there was data in the database
         if($result->numColumns() > 0){
             $presets = array();
             echo "Test"
-;            while($res = $result->fetchArray()){
+;            while($res = $result->fetchArray(SQLITE3_ASSOC)){
                 var_dump($res);
                 array_push($presets, $res['json']);
             }
