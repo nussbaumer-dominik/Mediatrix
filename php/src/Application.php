@@ -25,12 +25,7 @@ class Application implements  MessageComponentInterface {
     private $scheinwerfer;
     private $beamer;
     private $key;
-    private $defaultPresets = '{
-            "0": {
-                "name":"",
-                
-            }
-        }';
+    private $defaultPresets;
     private $registerd;
 
     public function __construct() {
@@ -105,8 +100,6 @@ class Application implements  MessageComponentInterface {
 
                     $r = $this->sendDmx($commands["dmx"]);
                     $r['success'] ?: array_push($result, $r);
-
-                    //check if beamer command was passed
                 }
 
 
@@ -222,6 +215,33 @@ class Application implements  MessageComponentInterface {
     {
         $result = array();
         array_push($result,array("success"=>true,"err"=>""));
+
+
+        if(isset($dmx["blackout"])){
+            foreach ($this->scheinwerfer as $dev){
+                $r = $dev->off();
+
+                if(!$r->success){
+                    array_push($result,$r);
+                }
+            }
+
+            array_splice($dmx,"blackout");
+        }
+
+        if(isset($dmx["noblackout"])){
+            foreach ($this->scheinwerfer as $dev){
+                $r = $dev->on();
+
+                if(!$r->success){
+                    array_push($result,$r);
+                }
+            }
+
+            array_splice($dmx,"noblackout");
+        }
+
+
 
         foreach($dmx as $dev){
 

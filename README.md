@@ -17,7 +17,7 @@ WS command structure (JSON):
         "rot":2,
         "gruen":255,
         "blau":100,
-        "weiss":255,
+        "weiss":255, 
         "hue":10
       },
       "blackout":1,

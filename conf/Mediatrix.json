@@ -28,5 +28,13 @@
   "av":
   {
 
+  },
+  "defaultPresets": {
+    "oneSpot":{
+      "dmx":{
+        "id":1,
+        "hue":255
+      }
+    }
   }
 }
