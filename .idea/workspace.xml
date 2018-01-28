@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
+      <change beforePath="$PROJECT_DIR$/php/src/savePreset.php" afterPath="$PROJECT_DIR$/php/src/savePreset.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="277" column="36" lean-forward="false" selection-start-line="277" selection-start-column="36" selection-end-line="277" selection-end-column="36" />
+            <state relative-caret-position="414">
+              <caret line="76" column="64" lean-forward="true" selection-start-line="76" selection-start-column="11" selection-end-line="76" selection-end-column="64" />
               <folding>
                 <element signature="e#111#149#0#PHP" expanded="true" />
                 <marker date="1517165943654" expanded="true" signature="6875:6915" ph="SELECT * FRO... preset" />
@@ -79,13 +79,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="savePreset.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="savePreset.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/savePreset.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
               <folding>
-                <marker date="1517165223766" expanded="true" signature="252:307" ph="INSERT INTO preset... " />
+                <marker date="1517166227458" expanded="true" signature="337:392" ph="INSERT INTO preset... " />
               </folding>
             </state>
           </provider>
@@ -94,8 +94,8 @@
       <file leaf-file-name="Login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="363">
+              <caret line="33" column="49" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -178,9 +178,9 @@
         <option value="$PROJECT_DIR$/test_js/ws_test.html" />
         <option value="$PROJECT_DIR$/php/src/RGBWScheinwerfer.php" />
         <option value="$PROJECT_DIR$/php/src/Scheinwerfer.php" />
-        <option value="$PROJECT_DIR$/php/src/savePreset.php" />
         <option value="$PROJECT_DIR$/php/test.php" />
         <option value="$PROJECT_DIR$/php/src/Application.php" />
+        <option value="$PROJECT_DIR$/php/src/savePreset.php" />
       </list>
     </option>
   </component>
@@ -348,13 +348,6 @@
       <workItem from="1516787628112" duration="1535000" />
       <workItem from="1516899543436" duration="3580000" />
       <workItem from="1517039735177" duration="757000" />
-    </task>
-    <task id="LOCAL-00149" summary="change to SQlite3">
-      <created>1516901996503</created>
-      <option name="number" value="00149" />
-      <option name="presentableId" value="LOCAL-00149" />
-      <option name="project" value="LOCAL" />
-      <updated>1516901996503</updated>
     </task>
     <task id="LOCAL-00150" summary="add cerateDB">
       <created>1516902171061</created>
@@ -692,11 +685,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517165790833</updated>
     </task>
-    <option name="localTasksCounter" value="198" />
+    <task id="LOCAL-00198" summary="debug Preset iniString">
+      <created>1517165974048</created>
+      <option name="number" value="00198" />
+      <option name="presentableId" value="LOCAL-00198" />
+      <option name="project" value="LOCAL" />
+      <updated>1517165974048</updated>
+    </task>
+    <option name="localTasksCounter" value="199" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153668000" />
+    <option name="totallyTimeSpent" value="153943000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -770,7 +770,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="write cerateDB" />
     <MESSAGE value="add onmessage to main.js" />
     <MESSAGE value="change jwt" />
     <MESSAGE value="merged Frontend" />
@@ -795,7 +794,8 @@
     <MESSAGE value="debug Scheinwerfer" />
     <MESSAGE value="debug iniString" />
     <MESSAGE value="add test.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="add test.php" />
+    <MESSAGE value="debug Preset iniString" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug Preset iniString" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1102,34 +1102,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="46" />
-          <folding>
-            <marker date="1516959607274" expanded="true" signature="152:269" ph="create table... if" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/savePreset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <marker date="1517165223766" expanded="true" signature="252:307" ph="INSERT INTO preset... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/unnötig/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1151,11 +1123,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="277" column="36" lean-forward="false" selection-start-line="277" selection-start-column="36" selection-end-line="277" selection-end-column="36" />
+        <state relative-caret-position="414">
+          <caret line="76" column="64" lean-forward="true" selection-start-line="76" selection-start-column="11" selection-end-line="76" selection-end-column="64" />
           <folding>
             <element signature="e#111#149#0#PHP" expanded="true" />
             <marker date="1517165943654" expanded="true" signature="6875:6915" ph="SELECT * FRO... preset" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="33" column="49" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="46" />
+          <folding>
+            <marker date="1516959607274" expanded="true" signature="152:269" ph="create table... if" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/savePreset.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+          <folding>
+            <marker date="1517166227458" expanded="true" signature="337:392" ph="INSERT INTO preset... " />
           </folding>
         </state>
       </provider>

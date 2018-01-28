@@ -11,7 +11,13 @@ use Firebase\JWT\JWT;
 
 require __DIR__ . '/../vendor/autoload.php';
 
+$userId =  JWT::decode($_POST['jwt'],base64_decode(Key::getKey()), array("HS256"));
+
 $sqlite = new \SQLite3("../sqlite/db.sqlite");
 
 $stm = $sqlite->prepare("INSERT INTO preset(json,user_id) VALUES (:json,:userId);");
 
+$stm->bindParam(":json", $_POST['json']);
+$stm->bindParam(":userId", $userId);
+
+$stm->execute();
