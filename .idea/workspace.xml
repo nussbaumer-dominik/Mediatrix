@@ -44,11 +44,11 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="274" column="24" lean-forward="false" selection-start-line="274" selection-start-column="24" selection-end-line="274" selection-end-column="24" />
+            <state relative-caret-position="273">
+              <caret line="278" column="31" lean-forward="false" selection-start-line="278" selection-start-column="31" selection-end-line="278" selection-end-column="31" />
               <folding>
                 <element signature="e#111#149#0#PHP" expanded="true" />
-                <marker date="1517142487923" expanded="true" signature="6875:6915" ph="SELECT * FRO... preset" />
+                <marker date="1517142823198" expanded="true" signature="6875:6915" ph="SELECT * FRO... preset" />
               </folding>
             </state>
           </provider>
@@ -349,13 +349,6 @@
       <workItem from="1516787628112" duration="1535000" />
       <workItem from="1516899543436" duration="3580000" />
       <workItem from="1517039735177" duration="757000" />
-    </task>
-    <task id="LOCAL-00136" summary="add read test cpp">
-      <created>1516561446302</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1516561446302</updated>
     </task>
     <task id="LOCAL-00137" summary="add read test cpp">
       <created>1516734018465</created>
@@ -693,11 +686,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517142431096</updated>
     </task>
-    <option name="localTasksCounter" value="185" />
+    <task id="LOCAL-00185" summary="debug iniString">
+      <created>1517142502047</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1517142502047</updated>
+    </task>
+    <option name="localTasksCounter" value="186" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147768000" />
+    <option name="totallyTimeSpent" value="148101000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1138,11 +1138,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="274" column="24" lean-forward="false" selection-start-line="274" selection-start-column="24" selection-end-line="274" selection-end-column="24" />
+        <state relative-caret-position="273">
+          <caret line="278" column="31" lean-forward="false" selection-start-line="278" selection-start-column="31" selection-end-line="278" selection-end-column="31" />
           <folding>
             <element signature="e#111#149#0#PHP" expanded="true" />
-            <marker date="1517142487923" expanded="true" signature="6875:6915" ph="SELECT * FRO... preset" />
+            <marker date="1517142823198" expanded="true" signature="6875:6915" ph="SELECT * FRO... preset" />
           </folding>
         </state>
       </provider>
