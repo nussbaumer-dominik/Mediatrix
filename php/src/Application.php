@@ -226,7 +226,7 @@ class Application implements  MessageComponentInterface {
                 }
             }
 
-            array_splice($dmx,"blackout");
+            unset($dmx["blackout"]);
         }
 
         if(isset($dmx["noblackout"])){
@@ -238,7 +238,7 @@ class Application implements  MessageComponentInterface {
                 }
             }
 
-            array_splice($dmx,"noblackout");
+            unset($dmx["noblackout"]);
         }
 
 
