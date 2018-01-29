@@ -157,4 +157,20 @@ class AV
     {
         return $this->presets;
     }
+
+    /**
+     * @return int
+     */
+    public function getMaxVolume(): int
+    {
+        return $this->maxVolume;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMinVolume(): int
+    {
+        return $this->minVolume;
+    }
 }

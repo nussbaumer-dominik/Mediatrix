@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/conf/Mediatrix.json" afterPath="$PROJECT_DIR$/conf/Mediatrix.json" />
       <change beforePath="$PROJECT_DIR$/php/src/AV.php" afterPath="$PROJECT_DIR$/php/src/AV.php" />
       <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
     </list>
@@ -36,9 +35,9 @@
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="369" column="43" lean-forward="true" selection-start-line="369" selection-start-column="43" selection-end-line="369" selection-end-column="43" />
+              <caret line="343" column="16" lean-forward="false" selection-start-line="343" selection-start-column="16" selection-end-line="343" selection-end-column="16" />
               <folding>
-                <marker date="1517262407537" expanded="true" signature="7498:7538" ph="SELECT * FRO... preset" />
+                <marker date="1517262596113" expanded="true" signature="7554:7594" ph="SELECT * FRO... preset" />
               </folding>
             </state>
           </provider>
@@ -47,8 +46,8 @@
       <file leaf-file-name="AV.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/AV.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="158" column="5" lean-forward="false" selection-start-line="158" selection-start-column="5" selection-end-line="158" selection-end-column="5" />
+            <state relative-caret-position="537">
+              <caret line="174" column="5" lean-forward="false" selection-start-line="174" selection-start-column="5" selection-end-line="174" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -366,14 +365,7 @@
       <workItem from="1516899543436" duration="3580000" />
       <workItem from="1517039735177" duration="757000" />
       <workItem from="1517220009512" duration="2578000" />
-      <workItem from="1517250410762" duration="4848000" />
-    </task>
-    <task id="LOCAL-00171" summary="refactor code and add comments">
-      <created>1517135056849</created>
-      <option name="number" value="00171" />
-      <option name="presentableId" value="LOCAL-00171" />
-      <option name="project" value="LOCAL" />
-      <updated>1517135056849</updated>
+      <workItem from="1517250410762" duration="5005000" />
     </task>
     <task id="LOCAL-00172" summary="add blackout and no blackout dmx">
       <created>1517136554772</created>
@@ -711,11 +703,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517261845744</updated>
     </task>
-    <option name="localTasksCounter" value="220" />
+    <task id="LOCAL-00220" summary="change iniString, AV Klass and iniMe regardung to implementig Volume up and down">
+      <created>1517262476941</created>
+      <option name="number" value="00220" />
+      <option name="presentableId" value="LOCAL-00220" />
+      <option name="project" value="LOCAL" />
+      <updated>1517262476941</updated>
+    </task>
+    <option name="localTasksCounter" value="221" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164182000" />
+    <option name="totallyTimeSpent" value="164339000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -777,7 +776,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="write rgb Scheinwerfer and jwt at connection" />
     <MESSAGE value="write Preset get iniString php" />
     <MESSAGE value="debug username out of jwt php" />
     <MESSAGE value="fix username out of jwt php" />
@@ -802,7 +800,8 @@
     <MESSAGE value="write AV class" />
     <MESSAGE value="add ini AV" />
     <MESSAGE value="debug AV command" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug AV command" />
+    <MESSAGE value="change iniString, AV Klass and iniMe regardung to implementig Volume up and down" />
+    <option name="LAST_COMMIT_MESSAGE" value="change iniString, AV Klass and iniMe regardung to implementig Volume up and down" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1137,8 +1136,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/AV.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="158" column="5" lean-forward="false" selection-start-line="158" selection-start-column="5" selection-end-line="158" selection-end-column="5" />
+        <state relative-caret-position="537">
+          <caret line="174" column="5" lean-forward="false" selection-start-line="174" selection-start-column="5" selection-end-line="174" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1146,9 +1145,9 @@
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="369" column="43" lean-forward="true" selection-start-line="369" selection-start-column="43" selection-end-line="369" selection-end-column="43" />
+          <caret line="343" column="16" lean-forward="false" selection-start-line="343" selection-start-column="16" selection-end-line="343" selection-end-column="16" />
           <folding>
-            <marker date="1517262407537" expanded="true" signature="7498:7538" ph="SELECT * FRO... preset" />
+            <marker date="1517262596113" expanded="true" signature="7554:7594" ph="SELECT * FRO... preset" />
           </folding>
         </state>
       </provider>

@@ -274,6 +274,10 @@ class Application implements  MessageComponentInterface {
         return $result[0];
     }
 
+    /**
+     * @param $usr
+     * @return array
+     */
     private function getIniString($usr){
 
         /*
@@ -331,7 +335,13 @@ class Application implements  MessageComponentInterface {
         /*
          * AV:
          */
-        $av = $this->av->getPresets();
+        $av = array();
+
+        $av['presets'] = $this->av->getPresets();
+
+        $av['maxVolume'] = $this->av->getMaxVolume();
+
+        $av['minVolume'] = $this->av->getMinVolume();
 
 
         return array("ini" => array(
