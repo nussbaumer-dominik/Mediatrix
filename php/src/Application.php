@@ -134,7 +134,19 @@ class Application implements  MessageComponentInterface {
                  * AV:
                  */
                 if (isset($commands["av"])) {
-                    $from->send("av");
+                    $av = $commands['av'];
+                    if(isset($av['mode'])){
+                        $r = $this->av->setPreset($av['made']);
+                        $r->success ?: array_push($result, $r);
+                    }
+                    if(isset($av['source'])){
+                        $r = $this->av->changeSource();
+                        $r->success ?: array_push($result, $r);
+                    }
+                    if(isset($av['volume'])){
+                        //TODO implement Volume
+                        $from->send("Volume not yet implemented");
+                    }
                 }
 
 
@@ -319,6 +331,8 @@ class Application implements  MessageComponentInterface {
         /*
          * AV:
          */
+
+
 
         return array("ini" => array(
                 "presets" => $presets,
