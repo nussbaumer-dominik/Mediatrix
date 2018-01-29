@@ -11,6 +11,7 @@ use Firebase\JWT\JWT;
 
 require __DIR__ . '/../vendor/autoload.php';
 
+    var_dump($_ENV);
 
     $userId = JWT::decode($_POST['jwt'], base64_decode(Key::getKey()), array("HS256"))->data->userName;
 
