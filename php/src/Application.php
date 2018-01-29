@@ -136,7 +136,7 @@ class Application implements  MessageComponentInterface {
                 if (isset($commands["av"])) {
                     $av = $commands['av'];
                     if(isset($av['mode'])){
-                        $r = $this->av->setPreset($av['made']);
+                        $r = $this->av->setPreset($av['mode']);
                         $r->success ?: array_push($result, $r);
                     }
                     if(isset($av['source'])){
