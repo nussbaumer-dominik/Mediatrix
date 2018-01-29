@@ -52,6 +52,8 @@
       }
     },
     "dbPerClick":5,
+    "maxVolume":6,
+    "minVolume":-80,
     "sources":{
       "a":"gjkdsf",
       "b":"suzfsudghfisd"

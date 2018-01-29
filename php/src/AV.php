@@ -12,6 +12,9 @@ namespace Mediatrix;
 class AV
 {
     private $volumeLevel;
+    private $maxVolume;
+    private $minVolume;
+
     private $volumeCodes;
     private $volumeSteps;
     private $presets;
@@ -24,7 +27,7 @@ class AV
      * @param array $volumeCodes
      * @param array $presets
      */
-    function __construct(array $source, array $volumeCodes, array $presets, int $volumeSteps)
+    function __construct(array $source, array $volumeCodes, array $presets, int $volumeSteps, int $maxVolume, int $minVolume)
     {
         foreach ($source as $k => $s){
             $source[$k]['nextActive'] = false;
@@ -45,6 +48,10 @@ class AV
         $this->presets = $presets;
 
         $this->volumeSteps = $volumeSteps;
+
+        $this->maxVolume = $maxVolume;
+
+        $this->minVolume = $minVolume;
 
 
         $this->ir = new \IR();
@@ -141,5 +148,13 @@ class AV
 
         //return Result
         return $r;
+    }
+
+    /**
+     * @return array
+     */
+    public function getPresets(): array
+    {
+        return $this->presets;
     }
 }

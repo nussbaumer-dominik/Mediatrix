@@ -331,12 +331,13 @@ class Application implements  MessageComponentInterface {
         /*
          * AV:
          */
-
+        $av = $this->av->getPresets();
 
 
         return array("ini" => array(
                 "presets" => $presets,
-                "dmx" => $dmx
+                "dmx" => $dmx,
+                "av" => $av
         ));
     }
 
@@ -417,7 +418,7 @@ class Application implements  MessageComponentInterface {
              */
             $av = $ini['av'];
 
-            $this->av = new AV($av['sources'],$av['volume'],$av['presets'],$av['dbPerClick']);
+            $this->av = new AV($av['sources'],$av['volume'],$av['presets'],$av['dbPerClick'],$av['maxVolume'],$av['minVolume']);
 
 
         }catch (\Exception $ex){
