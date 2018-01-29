@@ -29,7 +29,10 @@ class AV
      */
     function __construct(array $source, array $volumeCodes, array $presets, int $volumeSteps, int $maxVolume, int $minVolume)
     {
+        var_dump($source);
+
         foreach ($source as $k => $s){
+            var_dump($k);
             $source[$k]['nextActive'] = false;
             $source[$k]['lastSendA'] = false;
         }
