@@ -55,8 +55,14 @@
     "maxVolume":6,
     "minVolume":-80,
     "sources":{
-      "a":"gjkdsf",
-      "b":"suzfsudghfisd"
+      "0":{
+        "a":"gjkdsf",
+        "b":"suzfsudghfisd"
+      },
+      "1":{
+        "a":"gjkdsf",
+        "b":"suzfsudghfisd"
+      }
     }
   },
   "defaultPresets": {
