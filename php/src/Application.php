@@ -337,7 +337,7 @@ class Application implements  MessageComponentInterface {
          */
         $av = array();
 
-        $av['presets'] = $this->av->getPresets();
+        $av['presets'] = array_keys($this->av->getPresets());
 
         $av['maxVolume'] = $this->av->getMaxVolume();
 

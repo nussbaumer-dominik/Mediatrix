@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/AV.php" afterPath="$PROJECT_DIR$/php/src/AV.php" />
       <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,10 +33,10 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="343" column="16" lean-forward="false" selection-start-line="343" selection-start-column="16" selection-end-line="343" selection-end-column="16" />
+            <state relative-caret-position="198">
+              <caret line="339" column="60" lean-forward="false" selection-start-line="339" selection-start-column="60" selection-end-line="339" selection-end-column="60" />
               <folding>
-                <marker date="1517262596113" expanded="true" signature="7554:7594" ph="SELECT * FRO... preset" />
+                <marker date="1517262662108" expanded="true" signature="7554:7594" ph="SELECT * FRO... preset" />
               </folding>
             </state>
           </provider>
@@ -365,14 +364,7 @@
       <workItem from="1516899543436" duration="3580000" />
       <workItem from="1517039735177" duration="757000" />
       <workItem from="1517220009512" duration="2578000" />
-      <workItem from="1517250410762" duration="5005000" />
-    </task>
-    <task id="LOCAL-00172" summary="add blackout and no blackout dmx">
-      <created>1517136554772</created>
-      <option name="number" value="00172" />
-      <option name="presentableId" value="LOCAL-00172" />
-      <option name="project" value="LOCAL" />
-      <updated>1517136554772</updated>
+      <workItem from="1517250410762" duration="5070000" />
     </task>
     <task id="LOCAL-00173" summary="add string replace in on and off Scheinwerfer php">
       <created>1517136704019</created>
@@ -710,11 +702,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517262476941</updated>
     </task>
-    <option name="localTasksCounter" value="221" />
+    <task id="LOCAL-00221" summary="add max and min Volume to iniString">
+      <created>1517262612624</created>
+      <option name="number" value="00221" />
+      <option name="presentableId" value="LOCAL-00221" />
+      <option name="project" value="LOCAL" />
+      <updated>1517262612624</updated>
+    </task>
+    <option name="localTasksCounter" value="222" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164339000" />
+    <option name="totallyTimeSpent" value="164404000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -776,7 +775,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="write Preset get iniString php" />
     <MESSAGE value="debug username out of jwt php" />
     <MESSAGE value="fix username out of jwt php" />
     <MESSAGE value="fix typo in select" />
@@ -801,7 +799,8 @@
     <MESSAGE value="add ini AV" />
     <MESSAGE value="debug AV command" />
     <MESSAGE value="change iniString, AV Klass and iniMe regardung to implementig Volume up and down" />
-    <option name="LAST_COMMIT_MESSAGE" value="change iniString, AV Klass and iniMe regardung to implementig Volume up and down" />
+    <MESSAGE value="add max and min Volume to iniString" />
+    <option name="LAST_COMMIT_MESSAGE" value="add max and min Volume to iniString" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1144,10 +1143,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="343" column="16" lean-forward="false" selection-start-line="343" selection-start-column="16" selection-end-line="343" selection-end-column="16" />
+        <state relative-caret-position="198">
+          <caret line="339" column="60" lean-forward="false" selection-start-line="339" selection-start-column="60" selection-end-line="339" selection-end-column="60" />
           <folding>
-            <marker date="1517262596113" expanded="true" signature="7554:7594" ph="SELECT * FRO... preset" />
+            <marker date="1517262662108" expanded="true" signature="7554:7594" ph="SELECT * FRO... preset" />
           </folding>
         </state>
       </provider>
