@@ -27,7 +27,35 @@
   },
   "av":
   {
-
+    "presets":{
+      "Film":{
+        "a":"gjkdsf",
+        "b":"suzfsudghfisd"
+      },
+      "Praesentation":{
+        "a":"gjkdsf",
+        "b":"suzfsudghfisd"
+      },
+      "Audio":{
+        "a":"gjkdsf",
+        "b":"suzfsudghfisd"
+      }
+    },
+    "volume":{
+      "up":{
+        "a":"gjkdsf",
+        "b":"suzfsudghfisd"
+      },
+      "down":{
+        "a":"gjkdsf",
+        "b":"suzfsudghfisd"
+      }
+    },
+    "dbPerClick":5,
+    "sources":{
+      "a":"gjkdsf",
+      "b":"suzfsudghfisd"
+    }
   },
   "defaultPresets": {
     "oneSpot":{

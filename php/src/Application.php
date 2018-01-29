@@ -28,6 +28,7 @@ class Application implements  MessageComponentInterface {
     private $key;
     private $defaultPresets;
     private $registerd;
+    private $av;
 
     public function __construct() {
         $this->iniMe();
@@ -396,7 +397,13 @@ class Application implements  MessageComponentInterface {
             $this->beamer = new Beamer($ini['beamer']['source'],$ini['beamer']['power']);
 
 
+            
+            /*
+             * AV:
+             */
+            $av = $ini['av'];
 
+            $this->av = new AV($av['sources'],$av['volume'],$av['presets'],$av['dbPerClick']);
 
 
         }catch (\Exception $ex){

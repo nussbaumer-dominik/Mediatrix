@@ -96,7 +96,7 @@ class AV
     }
 
     /**
-     * @param number $presets
+     * @param mixed $presets
      * @return mixed
      */
     public function setPreset($presets)
