@@ -44,6 +44,9 @@ class AV
 
         $this->volumeCodes = $volumeCodes;
 
+        foreach ($presets as $k => $s){
+            $presets[$k]['lastSendA'] = false;
+        }
 
         $this->presets = $presets;
 
@@ -103,16 +106,16 @@ class AV
     }
 
     /**
-     * @param mixed $presets
+     * @param mixed $preset
      * @return mixed
      */
-    public function setPreset($presets)
+    public function setPreset($preset)
     {
 
         //get Code
-        $code = $this->presets[$presets]['lastSendA'] ? $this->presets[$presets]['b']:$this->presets[$presets]['a'];
+        $code = $this->presets[$preset]['lastSendA'] ? $this->presets[$preset]['b']:$this->presets[$preset]['a'];
 
-        $this->presets[$presets]['lastSendA'] = !$this->presets[$presets]['lastSendA'];
+        $this->presets[$preset]['lastSendA'] = !$this->presets[$preset]['lastSendA'];
 
         //send IR code
         return json_decode(str_replace("'",'"',$this->ir->send($code,5)));
