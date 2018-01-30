@@ -11,18 +11,24 @@ use Firebase\JWT\JWT;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-    var_dump($_ENV);
+class Test
+{
 
-    $userId = JWT::decode($_POST['jwt'], base64_decode(Key::getKey()), array("HS256"))->data->userName;
+    function savePreset()
+    {
+        var_dump($_ENV);
 
-    $sqlite = new \SQLite3("../sqlite/db.sqlite");
+        $userId = JWT::decode($_POST['jwt'], base64_decode(Key::getKey()), array("HS256"))->data->userName;
 
-    $stm = $sqlite->prepare("INSERT INTO preset(json,user_id) VALUES (:json,:userId);");
+        $sqlite = new \SQLite3("../sqlite/db.sqlite");
 
-    $stm->bindParam(":json", $_POST['json']);
-    $stm->bindParam(":userId", $userId);
+        $stm = $sqlite->prepare("INSERT INTO preset(json,user_id) VALUES (:json,:userId);");
 
-    $result = $stm->execute();
+        $stm->bindParam(":json", $_POST['json']);
+        $stm->bindParam(":userId", $userId);
 
-    echo $result->numColumns();
+        $result = $stm->execute();
 
+        echo $result->numColumns();
+    }
+}

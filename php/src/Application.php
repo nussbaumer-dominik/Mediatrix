@@ -18,7 +18,8 @@ use Ratchet\Wamp\Exception;
 use function Sodium\add;
 
 
-class Application implements  MessageComponentInterface {
+class Application implements MessageComponentInterface
+{
 
     private $FILE = "../conf/Mediatrix.json";
 
@@ -30,22 +31,24 @@ class Application implements  MessageComponentInterface {
     private $registerd;
     private $av;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->iniMe();
     }
 
-    public function onOpen(ConnectionInterface $conn) {
+    public function onOpen(ConnectionInterface $conn)
+    {
         // Store the new connection to send messages to later
 
         //check if there is already a connection
-        if(!isset($this->client)) {
+        if (!isset($this->client)) {
             $this->client = $conn;
             $this->registerd = false;
 
             echo "New connection! ({$conn->resourceId})\n";
 
 
-        }else{
+        } else {
             $conn->send("Already a connection");
             $conn->close();
 
@@ -57,31 +60,29 @@ class Application implements  MessageComponentInterface {
      * @param ConnectionInterface $from
      * @param string $msg
      */
-    public function onMessage(ConnectionInterface $from, $msg) {
+    public function onMessage(ConnectionInterface $from, $msg)
+    {
         echo "Got Massage: {$msg} from: {$from->resourceId}\n";
 
-        try{
+        try {
 
             //init return array
             $result = array();
             array_push($result, json_decode('{"success":"true","err":""}'));
 
 
-
             //decode command json
             $commands = json_decode($msg, true);
-
 
 
             //Check JWT
             $jwt = $commands['jwt'];
 
-            $jwt = JWT::decode($jwt,$this->key, array("HS256"));
-
+            $jwt = JWT::decode($jwt, $this->key, array("HS256"));
 
 
             //handle registration and send ini string
-            if(isset($commands["ini"])){
+            if (isset($commands["ini"])) {
                 $from->send(json_encode($this->addLiveStatus($this->getIniString($jwt->data->userName))));
                 $this->registerd = true;
                 echo "Connection {$from->resourceId} registered, Ini-String sent\n";
@@ -89,10 +90,8 @@ class Application implements  MessageComponentInterface {
             }
 
 
-
-
             //check if user has registered
-            if($this->registerd) {
+            if ($this->registerd) {
 
 
                 /*
@@ -135,15 +134,15 @@ class Application implements  MessageComponentInterface {
                  */
                 if (isset($commands["av"])) {
                     $av = $commands['av'];
-                    if(isset($av['mode'])){
+                    if (isset($av['mode'])) {
                         $r = $this->av->setPreset($av['mode']);
                         $r->success ?: array_push($result, $r);
                     }
-                    if(isset($av['source'])){
+                    if (isset($av['source'])) {
                         $r = $this->av->changeSource();
                         $r->success ?: array_push($result, $r);
                     }
-                    if(isset($av['volume'])){
+                    if (isset($av['volume'])) {
                         //TODO implement Volume
                         $from->send("Volume not yet implemented");
                     }
@@ -158,7 +157,6 @@ class Application implements  MessageComponentInterface {
                 }
 
 
-
                 //check if an error was added to the return array
                 if (count($result) > 1) {
 
@@ -171,43 +169,42 @@ class Application implements  MessageComponentInterface {
                 }
 
 
-
-            }else{
+            } else {
                 //User has not registered
 
-                $from->send(json_encode($this->addLiveStatus(array("success"=>false, "err"=>"Not registered"))));
+                $from->send(json_encode($this->addLiveStatus(array("success" => false, "err" => "Not registered"))));
                 echo "{$from->resourceId} send a message but was not registered\n";
             }
 
 
-
-
-        }catch(ExpiredException $ex){
+        } catch (ExpiredException $ex) {
             //Session Expired send error message
 
-            $from->send(json_encode($this->addLiveStatus(array("success"=>false, "err"=>"Session Expired"))));
+            $from->send(json_encode($this->addLiveStatus(array("success" => false, "err" => "Session Expired"))));
             $from->close();
 
-            echo 'Session expired: '.$ex->getMessage()."\n";
+            echo 'Session expired: ' . $ex->getMessage() . "\n";
 
 
-        }catch (\Exception $ex){
+        } catch (\Exception $ex) {
             //Any error occurred
 
-            $from->send(json_encode($this->addLiveStatus(array("success"=>false, "err"=>"There was an Error"))));
-            echo 'There was an Error: '.$ex->getMessage().' '.$ex->getFile().' '.$ex->getLine()."\n";
+            $from->send(json_encode($this->addLiveStatus(array("success" => false, "err" => "There was an Error"))));
+            echo 'There was an Error: ' . $ex->getMessage() . ' ' . $ex->getFile() . ' ' . $ex->getLine() . "\n";
         }
 
     }
 
-    public function onClose(ConnectionInterface $conn) {
+    public function onClose(ConnectionInterface $conn)
+    {
         // The connection is closed, remove it, as we can no longer send it messages
         $this->client = null;
 
         echo "Connection {$conn->resourceId} has disconnected\n";
     }
 
-    public function onError(ConnectionInterface $conn, \Exception $e) {
+    public function onError(ConnectionInterface $conn, \Exception $e)
+    {
         echo "An error has occurred: {$e->getMessage()}\n";
 
         $conn->close();
@@ -228,27 +225,27 @@ class Application implements  MessageComponentInterface {
     private function sendDmx(array $dmx)
     {
         $result = array();
-        array_push($result,array("success"=>true,"err"=>""));
+        array_push($result, array("success" => true, "err" => ""));
 
 
-        if(isset($dmx["blackout"])){
-            foreach ($this->scheinwerfer as $dev){
+        if (isset($dmx["blackout"])) {
+            foreach ($this->scheinwerfer as $dev) {
                 $r = $dev->off();
 
-                if(!$r->success){
-                    array_push($result,$r);
+                if (!$r->success) {
+                    array_push($result, $r);
                 }
             }
 
             unset($dmx["blackout"]);
         }
 
-        if(isset($dmx["noblackout"])){
-            foreach ($this->scheinwerfer as $dev){
+        if (isset($dmx["noblackout"])) {
+            foreach ($this->scheinwerfer as $dev) {
                 $r = $dev->on();
 
-                if(!$r->success){
-                    array_push($result,$r);
+                if (!$r->success) {
+                    array_push($result, $r);
                 }
             }
 
@@ -256,19 +253,18 @@ class Application implements  MessageComponentInterface {
         }
 
 
+        foreach ($dmx as $dev) {
 
-        foreach($dmx as $dev){
-
-            if(is_array($dev)) {
+            if (is_array($dev)) {
                 $r = $this->scheinwerfer[$dev["id"]]->dimmen($dev["hue"]);
 
-                if(!$r->success){
-                    array_push($result,$r);
+                if (!$r->success) {
+                    array_push($result, $r);
                 }
             }
         }
 
-        if(count($result)>1){
+        if (count($result) > 1) {
             return $result[1];
         }
         return $result[0];
@@ -278,37 +274,36 @@ class Application implements  MessageComponentInterface {
      * @param $usr
      * @return array
      */
-    private function getIniString($usr){
+    private function getIniString($usr)
+    {
 
         /*
          * PRESETS:
          */
 
-            $sqlite = new \SQLite3("../sqlite/db.sqlite");
+        $sqlite = new \SQLite3("../sqlite/db.sqlite");
 
-            $stm = $sqlite->prepare('SELECT * FROM preset WHERE user_id = :id');
-            $stm->bindParam(':id', $usr);
+        $stm = $sqlite->prepare('SELECT * FROM preset WHERE user_id = :id');
+        $stm->bindParam(':id', $usr);
 
-            $result = $stm->execute();
+        $result = $stm->execute();
 
-            var_dump($result->numColumns());
-            //TODO: fix fetchedRows
-            //check if there was data in the database
-            if ($result->numColumns() > 3) {
-                $presets = array();
-                echo "Test";
-                while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
+        var_dump($result->numColumns());
+        //TODO: fix fetchedRows
+        //check if there was data in the database
+        if ($result->numColumns() > 3) {
+            $presets = array();
+            echo "Test";
+            while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
 
-                    array_push($presets, $res['json']);
-                }
-
-            } else {
-
-                $presets = $this->defaultPresets;
-
+                array_push($presets, $res['json']);
             }
 
+        } else {
 
+            $presets = $this->defaultPresets;
+
+        }
 
 
         /*
@@ -316,7 +311,7 @@ class Application implements  MessageComponentInterface {
          */
         $dmx = array();
 
-        foreach ($this->scheinwerfer as $key=>$dev){
+        foreach ($this->scheinwerfer as $key => $dev) {
 
 
             $dmx["scheinwerfer{$key}"] = array(
@@ -325,7 +320,6 @@ class Application implements  MessageComponentInterface {
             );
 
         }
-
 
 
         /*
@@ -345,20 +339,22 @@ class Application implements  MessageComponentInterface {
 
 
         return array("ini" => array(
-                "presets" => $presets,
-                "dmx" => $dmx,
-                "av" => $av
+            "presets" => $presets,
+            "dmx" => $dmx,
+            "av" => $av
         ));
     }
 
 
-    private function addLiveStatus($result){
+    private function addLiveStatus($result)
+    {
 
 
         return $result;
     }
 
-    private function iniMe(){
+    private function iniMe()
+    {
 
         try {
 
@@ -377,10 +373,10 @@ class Application implements  MessageComponentInterface {
              */
             $scheinwerfer = array();
 
-            foreach($ini["dmx"] as $entry){
+            foreach ($ini["dmx"] as $entry) {
 
-                if(isset($entry["rot"])){
-                    if(count($entry) == 4) {
+                if (isset($entry["rot"])) {
+                    if (count($entry) == 4) {
                         array_push($scheinwerfer,
                             new RGBWScheinwerfer(array(
                                     "r" => $entry["rot"] - 1,
@@ -390,7 +386,7 @@ class Application implements  MessageComponentInterface {
                                 )
                             )
                         );
-                    }else{
+                    } else {
                         array_push($scheinwerfer,
                             new RGBWScheinwerfer(array(
                                     "r" => $entry["rot"] - 1,
@@ -401,7 +397,7 @@ class Application implements  MessageComponentInterface {
                         );
                     }
 
-                }else {
+                } else {
 
                     array_push($scheinwerfer,
                         new Scheinwerfer(array(
@@ -419,19 +415,18 @@ class Application implements  MessageComponentInterface {
             /*
              * BEAMER:
              */
-            $this->beamer = new Beamer($ini['beamer']['source'],$ini['beamer']['power']);
+            $this->beamer = new Beamer($ini['beamer']['source'], $ini['beamer']['power']);
 
 
-            
             /*
              * AV:
              */
             $av = $ini['av'];
 
-            $this->av = new AV($av['sources'],$av['volume'],$av['presets'],$av['dbPerClick'],$av['maxVolume'],$av['minVolume']);
+            $this->av = new AV($av['sources'], $av['volume'], $av['presets'], $av['dbPerClick'], $av['maxVolume'], $av['minVolume']);
 
 
-        }catch (\Exception $ex){
+        } catch (\Exception $ex) {
             echo $ex->getMessage();
             throw new \Exception("Error open and parsing ini-Json");
         }
