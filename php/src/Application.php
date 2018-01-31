@@ -281,6 +281,8 @@ class Application implements MessageComponentInterface
          * PRESETS:
          */
 
+        $presets = array();
+
         $sqlite = new \SQLite3("../sqlite/db.sqlite");
 
         $stm = $sqlite->prepare('SELECT * FROM preset WHERE user_id = :id');
@@ -288,22 +290,15 @@ class Application implements MessageComponentInterface
 
         $result = $stm->execute();
 
-        var_dump($result->numColumns());
-        //TODO: fix fetchedRows
-        //check if there was data in the database
-        if ($result->numColumns() > 3) {
-            $presets = array();
-            echo "Test";
-            while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
+        $hasResults = false;
 
+            while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
+                $hasResults = true;
                 array_push($presets, $res['json']);
             }
 
-        } else {
+        $presets = $hasResults? $presets:$this->defaultPresets;
 
-            $presets = $this->defaultPresets;
-
-        }
 
 
         /*
