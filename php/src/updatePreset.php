@@ -2,11 +2,11 @@
 /**
  * Created by PhpStorm.
  * User: cleme
- * Date: 28.01.2018
- * Time: 18:51
+ * Date: 31.01.2018
+ * Time: 16:02
  */
 namespace Mediatrix;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-Preset::create($_POST['data'],$_POST['jwt']);
+Preset::update($_POST['data'],$_POST['id'],$_POST['jwt']);

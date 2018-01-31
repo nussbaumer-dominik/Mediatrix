@@ -9,10 +9,13 @@
 $sqlite = new \SQLite3("../sqlite/db.sqlite");
 
 $sqlite->exec('create table if not exists preset(
-	id INT AUTO_INCREMENT primary key,
+	id INTEGER primary key,
     json string not null,
     user_id string
 );');
+
+$sqlite->exec("INSERT INTO preset(json,user_id) VALUES ('{uhfgusgfiuzsgfussauidzfguodsf}','3827');");
+
 
 
 
