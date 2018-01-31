@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
-      <change beforePath="$PROJECT_DIR$/php/src/savePreset.php" afterPath="$PROJECT_DIR$/php/src/savePreset.php" />
+      <change beforePath="$PROJECT_DIR$/test_js/ws_test.html" afterPath="$PROJECT_DIR$/test_js/ws_test.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,7 +25,23 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db.sqlite" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db.sqlite" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db.sqlite" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FileEditorManager">
@@ -34,13 +49,48 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+            <state relative-caret-position="387">
+              <caret line="420" column="0" lean-forward="true" selection-start-line="420" selection-start-column="0" selection-end-line="420" selection-end-column="0" />
               <folding>
                 <element signature="e#6#87#0#PHP" expanded="true" />
                 <element signature="e#111#149#0#PHP" expanded="true" />
-                <marker date="1517303004278" expanded="true" signature="7637:7677" ph="SELECT * FRO... preset" />
+                <marker date="1517411687878" expanded="true" signature="7666:7706" ph="SELECT * FRO... preset" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deletePreset.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/src/deletePreset.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="11" column="43" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="11" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Preset.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/src/Preset.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="39" column="88" lean-forward="false" selection-start-line="39" selection-start-column="88" selection-end-line="39" selection-end-column="88" />
+              <folding>
+                <marker date="1517411397845" expanded="true" signature="390:445" ph="INSERT INTO preset... " />
+                <marker date="1517411397845" expanded="true" signature="815:882" ph="UPDATE preset... " />
+                <marker date="1517411397845" expanded="true" signature="1282:1337" ph="DELETE FROM preset... " />
+                <marker date="1517411397845" expanded="true" signature="1293:1337" ph="INSERT INTO preset... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db.sqlite" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sqlite/db.sqlite">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -48,18 +98,8 @@
       <file leaf-file-name="AV.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/AV.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-72">
+            <state relative-caret-position="468">
               <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Beamer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="65" column="5" lean-forward="true" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -68,8 +108,8 @@
       <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+            <state relative-caret-position="306">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <marker date="1517165780598" expanded="true" signature="180:200" ph="SELECT * FRO... preset" />
                 <marker date="1517165780598" expanded="true" signature="180:202" ph="SELECT * FRO... preset" />
@@ -78,33 +118,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="savePreset.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="savePreset.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/savePreset.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-              <folding>
-                <marker date="1517303004294" expanded="true" signature="449:504" ph="INSERT INTO preset... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ws_test.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_js/ws_test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="108">
+              <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/src/Login.php">
+      <file leaf-file-name="ws_test.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test_js/ws_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="32" column="58" lean-forward="false" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+            <state relative-caret-position="216">
+              <caret line="12" column="57" lean-forward="false" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updatePreset.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/src/updatePreset.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -113,34 +151,12 @@
       <file leaf-file-name="createDB.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="46" />
+            <state relative-caret-position="144">
+              <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
               <folding>
-                <marker date="1516959607274" expanded="true" signature="152:269" ph="create table... if" />
+                <marker date="1517307525347" expanded="true" signature="152:258" ph="create table... if" />
+                <marker date="1517307525347" expanded="true" signature="279:361" ph="INSERT INTO preset... " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Mediatrix.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="64" column="7" lean-forward="false" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="342">
-                <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-                <folding />
-              </first_editor>
-              <second_editor />
             </state>
           </provider>
         </entry>
@@ -191,7 +207,6 @@
         <option value="$PROJECT_DIR$/php/src/Mediatrix.json" />
         <option value="$PROJECT_DIR$/cpp/test.cpp" />
         <option value="$PROJECT_DIR$/php/src/Login.php" />
-        <option value="$PROJECT_DIR$/php/src/createDB.php" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/php/src/Beamer.php" />
         <option value="$PROJECT_DIR$/cpp/IR/IR.cpp" />
@@ -199,11 +214,16 @@
         <option value="$PROJECT_DIR$/php/src/RGBWScheinwerfer.php" />
         <option value="$PROJECT_DIR$/php/src/Scheinwerfer.php" />
         <option value="$PROJECT_DIR$/php/test.php" />
-        <option value="$PROJECT_DIR$/test_js/ws_test.html" />
-        <option value="$PROJECT_DIR$/php/src/AV.php" />
         <option value="$PROJECT_DIR$/conf/Mediatrix.json" />
-        <option value="$PROJECT_DIR$/php/src/Application.php" />
+        <option value="$PROJECT_DIR$/php/src/createDB.php" />
+        <option value="$PROJECT_DIR$/php/src/AV.php" />
+        <option value="$PROJECT_DIR$/php/src/deletePreset.php" />
         <option value="$PROJECT_DIR$/php/src/savePreset.php" />
+        <option value="$PROJECT_DIR$/php/src/updatePreset.php" />
+        <option value="$PROJECT_DIR$/php/src/Preset.php" />
+        <option value="$PROJECT_DIR$/sqlite/db.sqlite" />
+        <option value="$PROJECT_DIR$/php/src/Application.php" />
+        <option value="$PROJECT_DIR$/test_js/ws_test.html" />
       </list>
     </option>
   </component>
@@ -265,8 +285,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -308,9 +328,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Daten/Schule/HTL/5bi/SEW/git/server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/php/src" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Sqlite (Xerial)" />
   </component>
@@ -377,28 +397,8 @@
       <workItem from="1516899543436" duration="3580000" />
       <workItem from="1517039735177" duration="757000" />
       <workItem from="1517220009512" duration="2578000" />
-      <workItem from="1517250410762" duration="5886000" />
-    </task>
-    <task id="LOCAL-00177" summary="add on and off to RGBScheinwerfer">
-      <created>1517138143190</created>
-      <option name="number" value="00177" />
-      <option name="presentableId" value="LOCAL-00177" />
-      <option name="project" value="LOCAL" />
-      <updated>1517138143190</updated>
-    </task>
-    <task id="LOCAL-00178" summary="fix unset of blackout">
-      <created>1517138441047</created>
-      <option name="number" value="00178" />
-      <option name="presentableId" value="LOCAL-00178" />
-      <option name="project" value="LOCAL" />
-      <updated>1517138441047</updated>
-    </task>
-    <task id="LOCAL-00179" summary="debug iniString">
-      <created>1517138860182</created>
-      <option name="number" value="00179" />
-      <option name="presentableId" value="LOCAL-00179" />
-      <option name="project" value="LOCAL" />
-      <updated>1517138860182</updated>
+      <workItem from="1517250410762" duration="16161000" />
+      <workItem from="1517409296539" duration="2990000" />
     </task>
     <task id="LOCAL-00180" summary="debug iniString">
       <created>1517139243881</created>
@@ -722,25 +722,70 @@
       <option name="project" value="LOCAL" />
       <updated>1517263016342</updated>
     </task>
-    <option name="localTasksCounter" value="226" />
-    <servers />
+    <task id="LOCAL-00226" summary="debug savePreset">
+      <created>1517303024728</created>
+      <option name="number" value="00226" />
+      <option name="presentableId" value="LOCAL-00226" />
+      <option name="project" value="LOCAL" />
+      <updated>1517303024728</updated>
+    </task>
+    <task id="LOCAL-00227" summary="Preset update, create, delete">
+      <created>1517411708238</created>
+      <option name="number" value="00227" />
+      <option name="presentableId" value="LOCAL-00227" />
+      <option name="project" value="LOCAL" />
+      <updated>1517411708238</updated>
+    </task>
+    <task id="LOCAL-00228" summary="Preset update, create, delete">
+      <created>1517411813147</created>
+      <option name="number" value="00228" />
+      <option name="presentableId" value="LOCAL-00228" />
+      <option name="project" value="LOCAL" />
+      <updated>1517411813147</updated>
+    </task>
+    <option name="localTasksCounter" value="229" />
+    <servers>
+      <Trello shared="false">
+        <commitMessageFormat>{id} {summary}</commitMessageFormat>
+        <option name="currentBoard">
+          <TrelloBoard id="5a6e195e5723b3bc1193b491" name="Mediatrix" />
+        </option>
+        <option name="currentList">
+          <TrelloList id="5a6e197d185986c6f39b3640" name="In Arbeit" />
+        </option>
+        <option name="currentUser">
+          <TrelloUser id="585797abf25349a4d29486b1" name="clemensscharwitzl" />
+        </option>
+        <password>df9edf92df99dfc8df93df9ddfc9df98dfc8df9adf93df99df9ddf92df92dfcbdf92df9ddfcfdf9cdfcfdfc9dfcedfc9dfc9df99dfc8dfcedf93dfc8df9bdf98df9adfcbdfccdfc9df9fdf9ddf9adf93dfc9df93df9edfc8df9ddf9cdf93dfccdf99df92dfccdf9fdf98df99df98dfcedf9ddf92dfcfdfcedf9edfcedf9bdfcb</password>
+        <option name="includeAllCards" value="true" />
+        <option name="loginAnonymously" value="false" />
+        <option name="preferredCloseTaskState" />
+        <option name="preferredOpenTaskState" />
+        <option name="shouldFormatCommitMessage" value="false" />
+        <option name="url" value="https://api.trello.com" />
+        <option name="useHttpAuthentication" value="false" />
+        <option name="useProxy" value="false" />
+        <username />
+      </Trello>
+    </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165220000" />
+    <option name="totallyTimeSpent" value="178485000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33226222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19794345" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38172042" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969153" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38172042" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3008658" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2997312" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -787,7 +832,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix typo in select" />
     <MESSAGE value="refactor code and add comments" />
     <MESSAGE value="add blackout and no blackout dmx" />
     <MESSAGE value="add string replace in on and off Scheinwerfer php" />
@@ -804,7 +848,6 @@
     <MESSAGE value="add save Button to testjs" />
     <MESSAGE value="change testjs" />
     <MESSAGE value="change ws url" />
-    <MESSAGE value="debug savePreset" />
     <MESSAGE value="write AV class" />
     <MESSAGE value="add ini AV" />
     <MESSAGE value="debug AV command" />
@@ -812,24 +855,15 @@
     <MESSAGE value="add max and min Volume to iniString" />
     <MESSAGE value="debug AV constructor" />
     <MESSAGE value="change ini File" />
-    <option name="LAST_COMMIT_MESSAGE" value="change ini File" />
+    <MESSAGE value="debug savePreset" />
+    <MESSAGE value="Preset update, create, delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Preset update, create, delete" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/composer.json" />
-    <entry file="file://$PROJECT_DIR$/composer.lock" />
-    <entry file="file://$PROJECT_DIR$/showcase_Alternative.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/Mediatrix.json" />
-    <entry file="file://$PROJECT_DIR$/conf/Mediatrix.conf" />
     <entry file="file://$PROJECT_DIR$/cpp/test.origin">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1013,13 +1047,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sqlite/db.sqlite">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
@@ -1071,48 +1098,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding>
-            <marker date="1517165780598" expanded="true" signature="180:200" ph="SELECT * FRO... preset" />
-            <marker date="1517165780598" expanded="true" signature="180:202" ph="SELECT * FRO... preset" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_js/ws_test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="46" />
-          <folding>
-            <marker date="1516959607274" expanded="true" signature="152:269" ph="create table... if" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="65" column="5" lean-forward="true" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="32" column="58" lean-forward="false" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1121,7 +1110,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="342">
             <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1131,37 +1119,123 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="64" column="7" lean-forward="false" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="65" column="5" lean-forward="false" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/73319bdd/31cde055-055e-4556-987d-3b7b365f4ab3/main.preset">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/31cde055-055e-4556-987d-3b7b365f4ab3/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <marker date="1517165780598" expanded="true" signature="180:200" ph="SELECT * FRO... preset" />
+            <marker date="1517165780598" expanded="true" signature="180:202" ph="SELECT * FRO... preset" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/AV.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
+        <state relative-caret-position="468">
           <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
+    <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+        <state relative-caret-position="144">
+          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
           <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
-            <element signature="e#111#149#0#PHP" expanded="true" />
-            <marker date="1517303004278" expanded="true" signature="7637:7677" ph="SELECT * FRO... preset" />
+            <marker date="1517307525347" expanded="true" signature="152:258" ph="create table... if" />
+            <marker date="1517307525347" expanded="true" signature="279:361" ph="INSERT INTO preset... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/savePreset.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+        <state relative-caret-position="108">
+          <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/deletePreset.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="11" column="43" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="11" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Preset.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="39" column="88" lean-forward="false" selection-start-line="39" selection-start-column="88" selection-end-line="39" selection-end-column="88" />
           <folding>
-            <marker date="1517303004294" expanded="true" signature="449:504" ph="INSERT INTO preset... " />
+            <marker date="1517411397845" expanded="true" signature="390:445" ph="INSERT INTO preset... " />
+            <marker date="1517411397845" expanded="true" signature="815:882" ph="UPDATE preset... " />
+            <marker date="1517411397845" expanded="true" signature="1282:1337" ph="DELETE FROM preset... " />
+            <marker date="1517411397845" expanded="true" signature="1293:1337" ph="INSERT INTO preset... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqlite/db.sqlite">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/updatePreset.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="420" column="0" lean-forward="true" selection-start-line="420" selection-start-column="0" selection-end-line="420" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+            <element signature="e#111#149#0#PHP" expanded="true" />
+            <marker date="1517411687878" expanded="true" signature="7666:7706" ph="SELECT * FRO... preset" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_js/ws_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="57" lean-forward="false" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
