@@ -29,7 +29,7 @@ class AV
      */
     function __construct(array $source, array $volumeCodes, array $presets, int $volumeSteps, int $maxVolume, int $minVolume)
     {
-        var_dump($source);
+
 
         foreach ($source as $k => $s){
             var_dump($k);
@@ -41,11 +41,13 @@ class AV
 
         $this->sources = $source;
 
+
         foreach ($volumeCodes as $k => $s){
             $volumeCodes[$k]['lastSendA'] = false;
         }
 
         $this->volumeCodes = $volumeCodes;
+
 
         foreach ($presets as $k => $s){
             $presets[$k]['lastSendA'] = false;
@@ -53,11 +55,21 @@ class AV
 
         $this->presets = $presets;
 
+
         $this->volumeSteps = $volumeSteps;
 
         $this->maxVolume = $maxVolume;
 
         $this->minVolume = $minVolume;
+
+
+        //set Volume Level to min Vaule ad then to half
+        $this->volumeLevel = $maxVolume;
+
+        $this->setVolumeLevel($minVolume);
+
+        $this->setVolumeLevel($minVolume + ($maxVolume-$minVolume)/2);
+
 
 
         $this->ir = new \IR();
@@ -103,7 +115,7 @@ class AV
         $r = json_decode(str_replace("'",'"',$this->ir->send($code,5*abs($timesSent))));
 
 
-        $this->volumeLevel += $timesSent;
+        $this->volumeLevel += $timesSent  * $this->volumeSteps;
 
         return $r;
     }

@@ -143,8 +143,8 @@ class Application implements MessageComponentInterface
                         $r->success ?: array_push($result, $r);
                     }
                     if (isset($av['volume'])) {
-                        //TODO implement Volume
-                        $from->send("Volume not yet implemented");
+                        $r = $this->av->setVolumeLevel($av['volume']);
+                        $r->success ?: array_push($result, $r);
                     }
                 }
 
