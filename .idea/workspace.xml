@@ -49,12 +49,12 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1008">
-              <caret line="274" column="95" lean-forward="false" selection-start-line="274" selection-start-column="95" selection-end-line="274" selection-end-column="95" />
+            <state relative-caret-position="252">
+              <caret line="186" column="101" lean-forward="false" selection-start-line="186" selection-start-column="101" selection-end-line="186" selection-end-column="101" />
               <folding>
                 <element signature="e#6#87#0#PHP" expanded="true" />
                 <element signature="e#111#149#0#PHP" expanded="true" />
-                <marker date="1517509207819" expanded="true" signature="8446:8486" ph="SELECT * FRO... preset" />
+                <marker date="1517510325071" expanded="true" signature="8578:8618" ph="SELECT * FRO... preset" />
               </folding>
             </state>
           </provider>
@@ -343,14 +343,7 @@
       <workItem from="1517220009512" duration="2578000" />
       <workItem from="1517250410762" duration="16161000" />
       <workItem from="1517409296539" duration="4344000" />
-      <workItem from="1517468874149" duration="10509000" />
-    </task>
-    <task id="LOCAL-00195" summary="add test.php">
-      <created>1517165628691</created>
-      <option name="number" value="00195" />
-      <option name="presentableId" value="LOCAL-00195" />
-      <option name="project" value="LOCAL" />
-      <updated>1517165628691</updated>
+      <workItem from="1517468874149" duration="11175000" />
     </task>
     <task id="LOCAL-00196" summary="add test.php">
       <created>1517165729789</created>
@@ -688,7 +681,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517507556707</updated>
     </task>
-    <option name="localTasksCounter" value="244" />
+    <task id="LOCAL-00244" summary="add regex">
+      <created>1517509564352</created>
+      <option name="number" value="00244" />
+      <option name="presentableId" value="LOCAL-00244" />
+      <option name="project" value="LOCAL" />
+      <updated>1517509564352</updated>
+    </task>
+    <option name="localTasksCounter" value="245" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -715,7 +715,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190348000" />
+    <option name="totallyTimeSpent" value="191014000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -777,7 +777,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reformat and comment" />
     <MESSAGE value="debug Scheinwerfer" />
     <MESSAGE value="debug iniString" />
     <MESSAGE value="add test.php" />
@@ -802,7 +801,8 @@
     <MESSAGE value="debugs setVolume AV php" />
     <MESSAGE value="implement live status" />
     <MESSAGE value="add regex jwt" />
-    <option name="LAST_COMMIT_MESSAGE" value="add regex jwt" />
+    <MESSAGE value="add regex" />
+    <option name="LAST_COMMIT_MESSAGE" value="add regex" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1160,12 +1160,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="274" column="95" lean-forward="false" selection-start-line="274" selection-start-column="95" selection-end-line="274" selection-end-column="95" />
+        <state relative-caret-position="252">
+          <caret line="186" column="101" lean-forward="false" selection-start-line="186" selection-start-column="101" selection-end-line="186" selection-end-column="101" />
           <folding>
             <element signature="e#6#87#0#PHP" expanded="true" />
             <element signature="e#111#149#0#PHP" expanded="true" />
-            <marker date="1517509207819" expanded="true" signature="8446:8486" ph="SELECT * FRO... preset" />
+            <marker date="1517510325071" expanded="true" signature="8578:8618" ph="SELECT * FRO... preset" />
           </folding>
         </state>
       </provider>

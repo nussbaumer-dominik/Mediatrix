@@ -182,6 +182,10 @@ class Application implements MessageComponentInterface
                     foreach ($result as $r) {
                         $from->send(json_encode($this->addLiveStatus($r)));
                     }
+                }else{
+
+                    $from->send(json_encode($this->addLiveStatus(array('success' => true, 'err' => ''))));
+
                 }
 
 
