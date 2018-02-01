@@ -10,10 +10,6 @@
 
         <!-- jQuery -->
         <script src="js/jquery-3.2.1.min.js"></script>
-        <script
-        src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
-        integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
-        crossorigin="anonymous"></script>
 
         <!-- Stylesheets -->
         <link rel="stylesheet" href="css/material.css">
@@ -21,6 +17,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link rel="stylesheet" href="css/dashboard.css">
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
         <!-- Favicon -->
         <link rel="shortcut icon" href="images/Mediatrix_Hut_rot.png" type="image/x-icon">
@@ -30,10 +29,11 @@
       <div class="parent" id="app">
           <div class="side-nav">
               <ul>
-                  <li><a href="#" id="camera"><i class="fa fa-video-camera" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-volume-up" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-desktop" aria-hidden="true"></i></a></li>
+                  <li><a href="#" id="camera"><i class="fa fa-video-camera boxButtons" data-boxbtn="1" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-volume-up boxButtons" data-boxbtn="2" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-microphone boxButtons" data-boxbtn="3" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-lightbulb-o boxButtons" data-boxbtn="4" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-desktop boxButtons" data-boxbtn="5" aria-hidden="true"></i></a></li>
               </ul>
 
               <div class="avatar">
@@ -48,37 +48,12 @@
                       <div>Mikro 1:</div>
                       <div>Mikro 2:</div>
                       <div>Helligkeit: </div>
-                      <div>mega</div>
+                      <div>Hager: </div>
                   </div>
               </div>
 
               <div class="flex-container">
-                  <div class="box" id="avbox">
-                    <h1>AV-Receiver</h1>
-                    <div class="wrapper" >
-                      <input type="range" v-model="p1" min="0" max="100" value="0" class="slider" id="av-slider" data-id="0">
-                      <p class="p1">{{p1}}</p>
-                      <p class="av-slider-text">Master</p>
-                      <!--
-                      <span class="slider">0</span>
-                      <span class="slider">0</span>
-                      <span class="slider">0</span>
-                      -->
-
-
-                      <div class="buttons">
-                        <ul>
-                            <li class="mode">Präsentation</li>
-                            <li class="mode">Musik</li>
-                            <li class="mode">Film</li>
-                            <li class="mode">Universal</li>
-                        </ul>
-                      </div>
-
-                    </div>
-
-                  </div>
-                  <div class="box" id="beamerbox">
+                  <div class="box" id="beamerBox" data-box="1">
                     <h1>Beamer</h1>
                     <nav class="menu">
                         <input type="checkbox" href="#" class="menu-open" id="power"/>
@@ -99,7 +74,32 @@
                         <a href="#" class="menu-item clickable" id="ok"> OK </a>
                     </nav>
                   </div>
-                  <div class="box" id="mikrofonbox">
+                  <div class="box" id="avBox" data-box="2">
+                      <h1>AV-Receiver</h1>
+                      <div class="wrapper" >
+                          <input type="range" v-model="p1" min="0" max="100" value="0" class="slider" id="av-slider" data-id="0">
+                          <p class="p1">{{p1}}</p>
+                          <p class="av-slider-text">Master</p>
+                          <!--
+                          <span class="slider">0</span>
+                          <span class="slider">0</span>
+                          <span class="slider">0</span>
+                          -->
+
+
+                          <div class="buttons">
+                              <ul>
+                                  <li class="mode">Präsentation</li>
+                                  <li class="mode">Musik</li>
+                                  <li class="mode">Film</li>
+                                  <li class="mode">Universal</li>
+                              </ul>
+                          </div>
+
+                      </div>
+
+                  </div>
+                  <div class="box" id="mikrofonBox" data-box="3">
                     <h1>Mikrofone</h1>
                     <div class="wrapper">
                       <input type="range" v-model="p2" min="0" max="100" value="0" class="slider" id="mikro1-slider" data-id="0">
@@ -108,7 +108,7 @@
                       <p class="p3">{{p3}}</p>
                     </div>
                   </div>
-                  <div class="box" id="lichtbox">
+                  <div class="box" id="lichtBox" data-box="4">
                     <h1>Licht</h1>
                     <div class="wrapper">
                       <input type="range" v-model="p4" min="0" max="255" value="0" class="slider lightSlider" id="licht1-slider" data-id="1">
@@ -122,7 +122,8 @@
           <span style="display: none;" class="btn" data-toggle="snackbar" data-content="message" data-timeout=0>Snackbar</span>
       </div>
       <script src="js/snackbar.js"></script>
-      <script src="js/main.js"></script>
+      <script src="js/functions.js"></script>
+      <!--<script src="js/main.js"></script>-->
       <script src="https://unpkg.com/vue@2.5.9/dist/vue.js"></script>
       <script src="js/vue_app.js"></script>
       <script>
@@ -160,16 +161,6 @@
             }
           });
         })*/
-      </script>
-
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54135273-3"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-54135273-3');
       </script>
     </body>
 </html>

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
+// Variablen
 $color: #1E283D;
 $main: #EF4C4F;
 $bg: #F5F6FA;
@@ -83,7 +82,6 @@ a{
     list-style-type: none;
 
     li{
-
       margin: 1rem 0;
 
       a{
@@ -121,7 +119,9 @@ a{
   height: 100%;
   width: 100%;
   overflow-y: hidden;
-  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .flex-container{
@@ -130,14 +130,14 @@ a{
   box-sizing: border-box;
   padding: 0 20px 0 20px;
   display: flex;
+  overflow-x: scroll;
   justify-content: flex-start;
   align-items: center;
 }
 
 .statusbox{
-    width: calc(100% - 120px);
-    height: 0;
-    position: fixed;
+    width: 100%;
+    //width: calc(100% - 120px);
 
     .statusgrid{
         display: grid;
@@ -150,7 +150,7 @@ a{
             background: white;
             border-radius: 10px;
             border: 4px solid $color;
-            padding: 50px;
+            padding: 50px 15px;
         }
     }
 }
@@ -159,6 +159,7 @@ a{
   flex: 0 0 500px;
   height: 600px;
   width: 500px;
+  display: none;
   box-sizing: border-box;
   background: white;
   border: 4px solid $color;
@@ -351,7 +352,7 @@ button{
 }
 
 .visible{
-  display: flex;
+  display: block;
 }
 
 /* Menu */
@@ -368,13 +369,13 @@ button{
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
-  -webkit-transition: -webkit-transform ease-out 200ms;
-  -moz-transition: -webkit-transform ease-out 200ms;
-  transition: -webkit-transform ease-out 200ms;
+  -webkit-transition: -webkit-transform ease 200ms;
+  -moz-transition: -webkit-transform ease 200ms;
+  transition: -webkit-transform ease 200ms;
   transition: background .2s;
   transition: color .2s;
-  transition: transform ease-out 200ms;
-  transition: transform ease-out 200ms, -webkit-transform ease-out 200ms, -moz-transform ease-out 200ms;
+  transition: transform ease 200ms;
+  transition: transform ease 200ms, -webkit-transform ease 200ms, -moz-transform ease 200ms;
 }
 
 #ok{
@@ -497,9 +498,9 @@ button{
 }
 
 .menu-open:checked + .menu-open-button {
-  -webkit-transition-timing-function: linear;
-  -moz-transition-timing-function: linear;
-      transition-timing-function: linear;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+      transition-timing-function: ease;
   -webkit-transition-duration: 200ms;
   -moz-transition-duration: 200ms;
       transition-duration: 200ms;
@@ -628,8 +629,6 @@ button{
     justify-content: center;
     align-items: center;
   }
-
-
 
   form{
     height: 100%;
