@@ -93,7 +93,7 @@ class AV
     {
 
 
-        $times = ($this->volumeLevel - $volumeLevel) % $this->volumeSteps;
+        $times = (($this->volumeLevel - $volumeLevel) * 1.0) % $this->volumeSteps;
 
         if($times < 0 ){
 
@@ -113,7 +113,14 @@ class AV
 
         $timesSent = intval($times);
 
-        var_dump($this->maxVolume, $volumeLevel, $times);
+        echo "\nmax: ";
+        var_dump($this->maxVolume);
+
+        echo "\nLevl: ";
+        var_dump($volumeLevel);
+
+        echo "\nTimes: ";
+        var_dump($times);
 
         //send IR code
         $r = json_decode(str_replace("'",'"',$this->ir->send($code,5*abs($timesSent))));
