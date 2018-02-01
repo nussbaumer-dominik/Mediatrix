@@ -105,7 +105,7 @@ class AV
             //get Code
             $code = $this->volumeCodes['up']['lastSendA'] ? $this->volumeCodes['up']['b']:$this->volumeCodes['up']['a'];
 
-            $this->$this->volumeCodes['up']['lastSendA'] = !$this->$this->volumeCodes['up']['lastSendA'];
+            $this->volumeCodes['up']['lastSendA'] = !$this->volumeCodes['up']['lastSendA'];
 
         }
 
