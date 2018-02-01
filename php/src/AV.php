@@ -122,6 +122,9 @@ class AV
         echo "\nTimes: ";
         var_dump($times);
 
+        echo "\nTimes: ";
+        var_dump($timesSent);
+
         //send IR code
         $r = json_decode(str_replace("'",'"',$this->ir->send($code,5*abs($timesSent))));
 
