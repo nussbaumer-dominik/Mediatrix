@@ -113,18 +113,6 @@ class AV
 
         $timesSent = intval($times);
 
-        echo "\nActuall: ";
-        var_dump($this->volumeLevel);
-
-        echo "\nLevl: ";
-        var_dump($volumeLevel);
-
-        echo "\nTimes: ";
-        var_dump($times);
-
-        echo "\nTimes: ";
-        var_dump($timesSent);
-
         //send IR code
         $r = json_decode(str_replace("'",'"',$this->ir->send($code,5*abs($timesSent))));
 

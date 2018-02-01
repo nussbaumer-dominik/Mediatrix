@@ -14,8 +14,6 @@ $sqlite->exec('create table if not exists preset(
     user_id string
 );');
 
-$sqlite->exec("INSERT INTO preset(json,user_id) VALUES ('{uhfgusgfiuzsgfussauidzfguodsf}','3827');");
-
 
 
 
