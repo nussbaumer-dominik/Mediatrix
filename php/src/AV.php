@@ -113,6 +113,8 @@ class AV
 
         $timesSent = intval($times);
 
+        var_dump($this->maxVolume, $volumeLevel, $times);
+
         //send IR code
         $r = json_decode(str_replace("'",'"',$this->ir->send($code,5*abs($timesSent))));
 

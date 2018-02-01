@@ -63,8 +63,8 @@
       <file leaf-file-name="AV.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/AV.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="32" column="30" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+            <state relative-caret-position="158">
+              <caret line="115" column="57" lean-forward="false" selection-start-line="115" selection-start-column="57" selection-end-line="115" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -308,14 +308,7 @@
       <workItem from="1517220009512" duration="2578000" />
       <workItem from="1517250410762" duration="16161000" />
       <workItem from="1517409296539" duration="4344000" />
-      <workItem from="1517468874149" duration="1920000" />
-    </task>
-    <task id="LOCAL-00184" summary="debug iniString">
-      <created>1517142431096</created>
-      <option name="number" value="00184" />
-      <option name="presentableId" value="LOCAL-00184" />
-      <option name="project" value="LOCAL" />
-      <updated>1517142431096</updated>
+      <workItem from="1517468874149" duration="2438000" />
     </task>
     <task id="LOCAL-00185" summary="debug iniString">
       <created>1517142502047</created>
@@ -653,7 +646,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517476234642</updated>
     </task>
-    <option name="localTasksCounter" value="233" />
+    <task id="LOCAL-00233" summary="change position of IR ini AV php">
+      <created>1517476513699</created>
+      <option name="number" value="00233" />
+      <option name="presentableId" value="LOCAL-00233" />
+      <option name="project" value="LOCAL" />
+      <updated>1517476513699</updated>
+    </task>
+    <option name="localTasksCounter" value="234" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -680,7 +680,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181759000" />
+    <option name="totallyTimeSpent" value="182277000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -742,8 +742,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reformat Scheinwerfer" />
-    <MESSAGE value="add resgistration to testjs" />
     <MESSAGE value="add on and off to RGBScheinwerfer" />
     <MESSAGE value="fix unset of blackout" />
     <MESSAGE value="reformat and comment" />
@@ -767,7 +765,9 @@
     <MESSAGE value="change ws test address" />
     <MESSAGE value="AV php" />
     <MESSAGE value="fix spelling mistake Av php" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix spelling mistake Av php" />
+    <MESSAGE value="change position of IR ini AV php" />
+    <MESSAGE value="debugs setVolume AV php" />
+    <option name="LAST_COMMIT_MESSAGE" value="debugs setVolume AV php" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1124,8 +1124,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/AV.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="32" column="30" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+        <state relative-caret-position="158">
+          <caret line="115" column="57" lean-forward="false" selection-start-line="115" selection-start-column="57" selection-end-line="115" selection-end-column="57" />
           <folding />
         </state>
       </provider>
