@@ -192,4 +192,12 @@ class AV
     {
         return $this->minVolume;
     }
+
+    /**
+     * @return array
+     */
+    public function getSource(): string
+    {
+        return "test";
+    }
 }
