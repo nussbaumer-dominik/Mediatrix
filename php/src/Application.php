@@ -156,7 +156,7 @@ class Application implements MessageComponentInterface
                     }
                     if (isset($av['volume'])) {
 
-                        if(preg_match("-?[0-9]+",$av['volume']) && $this->av->getMinVolume() <= $av['volume'] && $av['volume'] <= $this->av->getMexVolume) {
+                        if(preg_match("/-?[0-9]+/",$av['volume']) && $this->av->getMinVolume() <= $av['volume'] && $av['volume'] <= $this->av->getMexVolume) {
 
                             $r = $this->av->setVolumeLevel($av['volume']);
                             $r->success ?: array_push($result, $r);
