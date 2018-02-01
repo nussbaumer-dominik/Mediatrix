@@ -100,7 +100,7 @@ class AV
             //get Code
             $code = $this->volumeCodes['down']['lastSendA'] ? $this->volumeCodes['down']['b']:$this->volumeCodes['down']['a'];
 
-            $this->$this->volumeCodes['down']['lastSendA'] = !$this->$this->volumeCodes['down']['lastSendA'];
+            $this->volumeCodes['down']['lastSendA'] = !$this->volumeCodes['down']['lastSendA'];
 
         }else{
 
@@ -127,7 +127,6 @@ class AV
 
         //send IR code
         $r = json_decode(str_replace("'",'"',$this->ir->send($code,5*abs($timesSent))));
-
 
         $this->volumeLevel += $timesSent  * $this->volumeSteps;
 
