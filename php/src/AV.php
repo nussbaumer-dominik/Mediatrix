@@ -30,6 +30,8 @@ class AV
     function __construct(array $source, array $volumeCodes, array $presets, int $volumeSteps, int $maxVolume, int $minVolume)
     {
 
+        $this->ir = new \IR();
+
 
         foreach ($source as $k => $s){
             var_dump($k);
@@ -72,7 +74,7 @@ class AV
 
 
 
-        $this->ir = new \IR();
+
     }
 
     /**
