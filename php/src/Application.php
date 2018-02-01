@@ -83,7 +83,8 @@ class Application implements MessageComponentInterface
                 $from->send(json_encode($this->addLiveStatus(array('success' => false, 'err' => 'no valid JWT passed'))));
 
             }
-                $jwt = JWT::decode($jwt, $this->key, array("HS256"));
+
+            $jwt = JWT::decode($jwt, $this->key, array("HS256"));
 
 
 
@@ -105,8 +106,10 @@ class Application implements MessageComponentInterface
                  */
                 if (isset($commands["dmx"])) {
 
-                    $r = $this->sendDmx($commands["dmx"]);
-                    $r['success'] ?: array_push($result, $r);
+                    if(preg_match('',$commands['dmx'])) {
+                        $r = $this->sendDmx($commands["dmx"]);
+                        $r['success'] ?: array_push($result, $r);
+                    }
                 }
 
 
@@ -141,16 +144,23 @@ class Application implements MessageComponentInterface
                 if (isset($commands["av"])) {
                     $av = $commands['av'];
                     if (isset($av['mode'])) {
-                        $r = $this->av->setPreset($av['mode']);
-                        $r->success ?: array_push($result, $r);
+
+                        if(preg_match('/^[a-zA-Z0-9]+$/',$av['mode'])) {
+                            $r = $this->av->setPreset($av['mode']);
+                            $r->success ?: array_push($result, $r);
+                        }
                     }
                     if (isset($av['source'])) {
                         $r = $this->av->changeSource();
                         $r->success ?: array_push($result, $r);
                     }
                     if (isset($av['volume'])) {
-                        $r = $this->av->setVolumeLevel($av['volume']);
-                        $r->success ?: array_push($result, $r);
+
+                        if(preg_match("-?[0-9]+",$av['volume']) && $this->av->getMinVolume() <= $av['volume'] && $av['volume'] <= $this->av->getMexVolume) {
+
+                            $r = $this->av->setVolumeLevel($av['volume']);
+                            $r->success ?: array_push($result, $r);
+                        }
                     }
                 }
 
@@ -262,10 +272,12 @@ class Application implements MessageComponentInterface
         foreach ($dmx as $dev) {
 
             if (is_array($dev)) {
-                $r = $this->scheinwerfer[$dev["id"]]->dimmen($dev["hue"]);
+                if(preg_match('/[0-9]+/',$dev['hue']) && 0 <= $dev['hue'] && $dev['hue'] <= 255) {
+                    $r = $this->scheinwerfer[$dev["id"]]->dimmen($dev["hue"]);
 
-                if (!$r->success) {
-                    array_push($result, $r);
+                    if (!$r->success) {
+                        array_push($result, $r);
+                    }
                 }
             }
         }

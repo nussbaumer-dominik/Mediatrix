@@ -49,12 +49,12 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="82" column="105" lean-forward="false" selection-start-line="82" selection-start-column="105" selection-end-line="82" selection-end-column="105" />
+            <state relative-caret-position="1008">
+              <caret line="274" column="95" lean-forward="false" selection-start-line="274" selection-start-column="95" selection-end-line="274" selection-end-column="95" />
               <folding>
                 <element signature="e#6#87#0#PHP" expanded="true" />
                 <element signature="e#111#149#0#PHP" expanded="true" />
-                <marker date="1517507538699" expanded="true" signature="7927:7967" ph="SELECT * FRO... preset" />
+                <marker date="1517509207819" expanded="true" signature="8446:8486" ph="SELECT * FRO... preset" />
               </folding>
             </state>
           </provider>
@@ -76,7 +76,7 @@
       <file leaf-file-name="AV.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/AV.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3271">
+            <state relative-caret-position="355">
               <caret line="200" column="22" lean-forward="false" selection-start-line="200" selection-start-column="22" selection-end-line="200" selection-end-column="22" />
               <folding />
             </state>
@@ -98,7 +98,7 @@
       <file leaf-file-name="Mediatrix.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
+            <state relative-caret-position="665">
               <caret line="64" column="7" lean-forward="false" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
               <folding />
             </state>
@@ -343,14 +343,7 @@
       <workItem from="1517220009512" duration="2578000" />
       <workItem from="1517250410762" duration="16161000" />
       <workItem from="1517409296539" duration="4344000" />
-      <workItem from="1517468874149" duration="8513000" />
-    </task>
-    <task id="LOCAL-00194" summary="debug iniString">
-      <created>1517165431363</created>
-      <option name="number" value="00194" />
-      <option name="presentableId" value="LOCAL-00194" />
-      <option name="project" value="LOCAL" />
-      <updated>1517165431363</updated>
+      <workItem from="1517468874149" duration="10509000" />
     </task>
     <task id="LOCAL-00195" summary="add test.php">
       <created>1517165628691</created>
@@ -688,7 +681,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517506502686</updated>
     </task>
-    <option name="localTasksCounter" value="243" />
+    <task id="LOCAL-00243" summary="add regex jwt">
+      <created>1517507556707</created>
+      <option name="number" value="00243" />
+      <option name="presentableId" value="LOCAL-00243" />
+      <option name="project" value="LOCAL" />
+      <updated>1517507556707</updated>
+    </task>
+    <option name="localTasksCounter" value="244" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -715,7 +715,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188352000" />
+    <option name="totallyTimeSpent" value="190348000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -777,7 +777,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix unset of blackout" />
     <MESSAGE value="reformat and comment" />
     <MESSAGE value="debug Scheinwerfer" />
     <MESSAGE value="debug iniString" />
@@ -802,7 +801,8 @@
     <MESSAGE value="change position of IR ini AV php" />
     <MESSAGE value="debugs setVolume AV php" />
     <MESSAGE value="implement live status" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement live status" />
+    <MESSAGE value="add regex jwt" />
+    <option name="LAST_COMMIT_MESSAGE" value="add regex jwt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1121,9 +1121,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="216">
+            <caret line="35" column="19" lean-forward="false" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="19" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
+        <state relative-caret-position="665">
           <caret line="64" column="7" lean-forward="false" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
           <folding />
         </state>
@@ -1139,20 +1150,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="216">
-            <caret line="35" column="19" lean-forward="false" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="19" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/AV.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3271">
+        <state relative-caret-position="355">
           <caret line="200" column="22" lean-forward="false" selection-start-line="200" selection-start-column="22" selection-end-line="200" selection-end-column="22" />
           <folding />
         </state>
@@ -1160,12 +1160,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="82" column="105" lean-forward="false" selection-start-line="82" selection-start-column="105" selection-end-line="82" selection-end-column="105" />
+        <state relative-caret-position="1008">
+          <caret line="274" column="95" lean-forward="false" selection-start-line="274" selection-start-column="95" selection-end-line="274" selection-end-column="95" />
           <folding>
             <element signature="e#6#87#0#PHP" expanded="true" />
             <element signature="e#111#149#0#PHP" expanded="true" />
-            <marker date="1517507538699" expanded="true" signature="7927:7967" ph="SELECT * FRO... preset" />
+            <marker date="1517509207819" expanded="true" signature="8446:8486" ph="SELECT * FRO... preset" />
           </folding>
         </state>
       </provider>
