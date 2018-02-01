@@ -93,7 +93,7 @@ class AV
     {
 
 
-        $times = (($this->volumeLevel - $volumeLevel) * 1.0) % $this->volumeSteps;
+        $times = (($this->volumeLevel - $volumeLevel) * 1.0) / $this->volumeSteps;
 
         if($times < 0 ){
 
