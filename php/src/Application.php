@@ -78,7 +78,13 @@ class Application implements MessageComponentInterface
             //Check JWT
             $jwt = $commands['jwt'];
 
-            $jwt = JWT::decode($jwt, $this->key, array("HS256"));
+            if(!preg_match('/^[a-zA-Z0-9\-_]+?\.[a-zA-Z0-9\-_]+?\.([a-zA-Z0-9\-_]+)?$/',$jwt)) {
+
+                $from->send(json_encode($this->addLiveStatus(array('success' => false, 'err' => 'no valid JWT passed'))));
+
+            }
+                $jwt = JWT::decode($jwt, $this->key, array("HS256"));
+
 
 
             //handle registration and send ini string

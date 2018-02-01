@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/AV.php" afterPath="$PROJECT_DIR$/php/src/AV.php" />
       <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,15 +46,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="349" column="50" lean-forward="false" selection-start-line="349" selection-start-column="50" selection-end-line="349" selection-end-column="50" />
+            <state relative-caret-position="180">
+              <caret line="82" column="105" lean-forward="false" selection-start-line="82" selection-start-column="105" selection-end-line="82" selection-end-column="105" />
               <folding>
                 <element signature="e#6#87#0#PHP" expanded="true" />
                 <element signature="e#111#149#0#PHP" expanded="true" />
-                <marker date="1517506478181" expanded="true" signature="7686:7726" ph="SELECT * FRO... preset" />
+                <marker date="1517507538699" expanded="true" signature="7927:7967" ph="SELECT * FRO... preset" />
               </folding>
             </state>
           </provider>
@@ -74,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AV.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AV.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/AV.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
+            <state relative-caret-position="3271">
               <caret line="200" column="22" lean-forward="false" selection-start-line="200" selection-start-column="22" selection-end-line="200" selection-end-column="22" />
               <folding />
             </state>
@@ -167,8 +166,8 @@
         <option value="$PROJECT_DIR$/sqlite/db.sqlite" />
         <option value="$PROJECT_DIR$/test_js/ws_test.html" />
         <option value="$PROJECT_DIR$/php/src/createDB.php" />
-        <option value="$PROJECT_DIR$/php/src/Application.php" />
         <option value="$PROJECT_DIR$/php/src/AV.php" />
+        <option value="$PROJECT_DIR$/php/src/Application.php" />
       </list>
     </option>
   </component>
@@ -344,14 +343,7 @@
       <workItem from="1517220009512" duration="2578000" />
       <workItem from="1517250410762" duration="16161000" />
       <workItem from="1517409296539" duration="4344000" />
-      <workItem from="1517468874149" duration="7461000" />
-    </task>
-    <task id="LOCAL-00193" summary="debug Scheinwerfer">
-      <created>1517156821213</created>
-      <option name="number" value="00193" />
-      <option name="presentableId" value="LOCAL-00193" />
-      <option name="project" value="LOCAL" />
-      <updated>1517156821213</updated>
+      <workItem from="1517468874149" duration="8513000" />
     </task>
     <task id="LOCAL-00194" summary="debug iniString">
       <created>1517165431363</created>
@@ -689,7 +681,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517504940510</updated>
     </task>
-    <option name="localTasksCounter" value="242" />
+    <task id="LOCAL-00242" summary="implement live status">
+      <created>1517506502686</created>
+      <option name="number" value="00242" />
+      <option name="presentableId" value="LOCAL-00242" />
+      <option name="project" value="LOCAL" />
+      <updated>1517506502686</updated>
+    </task>
+    <option name="localTasksCounter" value="243" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -716,7 +715,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187300000" />
+    <option name="totallyTimeSpent" value="188352000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -778,7 +777,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add on and off to RGBScheinwerfer" />
     <MESSAGE value="fix unset of blackout" />
     <MESSAGE value="reformat and comment" />
     <MESSAGE value="debug Scheinwerfer" />
@@ -803,7 +801,8 @@
     <MESSAGE value="fix spelling mistake Av php" />
     <MESSAGE value="change position of IR ini AV php" />
     <MESSAGE value="debugs setVolume AV php" />
-    <option name="LAST_COMMIT_MESSAGE" value="debugs setVolume AV php" />
+    <MESSAGE value="implement live status" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement live status" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1151,23 +1150,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
+    <entry file="file://$PROJECT_DIR$/php/src/AV.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="349" column="50" lean-forward="false" selection-start-line="349" selection-start-column="50" selection-end-line="349" selection-end-column="50" />
-          <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
-            <element signature="e#111#149#0#PHP" expanded="true" />
-            <marker date="1517506478181" expanded="true" signature="7686:7726" ph="SELECT * FRO... preset" />
-          </folding>
+        <state relative-caret-position="3271">
+          <caret line="200" column="22" lean-forward="false" selection-start-line="200" selection-start-column="22" selection-end-line="200" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/AV.php">
+    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="200" column="22" lean-forward="false" selection-start-line="200" selection-start-column="22" selection-end-line="200" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="180">
+          <caret line="82" column="105" lean-forward="false" selection-start-line="82" selection-start-column="105" selection-end-line="82" selection-end-column="105" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+            <element signature="e#111#149#0#PHP" expanded="true" />
+            <marker date="1517507538699" expanded="true" signature="7927:7967" ph="SELECT * FRO... preset" />
+          </folding>
         </state>
       </provider>
     </entry>
