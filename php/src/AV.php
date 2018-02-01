@@ -113,8 +113,8 @@ class AV
 
         $timesSent = intval($times);
 
-        echo "\nmax: ";
-        var_dump($this->maxVolume);
+        echo "\nActuall: ";
+        var_dump($this->volumeLevel);
 
         echo "\nLevl: ";
         var_dump($volumeLevel);
