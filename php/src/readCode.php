@@ -8,4 +8,10 @@
 
 echo "Reading IR-Code";
 
+$ir = new \IR();
+
+echo "Modes:\n";
+
+echo $ir->getModes();
+
 echo readline("Which Mode: ");

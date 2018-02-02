@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cpp/IR/IR.cpp" afterPath="$PROJECT_DIR$/cpp/IR/IR.cpp" />
+      <change beforePath="$PROJECT_DIR$/php/src/readCode.php" afterPath="$PROJECT_DIR$/php/src/readCode.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,20 +60,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readCode.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="readCode.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/readCode.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+            <state relative-caret-position="162">
+              <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IR.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IR.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="828">
               <caret line="118" column="44" lean-forward="false" selection-start-line="118" selection-start-column="44" selection-end-line="118" selection-end-column="44" />
               <folding />
             </state>
@@ -187,8 +187,8 @@
         <option value="$PROJECT_DIR$/php/src/createDB.php" />
         <option value="$PROJECT_DIR$/php/src/AV.php" />
         <option value="$PROJECT_DIR$/php/src/Application.php" />
-        <option value="$PROJECT_DIR$/php/src/readCode.php" />
         <option value="$PROJECT_DIR$/cpp/IR/IR.cpp" />
+        <option value="$PROJECT_DIR$/php/src/readCode.php" />
       </list>
     </option>
   </component>
@@ -375,14 +375,7 @@
       <workItem from="1517220009512" duration="2578000" />
       <workItem from="1517250410762" duration="16161000" />
       <workItem from="1517409296539" duration="4344000" />
-      <workItem from="1517468874149" duration="16668000" />
-    </task>
-    <task id="LOCAL-00208" summary="debug savePreset">
-      <created>1517167613577</created>
-      <option name="number" value="00208" />
-      <option name="presentableId" value="LOCAL-00208" />
-      <option name="project" value="LOCAL" />
-      <updated>1517167613577</updated>
+      <workItem from="1517468874149" duration="17103000" />
     </task>
     <task id="LOCAL-00209" summary="debug savePreset">
       <created>1517167741482</created>
@@ -720,7 +713,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517562343056</updated>
     </task>
-    <option name="localTasksCounter" value="257" />
+    <task id="LOCAL-00257" summary="debug IR cpp">
+      <created>1517562411426</created>
+      <option name="number" value="00257" />
+      <option name="presentableId" value="LOCAL-00257" />
+      <option name="project" value="LOCAL" />
+      <updated>1517562411441</updated>
+    </task>
+    <option name="localTasksCounter" value="258" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -747,7 +747,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196507000" />
+    <option name="totallyTimeSpent" value="196942000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1188,18 +1188,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/readCode.php">
+    <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        <state relative-caret-position="828">
+          <caret line="118" column="44" lean-forward="false" selection-start-line="118" selection-start-column="44" selection-end-line="118" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
+    <entry file="file://$PROJECT_DIR$/php/src/readCode.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="118" column="44" lean-forward="false" selection-start-line="118" selection-start-column="44" selection-end-line="118" selection-end-column="44" />
+        <state relative-caret-position="162">
+          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding />
         </state>
       </provider>
