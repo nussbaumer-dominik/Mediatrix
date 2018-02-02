@@ -74,7 +74,7 @@ class IR : public Php::Base {
         Php::out << "v:" << endl;
 
         //send code to IR-Device
-        serialPrintf(fd,("v:").c_str());
+        serialPrintf(fd,"v:");
         delay(20);
 
         while (serialDataAvail (fd))
@@ -116,7 +116,7 @@ extern "C" {
             Php::ByVal("mode", Php::Type::Numeric)
         });
 
-        ir.method<&IR::getMode> ("getMode")
+        ir.method<&IR::getMode> ("getMode");
 
         // add the class to the extension
         extension.add(std::move(ir));
