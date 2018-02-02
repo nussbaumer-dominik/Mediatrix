@@ -11,7 +11,7 @@ using namespace std;
 
 class IR : public Php::Base {
     private:
-     string dev = "/dev/ttyUSB1"
+     string dev = "/dev/ttyUSB1";
 
     public:
      static Php::Value send(Php::Parameters &params){
