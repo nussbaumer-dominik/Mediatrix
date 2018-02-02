@@ -10,6 +10,8 @@
 using namespace std;
 
 class IR : public Php::Base {
+    private string dev = "/dev/ttyUSB1"
+
     public:
      static Php::Value send(Php::Parameters &params){
 
@@ -21,7 +23,7 @@ class IR : public Php::Base {
         }
 
         //open serial connection to IR-Device
-        int fd = serialOpen("/dev/ttyUSB1", 9600);
+        int fd = serialOpen(this->dev, 9600);
 
         if(fd == -1){
             return "{'success':'false','err':'Can not open Serial Connection to IR-Device'}";
@@ -49,7 +51,37 @@ class IR : public Php::Base {
         return "{'success':'true','err':''}";
      }
 
-     static Php::Value read(){
+     static Php::Value read(Php::Parameters &params){
+
+
+        return "";
+     }
+
+     static Php::Value getMode(){
+
+        //open serial connection to IR-Device
+        int fd = serialOpen(this->dev, 9600);
+
+        if(fd == -1){
+            return "{'success':'false','err':'Can not open Serial Connection to IR-Device'}";
+        }
+
+        //reset the IR-Device
+        serialPrintf(fd,":~:");
+        delay(20);
+
+        Php::out << ("v:").c_str() << endl;
+
+        //send code to IR-Device
+        serialPrintf(fd,("v:").c_str());
+        delay(20);
+
+        while (serialDataAvail (fd))
+            {
+              printf (" -> %3d", serialGetchar (fd)) ;
+              fflush (stdout) ;
+        }
+
         return "";
      }
 };
@@ -78,7 +110,12 @@ extern "C" {
             Php::ByVal("code", Php::Type::String),
             Php::ByVal("times", Php::Type::Numeric)
         });
-        ir.method<&IR::send> ("read");
+
+        ir.method<&IR::read> ("read",{
+            Php::ByVal("mode", Php::Type::Numeric)
+        });
+
+        ir.method<&IR::getMode> ("getMode")
 
         // add the class to the extension
         extension.add(std::move(ir));

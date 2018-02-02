@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/php/src/readCode.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
+      <change beforePath="$PROJECT_DIR$/cpp/IR/IR.cpp" afterPath="$PROJECT_DIR$/cpp/IR/IR.cpp" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,16 +47,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
-              <caret line="111" column="20" lean-forward="true" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
+              <caret line="111" column="0" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
               <folding>
                 <element signature="e#6#87#0#PHP" expanded="true" />
                 <element signature="e#111#149#0#PHP" expanded="true" />
-                <marker date="1517510764939" expanded="true" signature="8524:8564" ph="SELECT * FRO... preset" />
+                <marker date="1517510772940" expanded="true" signature="8504:8544" ph="SELECT * FRO... preset" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readCode.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/src/readCode.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IR.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-29">
+              <caret line="61" column="25" lean-forward="false" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -153,7 +174,6 @@
         <option value="$PROJECT_DIR$/php/src/Login.php" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/php/src/Beamer.php" />
-        <option value="$PROJECT_DIR$/cpp/IR/IR.cpp" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/php/src/RGBWScheinwerfer.php" />
         <option value="$PROJECT_DIR$/php/src/Scheinwerfer.php" />
@@ -168,6 +188,8 @@
         <option value="$PROJECT_DIR$/php/src/createDB.php" />
         <option value="$PROJECT_DIR$/php/src/AV.php" />
         <option value="$PROJECT_DIR$/php/src/Application.php" />
+        <option value="$PROJECT_DIR$/php/src/readCode.php" />
+        <option value="$PROJECT_DIR$/cpp/IR/IR.cpp" />
       </list>
     </option>
   </component>
@@ -240,6 +262,17 @@
               <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="conf" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="cpp" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="cpp" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="IR" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
@@ -343,14 +376,7 @@
       <workItem from="1517220009512" duration="2578000" />
       <workItem from="1517250410762" duration="16161000" />
       <workItem from="1517409296539" duration="4344000" />
-      <workItem from="1517468874149" duration="11607000" />
-    </task>
-    <task id="LOCAL-00198" summary="debug Preset iniString">
-      <created>1517165974048</created>
-      <option name="number" value="00198" />
-      <option name="presentableId" value="LOCAL-00198" />
-      <option name="project" value="LOCAL" />
-      <updated>1517165974048</updated>
+      <workItem from="1517468874149" duration="15229000" />
     </task>
     <task id="LOCAL-00199" summary="write savePreset">
       <created>1517166241271</created>
@@ -688,7 +714,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517510547171</updated>
     </task>
-    <option name="localTasksCounter" value="247" />
+    <task id="LOCAL-00247" summary="fix volume regex php">
+      <created>1517510777682</created>
+      <option name="number" value="00247" />
+      <option name="presentableId" value="LOCAL-00247" />
+      <option name="project" value="LOCAL" />
+      <updated>1517510777682</updated>
+    </task>
+    <option name="localTasksCounter" value="248" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -715,11 +748,10 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191446000" />
+    <option name="totallyTimeSpent" value="195068000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20051414" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -727,7 +759,7 @@
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969153" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38172042" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38172042" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2997312" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -809,13 +841,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cpp/test.origin">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ext/DMX.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1007,13 +1032,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="52" column="18" lean-forward="false" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Scheinwerfer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-324">
@@ -1161,12 +1179,28 @@
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="111" column="20" lean-forward="true" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
+          <caret line="111" column="0" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
           <folding>
             <element signature="e#6#87#0#PHP" expanded="true" />
             <element signature="e#111#149#0#PHP" expanded="true" />
-            <marker date="1517510764939" expanded="true" signature="8524:8564" ph="SELECT * FRO... preset" />
+            <marker date="1517510772940" expanded="true" signature="8504:8544" ph="SELECT * FRO... preset" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/readCode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29">
+          <caret line="61" column="25" lean-forward="false" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
