@@ -24,7 +24,7 @@ class IR : public Php::Base {
         }
 
         //open serial connection to IR-Device
-        int fd = serialOpen(this::dev, 9600);
+        int fd = serialOpen(IR::dev, 9600);
 
         if(fd == -1){
             return "{'success':'false','err':'Can not open Serial Connection to IR-Device'}";
@@ -71,7 +71,7 @@ class IR : public Php::Base {
         serialPrintf(fd,":~:");
         delay(20);
 
-        Php::out << ("v:").c_str() << endl;
+        Php::out << "v:" << endl;
 
         //send code to IR-Device
         serialPrintf(fd,("v:").c_str());
