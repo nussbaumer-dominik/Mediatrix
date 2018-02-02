@@ -11,7 +11,7 @@ using namespace std;
 
 class IR : public Php::Base {
     private:
-     string dev = "/dev/ttyUSB1";
+     static string dev = "/dev/ttyUSB1";
 
     public:
      static Php::Value send(Php::Parameters &params){
@@ -24,7 +24,7 @@ class IR : public Php::Base {
         }
 
         //open serial connection to IR-Device
-        int fd = serialOpen(this->dev, 9600);
+        int fd = serialOpen(IR::dev, 9600);
 
         if(fd == -1){
             return "{'success':'false','err':'Can not open Serial Connection to IR-Device'}";
@@ -61,7 +61,7 @@ class IR : public Php::Base {
      static Php::Value getMode(){
 
         //open serial connection to IR-Device
-        int fd = serialOpen(this->dev, 9600);
+        int fd = serialOpen(IR::dev, 9600);
 
         if(fd == -1){
             return "{'success':'false','err':'Can not open Serial Connection to IR-Device'}";
