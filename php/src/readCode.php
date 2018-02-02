@@ -12,6 +12,6 @@ $ir = new \IR();
 
 echo "Modes:\n";
 
-echo $ir->getModes();
+echo $ir->getMode();
 
 echo readline("Which Mode: ");

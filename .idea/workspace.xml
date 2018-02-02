@@ -64,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/php/src/readCode.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
-              <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+              <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -375,14 +375,7 @@
       <workItem from="1517220009512" duration="2578000" />
       <workItem from="1517250410762" duration="16161000" />
       <workItem from="1517409296539" duration="4344000" />
-      <workItem from="1517468874149" duration="17103000" />
-    </task>
-    <task id="LOCAL-00209" summary="debug savePreset">
-      <created>1517167741482</created>
-      <option name="number" value="00209" />
-      <option name="presentableId" value="LOCAL-00209" />
-      <option name="project" value="LOCAL" />
-      <updated>1517167741482</updated>
+      <workItem from="1517468874149" duration="17243000" />
     </task>
     <task id="LOCAL-00210" summary="debug savePreset">
       <created>1517167918409</created>
@@ -720,7 +713,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517562411441</updated>
     </task>
-    <option name="localTasksCounter" value="258" />
+    <task id="LOCAL-00258" summary="programm readCode php">
+      <created>1517562861603</created>
+      <option name="number" value="00258" />
+      <option name="presentableId" value="LOCAL-00258" />
+      <option name="project" value="LOCAL" />
+      <updated>1517562861603</updated>
+    </task>
+    <option name="localTasksCounter" value="259" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -747,7 +747,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196942000" />
+    <option name="totallyTimeSpent" value="197082000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -809,7 +809,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="write savePreset" />
     <MESSAGE value="add save Button to testjs" />
     <MESSAGE value="change testjs" />
     <MESSAGE value="change ws url" />
@@ -834,7 +833,8 @@
     <MESSAGE value="fix volume regex php" />
     <MESSAGE value="programm read code php and cpp" />
     <MESSAGE value="debug IR cpp" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug IR cpp" />
+    <MESSAGE value="programm readCode php" />
+    <option name="LAST_COMMIT_MESSAGE" value="programm readCode php" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1199,7 +1199,7 @@
     <entry file="file://$PROJECT_DIR$/php/src/readCode.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
           <folding />
         </state>
       </provider>
