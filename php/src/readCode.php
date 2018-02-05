@@ -14,4 +14,7 @@ echo "Modes:\n";
 
 echo $ir->getMode();
 
-echo readline("Which Mode: ");
+$mode =  readline("Which Mode: ");
+
+$codes = $ir->read($mode);
+

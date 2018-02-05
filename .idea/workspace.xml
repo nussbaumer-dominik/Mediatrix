@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
+    <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="programm readCode php">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/.gitignore" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/HTL3RLogo.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/HTL3RLogoRGB.eps" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/TODO" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/diplom.bib" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/diplomarbeit.pdf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/diplomarbeit.tex" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/make-zip" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/make.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/makehtml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/markdown/Clemens/myChapter.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/markdown/Clemens/myChapter.md.tex" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/markdown/diplomarbeit2.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/markdown/einstellungen.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/text/00_abstract.tex" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/text/00_erklaerung.tex" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/text/00_kurzfassung.tex" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/text/00_latex_shortcuts.tex" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/text/00_pandoclisting.tex" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/text/demo_fuelltext.tex" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/text/demo_kap1.tex" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/php/src/readCode.php" afterPath="$PROJECT_DIR$/php/src/readCode.php" />
     </list>
@@ -49,8 +71,8 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="111" column="0" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+            <state relative-caret-position="1782">
+              <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
               <folding>
                 <element signature="e#6#87#0#PHP" expanded="true" />
                 <element signature="e#111#149#0#PHP" expanded="true" />
@@ -63,8 +85,8 @@
       <file leaf-file-name="readCode.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/readCode.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+            <state relative-caret-position="270">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -73,7 +95,7 @@
       <file leaf-file-name="IR.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="828">
+            <state relative-caret-position="2124">
               <caret line="118" column="44" lean-forward="false" selection-start-line="118" selection-start-column="44" selection-end-line="118" selection-end-column="44" />
               <folding />
             </state>
@@ -84,7 +106,7 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="216">
+              <first_editor relative-caret-position="630">
                 <caret line="35" column="19" lean-forward="false" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="19" />
                 <folding />
               </first_editor>
@@ -96,7 +118,7 @@
       <file leaf-file-name="AV.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/AV.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
+            <state relative-caret-position="3510">
               <caret line="200" column="22" lean-forward="false" selection-start-line="200" selection-start-column="22" selection-end-line="200" selection-end-column="22" />
               <folding />
             </state>
@@ -118,7 +140,7 @@
       <file leaf-file-name="Mediatrix.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
+            <state relative-caret-position="1152">
               <caret line="64" column="7" lean-forward="false" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
               <folding />
             </state>
@@ -235,6 +257,7 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -375,14 +398,8 @@
       <workItem from="1517220009512" duration="2578000" />
       <workItem from="1517250410762" duration="16161000" />
       <workItem from="1517409296539" duration="4344000" />
-      <workItem from="1517468874149" duration="17243000" />
-    </task>
-    <task id="LOCAL-00210" summary="debug savePreset">
-      <created>1517167918409</created>
-      <option name="number" value="00210" />
-      <option name="presentableId" value="LOCAL-00210" />
-      <option name="project" value="LOCAL" />
-      <updated>1517167918409</updated>
+      <workItem from="1517468874149" duration="18704000" />
+      <workItem from="1517831264313" duration="71000" />
     </task>
     <task id="LOCAL-00211" summary="debug savePreset">
       <created>1517168036775</created>
@@ -720,7 +737,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517562861603</updated>
     </task>
-    <option name="localTasksCounter" value="259" />
+    <task id="LOCAL-00259" summary="programm readCode php">
+      <created>1517562991333</created>
+      <option name="number" value="00259" />
+      <option name="presentableId" value="LOCAL-00259" />
+      <option name="project" value="LOCAL" />
+      <updated>1517562991333</updated>
+    </task>
+    <option name="localTasksCounter" value="260" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -747,14 +771,13 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197082000" />
+    <option name="totallyTimeSpent" value="198614000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20051414" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20308483" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -1036,7 +1059,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-324">
           <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1142,7 +1164,7 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="216">
+          <first_editor relative-caret-position="630">
             <caret line="35" column="19" lean-forward="false" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="19" />
             <folding />
           </first_editor>
@@ -1152,7 +1174,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
+        <state relative-caret-position="1152">
           <caret line="64" column="7" lean-forward="false" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
           <folding />
         </state>
@@ -1170,7 +1192,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/AV.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
+        <state relative-caret-position="3510">
           <caret line="200" column="22" lean-forward="false" selection-start-line="200" selection-start-column="22" selection-end-line="200" selection-end-column="22" />
           <folding />
         </state>
@@ -1178,8 +1200,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="111" column="0" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+        <state relative-caret-position="1782">
+          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
           <folding>
             <element signature="e#6#87#0#PHP" expanded="true" />
             <element signature="e#111#149#0#PHP" expanded="true" />
@@ -1190,7 +1212,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
+        <state relative-caret-position="2124">
           <caret line="118" column="44" lean-forward="false" selection-start-line="118" selection-start-column="44" selection-end-line="118" selection-end-column="44" />
           <folding />
         </state>
@@ -1198,8 +1220,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/readCode.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        <state relative-caret-position="270">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
