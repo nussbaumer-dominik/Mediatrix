@@ -54,8 +54,35 @@ class IR : public Php::Base {
 
      static Php::Value read(Php::Parameters &params){
 
+        string mode = params[0];
 
-        return "";
+        if(mode.length()==1){
+            mode = "0"+mode;
+        }
+
+        int fd = serialOpen(IR::dev, 9600);
+
+        if(fd == -1){
+            return "{'success':'false','err':'Can not open Serial Connection to IR-Device'}";
+        }
+
+        serialPrintf(fd,":~:");
+        delay(20);
+
+        Php::out << "PLease Press the button......." << endl;
+
+        serialPrintf(fd,("l"+mode+":").c_str());
+        delay(100);
+
+        string erg = "";
+
+        while (serialDataAvail (fd))
+        {
+            erg += serialGetchar (fd);
+        }
+
+        return erg;
+
      }
 
      static Php::Value getMode(){
@@ -71,8 +98,6 @@ class IR : public Php::Base {
         serialPrintf(fd,":~:");
         delay(20);
 
-        Php::out << "v:" << endl;
-
         //send code to IR-Device
         serialPrintf(fd,"v:");
         delay(20);
@@ -80,13 +105,8 @@ class IR : public Php::Base {
         string erg = "";
 
         while (serialDataAvail (fd))
-            {
-              char c = serialGetchar (fd);
-
-              printf (" -> %3d", c) ;
-
-              erg += c;
-              fflush (stdout) ;
+        {
+            erg += serialGetchar (fd);
         }
 
         return erg;
