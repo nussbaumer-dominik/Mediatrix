@@ -73,8 +73,8 @@
       <file leaf-file-name="IR.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+            <state relative-caret-position="-828">
+              <caret line="77" column="28" lean-forward="true" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -420,14 +420,7 @@
       <workItem from="1517831264313" duration="731000" />
       <workItem from="1517832024390" duration="151000" />
       <workItem from="1517832204489" duration="269000" />
-      <workItem from="1517832514751" duration="2505000" />
-    </task>
-    <task id="LOCAL-00216" summary="write AV class">
-      <created>1517252694068</created>
-      <option name="number" value="00216" />
-      <option name="presentableId" value="LOCAL-00216" />
-      <option name="project" value="LOCAL" />
-      <updated>1517252694083</updated>
+      <workItem from="1517832514751" duration="3307000" />
     </task>
     <task id="LOCAL-00217" summary="add ini AV">
       <created>1517261116591</created>
@@ -765,7 +758,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517833169780</updated>
     </task>
-    <option name="localTasksCounter" value="265" />
+    <task id="LOCAL-00265" summary="programm read IR cpp">
+      <created>1517835090689</created>
+      <option name="number" value="00265" />
+      <option name="presentableId" value="LOCAL-00265" />
+      <option name="project" value="LOCAL" />
+      <updated>1517835090690</updated>
+    </task>
+    <option name="localTasksCounter" value="266" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -792,7 +792,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202199000" />
+    <option name="totallyTimeSpent" value="203001000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -854,7 +854,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change ws url" />
     <MESSAGE value="write AV class" />
     <MESSAGE value="add ini AV" />
     <MESSAGE value="debug AV command" />
@@ -879,7 +878,8 @@
     <MESSAGE value="programm readCode php" />
     <MESSAGE value="add Diplomarbeitsbuch Template" />
     <MESSAGE value="change IR device number" />
-    <option name="LAST_COMMIT_MESSAGE" value="change IR device number" />
+    <MESSAGE value="programm read IR cpp" />
+    <option name="LAST_COMMIT_MESSAGE" value="programm read IR cpp" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1245,8 +1245,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+        <state relative-caret-position="-828">
+          <caret line="77" column="28" lean-forward="true" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
           <folding />
         </state>
       </provider>
