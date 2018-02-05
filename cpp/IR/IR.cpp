@@ -69,17 +69,17 @@ class IR : public Php::Base {
         serialPrintf(fd,":~:");
         delay(20);
 
-        Php::out << "PLease Press the button..";
+        cout << "PLease Press the button..";
 
         serialPrintf(fd,("l"+mode+":").c_str());
 
         for(int i = 200; i < 2000; i += 200){
             delay(i);
-            Php::out << ".";
+            cout << ".";
 
         }
 
-        Php::out << endl;
+        cout << endl;
 
         string erg = "";
 
