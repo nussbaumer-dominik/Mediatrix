@@ -18,3 +18,4 @@ $mode =  readline("Which Mode: ");
 
 $codes = $ir->read($mode);
 
+echo $codes;
