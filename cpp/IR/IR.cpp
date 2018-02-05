@@ -81,7 +81,7 @@ class IR : public Php::Base {
 
         while (serialDataAvail (fd))
             {
-              char c = serialGetchar (fd)
+              char c = serialGetchar (fd);
 
               printf (" -> %3d", c) ;
 
