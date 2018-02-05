@@ -77,13 +77,19 @@ class IR : public Php::Base {
         serialPrintf(fd,"v:");
         delay(20);
 
+        string erg = "";
+
         while (serialDataAvail (fd))
             {
-              printf (" -> %3d", serialGetchar (fd)) ;
+              char c = serialGetchar (fd)
+
+              printf (" -> %3d", c) ;
+
+              erg += c;
               fflush (stdout) ;
         }
 
-        return "";
+        return erg;
      }
 };
 
