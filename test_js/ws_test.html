@@ -10,7 +10,7 @@
 <button id="updatePreset">Update Preset</button>
 
 <script>
-    var conn = new WebSocket('ws://mediatrix.darktech.org:10000');
+    var conn = new WebSocket('wss://192.168.1.85/wss2');
     conn.onopen = function(e) {
         console.log("Connection established!");
 
