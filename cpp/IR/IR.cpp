@@ -11,7 +11,7 @@ using namespace std;
 
 class IR : public Php::Base {
     private:
-     static constexpr const char* dev = "/dev/ttyUSB0";
+     static constexpr const char* dev = "/dev/ttyUSBir";
 
     public:
      static Php::Value send(Php::Parameters &params){
