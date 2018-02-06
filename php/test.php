@@ -10,7 +10,7 @@ echo "Test: \n";
 
 $sqlite = new \SQLite3("../sqlite/db.sqlite");
 
-echo "User-Tabel:\n";
+echo "User-Table:\n";
 
 $stm = $sqlite->prepare('SELECT * FROM user');
 
@@ -21,7 +21,7 @@ while($res = $result->fetchArray(SQLITE3_ASSOC)){
 }
 
 
-echo "\nPreset-Tabel:\n";
+echo "\nPreset-Table:\n";
 
 $stm = $sqlite->prepare('SELECT * FROM preset');
 

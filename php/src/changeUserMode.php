@@ -13,16 +13,19 @@ $jwt = $_POST['jwt'];
 
 $userId = JWT::decode($jwt, base64_decode(Key::getKey()), array("HS256"))->data->userName;
 
-$sqlite = new \SQLite3("../../sqlite/db.sqlite") or die('{"success":false,"err":"Can not open SQL-Connection}');
+$sqlite = new \SQLite3("../../sqlite/db.sqlite");
 
-$stm = $sqlite->prepare("INSERT INTO preset(json,user_id) VALUES (:json,:userId);");
+$stm = $sqlite->prepare("UPDATE usert SET isextendet = :ext where id = :id;");
 
-$stm->bindParam('userId',$userId);
+$stm->bindParam(':id', $userId);
 
 if(isset($_POST['ex'])){
 
+    $stm->bindValue(':ext', true);
 
 
 }else if (isset($_POST['base'])){
-
+    $stm->bindValue(':ext', false);
 }
+
+$stm->execute();

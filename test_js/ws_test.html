@@ -8,6 +8,7 @@
 <button id="savePreset">Save Preset</button>
 <button id="deletePreset">Delete Preset</button>
 <button id="updatePreset">Update Preset</button>
+<button id="setUsermod">change Usermod</button>
 
 <script>
     var conn = new WebSocket('wss://192.168.1.85/wss2');
@@ -62,6 +63,19 @@
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", function(){console.log(this.responseText)});
         oReq.open("POST", "../php/src/updatePreset.php");
+        oReq.send(data);
+    });
+
+
+    document.getElementById('setUsermod').addEventListener('click',function (event){
+        var data = new FormData();
+        data.append('jwt', jwt);
+        data.append('ex', '');
+
+
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", function(){console.log(this.responseText)});
+        oReq.open("POST", "../php/src/changeUserMode.php");
         oReq.send(data);
     })
 
