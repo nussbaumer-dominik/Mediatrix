@@ -11,23 +11,38 @@ use Firebase\JWT\JWT;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$jwt = $_POST['jwt'];
+try {
 
-$userId = JWT::decode($jwt, base64_decode(Key::getKey()), array("HS256"))->data->userName;
+    $jwt = $_POST['jwt'];
 
-$sqlite = new \SQLite3("../../sqlite/db.sqlite");
+    if (!preg_match('/^[a-zA-Z0-9\-_]+?\.[a-zA-Z0-9\-_]+?\.([a-zA-Z0-9\-_]+)?$/', $jwt)) {
+        return json_encode(array("success" => false, "err" => "JWT not valid"));
+    }
 
-$stm = $sqlite->prepare("UPDATE user SET isextendet = :ext where id = :id;");
+    $userId = JWT::decode($jwt, base64_decode(Key::getKey()), array("HS256"))->data->userName;
 
-$stm->bindParam(':id', $userId);
+    $sqlite = new \SQLite3("../../sqlite/db.sqlite");
 
-if(isset($_POST['ex'])){
+    $stm = $sqlite->prepare("UPDATE user SET isextendet = :ext where id = :id;");
 
-    $stm->bindValue(':ext', true);
+    $stm->bindParam(':id', $userId);
+
+    if (isset($_POST['ex'])) {
+
+        $stm->bindValue(':ext', true);
 
 
-}else if (isset($_POST['base'])){
-    $stm->bindValue(':ext', false);
+    } else if (isset($_POST['base'])) {
+        $stm->bindValue(':ext', false);
+    }
+
+    $stm->execute();
+
+    echo json_encode(array("success" => true, "err" => ""));
+
+}catch (\Exception $ex) {
+
+    echo json_encode(array("success" => false, "err" => "An Error occurred"));
+
 }
 
-$stm->execute();

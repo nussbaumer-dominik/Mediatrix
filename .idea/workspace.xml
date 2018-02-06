@@ -46,11 +46,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/src/Application.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="207" column="0" lean-forward="true" selection-start-line="199" selection-start-column="10" selection-end-line="207" selection-end-column="0" />
+              <folding>
+                <element signature="e#6#87#0#PHP" expanded="true" />
+                <element signature="e#111#149#0#PHP" expanded="true" />
+                <marker date="1517510772940" expanded="true" signature="8504:8544" ph="SELECT * FRO... preset" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+            <state relative-caret-position="54">
+              <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
               <folding>
                 <marker date="1517950369966" expanded="true" signature="203:221" ph="SELECT * FRO... user" />
                 <marker date="1517950369966" expanded="true" signature="379:399" ph="SELECT * FRO... preset" />
@@ -62,10 +76,10 @@
       <file leaf-file-name="changeUserMode.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/changeUserMode.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
               <folding>
-                <marker date="1517950933398" expanded="true" signature="370:418" ph="UPDATE user... " />
+                <marker date="1517951476156" expanded="true" signature="572:620" ph="UPDATE user... " />
               </folding>
             </state>
           </provider>
@@ -174,8 +188,8 @@
         <option value="$PROJECT_DIR$/php/src/createDB.php" />
         <option value="$PROJECT_DIR$/sqlite/db.sqlite" />
         <option value="$PROJECT_DIR$/php/src/Preset.php" />
-        <option value="$PROJECT_DIR$/php/test.php" />
         <option value="$PROJECT_DIR$/test_js/ws_test.html" />
+        <option value="$PROJECT_DIR$/php/test.php" />
         <option value="$PROJECT_DIR$/php/src/changeUserMode.php" />
       </list>
     </option>
@@ -368,14 +382,7 @@
       <workItem from="1517831264313" duration="731000" />
       <workItem from="1517832024390" duration="151000" />
       <workItem from="1517832204489" duration="269000" />
-      <workItem from="1517832514751" duration="17954000" />
-    </task>
-    <task id="LOCAL-00235" summary="debugs setVolume AV php">
-      <created>1517477213341</created>
-      <option name="number" value="00235" />
-      <option name="presentableId" value="LOCAL-00235" />
-      <option name="project" value="LOCAL" />
-      <updated>1517477213341</updated>
+      <workItem from="1517832514751" duration="18492000" />
     </task>
     <task id="LOCAL-00236" summary="debugs setVolume AV php">
       <created>1517477313934</created>
@@ -713,7 +720,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517950877903</updated>
     </task>
-    <option name="localTasksCounter" value="284" />
+    <task id="LOCAL-00284" summary="debug chaneusermode">
+      <created>1517950939278</created>
+      <option name="number" value="00284" />
+      <option name="presentableId" value="LOCAL-00284" />
+      <option name="project" value="LOCAL" />
+      <updated>1517950939278</updated>
+    </task>
+    <option name="localTasksCounter" value="285" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -740,7 +754,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217648000" />
+    <option name="totallyTimeSpent" value="218186000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1136,18 +1150,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="317" column="17" lean-forward="true" selection-start-line="317" selection-start-column="17" selection-end-line="317" selection-end-column="17" />
-          <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
-            <element signature="e#111#149#0#PHP" expanded="true" />
-            <marker date="1517510772940" expanded="true" signature="8504:8544" ph="SELECT * FRO... preset" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
@@ -1164,17 +1166,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding>
-            <marker date="1517950369966" expanded="true" signature="203:221" ph="SELECT * FRO... user" />
-            <marker date="1517950369966" expanded="true" signature="379:399" ph="SELECT * FRO... preset" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1212,12 +1203,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/php/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding>
+            <marker date="1517950369966" expanded="true" signature="203:221" ph="SELECT * FRO... user" />
+            <marker date="1517950369966" expanded="true" signature="379:399" ph="SELECT * FRO... preset" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="207" column="0" lean-forward="true" selection-start-line="199" selection-start-column="10" selection-end-line="207" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+            <element signature="e#111#149#0#PHP" expanded="true" />
+            <marker date="1517510772940" expanded="true" signature="8504:8544" ph="SELECT * FRO... preset" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/changeUserMode.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
           <folding>
-            <marker date="1517950933398" expanded="true" signature="370:418" ph="UPDATE user... " />
+            <marker date="1517951476156" expanded="true" signature="572:620" ph="UPDATE user... " />
           </folding>
         </state>
       </provider>
