@@ -22,4 +22,4 @@ $sqlite->exec('create table if not exists preset(
 
 
 
-
+$sqlite->exec('insert into user(id) values ("test");');
