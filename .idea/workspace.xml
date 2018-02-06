@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/createDB.php" afterPath="$PROJECT_DIR$/php/src/createDB.php" />
+      <change beforePath="$PROJECT_DIR$/sqlite/db.sqlite" afterPath="$PROJECT_DIR$/sqlite/db.sqlite" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,17 +59,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createDB.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="createDB.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="324">
+              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <marker date="1517948574821" expanded="true" signature="152:243" ph="create table... if" />
                 <marker date="1517948574821" expanded="true" signature="264:425" ph="create table... if" />
                 <marker date="1517948574821" expanded="true" signature="448:484" ph="insert into user... " />
                 <marker date="1517948574821" expanded="true" signature="504:569" ph="insert into preset... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db.sqlite" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sqlite/db.sqlite">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -128,7 +138,6 @@
         <option value="$PROJECT_DIR$/php/src/deletePreset.php" />
         <option value="$PROJECT_DIR$/php/src/savePreset.php" />
         <option value="$PROJECT_DIR$/php/src/updatePreset.php" />
-        <option value="$PROJECT_DIR$/sqlite/db.sqlite" />
         <option value="$PROJECT_DIR$/php/src/AV.php" />
         <option value="$PROJECT_DIR$/php/src/Application.php" />
         <option value="$PROJECT_DIR$/cpp/IR/IR.cpp" />
@@ -140,6 +149,7 @@
         <option value="$PROJECT_DIR$/php/src/Login.php" />
         <option value="$PROJECT_DIR$/php/test.php" />
         <option value="$PROJECT_DIR$/php/src/createDB.php" />
+        <option value="$PROJECT_DIR$/sqlite/db.sqlite" />
       </list>
     </option>
   </component>
@@ -331,14 +341,7 @@
       <workItem from="1517831264313" duration="731000" />
       <workItem from="1517832024390" duration="151000" />
       <workItem from="1517832204489" duration="269000" />
-      <workItem from="1517832514751" duration="15701000" />
-    </task>
-    <task id="LOCAL-00230" summary="change ws test address">
-      <created>1517412380712</created>
-      <option name="number" value="00230" />
-      <option name="presentableId" value="LOCAL-00230" />
-      <option name="project" value="LOCAL" />
-      <updated>1517412380712</updated>
+      <workItem from="1517832514751" duration="15744000" />
     </task>
     <task id="LOCAL-00231" summary="AV php">
       <created>1517476111893</created>
@@ -676,7 +679,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517948098344</updated>
     </task>
-    <option name="localTasksCounter" value="279" />
+    <task id="LOCAL-00279" summary="change createDB">
+      <created>1517948582065</created>
+      <option name="number" value="00279" />
+      <option name="presentableId" value="LOCAL-00279" />
+      <option name="project" value="LOCAL" />
+      <updated>1517948582065</updated>
+    </task>
+    <option name="localTasksCounter" value="280" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -703,7 +713,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215395000" />
+    <option name="totallyTimeSpent" value="215438000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1037,13 +1047,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sqlite/db.sqlite">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1173,14 +1176,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="324">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <marker date="1517948574821" expanded="true" signature="152:243" ph="create table... if" />
             <marker date="1517948574821" expanded="true" signature="264:425" ph="create table... if" />
             <marker date="1517948574821" expanded="true" signature="448:484" ph="insert into user... " />
             <marker date="1517948574821" expanded="true" signature="504:569" ph="insert into preset... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqlite/db.sqlite">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
