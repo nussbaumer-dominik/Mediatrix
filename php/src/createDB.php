@@ -23,3 +23,4 @@ $sqlite->exec('create table if not exists preset(
 
 
 $sqlite->exec('insert into user(id) values ("test");');
+$sqlite->exec('insert into preset(json,user_id) values ("json-testdata", "test");');

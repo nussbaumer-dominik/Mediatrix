@@ -62,12 +62,13 @@
       <file leaf-file-name="createDB.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="24" column="52" lean-forward="false" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+            <state relative-caret-position="306">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
-                <marker date="1517948083674" expanded="true" signature="152:243" ph="create table... if" />
-                <marker date="1517948083674" expanded="true" signature="264:425" ph="create table... if" />
-                <marker date="1517948083674" expanded="true" signature="448:484" ph="insert into user... " />
+                <marker date="1517948574821" expanded="true" signature="152:243" ph="create table... if" />
+                <marker date="1517948574821" expanded="true" signature="264:425" ph="create table... if" />
+                <marker date="1517948574821" expanded="true" signature="448:484" ph="insert into user... " />
+                <marker date="1517948574821" expanded="true" signature="504:569" ph="insert into preset... " />
               </folding>
             </state>
           </provider>
@@ -330,14 +331,7 @@
       <workItem from="1517831264313" duration="731000" />
       <workItem from="1517832024390" duration="151000" />
       <workItem from="1517832204489" duration="269000" />
-      <workItem from="1517832514751" duration="15213000" />
-    </task>
-    <task id="LOCAL-00229" summary="change ws test address">
-      <created>1517412355320</created>
-      <option name="number" value="00229" />
-      <option name="presentableId" value="LOCAL-00229" />
-      <option name="project" value="LOCAL" />
-      <updated>1517412355320</updated>
+      <workItem from="1517832514751" duration="15701000" />
     </task>
     <task id="LOCAL-00230" summary="change ws test address">
       <created>1517412380712</created>
@@ -675,7 +669,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517947928049</updated>
     </task>
-    <option name="localTasksCounter" value="278" />
+    <task id="LOCAL-00278" summary="change createDB">
+      <created>1517948098344</created>
+      <option name="number" value="00278" />
+      <option name="presentableId" value="LOCAL-00278" />
+      <option name="project" value="LOCAL" />
+      <updated>1517948098344</updated>
+    </task>
+    <option name="localTasksCounter" value="279" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -702,7 +703,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214907000" />
+    <option name="totallyTimeSpent" value="215395000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -764,7 +765,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="debug AV constructor" />
     <MESSAGE value="change ini File" />
     <MESSAGE value="debug savePreset" />
     <MESSAGE value="Preset update, create, delete" />
@@ -789,7 +789,8 @@
     <MESSAGE value="change db structure" />
     <MESSAGE value="change db structure in LOGIN and save preset" />
     <MESSAGE value="change test.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="change test.php" />
+    <MESSAGE value="change createDB" />
+    <option name="LAST_COMMIT_MESSAGE" value="change createDB" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1172,12 +1173,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="24" column="52" lean-forward="false" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+        <state relative-caret-position="306">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <marker date="1517948083674" expanded="true" signature="152:243" ph="create table... if" />
-            <marker date="1517948083674" expanded="true" signature="264:425" ph="create table... if" />
-            <marker date="1517948083674" expanded="true" signature="448:484" ph="insert into user... " />
+            <marker date="1517948574821" expanded="true" signature="152:243" ph="create table... if" />
+            <marker date="1517948574821" expanded="true" signature="264:425" ph="create table... if" />
+            <marker date="1517948574821" expanded="true" signature="448:484" ph="insert into user... " />
+            <marker date="1517948574821" expanded="true" signature="504:569" ph="insert into preset... " />
           </folding>
         </state>
       </provider>
