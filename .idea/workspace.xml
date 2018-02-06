@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/changeUserMode.php" afterPath="$PROJECT_DIR$/php/src/changeUserMode.php" />
+      <change beforePath="$PROJECT_DIR$/php/info.php" afterPath="$PROJECT_DIR$/php/info.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,7 +73,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="changeUserMode.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="changeUserMode.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/changeUserMode.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
@@ -81,6 +81,16 @@
               <folding>
                 <marker date="1517951476156" expanded="true" signature="572:620" ph="UPDATE user... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="info.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/php/info.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -191,6 +201,7 @@
         <option value="$PROJECT_DIR$/test_js/ws_test.html" />
         <option value="$PROJECT_DIR$/php/test.php" />
         <option value="$PROJECT_DIR$/php/src/changeUserMode.php" />
+        <option value="$PROJECT_DIR$/php/info.php" />
       </list>
     </option>
   </component>
@@ -382,14 +393,7 @@
       <workItem from="1517831264313" duration="731000" />
       <workItem from="1517832024390" duration="151000" />
       <workItem from="1517832204489" duration="269000" />
-      <workItem from="1517832514751" duration="18492000" />
-    </task>
-    <task id="LOCAL-00236" summary="debugs setVolume AV php">
-      <created>1517477313934</created>
-      <option name="number" value="00236" />
-      <option name="presentableId" value="LOCAL-00236" />
-      <option name="project" value="LOCAL" />
-      <updated>1517477313934</updated>
+      <workItem from="1517832514751" duration="18759000" />
     </task>
     <task id="LOCAL-00237" summary="debugs setVolume AV php">
       <created>1517477412512</created>
@@ -727,7 +731,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517950939278</updated>
     </task>
-    <option name="localTasksCounter" value="285" />
+    <task id="LOCAL-00285" summary="add validation to changeusermode">
+      <created>1517951492002</created>
+      <option name="number" value="00285" />
+      <option name="presentableId" value="LOCAL-00285" />
+      <option name="project" value="LOCAL" />
+      <updated>1517951492002</updated>
+    </task>
+    <option name="localTasksCounter" value="286" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -754,11 +765,10 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="218186000" />
+    <option name="totallyTimeSpent" value="218453000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21079692" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -816,8 +826,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change ws test address" />
-    <MESSAGE value="AV php" />
     <MESSAGE value="fix spelling mistake Av php" />
     <MESSAGE value="change position of IR ini AV php" />
     <MESSAGE value="debugs setVolume AV php" />
@@ -841,7 +849,9 @@
     <MESSAGE value="clear db" />
     <MESSAGE value="write change Usermod and change test js" />
     <MESSAGE value="debug chaneusermode" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug chaneusermode" />
+    <MESSAGE value="add validation to changeusermode" />
+    <MESSAGE value="debugging" />
+    <option name="LAST_COMMIT_MESSAGE" value="debugging" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -979,13 +989,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="73" lean-forward="true" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/info.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1233,6 +1236,14 @@
           <folding>
             <marker date="1517951476156" expanded="true" signature="572:620" ph="UPDATE user... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
