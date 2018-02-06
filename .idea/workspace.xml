@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/Login.php" afterPath="$PROJECT_DIR$/php/src/Login.php" />
-      <change beforePath="$PROJECT_DIR$/php/src/Preset.php" afterPath="$PROJECT_DIR$/php/src/Preset.php" />
+      <change beforePath="$PROJECT_DIR$/php/test.php" afterPath="$PROJECT_DIR$/php/test.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,14 +60,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
+            <state relative-caret-position="287">
               <caret line="77" column="32" lean-forward="true" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
               <folding>
-                <marker date="1517947458386" expanded="true" signature="2000:2031" ph="INSERT INTO USER... " />
-                <marker date="1517947458386" expanded="true" signature="2011:2021" ph="SELECT count... USER" />
+                <marker date="1517947574254" expanded="true" signature="2000:2033" ph="INSERT INTO USER... " />
+                <marker date="1517947574254" expanded="true" signature="2011:2021" ph="SELECT count... USER" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/php/test.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <marker date="1517947725049" expanded="true" signature="203:221" ph="SELECT * FRO... user" />
+                <marker date="1517947725049" expanded="true" signature="411:431" ph="SELECT * FRO... preset" />
               </folding>
             </state>
           </provider>
@@ -89,16 +101,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
               <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IR.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-108">
-              <caret line="69" column="18" lean-forward="true" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -217,7 +219,6 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/php/src/RGBWScheinwerfer.php" />
         <option value="$PROJECT_DIR$/php/src/Scheinwerfer.php" />
-        <option value="$PROJECT_DIR$/php/test.php" />
         <option value="$PROJECT_DIR$/conf/Mediatrix.json" />
         <option value="$PROJECT_DIR$/php/src/deletePreset.php" />
         <option value="$PROJECT_DIR$/php/src/savePreset.php" />
@@ -233,6 +234,7 @@
         <option value="$PROJECT_DIR$/php/src/createDB.php" />
         <option value="$PROJECT_DIR$/php/src/Preset.php" />
         <option value="$PROJECT_DIR$/php/src/Login.php" />
+        <option value="$PROJECT_DIR$/php/test.php" />
       </list>
     </option>
   </component>
@@ -424,21 +426,7 @@
       <workItem from="1517831264313" duration="731000" />
       <workItem from="1517832024390" duration="151000" />
       <workItem from="1517832204489" duration="269000" />
-      <workItem from="1517832514751" duration="14589000" />
-    </task>
-    <task id="LOCAL-00225" summary="change ini File">
-      <created>1517263016342</created>
-      <option name="number" value="00225" />
-      <option name="presentableId" value="LOCAL-00225" />
-      <option name="project" value="LOCAL" />
-      <updated>1517263016342</updated>
-    </task>
-    <task id="LOCAL-00226" summary="debug savePreset">
-      <created>1517303024728</created>
-      <option name="number" value="00226" />
-      <option name="presentableId" value="LOCAL-00226" />
-      <option name="project" value="LOCAL" />
-      <updated>1517303024728</updated>
+      <workItem from="1517832514751" duration="14855000" />
     </task>
     <task id="LOCAL-00227" summary="Preset update, create, delete">
       <created>1517411708238</created>
@@ -769,7 +757,21 @@
       <option name="project" value="LOCAL" />
       <updated>1517941136831</updated>
     </task>
-    <option name="localTasksCounter" value="274" />
+    <task id="LOCAL-00274" summary="change db structure in LOGIN and save preset">
+      <created>1517947476103</created>
+      <option name="number" value="00274" />
+      <option name="presentableId" value="LOCAL-00274" />
+      <option name="project" value="LOCAL" />
+      <updated>1517947476104</updated>
+    </task>
+    <task id="LOCAL-00275" summary="change db structure in LOGIN and save preset">
+      <created>1517947598966</created>
+      <option name="number" value="00275" />
+      <option name="presentableId" value="LOCAL-00275" />
+      <option name="project" value="LOCAL" />
+      <updated>1517947598966</updated>
+    </task>
+    <option name="localTasksCounter" value="276" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -796,7 +798,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214283000" />
+    <option name="totallyTimeSpent" value="214549000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -858,7 +860,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change iniString, AV Klass and iniMe regardung to implementig Volume up and down" />
     <MESSAGE value="add max and min Volume to iniString" />
     <MESSAGE value="debug AV constructor" />
     <MESSAGE value="change ini File" />
@@ -883,7 +884,8 @@
     <MESSAGE value="program IR php" />
     <MESSAGE value="test wss" />
     <MESSAGE value="change db structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="change db structure" />
+    <MESSAGE value="change db structure in LOGIN and save preset" />
+    <option name="LAST_COMMIT_MESSAGE" value="change db structure in LOGIN and save preset" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1130,13 +1132,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sqlite/db.sqlite">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1262,11 +1257,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
+        <state relative-caret-position="287">
           <caret line="77" column="32" lean-forward="true" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
           <folding>
-            <marker date="1517947458386" expanded="true" signature="2000:2031" ph="INSERT INTO USER... " />
-            <marker date="1517947458386" expanded="true" signature="2011:2021" ph="SELECT count... USER" />
+            <marker date="1517947574254" expanded="true" signature="2000:2033" ph="INSERT INTO USER... " />
+            <marker date="1517947574254" expanded="true" signature="2011:2021" ph="SELECT count... USER" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <marker date="1517947725049" expanded="true" signature="203:221" ph="SELECT * FRO... user" />
+            <marker date="1517947725049" expanded="true" signature="411:431" ph="SELECT * FRO... preset" />
           </folding>
         </state>
       </provider>
