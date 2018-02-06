@@ -17,7 +17,7 @@ $userId = JWT::decode($jwt, base64_decode(Key::getKey()), array("HS256"))->data-
 
 $sqlite = new \SQLite3("../../sqlite/db.sqlite");
 
-$stm = $sqlite->prepare("UPDATE usert SET isextendet = :ext where id = :id;");
+$stm = $sqlite->prepare("UPDATE user SET isextendet = :ext where id = :id;");
 
 $stm->bindParam(':id', $userId);
 

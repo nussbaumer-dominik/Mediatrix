@@ -62,10 +62,10 @@
       <file leaf-file-name="changeUserMode.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/changeUserMode.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+            <state relative-caret-position="342">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
-                <marker date="1517950850503" expanded="true" signature="370:419" ph="UPDATE usert... " />
+                <marker date="1517950933398" expanded="true" signature="370:418" ph="UPDATE user... " />
               </folding>
             </state>
           </provider>
@@ -368,14 +368,7 @@
       <workItem from="1517831264313" duration="731000" />
       <workItem from="1517832024390" duration="151000" />
       <workItem from="1517832204489" duration="269000" />
-      <workItem from="1517832514751" duration="17875000" />
-    </task>
-    <task id="LOCAL-00234" summary="debugs setVolume AV php">
-      <created>1517476995960</created>
-      <option name="number" value="00234" />
-      <option name="presentableId" value="LOCAL-00234" />
-      <option name="project" value="LOCAL" />
-      <updated>1517476995960</updated>
+      <workItem from="1517832514751" duration="17954000" />
     </task>
     <task id="LOCAL-00235" summary="debugs setVolume AV php">
       <created>1517477213341</created>
@@ -713,7 +706,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517950783169</updated>
     </task>
-    <option name="localTasksCounter" value="283" />
+    <task id="LOCAL-00283" summary="debug chaneusermode">
+      <created>1517950877903</created>
+      <option name="number" value="00283" />
+      <option name="presentableId" value="LOCAL-00283" />
+      <option name="project" value="LOCAL" />
+      <updated>1517950877903</updated>
+    </task>
+    <option name="localTasksCounter" value="284" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -740,7 +740,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217569000" />
+    <option name="totallyTimeSpent" value="217648000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -802,7 +802,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Preset update, create, delete" />
     <MESSAGE value="change ws test address" />
     <MESSAGE value="AV php" />
     <MESSAGE value="fix spelling mistake Av php" />
@@ -827,7 +826,8 @@
     <MESSAGE value="change createDB" />
     <MESSAGE value="clear db" />
     <MESSAGE value="write change Usermod and change test js" />
-    <option name="LAST_COMMIT_MESSAGE" value="write change Usermod and change test js" />
+    <MESSAGE value="debug chaneusermode" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug chaneusermode" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1214,10 +1214,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/changeUserMode.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        <state relative-caret-position="342">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <marker date="1517950850503" expanded="true" signature="370:419" ph="UPDATE usert... " />
+            <marker date="1517950933398" expanded="true" signature="370:418" ph="UPDATE user... " />
           </folding>
         </state>
       </provider>
