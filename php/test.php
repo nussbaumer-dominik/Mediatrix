@@ -16,20 +16,16 @@ $stm = $sqlite->prepare('SELECT * FROM user');
 
 $result = $stm->execute();
 
-var_dump($result->numColumns());
-
 while($res = $result->fetchArray(SQLITE3_ASSOC)){
     print_r($res);
 }
 
 
-echo "Preset-Tabel:\n";
+echo "\nPreset-Tabel:\n";
 
 $stm = $sqlite->prepare('SELECT * FROM preset');
 
 $result = $stm->execute();
-
-var_dump($result->numColumns());
 
  while($res = $result->fetchArray(SQLITE3_ASSOC)){
         print_r($res);

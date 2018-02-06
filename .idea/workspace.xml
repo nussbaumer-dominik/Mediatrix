@@ -76,11 +76,11 @@
       <file leaf-file-name="test.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="341">
+              <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
               <folding>
-                <marker date="1517947725049" expanded="true" signature="203:221" ph="SELECT * FRO... user" />
-                <marker date="1517947725049" expanded="true" signature="411:431" ph="SELECT * FRO... preset" />
+                <marker date="1517947920065" expanded="true" signature="203:221" ph="SELECT * FRO... user" />
+                <marker date="1517947920065" expanded="true" signature="379:399" ph="SELECT * FRO... preset" />
               </folding>
             </state>
           </provider>
@@ -426,14 +426,7 @@
       <workItem from="1517831264313" duration="731000" />
       <workItem from="1517832024390" duration="151000" />
       <workItem from="1517832204489" duration="269000" />
-      <workItem from="1517832514751" duration="14855000" />
-    </task>
-    <task id="LOCAL-00227" summary="Preset update, create, delete">
-      <created>1517411708238</created>
-      <option name="number" value="00227" />
-      <option name="presentableId" value="LOCAL-00227" />
-      <option name="project" value="LOCAL" />
-      <updated>1517411708238</updated>
+      <workItem from="1517832514751" duration="15050000" />
     </task>
     <task id="LOCAL-00228" summary="Preset update, create, delete">
       <created>1517411813147</created>
@@ -771,7 +764,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517947598966</updated>
     </task>
-    <option name="localTasksCounter" value="276" />
+    <task id="LOCAL-00276" summary="change test.php">
+      <created>1517947755159</created>
+      <option name="number" value="00276" />
+      <option name="presentableId" value="LOCAL-00276" />
+      <option name="project" value="LOCAL" />
+      <updated>1517947755159</updated>
+    </task>
+    <option name="localTasksCounter" value="277" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -798,7 +798,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214549000" />
+    <option name="totallyTimeSpent" value="214744000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -860,7 +860,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add max and min Volume to iniString" />
     <MESSAGE value="debug AV constructor" />
     <MESSAGE value="change ini File" />
     <MESSAGE value="debug savePreset" />
@@ -885,7 +884,8 @@
     <MESSAGE value="test wss" />
     <MESSAGE value="change db structure" />
     <MESSAGE value="change db structure in LOGIN and save preset" />
-    <option name="LAST_COMMIT_MESSAGE" value="change db structure in LOGIN and save preset" />
+    <MESSAGE value="change test.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="change test.php" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1268,11 +1268,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="341">
+          <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
           <folding>
-            <marker date="1517947725049" expanded="true" signature="203:221" ph="SELECT * FRO... user" />
-            <marker date="1517947725049" expanded="true" signature="411:431" ph="SELECT * FRO... preset" />
+            <marker date="1517947920065" expanded="true" signature="203:221" ph="SELECT * FRO... user" />
+            <marker date="1517947920065" expanded="true" signature="379:399" ph="SELECT * FRO... preset" />
           </folding>
         </state>
       </provider>
