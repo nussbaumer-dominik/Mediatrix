@@ -7,6 +7,8 @@
  */
 namespace Mediatrix;
 
+use Firebase\JWT\JWT;
+
 require __DIR__ . '/../vendor/autoload.php';
 
 $jwt = $_POST['jwt'];

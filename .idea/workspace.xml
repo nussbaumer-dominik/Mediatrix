@@ -4,8 +4,6 @@
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/php/src/changeUserMode.php" afterPath="$PROJECT_DIR$/php/src/changeUserMode.php" />
-      <change beforePath="$PROJECT_DIR$/php/test.php" afterPath="$PROJECT_DIR$/php/test.php" />
-      <change beforePath="$PROJECT_DIR$/test_js/ws_test.html" afterPath="$PROJECT_DIR$/test_js/ws_test.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,23 +59,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="changeUserMode.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="changeUserMode.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/changeUserMode.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="30" column="16" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+            <state relative-caret-position="72">
+              <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
               <folding>
-                <marker date="1517950591478" expanded="true" signature="347:396" ph="UPDATE usert... " />
+                <marker date="1517950850503" expanded="true" signature="370:419" ph="UPDATE usert... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ws_test.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ws_test.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_js/ws_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="73" column="8" lean-forward="true" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
+            <state relative-caret-position="35">
+              <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -101,8 +99,8 @@
       <file leaf-file-name="Preset.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Preset.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="48" column="24" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="48" selection-end-column="24" />
+            <state relative-caret-position="90">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="21" />
               <folding>
                 <marker date="1517949128685" expanded="true" signature="444:499" ph="INSERT INTO preset... " />
                 <marker date="1517949128685" expanded="true" signature="891:958" ph="UPDATE preset... " />
@@ -177,8 +175,8 @@
         <option value="$PROJECT_DIR$/sqlite/db.sqlite" />
         <option value="$PROJECT_DIR$/php/src/Preset.php" />
         <option value="$PROJECT_DIR$/php/test.php" />
-        <option value="$PROJECT_DIR$/php/src/changeUserMode.php" />
         <option value="$PROJECT_DIR$/test_js/ws_test.html" />
+        <option value="$PROJECT_DIR$/php/src/changeUserMode.php" />
       </list>
     </option>
   </component>
@@ -370,14 +368,7 @@
       <workItem from="1517831264313" duration="731000" />
       <workItem from="1517832024390" duration="151000" />
       <workItem from="1517832204489" duration="269000" />
-      <workItem from="1517832514751" duration="17786000" />
-    </task>
-    <task id="LOCAL-00233" summary="change position of IR ini AV php">
-      <created>1517476513699</created>
-      <option name="number" value="00233" />
-      <option name="presentableId" value="LOCAL-00233" />
-      <option name="project" value="LOCAL" />
-      <updated>1517476513699</updated>
+      <workItem from="1517832514751" duration="17875000" />
     </task>
     <task id="LOCAL-00234" summary="debugs setVolume AV php">
       <created>1517476995960</created>
@@ -715,7 +706,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517949135886</updated>
     </task>
-    <option name="localTasksCounter" value="282" />
+    <task id="LOCAL-00282" summary="write change Usermod and change test js">
+      <created>1517950783169</created>
+      <option name="number" value="00282" />
+      <option name="presentableId" value="LOCAL-00282" />
+      <option name="project" value="LOCAL" />
+      <updated>1517950783169</updated>
+    </task>
+    <option name="localTasksCounter" value="283" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -742,7 +740,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217480000" />
+    <option name="totallyTimeSpent" value="217569000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -804,7 +802,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="debug savePreset" />
     <MESSAGE value="Preset update, create, delete" />
     <MESSAGE value="change ws test address" />
     <MESSAGE value="AV php" />
@@ -829,7 +826,8 @@
     <MESSAGE value="change test.php" />
     <MESSAGE value="change createDB" />
     <MESSAGE value="clear db" />
-    <option name="LAST_COMMIT_MESSAGE" value="clear db" />
+    <MESSAGE value="write change Usermod and change test js" />
+    <option name="LAST_COMMIT_MESSAGE" value="write change Usermod and change test js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1180,16 +1178,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Preset.php">
+    <entry file="file://$PROJECT_DIR$/test_js/ws_test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="48" column="24" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="48" selection-end-column="24" />
-          <folding>
-            <marker date="1517949128685" expanded="true" signature="444:499" ph="INSERT INTO preset... " />
-            <marker date="1517949128685" expanded="true" signature="891:958" ph="UPDATE preset... " />
-            <marker date="1517949128685" expanded="true" signature="1358:1413" ph="DELETE FROM preset... " />
-            <marker date="1517949128685" expanded="true" signature="1670:1717" ph="SELECT count... USER" />
-          </folding>
+        <state relative-caret-position="35">
+          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1206,21 +1199,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/changeUserMode.php">
+    <entry file="file://$PROJECT_DIR$/php/src/Preset.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="30" column="16" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        <state relative-caret-position="90">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="21" />
           <folding>
-            <marker date="1517950591478" expanded="true" signature="347:396" ph="UPDATE usert... " />
+            <marker date="1517949128685" expanded="true" signature="444:499" ph="INSERT INTO preset... " />
+            <marker date="1517949128685" expanded="true" signature="891:958" ph="UPDATE preset... " />
+            <marker date="1517949128685" expanded="true" signature="1358:1413" ph="DELETE FROM preset... " />
+            <marker date="1517949128685" expanded="true" signature="1670:1717" ph="SELECT count... USER" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_js/ws_test.html">
+    <entry file="file://$PROJECT_DIR$/php/src/changeUserMode.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="73" column="8" lean-forward="true" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="72">
+          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding>
+            <marker date="1517950850503" expanded="true" signature="370:419" ph="UPDATE usert... " />
+          </folding>
         </state>
       </provider>
     </entry>
