@@ -71,7 +71,7 @@ class Login
 
                 $sqlite = new \SQLite3("../../sqlite/db.sqlite");
 
-                $stm = $sqlite->prepare("INSERT INTO USER(id) VALUES :id");
+                $stm = $sqlite->prepare("INSERT INTO USER(id) VALUES (:id)");
 
                 $stm->bindParam(":id", $username);
 
