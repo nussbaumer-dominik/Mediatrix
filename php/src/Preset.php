@@ -17,6 +17,10 @@ class Preset
     static function create($data, $jwt)
     {
 
+
+
+
+
         $userId = JWT::decode($jwt, base64_decode(Key::getKey()), array("HS256"))->data->userName;
 
         $sqlite = new \SQLite3("../../sqlite/db.sqlite");
