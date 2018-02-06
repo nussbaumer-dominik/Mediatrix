@@ -69,6 +69,14 @@ class Login
                     ]
                 ];
 
+                $sqlite = new \SQLite3("../../sqlite/db.sqlite");
+
+                $stm = $sqlite->prepare("INSERT INTO USER(id) VALUES :id");
+
+                $stm->bindParam(":id", $username);
+
+                $stm->execute();
+
                 $jwt = JWT::encode($data, $this->key,'HS256');
 
                 $unencodedArray = ['jwt' => $jwt];
