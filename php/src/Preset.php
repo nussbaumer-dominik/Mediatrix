@@ -76,16 +76,16 @@ class Preset
 
         $result = $stm->execute();
 
-        $result = false;
+        $return = false;
 
         while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
-            $result = true;
+            $return = true;
             if($res['anz'] != 1){
-                $result = false;
+                $return = false;
             }
         }
 
-        return $result;
+        return $return;
 
     }
 }

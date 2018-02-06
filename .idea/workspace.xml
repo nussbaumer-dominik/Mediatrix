@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/sqlite/db.sqlite" afterPath="$PROJECT_DIR$/sqlite/db.sqlite" />
+      <change beforePath="$PROJECT_DIR$/php/src/Preset.php" afterPath="$PROJECT_DIR$/php/src/Preset.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,12 +74,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db.sqlite" pinned="false" current-in-tab="true">
+      <file leaf-file-name="db.sqlite" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sqlite/db.sqlite">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Preset.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/php/src/Preset.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+              <folding>
+                <marker date="1517949128685" expanded="true" signature="444:499" ph="INSERT INTO preset... " />
+                <marker date="1517949128685" expanded="true" signature="891:958" ph="UPDATE preset... " />
+                <marker date="1517949128685" expanded="true" signature="1358:1413" ph="DELETE FROM preset... " />
+                <marker date="1517949128685" expanded="true" signature="1670:1717" ph="SELECT count... USER" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -145,11 +160,11 @@
         <option value="$PROJECT_DIR$/test_js/ws_test.html" />
         <option value="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/markdown/Clemens/myChapter.md" />
         <option value="$PROJECT_DIR$/php/src/changeUserMode.php" />
-        <option value="$PROJECT_DIR$/php/src/Preset.php" />
         <option value="$PROJECT_DIR$/php/src/Login.php" />
         <option value="$PROJECT_DIR$/php/test.php" />
         <option value="$PROJECT_DIR$/php/src/createDB.php" />
         <option value="$PROJECT_DIR$/sqlite/db.sqlite" />
+        <option value="$PROJECT_DIR$/php/src/Preset.php" />
       </list>
     </option>
   </component>
@@ -341,14 +356,7 @@
       <workItem from="1517831264313" duration="731000" />
       <workItem from="1517832024390" duration="151000" />
       <workItem from="1517832204489" duration="269000" />
-      <workItem from="1517832514751" duration="15744000" />
-    </task>
-    <task id="LOCAL-00231" summary="AV php">
-      <created>1517476111893</created>
-      <option name="number" value="00231" />
-      <option name="presentableId" value="LOCAL-00231" />
-      <option name="project" value="LOCAL" />
-      <updated>1517476111893</updated>
+      <workItem from="1517832514751" duration="16251000" />
     </task>
     <task id="LOCAL-00232" summary="fix spelling mistake Av php">
       <created>1517476234642</created>
@@ -686,7 +694,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517948582065</updated>
     </task>
-    <option name="localTasksCounter" value="280" />
+    <task id="LOCAL-00280" summary="clear db">
+      <created>1517948625286</created>
+      <option name="number" value="00280" />
+      <option name="presentableId" value="LOCAL-00280" />
+      <option name="project" value="LOCAL" />
+      <updated>1517948625286</updated>
+    </task>
+    <option name="localTasksCounter" value="281" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -713,7 +728,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215438000" />
+    <option name="totallyTimeSpent" value="215945000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -775,7 +790,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change ini File" />
     <MESSAGE value="debug savePreset" />
     <MESSAGE value="Preset update, create, delete" />
     <MESSAGE value="change ws test address" />
@@ -800,7 +814,8 @@
     <MESSAGE value="change db structure in LOGIN and save preset" />
     <MESSAGE value="change test.php" />
     <MESSAGE value="change createDB" />
-    <option name="LAST_COMMIT_MESSAGE" value="change createDB" />
+    <MESSAGE value="clear db" />
+    <option name="LAST_COMMIT_MESSAGE" value="clear db" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1139,19 +1154,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Preset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="87" column="23" lean-forward="true" selection-start-line="70" selection-start-column="8" selection-end-line="87" selection-end-column="23" />
-          <folding>
-            <marker date="1517942062629" expanded="true" signature="444:499" ph="INSERT INTO preset... " />
-            <marker date="1517942062629" expanded="true" signature="891:958" ph="UPDATE preset... " />
-            <marker date="1517942062629" expanded="true" signature="1358:1413" ph="DELETE FROM preset... " />
-            <marker date="1517942062629" expanded="true" signature="1670:1717" ph="SELECT count... USER" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
@@ -1192,6 +1194,19 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Preset.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding>
+            <marker date="1517949128685" expanded="true" signature="444:499" ph="INSERT INTO preset... " />
+            <marker date="1517949128685" expanded="true" signature="891:958" ph="UPDATE preset... " />
+            <marker date="1517949128685" expanded="true" signature="1358:1413" ph="DELETE FROM preset... " />
+            <marker date="1517949128685" expanded="true" signature="1670:1717" ph="SELECT count... USER" />
+          </folding>
         </state>
       </provider>
     </entry>
