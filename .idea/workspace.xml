@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/test_js/ws_test.html" afterPath="$PROJECT_DIR$/test_js/ws_test.html" />
+      <change beforePath="$PROJECT_DIR$/php/src/createDB.php" afterPath="$PROJECT_DIR$/php/src/createDB.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -94,27 +94,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ws_test.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ws_test.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_js/ws_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+            <state relative-caret-position="125">
+              <caret line="48" column="31" lean-forward="true" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createDB.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="createDB.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="14" />
+            <state relative-caret-position="288">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
-                <marker date="1517948574821" expanded="true" signature="152:243" ph="create table... if" />
-                <marker date="1517948574821" expanded="true" signature="264:425" ph="create table... if" />
-                <marker date="1517948574821" expanded="true" signature="448:484" ph="insert into user... " />
-                <marker date="1517948574821" expanded="true" signature="504:569" ph="insert into preset... " />
+                <marker date="1517961484233" expanded="true" signature="152:243" ph="create table... if" />
+                <marker date="1517961484233" expanded="true" signature="264:425" ph="create table... if" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db.sqlite" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sqlite/db.sqlite">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -194,13 +202,13 @@
         <option value="$PROJECT_DIR$/php/src/readCode.php" />
         <option value="$PROJECT_DIR$/Diplomarbeitsbuch/Diplomarbeit-20171003/markdown/Clemens/myChapter.md" />
         <option value="$PROJECT_DIR$/php/src/Login.php" />
-        <option value="$PROJECT_DIR$/php/src/createDB.php" />
-        <option value="$PROJECT_DIR$/sqlite/db.sqlite" />
         <option value="$PROJECT_DIR$/php/src/Preset.php" />
         <option value="$PROJECT_DIR$/php/test.php" />
         <option value="$PROJECT_DIR$/php/src/changeUserMode.php" />
         <option value="$PROJECT_DIR$/php/info.php" />
         <option value="$PROJECT_DIR$/test_js/ws_test.html" />
+        <option value="$PROJECT_DIR$/php/src/createDB.php" />
+        <option value="$PROJECT_DIR$/sqlite/db.sqlite" />
       </list>
     </option>
   </component>
@@ -392,28 +400,7 @@
       <workItem from="1517831264313" duration="731000" />
       <workItem from="1517832024390" duration="151000" />
       <workItem from="1517832204489" duration="269000" />
-      <workItem from="1517832514751" duration="20363000" />
-    </task>
-    <task id="LOCAL-00240" summary="debugs setVolume AV php">
-      <created>1517477702380</created>
-      <option name="number" value="00240" />
-      <option name="presentableId" value="LOCAL-00240" />
-      <option name="project" value="LOCAL" />
-      <updated>1517477702380</updated>
-    </task>
-    <task id="LOCAL-00241" summary="debugs setVolume AV php">
-      <created>1517504940510</created>
-      <option name="number" value="00241" />
-      <option name="presentableId" value="LOCAL-00241" />
-      <option name="project" value="LOCAL" />
-      <updated>1517504940510</updated>
-    </task>
-    <task id="LOCAL-00242" summary="implement live status">
-      <created>1517506502686</created>
-      <option name="number" value="00242" />
-      <option name="presentableId" value="LOCAL-00242" />
-      <option name="project" value="LOCAL" />
-      <updated>1517506502686</updated>
+      <workItem from="1517832514751" duration="21329000" />
     </task>
     <task id="LOCAL-00243" summary="add regex jwt">
       <created>1517507556707</created>
@@ -737,7 +724,28 @@
       <option name="project" value="LOCAL" />
       <updated>1517959977841</updated>
     </task>
-    <option name="localTasksCounter" value="289" />
+    <task id="LOCAL-00289" summary="debugging">
+      <created>1517960741981</created>
+      <option name="number" value="00289" />
+      <option name="presentableId" value="LOCAL-00289" />
+      <option name="project" value="LOCAL" />
+      <updated>1517960741981</updated>
+    </task>
+    <task id="LOCAL-00290" summary="debugging">
+      <created>1517961003219</created>
+      <option name="number" value="00290" />
+      <option name="presentableId" value="LOCAL-00290" />
+      <option name="project" value="LOCAL" />
+      <updated>1517961003219</updated>
+    </task>
+    <task id="LOCAL-00291" summary="debugging">
+      <created>1517961490828</created>
+      <option name="number" value="00291" />
+      <option name="presentableId" value="LOCAL-00291" />
+      <option name="project" value="LOCAL" />
+      <updated>1517961490829</updated>
+    </task>
+    <option name="localTasksCounter" value="292" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -764,7 +772,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220057000" />
+    <option name="totallyTimeSpent" value="221023000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1164,27 +1172,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sqlite/db.sqlite">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="14" />
-          <folding>
-            <marker date="1517948574821" expanded="true" signature="152:243" ph="create table... if" />
-            <marker date="1517948574821" expanded="true" signature="264:425" ph="create table... if" />
-            <marker date="1517948574821" expanded="true" signature="448:484" ph="insert into user... " />
-            <marker date="1517948574821" expanded="true" signature="504:569" ph="insert into preset... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Preset.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1240,9 +1227,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_js/ws_test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+        <state relative-caret-position="125">
+          <caret line="48" column="31" lean-forward="true" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqlite/db.sqlite">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <marker date="1517961484233" expanded="true" signature="152:243" ph="create table... if" />
+            <marker date="1517961484233" expanded="true" signature="264:425" ph="create table... if" />
+          </folding>
         </state>
       </provider>
     </entry>

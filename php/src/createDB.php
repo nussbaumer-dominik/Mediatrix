@@ -19,8 +19,3 @@ $sqlite->exec('create table if not exists preset(
     user_id string not null,
     FOREIGN KEY(user_id) REFERENCES user(id)
 );');
-
-
-
-$sqlite->exec('insert into user(id) values ("test");');
-$sqlite->exec('insert into preset(json,user_id) values ("json-testdata", "test");');
