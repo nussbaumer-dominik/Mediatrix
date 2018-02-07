@@ -97,8 +97,8 @@
       <file leaf-file-name="ws_test.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_js/ws_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="13" column="63" lean-forward="false" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
+            <state relative-caret-position="125">
+              <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -410,14 +410,7 @@
       <workItem from="1517831264313" duration="731000" />
       <workItem from="1517832024390" duration="151000" />
       <workItem from="1517832204489" duration="269000" />
-      <workItem from="1517832514751" duration="24682000" />
-    </task>
-    <task id="LOCAL-00248" summary="programm read code php and cpp">
-      <created>1517559227351</created>
-      <option name="number" value="00248" />
-      <option name="presentableId" value="LOCAL-00248" />
-      <option name="project" value="LOCAL" />
-      <updated>1517559227351</updated>
+      <workItem from="1517832514751" duration="24808000" />
     </task>
     <task id="LOCAL-00249" summary="debug IR cpp">
       <created>1517559382107</created>
@@ -755,7 +748,14 @@
       <option name="project" value="LOCAL" />
       <updated>1518037785006</updated>
     </task>
-    <option name="localTasksCounter" value="297" />
+    <task id="LOCAL-00297" summary="change test address">
+      <created>1518044006843</created>
+      <option name="number" value="00297" />
+      <option name="presentableId" value="LOCAL-00297" />
+      <option name="project" value="LOCAL" />
+      <updated>1518044006843</updated>
+    </task>
+    <option name="localTasksCounter" value="298" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -782,7 +782,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="224376000" />
+    <option name="totallyTimeSpent" value="224502000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1257,8 +1257,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_js/ws_test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="13" column="63" lean-forward="false" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
+        <state relative-caret-position="125">
+          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
           <folding />
         </state>
       </provider>
