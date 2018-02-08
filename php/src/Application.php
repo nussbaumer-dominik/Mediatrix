@@ -8,14 +8,10 @@
 
 namespace Mediatrix;
 
-use Firebase\JWT\BeforeValidException;
 use Firebase\JWT\ExpiredException;
 use Firebase\JWT\JWT;
-use Firebase\JWT\SignatureInvalidException;
-use Ratchet\MessageComponentInterface;
 use Ratchet\ConnectionInterface;
-use Ratchet\Wamp\Exception;
-use function Sodium\add;
+use Ratchet\MessageComponentInterface;
 
 
 class Application implements MessageComponentInterface
@@ -217,6 +213,8 @@ class Application implements MessageComponentInterface
 
     public function onClose(ConnectionInterface $conn)
     {
+        $this->registerd = false;
+
         // The connection is closed, remove it, as we can no longer send it messages
         $this->client = null;
 
