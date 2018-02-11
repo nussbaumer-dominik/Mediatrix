@@ -22,7 +22,7 @@ for f in *.md
 do
  if [ -d "$f" ]
     then
-        for ff in $f/*
+        for ff in $f/*.md
         do      
            pandoc ${PANDOCOPT} $ff -o $ff.tex 
         done
