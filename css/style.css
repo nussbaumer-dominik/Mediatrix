@@ -135,6 +135,8 @@ header {
   padding: 50px; }
   .features .columns {
     padding: 30px .9375rem; }
+  .features #compact {
+    width: 180px; }
   @media (max-width: 64em) {
     .features .f1 div:nth-child(1) {
       order: 2; } }
@@ -157,6 +159,9 @@ header {
 .team {
   margin-bottom: 100px;
   text-align: center; }
+  .team h2 {
+    margin: 0 auto;
+    padding-bottom: 20px; }
   .team img {
     border-radius: 10px; }
   .team .names div {
@@ -195,7 +200,6 @@ header {
     top: 20px;
     margin-left: 20px;
     background-color: grey;
-    vertical-align: middle;
     border-radius: 100%;
     display: block; }
     @media (max-width: 40em) {
@@ -241,12 +245,12 @@ footer {
         margin: 2rem auto 2rem auto; } }
     footer .foot_top a {
       float: left; }
-      footer .foot_top a h1 {
+      footer .foot_top a h2 {
         font-size: 3em;
         line-height: 67px; }
-    footer .foot_top h1 {
+    footer .foot_top h2 {
       right: 0;
-      font-family: "Montserrat" !important;
+      font-family: "Montserrat";
       float: right; }
   footer .foot_bottom {
     padding: 0 2.5vw;

@@ -222,6 +222,10 @@ body {
     padding: 30px .9375rem;
   }
 
+  #compact{
+    width: 180px;
+  }
+
   .f1{
 
 
@@ -266,6 +270,11 @@ body {
 .team {
   margin-bottom: 100px;
   text-align: center;
+
+  h2{
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
 
   img{
     border-radius: 10px;
@@ -317,7 +326,6 @@ body {
     top: 20px;
     margin-left: 20px;
     background-color: grey;
-    vertical-align: middle;
     border-radius: 100%;
     display: block;
 
@@ -377,15 +385,15 @@ footer{
     a{
       float: left;
 
-      h1{
+      h2{
         font-size: 3em;
         line-height: 67px;
       }
     }
 
-    h1{
+    h2{
       right: 0;
-      font-family: "Montserrat" !important;
+      font-family: "Montserrat";
       float: right;
     }
   }

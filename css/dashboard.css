@@ -20,6 +20,7 @@ a {
   margin: 0;
   padding: 0;
   height: 100vh;
+  flex-direction: row;
   overflow: hidden; }
 
 .side-nav {
@@ -31,6 +32,7 @@ a {
   width: 7vw;
   transition: all .2s ease-in-out;
   display: flex;
+  order: 1;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -89,8 +91,18 @@ a {
   overflow-y: hidden;
   display: flex;
   justify-content: center;
-  flex-direction: column; }
+  flex-direction: column;
+  order: 2; }
 
+/*.content{
+  background-color: inherit;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}*/
 .flex-container {
   height: 100%;
   width: 100%;
@@ -101,15 +113,16 @@ a {
   justify-content: flex-start;
   align-items: flex-start; }
 
-.statusbox {
-  width: 100%; }
-  .statusbox .statusgrid {
+.statusBox {
+  width: 100%;
+  display: none; }
+  .statusBox .statusGrid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 100%;
     grid-column-gap: 10px;
     padding: 30px; }
-    .statusbox .statusgrid div {
+    .statusBox .statusGrid div {
       background: white;
       border-radius: 10px;
       border: 4px solid #1E283D;
@@ -117,6 +130,9 @@ a {
       -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
       -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
       box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1); }
+
+.toggleStatus {
+  display: block; }
 
 .box {
   flex: 0 0 500px;
@@ -165,6 +181,22 @@ a {
         cursor: pointer; }
       .box .buttons ul li:nth-child(1), .box .buttons ul li:nth-child(2), .box .buttons ul li:nth-child(3) {
         margin-bottom: 10px; }
+  .box .presentation {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100%;
+    grid-column-gap: 10px;
+    padding: 30px; }
+    .box .presentation .preset {
+      background: white;
+      border-radius: 10px;
+      border: 4px solid #1E283D;
+      padding: 50px 15px;
+      -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1); }
   .box .wrapper {
     height: 87%;
     width: 80%;
@@ -452,13 +484,14 @@ button {
 /* Media Queries */
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
+  .parent {
+    flex-direction: column; }
   .side-nav {
-    position: fixed;
-    bottom: 0;
+    order: 2;
     width: 100vw;
     height: 66px;
-    padding-top: 11px;
-    padding-bottom: 11px; }
+    padding-top: 0px;
+    padding-bottom: 0px; }
     .side-nav ul {
       margin: 0;
       padding: 0;
@@ -467,7 +500,8 @@ button {
       flex-direction: row;
       align-items: center; }
       .side-nav ul li {
-        width: 25%; }
+        width: 25%;
+        margin: 0; }
         .side-nav ul li a {
           padding: .5rem .5rem; }
     .side-nav .avatar {
@@ -477,24 +511,23 @@ button {
   .content {
     height: calc(100% - 66px);
     width: 100%;
-    position: absolute;
-    top: 0; }
+    order: 1; }
   .box {
     flex: 0 0 95%;
     height: 460px;
     box-sizing: border-box;
     background: transparent;
     border-radius: 10px; }
-  .statusbox {
+  .statusBox {
     display: none;
     width: 100%; }
-    .statusbox .statusgrid {
+    .statusBox .statusGrid {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: 100%;
       grid-column-gap: 10px;
       padding: 30px; }
-      .statusbox .statusgrid div {
+      .statusBox .statusGrid div {
         background: white;
         border-radius: 10px;
         border: 4px solid #1E283D;

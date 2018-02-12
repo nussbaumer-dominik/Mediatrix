@@ -8,9 +8,6 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Mediatrix | Dashboard</title>
 
-        <!-- jQuery -->
-        <script src="js/jquery-3.2.1.min.js"></script>
-
         <!-- Stylesheets -->
         <link rel="stylesheet" href="css/material.css">
         <link rel="stylesheet" href="css/snackbar.css">
@@ -41,8 +38,8 @@
               </div>
           </div>
           <div class="content">
-              <div class="statusbox">
-                  <div class="statusgrid">
+              <div class="statusBox ">
+                  <div class="statusGrid">
                       <div>Beamer Eingang:</div>
                       <div>Master: </div>
                       <div>Mikro 1:</div>
@@ -111,49 +108,28 @@
                     </div>
                   </div>
               </div>
+
+              <div class="presentation">
+                <div class="preset"></div>
+                <div class="preset"></div>
+                <div class="preset"></div>
+                <div class="preset"></div>
+                <div class="preset"></div>
+                <div class="preset"></div>
+                <div class="preset"></div>
+                <div class="preset"></div>
+                <div class="preset"></div>
+              </div>
+
           </div>
           <span style="display: none;" class="btn" data-toggle="snackbar" data-content="message" data-timeout=0>Snackbar</span>
       </div>
+      <!-- jQuery -->
+      <script src="js/jquery-3.2.1.min.js"></script>
       <script src="js/snackbar.js"></script>
       <script src="js/functions.js"></script>
       <script src="js/main.js"></script>
       <script src="https://unpkg.com/vue@2.5.9/dist/vue.js"></script>
       <script src="js/vue_app.js"></script>
-      <script>
-      /*
-      $(".flex-wrapper > span").each(function() {
-        var value = parseInt($(this).text());
-        $(this).slider({
-          value: value,
-          min: 0,
-          max: 255,
-          range: "min",
-          orientation: "vertical",
-          slide: function(event, ui) {
-            $("#amount").val(ui.value);
-          }
-        });
-        $("#amount").val( $(".slider").slider("value") );
-      });
-
-
-        $(".slider").change(function(){
-          var val = $(this).val();
-          var id = $(this).attr("data-id");
-
-          console.log("sending request: " + id + ":" + val);*/
-
-          /*$.ajax({
-            url: "php/send.php",
-            data: {"channel" : id, "value" : val},
-            success: function(result){
-              console.log("success");
-            },
-            error: function(result){
-              console.log("error");
-            }
-          });
-        })*/
-      </script>
     </body>
 </html>
