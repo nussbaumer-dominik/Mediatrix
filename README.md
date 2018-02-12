@@ -1,7 +1,7 @@
 # Mediatrix
 
 WS command structure (JSON):
-```JSON 
+```json
 {
 "jwt":"ilsdugfilsagufisgf",
 "dmx":
@@ -17,8 +17,7 @@ WS command structure (JSON):
         "rot":2,
         "gruen":255,
         "blau":100,
-        "weiss":255, 
-        "hue":10
+        "weiss":255
       },
       "blackout":1,
       "noblackout":1      
@@ -39,15 +38,15 @@ WS command structure (JSON):
 ```
 
 Response JSON structure
-```
+```json
 {
     "success":false,
     "error":"Login fehlgeschlagen"
-},
+}
 ```
 
 Ini JSON structure
-```
+```json
 {
 
 }
