@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
         <!-- Metadaten -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +10,12 @@
         <!-- Stylesheets -->
         <link rel="stylesheet" href="css/material.css">
         <link rel="stylesheet" href="css/snackbar.css">
+        <link rel="stylesheet" href="css/vertical-slider.css">
+        <link rel="stylesheet" href="css/nouislider.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link rel="stylesheet" href="css/dashboard.css">
+
 
         <!-- Font -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -37,6 +39,11 @@
                 <div class="img"></div>
               </div>
           </div>
+
+          <div class="tooltip">
+            ich bin sick
+          </div>
+
           <div class="content">
               <div class="statusBox ">
                   <div class="statusGrid">
@@ -49,76 +56,142 @@
                   </div>
               </div>
 
-              <div class="flex-container">
-                  <div class="box" id="beamerBox" data-box="1">
-                    <h1>Beamer</h1>
-                    <nav class="menu">
-                        <input type="checkbox" href="#" class="menu-open" id="power"/>
-                        <label class="menu-open-button" for="power">
-                            <i class="fa fa-power-off" aria-hidden="true"></i>
-                        </label>
+              <div class="flex-container flex">
+                <!-- Beamer Box -->
+                <div class="box" id="beamerBox" data-box="1">
+                  <h1>Beamer</h1>
+                  <nav class="menu">
+                    <input type="checkbox" href="#" class="menu-open" id="power"/>
+                    <label class="menu-open-button" for="power">
+                      <i class="fa fa-power-off" id="power" aria-hidden="true"></i>
+                    </label>
 
-                        <a href="#" class="menu-item" id="src">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path d="M21 3.01H3c-1.1 0-2 .9-2 2V9h2V4.99h18v14.03H3V15H1v4.01c0 1.1.9 1.98 2 1.98h18c1.1 0 2-.88 2-1.98v-14c0-1.11-.9-2-2-2zM11 16l4-4-4-4v3H1v2h10v3z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="menu-item clickable" id="menu"> <i class="fa fa-bars"></i> </a>
-                        <a href="#" class="menu-item clickable" id="up"> <i class="fa fa-caret-up"></i> </a>
-                        <a href="#" class="menu-item clickable" id="right"> <i class="fa fa-caret-right"></i> </a>
-                        <a href="#" class="menu-item clickable" id="down"> <i class="fa fa-caret-down"></i> </a>
-                        <a href="#" class="menu-item clickable" id="left"> <i class="fa fa-caret-left"></i> </a>
-                        <a href="#" class="menu-item clickable" id="ok"> OK </a>
-                    </nav>
-                  </div>
-                  <div class="box" id="avBox" data-box="2">
-                      <h1>AV-Receiver</h1>
-                      <div class="wrapper" >
-                          <input type="range" v-model="p1" min="0" max="100" value="0" class="slider" id="av-slider" data-type="av" data-id="0">
-                          <p class="p1">{{p1}}</p>
-                          <p class="av-slider-text">Master</p>
+                    <a href="#" class="menu-item" id="src">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M21 3.01H3c-1.1 0-2 .9-2 2V9h2V4.99h18v14.03H3V15H1v4.01c0 1.1.9 1.98 2 1.98h18c1.1 0 2-.88 2-1.98v-14c0-1.11-.9-2-2-2zM11 16l4-4-4-4v3H1v2h10v3z"/>
+                      </svg>
+                    </a>
+                    <a href="#" class="menu-item clickable" id="menu"> <i class="fa fa-bars"></i> </a>
+                    <a href="#" class="menu-item clickable" id="up"> <i class="fa fa-caret-up"></i> </a>
+                    <a href="#" class="menu-item clickable" id="right"> <i class="fa fa-caret-right"></i> </a>
+                    <a href="#" class="menu-item clickable" id="down"> <i class="fa fa-caret-down"></i> </a>
+                    <a href="#" class="menu-item clickable" id="left"> <i class="fa fa-caret-left"></i> </a>
+                    <a href="#" class="menu-item clickable" id="ok"> OK </a>
+                  </nav>
+                </div>
 
-                          <div class="buttons">
-                              <ul>
-                                  <li class="mode">Praesentation</li>
-                                  <li class="mode">Musik</li>
-                                  <li class="mode">Film</li>
-                                  <li class="mode">Universal</li>
-                              </ul>
-                          </div>
-                      </div>
-
-                  </div>
-                  <div class="box" id="mikrofonBox" data-box="3">
-                    <h1>Mikrofone</h1>
-                    <div class="wrapper">
-                      <input type="range" v-model="p2" min="0" max="100" value="0" class="slider" id="mikro1-slider" data-type="mixer" data-id="0">
-                      <p class="p2">{{p2}}</p>
-                      <input type="range" v-model="p3" min="0" max="100" value="0" class="slider" id="mikro2-slider" data-type="mixer" data-id="1">
-                      <p class="p3">{{p3}}</p>
+                <!-- AV-Receiver Box -->
+                <div class="box" id="avBox" data-box="2">
+                  <h1>AV-Receiver</h1>
+                  <div class="flex-wrapper">
+                    <!-- AV Slider 1 -->
+                    <div id="avSlider1-wrapper">
+                      <div id="avSlider1"></div>
+                      <div class="valueField" id="avSlider1Value"></div>
+                      <div class="textField">Master</div>
+                    </div>
+                    <div class="buttons">
+                      <ul>
+                        <li class="mode">Praesentation</li>
+                        <li class="mode">Musik</li>
+                        <li class="mode">Film</li>
+                        <li class="mode">Universal</li>
+                      </ul>
                     </div>
                   </div>
-                  <div class="box" id="lichtBox" data-box="4">
-                    <h1>Licht</h1>
-                    <div class="wrapper">
-                      <input type="range" v-model="p4" min="0" max="255" value="0" class="slider lightSlider" id="licht1-slider" data-type="licht" data-id="0">
-                      <p class="p4">{{p4}}</p>
-                      <input type="range" v-model="p5" min="0" max="255" value="0" class="slider lightSlider" id="licht2-slider" data-type="licht" data-id="1">
-                      <p class="p5">{{p5}}</p>
+                </div>
+
+                <!-- Mikrofon Box -->
+                <div class="box" id="mikrofonBox" data-box="3">
+                  <h1>Mikrofone</h1>
+                  <!-- Mikro 1 -->
+                  <div class="flex-wrapper">
+                    <div id="mikroSlider1-wrapper">
+                      <div id="mikroSlider1"></div>
+                      <div class="valueField" id="mikroSlider1Value"></div>
+                      <div class="textField">Mikro 1</div>
+                    </div>
+                    <!-- Mikro 2 -->
+                    <div id="mikroSlider2-wrapper">
+                      <div id="mikroSlider2"></div>
+                      <div class="valueField" id="mikroSlider2Value"></div>
+                      <div class="textField">Mikro 2</div>
+                    </div>
+
+                    <!-- Master -->
+                    <div id="mikroMasterSlider-wrapper">
+                      <div id="mikroMasterSlider"></div>
+                      <div class="valueField" id="mikroMasterSliderValue"></div>
+                      <div class="textField">Master</div>
                     </div>
                   </div>
+                </div>
+
+                <!-- Licht Box -->
+                <div class="box" id="lichtBox" data-box="4">
+                  <h1>Licht</h1>
+                  <div class="flex-wrapper space-between">
+                    <!-- Licht Slider 1 -->
+                    <div id="lichtSlider1-wrapper">
+                      <div id="lichtSlider1"></div>
+                      <div class="valueField" id="lichtSlider1Value"></div>
+                      <div class="textField">Licht 1</div>
+                    </div>
+
+                    <!-- Licht Slider 2 -->
+                    <div id="lichtSlider2-wrapper">
+                      <div id="lichtSlider2"></div>
+                      <div class="valueField" id="lichtSlider2Value"></div>
+                      <div class="textField">Licht 2</div>
+                    </div>
+
+                    <!-- Licht Slider 3 -->
+                    <div id="lichtSlider3-wrapper">
+                      <div id="lichtSlider3"></div>
+                      <div class="valueField" id="lichtSlider3Value"></div>
+                      <div class="textField">Licht 3</div>
+                    </div>
+
+                    <!-- Licht Helligkeit Slider -->
+                    <div id="lichtHelligkeitSlider-wrapper">
+                      <div id="lichtHelligkeitSlider"></div>
+                      <div class="blackout"></div>
+                      <div class="valueField" id="lichtHelligkeitSliderValue"></div>
+                      <div class="textField">Helligkeit</div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div class="presentation">
-                <div class="preset"></div>
-                <div class="preset"></div>
-                <div class="preset"></div>
-                <div class="preset"></div>
-                <div class="preset"></div>
-                <div class="preset"></div>
-                <div class="preset"></div>
-                <div class="preset"></div>
-                <div class="preset"></div>
+                <div class="preset">
+                  <h2>Preset 1</h2>
+
+                </div>
+                <div class="preset">
+
+                </div>
+                <div class="preset">
+
+                </div>
+                <div class="preset">
+
+                </div>
+                <div class="preset">
+
+                </div>
+                <div class="preset">
+
+                </div>
+                <div class="preset">
+
+                </div>
+                <div class="preset">
+
+                </div>
+                <div class="preset">
+
+                </div>
               </div>
 
           </div>
@@ -129,7 +202,157 @@
       <script src="js/snackbar.js"></script>
       <script src="js/functions.js"></script>
       <script src="js/main.js"></script>
+      <script src="js/range-slider.js"></script>
+      <script src="js/nouislider.min.js"></script>
       <script src="https://unpkg.com/vue@2.5.9/dist/vue.js"></script>
       <script src="js/vue_app.js"></script>
+
+      <!-- Slider Init -->
+      <script type="text/javascript">
+        //sliders + values
+        var avSlider1 = document.getElementById('avSlider1');
+        var avSlider1Value = document.getElementById('avSlider1Value');
+        //Mikrofon
+        var mikroSlider1 = document.getElementById('mikroSlider1');
+        var mikroSlider2 = document.getElementById('mikroSlider2');
+        var mikroMasterSlider = document.getElementById('mikroMasterSlider');
+        var mikroSlider1Value = document.getElementById('mikroSlider1Value');
+        var mikroSlider2Value = document.getElementById('mikroSlider2Value');
+        var mikroMasterSliderValue = document.getElementById('mikroMasterSliderValue');
+
+        //Licht
+        var lichtSlider1 = document.getElementById('lichtSlider1');
+        var lichtSlider2 = document.getElementById('lichtSlider2');
+        var lichtSlider3 = document.getElementById('lichtSlider3');
+        var lichtHelligkeitSlider = document.getElementById('lichtHelligkeitSlider');
+        var lichtSlider1Value = document.getElementById('lichtSlider1Value');
+        var lichtSlider2Value = document.getElementById('lichtSlider2Value');
+        var lichtSlider3Value = document.getElementById('lichtSlider3Value');
+        var lichtHelligkeitSliderValue = document.getElementById('lichtHelligkeitSliderValue');
+
+        //AV Slider
+        noUiSlider.create(avSlider1, {
+        	start: 0,
+          connect: [false, false],
+          direction: 'rtl',
+        	orientation: 'vertical',
+        	range: {
+        		'min': 0,
+        		'max': 100
+        	}
+        });
+
+        avSlider1.noUiSlider.on('update', function(values, handle){
+          	avSlider1Value.innerHTML = values[handle];
+        });
+
+        //Mikrofon Slider
+        noUiSlider.create(mikroSlider1, {
+        	start: 0,
+          connect: [false, false],
+          direction: 'rtl',
+        	orientation: 'vertical',
+        	range: {
+        		'min': 0,
+        		'max': 100
+        	}
+        });
+
+        mikroSlider1.noUiSlider.on('update', function(values, handle){
+          	mikroSlider1Value.innerHTML = values[handle];
+        });
+
+        noUiSlider.create(mikroSlider2, {
+        	start: 0,
+          connect: [false, false],
+          direction: 'rtl',
+        	orientation: 'vertical',
+        	range: {
+        		'min': 0,
+        		'max': 100
+        	}
+        });
+
+        mikroSlider2.noUiSlider.on('update', function(values, handle){
+          	mikroSlider2Value.innerHTML = values[handle];
+        });
+
+        noUiSlider.create(mikroMasterSlider, {
+        	start: 0,
+          connect: [false, false],
+          direction: 'rtl',
+        	orientation: 'vertical',
+        	range: {
+        		'min': 0,
+        		'max': 100
+        	}
+        });
+
+        mikroMasterSlider.noUiSlider.on('update', function(values, handle){
+          	mikroMasterSliderValue.innerHTML = values[handle];
+        });
+
+        //Licht Slider
+        noUiSlider.create(lichtSlider1, {
+        	start: 0,
+          connect: [false, false],
+          direction: 'rtl',
+        	orientation: 'vertical',
+        	range: {
+        		'min': 0,
+        		'max': 100
+        	}
+        });
+
+        lichtSlider1.noUiSlider.on('update', function(values, handle){
+          	lichtSlider1Value.innerHTML = values[handle];
+        });
+
+        noUiSlider.create(lichtSlider2, {
+        	start: 0,
+          connect: [false, false],
+          direction: 'rtl',
+        	orientation: 'vertical',
+        	range: {
+        		'min': 0,
+        		'max': 100
+        	}
+        });
+
+        lichtSlider2.noUiSlider.on('update', function(values, handle){
+          	lichtSlider2Value.innerHTML = values[handle];
+        });
+
+        noUiSlider.create(lichtSlider3, {
+        	start: 0,
+          connect: [false, false],
+          direction: 'rtl',
+        	orientation: 'vertical',
+        	range: {
+        		'min': 0,
+        		'max': 100
+        	}
+        });
+
+        lichtSlider3.noUiSlider.on('update', function(values, handle){
+          	lichtSlider3Value.innerHTML = values[handle];
+        });
+
+        noUiSlider.create(lichtHelligkeitSlider, {
+        	start: 0,
+          connect: [false, false],
+          direction: 'rtl',
+        	orientation: 'vertical',
+        	range: {
+        		'min': 0,
+        		'max': 100
+        	}
+        });
+
+        lichtHelligkeitSlider.noUiSlider.on('update', function(values, handle){
+          	lichtHelligkeitSliderValue.innerHTML = values[handle];
+        });
+
+      </script>
     </body>
 </html>
