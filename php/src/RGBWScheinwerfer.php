@@ -28,6 +28,8 @@ class RGBWScheinwerfer extends Scheinwerfer
             $data[$this->channels['w']] = $val['w'];
         }
 
+        var_dump($data);
+
         $r = json_decode(str_replace("'",'"',$this->dmx::sendChannel($data)));
 
         return $r;
@@ -48,9 +50,9 @@ class RGBWScheinwerfer extends Scheinwerfer
         return json_decode(
             str_replace("'", '"',
                 $this->dmx::sendChannel(
-                    array(
+
                         $data
-                    )
+
                 )
             )
         );
@@ -71,9 +73,9 @@ class RGBWScheinwerfer extends Scheinwerfer
         return json_decode(
             str_replace("'", '"',
                 $this->dmx::sendChannel(
-                    array(
+
                         $data
-                    )
+
                 )
             )
         );
