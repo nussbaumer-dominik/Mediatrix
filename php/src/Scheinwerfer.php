@@ -14,6 +14,7 @@ class Scheinwerfer
     {
         $this->channels = $channels;
         $this->dmx = new \DMX();
+        $this->off();
     }
 
     public function dimmen(int $val)
