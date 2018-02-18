@@ -115,9 +115,9 @@
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
-              <caret line="279" column="34" lean-forward="false" selection-start-line="279" selection-start-column="34" selection-end-line="279" selection-end-column="34" />
+              <caret line="279" column="37" lean-forward="true" selection-start-line="279" selection-start-column="37" selection-end-line="279" selection-end-column="37" />
               <folding>
-                <marker date="1518979333894" expanded="true" signature="9098:9138" ph="SELECT * FRO... preset" />
+                <marker date="1518979404204" expanded="true" signature="9098:9138" ph="SELECT * FRO... preset" />
               </folding>
             </state>
           </provider>
@@ -406,13 +406,6 @@
       <workItem from="1518108274331" duration="2862000" />
       <workItem from="1518348786101" duration="3538000" />
       <workItem from="1518453299841" duration="2250000" />
-    </task>
-    <task id="LOCAL-00262" summary="change IR device number">
-      <created>1517832849839</created>
-      <option name="number" value="00262" />
-      <option name="presentableId" value="LOCAL-00262" />
-      <option name="project" value="LOCAL" />
-      <updated>1517832849839</updated>
     </task>
     <task id="LOCAL-00263" summary="change IR device number">
       <created>1517833107678</created>
@@ -750,7 +743,14 @@
       <option name="project" value="LOCAL" />
       <updated>1518979228749</updated>
     </task>
-    <option name="localTasksCounter" value="311" />
+    <task id="LOCAL-00311" summary="debug rgbw scheinwerfer">
+      <created>1518979342548</created>
+      <option name="number" value="00311" />
+      <option name="presentableId" value="LOCAL-00311" />
+      <option name="project" value="LOCAL" />
+      <updated>1518979342548</updated>
+    </task>
+    <option name="localTasksCounter" value="312" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -777,7 +777,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="242947000" />
+    <option name="totallyTimeSpent" value="243018000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1246,9 +1246,9 @@
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="279" column="34" lean-forward="false" selection-start-line="279" selection-start-column="34" selection-end-line="279" selection-end-column="34" />
+          <caret line="279" column="37" lean-forward="true" selection-start-line="279" selection-start-column="37" selection-end-line="279" selection-end-column="37" />
           <folding>
-            <marker date="1518979333894" expanded="true" signature="9098:9138" ph="SELECT * FRO... preset" />
+            <marker date="1518979404204" expanded="true" signature="9098:9138" ph="SELECT * FRO... preset" />
           </folding>
         </state>
       </provider>
