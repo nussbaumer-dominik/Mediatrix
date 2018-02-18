@@ -28,7 +28,7 @@ class RGBWScheinwerfer extends Scheinwerfer
             $data[$this->channels['w']] = $val['w'];
         }
 
-        $r = json_decode(str_replace("'",'"',$this->dmx::sendChannel()));
+        $r = json_decode(str_replace("'",'"',$this->dmx::sendChannel($data)));
 
         return $r;
     }
