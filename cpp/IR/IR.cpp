@@ -16,7 +16,6 @@ class IR : public Php::Base {
     public:
      static Php::Value send(Php::Parameters &params){
 
-        string timesStr = params[1];
         int times = params[1];
 
         //open serial connection to IR-Device
@@ -47,11 +46,9 @@ class IR : public Php::Base {
             delay(150*times);
         }
 
-        std::cout << times << endl;
-
         times %= 99;
 
-        std::cout << times << endl;
+        string timesStr = times;
 
         if(timesStr.length()==1){
             timesStr = "0"+timesStr;
