@@ -48,7 +48,7 @@ class IR : public Php::Base {
 
         times %= 99;
 
-        string timesStr = times;
+        string timesStr = to_string(times);
 
         if(timesStr.length()==1){
             timesStr = "0"+timesStr;
