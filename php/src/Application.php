@@ -285,9 +285,14 @@ class Application implements MessageComponentInterface
                         }
                     }
 
-                }else{
+                }elseif (preg_match('/[0-9]+/', $dev['r']) && 0 <= $dev['r'] && $dev['r'] <= 255 &&
+                    preg_match('/[0-9]+/', $dev['g']) && 0 <= $dev['g'] && $dev['g'] <= 255 &&
+                    preg_match('/[0-9]+/', $dev['b']) && 0 <= $dev['b'] && $dev['b'] <= 255){
 
-                    $r = $this->scheinwerfer[$dev["id"]]->dimmen($dev);
+                    $send = $dev;
+                    unset($send['id']);
+
+                    $r = $this->scheinwerfer[$dev["id"]]->dimmen($send);
 
                     if (!$r->success) {
                         array_push($result, $r);
