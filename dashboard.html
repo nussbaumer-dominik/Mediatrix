@@ -37,11 +37,10 @@
 
               <div class="avatar">
                 <div class="img"></div>
+                <div class="tooltip">
+                  sick
+                </div>
               </div>
-          </div>
-
-          <div class="tooltip">
-            ich bin sick
           </div>
 
           <div class="content">
@@ -135,32 +134,37 @@
                     <div id="lichtSlider1-wrapper">
                       <div id="lichtSlider1"></div>
                       <div class="valueField" id="lichtSlider1Value"></div>
-                      <div class="textField">Licht 1</div>
+                      <div class="textField">Rot</div>
                     </div>
 
                     <!-- Licht Slider 2 -->
                     <div id="lichtSlider2-wrapper">
                       <div id="lichtSlider2"></div>
                       <div class="valueField" id="lichtSlider2Value"></div>
-                      <div class="textField">Licht 2</div>
+                      <div class="textField">Grün</div>
                     </div>
 
                     <!-- Licht Slider 3 -->
                     <div id="lichtSlider3-wrapper">
                       <div id="lichtSlider3"></div>
                       <div class="valueField" id="lichtSlider3Value"></div>
-                      <div class="textField">Licht 3</div>
+                      <div class="textField">Blau</div>
                     </div>
 
                     <!-- Licht Helligkeit Slider -->
-                    <div id="lichtHelligkeitSlider-wrapper">
-                      <div id="lichtHelligkeitSlider"></div>
+                    <div id="lichtWeissSlider-wrapper">
+                      <div id="lichtWeissSlider"></div>
                       <div class="blackout"></div>
-                      <div class="valueField" id="lichtHelligkeitSliderValue"></div>
-                      <div class="textField">Helligkeit</div>
+                      <div class="valueField" id="lichtWeissSliderValue"></div>
+                      <div class="textField">Weiß</div>
                     </div>
                   </div>
                 </div>
+              </div>
+
+              <div class="mobileOptions">
+                <div class="mobileBtn showStatus"></div>
+                <div class="mobileBtn saveAsPreset"></div>
               </div>
 
               <div class="presentation">
@@ -204,8 +208,6 @@
       <script src="js/main.js"></script>
       <script src="js/range-slider.js"></script>
       <script src="js/nouislider.min.js"></script>
-      <script src="https://unpkg.com/vue@2.5.9/dist/vue.js"></script>
-      <script src="js/vue_app.js"></script>
 
       <!-- Slider Init -->
       <script type="text/javascript">
@@ -224,135 +226,62 @@
         var lichtSlider1 = document.getElementById('lichtSlider1');
         var lichtSlider2 = document.getElementById('lichtSlider2');
         var lichtSlider3 = document.getElementById('lichtSlider3');
-        var lichtHelligkeitSlider = document.getElementById('lichtHelligkeitSlider');
+        var lichtWeissSlider = document.getElementById('lichtWeissSlider');
         var lichtSlider1Value = document.getElementById('lichtSlider1Value');
         var lichtSlider2Value = document.getElementById('lichtSlider2Value');
         var lichtSlider3Value = document.getElementById('lichtSlider3Value');
-        var lichtHelligkeitSliderValue = document.getElementById('lichtHelligkeitSliderValue');
+        var lichtWeissSliderValue = document.getElementById('lichtWeissSliderValue');
 
-        //AV Slider
-        noUiSlider.create(avSlider1, {
-        	start: 0,
-          connect: [false, false],
-          direction: 'rtl',
-        	orientation: 'vertical',
-        	range: {
-        		'min': 0,
-        		'max': 100
-        	}
-        });
+        var allItems  = [avSlider1, mikroSlider1, mikroSlider2, mikroMasterSlider, lichtSlider1, lichtSlider2, lichtSlider3, lichtWeissSlider];
+        var allValues = [avSlider1Value, mikroSlider1Value, mikroSlider2Value, mikroMasterSliderValue, lichtSlider1Value, lichtSlider2Value, lichtSlider3Value, lichtWeissSliderValue];
 
+        for(var i=0;i<allItems.length;i++){
+          noUiSlider.create(allItems[i], {
+          	start: 0,
+            connect: [false, false],
+            direction: 'rtl',
+          	orientation: 'vertical',
+          	range: {
+          		'min': 0,
+          		'max': 100
+          	}
+          });
+        }
+
+        //AV Slider Value
         avSlider1.noUiSlider.on('update', function(values, handle){
           	avSlider1Value.innerHTML = values[handle];
         });
 
-        //Mikrofon Slider
-        noUiSlider.create(mikroSlider1, {
-        	start: 0,
-          connect: [false, false],
-          direction: 'rtl',
-        	orientation: 'vertical',
-        	range: {
-        		'min': 0,
-        		'max': 100
-        	}
-        });
-
+        //Mikrofon Slider Value
         mikroSlider1.noUiSlider.on('update', function(values, handle){
           	mikroSlider1Value.innerHTML = values[handle];
-        });
-
-        noUiSlider.create(mikroSlider2, {
-        	start: 0,
-          connect: [false, false],
-          direction: 'rtl',
-        	orientation: 'vertical',
-        	range: {
-        		'min': 0,
-        		'max': 100
-        	}
         });
 
         mikroSlider2.noUiSlider.on('update', function(values, handle){
           	mikroSlider2Value.innerHTML = values[handle];
         });
 
-        noUiSlider.create(mikroMasterSlider, {
-        	start: 0,
-          connect: [false, false],
-          direction: 'rtl',
-        	orientation: 'vertical',
-        	range: {
-        		'min': 0,
-        		'max': 100
-        	}
-        });
-
         mikroMasterSlider.noUiSlider.on('update', function(values, handle){
           	mikroMasterSliderValue.innerHTML = values[handle];
         });
 
-        //Licht Slider
-        noUiSlider.create(lichtSlider1, {
-        	start: 0,
-          connect: [false, false],
-          direction: 'rtl',
-        	orientation: 'vertical',
-        	range: {
-        		'min': 0,
-        		'max': 100
-        	}
-        });
-
+        //Licht Slider Value
         lichtSlider1.noUiSlider.on('update', function(values, handle){
           	lichtSlider1Value.innerHTML = values[handle];
-        });
-
-        noUiSlider.create(lichtSlider2, {
-        	start: 0,
-          connect: [false, false],
-          direction: 'rtl',
-        	orientation: 'vertical',
-        	range: {
-        		'min': 0,
-        		'max': 100
-        	}
         });
 
         lichtSlider2.noUiSlider.on('update', function(values, handle){
           	lichtSlider2Value.innerHTML = values[handle];
         });
 
-        noUiSlider.create(lichtSlider3, {
-        	start: 0,
-          connect: [false, false],
-          direction: 'rtl',
-        	orientation: 'vertical',
-        	range: {
-        		'min': 0,
-        		'max': 100
-        	}
-        });
-
         lichtSlider3.noUiSlider.on('update', function(values, handle){
           	lichtSlider3Value.innerHTML = values[handle];
         });
 
-        noUiSlider.create(lichtHelligkeitSlider, {
-        	start: 0,
-          connect: [false, false],
-          direction: 'rtl',
-        	orientation: 'vertical',
-        	range: {
-        		'min': 0,
-        		'max': 100
-        	}
+        lichtWeissSlider.noUiSlider.on('update', function(values, handle){
+          	lichtWeissSliderValue.innerHTML = values[handle];
         });
-
-        lichtHelligkeitSlider.noUiSlider.on('update', function(values, handle){
-          	lichtHelligkeitSliderValue.innerHTML = values[handle];
-        });
-
       </script>
     </body>
 </html>

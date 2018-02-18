@@ -1,11 +1,17 @@
 $(document).ready(function() {
 
+  var isMobile = ('ontouchstart' in document.documentElement && navigator.userAgent
+    .match(/Mobi/));
+
   //EventListener den Box Buttons hinzufügen
   $(".boxButtons").on("click", function() {
-
     toggleFlexContainer(1);
     togglePresMode(2);
     toggleStatus(1);
+
+    if (isMobile) {
+      toggleMobileOptions(1);
+    }
     //über die Boxelemente iterieren
     for (var el of $(".box")) {
       //If Box Button matches Box -> show or hide it
@@ -26,6 +32,9 @@ $(document).ready(function() {
       toggleFlexContainer(0);
       togglePresMode(0);
       toggleStatus(0);
+      if (isMobile) {
+        toggleMobileOptions(0);
+      }
     }
   });
 
@@ -66,7 +75,6 @@ $(document).ready(function() {
   }
 
   function toggleStatus(count) {
-
     switch (count) {
       case 0:
         if ($(".statusBox").hasClass("toggleStatus")) {
@@ -78,6 +86,21 @@ $(document).ready(function() {
 
       case 1:
         $(".statusBox").addClass("toggleStatus");
+    }
+  }
+
+  function toggleMobileOptions(count) {
+    switch (count) {
+      case 0:
+        if ($(".mobileOptions").hasClass("toggleMobileOptions")) {
+          $(".mobileOptions").removeClass("toggleMobileOptions");
+        } else {
+          $(".mobileOptions").addClass("toggleMobileOptions");
+        }
+        break;
+
+      case 1:
+        $(".mobileOptions").addClass("toggleMobileOptions");
     }
   }
 });
