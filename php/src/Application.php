@@ -274,8 +274,16 @@ class Application implements MessageComponentInterface
         foreach ($dmx as $dev) {
 
             if (is_array($dev)) {
-                if(preg_match('/[0-9]+/',$dev['hue']) && 0 <= $dev['hue'] && $dev['hue'] <= 255) {
-                    $r = $this->scheinwerfer[$dev["id"]]->dimmen($dev["hue"]);
+                if(!count($dev) <= 3) {
+                    if (preg_match('/[0-9]+/', $dev['hue']) && 0 <= $dev['hue'] && $dev['hue'] <= 255) {
+                        $r = $this->scheinwerfer[$dev["id"]]->dimmen($dev["hue"]);
+
+                        if (!$r->success) {
+                            array_push($result, $r);
+                        }
+                    }
+                }else{
+                    $r = $this->scheinwerfer[$dev["id"]]->dimmen($dev);
 
                     if (!$r->success) {
                         array_push($result, $r);
