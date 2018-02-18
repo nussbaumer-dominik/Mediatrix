@@ -40,10 +40,10 @@ class IR : public Php::Base {
         delay(20);
 
         for( int i = 1; 99 * i <= times; i++){
-            std::cout << ("w"+99+":").c_str() << endl;
+            std::cout << ("w99:").c_str() << endl;
 
             //send amount of repetitions of the code to the IR-Device
-            serialPrintf(fd, ("w"+99+":").c_str());
+            serialPrintf(fd, ("w99:").c_str());
             delay(150*times);
         }
 

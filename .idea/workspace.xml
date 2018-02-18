@@ -84,8 +84,8 @@
       <file leaf-file-name="IR.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="53" column="9" lean-forward="true" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+            <state relative-caret-position="342">
+              <caret line="49" column="20" lean-forward="true" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -423,13 +423,6 @@
       <workItem from="1518348786101" duration="3538000" />
       <workItem from="1518453299841" duration="2250000" />
     </task>
-    <task id="LOCAL-00266" summary="programm read IR cpp">
-      <created>1517835886423</created>
-      <option name="number" value="00266" />
-      <option name="presentableId" value="LOCAL-00266" />
-      <option name="project" value="LOCAL" />
-      <updated>1517835886423</updated>
-    </task>
     <task id="LOCAL-00267" summary="program IR php">
       <created>1517836116712</created>
       <option name="number" value="00267" />
@@ -766,7 +759,14 @@
       <option name="project" value="LOCAL" />
       <updated>1518979782844</updated>
     </task>
-    <option name="localTasksCounter" value="315" />
+    <task id="LOCAL-00315" summary="fix IR send more than 100 times">
+      <created>1518980028646</created>
+      <option name="number" value="00315" />
+      <option name="presentableId" value="LOCAL-00315" />
+      <option name="project" value="LOCAL" />
+      <updated>1518980028646</updated>
+    </task>
+    <option name="localTasksCounter" value="316" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -793,7 +793,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243621000" />
+    <option name="totallyTimeSpent" value="243756000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -867,7 +867,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="programm read code php and cpp" />
     <MESSAGE value="debug IR cpp" />
     <MESSAGE value="programm readCode php" />
     <MESSAGE value="add Diplomarbeitsbuch Template" />
@@ -892,7 +891,8 @@
     <MESSAGE value="debug setVolume php" />
     <MESSAGE value="add rgbw scheinwerfer" />
     <MESSAGE value="debug rgbw scheinwerfer" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug rgbw scheinwerfer" />
+    <MESSAGE value="fix IR send more than 100 times" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix IR send more than 100 times" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1264,8 +1264,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="53" column="9" lean-forward="true" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+        <state relative-caret-position="342">
+          <caret line="49" column="20" lean-forward="true" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
           <folding />
         </state>
       </provider>
