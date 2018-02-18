@@ -19,10 +19,6 @@ class IR : public Php::Base {
         string timesStr = params[1];
         int times = params[1];
 
-        if(timesStr.length()==1){
-            timesStr = "0"+timesStr;
-        }
-
         //open serial connection to IR-Device
         int fd = serialOpen(IR::dev, 9600);
 
@@ -42,6 +38,20 @@ class IR : public Php::Base {
         //send code to IR-Device
         serialPrintf(fd,("p"+code+"]:").c_str());
         delay(20);
+
+        for( int i = 1; 99 * i <= times; i++){
+            std::cout << ("w"+99+":").c_str() << endl;
+
+            //send amount of repetitions of the code to the IR-Device
+            serialPrintf(fd, ("w"+99+":").c_str());
+            delay(150*times);
+        }
+
+        times %= 99;
+
+        if(timesStr.length()==1){
+            timesStr = "0"+timesStr;
+        }
 
         std::cout << ("w"+timesStr+":").c_str() << endl;
 
