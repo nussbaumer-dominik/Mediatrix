@@ -277,7 +277,7 @@ class Application implements MessageComponentInterface
             print count($dev);
 
             if (is_array($dev)) {
-                if(count($dev) > 3 && preg_match('/[0-9]+/', $dev['hue']) && 0 <= $dev['hue'] && $dev['hue'] <= 255) {
+                if(count($dev) > 3) {
 
                     if (preg_match('/[0-9]+/', $dev['hue']) && 0 <= $dev['hue'] && $dev['hue'] <= 255) {
 
