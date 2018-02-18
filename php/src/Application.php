@@ -401,8 +401,8 @@ class Application implements MessageComponentInterface
                         array_push($scheinwerfer,
                             new RGBWScheinwerfer(array(
                                     "r" => $entry["rot"] - 1,
-                                    "g" => $entry["rot"] - 1,
-                                    "b" => $entry["rot"] - 1,
+                                    "g" => $entry["gruen"] - 1,
+                                    "b" => $entry["blau"] - 1,
                                     "w" => $entry["weiss"] - 1
                                 )
                             )
@@ -411,8 +411,8 @@ class Application implements MessageComponentInterface
                         array_push($scheinwerfer,
                             new RGBWScheinwerfer(array(
                                     "r" => $entry["rot"] - 1,
-                                    "g" => $entry["rot"] - 1,
-                                    "b" => $entry["rot"] - 1
+                                    "g" => $entry["gruen"] - 1,
+                                    "b" => $entry["blaut"] - 1
                                 )
                             )
                         );
