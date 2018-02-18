@@ -273,6 +273,9 @@ class Application implements MessageComponentInterface
 
         foreach ($dmx as $dev) {
 
+            var_dump($dev);
+            print count($dev);
+
             if (is_array($dev)) {
                 if(count($dev) > 3 && preg_match('/[0-9]+/', $dev['hue']) && 0 <= $dev['hue'] && $dev['hue'] <= 255) {
 

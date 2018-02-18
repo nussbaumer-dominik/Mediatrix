@@ -114,10 +114,10 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="294" column="72" lean-forward="true" selection-start-line="294" selection-start-column="72" selection-end-line="294" selection-end-column="72" />
+            <state relative-caret-position="180">
+              <caret line="276" column="30" lean-forward="false" selection-start-line="276" selection-start-column="30" selection-end-line="276" selection-end-column="30" />
               <folding>
-                <marker date="1518978966224" expanded="true" signature="9121:9161" ph="SELECT * FRO... preset" />
+                <marker date="1518979221216" expanded="true" signature="9179:9219" ph="SELECT * FRO... preset" />
               </folding>
             </state>
           </provider>
@@ -406,20 +406,6 @@
       <workItem from="1518108274331" duration="2862000" />
       <workItem from="1518348786101" duration="3538000" />
       <workItem from="1518453299841" duration="2250000" />
-    </task>
-    <task id="LOCAL-00259" summary="programm readCode php">
-      <created>1517562991333</created>
-      <option name="number" value="00259" />
-      <option name="presentableId" value="LOCAL-00259" />
-      <option name="project" value="LOCAL" />
-      <updated>1517562991333</updated>
-    </task>
-    <task id="LOCAL-00260" summary="add Diplomarbeitsbuch Template">
-      <created>1517831362703</created>
-      <option name="number" value="00260" />
-      <option name="presentableId" value="LOCAL-00260" />
-      <option name="project" value="LOCAL" />
-      <updated>1517831362704</updated>
     </task>
     <task id="LOCAL-00261" summary="change IR device number">
       <created>1517832630807</created>
@@ -750,7 +736,21 @@
       <option name="project" value="LOCAL" />
       <updated>1518978628987</updated>
     </task>
-    <option name="localTasksCounter" value="308" />
+    <task id="LOCAL-00308" summary="debug rgbw scheinwerfer">
+      <created>1518978974450</created>
+      <option name="number" value="00308" />
+      <option name="presentableId" value="LOCAL-00308" />
+      <option name="project" value="LOCAL" />
+      <updated>1518978974450</updated>
+    </task>
+    <task id="LOCAL-00309" summary="debug rgbw scheinwerfer">
+      <created>1518979096771</created>
+      <option name="number" value="00309" />
+      <option name="presentableId" value="LOCAL-00309" />
+      <option name="project" value="LOCAL" />
+      <updated>1518979096771</updated>
+    </task>
+    <option name="localTasksCounter" value="310" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -777,7 +777,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="242578000" />
+    <option name="totallyTimeSpent" value="242833000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1245,10 +1245,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="294" column="72" lean-forward="true" selection-start-line="294" selection-start-column="72" selection-end-line="294" selection-end-column="72" />
+        <state relative-caret-position="180">
+          <caret line="276" column="30" lean-forward="false" selection-start-line="276" selection-start-column="30" selection-end-line="276" selection-end-column="30" />
           <folding>
-            <marker date="1518978966224" expanded="true" signature="9121:9161" ph="SELECT * FRO... preset" />
+            <marker date="1518979221216" expanded="true" signature="9179:9219" ph="SELECT * FRO... preset" />
           </folding>
         </state>
       </provider>
