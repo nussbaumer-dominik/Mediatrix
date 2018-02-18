@@ -118,7 +118,7 @@ class AV
         $timesSent = intval($times);
 
         //send IR code
-        $r = json_decode(str_replace("'",'"',$this->ir->send($code,5*abs($timesSent))));
+        $r = json_decode(str_replace("'",'"',$this->ir->send($code,abs($timesSent))));
 
         $this->volumeLevel += $timesSent  * $this->volumeSteps;
 
