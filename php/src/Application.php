@@ -274,7 +274,7 @@ class Application implements MessageComponentInterface
         foreach ($dmx as $dev) {
 
             if (is_array($dev)) {
-                if(!count($dev) <= 3) {
+                if(!count($dev) <= 3 && preg_match('/[0-9]+/', $dev['hue']) && 0 <= $dev['hue'] && $dev['hue'] <= 255) {
                     if (preg_match('/[0-9]+/', $dev['hue']) && 0 <= $dev['hue'] && $dev['hue'] <= 255) {
                         $r = $this->scheinwerfer[$dev["id"]]->dimmen($dev["hue"]);
 
@@ -282,7 +282,10 @@ class Application implements MessageComponentInterface
                             array_push($result, $r);
                         }
                     }
-                }else{
+                }elseif (preg_match('/[0-9]+/', $dev['r']) && 0 <= $dev['r'] && $dev['r'] <= 255 &&
+                    preg_match('/[0-9]+/', $dev['g']) && 0 <= $dev['g'] && $dev['g'] <= 255 &&
+                    preg_match('/[0-9]+/', $dev['b']) && 0 <= $dev['b'] && $dev['b'] <= 255){
+
                     $r = $this->scheinwerfer[$dev["id"]]->dimmen($dev);
 
                     if (!$r->success) {
