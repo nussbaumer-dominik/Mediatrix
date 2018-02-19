@@ -72,7 +72,7 @@ class DMX : public Php::Base {
             ola::DmxBuffer buffer; // A DmxBuffer to hold the data.
             buffer.Blackout(); // Set all channels to 0
 
-            for(int i = 0; i< count(DMX::channels);i++){
+            for(int i = 0; i< DMX::channels::size; i++){
                 DMX::channels[i] = 0;
             }
 
