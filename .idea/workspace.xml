@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
+      <change beforePath="$PROJECT_DIR$/cpp/DMX/DMX.cpp" afterPath="$PROJECT_DIR$/cpp/DMX/DMX.cpp" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -84,8 +84,8 @@
       <file leaf-file-name="IR.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+            <state relative-caret-position="54">
+              <caret line="13" column="56" lean-forward="false" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -111,7 +111,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="181">
@@ -143,11 +143,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DMX.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DMX.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cpp/DMX/DMX.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="40" column="38" lean-forward="false" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+            <state relative-caret-position="54">
+              <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -196,7 +196,6 @@
         <option value="$PROJECT_DIR$/cpp/IR/IR.ini" />
         <option value="$PROJECT_DIR$/cpp/IR/Makefile" />
         <option value="$PROJECT_DIR$/php/src/generateKey.php" />
-        <option value="$PROJECT_DIR$/cpp/DMX/DMX.cpp" />
         <option value="$PROJECT_DIR$/php/vendor/firebase/php-jwt/src/JWT.php" />
         <option value="$PROJECT_DIR$/php/src/Mediatrix.json" />
         <option value="$PROJECT_DIR$/cpp/test.cpp" />
@@ -219,11 +218,12 @@
         <option value="$PROJECT_DIR$/test_js/.htaccess" />
         <option value="$PROJECT_DIR$/conf/.htaccess" />
         <option value="$PROJECT_DIR$/conf/Mediatrix.json" />
-        <option value="$PROJECT_DIR$/cpp/IR/IR.cpp" />
         <option value="$PROJECT_DIR$/php/src/Scheinwerfer.php" />
         <option value="$PROJECT_DIR$/php/src/AV.php" />
         <option value="$PROJECT_DIR$/php/src/RGBWScheinwerfer.php" />
         <option value="$PROJECT_DIR$/php/src/Application.php" />
+        <option value="$PROJECT_DIR$/cpp/IR/IR.cpp" />
+        <option value="$PROJECT_DIR$/cpp/DMX/DMX.cpp" />
       </list>
     </option>
   </component>
@@ -422,13 +422,6 @@
       <workItem from="1518108274331" duration="2862000" />
       <workItem from="1518348786101" duration="3538000" />
       <workItem from="1518453299841" duration="2250000" />
-    </task>
-    <task id="LOCAL-00280" summary="clear db">
-      <created>1517948625286</created>
-      <option name="number" value="00280" />
-      <option name="presentableId" value="LOCAL-00280" />
-      <option name="project" value="LOCAL" />
-      <updated>1517948625286</updated>
     </task>
     <task id="LOCAL-00281" summary="clear db">
       <created>1517949135886</created>
@@ -766,7 +759,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519059680398</updated>
     </task>
-    <option name="localTasksCounter" value="329" />
+    <task id="LOCAL-00329" summary="change to only one master dmx">
+      <created>1519059904418</created>
+      <option name="number" value="00329" />
+      <option name="presentableId" value="LOCAL-00329" />
+      <option name="project" value="LOCAL" />
+      <updated>1519059904418</updated>
+    </task>
+    <option name="localTasksCounter" value="330" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -793,7 +793,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="249760000" />
+    <option name="totallyTimeSpent" value="250698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1220,22 +1220,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpp/DMX/DMX.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="40" column="38" lean-forward="false" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/AV.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1512">
@@ -1267,6 +1251,22 @@
           <folding>
             <marker date="1519059894725" expanded="true" signature="10251:10291" ph="SELECT * FRO... preset" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="13" column="56" lean-forward="false" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpp/DMX/DMX.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

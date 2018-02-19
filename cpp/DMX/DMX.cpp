@@ -20,6 +20,8 @@ class DMX : public Php::Base {
     private:
         static const unsigned int UNIVERSE = 0; // UNIVERSE to use for sending data
 
+        static int channels[512] = {};
+
     public:
         static Php::Value sendChannel(Php::Parameters &params){
 
@@ -49,6 +51,7 @@ class DMX : public Php::Base {
             {
                 int c = x.first;
                 int v = x.second;
+                channels[c] = v;
                 buffer.SetChannel(c, v);
             }
 
@@ -66,6 +69,8 @@ class DMX : public Php::Base {
             ola::InitLogging(ola::OLA_LOG_WARN, ola::OLA_LOG_STDERR);
             ola::DmxBuffer buffer; // A DmxBuffer to hold the data.
             buffer.Blackout(); // Set all channels to 0
+
+            channels = int[512];
 
 
             // Create a new client.
