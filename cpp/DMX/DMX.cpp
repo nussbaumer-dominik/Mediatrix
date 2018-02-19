@@ -73,7 +73,7 @@ class DMX : public Php::Base {
             buffer.Blackout(); // Set all channels to 0
 
             int allZero[512] = {};
-            DMX::channels = allZero;
+            DMX::channels* = allZero;
 
 
             // Create a new client.
