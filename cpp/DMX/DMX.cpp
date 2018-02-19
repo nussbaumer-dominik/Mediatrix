@@ -22,7 +22,7 @@ class DMX : public Php::Base {
 
         static int channels[512];
 
-        static const ola::DmxBuffer buffer;
+        static ola::DmxBuffer buffer;
 
     public:
         static Php::Value sendChannel(Php::Parameters &params){
