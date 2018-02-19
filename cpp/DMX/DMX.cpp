@@ -72,8 +72,9 @@ class DMX : public Php::Base {
             ola::DmxBuffer buffer; // A DmxBuffer to hold the data.
             buffer.Blackout(); // Set all channels to 0
 
-            int allZero[512] = {};
-            DMX::channels = &allZero;
+            for(int i = 0; i< count(DMX::channels);i++){
+                DMX::channels[i] = 0;
+            }
 
 
             // Create a new client.
