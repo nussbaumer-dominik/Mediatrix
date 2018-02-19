@@ -4,7 +4,6 @@
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
-      <change beforePath="$PROJECT_DIR$/php/src/RGBWScheinwerfer.php" afterPath="$PROJECT_DIR$/php/src/RGBWScheinwerfer.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -115,10 +114,10 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="339" column="17" lean-forward="false" selection-start-line="339" selection-start-column="17" selection-end-line="339" selection-end-column="17" />
+            <state relative-caret-position="19">
+              <caret line="306" column="11" lean-forward="false" selection-start-line="306" selection-start-column="11" selection-end-line="306" selection-end-column="11" />
               <folding>
-                <marker date="1519059343891" expanded="true" signature="10209:10249" ph="SELECT * FRO... preset" />
+                <marker date="1519059668932" expanded="true" signature="10187:10227" ph="SELECT * FRO... preset" />
               </folding>
             </state>
           </provider>
@@ -423,13 +422,6 @@
       <workItem from="1518108274331" duration="2862000" />
       <workItem from="1518348786101" duration="3538000" />
       <workItem from="1518453299841" duration="2250000" />
-    </task>
-    <task id="LOCAL-00278" summary="change createDB">
-      <created>1517948098344</created>
-      <option name="number" value="00278" />
-      <option name="presentableId" value="LOCAL-00278" />
-      <option name="project" value="LOCAL" />
-      <updated>1517948098344</updated>
     </task>
     <task id="LOCAL-00279" summary="change createDB">
       <created>1517948582065</created>
@@ -767,7 +759,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519040294513</updated>
     </task>
-    <option name="localTasksCounter" value="327" />
+    <task id="LOCAL-00327" summary="change to only one master dmx">
+      <created>1519059373572</created>
+      <option name="number" value="00327" />
+      <option name="presentableId" value="LOCAL-00327" />
+      <option name="project" value="LOCAL" />
+      <updated>1519059373572</updated>
+    </task>
+    <option name="localTasksCounter" value="328" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -794,7 +793,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="249213000" />
+    <option name="totallyTimeSpent" value="249536000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -868,7 +867,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add Diplomarbeitsbuch Template" />
     <MESSAGE value="change IR device number" />
     <MESSAGE value="programm read IR cpp" />
     <MESSAGE value="program IR php" />
@@ -893,7 +891,8 @@
     <MESSAGE value="fix IR send more than 100 times" />
     <MESSAGE value="add off in constructor to scheinwerfer" />
     <MESSAGE value="debug av php" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug av php" />
+    <MESSAGE value="change to only one master dmx" />
+    <option name="LAST_COMMIT_MESSAGE" value="change to only one master dmx" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1263,10 +1262,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="339" column="17" lean-forward="false" selection-start-line="339" selection-start-column="17" selection-end-line="339" selection-end-column="17" />
+        <state relative-caret-position="19">
+          <caret line="306" column="11" lean-forward="false" selection-start-line="306" selection-start-column="11" selection-end-line="306" selection-end-column="11" />
           <folding>
-            <marker date="1519059343891" expanded="true" signature="10209:10249" ph="SELECT * FRO... preset" />
+            <marker date="1519059668932" expanded="true" signature="10187:10227" ph="SELECT * FRO... preset" />
           </folding>
         </state>
       </provider>

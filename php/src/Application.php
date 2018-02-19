@@ -304,7 +304,7 @@ class Application implements MessageComponentInterface
             }
         }*/
 
-        if(isset($dmx['hue']) && isset($dmx['r']) && isset($dmx['g']) && isset($dmx['b'])){
+        if(isset($dmx['r']) && isset($dmx['g']) && isset($dmx['b'])){
 
             $data = array(
                 "r" => $dmx['r'],
