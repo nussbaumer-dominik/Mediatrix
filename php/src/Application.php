@@ -316,6 +316,10 @@ class Application implements MessageComponentInterface
                 $data["w"] = $dmx['w'];
             }
 
+            if(!isset($dmx['hue'])){
+                $dmx['hue'] = 255;
+            }
+
             foreach ($this->scheinwerfer as $scheinw) {
                 $x = count($scheinw->getChannels());
                 if ($x > 3){
@@ -323,7 +327,7 @@ class Application implements MessageComponentInterface
                         $data
                     );
                 }elseif ($x == 1) {
-                    $r = $this->scheinwerfer[$dev["id"]]->dimmen($dmx['hue']);
+                    $r = $scheinw->dimmen($dmx['hue']);
                 }
 
                 if (!$r->success) {

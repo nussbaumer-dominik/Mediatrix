@@ -114,10 +114,10 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="306" column="11" lean-forward="false" selection-start-line="306" selection-start-column="11" selection-end-line="306" selection-end-column="11" />
+            <state relative-caret-position="181">
+              <caret line="319" column="34" lean-forward="false" selection-start-line="319" selection-start-column="34" selection-end-line="319" selection-end-column="34" />
               <folding>
-                <marker date="1519059668932" expanded="true" signature="10187:10227" ph="SELECT * FRO... preset" />
+                <marker date="1519059894725" expanded="true" signature="10251:10291" ph="SELECT * FRO... preset" />
               </folding>
             </state>
           </provider>
@@ -422,13 +422,6 @@
       <workItem from="1518108274331" duration="2862000" />
       <workItem from="1518348786101" duration="3538000" />
       <workItem from="1518453299841" duration="2250000" />
-    </task>
-    <task id="LOCAL-00279" summary="change createDB">
-      <created>1517948582065</created>
-      <option name="number" value="00279" />
-      <option name="presentableId" value="LOCAL-00279" />
-      <option name="project" value="LOCAL" />
-      <updated>1517948582065</updated>
     </task>
     <task id="LOCAL-00280" summary="clear db">
       <created>1517948625286</created>
@@ -766,7 +759,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519059373572</updated>
     </task>
-    <option name="localTasksCounter" value="328" />
+    <task id="LOCAL-00328" summary="change to only one master dmx">
+      <created>1519059680398</created>
+      <option name="number" value="00328" />
+      <option name="presentableId" value="LOCAL-00328" />
+      <option name="project" value="LOCAL" />
+      <updated>1519059680398</updated>
+    </task>
+    <option name="localTasksCounter" value="329" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -793,7 +793,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="249536000" />
+    <option name="totallyTimeSpent" value="249760000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1262,10 +1262,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="306" column="11" lean-forward="false" selection-start-line="306" selection-start-column="11" selection-end-line="306" selection-end-column="11" />
+        <state relative-caret-position="181">
+          <caret line="319" column="34" lean-forward="false" selection-start-line="319" selection-start-column="34" selection-end-line="319" selection-end-column="34" />
           <folding>
-            <marker date="1519059668932" expanded="true" signature="10187:10227" ph="SELECT * FRO... preset" />
+            <marker date="1519059894725" expanded="true" signature="10251:10291" ph="SELECT * FRO... preset" />
           </folding>
         </state>
       </provider>
