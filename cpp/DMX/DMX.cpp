@@ -20,7 +20,7 @@ class DMX : public Php::Base {
     private:
         static const unsigned int UNIVERSE = 0; // UNIVERSE to use for sending data
 
-        static int[512] channels = {};
+        static int channels[512];
 
     public:
         static Php::Value sendChannel(Php::Parameters &params){
@@ -45,6 +45,8 @@ class DMX : public Php::Base {
                 return "{'success':'false','err':'Setup failed'}";
                 exit(1);
             }
+
+            cout << DMX::channels;
 
             //Go through all passed Channels and set Value
             for (auto const& x : params[0])
