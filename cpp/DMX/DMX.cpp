@@ -46,8 +46,6 @@ class DMX : public Php::Base {
                 exit(1);
             }
 
-            cout << DMX::channels;
-
             //Go through all passed Channels and set Value
             for (auto const& x : params[0])
             {
