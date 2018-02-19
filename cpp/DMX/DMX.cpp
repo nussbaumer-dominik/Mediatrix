@@ -20,7 +20,7 @@ class DMX : public Php::Base {
     private:
         static const unsigned int UNIVERSE = 0; // UNIVERSE to use for sending data
 
-        static constexpr int channels[512] = {};
+        static int[512] channels = {};
 
     public:
         static Php::Value sendChannel(Php::Parameters &params){
