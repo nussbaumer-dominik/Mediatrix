@@ -146,8 +146,8 @@
       <file leaf-file-name="DMX.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cpp/DMX/DMX.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+            <state relative-caret-position="162">
+              <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -422,13 +422,6 @@
       <workItem from="1518108274331" duration="2862000" />
       <workItem from="1518348786101" duration="3538000" />
       <workItem from="1518453299841" duration="2250000" />
-    </task>
-    <task id="LOCAL-00281" summary="clear db">
-      <created>1517949135886</created>
-      <option name="number" value="00281" />
-      <option name="presentableId" value="LOCAL-00281" />
-      <option name="project" value="LOCAL" />
-      <updated>1517949135886</updated>
     </task>
     <task id="LOCAL-00282" summary="write change Usermod and change test js">
       <created>1517950783169</created>
@@ -766,7 +759,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519059904418</updated>
     </task>
-    <option name="localTasksCounter" value="330" />
+    <task id="LOCAL-00330" summary="change dmx channels">
+      <created>1519061503648</created>
+      <option name="number" value="00330" />
+      <option name="presentableId" value="LOCAL-00330" />
+      <option name="project" value="LOCAL" />
+      <updated>1519061503648</updated>
+    </task>
+    <option name="localTasksCounter" value="331" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -793,7 +793,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250698000" />
+    <option name="totallyTimeSpent" value="250766000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -867,7 +867,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change IR device number" />
     <MESSAGE value="programm read IR cpp" />
     <MESSAGE value="program IR php" />
     <MESSAGE value="test wss" />
@@ -892,7 +891,8 @@
     <MESSAGE value="add off in constructor to scheinwerfer" />
     <MESSAGE value="debug av php" />
     <MESSAGE value="change to only one master dmx" />
-    <option name="LAST_COMMIT_MESSAGE" value="change to only one master dmx" />
+    <MESSAGE value="change dmx channels" />
+    <option name="LAST_COMMIT_MESSAGE" value="change dmx channels" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1264,8 +1264,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cpp/DMX/DMX.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        <state relative-caret-position="162">
+          <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
           <folding />
         </state>
       </provider>
