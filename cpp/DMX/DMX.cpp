@@ -22,12 +22,12 @@ class DMX : public Php::Base {
 
         static int channels[512];
 
+        static constexpr const Ola::DmxBuffer buffer;
+
     public:
         static Php::Value sendChannel(Php::Parameters &params){
 
             ola::InitLogging(ola::OLA_LOG_WARN, ola::OLA_LOG_STDERR);
-
-            ola::DmxBuffer buffer; // A DmxBuffer to hold the data.
 
             //Create Client-Options
             ola::client::StreamingClient::Options options = ola::client::StreamingClient::Options();
@@ -51,11 +51,10 @@ class DMX : public Php::Base {
             {
                 int c = x.first;
                 int v = x.second;
-                channels[c] = v;
-                buffer.SetChannel(c, v);
+                DMX::buffer.SetChannel(c, v);
             }
 
-            if (!ola_client.SendDmx(UNIVERSE, buffer)) {
+            if (!ola_client.SendDmx(UNIVERSE, DMX::buffer)) {
                 return "{'success':'false','err':'Send DMX failed'}";
                 exit(1);
             }
@@ -67,14 +66,8 @@ class DMX : public Php::Base {
 
         static Php::Value blackout(){
             ola::InitLogging(ola::OLA_LOG_WARN, ola::OLA_LOG_STDERR);
-            ola::DmxBuffer buffer; // A DmxBuffer to hold the data.
-            buffer.Blackout(); // Set all channels to 0
 
-            for(unsigned int i = 0; i < 512; i++){
-
-                DMX::channels[i] = 0;
-            }
-
+            DMX::buffer.Blackout(); // Set all channels to 0
 
             // Create a new client.
             ola::client::StreamingClient ola_client(
@@ -87,7 +80,7 @@ class DMX : public Php::Base {
             }
 
 
-            if (!ola_client.SendDmx(UNIVERSE, buffer)) {
+            if (!ola_client.SendDmx(UNIVERSE, DMX::buffer)) {
                 cout << "Send DMX failed" << endl;
                 exit(1);
             }
