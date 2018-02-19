@@ -80,5 +80,4 @@ class RGBWScheinwerfer extends Scheinwerfer
             )
         );
     }
-
 }

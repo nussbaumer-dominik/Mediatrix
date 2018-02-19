@@ -271,7 +271,7 @@ class Application implements MessageComponentInterface
         }
 
 
-        foreach ($dmx as $dev) {
+        /*foreach ($dmx as $dev) {
 
             var_dump($dev);
             print count($dev);
@@ -300,6 +300,43 @@ class Application implements MessageComponentInterface
                     if (!$r->success) {
                         array_push($result, $r);
                     }
+                }
+            }
+        }*/
+
+        if(isset($dmx['hue']) && isset($dmx['r']) && isset($dmx['g']) && isset($dmx['b'])){
+
+            $data = array(
+                "r" => $dmx['r'],
+                "g" => $dmx['g'],
+                "b" => $dmx['b'],
+            );
+
+            if(isset($dmx['w'])) {
+                $data["w"] = $dmx['w'];
+            }
+
+            foreach ($this->scheinwerfer as $scheinw) {
+                $x = count($scheinw->getChannels());
+                if ($x > 3){
+                    $r = $scheinw->dimmen(
+                        $data
+                    );
+                }elseif ($x == 1) {
+                    $r = $this->scheinwerfer[$dev["id"]]->dimmen($dmx['hue']);
+                }
+
+                if (!$r->success) {
+                    array_push($result, $r);
+                }
+            }
+
+        }elseif(isset($dmx['hue'])){
+            foreach ($this->scheinwerfer as $scheinw) {
+                    $r = $this->scheinwerfer[$dev["id"]]->dimmen($dmx['hue']);
+
+                if (!$r->success) {
+                    array_push($result, $r);
                 }
             }
         }
