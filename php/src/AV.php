@@ -87,7 +87,7 @@ class AV
 
     /**
      * @param mixed $volumeLevel
-     * @return array
+     * @return object
      */
     public function setVolumeLevel($volumeLevel)
     {
@@ -96,7 +96,7 @@ class AV
         $times = (($volumeLevel - $this->volumeLevel) * 1.0) / $this->volumeSteps;
 
         if($times == 0){
-            return array("success" => true, "err" => "");
+            return (object) array("success" => true, "err" => "");
         }
 
         if($times < 0 ){
