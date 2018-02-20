@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="change dmx channels">
+    <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/cpp/DMX/DMX.cpp" afterPath="$PROJECT_DIR$/cpp/DMX/DMX.cpp" />
     </list>
@@ -134,8 +134,8 @@
       <file leaf-file-name="DMX.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cpp/DMX/DMX.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="25" column="36" lean-forward="false" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+            <state relative-caret-position="257">
+              <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -399,13 +399,6 @@
       <workItem from="1518108274331" duration="2862000" />
       <workItem from="1518348786101" duration="3538000" />
       <workItem from="1518453299841" duration="2250000" />
-    </task>
-    <task id="LOCAL-00316" summary="fix IR send more than 100 times">
-      <created>1518980152004</created>
-      <option name="number" value="00316" />
-      <option name="presentableId" value="LOCAL-00316" />
-      <option name="project" value="LOCAL" />
-      <updated>1518980152004</updated>
     </task>
     <task id="LOCAL-00317" summary="fix IR send more than 100 times">
       <created>1518980217474</created>
@@ -743,7 +736,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519121024118</updated>
     </task>
-    <option name="localTasksCounter" value="365" />
+    <task id="LOCAL-00365" summary="change dmx channels">
+      <created>1519121703198</created>
+      <option name="number" value="00365" />
+      <option name="presentableId" value="LOCAL-00365" />
+      <option name="project" value="LOCAL" />
+      <updated>1519121703198</updated>
+    </task>
+    <option name="localTasksCounter" value="366" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -770,7 +770,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="261135000" />
+    <option name="totallyTimeSpent" value="261247000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1242,8 +1242,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cpp/DMX/DMX.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="25" column="36" lean-forward="false" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+        <state relative-caret-position="257">
+          <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
           <folding />
         </state>
       </provider>

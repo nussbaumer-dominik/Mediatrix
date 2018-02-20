@@ -21,9 +21,8 @@ class DMX : public Php::Base {
     private:
         static const unsigned int UNIVERSE = 0; // UNIVERSE to use for sending data
 
-        enum {channels = 2};
 
-        static vector<int>& channels = {};
+        static vector<int> channels;
 
     public:
         static Php::Value sendChannel(Php::Parameters &params){
