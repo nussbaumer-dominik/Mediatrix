@@ -63,9 +63,9 @@ class DMX : public Php::Base {
 
             ola::DmxBuffer buffer;
 
-            for(int i = 0; 0 < <sizeof(channels); i++){
+            for(unsigned int i = 0; i < sizeof(channels); i++){
                 if(channels[i] > 0){
-                    buffer.setChannel(i,channels[i]);
+                    buffer.SetChannel(i,channels[i]);
                 }
             }
 
