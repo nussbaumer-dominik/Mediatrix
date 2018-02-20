@@ -68,6 +68,7 @@ class DMX : public Php::Base {
 
         static Php::Value blackout(){
             ola::InitLogging(ola::OLA_LOG_WARN, ola::OLA_LOG_STDERR);
+
             ola::DmxBuffer buffer;
             buffer.Blackout(); // Set all channels to 0
 
