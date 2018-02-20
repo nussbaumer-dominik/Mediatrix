@@ -135,7 +135,7 @@
         <entry file="file://$PROJECT_DIR$/cpp/DMX/DMX.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="149">
-              <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+              <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -399,13 +399,6 @@
       <workItem from="1518108274331" duration="2862000" />
       <workItem from="1518348786101" duration="3538000" />
       <workItem from="1518453299841" duration="2250000" />
-    </task>
-    <task id="LOCAL-00312" summary="debug rgbw scheinwerfer">
-      <created>1518979414350</created>
-      <option name="number" value="00312" />
-      <option name="presentableId" value="LOCAL-00312" />
-      <option name="project" value="LOCAL" />
-      <updated>1518979414350</updated>
     </task>
     <task id="LOCAL-00313" summary="debug rgbw scheinwerfer">
       <created>1518979586033</created>
@@ -743,7 +736,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519120344486</updated>
     </task>
-    <option name="localTasksCounter" value="361" />
+    <task id="LOCAL-00361" summary="change dmx channels">
+      <created>1519120418951</created>
+      <option name="number" value="00361" />
+      <option name="presentableId" value="LOCAL-00361" />
+      <option name="project" value="LOCAL" />
+      <updated>1519120418951</updated>
+    </task>
+    <option name="localTasksCounter" value="362" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -770,7 +770,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="259851000" />
+    <option name="totallyTimeSpent" value="259995000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1243,7 +1243,7 @@
     <entry file="file://$PROJECT_DIR$/cpp/DMX/DMX.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
-          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+          <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
           <folding />
         </state>
       </provider>
