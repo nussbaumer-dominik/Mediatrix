@@ -7,6 +7,7 @@
 
 #include <map>
 #include <array>
+#include <vector>
 
 
 #include <phpcpp.h>
@@ -20,9 +21,9 @@ class DMX : public Php::Base {
     private:
         static const unsigned int UNIVERSE = 0; // UNIVERSE to use for sending data
 
-        enum Channels {channel = {}};
+        enum {channels = 2};
 
-        //static ola::DmxBuffer buffer = new ola::DmxBuffer;
+        static vector<int>& channels = {};
 
     public:
         static Php::Value sendChannel(Php::Parameters &params){
