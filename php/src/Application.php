@@ -271,7 +271,7 @@ class Application implements MessageComponentInterface
         }
 
 
-        /*foreach ($dmx as $dev) {
+        foreach ($dmx as $dev) {
 
             var_dump($dev);
             print count($dev);
@@ -302,9 +302,9 @@ class Application implements MessageComponentInterface
                     }
                 }
             }
-        }*/
+        }
 
-        if(isset($dmx['r']) && isset($dmx['g']) && isset($dmx['b'])){
+        /*if(isset($dmx['r']) && isset($dmx['g']) && isset($dmx['b'])){
 
             $data = array(
                 "r" => $dmx['r'],
@@ -343,7 +343,7 @@ class Application implements MessageComponentInterface
                     array_push($result, $r);
                 }
             }
-        }
+        }*/
 
         if (count($result) > 1) {
             return $result[1];
