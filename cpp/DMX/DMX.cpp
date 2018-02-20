@@ -39,7 +39,7 @@ class DMX : public Php::Base {
         static Php::Value blackout(){
             ola::InitLogging(ola::OLA_LOG_WARN, ola::OLA_LOG_STDERR);
 
-            for(unsigned int i = 0; i < sizeof(channels)-1; i++){
+            for(unsigned int i = 0; i < sizeof(channels)/sizeof(channels[0]); i++){
                 channels[i] = 0;
             }
 
@@ -63,7 +63,7 @@ class DMX : public Php::Base {
 
             ola::DmxBuffer buffer;
 
-            for(unsigned int i = 0; i < sizeof(channels)-1; i++){
+            for(unsigned int i = 0; i < sizeof(channels)/sizeof(channels[0]; i++){
                 if(channels[i] > 0){
                     buffer.SetChannel(i,channels[i]);
                 }
