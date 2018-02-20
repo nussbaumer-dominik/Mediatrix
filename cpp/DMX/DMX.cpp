@@ -32,7 +32,7 @@ class DMX : public Php::Base {
                 channels[c] = v;
             }
 
-            return sendChannel();
+            return sendData();
 
         }
 
@@ -43,12 +43,12 @@ class DMX : public Php::Base {
                 channels[i] = 0;
             }
 
-            return sendChannel();
+            return sendData();
         }
 
 
     private:
-        static string sendChannels(){
+        static string sendData(){
             ola::InitLogging(ola::OLA_LOG_WARN, ola::OLA_LOG_STDERR);
 
             // Create a new client.
