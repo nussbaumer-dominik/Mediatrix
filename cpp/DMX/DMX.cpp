@@ -29,7 +29,7 @@ class DMX : public Php::Base {
 
             ola::InitLogging(ola::OLA_LOG_WARN, ola::OLA_LOG_STDERR);
 
-            //ola::DmxBuffer buffer;
+            ola::DmxBuffer buffer;
 
             //Create Client-Options
             ola::client::StreamingClient::Options options = ola::client::StreamingClient::Options();
@@ -53,6 +53,7 @@ class DMX : public Php::Base {
             {
                 int c = x.first;
                 int v = x.second;
+                channels[c] = v;
                 buffer.SetChannel(c, v);
             }
 
@@ -69,7 +70,7 @@ class DMX : public Php::Base {
         static Php::Value blackout(){
             ola::InitLogging(ola::OLA_LOG_WARN, ola::OLA_LOG_STDERR);
 
-            //ola::DmxBuffer buffer;
+            ola::DmxBuffer buffer;
             buffer.Blackout(); // Set all channels to 0
 
             // Create a new client.
