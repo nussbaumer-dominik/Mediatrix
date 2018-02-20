@@ -20,7 +20,7 @@ class DMX : public Php::Base {
     private:
         static const unsigned int UNIVERSE = 0; // UNIVERSE to use for sending data
 
-        enum Channels {channel = new int[512]};
+        enum Channels {channel = {}};
 
         //static ola::DmxBuffer buffer = new ola::DmxBuffer;
 
