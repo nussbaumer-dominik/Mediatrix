@@ -26,14 +26,17 @@ if __name__ == '__main__':
     print "Momentantemperatur : " + '{:.3f}'.format(mt)
 
 
+def rpm():
+
+    return
+
 # Lüftersteuerung
 def fanCon(mt):
     st = 35.0           #Solltemperatur in Grad Celsius
     maxspeed = 3800     #Maximale Geschwindigkeit des Lüfters in RPM
     if mt > st:
+
         rpm = ''
-
-
 
 """
 
@@ -42,20 +45,20 @@ def pwm():
     import RPi.GPIO as GPIO
     from time import sleep
 
-    ledpin = 12				# PWM pin connected to LED
+    PWMpin = 33				# PWM pin zum Anschluss des Lüfters (PWM1 33,35)
     GPIO.setwarnings(False)			#disable warnings
     GPIO.setmode(GPIO.BOARD)		#set pin numbering system
-    GPIO.setup(ledpin,GPIO.OUT)
-    pi_pwm = GPIO.PWM(ledpin,1000)		#create PWM instance with frequency
-    pi_pwm.start(0)				#start PWM of required Duty Cycle
+    GPIO.setup(PWMpin,GPIO.OUT)
+    fan_pwm = GPIO.PWM(PWMpin,100)		#create PWM instance with frequency
+    fan_pwm.start(0)				#start PWM of required Duty Cycle
     while True:
         for duty in range(0,101,1):
-            pi_pwm.ChangeDutyCycle(duty) #provide duty cycle in the range 0-100
+            fan_pwm.ChangeDutyCycle(duty) #provide duty cycle in the range 0-100
             sleep(0.01)
         sleep(0.5)
 
         for duty in range(100,-1,-1):
-            pi_pwm.ChangeDutyCycle(duty)
+            fan_pwm.ChangeDutyCycle(duty)
             sleep(0.01)
         sleep(0.5)
 
