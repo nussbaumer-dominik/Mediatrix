@@ -92,6 +92,7 @@ class AV
     public function setVolumeLevel($volumeLevel)
     {
 
+        echo "change AV-Volume";
 
         $times = (($volumeLevel - $this->volumeLevel) * 1.0) / $this->volumeSteps;
 
