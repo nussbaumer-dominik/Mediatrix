@@ -1,0 +1,521 @@
+\documentclass[
+    headings=optiontotocandhead,% Erweiterung für das optionale Argument der
+                                % Gliederungsbefehle aktiviert.
+    twoside,
+    numbers=noenddot,% Keine Punkte am Ende der Gliederungsnummern und davon
+                     % abgeleiteten Nummern
+    toc=flat, %Flache TOC
+    12pt, % Schriftgröße
+    titlepage, % es wird eine Titelseite verwendet
+    parskip=full, % Abstand zwischen Absätzen (ganze Zeile)
+    listof=totoc, % Verzeichnisse im Inhaltsverzeichnis aufführen
+    listof=flat, % mehr Abstand für grosse Zahlen
+    numbers=noenddot, % kein Punkt am Ende bei Nummern
+    %%enlargefirstpage,% Gibt es bei scrartcl nicht!!!!
+    bibliography=totoc, % Literaturverzeichnis im Inhaltsverzeichnis aufführen
+    %index=totoc, % Index im Inhaltsverzeichnis aufführen
+    %captions=tableheading, % Beschriftung von Tabellen für Ausgabe oberhalb
+                           % der Tabelle formatieren
+    %draft % Status des Dokuments (final/draft) draft hinzufügen zum anziegen
+    %%der zeilen ende
+    a4paper,DIV=14,
+    BCOR=15mm,
+    % captions=tablesignature,
+]{scrbook}
+
+\setcounter{secnumdepth}{3}
+
+\usepackage{textcomp}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[english, ngerman, naustrian]{babel} % your native language must be the last one!!
+
+\usepackage{lastpage}
+\usepackage{listings}
+\usepackage{blindtext}
+
+%% Aufzählungen nicht so weit einrücken
+\usepackage[inline]{enumitem}
+%\setitemize{leftmargin=*}
+% Listen etwas wenige einrücken, erfordert enumitem
+\setitemize{leftmargin=*}
+
+\usepackage{lmodern}
+
+\usepackage{xspace}
+
+\usepackage{graphicx}
+
+%%? \usepackage{textcomp}
+\usepackage[hyphens]{url}
+\usepackage{makeidx}
+\makeindex
+%%? \usepackage{graphicx}
+\usepackage[numbers]{natbib}
+\PassOptionsToPackage{normalem}{ulem}
+\usepackage{ulem}
+
+\usepackage{needspace}
+
+\setlength\partopsep{0.5ex}%schoenere Listen
+\usepackage[bottom]{footmisc}%fussnote ganz unten
+
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+
+\usepackage{multirow}   % Allows table elements to span several rows.
+\usepackage{booktabs}   % Improves the typesettings of tables.
+\usepackage{subcaption} % Allows the use of subfigures and enables their referencing.
+\usepackage[ruled,linesnumbered,algochapter]{algorithm2e} % Enables the writing of pseudo code.
+\usepackage[usenames,dvipsnames,table]{xcolor} % Allows the definition and use of colors. This package has to be included before tikz.
+\usepackage{nag}       % Issues warnings when best practices in writing LaTeX documents are violated.
+\usepackage{todonotes} % Provides tooltip-like todo notes.
+
+\usepackage{color}
+
+%% bessere Suche im PDF
+\input{glyphtounicode}
+\pdfgentounicode=1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%  Kopf und Fußzeilen -- links und rechts verschieden
+\newcommand{\kopfseitenummer}{{\bfseries \thepage}}
+\newcommand{\kopfkapl}{{\bfseries\leftmark}}
+\newcommand{\kopfkapr}{{\bfseries\rightmark}}
+\newcommand{\kopfbild}{\voffset7mm\includegraphics[width=25mm]{HTL3RLogoRGB}}
+\newcommand{\kopfHTL}{Höhere Technische Bundeslehranstalt Wien 3, \\Rennweg 	Abteilung für Informationstechnologie}
+
+\usepackage[automark,headsepline,footsepline,plainfootsepline]{scrlayer-scrpage}
+%\automark[chapter]{chapter}% Eventuell wenn doppelseitig
+\setkomafont{pageheadfoot}{\normalcolor\footnotesize\scshape}
+\setkomafont{pagenumber}{\normalfont\normalsize}
+\clearpairofpagestyles
+\ihead{\headmark}
+\ohead{\kopfbild}
+\ifoot{\kapitelautor}
+\ofoot{\pagemark}
+\ModifyLayer[addvoffset=-.6ex]{scrheadings.foot.above.line}% Linie verschieben
+\ModifyLayer[addvoffset=-.6ex]{plain.scrheadings.foot.above.line}% Linie verschieben
+\setlength{\headheight}{32pt}
+
+% alle Seiten mit Kopfzeile
+\renewcommand{\chapterpagestyle}{scrheadings}
+
+%% Kapitel - aufwändige Kapitelüberschriften
+%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+%\usepackage[Bjornstrup]{fncychap}
+% Alternative:
+%\usepackage{titlesec}
+
+% Verzeichnisse - aufwändiger
+%\usepackage{tocloft}
+
+
+%% Code Beispiele
+%% eine Variante
+\usepackage{listings}
+\renewcommand{\lstlistingname}{\inputencoding{utf8}Listing}
+%% andere Variante
+%\usepackage{minted}
+%\setminted{
+%  linenos,
+%  frame=lines,
+%  framesep=2mm,
+%  breaklines=true
+%}
+% Beispiel
+%\begin{listing}[H]
+%\begin{minted}{bash}
+%...
+%\end{minted}
+%\caption{Beschreibung}
+%\end{listing}
+%% dritte Variante
+% mit/für pandoc
+\input{text/00_pandoclisting.tex}
+
+%% should be last packages
+\usepackage{scrhack}
+
+\usepackage[unicode=true,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+ breaklinks=true,pdfborder={0 0 0},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{pdftitle={Diplomarbeit Titel},
+ pdfauthor={Wer auch immer},
+ pdfsubject={Diplomarbeit},
+ pdfkeywords={dies, das}}
+\urlstyle{same} % don't use monospace font for urls
+
+%% for pandoc
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% Auch Fußnoten bündig ausrichten
+\deffootnote[]{1em}{1em}{\textsuperscript{\thefootnotemark\ }}
+%% setup
+\sloppy % weniger Meldungen
+\voffset7mm % etwas nach unten
+
+%% schöner: 10000 -- gar keine, 1000 als Mittelweg
+\clubpenalty = 1000 % Schusterjungen verhindern
+\widowpenalty = 1000 % Hurenkinder verhindern
+\displaywidowpenalty = 1000
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%% wir schreiben keine Umlaut mit "a "o
+\shorthandoff{"}
+%% mit kapitelautor kann man den Autor festlegen oder auf leer setzen - steht dann in der Fußzeile.
+\newcommand{\kapitelautor}{}
+
+\input{text/00_latex_shortcuts.tex}
+%%%%%Anfang Titelseite
+%\pagenumbering{roman}
+\frontmatter % Switches to roman numbering
+\title{Diplomarbeit}
+\begin{titlepage}
+\begin{minipage}[b]{1\columnwidth}
+\parbox[b]{50mm}{\includegraphics[width=45mm]{HTL3RLogoRGB}}
+\hfill
+\parbox[b]{130mm}{\footnotesize \textsc{Höhere Technische Bundeslehranstalt} Wien 3, Rennweg\\
+IT \& Mechatronik\\
+\\
+HTL Rennweg :: Rennweg 89b\\
+A-1030 Wien :: Tel +43 1 24215-10 :: Fax DW 18
+}\\
+\mbox{}
+\end{minipage}
+
+\vspace{1cm}
+
+
+\begin{center}
+\textbf{\LARGE{}Diplomarbeit}{\large{}}\\
+{\large{}\vspace{15mm}
+ }\textbf{\large{}Mediatrix}\\
+\textbf{\large{}Ausgeschriebener Titel der Diplomarbeit}\\
+ \vspace{15mm}
+ ausgeführt an der\\
+ Höheren Abteilung für Informationstechnologie/Medientechnik\\
+ der Höheren Technischen Lehranstalt Wien 3 Rennweg\\
+ \vspace{1cm}
+ im Schuljahr 2017/2018\\
+ \vspace{1cm}
+ durch\\
+ \vspace{0.5cm}
+\textbf{\large{}Nußbaumer Dominik}\\
+\textbf{\large{}Scharwitzl Clemens}\\
+\textbf{\large{}Steiner Florian}\\
+
+\par\end{center}{\large \par}
+
+\begin{center}
+\vspace{20mm}
+ \normalsize unter der Anleitung von\\
+ \vspace{0.5cm}
+ Fink Andreas\\
+Stimpfl Franz
+\par\end{center}
+
+\begin{center}
+\vspace{5mm}
+Wien, \today
+\par\end{center}
+
+\end{titlepage}%%%%%%%%%%%%%%%%%%%%% Ende Titelseite %%%%%%%%%%%%%%%%%%%%%%
+
+\chapter*{Kurzfassung}
+\input{text/00_kurzfassung.tex}
+
+\chapter*{Abstract}
+\selectlanguage{english}
+\input{text/00_abstract.tex}
+\selectlanguage{naustrian}
+
+\chapter*{Ehrenwörtliche Erklärung}
+\input{text/00_erklaerung.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage{}
+\tableofcontents{}
+\cleardoublepage{}
+\listoftables
+\cleardoublepage{}
+\listoffigures
+
+%hier geht es los mit dem Text - auf einer rechten Seite
+\cleardoublepage{}
+%\pagenumbering{arabic}
+\mainmatter
+
+
+%%%%%%%%%%%%%%%%%%%%%% Chapter Einleitung %%%%%%%%%%%%%%%%%%%%%
+\chapter{Einleitung}\label{Einleitung}
+
+\section{Problemstellung}\label{Problemstellung}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+\section{Ziel der Arbeit}\label{Ziel-der-Arbeit}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+\section{Abgrenzung und Voraussetzungen}\label{Abgrenzung-und-Voraussetzungen}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+\section{Aufbau}\label{Aufbau}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+%%%%%%%%%%%%%%%%%%%%%% Chapter Hardware %%%%%%%%%%%%%%%%%%%%%
+\chapter{Hardware}\label{Hardware}
+
+\section{Gehäuse}\label{Gehäuse}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+\section{Raspberry Pi}\label{Raspberry-Pi}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+\section{Ein- und Ausschlatversögerung}\label{Ein-und-Ausschlatversögerung}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+\section{Lautsprecherschutzschaltung}\label{Lautsprecherschutzschaltung}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+\section{Infrarotsender}\label{Infrarotsender}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+\section{DMX Interface}\label{DMX-Interface}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+\section{Verkabelung}\label{Verkabelung}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+\section{Gehäusebelüftung}\label{Gehäusebelüftung}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+\section{Stromversorgung}\label{Stromversorgung}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+\section{Anschlüsse für den Anwender}\label{Anschlüsse-für-den-Anwender}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+%%%%%%%%%%%%%%%%%%%%%% Chapter Betriebssystem %%%%%%%%%%%%%%%%%%%%%
+\chapter{Betriebssystem}\label{Betriebssystem}
+
+\section{Raspbian}\label{Raspbian}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+\section{Sicherheit}\label{Sicherheit}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+\section{Ola}\label{ola}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+\section{WiringPi}\label{WiringPi}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+%%%%%%%%%%%%%%%%%%%%%% Chapter Backend %%%%%%%%%%%%%%%%%%%%%
+\chapter{Backend}\label{Backend}
+
+\section{PHP Extension}\label{PHP-Extension}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+\section{Websocket}\label{Websocket}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+\section{LDAP}\label{LDAP}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+\section{DMX}\label{DMX}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+\input{markdown/Clemens.md/DMX.md}
+
+\section{Infrarot}\label{Infrarot}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+\section{Mischpult}\label{Mischpult}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+\section{SQLite}\label{SQLite}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+%%%%%%%%%%%%%%%%%%%%%% Chapter Frontend %%%%%%%%%%%%%%%%%%%%%
+\chapter{Frontend}\label{Frontend}
+
+\section{CSS}\label{CSS}
+
+\renewcommand{\kapitelautor}{Autor: Dominik Nußbaumer}
+
+    \input{markdown/Dominik.md/Flexbox.md}
+
+\section{jQuery}\label{jQuery}
+
+\renewcommand{\kapitelautor}{Autor: Dominik Nußbaumer}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+\section{Design}\label{Design}
+
+\renewcommand{\kapitelautor}{Autor: Dominik Nußbaumer}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+%%%%%%%%%%%%%%%%%%%%%% Chapter Zusätzliches %%%%%%%%%%%%%%%%%%%%%
+\chapter{Zusätzliches}\label{Zusätzlicghes}
+
+\section{Bedienungsanleitung}\label{Bedienungsanleitung}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+\section{Beleuchtungskonzept Konferenzsaal}\label{Beleuchtungskonzept-Konferenzsaal}
+
+\renewcommand{\kapitelautor}{Autor: Clemens Scharwitzl}
+
+% \input{markdown/Clemens.md/myChapter.md}
+
+% \chapter{Ziele}
+
+% Das erste Kapitel stellt die Ziele der DA (inkl. individuelle Ziele
+% aller Mitarbeiter) da.\todo{viel Text schreiben}
+
+
+% \chapter{Formatierung}
+
+% wer hat diese Kapitel geschrieben oder leer
+% \renewcommand{\kapitelautor}{Autor: Hans Huber}
+
+% \input{text/demo_kap1.tex}
+
+
+% \chapter{Planung}
+
+% Das komplette nächste Kapitel wird in der externen Datei diplomarbeit2.tex gespeichert.
+% Es wird an dieser Stelle im Dokument eingebaut.
+% Damit ist es möglich, mehrere Personen an diverse Teile der Diplomarbeit arbeiten zu lassen.
+
+% \input{markdown/diplomarbeit2.md.tex}
+
+% \input{markdown/einstellungen.md.tex}
+
+% \input{text/demo_fuelltext.tex}
+
+
+\appendix
+
+\chapter{Anhang 1\label{chap:Anhang-1}}
+
+was auch immer: technische Dokumentationen etc.
+
+Zusätzlich sollte es geben:
+\begin{itemize}
+\item Abkürzungsverzeichnis
+\item Quellenverzeichnis (hier: Bibtex im Stil plaindin)
+\end{itemize}
+\printindex{}
+
+%% Flattersatz -- damit werden die langen URLs besser umgebrochen
+\raggedright %% eventuell auskommentieren
+\bibliographystyle{plaindin}%Alternative unsrtdin - Nummern im Text aufsteigend
+\bibliography{diplom}
+
+
+\cleardoublepage
+\newcommand{\Messbox}[2]{%Parameters: #1=Breite, #2=Hoehe
+\setlength{\unitlength}{1.0mm}%
+\begin{picture}(#1,#2)%
+\linethickness{0.05mm}%
+\put(0,0){\dashbox{0.2}(#1,#2)%
+{\parbox{#1mm}{%
+\centering\footnotesize
+%{\bf MESSBOX}\\
+Breite $ = #1 {\textrm\ mm}$\\
+Höhe $ = #2 {\textrm\ mm}$
+}}}\end{picture}
+}
+\begin{center} {\Large --- Druckgröße kontrollieren! ---}
+\bigskip
+
+\Messbox{100}{50} % Angabe der Breite/Hoehe in mm
+\bigskip
+
+{\Large --- Diese Seite nach dem Druck entfernen! ---}
+\todo{Diese Seite nach dem Druck entfernen!}
+\end{center}
+\end{document}
