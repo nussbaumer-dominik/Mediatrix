@@ -68,7 +68,7 @@ class Scheinwerfer
      * @return array
      */
     public function getStatus(){
-       $channels = DMX::getStatus();
+       $channels = $this->dmx::getStatus();
 
        var_dump($channels);
 
