@@ -46,6 +46,10 @@ class DMX : public Php::Base {
             return sendData();
         }
 
+        static Php::Value getStatus(){
+            return channels;
+        }
+
 
     private:
         static string sendData(){
@@ -134,6 +138,7 @@ extern "C" {
         Php::Class<DMX> dmx("DMX");
         dmx.method<&DMX::sendChannel> ("sendChannel", {Php::ByVal("channels", Php::Type::Array)});
         dmx.method<&DMX::blackout> ("blackout");
+        dmx.method<&DMX::getStatus> ("getStatus");
         //dmx.method<&DMX::noBlackout>    ("noBlackout");
 
         // add the class to the extension

@@ -432,6 +432,12 @@ class Application implements MessageComponentInterface
             )
         );
 
+        $result['dmx'] = array();
+
+        foreach ($this->scheinwerfer as $scheinw){
+            array_push($result['dmx'],$scheinw->getStatus());
+        }
+
         return $result;
     }
 
