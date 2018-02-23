@@ -47,7 +47,7 @@ class DMX : public Php::Base {
         }
 
         static Php::Value getStatus(){
-            return channels;
+            return &channels;
         }
 
 
@@ -82,6 +82,7 @@ class DMX : public Php::Base {
 
             return "{'success':'true','err':''}";
         }
+
         // static void noBlackout(){
         //     map<Php::Value, Php::Value> c;
         //
