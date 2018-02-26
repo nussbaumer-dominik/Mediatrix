@@ -139,6 +139,7 @@ class IR : public Php::Base {
 
         regex_replace (std::back_inserter(erg), read.begin(), read.end(), e, "");
 
+        cout << erg << endl;
 
         return erg;
      }
