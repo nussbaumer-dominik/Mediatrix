@@ -19,13 +19,19 @@ if(!strlen($modes) > 0){
     return;
 }
 
+$modesArray = explode("\\",$modes);
+
+for($i = 1; $i<=count($modesArray); $i++){
+    printf("%d.......%s",$i,$modesArray[$i]);
+}
+
 $readMode =  readline("Which Mode: ");
 
 $code = $ir->read($readMode);
 
-while(strlen($codes) < 0){
+while(strlen($code) < 0){
     readline("No code found. Press Enter to try again or Crtl+C to abroad.");
-    $codes = $ir->read($readMode);
+    $code = $ir->read($readMode);
 }
 
 echo $code;
