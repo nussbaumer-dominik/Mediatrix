@@ -12,10 +12,20 @@ $ir = new \IR();
 
 echo "Modes:\n";
 
-echo $ir->getMode() .  "\n";
+$modes = $ir->getMode();
 
-$mode =  readline("Which Mode: ");
+if(!strlen($modes) > 0){
+    echo "IR-Device is bussy. again later, or disconnect and reconnect the device.\n";
+    return;
+}
 
-$codes = $ir->read($mode);
+$readMode =  readline("Which Mode: ");
 
-echo $codes;
+$code = $ir->read($readMode);
+
+while(strlen($codes) < 0){
+    readline("No code found. Press Enter to try again or Crtl+C to abroad.");
+    $codes = $ir->read($readMode);
+}
+
+echo $code;
