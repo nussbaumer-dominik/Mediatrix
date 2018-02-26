@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cpp/DMX/DMX.cpp" afterPath="$PROJECT_DIR$/cpp/DMX/DMX.cpp" />
+      <change beforePath="$PROJECT_DIR$/cpp/IR/IR.cpp" afterPath="$PROJECT_DIR$/cpp/IR/IR.cpp" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IR.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="IR.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="138" column="37" lean-forward="true" selection-start-line="138" selection-start-column="37" selection-end-line="138" selection-end-column="37" />
+            <state relative-caret-position="171">
+              <caret line="103" column="31" lean-forward="false" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -141,11 +141,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DMX.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DMX.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cpp/DMX/DMX.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            <state relative-caret-position="-594">
+              <caret line="27" column="58" lean-forward="true" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -220,8 +220,8 @@
         <option value="$PROJECT_DIR$/php/src/Scheinwerfer.php" />
         <option value="$PROJECT_DIR$/php/src/Application.php" />
         <option value="$PROJECT_DIR$/php/src/readCode.php" />
-        <option value="$PROJECT_DIR$/cpp/IR/IR.cpp" />
         <option value="$PROJECT_DIR$/cpp/DMX/DMX.cpp" />
+        <option value="$PROJECT_DIR$/cpp/IR/IR.cpp" />
       </list>
     </option>
   </component>
@@ -416,14 +416,7 @@
       <workItem from="1518453299841" duration="2250000" />
       <workItem from="1519129983254" duration="938000" />
       <workItem from="1519389006169" duration="602000" />
-      <workItem from="1519662186646" duration="6154000" />
-    </task>
-    <task id="LOCAL-00344" summary="change dmx channels">
-      <created>1519076652830</created>
-      <option name="number" value="00344" />
-      <option name="presentableId" value="LOCAL-00344" />
-      <option name="project" value="LOCAL" />
-      <updated>1519076652830</updated>
+      <workItem from="1519662186646" duration="6480000" />
     </task>
     <task id="LOCAL-00345" summary="change dmx channels">
       <created>1519076665140</created>
@@ -761,7 +754,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519673294028</updated>
     </task>
-    <option name="localTasksCounter" value="393" />
+    <task id="LOCAL-00393" summary="debug readCode">
+      <created>1519673370688</created>
+      <option name="number" value="00393" />
+      <option name="presentableId" value="LOCAL-00393" />
+      <option name="project" value="LOCAL" />
+      <updated>1519673370689</updated>
+    </task>
+    <option name="localTasksCounter" value="394" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -788,7 +788,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="274829000" />
+    <option name="totallyTimeSpent" value="275155000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1223,18 +1223,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
+    <entry file="file://$PROJECT_DIR$/cpp/DMX/DMX.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="138" column="37" lean-forward="true" selection-start-line="138" selection-start-column="37" selection-end-line="138" selection-end-column="37" />
+        <state relative-caret-position="-594">
+          <caret line="27" column="58" lean-forward="true" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpp/DMX/DMX.cpp">
+    <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        <state relative-caret-position="171">
+          <caret line="103" column="31" lean-forward="false" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
           <folding />
         </state>
       </provider>
