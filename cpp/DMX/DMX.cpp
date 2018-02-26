@@ -47,7 +47,7 @@ class DMX : public Php::Base {
         }
 
         static Php::Value getStatus(){
-            return *channels;
+            return puchannels;
         }
 
 

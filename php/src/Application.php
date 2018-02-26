@@ -141,9 +141,11 @@ class Application implements MessageComponentInterface
                     $av = $commands['av'];
                     if (isset($av['mode'])) {
 
-                        if(preg_match('/^[a-zA-Z0-9]+$/',$av['mode'])) {
+                        if(preg_match('/^[a-zA-Z0-9]+$/',$av['mode']) && isset($this->av->getPresets()[$av['mode']])) {
                             $r = $this->av->setPreset($av['mode']);
                             $r->success ?: array_push($result, $r);
+                        }else{
+                            array_push($result, array("success" => false, "err" => "Mode of Av-Receiver does not exist"));
                         }
                     }
                     if (isset($av['source'])) {
@@ -156,6 +158,8 @@ class Application implements MessageComponentInterface
 
                             $r = $this->av->setVolumeLevel($av['volume']);
                             $r->success ?: array_push($result, $r);
+                        }else{
+                            array_push($result, array("success" => false, "err" => "Volume-Level must be valid"));
                         }
                     }
                 }
