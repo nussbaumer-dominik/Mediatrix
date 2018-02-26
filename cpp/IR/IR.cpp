@@ -4,6 +4,8 @@
 #include <string>
 #include <cerrno>
 #include <sstream>
+#include <regex>
+#include <iterator>
 
 #include <phpcpp.h>
 
@@ -92,12 +94,17 @@ class IR : public Php::Base {
 
         cout << endl << flush;
 
-        string erg = "";
+        string read = "";
 
         while (serialDataAvail (fd))
         {
-            erg += serialGetchar (fd);
+            read += serialGetchar (fd);
         }
+
+        regex e ("[^a-z0-9\_]+");
+        string erg;
+
+        regex_replace (std::back_inserter(erg), read.begin(), read.end(), e, "");
 
         return erg;
 
