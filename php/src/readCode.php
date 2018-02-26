@@ -21,8 +21,10 @@ if(!strlen($modes) > 0){
 
 $modesArray = explode("\\",$modes);
 
+var_dump($modesArray);
+
 for($i = 1; $i<=count($modesArray); $i++){
-    printf("%d.......%s",$i,$modesArray[$i]);
+    printf("%d.......%s\n",$i,$modesArray[$i-1]);
 }
 
 $readMode =  readline("Which Mode: ");
