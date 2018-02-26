@@ -101,7 +101,7 @@ class IR : public Php::Base {
             read += serialGetchar (fd);
         }
 
-        regex e ("[^a-z0-9\\_]+");
+        regex e ("[^A-Za-z0-9\\_]+");
         string erg;
 
         regex_replace (std::back_inserter(erg), read.begin(), read.end(), e, "");
@@ -127,12 +127,18 @@ class IR : public Php::Base {
         serialPrintf(fd,"v:");
         delay(100);
 
-        string erg = "";
+        string read = "";
 
         while (serialDataAvail (fd))
         {
-            erg += serialGetchar (fd);
+            read += serialGetchar (fd);
         }
+
+        regex e ("[^A-Za-z0-9\\_]+");
+        string erg;
+
+        regex_replace (std::back_inserter(erg), read.begin(), read.end(), e, "");
+
 
         return erg;
      }
