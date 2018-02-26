@@ -14,8 +14,10 @@ echo "Modes:\n";
 
 $modes = $ir->getMode();
 
+echo $modes . "\n";
+
 if(!strlen($modes) > 0){
-    echo "IR-Device is bussy. again later, or disconnect and reconnect the device.\n";
+    echo "IR-Device is bussy. Try again later, or disconnect and reconnect the device.\n";
     return;
 }
 
