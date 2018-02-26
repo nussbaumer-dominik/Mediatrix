@@ -134,14 +134,10 @@ class IR : public Php::Base {
             read += serialGetchar (fd);
         }
 
-        cout << read << endl;
-
         regex e ("[^A-Za-z0-9\\\\_]+");
         string erg;
 
         regex_replace (std::back_inserter(erg), read.begin(), read.end(), e, "");
-
-        cout << erg << endl;
 
         return erg;
      }

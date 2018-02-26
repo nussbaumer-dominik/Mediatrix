@@ -14,16 +14,12 @@ echo "Modes:\n";
 
 $modes = $ir->getMode();
 
-echo $modes . "\n";
-
 if(!strlen($modes) > 0){
     echo "IR-Device is bussy. Try again later, or disconnect and reconnect the device.\n";
     return;
 }
 
 $modesArray = explode("\\",$modes);
-
-var_dump($modesArray);
 
 for($i = 1; $i<=count($modesArray); $i++){
     printf("%d.......%s\n",$i,$modesArray[$i-1]);
