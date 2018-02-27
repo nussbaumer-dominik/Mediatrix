@@ -144,6 +144,38 @@ class IR : public Php::Base {
 
         return erg;
      }
+
+     static Php::Value check(){
+
+        int fd = serialOpen(IR::dev, 9600);
+
+        if(fd == -1){
+            return false;
+        }
+
+        //reset the IR-Device
+        serialPrintf(fd,":~:");
+        delay(20);
+
+        //send code to IR-Device
+        serialPrintf(fd,"k:");
+        delay(300);
+
+        string read = "";
+
+        while (serialDataAvail (fd))
+        {
+            read += serialGetchar (fd);
+        }
+
+        regex e ("[^A-Za-z0-9\\\\_]+");
+        string erg;
+
+        regex_replace (std::back_inserter(erg), read.begin(), read.end(), e, "");
+
+        return erg.length() == 0;
+
+     }
 };
 
 
@@ -176,6 +208,7 @@ extern "C" {
         });
 
         ir.method<&IR::getMode> ("getMode");
+        ir.method<&IR::check> ("check");
 
         // add the class to the extension
         extension.add(std::move(ir));
