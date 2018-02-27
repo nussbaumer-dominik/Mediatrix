@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 
-
 import time
 import RPi.GPIO as GPIO
 
@@ -13,7 +12,7 @@ door = 8
 
 #Einschalten
 
-def button():
+def main():
     value = 0
 
     while True:
@@ -25,7 +24,7 @@ def button():
 
             if GPIO.input(btn):
                 print "gedrueckt"
-                button()
+                main()
 
         time.sleep(0.03)
 
@@ -34,7 +33,7 @@ def button():
 if __name__ == '__main__':
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(btn, GPIO.IN)
-    button()
+    main()
 
 
 
