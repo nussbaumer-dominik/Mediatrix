@@ -70,7 +70,7 @@ try {
 
     }
 
-    while(ture){
+    while(true){
         while(true){
             echo "\nReading Code B:\n";
             $codes['b'] = $class->read($mode);

@@ -84,11 +84,11 @@ class IR : public Php::Base {
         serialPrintf(fd,":~:");
         delay(20);
 
-        cout << "Please Press the button.." << flush;
+        cout << "Please hold the button.." << flush;
 
         serialPrintf(fd,("l"+mode+":").c_str());
 
-        for(int i = 200; i < 5000; i += 200){
+        for(int i = 200; i < 1500; i += 200){
             delay(i);
             cout << "." << flush;
 
