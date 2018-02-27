@@ -384,6 +384,14 @@ class Application implements MessageComponentInterface
 
         $presets = $hasResults? $presets:$this->defaultPresets;
 
+        //escape Characters
+        foreach ($presets as $key => $value){
+            unset($presets[$key]);
+
+            $key = htmlentities($key);
+
+            $presets[$key] = $value;
+        }
 
 
         /*
