@@ -17,3 +17,5 @@ require __DIR__ . '/../vendor/autoload.php';
   );
 
   $server->run();
+
+  echo "test";

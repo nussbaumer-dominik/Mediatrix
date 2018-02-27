@@ -73,11 +73,11 @@ try {
 
     $i = 0;
     foreach ($possibleKeys as $k1 => $v1){
-        printf("...%s:\n", $k1);
+        printf("[*] %s:\n", $k1);
         foreach ($v1 as $k2 => $v2) {
-            printf("......%s:\n", $k2);
+            printf("[*]  |  %s:\n", $k2);
             foreach ($v2 as $v3) {
-                printf("[%d]......%s\n", $i, $v3);
+                printf("[%d]  |   |  %s\n", $i, $v3);
                 $i++;
             }
         }

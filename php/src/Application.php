@@ -167,6 +167,7 @@ class Application implements MessageComponentInterface
 
                 /*
                  * No Command recognized
+                 * TODO
                  */
                 if (!(isset($commands["dmx"]) || isset($commands["beamer"]) || isset($commands["av"]))) {
                     $from->send(json_encode($this->addLiveStatus(array("success" => false, "err" => "Unrecognized Command"))));
@@ -230,14 +231,6 @@ class Application implements MessageComponentInterface
         echo "An error has occurred: {$e->getMessage()}\n";
 
         $conn->close();
-    }
-
-    /**
-     * @param array $scheinwerfer
-     */
-    public function setScheinwerfer(array $scheinwerfer)
-    {
-        $this->scheinwerfer = $scheinwerfer;
     }
 
     /**
