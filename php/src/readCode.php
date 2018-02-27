@@ -63,7 +63,10 @@ try {
     echo "\nReading Code B:\n";
     $codes['b'] = $class->read($mode);
 
-    var_dump($codes);
+    if(strlen($codes['a']) != strlen($codes['b']) || $codes['a'] === $codes['b'] ){
+        echo "false\n";
+    }
+    echo "passt";
 }
 catch (\Exception $ex){
     echo $ex->getMessage();
