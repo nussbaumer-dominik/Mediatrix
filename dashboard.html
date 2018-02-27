@@ -55,7 +55,7 @@
               <div class="flex-container">
                   <div class="box" id="avbox">
                     <h1>AV-Receiver</h1>
-                    <div class="wrapper">
+                    <div class="wrapper" >
                       <input type="range" v-model="p1" min="0" max="100" value="0" class="slider" id="av-slider" data-id="0">
                       <p class="p1">{{p1}}</p>
                       <p class="av-slider-text">Master</p>
@@ -65,15 +65,18 @@
                       <span class="slider">0</span>
                       -->
 
+
+                      <div class="buttons">
+                        <ul>
+                            <li class="mode">Präsentation</li>
+                            <li class="mode">Musik</li>
+                            <li class="mode">Film</li>
+                            <li class="mode">Universal</li>
+                        </ul>
+                      </div>
+
                     </div>
-                    <div class="buttons">
-                      <ul>
-                          <li class="mode">Präsentation</li>
-                          <li class="mode">Musik</li>
-                          <li class="mode">Film</li>
-                          <li class="mode">Universal</li>
-                      </ul>
-                    </div>
+
                   </div>
                   <div class="box" id="beamerbox">
                     <h1>Beamer</h1>
@@ -108,9 +111,9 @@
                   <div class="box" id="lichtbox">
                     <h1>Licht</h1>
                     <div class="wrapper">
-                      <input type="range" v-model="p4" min="0" max="100" value="0" class="slider" id="mikro1-slider" data-id="0">
+                      <input type="range" v-model="p4" min="0" max="255" value="0" class="slider lightSlider" id="licht1-slider" data-id="1">
                       <p class="p4">{{p4}}</p>
-                      <input type="range" v-model="p5" min="0" max="100" value="0" class="slider" id="mikro2-slider" data-id="0">
+                      <input type="range" v-model="p5" min="0" max="255" value="0" class="slider lightSlider" id="licht2-slider" data-id="2">
                       <p class="p5">{{p5}}</p>
                     </div>
                   </div>

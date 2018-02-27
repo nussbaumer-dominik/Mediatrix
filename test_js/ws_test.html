@@ -5,10 +5,20 @@
     <title>Websovket-Test</title>
 </head>
 <body>
+<button id="savePreset">Save Preset</button>
+<button id="deletePreset">Delete Preset</button>
+<button id="updatePreset">Update Preset</button>
+<button id="setUsermod">change Usermod</button>
+
 <script>
-    var conn = new WebSocket('ws://192.168.1.85:10000');
+    var conn = new WebSocket('wss://mediatrix.darktech.org/wss');
     conn.onopen = function(e) {
         console.log("Connection established!");
+
+        //make registration
+
+        conn.send('{"jwt":"'+jwt+'","ini":1}');
+
     };
 
     conn.onmessage = function(e) {
@@ -19,6 +29,56 @@
     var params = new URLSearchParams(url.search);
 
     var jwt = params.get('jwt');
+
+
+
+    document.getElementById('savePreset').addEventListener('click',function (event){
+        var data = new FormData();
+        data.append('jwt', jwt);
+        data.append('data', '{"test":1}');
+
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", function(){console.log(this.responseText)});
+        oReq.open("POST", "../php/src/savePreset.php");
+        oReq.send(data);
+    });
+
+    document.getElementById('deletePreset').addEventListener('click',function (event){
+        var data = new FormData();
+        data.append('jwt', jwt);
+        data.append('id', '1');
+
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", function(){console.log(this.responseText)});
+        oReq.open("POST", "../php/src/deletePreset.php");
+        oReq.send(data);
+    });
+
+    document.getElementById('updatePreset').addEventListener('click',function (event){
+        var data = new FormData();
+        data.append('jwt', jwt);
+        data.append('data', '{"test":2}');
+        data.append('id', '1');
+
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", function(){console.log(this.responseText)});
+        oReq.open("POST", "../php/src/updatePreset.php");
+        oReq.send(data);
+    });
+
+
+    document.getElementById('setUsermod').addEventListener('click',function (event){
+        var data = new FormData();
+        data.append('jwt', jwt);
+        data.append('ex', '');
+
+
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", function(){console.log(this.responseText)});
+        oReq.open("POST", "../php/src/changeUserMode.php");
+        oReq.send(data);
+    })
+
 
 </script>
 </body>

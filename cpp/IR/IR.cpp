@@ -10,6 +10,9 @@
 using namespace std;
 
 class IR : public Php::Base {
+    private:
+     static constexpr const char* dev = "/dev/ttyUSBir";
+
     public:
      static Php::Value send(Php::Parameters &params){
 
@@ -21,7 +24,7 @@ class IR : public Php::Base {
         }
 
         //open serial connection to IR-Device
-        int fd = serialOpen("/dev/ttyUSB1", 9600);
+        int fd = serialOpen(IR::dev, 9600);
 
         if(fd == -1){
             return "{'success':'false','err':'Can not open Serial Connection to IR-Device'}";
@@ -34,7 +37,7 @@ class IR : public Php::Base {
         //convert given code to string
         string code = params[0];
 
-        std::cout << ("p"+code+"]:").c_str() << endl;
+        Php::out << ("p"+code+"]:").c_str() << endl;
 
         //send code to IR-Device
         serialPrintf(fd,("p"+code+"]:").c_str());
@@ -49,8 +52,71 @@ class IR : public Php::Base {
         return "{'success':'true','err':''}";
      }
 
-     static Php::Value read(){
-        return "";
+     static Php::Value read(Php::Parameters &params){
+
+        string mode = params[0];
+
+        if(mode.length()==1){
+            mode = "0"+mode;
+        }
+
+        int fd = serialOpen(IR::dev, 9600);
+
+        if(fd == -1){
+            return "{'success':'false','err':'Can not open Serial Connection to IR-Device'}";
+        }
+
+        serialPrintf(fd,":~:");
+        delay(20);
+
+        cout << "PLease Press the button.." << flush;
+
+        serialPrintf(fd,("l"+mode+":").c_str());
+
+        for(int i = 200; i < 2000; i += 200){
+            delay(i);
+            cout << "." << flush;
+
+        }
+
+        cout << endl << flush;
+
+        string erg = "";
+
+        while (serialDataAvail (fd))
+        {
+            erg += serialGetchar (fd);
+        }
+
+        return erg;
+
+     }
+
+     static Php::Value getMode(){
+
+        //open serial connection to IR-Device
+        int fd = serialOpen(IR::dev, 9600);
+
+        if(fd == -1){
+            return "{'success':'false','err':'Can not open Serial Connection to IR-Device'}";
+        }
+
+        //reset the IR-Device
+        serialPrintf(fd,":~:");
+        delay(20);
+
+        //send code to IR-Device
+        serialPrintf(fd,"v:");
+        delay(100);
+
+        string erg = "";
+
+        while (serialDataAvail (fd))
+        {
+            erg += serialGetchar (fd);
+        }
+
+        return erg;
      }
 };
 
@@ -78,7 +144,12 @@ extern "C" {
             Php::ByVal("code", Php::Type::String),
             Php::ByVal("times", Php::Type::Numeric)
         });
-        ir.method<&IR::send> ("read");
+
+        ir.method<&IR::read> ("read",{
+            Php::ByVal("mode", Php::Type::Numeric)
+        });
+
+        ir.method<&IR::getMode> ("getMode");
 
         // add the class to the extension
         extension.add(std::move(ir));

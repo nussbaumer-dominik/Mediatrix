@@ -1,32 +1,76 @@
 {
   "dmx":
   {
-    "1":{
+    "0":{
       "hue":1
     },
-    "2":{
+    "1":{
       "hue":2
     }
   },
   "beamer":
   {
     "source":{
-      "1":{
+      "0":{
         "a":"gjkdsf",
         "b":"suzfsudghfisd"
       },
-      "2":{
+      "1":{
         "a":"gjkdsf",
         "b":"suzfsudghfisd"
       }
     },
     "power":{
-      "a":"lisdfhisdf",
-      "b":"ilsgflisdfgilgsafilg"
+      "a":"31283f3f5758160a160a1620160a160a160a160a160a16201620160a16201620162016201620160a160a160a1620160a160a160a160a162016201620160a162016201620162016",
+      "b":"312834242759160a160a1620160a160a160a160a160a16201620160a16201620162016201620160a160a160a1620160a160a160a160a162016201620160a162016201620162016"
     }
   },
   "av":
   {
-
+    "presets":{
+      "Film":{
+        "a":"gjkdsf",
+        "b":"suzfsudghfisd"
+      },
+      "Praesentation":{
+        "a":"gjkdsf",
+        "b":"suzfsudghfisd"
+      },
+      "Audio":{
+        "a":"gjkdsf",
+        "b":"suzfsudghfisd"
+      }
+    },
+    "volume":{
+      "up":{
+        "a":"gjkdsf",
+        "b":"suzfsudghfisd"
+      },
+      "down":{
+        "a":"gjkdsf",
+        "b":"suzfsudghfisd"
+      }
+    },
+    "dbPerClick":5,
+    "maxVolume":6,
+    "minVolume":-80,
+    "sources":{
+      "0":{
+        "a":"gjkdsf",
+        "b":"suzfsudghfisd"
+      },
+      "1":{
+        "a":"gjkdsf",
+        "b":"suzfsudghfisd"
+      }
+    }
+  },
+  "defaultPresets": {
+    "oneSpot":{
+      "dmx":{
+        "id":1,
+        "hue":255
+      }
+    }
   }
 }
