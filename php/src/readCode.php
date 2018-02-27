@@ -53,9 +53,17 @@ class readCode{
 
 }
 try {
+    $codes = array();
     $class = new readCode();
     $mode = $class->modes();
-    $class->read($mode);
+
+    echo "\nReading Code A:\n";
+    $codes['a'] = $class->read($mode);
+
+    echo "\nReading Code B:\n";
+    $codes['b'] = $class->read($mode);
+
+    var_dump($codes);
 }
 catch (\Exception $ex){
     echo $ex->getMessage();

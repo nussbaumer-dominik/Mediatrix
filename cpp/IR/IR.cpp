@@ -82,7 +82,7 @@ class IR : public Php::Base {
         serialPrintf(fd,":~:");
         delay(20);
 
-        cout << "PLease Press the button.." << flush;
+        cout << "Please Press the button.." << flush;
 
         serialPrintf(fd,("l"+mode+":").c_str());
 
@@ -92,6 +92,7 @@ class IR : public Php::Base {
 
         }
 
+        cout << endl << "Processing..." << endl;
         delay(200);
 
         cout << endl << flush;
