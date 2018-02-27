@@ -60,6 +60,7 @@ try {
     echo "\nReading Code A:\n";
     $codes['a'] = $class->read($mode);
 
+    echo "check: ";
     var_dump($this->ir::check());
 
     echo "\nReading Code B:\n";
