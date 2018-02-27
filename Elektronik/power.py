@@ -15,12 +15,13 @@ door = 8
 rs = 2 #Relais Für Lautsprecher
 rp = 3 #Relais für Strom //momentan für test
 
-GPIO.setup(btn, GPIO.IN) # GPIO Modus zuweisen
-GPIO.setup(panel, GPIO.IN) # GPIO Modus zuweisen
-GPIO.setup(door, GPIO.IN) # GPIO Modus zuweisen
+# GPIO Modus zuweisen
+GPIO.setup(btn, GPIO.IN)
+GPIO.setup(panel, GPIO.IN)
+GPIO.setup(door, GPIO.IN)
 
-GPIO.setup(rs, GPIO.OUT) # GPIO Modus zuweisen
-GPIO.setup(rp, GPIO.OUT) # GPIO Modus zuweisen
+GPIO.setup(rs, GPIO.OUT)
+GPIO.setup(rp, GPIO.OUT)
 
 
 #Einschalten
@@ -44,7 +45,6 @@ def main():
                 main()
                 switchPower(pstate)
 
-
         time.sleep(0.03)
 
         if GPIO.input(panel):
@@ -54,14 +54,12 @@ def main():
 
         time.sleep(0.03)
 
-        if GPIO.input(btn):
+        if GPIO.input(door):
             print "offen"
             main()
             switchPower(sstate)
 
-
         time.sleep(0.03)
-
 
     return 0
 
@@ -81,9 +79,9 @@ def switchPower(pstate):
 
     if pstate == 1:
         sstate = 0
-        GPIO.output(rs, GPIO.LOW)
+        GPIO.output(rs, GPIO.LOW)  #aus
         time.sleep(1.00)
-        GPIO.output(rp, GPIO.LOW)
+        GPIO.output(rp, GPIO.LOW)  #aus
 
 
 
