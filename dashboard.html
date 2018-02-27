@@ -26,7 +26,17 @@
     </head>
     <body>
       <div class="parent">
+        <div class="modal-wrapper">
+          <div class="modal">
+            <a class="btn-close trigger" href="javascript:;"></a>
+            <div class="modal-content">
+            </div>
+          </div>
+        </div>
         <div class="side-nav">
+          <div class="savePreset trigger">
+            <i class="fa fa-save" aria-hidden="true"></i>
+          </div>
           <ul>
             <li><a href="#" id="camera"><i class="fa fa-video-camera boxButtons" data-boxbtn="1" aria-hidden="true"></i></a></li>
             <li><a href="#"><i class="fa fa-volume-up boxButtons" data-boxbtn="2" aria-hidden="true"></i></a></li>
@@ -53,14 +63,14 @@
 
         <div class="content">
           <div class="statusBox ">
-              <div class="statusGrid">
-                  <div>Beamer Eingang:</div>
-                  <div>Master: </div>
-                  <div>Mikro 1:</div>
-                  <div>Mikro 2:</div>
-                  <div>Helligkeit: </div>
-                  <div>Hager: </div>
-              </div>
+            <div class="statusGrid">
+                <div>Eingang:</div>
+                <div>Master: </div>
+                <div>Mikro 1:</div>
+                <div>Mikro 2:</div>
+                <div>Helligkeit: </div>
+                <div>Hager: </div>
+            </div>
           </div>
 
           <div class="flex-container flex">
@@ -172,7 +182,11 @@
 
           <div class="mobileOptions">
             <div class="mobileBtn showStatus"></div>
-            <div class="mobileBtn saveAsPreset"></div>
+            <div class="mobileBtn saveAsPreset">
+              <div class="savePreset-mobile trigger">
+                <i class="fa fa-save" aria-hidden="true"></i>
+              </div>
+            </div>
           </div>
 
           <div class="presentation">

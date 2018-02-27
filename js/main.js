@@ -24,7 +24,7 @@ window.onload = function() {
   let allItems  = [avSlider1, mikroSlider1, mikroSlider2, mikroMasterSlider, lichtSlider1, lichtSlider2, lichtSlider3, lichtWeissSlider];
   let allValues = [avSlider1Value, mikroSlider1Value, mikroSlider2Value, mikroMasterSliderValue, lichtSlider1Value, lichtSlider2Value, lichtSlider3Value, lichtWeissSliderValue];
 
-  const socket = new WebSocket('ws://192.168.1.85:10000');
+  const socket = new WebSocket('wss://192.168.1.85/wss');
 
   //wird bei einer Exception geworfen
   socket.onError = function(error) {
@@ -111,38 +111,38 @@ window.onload = function() {
   mikroSlider1.noUiSlider.on('update', function(values, handle){
       mikroSlider1Value.innerHTML = values[handle];
   });
-  mikroSlider1.noUiSlider.on("update", Slider);
+  mikroSlider1.noUiSlider.on("slide", Slider);
 
   mikroSlider2.noUiSlider.on('update', function(values, handle){
       mikroSlider2Value.innerHTML = values[handle];
   });
-  mikroSlider2.noUiSlider.on("update", Slider);
+  mikroSlider2.noUiSlider.on("slide", Slider);
 
   mikroMasterSlider.noUiSlider.on('update', function(values, handle){
       mikroMasterSliderValue.innerHTML = values[handle];
   });
-  mikroMasterSlider.noUiSlider.on("update", Slider);
+  mikroMasterSlider.noUiSlider.on("slide", Slider);
 
   //Licht Slider Value
   lichtSlider1.noUiSlider.on('update', function(values, handle){
       lichtSlider1Value.innerHTML = values[handle];
   });
-  lichtSlider1.noUiSlider.on("update", Slider);
+  lichtSlider1.noUiSlider.on("slide", Slider);
 
   lichtSlider2.noUiSlider.on('update', function(values, handle){
       lichtSlider2Value.innerHTML = values[handle];
   });
-  lichtSlider2.noUiSlider.on("update", Slider);
+  lichtSlider2.noUiSlider.on("slide", Slider);
 
   lichtSlider3.noUiSlider.on('update', function(values, handle){
       lichtSlider3Value.innerHTML = values[handle];
   });
-  lichtSlider3.noUiSlider.on("update", Slider);
+  lichtSlider3.noUiSlider.on("slide", Slider);
 
   lichtWeissSlider.noUiSlider.on('update', function(values, handle){
       lichtWeissSliderValue.innerHTML = values[handle];
   });
-  lichtWeissSlider.noUiSlider.on("update", Slider);
+  lichtWeissSlider.noUiSlider.on("slide", Slider);
 
 
   //Data JSON erstellen
