@@ -44,7 +44,7 @@ class readCode{
         $code = $this->ir::read($readMode);
 
         while (strlen($code) < 0) {
-            readline("No code found. Press Enter to try again or Crtl+C to abroad.");
+            readline("No code found. Press ENTER to try again or press CRTL+C");
             $code = $this->ir::read($readMode);
         }
 
@@ -60,20 +60,41 @@ try {
     $class = new readCode();
     $mode = $class->modes();
 
-    echo "\nReading Code A:\n";
-    $codes['a'] = $class->read($mode);
+    while(true){
+        echo "\nReading Code A:\n";
+        $codes['a'] = $class->read($mode);
 
-    echo "check: ";
-    var_dump($class->check());
+        if(!boolval($class->check())){
+            echo "Code A read\n";
+            break;
+        }
 
-    echo "\nReading Code B:\n";
-    $codes['b'] = $class->read($mode);
+        readline("Couldn't read a Code. Press ENTER to try again or press CRTL+C");
 
-    if(strlen($codes['a']) != strlen($codes['b']) || $codes['a'] === $codes['b'] ){
-        echo "false\n";
-        var_dump($codes);
     }
-    echo "passt";
+
+    while(ture){
+        while(true){
+            echo "\nReading Code B:\n";
+            $codes['b'] = $class->read($mode);
+
+            if(!boolval($class->check())){
+                echo "Code A read\n";
+                break;
+            }
+
+            readline("Couldn't read a Code. Press ENTER to try again or press CRTL+C");
+
+        }
+
+
+        if(strlen($codes['a']) === strlen($codes['b']) && $codes['a'] !== $codes['b'] ){
+            echo "Both Codes are valid\n";
+            break;
+        }
+
+        readline("The Codes read are not valid. Press ENTER to try again or press CRTL+C");
+    }
 }
 catch (\Exception $ex){
     echo $ex->getMessage();
