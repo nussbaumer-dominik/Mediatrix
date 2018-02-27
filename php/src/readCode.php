@@ -65,6 +65,7 @@ try {
 
     if(strlen($codes['a']) != strlen($codes['b']) || $codes['a'] === $codes['b'] ){
         echo "false\n";
+        var_dump($codes);
     }
     echo "passt";
 }
