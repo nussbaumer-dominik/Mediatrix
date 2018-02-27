@@ -69,8 +69,8 @@
       <file leaf-file-name="readCode.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/readCode.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="62" column="19" lean-forward="false" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
+            <state relative-caret-position="202">
+              <caret line="66" column="27" lean-forward="true" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -402,13 +402,6 @@
       <workItem from="1519129983254" duration="938000" />
       <workItem from="1519389006169" duration="602000" />
       <workItem from="1519662186646" duration="13276000" />
-    </task>
-    <task id="LOCAL-00355" summary="change dmx channels">
-      <created>1519111286815</created>
-      <option name="number" value="00355" />
-      <option name="presentableId" value="LOCAL-00355" />
-      <option name="project" value="LOCAL" />
-      <updated>1519111286815</updated>
     </task>
     <task id="LOCAL-00356" summary="change dmx channels">
       <created>1519111855404</created>
@@ -746,7 +739,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519736333450</updated>
     </task>
-    <option name="localTasksCounter" value="404" />
+    <task id="LOCAL-00404" summary="integrate check in readcode php">
+      <created>1519736546102</created>
+      <option name="number" value="00404" />
+      <option name="presentableId" value="LOCAL-00404" />
+      <option name="project" value="LOCAL" />
+      <updated>1519736546103</updated>
+    </task>
+    <option name="localTasksCounter" value="405" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -773,7 +773,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="285111000" />
+    <option name="totallyTimeSpent" value="285254000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1272,8 +1272,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/readCode.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="62" column="19" lean-forward="false" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
+        <state relative-caret-position="202">
+          <caret line="66" column="27" lean-forward="true" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
           <folding />
         </state>
       </provider>

@@ -51,6 +51,9 @@ class readCode{
         return $code;
     }
 
+    function check(){
+        return $this->ir::check();
+    }
 }
 try {
     $codes = array();
@@ -61,7 +64,7 @@ try {
     $codes['a'] = $class->read($mode);
 
     echo "check: ";
-    var_dump($this->ir::check());
+    var_dump(\IR::check());
 
     echo "\nReading Code B:\n";
     $codes['b'] = $class->read($mode);
