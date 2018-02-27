@@ -53,6 +53,12 @@ class readCode{
 
 }
 try {
+
+    $myfile = fopen("../conf/Mediatrix.conf", "r+");
+    $json = json_decode(fread($myfile,filesize("webdictionary.txt")));
+
+    var_dump($json);
+
     $codes = array();
     $class = new readCode();
     $mode = $class->modes();
