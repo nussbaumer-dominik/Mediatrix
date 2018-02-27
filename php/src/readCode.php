@@ -51,9 +51,6 @@ class readCode{
         return $code;
     }
 
-    function check(){
-        return $this->ir::check();
-    }
 }
 try {
     $codes = array();
@@ -64,7 +61,7 @@ try {
         echo "\nReading Code A:\n";
         $codes['a'] = $class->read($mode);
 
-        if(!boolval($class->check())){
+        if(strlen($codes['a'])>0){
             echo "Code A read\n";
             break;
         }
@@ -78,7 +75,7 @@ try {
             echo "\nReading Code B:\n";
             $codes['b'] = $class->read($mode);
 
-            if(!boolval($class->check())){
+            if(strlen($codes['b'])>0){
                 echo "Code A read\n";
                 break;
             }
