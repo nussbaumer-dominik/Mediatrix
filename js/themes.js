@@ -6,7 +6,7 @@ $( document ).ready(function() {
 	let dark = ["#ECECEC", "#fff", "#282B2F", "#16191C", "#393A3F", "none", "#fff", "#393A3F", "#f7f7f7", "#393A3F", "#f7f7f7"];
 	let minimalDark = ["#ECECEC", "#fff", "#16191C", "#16191C", "#282B2F", "none", "#fff", "#393A3F", "#f7f7f7", "#393A3F", "#f7f7f7"];
 	let whiteBlue = ["#1E283D", "#fff", "#F5F6FA", "#1E283D", "#fff", "#1E283D", "#2B3545", "#fff", "#1E283D", "#fff", "#1E283D"];
-	let minimalLight = ["#1E283D", "#1E283D", "#F4F6F8", "#F4F6F8", "#fff", "none", "#2B3545", "#fff", "#1E283D", "#fff", "#fff"];
+	let minimalLight = ["#1E283D", "#1E283D", "#F4F6F8", "#F4F6F8", "#fff", "none", "#2B3545", "#fff", "#1E283D", "#fff", "#1E283D"];
 
 	$(".themeBtn").on("click", function(){
 	  switch($(this).attr("value")) {
@@ -35,13 +35,14 @@ $( document ).ready(function() {
 
   $(".trigger").click(function() {
     $(".modal-wrapper").toggleClass("open");
-    //$(".parent").toggleClass("blur");
+    $(".modal").toggleClass("open");
     return false;
   });
 
-	$(".modal-wrapper").click(function() {
-		$(".modal-wrapper").toggleClass("open");
-	});
+  $(".modal-wrapper").click(function() {
+  	$(".modal-wrapper").toggleClass("open");
+    $(".modal").toggleClass("open");
+  });
 
 });
 

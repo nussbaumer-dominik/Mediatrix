@@ -36,6 +36,20 @@ a{
   color: inherit;
 }
 
+.page-wrapper{
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+}
+
+.blur{
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
 .parent{
   display: flex;
   align-items: center;
@@ -53,6 +67,7 @@ a{
   z-index: 3;
   top: 0; left: 0;
   background: rgba(0,0,0,0.75);
+  //display: none;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: all 0.25s ease-in-out;
@@ -64,25 +79,32 @@ a{
 .modal-wrapper.open{
   opacity: 1;
   visibility: visible;
+  //display: block;
+}
+
+.modal.open{
+  opacity: 1;
+  visibility: visible;
+  z-index: 4;
 }
 
 .modal{
   width: 600px;
   height: 400px;
-  z-index: 4;
+  z-index: 0;
   border-radius: 10px;
-  display: block;
-  position: relative;
+  position: absolute;
   margin: 0 auto;
-  color: var(--modal-btn);
-  top: 50%;
-  transform: translateY(-50%);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
   background: var(--bg);
+  //display: none;
+  visibility: hidden;
   opacity: 0;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .modal-wrapper.open .modal{
@@ -103,7 +125,7 @@ a{
   width: 32px;
   height: 6px;
   display: block;
-  background: var(--modal-btn) !important;
+  background: var(--modal-btn);
 }
 
 .btn-close::before{
@@ -865,6 +887,11 @@ button{
         transform: scale(1.02, 1.02);
       }
     }
+  }
+
+  .modal{
+    width: 300px;
+    height: 400px;
   }
 
   .box{
