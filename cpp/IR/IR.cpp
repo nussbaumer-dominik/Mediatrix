@@ -6,6 +6,8 @@
 #include <sstream>
 #include <regex>
 #include <iterator>
+#include <stdio.h>
+#include <stdlib.h>
 
 #include <phpcpp.h>
 
