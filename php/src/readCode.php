@@ -53,10 +53,10 @@ class readCode{
 
 }
 try {
-    $path = "../../conf/Mediatrix.conf";
+    $path = "../conf/Mediatrix.json";
 
     $myfile = fopen($path, "r+");
-    $json = json_decode(fread($myfile,filesize("webdictionary.txt")));
+    $json = json_decode(fread($myfile,filesize($path)));
 
     var_dump($json);
 
