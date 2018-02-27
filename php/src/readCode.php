@@ -53,8 +53,9 @@ class readCode{
 
 }
 try {
+    $path = "../../conf/Mediatrix.conf";
 
-    $myfile = fopen("../conf/Mediatrix.conf", "r+");
+    $myfile = fopen($path, "r+");
     $json = json_decode(fread($myfile,filesize("webdictionary.txt")));
 
     var_dump($json);
