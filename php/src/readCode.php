@@ -58,7 +58,9 @@ try {
     $myfile = fopen($path, "r+");
     $json = json_decode(fread($myfile,filesize($path)));
 
-    var_dump($json);
+    $possibleKeys = array();
+
+    echo array_keys($json->av->preset);
 
     $codes = array();
     $class = new readCode();
