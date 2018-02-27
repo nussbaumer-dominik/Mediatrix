@@ -86,11 +86,13 @@ class IR : public Php::Base {
 
         serialPrintf(fd,("l"+mode+":").c_str());
 
-        for(int i = 200; i < 2000; i += 200){
+        for(int i = 200; i < 5000; i += 200){
             delay(i);
             cout << "." << flush;
 
         }
+
+        delay(200);
 
         cout << endl << flush;
 
@@ -125,7 +127,7 @@ class IR : public Php::Base {
 
         //send code to IR-Device
         serialPrintf(fd,"v:");
-        delay(100);
+        delay(300);
 
         string read = "";
 
