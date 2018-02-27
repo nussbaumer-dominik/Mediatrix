@@ -1,10 +1,34 @@
 window.onload = function() {
+  //sliders + values
+  var sliders = document.getElementsByClassName("slider");
+  let avSlider1 = document.getElementById('avSlider1');
+  let avSlider1Value = document.getElementById('avSlider1Value');
+  //Mikrofon
+  let mikroSlider1 = document.getElementById('mikroSlider1');
+  let mikroSlider2 = document.getElementById('mikroSlider2');
+  let mikroMasterSlider = document.getElementById('mikroMasterSlider');
+  let mikroSlider1Value = document.getElementById('mikroSlider1Value');
+  let mikroSlider2Value = document.getElementById('mikroSlider2Value');
+  let mikroMasterSliderValue = document.getElementById('mikroMasterSliderValue');
+
+  //Licht
+  let lichtSlider1 = document.getElementById('lichtSlider1');
+  let lichtSlider2 = document.getElementById('lichtSlider2');
+  let lichtSlider3 = document.getElementById('lichtSlider3');
+  let lichtWeissSlider = document.getElementById('lichtWeissSlider');
+  let lichtSlider1Value = document.getElementById('lichtSlider1Value');
+  let lichtSlider2Value = document.getElementById('lichtSlider2Value');
+  let lichtSlider3Value = document.getElementById('lichtSlider3Value');
+  let lichtWeissSliderValue = document.getElementById('lichtWeissSliderValue');
+
+  let allItems  = [avSlider1, mikroSlider1, mikroSlider2, mikroMasterSlider, lichtSlider1, lichtSlider2, lichtSlider3, lichtWeissSlider];
+  let allValues = [avSlider1Value, mikroSlider1Value, mikroSlider2Value, mikroMasterSliderValue, lichtSlider1Value, lichtSlider2Value, lichtSlider3Value, lichtWeissSliderValue];
 
   const socket = new WebSocket('ws://192.168.1.85:10000');
 
   //wird bei einer Exception geworfen
   socket.onError = function(error) {
-    console.log('WebSocket Error: ' + error);
+    console.log("WebSocket Error: " + error);
   };
 
   //wird beim erfolgreichen Öffnen des Sockets ausgegeben
@@ -23,7 +47,7 @@ window.onload = function() {
     console.log("socket closed: " + socket + " " + event.data);
   };
 
-  //senden der Daten
+  //Daten versenden
   function send(data) {
     socket.send(data);
     console.log(data);
@@ -31,81 +55,101 @@ window.onload = function() {
 
   //Werte der Slider auslesen
   function Slider() {
-    console.log(this.value + " " + this.id + " " + this.getAttribute(
-      "data-id"));
-
-    switch (this.getAttribute("data-type")) {
+    switch (this.target.getAttribute("data-type")) {
       case "av":
-        console.log("Dieser Slider ist von einem AV-Receiver");
+        console.log("Dieser Slider ist von einem AV-Receiver: "+this.get());
         var data = {
           "av": {
-            "volume": this.value
+            "volume": this.get()
           }
         };
         return data;
-        break;
+        break
       case "mixer":
-        console.log("Dieser Slider ist von einem Mixer");
+        console.log("Dieser Slider ist von einem Mixer: "+this.get());
 
         return data;
-        break;
+        break
       case "licht":
-        console.log("Dieser Slider ist von einem DMX Gerät");
+        console.log("Dieser Slider ist von einem DMX Gerät: "+this.get());
         var data = {
           "dmx": {
             "scheinwerfer": {
-              "id": this.getAttribute("data-id"),
-              "hue": this.value
+              "id": this.target.getAttribute("data-id"),
+              "hue": this.get()
             }
           }
         };
         return data;
-        break;
+        break
     }
+  };
+
+  for(var i=0;i<allItems.length;i++){
+    noUiSlider.create(allItems[i], {
+      start: 0,
+      format: wNumb({
+        decimals: 0
+      }),
+      connect: [false, false],
+      direction: 'rtl',
+      orientation: 'vertical',
+      range: {
+        'min': 0,
+        'max': 100
+      }
+    });
   }
 
-  //Alle Slider in eine HTMLCollection schreiben
-  const sliders = document.getElementsByClassName('slider');
+  //AV Slider Value
+  avSlider1.noUiSlider.on('update', function(values, handle){
+      avSlider1Value.innerHTML = values[handle];
+  });
+  avSlider1.noUiSlider.on("slide", Slider);
 
-  // EventListener zu den Slidern hinzufügen
-  for (var i = 0; i < sliders.length; i++) {
-    sliders[i].addEventListener('change', Slider, false);
-  }
+  //Mikrofon Slider Value
+  mikroSlider1.noUiSlider.on('update', function(values, handle){
+      mikroSlider1Value.innerHTML = values[handle];
+  });
+  mikroSlider1.noUiSlider.on("update", Slider);
+
+  mikroSlider2.noUiSlider.on('update', function(values, handle){
+      mikroSlider2Value.innerHTML = values[handle];
+  });
+  mikroSlider2.noUiSlider.on("update", Slider);
+
+  mikroMasterSlider.noUiSlider.on('update', function(values, handle){
+      mikroMasterSliderValue.innerHTML = values[handle];
+  });
+  mikroMasterSlider.noUiSlider.on("update", Slider);
+
+  //Licht Slider Value
+  lichtSlider1.noUiSlider.on('update', function(values, handle){
+      lichtSlider1Value.innerHTML = values[handle];
+  });
+  lichtSlider1.noUiSlider.on("update", Slider);
+
+  lichtSlider2.noUiSlider.on('update', function(values, handle){
+      lichtSlider2Value.innerHTML = values[handle];
+  });
+  lichtSlider2.noUiSlider.on("update", Slider);
+
+  lichtSlider3.noUiSlider.on('update', function(values, handle){
+      lichtSlider3Value.innerHTML = values[handle];
+  });
+  lichtSlider3.noUiSlider.on("update", Slider);
+
+  lichtWeissSlider.noUiSlider.on('update', function(values, handle){
+      lichtWeissSliderValue.innerHTML = values[handle];
+  });
+  lichtWeissSlider.noUiSlider.on("update", Slider);
+
 
   //Data JSON erstellen
   function build() {
-
+    return "";
   }
-
-
-
-  // Daten des Sliders auslesen
-  /*function lightSlider() {
-      console.log(this.value + " " + this.id + " " + this.getAttribute(
-          "data-id"));
-      var data = {
-          "jwt": "",
-          "dmx": {
-              "scheinwerfer": {
-                  "id": this.getAttribute("data-id"),
-                  "hue": this.value
-              }
-          }
-      };
-
-      socket.send(data);
-      console.log(data);
-  }*/
-
-  /*var lightSliders = document.getElementsByClassName('lightSlider');
-
-  // EventListener zu den Licht Slidern hinzufügen
-  for (var i = 0; i < lightSliders.length; i++) {
-      lightSliders[i].addEventListener('change', lightSlider, false);
-  }*/
-
-
-};
+}
 
 //socket wird geschlossen
 //socket.close();
