@@ -152,7 +152,7 @@ class IR : public Php::Base {
         int fd = serialOpen(IR::dev, 9600);
 
         if(fd == -1){
-            return false;
+            return "0";
         }
 
         //reset the IR-Device
@@ -175,9 +175,7 @@ class IR : public Php::Base {
 
         regex_replace (std::back_inserter(erg), read.begin(), read.end(), e, "");
 
-        char *intStr = itoa(erg.length());
-
-        return string(intStr);
+        return to_string(erg.length());
 
      }
 };
