@@ -1,48 +1,155 @@
 window.onload = function() {
+  //sliders + values
+  var sliders = document.getElementsByClassName("slider");
+  let avSlider1 = document.getElementById('avSlider1');
+  let avSlider1Value = document.getElementById('avSlider1Value');
+  //Mikrofon
+  let mikroSlider1 = document.getElementById('mikroSlider1');
+  let mikroSlider2 = document.getElementById('mikroSlider2');
+  let mikroMasterSlider = document.getElementById('mikroMasterSlider');
+  let mikroSlider1Value = document.getElementById('mikroSlider1Value');
+  let mikroSlider2Value = document.getElementById('mikroSlider2Value');
+  let mikroMasterSliderValue = document.getElementById('mikroMasterSliderValue');
 
-    var socket = new WebSocket('ws://192.168.1.85:10000');
+  //Licht
+  let lichtSlider1 = document.getElementById('lichtSlider1');
+  let lichtSlider2 = document.getElementById('lichtSlider2');
+  let lichtSlider3 = document.getElementById('lichtSlider3');
+  let lichtWeissSlider = document.getElementById('lichtWeissSlider');
+  let lichtSlider1Value = document.getElementById('lichtSlider1Value');
+  let lichtSlider2Value = document.getElementById('lichtSlider2Value');
+  let lichtSlider3Value = document.getElementById('lichtSlider3Value');
+  let lichtWeissSliderValue = document.getElementById('lichtWeissSliderValue');
 
-    socket.onError = function(error) {
-        console.log('WebSocket Error: ' + error);
-    };
+  let allItems  = [avSlider1, mikroSlider1, mikroSlider2, mikroMasterSlider, lichtSlider1, lichtSlider2, lichtSlider3, lichtWeissSlider];
+  let allValues = [avSlider1Value, mikroSlider1Value, mikroSlider2Value, mikroMasterSliderValue, lichtSlider1Value, lichtSlider2Value, lichtSlider3Value, lichtWeissSliderValue];
 
-    socket.onOpen = function(event) {
-        console.log("open")
-    };
+  const socket = new WebSocket('wss://192.168.1.85/wss');
 
-    socket.onClose = function(event) {
-        //
-    };
+  //wird bei einer Exception geworfen
+  socket.onError = function(error) {
+    console.log("WebSocket Error: " + error);
+  };
 
-    socket.onMessage = function (event){
-        console.log(event);
-    };
+  //wird beim erfolgreichen Öffnen des Sockets ausgegeben
+  socket.onOpen = function(event) {
+    console.log("socket open: " + socket + " " + event.data);
+  };
 
-    // Daten des Sliders auslesen und abschicken
-    function lightSlider() {
-        console.log(this.value + " " + this.id + " " + this.getAttribute(
-            "data-id"));
+  //wird bei response des Servers ausgegeben
+  socket.onMessage = function(event) {
+    const message = event.data;
+    console.log("message: " + message);
+  };
+
+  //wird ausgegeben, wenn die Verbindung gekappt wurde
+  socket.onClose = function(event) {
+    console.log("socket closed: " + socket + " " + event.data);
+  };
+
+  //Daten versenden
+  function send(data) {
+    socket.send(data);
+    console.log(data);
+  }
+
+  //Werte der Slider auslesen
+  function Slider() {
+    switch (this.target.getAttribute("data-type")) {
+      case "av":
+        console.log("Dieser Slider ist von einem AV-Receiver: "+this.get());
         var data = {
-            "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1MTcwMzk4OTAsImp0aSI6IkRZdW5mNTNuWDY1eWNkV0daRTU3aGFnbUVuc1wvaGRUejVCczdYbDVqdCtnPSIsImlzcyI6Ik1lZGlhdHJpeCIsIm5iZiI6MTUxNzAzOTg5MCwiZXhwIjoxNTE3MDQzNDkwLCJkYXRhIjp7InVzZXJOYW1lIjoiMzgyNyJ9fQ.5F739shj3o75hYtx6U-_1d0LH2iQMC6xJUBtxGU17zk",
-            "dmx": {
-                "scheinwerfer": {
-                    "id": parseInt(this.getAttribute("data-id")),
-                    "hue": this.value
-                }
-            }
+          "av": {
+            "volume": this.get()
+          }
         };
+        return data;
+        break
+      case "mixer":
+        console.log("Dieser Slider ist von einem Mixer: "+this.get());
 
-        socket.send(JSON.stringify(data));
-        console.log(data);
+        return data;
+        break
+      case "licht":
+        console.log("Dieser Slider ist von einem DMX Gerät: "+this.get());
+        var data = {
+          "dmx": {
+            "scheinwerfer": {
+              "id": this.target.getAttribute("data-id"),
+              "hue": this.get()
+            }
+          }
+        };
+        return data;
+        break
     }
+  };
 
-    var lightSliders = document.getElementsByClassName('lightSlider');
+  for(var i=0;i<allItems.length;i++){
+    noUiSlider.create(allItems[i], {
+      start: 0,
+      format: wNumb({
+        decimals: 0
+      }),
+      connect: [false, false],
+      direction: 'rtl',
+      orientation: 'vertical',
+      range: {
+        'min': 0,
+        'max': 100
+      }
+    });
+  }
 
-    // EventListener zu den Licht Slidern hinzufügen
-    for (var ls in lightSliders) {
-        ls.addEventListener('change', lightSlider, false);
-    }
+  //AV Slider Value
+  avSlider1.noUiSlider.on('update', function(values, handle){
+      avSlider1Value.innerHTML = values[handle];
+  });
+  avSlider1.noUiSlider.on("slide", Slider);
 
-};
+  //Mikrofon Slider Value
+  mikroSlider1.noUiSlider.on('update', function(values, handle){
+      mikroSlider1Value.innerHTML = values[handle];
+  });
+  mikroSlider1.noUiSlider.on("slide", Slider);
 
+  mikroSlider2.noUiSlider.on('update', function(values, handle){
+      mikroSlider2Value.innerHTML = values[handle];
+  });
+  mikroSlider2.noUiSlider.on("slide", Slider);
+
+  mikroMasterSlider.noUiSlider.on('update', function(values, handle){
+      mikroMasterSliderValue.innerHTML = values[handle];
+  });
+  mikroMasterSlider.noUiSlider.on("slide", Slider);
+
+  //Licht Slider Value
+  lichtSlider1.noUiSlider.on('update', function(values, handle){
+      lichtSlider1Value.innerHTML = values[handle];
+  });
+  lichtSlider1.noUiSlider.on("slide", Slider);
+
+  lichtSlider2.noUiSlider.on('update', function(values, handle){
+      lichtSlider2Value.innerHTML = values[handle];
+  });
+  lichtSlider2.noUiSlider.on("slide", Slider);
+
+  lichtSlider3.noUiSlider.on('update', function(values, handle){
+      lichtSlider3Value.innerHTML = values[handle];
+  });
+  lichtSlider3.noUiSlider.on("slide", Slider);
+
+  lichtWeissSlider.noUiSlider.on('update', function(values, handle){
+      lichtWeissSliderValue.innerHTML = values[handle];
+  });
+  lichtWeissSlider.noUiSlider.on("slide", Slider);
+
+
+  //Data JSON erstellen
+  function build() {
+    return "";
+  }
+}
+
+//socket wird geschlossen
 //socket.close();

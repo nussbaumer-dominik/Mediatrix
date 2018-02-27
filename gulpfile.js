@@ -8,6 +8,6 @@ gulp.task('styles', function() {
 });
 
 //Watch task
-gulp.task('default',function() {
-    gulp.watch('css/**/*.scss',['styles']);
+gulp.task('default', function() {
+  gulp.watch('css/**/*.scss', ['styles']);
 });

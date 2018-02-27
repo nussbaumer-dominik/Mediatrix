@@ -11,18 +11,16 @@
     <link rel="stylesheet" href="css/foundation.min.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
     <!-- Metadaten -->
-    <meta property="og:title" content="Mediatrix - Diplomarbeit">
+    <meta property="og:title" content="Mediatrix - Diplomarbeit: Steuerung für Präsentationsräume">
     <meta property="og:locale" content="de_AT">
-    <meta name="description" content="ist eine Präsentationssteuerung">
-    <meta name="description" content="Web Interface">
-    <meta property="og:description" content="">
-    <link rel="canonical" href="">
-    <meta property="og:url" content="">
+    <meta name="description" content="Mediatrix ist eine Steuerung für Präsentationsräume">
+    <meta name="og:description" content="Mediatrix ist eine Steuerung für Präsentationsräume">
     <meta property="og:site_name" content="Mediatrix">
+    <meta property="og:title" content="Mediatrix" />
+    <meta property="og:type" content="application" />
+    <meta property="og:url" content="http://mediatrix.zapto.org" />
+    <meta property="og:image" content="images/Mediatrix_Hut_rot.png" />
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/Mediatrix_Hut_rot.png" type="image/x-icon">
@@ -33,18 +31,17 @@
       <div class="circle">
         <header>
           <div class="container">
-            <img src="images/Mediatrix_Hut.png" id="logo" alt="Logo" width="96" height="96">
-            <ul>
-              <li>
-                <a href="#team">Das Team</a>
-              </li>
-              <li>
-                <a href="#status">Status</a>
-              </li>
-              <!--<li>
-                <a href="#">Anmelden</a>
-              </li>-->
-            </ul>
+            <img src="images/Mediatrix_Hut.png" id="logo" alt="Logo" title="Logo" width="96" height="96">
+            <nav>
+              <ul>
+                <li>
+                  <a href="#team">Das Team</a>
+                </li>
+                <li>
+                  <a href="#status">Status</a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </header>
 
@@ -58,12 +55,12 @@
                 Wir entwickeln eine Webapplikation, die alle benötigten Parameter und Einstellungsmöglichkeiten eines AV-Systems, in einer übersichtlichen und intuitiven Benutzeroberfläche vereint.
               </p>
 
-              <a href="download/Mediatrix_Diplomarbeitsantrag.pdf" download="">
-                Diplomarbeitsantrag
+              <a href="download/Mediatrix_Diplomarbeitsantrag.pdf" download="" title="Diplomarbeitsantrag">
+                Diplomarbeitsantrag herunterladen
               </a>
             </div>
 
-            <img src="images/web-interface.jpg" alt="Web Interface - Beamer">
+            <img src="images/web-interface.jpg" alt="Web Interface - Beamer" title="Web Interface - Beamer">
           </div>
         </section>
       </div>
@@ -80,12 +77,12 @@
             </p>
           </div>
           <div class="small-12 large-6 columns flex-center">
-            <img src="images/extensive.png" alt="Extensive">
+            <img src="images/extensive.png" alt="extensive" title="extensive">
           </div>
         </div>
         <div class="row f2">
           <div class="small-12 large-6 columns flex-center">
-            <img src="images/intuitive2.png" alt="">
+            <img src="images/intuitive2.png" alt="inuitive" title="intuitive">
           </div>
           <div class="small-12 large-6 columns">
             <h2>Intuitiv</h2>
@@ -102,12 +99,12 @@
               </p>
             </div>
           <div class="small-12 large-6 columns flex-center">
-            <img src="images/compact.png" width="180px" alt="">
+            <img src="images/compact.png" alt="compact" id="compact" title="compact">
           </div>
         </div>
         <div class="row f4">
           <div class="small-12 large-12 columns">
-            <img src="images/Illustration_final_transparent.png" alt="">
+            <img src="images/Illustration_final_transparent.png" alt="Aufbau" title="Aufbau">
           </div>
         </div>
       </div>
@@ -116,8 +113,9 @@
     <section class="team" id="team">
       <div class="container">
         <div class="row">
+          <h2>Das Team</h2>
           <figure class="small-12 large-12 columns">
-            <img src="images/Team.png" alt="Team Foto" id="Team">
+            <img src="images/Team.png" alt="Team Foto" title="Das Team" id="Team">
           </figure>
           <div class="small-12 large-12 columns names">
             <div>
@@ -160,18 +158,19 @@
         <div class="row">
           <div class="small-12 large-12 columns foot_top">
             <a href="">
-              <h1>🤙</h1>
+              <h2>🤙</h2>
             </a>
-            <h1>Mediatrix</h1>
+            <h2>Mediatrix</h2>
           </div>
           <div class="small-12 large-12 columns foot_bottom">
-            <a class="float_left" href="impressum.html">Impressum</a>
+            <a class="float_left" href="impressum.html" title="Impressum">Impressum</a>
             <a class="float_right" href="mailto:florian.steiner@htl.rennweg.at">Kontakt</a>
           </div>
         </div>
       </div>
     </footer>
-
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- jQuery Smooth Scrolling by w3schools: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll -->
     <script>
       $(document).ready(function(){
@@ -198,16 +197,6 @@
           } // End if
         });
       });
-    </script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54135273-3"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-54135273-3');
     </script>
   </body>
 </html>
