@@ -173,7 +173,9 @@ class IR : public Php::Base {
 
         regex_replace (std::back_inserter(erg), read.begin(), read.end(), e, "");
 
-        return string(erg.length());
+        char *intStr = itoa(erg.length());
+
+        return string(intStr);
 
      }
 };
