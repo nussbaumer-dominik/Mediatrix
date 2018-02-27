@@ -14,7 +14,7 @@ class readCode{
 
     public function __construct()
     {
-        $this->ir = new \IR();
+        //$this->ir = new \IR();
     }
 
     function modes()
@@ -52,15 +52,36 @@ class readCode{
     }
 
 }
+
+
 try {
     $path = "../conf/Mediatrix.json";
 
     $myfile = fopen($path, "r+");
     $json = json_decode(fread($myfile,filesize($path)));
 
-    $possibleKeys = array();
+    $possibleKeys = array("av" => array(), "beamer" => array());
 
-    echo array_keys($json->av->preset);
+    $possibleKeys['av']['presets'] = array_keys((array)$json->av->presets);
+    $possibleKeys['av']['volume'] = array_keys((array)$json->av->volume);
+    $possibleKeys['av']['sources'] = array_keys((array)$json->av->sources);
+
+    array_push($possibleKeys['beamer'], "power");
+    $possibleKeys['beamer']['sources'] = array_keys((array)$json->beamer->sources);
+
+    var_dump($possibleKeys);
+
+    $i = 0;
+    foreach ($possibleKeys as $k1 => $v1){
+        printf("...%s:\n", $k1);
+        foreach ($v1 as $k2 => $v2) {
+            printf("......%s:\n", $k2);
+            foreach ($v2 as $v3) {
+                printf("[%d]......%s\n", $i, $v3);
+                $i++;
+            }
+        }
+    }
 
     $codes = array();
     $class = new readCode();
