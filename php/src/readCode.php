@@ -64,7 +64,7 @@ try {
     $codes['a'] = $class->read($mode);
 
     echo "check: ";
-    var_dump(\IR::check());
+    var_dump($class->check());
 
     echo "\nReading Code B:\n";
     $codes['b'] = $class->read($mode);
