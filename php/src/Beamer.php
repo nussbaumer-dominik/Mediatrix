@@ -80,7 +80,7 @@ class Beamer
         //send IR code
         $r = json_decode(str_replace("'",'"',$this->ir->send($code,5)));
 
-        $this->isOn = $r['success'];
+        $this->isOn = $r->success;
 
         //return Result
         return $r;
@@ -93,7 +93,7 @@ class Beamer
 
         $r = $this->on();
 
-        $this->isOn = !$r['success'];
+        $this->isOn = !$r->success;
 
         return $r;
 
