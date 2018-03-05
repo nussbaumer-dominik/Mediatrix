@@ -8,6 +8,8 @@
 #include <map>
 #include <array>
 #include <vector>
+#include <string>
+
 
 //TEst
 
@@ -48,7 +50,12 @@ class DMX : public Php::Base {
         }
 
         static Php::Value getStatus(){
-            return channels;
+             string returnstring = "";
+              for (int i = 0; i < 511; i++)
+                returnstring += itoa(channels[i]);
+              return returnstring;
+
+            return returnstring;
         }
 
 
