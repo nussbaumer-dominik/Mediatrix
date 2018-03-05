@@ -19,7 +19,8 @@ class Application implements MessageComponentInterface
 
     private $FILE = "../conf/Mediatrix.json";
 
-    private $client;
+    private $clients;
+    private $registered;
     private $scheinwerfer;
     private $beamer;
     private $key;
@@ -29,6 +30,7 @@ class Application implements MessageComponentInterface
 
     public function __construct()
     {
+        $this->clients = new \SplObjectStorage;
         $this->iniMe();
     }
 
@@ -36,20 +38,12 @@ class Application implements MessageComponentInterface
     {
         // Store the new connection to send messages to later
 
-        //check if there is already a connection
-        if (!isset($this->client)) {
-            $this->client = $conn;
-            $this->registerd = false;
+
+            $this->clients->attach($conn);
+            $this->registerd[$conn->resourceId] = false;
 
             echo "New connection! ({$conn->resourceId})\n";
 
-
-        } else {
-            $conn->send("Already a connection");
-            $conn->close();
-
-            echo "Connection denied! ({$conn->resourceId})\n";
-        }
     }
 
     /**
@@ -87,14 +81,14 @@ class Application implements MessageComponentInterface
             //handle registration and send ini string
             if (isset($commands["ini"])) {
                 $from->send(json_encode($this->addLiveStatus($this->getIniString($jwt->data->userName))));
-                $this->registerd = true;
+                $this->registerd[$from->resourceId] = true;
                 echo "Connection {$from->resourceId} registered, Ini-String sent\n";
                 return;
             }
 
 
             //check if user has registered
-            if ($this->registerd) {
+            if ($this->registerd[$from->resourceId]) {
 
 
                 /*
@@ -221,7 +215,7 @@ class Application implements MessageComponentInterface
         $this->registerd = false;
 
         // The connection is closed, remove it, as we can no longer send it messages
-        $this->client = null;
+        $this->clients = null;
 
         echo "Connection {$conn->resourceId} has disconnected\n";
     }
