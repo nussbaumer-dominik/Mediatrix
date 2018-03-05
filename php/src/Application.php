@@ -40,7 +40,7 @@ class Application implements MessageComponentInterface
 
 
             $this->clients->attach($conn);
-            $this->registerd[$conn->resourceId] = false;
+            $this->registerd[$conn->resourceId] = "";
 
             echo "New connection! ({$conn->resourceId})\n";
 
@@ -81,14 +81,15 @@ class Application implements MessageComponentInterface
             //handle registration and send ini string
             if (isset($commands["ini"])) {
                 $from->send(json_encode($this->addLiveStatus($this->getIniString($jwt->data->userName))));
-                $this->registerd[$from->resourceId] = true;
+                $this->registerd[$from->resourceId] = $jwt->username;
+
                 echo "Connection {$from->resourceId} registered, Ini-String sent\n";
                 return;
             }
 
 
             //check if user has registered
-            if ($this->registerd[$from->resourceId]) {
+            if (!strlen($this->registerd[$from->resourceId]) > 0) {
 
 
                 /*
