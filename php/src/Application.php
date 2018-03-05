@@ -438,11 +438,14 @@ class Application implements MessageComponentInterface
             array_push($live['dmx'],$help);
         }
 
+        $live['beamer'] = array('on' => $this->beamer->isOn());
+
+
+        $result['live'] = $live;
+
         foreach ($this->clients as $client){
             $client->send(json_encode($live));
         }
-
-        $result['live'] = $live;
 
         return $result;
     }

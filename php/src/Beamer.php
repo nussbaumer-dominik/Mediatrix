@@ -14,6 +14,7 @@ class Beamer
     private $source = array();
     private $powerCode = array();
     private $ir;
+    private $isOn;
 
     public function __construct(array $source, array $powerCode)
     {
@@ -32,6 +33,8 @@ class Beamer
         $this->powerCode = $powerCode;
 
         $this->ir = new \IR();
+
+        $this->isOn = false;
     }
 
     function changeSource()
@@ -77,6 +80,8 @@ class Beamer
         //send IR code
         $r = json_decode(str_replace("'",'"',$this->ir->send($code,5)));
 
+        $this->isOn = $r['success'];
+
         //return Result
         return $r;
 
@@ -86,7 +91,20 @@ class Beamer
     {
         echo "Beamer off\n";
 
-        return $this->on();
+        $r = $this->on();
+
+        $this->isOn = !$r['success'];
+
+        return $r;
+
+    }
+
+    /**
+     * @return bool
+     */
+    public function isOn(): bool
+    {
+        return $this->isOn;
     }
 
 
