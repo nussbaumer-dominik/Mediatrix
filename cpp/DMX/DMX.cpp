@@ -51,10 +51,14 @@ class DMX : public Php::Base {
         }
 
         static Php::Value getStatus(){
-             string returnstring = "";
-              for (int i = 0; i < 511; i++)
-                returnstring += to_string(channels[i]);
-              return returnstring;
+             string returnstring = "{";
+             returnstring += to_string(channels[0]);
+              for (int i = 1; i < 511; i++)
+                returnstring += ","+to_string(channels[i]);
+
+             returnstring += to_string(channels[511]);
+             returnstring += "}";
+
 
             return returnstring;
         }
