@@ -20,7 +20,6 @@ class Application implements MessageComponentInterface
     private $FILE = "../conf/Mediatrix.json";
 
     private $clients;
-    private $registered;
     private $scheinwerfer;
     private $beamer;
     private $key;
@@ -88,7 +87,7 @@ class Application implements MessageComponentInterface
 
 
             //check if user has registered
-            if (!strlen($this->registerd[$from->resourceId]) > 0) {
+            if (strlen($this->registerd[$from->resourceId]) > 0) {
 
 
                 /*
