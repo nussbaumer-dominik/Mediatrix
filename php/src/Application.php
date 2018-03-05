@@ -423,7 +423,7 @@ class Application implements MessageComponentInterface
     private function addLiveStatus($result)
     {
 
-        $live['live'] = array(
+        $live = array(
             'av' => array(
                 'volume' => $this->av->getVolumeLevel(),
                 'source' => $this->av->getSource()
@@ -432,15 +432,17 @@ class Application implements MessageComponentInterface
 
         $live['dmx'] = array();
 
-        foreach ($this->scheinwerfer as $scheinw){
-            array_push($live['dmx'],$scheinw->getStatus());
+        foreach ($this->scheinwerfer as $key =>$scheinw){
+            $channels = $scheinw->getStatus();
+            $help = array('id' => $key, 'channels' => $channels);
+            array_push($live['dmx'],$help);
         }
 
         foreach ($this->clients as $client){
             $client->send(json_encode($live));
         }
 
-        array_push($result, $live);
+        $result['live'] = $live;
 
         return $result;
     }
