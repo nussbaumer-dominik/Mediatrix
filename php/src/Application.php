@@ -440,7 +440,9 @@ class Application implements MessageComponentInterface
             $client->send(json_encode($live));
         }
 
-        return array_push($result, $live);
+        array_push($result, $live);
+
+        return $result;
     }
 
     private function iniMe()
