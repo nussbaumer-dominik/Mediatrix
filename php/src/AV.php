@@ -203,6 +203,13 @@ class AV
      */
     public function getSource(): string
     {
-        return "test";
+        //get next active Source
+        $next = array_filter($this->sources,function ($el){
+            return $el['nextActive'] == true;
+        })[0];
+
+        $index = array_search($next,$this->sources);
+
+        return $index;
     }
 }
