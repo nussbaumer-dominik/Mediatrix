@@ -1,4 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/php/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/php/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/php/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/php/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/php/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/php/vendor/cboden/ratchet" />
+      <path value="$PROJECT_DIR$/php/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/php/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/php/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/php/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/php/vendor/illuminate/contracts" />
+      <path value="$PROJECT_DIR$/php/vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/php/vendor/evenement/evenement" />
+      <path value="$PROJECT_DIR$/php/vendor/react/cache" />
+      <path value="$PROJECT_DIR$/php/vendor/react/stream" />
+      <path value="$PROJECT_DIR$/php/vendor/react/dns" />
+      <path value="$PROJECT_DIR$/php/vendor/react/promise" />
+      <path value="$PROJECT_DIR$/php/vendor/react/promise-timer" />
+      <path value="$PROJECT_DIR$/php/vendor/react/socket" />
+      <path value="$PROJECT_DIR$/php/vendor/react/event-loop" />
+      <path value="$PROJECT_DIR$/php/vendor/ratchet/rfc6455" />
+      <path value="$PROJECT_DIR$/php/vendor/composer" />
+      <path value="$PROJECT_DIR$/php/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/php/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/php/vendor/adldap2/adldap2" />
+    </include_path>
+  </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7" />
 </project>
