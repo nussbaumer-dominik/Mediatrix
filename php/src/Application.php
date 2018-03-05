@@ -433,7 +433,7 @@ class Application implements MessageComponentInterface
         $live['dmx'] = array();
 
         foreach ($this->scheinwerfer as $scheinw){
-            array_push($live['dmx'],$scheinw->getStatus());
+            array_push($live['dmx'],json_decode($scheinw->getStatus()));
         }
 
         foreach ($this->clients as $client){
