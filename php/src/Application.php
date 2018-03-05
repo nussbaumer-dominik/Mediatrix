@@ -423,20 +423,24 @@ class Application implements MessageComponentInterface
     private function addLiveStatus($result)
     {
 
-        $result['live'] = array(
+        $live['live'] = array(
             'av' => array(
                 'volume' => $this->av->getVolumeLevel(),
                 'source' => $this->av->getSource()
             )
         );
 
-        $result['dmx'] = array();
+        $live['dmx'] = array();
 
         foreach ($this->scheinwerfer as $scheinw){
-            array_push($result['dmx'],$scheinw->getStatus());
+            array_push($live['dmx'],$scheinw->getStatus());
         }
 
-        return $result;
+        foreach ($this->clients as $client){
+            $client->send(json_encode($live));
+        }
+
+        return array_push($result, $live);
     }
 
     private function iniMe()
