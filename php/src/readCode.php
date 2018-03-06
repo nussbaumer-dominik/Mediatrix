@@ -69,7 +69,7 @@ try {
     array_push($possibleKeys['beamer'], "power");
     $possibleKeys['beamer']['source'] = array_keys((array)$json->beamer->source);
 
-    var_dump($possibleKeys);
+    $pK = array();
 
     $i = 0;
     foreach ($possibleKeys as $k1 => $v1){
@@ -79,16 +79,20 @@ try {
                 printf("[*]  |  %s:\n", $k2);
                 foreach ($v2 as $v3) {
                     printf("[%d]  |   |  %s\n", $i, $v3);
+                    $pK[$i][$k1][$k2][$v3] = "";
                     $i++;
                 }
             }else{
-                printf("[%d]  |  %s:\n",$i, $v2);
+                printf("[%d]  |  %s\n",$i, $v2);
+                $pK[$i][$k1][$v2] = "";
                 $i++;
             }
         }
     }
 
-    readline("\nWhich button do you want to read in?: ");
+    readline("\nWhich button do you want to read in? ");
+
+    var_dump($pK);
 
     $codes = array();
     $class = new readCode();
