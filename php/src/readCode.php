@@ -67,7 +67,7 @@ try {
     $possibleKeys['av']['sources'] = array_keys((array)$json->av->sources);
 
     array_push($possibleKeys['beamer'], "power");
-    $possibleKeys['beamer']['source'] = array_keys((array)$json->beamer->sources);
+    $possibleKeys['beamer']['source'] = array_keys((array)$json->beamer->source);
 
     var_dump($possibleKeys);
 
