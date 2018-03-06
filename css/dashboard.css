@@ -387,16 +387,16 @@ a {
         .box .buttons ul li:hover {
           background: var(--btn-border-color);
           color: var(--btn-hover-color); }
-        .box .buttons ul li:active, .box .buttons ul li:focus {
-          background: var(--green);
-          border-color: var(--green);
-          color: var(--color); }
-      .box .buttons ul .green {
-        background: var(--green);
-        border-color: var(--green);
-        color: var(--color); }
       .box .buttons ul li:nth-child(1), .box .buttons ul li:nth-child(2), .box .buttons ul li:nth-child(3) {
         margin-bottom: 10px; }
+    .box .buttons .checked {
+      background: var(--green);
+      border-color: var(--green);
+      color: white; }
+      .box .buttons .checked:hover {
+        background: var(--green);
+        border-color: var(--green);
+        color: white; }
   .box .flex-wrapper {
     display: flex;
     box-sizing: border-box;

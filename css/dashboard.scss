@@ -482,22 +482,22 @@ a{
           background: var(--btn-border-color);
           color: var(--btn-hover-color);
         }
-
-        &:active, &:focus{
-          background: var(--green);
-          border-color: var(--green);
-          color: var(--color);
-        }
-      }
-
-      .green{
-        background: var(--green);
-        border-color: var(--green);
-        color: var(--color);
       }
 
       li:nth-child(1), li:nth-child(2), li:nth-child(3){
         margin-bottom: 10px;
+      }
+    }
+
+    .checked{
+      background: var(--green);
+      border-color: var(--green);
+      color: white;
+
+      &:hover{
+        background: var(--green);
+        border-color: var(--green);
+        color: white;
       }
     }
   }

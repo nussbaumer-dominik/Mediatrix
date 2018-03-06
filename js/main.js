@@ -1,6 +1,8 @@
+var socket;
 window.onload = function() {
   //sliders + values
   var sliders = document.getElementsByClassName("slider");
+  var vals = document.getElementsByClassName("valueField");
   let avSlider1 = document.getElementById('avSlider1');
   let avSlider1Value = document.getElementById('avSlider1Value');
   //Mikrofon
@@ -25,7 +27,7 @@ window.onload = function() {
   let allValues = [avSlider1Value, mikroSlider1Value, mikroSlider2Value, mikroMasterSliderValue, lichtSlider1Value, lichtSlider2Value, lichtSlider3Value, lichtWeissSliderValue];
 
   //const socket = new WebSocket('wss://192.168.1.85/wss');
-  const socket = new WebSocket('wss://mediatrix.darktech.org/wss');
+  socket = new WebSocket('wss://mediatrix.darktech.org/wss');
   console.log(socket);
 
   //wird bei einer Exception geworfen
@@ -54,6 +56,16 @@ window.onload = function() {
     socket.send(data);
     console.log(data);
   }
+
+  $(".menu-item").each(function(){
+    this.addEventListener("click", Beamer);
+  });
+
+  $(".menu-open-button").on("click", Beamer)
+
+  $(".mode").each(function(){
+    this.addEventListener("click", Buttons);
+  });
 
   //Werte der Slider auslesen
   function Slider() {
@@ -87,8 +99,22 @@ window.onload = function() {
     }
   };
 
-  for(var i=0;i<allItems.length;i++){
-    noUiSlider.create(allItems[i], {
+  //Werte der Beamer Steuerung auslesen
+  function Beamer() {
+    if($(this).attr("data-type") == "beamer") {
+     console.log("Data-type="+$(this).attr("data-type"));
+    }
+  };
+
+  //Werte der Slider auslesen
+  function Buttons() {
+    if($(this).attr("data-type") == "av") {
+     console.log("Data-type="+$(this).attr("data-type"));
+    }
+  };
+
+  allItems.forEach(function(slider){
+    noUiSlider.create(slider, {
       start: 0,
       format: wNumb({
         decimals: 0
@@ -101,7 +127,21 @@ window.onload = function() {
         'max': 100
       }
     });
-  }
+  });
+
+  /*for(var i=0;i<sliders.length;i++){
+    sliders[i].noUiSlider.on('slide', function(values, handle){
+      vals[i].innerHTML = values[handle];
+    });
+  }*/
+
+  /*sliders.forEach(function(slider) {
+    slider.noUiSlider.on('update', function(values, handle){
+      slider.innerHTML = values[handle];
+    });
+  });*/
+
+
 
   //AV Slider Value
   avSlider1.noUiSlider.on('update', function(values, handle){
@@ -149,6 +189,9 @@ window.onload = function() {
 
   //Data JSON erstellen
   function build() {
+    Slider();
+    Buttons();
+    Beamer();
     return "";
   }
 }
