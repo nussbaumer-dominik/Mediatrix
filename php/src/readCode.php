@@ -88,6 +88,8 @@ try {
         }
     }
 
+    readline("\nWhich button do you want to read in?: ");
+
     $codes = array();
     $class = new readCode();
     $mode = $class->modes();
