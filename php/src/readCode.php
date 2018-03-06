@@ -83,6 +83,7 @@ try {
                 }
             }else{
                 printf("[%d]  |  %s:\n",$i, $v2);
+                $i++;
             }
         }
     }
