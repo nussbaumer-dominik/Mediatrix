@@ -42,14 +42,6 @@ a{
   z-index: 2;
 }
 
-.blur{
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
-}
-
 .parent{
   display: flex;
   align-items: center;
@@ -98,7 +90,6 @@ a{
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   background: var(--bg);
-  //display: none;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: all 0.2s ease-in-out;
@@ -129,23 +120,23 @@ a{
 }
 
 .btn-close::before{
-  margin-top:12px;
-  -webkit-transform:rotate(45deg);
-  -moz-transform:rotate(45deg);
-  -o-transform:rotate(45deg);
-  transform:rotate(45deg);
+  margin-top: 12px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .btn-close::after{
-  margin-top:-6px;
-  -webkit-transform:rotate(-45deg);
-  -moz-transform:rotate(-45deg);
-  -o-transform:rotate(-45deg);
-  transform:rotate(-45deg);
+  margin-top: -6px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .modal-content{
-  padding:5%;
+  padding: 5%;
 }
 
 .side-nav{
@@ -313,7 +304,7 @@ a{
           font-size: 1.6rem;
         }
 
-        &:hover, &:focus{
+        &:hover{
           background: var(--main);
           color: white;
         }

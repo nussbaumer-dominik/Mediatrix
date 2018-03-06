@@ -36,13 +36,6 @@ a {
   height: 100vh;
   z-index: 2; }
 
-.blur {
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px); }
-
 .parent {
   display: flex;
   align-items: center;
@@ -254,7 +247,7 @@ a {
         line-height: calc(40px + .5rem); }
         .side-nav ul li a .fa {
           font-size: 1.6rem; }
-        .side-nav ul li a:hover, .side-nav ul li a:focus {
+        .side-nav ul li a:hover {
           background: var(--main);
           color: white; }
 

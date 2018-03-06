@@ -25,12 +25,13 @@ window.onload = function() {
 
   let allItems  = [avSlider1, mikroSlider1, mikroSlider2, mikroMasterSlider, lichtSlider1, lichtSlider2, lichtSlider3, lichtWeissSlider];
   let allValues = [avSlider1Value, mikroSlider1Value, mikroSlider2Value, mikroMasterSliderValue, lichtSlider1Value, lichtSlider2Value, lichtSlider3Value, lichtWeissSliderValue];
+  var on = false;
 
   //const socket = new WebSocket('wss://192.168.1.85/wss');
   socket = new WebSocket('wss://mediatrix.darktech.org/wss');
   console.log(socket);
 
-  //wird bei einer Exception geworfen
+  //wirft eine Exception
   socket.onError = function(error) {
     console.log("WebSocket Error: " + error);
   };
@@ -101,15 +102,29 @@ window.onload = function() {
 
   //Werte der Beamer Steuerung auslesen
   function Beamer() {
+    var data = {};
+    //Kontrollieren ob vom Typ Beamer
     if($(this).attr("data-type") == "beamer") {
-     console.log("Data-type="+$(this).attr("data-type"));
+      //Power Knopf erkennen
+      if($(this).attr("data-value") == "power") {
+        if(!on){
+          on = true;
+          
+          console.log("ein")
+        }else {
+          on = false;
+          console.log("aus")
+        }
+      }else {
+        console.log("Data-type="+$(this).attr("data-type")+" Value: "+$(this).attr("data-value"));
+      }
     }
   };
 
   //Werte der Slider auslesen
   function Buttons() {
     if($(this).attr("data-type") == "av") {
-     console.log("Data-type="+$(this).attr("data-type"));
+     console.log("Data-type="+$(this).attr("data-type")+" Value: "+$(this).html());
     }
   };
 
