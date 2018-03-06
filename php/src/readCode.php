@@ -82,7 +82,7 @@ try {
                     $i++;
                 }
             }else{
-                printf("[%]  |  %s:\n",$i, $k2);
+                printf("[%d]  |  %s:\n",$i, $k2);
             }
         }
     }
