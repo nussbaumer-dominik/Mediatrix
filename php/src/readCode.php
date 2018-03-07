@@ -90,9 +90,7 @@ try {
         }
     }
 
-    readline("\nWhich button do you want to read in? ");
-
-    var_dump($pK);
+    $key = readline("\nWhich button do you want to read in? ");
 
     $codes = array();
     $class = new readCode();
@@ -133,6 +131,8 @@ try {
 
         readline("The Codes read are not valid. Press ENTER to try again or press CRTL+C");
     }
+
+
 }
 catch (\Exception $ex){
     echo $ex->getMessage();
