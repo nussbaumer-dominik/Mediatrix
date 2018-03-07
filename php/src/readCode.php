@@ -145,9 +145,11 @@ try {
             break;
         }
 
-        echo "The Codes read are not valid.\n";
+        echo "The Codes read are not valid.\n\n";
 
-        print($codes);
+        foreach($codes as $key => $value){
+            printf("Code %s: %s",strtoupper($key), $value);
+        }
 
         echo ("What do you want to do?\n0.....read both again\n1.....read Code A again\n2.....read Code B again\n");
         $choice = readline("");
