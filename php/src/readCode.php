@@ -60,9 +60,6 @@ try {
     $myfile = fopen($path, "r+");
     $json = json_decode(fread($myfile,filesize($path)));
 
-    var_dump($json);
-    var_dump(json_last_error_msg ());
-
     $possibleKeys = array("av" => array(), "beamer" => array());
 
     $possibleKeys['av']['presets'] = array_keys((array)$json->av->presets);
@@ -145,10 +142,10 @@ try {
             break;
         }
 
-        echo "The Codes read are not valid.\n\n";
+        echo "The Codes read are not valid.\n\nCodes:\n";
 
         foreach($codes as $key => $value){
-            printf("Code %s: %s",strtoupper($key), $value);
+            printf("Code %s: %s\n",strtoupper($key), $value);
         }
 
         echo ("What do you want to do?\n0.....read both again\n1.....read Code A again\n2.....read Code B again\n");
@@ -167,8 +164,6 @@ try {
     }
 
     $json = json_encode($json,JSON_PRETTY_PRINT);
-
-    var_dump($json);
 
     ftruncate($myfile,0);
     rewind($myfile);
