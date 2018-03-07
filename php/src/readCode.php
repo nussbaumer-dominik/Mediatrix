@@ -60,8 +60,9 @@ try {
     $myfile = fopen($path, "r+");
     $json = json_decode(fread($myfile,filesize($path)));
 
-    var_dump($json)
-;
+    var_dump($json);
+    var_dump(json_last_error_msg ());
+
     $possibleKeys = array("av" => array(), "beamer" => array());
 
     $possibleKeys['av']['presets'] = array_keys((array)$json->av->presets);
