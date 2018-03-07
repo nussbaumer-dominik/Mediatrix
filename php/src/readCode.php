@@ -105,31 +105,38 @@ try {
     $class = new readCode();
     $mode = $class->modes();
 
-    while(true){
-        echo "\nReading Code A:\n";
-        $codes['a'] = $class->read($mode);
+    $choice = 0;
 
-        if(strlen($codes['a'])>0){
-            echo "Code A read\n";
-            break;
+    while(true){
+
+        if($choice == 0 || $choice ==1){
+            while(true){
+                echo "\nReading Code A:\n";
+                $codes['a'] = $class->read($mode);
+
+                if(strlen($codes['a'])>0){
+                    echo "Code A read\n";
+                    break;
+                }
+
+                readline("Couldn't read a Code. Press ENTER to try again or press CRTL+C");
+
+            }
         }
 
-        readline("Couldn't read a Code. Press ENTER to try again or press CRTL+C");
+        if($choice == 0 || $choice == 2) {
+            while (true) {
+                echo "\nReading Code B:\n";
+                $codes['b'] = $class->read($mode);
 
-    }
+                if (strlen($codes['b']) > 0) {
+                    echo "Code B read\n";
+                    break;
+                }
 
-    while(true){
-        while(true){
-            echo "\nReading Code B:\n";
-            $codes['b'] = $class->read($mode);
+                readline("Couldn't read a Code. Press ENTER to try again or press CRTL+C");
 
-            if(strlen($codes['b'])>0){
-                echo "Code A read\n";
-                break;
             }
-
-            readline("Couldn't read a Code. Press ENTER to try again or press CRTL+C");
-
         }
 
 
@@ -138,7 +145,12 @@ try {
             break;
         }
 
-        readline("The Codes read are not valid. Press ENTER to try again or press CRTL+C");
+        echo "The Codes read are not valid.\n";
+
+        print_r($codes);
+
+
+        $choice = readline("What do you want to do?\n0.....read both again\n1.....read Code A again\n2.....read Code B again\n");
     }
 
     fwrite($myfile,json_encode($json));
