@@ -14,7 +14,7 @@ class readCode{
 
     public function __construct()
     {
-        //$this->ir = new \IR();
+        $this->ir = new \IR();
     }
 
     function modes()
