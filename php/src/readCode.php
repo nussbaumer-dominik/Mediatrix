@@ -149,7 +149,10 @@ try {
 
     $json = json_encode($json,JSON_PRETTY_PRINT);
 
+    var_dump($json);
+
     ftruncate($myfile,0);
+    rewind($myfile);
     fwrite($myfile,$json);
 
 }
