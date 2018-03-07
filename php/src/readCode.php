@@ -112,7 +112,7 @@ try {
                 $codes['a'] = $class->read($mode);
 
                 if(strlen($codes['a'])>0){
-                    echo "Code A read\n";
+                    echo "Code A read\n\n";
                     break;
                 }
 
@@ -127,7 +127,7 @@ try {
                 $codes['b'] = $class->read($mode);
 
                 if (strlen($codes['b']) > 0) {
-                    echo "Code B read\n";
+                    echo "Code B read\n\n";
                     break;
                 }
 
@@ -145,7 +145,7 @@ try {
         echo "The Codes read are not valid.\n\nCodes:\n";
 
         foreach($codes as $k => $v){
-            printf("Code %s: %s\n",strtoupper($key), $value);
+            printf("Code %s: %s\n",strtoupper($k), $v);
         }
 
         echo ("What do you want to do?\n0.....read both again\n1.....read Code A again\n2.....read Code B again\n");
@@ -158,7 +158,6 @@ try {
         foreach ($v1 as $k2 => $v2){
             foreach ($v2 as $k3 => $v3){
                 $json->$k1->$k2->$k3 = $codes;
-                var_dump($json->$k1->$k2->$k3);
             }
         }
     }
