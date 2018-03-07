@@ -94,7 +94,12 @@ try {
         }
     }
 
-    $key = readline("\nWhich button do you want to read in? ");
+    while(true){
+        $key = readline("\nWhich button do you want to read in? ");
+        if(preg_match('/^[0-9]+$/',$key)){
+            break;
+        }
+    }
 
     $codes = array();
     $class = new readCode();
