@@ -143,5 +143,6 @@ catch (\Exception $ex){
 }
 finally
 {
+    fwrite($myfile,json_encode($json));
     fclose($myfile);
 }
