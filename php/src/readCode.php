@@ -144,13 +144,14 @@ try {
         }
     }
 
+    ftruncate($myfile,0);
+    fwrite($myfile,json_encode($json));
+
 }
 catch (\Exception $ex){
     echo $ex->getMessage();
 }
 finally
 {
-    ftruncate($myfile,0);
-    fwrite($myfile,json_encode($json));
     fclose($myfile);
 }
