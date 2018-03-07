@@ -147,8 +147,10 @@ try {
         }
     }
 
+    $json = json_encode($json,JSON_PRETTY_PRINT);
+
     ftruncate($myfile,0);
-    //fwrite($myfile,json_encode($json,JSON_PRETTY_PRINT));
+    fwrite($myfile,$json);
 
 }
 catch (\Exception $ex){
