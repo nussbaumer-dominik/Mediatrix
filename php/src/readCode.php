@@ -138,7 +138,7 @@ try {
     foreach ($pK[$key] as $k1 => $v1){
         foreach ($v1 as $k2 => $v2){
             foreach ($v2 as $k3 => $v3){
-                $json[$k1][$k2][$k3] = $codes;
+                $json->$k1->$k2->$k3 = $codes;
                 var_dump($json[$k1][$k2][$k3]);
             }
         }
