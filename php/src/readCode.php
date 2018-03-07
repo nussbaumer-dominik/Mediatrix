@@ -7,7 +7,7 @@
  */
 namespace Mediatrix;
 
-echo "Reading IR-Code";
+echo "Reading IR-Code\n\n";
 
 class readCode{
     private $ir;
@@ -24,7 +24,7 @@ class readCode{
         $modes = $this->ir::getMode();
 
         if (!strlen($modes) > 0) {
-            throw new \Exception("IR-Device is bussy. Try again later, or disconnect and reconnect the device.\n");
+            throw new \Exception("IR-Device is busy. Try again later, or disconnect and reconnect the device.\n");
         }
 
         $modesArray = explode("\\", $modes);
@@ -72,6 +72,7 @@ try {
     $pK = array();
 
     $i = 0;
+
     foreach ($possibleKeys as $k1 => $v1){
         printf("[*] %s:\n", $k1);
         foreach ($v1 as $k2 => $v2) {
@@ -132,8 +133,15 @@ try {
         readline("The Codes read are not valid. Press ENTER to try again or press CRTL+C");
     }
 
+    fwrite($myfile,json_encode($json));
+
+
 
 }
 catch (\Exception $ex){
     echo $ex->getMessage();
+}
+finally
+{
+    fclose($myfile);
 }
