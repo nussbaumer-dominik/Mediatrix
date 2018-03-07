@@ -147,10 +147,10 @@ try {
 
         echo "The Codes read are not valid.\n";
 
-        print_r($codes);
+        print($codes);
 
-
-        $choice = readline("What do you want to do?\n0.....read both again\n1.....read Code A again\n2.....read Code B again\n");
+        echo ("What do you want to do?\n0.....read both again\n1.....read Code A again\n2.....read Code B again\n");
+        $choice = readline("");
     }
 
     fwrite($myfile,json_encode($json));
