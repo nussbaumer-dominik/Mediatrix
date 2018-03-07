@@ -150,6 +150,7 @@ catch (\Exception $ex){
 }
 finally
 {
+    ftruncate($myfile,0);
     fwrite($myfile,json_encode($json));
     fclose($myfile);
 }
