@@ -12,10 +12,9 @@
         <link rel="stylesheet" href="css/snackbar.css">
         <link rel="stylesheet" href="css/vertical-slider.css">
         <link rel="stylesheet" href="css/nouislider.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/dashboard.css">
-
 
         <!-- Font -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -31,6 +30,14 @@
         <div class="modal">
           <a class="btn-close trigger" href="javascript:;"></a>
           <div class="modal-content">
+            <form action="">
+              <p>Derzeitige Konfiguration als Preset abspeichern?</p>
+              <input type="text" placeholder="Name des Presets">
+              <div class="formBtns">
+                <input type="submit" value="Bestätigen">
+                <input type="button" value="Abbrechen">
+              </div>
+            </form>
           </div>
         </div>
         <div class="side-nav">
@@ -83,7 +90,7 @@
                   <i class="fa fa-power-off" id="power" aria-hidden="true"></i>
                 </label>
 
-                <a href="#" class="menu-item" id="src" data-type="beamer">
+                <a href="#" class="menu-item" id="src" data-type="beamer" data-value="src">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                     <path d="M21 3.01H3c-1.1 0-2 .9-2 2V9h2V4.99h18v14.03H3V15H1v4.01c0 1.1.9 1.98 2 1.98h18c1.1 0 2-.88 2-1.98v-14c0-1.11-.9-2-2-2zM11 16l4-4-4-4v3H1v2h10v3z"/>
                   </svg>

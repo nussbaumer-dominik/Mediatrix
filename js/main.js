@@ -1,12 +1,13 @@
 var socket;
 window.onload = function() {
+
   //Variablen
   var sliders = document.querySelectorAll(".slider");
   var on = false;
+  var jwt;
 
   //const socket = new WebSocket('wss://192.168.1.85/wss');
   socket = new WebSocket('wss://mediatrix.darktech.org/wss');
-  console.log(socket);
 
   //wirft eine Exception
   socket.onError = function(error) {
@@ -46,29 +47,33 @@ window.onload = function() {
   });
 
   //Werte der Slider auslesen
-  function Slider() {
-    switch (this.target.getAttribute("data-type")) {
+  function Slider(slider) {
+    switch (slider.target.getAttribute("data-type")) {
       case "av":
-        console.log("Dieser Slider ist von einem AV-Receiver: "+this.get());
+        console.log("Dieser Slider ist von einem AV-Receiver: "+slider.target.getAttribute("data-type"));
         var data = {
           "av": {
-            "volume": this.get()
+            "volume": (slider.get()/100)
           }
         };
         return data;
         break
       case "mixer":
-        console.log("Dieser Slider ist von einem Mixer: "+this.get());
-
+        console.log("Dieser Slider ist von einem Mixer: "+slider.get());
+        var data = {
+          "mixer": {
+            "volume": (slider.get()/100)
+          }
+        };
         return data;
         break
       case "licht":
-        console.log("Dieser Slider ist von einem DMX Gerät: "+this.get());
+        console.log("Dieser Slider ist von einem DMX Gerät: "+"ID: "+ slider.target.getAttribute("data-id") +" "+slider.get());
         var data = {
           "dmx": {
             "scheinwerfer": {
-              "id": this.target.getAttribute("data-id"),
-              "hue": this.get()
+              "id": slider.target.getAttribute("data-id"),
+              "hue": slider.get()
             }
           }
         };
@@ -96,13 +101,16 @@ window.onload = function() {
           console.log("aus "+data.off);
         }
       }else {
-        console.log("Data-type="+$(this).attr("data-type")+" Value: "+$(this).attr("data-value"));
-
+        console.log("Beamer - Value: "+$(this).attr("data-value"));
+        if($(this).attr("data-value") == "src"){
+          data.beamer.src = 1;
+        }
+        console.log(data);
       }
     }
   };
 
-  //Werte der Slider auslesen
+  //Werte der Modes des AV-Receivers auslesen
   function Buttons() {
     if($(this).attr("data-type") == "av") {
      console.log("Data-type="+$(this).attr("data-type")+" Value: "+$(this).html());
@@ -127,17 +135,13 @@ window.onload = function() {
 
   sliders.forEach(function(slider, i) {
     slider.noUiSlider.on('slide', function(values, handle){
+      Slider(this);
       document.getElementsByClassName("valueField")[i].innerHTML = values[handle];
     });
-    slider.on('slide', Slider);
   });
 
-  //Data JSON erstellen
-  function build() {
-    Slider();
-    Buttons();
-    Beamer();
-    return "";
+  function setPreset() {
+
   }
 }
 
