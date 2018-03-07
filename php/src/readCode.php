@@ -144,7 +144,7 @@ try {
 
         echo "The Codes read are not valid.\n\nCodes:\n";
 
-        foreach($codes as $key => $value){
+        foreach($codes as $k => $v){
             printf("Code %s: %s\n",strtoupper($key), $value);
         }
 
