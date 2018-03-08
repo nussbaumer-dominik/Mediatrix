@@ -32,11 +32,11 @@ class Mixer {
 
   //Lautstärke regeln
   public function mix($val, $channel) {
-      echo "Alive\n";
+
   }
 
   public function alive(){
-
+      echo "Alive\n";
   }
 
   /**
