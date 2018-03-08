@@ -17,6 +17,9 @@
   --green: #6BBC68;
 }
 
+$green: #6BBC68;
+$main: #EF4C4F;
+
 html, body{
   -webkit-font-smoothing: antialiased;
   margin: 0;
@@ -40,14 +43,6 @@ a{
   width: 100vw;
   height: 100vh;
   z-index: 2;
-}
-
-.blur{
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
 }
 
 .parent{
@@ -98,54 +93,118 @@ a{
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   background: var(--bg);
-  //display: none;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+
+  .btn-close{
+    width: 32px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    &::before, &::after{
+      content: '';
+      width: 32px;
+      height: 6px;
+      display: block;
+      background: var(--modal-btn);
+    }
+
+    &::before{
+      margin-top: 12px;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    &:after{
+      margin-top: -6px;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+  }
+
+  .modal-content{
+    padding: 5%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  form{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p{
+      font-size: 1.4rem;
+      text-align: center;
+    }
+
+    input[type="text"]{
+      border: none;
+      color: inherit;
+      background: var(--body);
+      padding: 1rem;
+      margin-top: 20px;
+      border-radius: 10px;
+      width: 50%;
+    }
+
+    .formBtns{
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    input[type="submit"], input[type="button"]{
+      border: none;
+      color: white;
+      margin-top: 40px;
+      padding: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 40%;
+      transition: .2s;
+
+      &:hover{
+        -webkit-b-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+        box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+      }
+    }
+
+    input[type="submit"]{
+      background: var(--green);
+      &:hover{
+        background: darken($green, 12%);
+      }
+    }
+
+    input[type="button"]{
+      background: var(--main);
+      &:hover{
+        background: darken($main, 12%);
+      }
+    }
+  }
 }
 
 .modal-wrapper.open .modal{
   opacity: 1;
-}
-
-.btn-close{
-  width: 32px;
-  height: 32px;
-  display: block;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-.btn-close::before, .btn-close::after{
-  content: '';
-  width: 32px;
-  height: 6px;
-  display: block;
-  background: var(--modal-btn);
-}
-
-.btn-close::before{
-  margin-top:12px;
-  -webkit-transform:rotate(45deg);
-  -moz-transform:rotate(45deg);
-  -o-transform:rotate(45deg);
-  transform:rotate(45deg);
-}
-
-.btn-close::after{
-  margin-top:-6px;
-  -webkit-transform:rotate(-45deg);
-  -moz-transform:rotate(-45deg);
-  -o-transform:rotate(-45deg);
-  transform:rotate(-45deg);
-}
-
-.modal-content{
-  padding:5%;
 }
 
 .side-nav{
@@ -313,7 +372,7 @@ a{
           font-size: 1.6rem;
         }
 
-        &:hover, &:focus{
+        &:hover{
           background: var(--main);
           color: white;
         }
@@ -482,22 +541,22 @@ a{
           background: var(--btn-border-color);
           color: var(--btn-hover-color);
         }
-
-        &:active, &:focus{
-          background: var(--green);
-          border-color: var(--green);
-          color: var(--color);
-        }
-      }
-
-      .green{
-        background: var(--green);
-        border-color: var(--green);
-        color: var(--color);
       }
 
       li:nth-child(1), li:nth-child(2), li:nth-child(3){
         margin-bottom: 10px;
+      }
+    }
+
+    .checked{
+      background: var(--green);
+      border-color: var(--green);
+      color: white;
+
+      &:hover{
+        background: var(--green);
+        border-color: var(--green);
+        color: white;
       }
     }
   }

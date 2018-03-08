@@ -12,10 +12,9 @@
         <link rel="stylesheet" href="css/snackbar.css">
         <link rel="stylesheet" href="css/vertical-slider.css">
         <link rel="stylesheet" href="css/nouislider.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/dashboard.css">
-
 
         <!-- Font -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -31,6 +30,14 @@
         <div class="modal">
           <a class="btn-close trigger" href="javascript:;"></a>
           <div class="modal-content">
+            <form action="">
+              <p>Derzeitige Konfiguration als Preset abspeichern?</p>
+              <input type="text" placeholder="Name des Presets">
+              <div class="formBtns">
+                <input type="submit" value="Bestätigen">
+                <input type="button" value="Abbrechen">
+              </div>
+            </form>
           </div>
         </div>
         <div class="side-nav">
@@ -79,21 +86,21 @@
               <h1>Beamer</h1>
               <nav class="menu">
                 <input type="checkbox" href="#" class="menu-open" id="power"/>
-                <label class="menu-open-button" for="power">
+                <label class="menu-open-button" data-type="beamer" data-value="power" data-power="0" for="power">
                   <i class="fa fa-power-off" id="power" aria-hidden="true"></i>
                 </label>
 
-                <a href="#" class="menu-item" id="src">
+                <a href="#" class="menu-item" id="src" data-type="beamer" data-value="src">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                     <path d="M21 3.01H3c-1.1 0-2 .9-2 2V9h2V4.99h18v14.03H3V15H1v4.01c0 1.1.9 1.98 2 1.98h18c1.1 0 2-.88 2-1.98v-14c0-1.11-.9-2-2-2zM11 16l4-4-4-4v3H1v2h10v3z"/>
                   </svg>
                 </a>
-                <a href="#" class="menu-item clickable" id="menu"> <i class="fa fa-bars"></i> </a>
-                <a href="#" class="menu-item clickable" id="up"> <i class="fa fa-caret-up"></i> </a>
-                <a href="#" class="menu-item clickable" id="right"> <i class="fa fa-caret-right"></i> </a>
-                <a href="#" class="menu-item clickable" id="down"> <i class="fa fa-caret-down"></i> </a>
-                <a href="#" class="menu-item clickable" id="left"> <i class="fa fa-caret-left"></i> </a>
-                <a href="#" class="menu-item clickable" id="ok"> OK </a>
+                <a href="#" class="menu-item clickable" id="menu" data-type="beamer" data-value="menu"> <i class="fa fa-bars"></i> </a>
+                <a href="#" class="menu-item clickable" id="up" data-type="beamer" data-value="up"> <i class="fa fa-caret-up"></i> </a>
+                <a href="#" class="menu-item clickable" id="right" data-type="beamer" data-value="right"> <i class="fa fa-caret-right"></i> </a>
+                <a href="#" class="menu-item clickable" id="down" data-type="beamer" data-value="down"> <i class="fa fa-caret-down"></i> </a>
+                <a href="#" class="menu-item clickable" id="left" data-type="beamer" data-value="left"> <i class="fa fa-caret-left"></i> </a>
+                <a href="#" class="menu-item clickable" id="ok" data-type="beamer" data-value="enter"> OK </a>
               </nav>
             </div>
 
@@ -104,15 +111,15 @@
                 <!-- AV Slider 1 -->
                 <div id="avSlider1-wrapper">
                   <div class="slider" id="avSlider1" data-type="av" data-id="0"></div>
-                  <div class="valueField" id="avSlider1Value"></div>
+                  <div class="valueField" id="avSlider1Value">0</div>
                   <div class="textField">Master</div>
                 </div>
                 <div class="buttons">
                   <ul>
-                    <li class="mode">Praesentation</li>
-                    <li class="mode">Musik</li>
-                    <li class="mode">Film</li>
-                    <li class="mode">Universal</li>
+                    <li class="mode" data-type="av">Praesentation</li>
+                    <li class="mode" data-type="av">Musik</li>
+                    <li class="mode" data-type="av">Film</li>
+                    <li class="mode" data-type="av">Universal</li>
                   </ul>
                 </div>
               </div>
@@ -125,20 +132,20 @@
               <div class="flex-wrapper">
                 <div id="mikroSlider1-wrapper">
                   <div class="slider" id="mikroSlider1" data-type="mixer" data-id="0"></div>
-                  <div class="valueField" id="mikroSlider1Value"></div>
+                  <div class="valueField" id="mikroSlider1Value">0</div>
                   <div class="textField">Mikro 1</div>
                 </div>
                 <!-- Mikro 2 -->
                 <div id="mikroSlider2-wrapper">
                   <div class="slider" id="mikroSlider2" data-type="mixer" data-id="1"></div>
-                  <div class="valueField" id="mikroSlider2Value"></div>
+                  <div class="valueField" id="mikroSlider2Value">0</div>
                   <div class="textField">Mikro 2</div>
                 </div>
 
                 <!-- Master -->
                 <div id="mikroMasterSlider-wrapper">
                   <div class="slider" id="mikroMasterSlider" data-type="mixer" data-id="2"></div>
-                  <div class="valueField" id="mikroMasterSliderValue"></div>
+                  <div class="valueField" id="mikroMasterSliderValue">0</div>
                   <div class="textField">Master</div>
                 </div>
               </div>
@@ -151,21 +158,21 @@
                 <!-- Licht Slider 1 -->
                 <div id="lichtSlider1-wrapper">
                   <div class="slider" id="lichtSlider1" data-type="licht" data-id="0"></div>
-                  <div class="valueField" id="lichtSlider1Value"></div>
+                  <div class="valueField" id="lichtSlider1Value">0</div>
                   <div class="textField">Rot</div>
                 </div>
 
                 <!-- Licht Slider 2 -->
                 <div id="lichtSlider2-wrapper">
                   <div class="slider" id="lichtSlider2" data-type="licht" data-id="1"></div>
-                  <div class="valueField" id="lichtSlider2Value"></div>
+                  <div class="valueField" id="lichtSlider2Value">0</div>
                   <div class="textField">Grün</div>
                 </div>
 
                 <!-- Licht Slider 3 -->
                 <div id="lichtSlider3-wrapper">
                   <div class="slider" id="lichtSlider3" data-type="licht" data-id="2"></div>
-                  <div class="valueField" id="lichtSlider3Value"></div>
+                  <div class="valueField" id="lichtSlider3Value">0</div>
                   <div class="textField">Blau</div>
                 </div>
 
@@ -173,7 +180,7 @@
                 <div id="lichtWeissSlider-wrapper">
                   <div class="slider" id="lichtWeissSlider" data-type="licht" data-id="3"></div>
                   <div class="blackout"></div>
-                  <div class="valueField" id="lichtWeissSliderValue"></div>
+                  <div class="valueField" id="lichtWeissSliderValue">0</div>
                   <div class="textField">Weiß</div>
                 </div>
               </div>

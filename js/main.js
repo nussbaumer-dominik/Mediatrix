@@ -1,34 +1,15 @@
+var socket;
 window.onload = function() {
-  //sliders + values
-  var sliders = document.getElementsByClassName("slider");
-  let avSlider1 = document.getElementById('avSlider1');
-  let avSlider1Value = document.getElementById('avSlider1Value');
-  //Mikrofon
-  let mikroSlider1 = document.getElementById('mikroSlider1');
-  let mikroSlider2 = document.getElementById('mikroSlider2');
-  let mikroMasterSlider = document.getElementById('mikroMasterSlider');
-  let mikroSlider1Value = document.getElementById('mikroSlider1Value');
-  let mikroSlider2Value = document.getElementById('mikroSlider2Value');
-  let mikroMasterSliderValue = document.getElementById('mikroMasterSliderValue');
 
-  //Licht
-  let lichtSlider1 = document.getElementById('lichtSlider1');
-  let lichtSlider2 = document.getElementById('lichtSlider2');
-  let lichtSlider3 = document.getElementById('lichtSlider3');
-  let lichtWeissSlider = document.getElementById('lichtWeissSlider');
-  let lichtSlider1Value = document.getElementById('lichtSlider1Value');
-  let lichtSlider2Value = document.getElementById('lichtSlider2Value');
-  let lichtSlider3Value = document.getElementById('lichtSlider3Value');
-  let lichtWeissSliderValue = document.getElementById('lichtWeissSliderValue');
-
-  let allItems  = [avSlider1, mikroSlider1, mikroSlider2, mikroMasterSlider, lichtSlider1, lichtSlider2, lichtSlider3, lichtWeissSlider];
-  let allValues = [avSlider1Value, mikroSlider1Value, mikroSlider2Value, mikroMasterSliderValue, lichtSlider1Value, lichtSlider2Value, lichtSlider3Value, lichtWeissSliderValue];
+  //Variablen
+  var sliders = document.querySelectorAll(".slider");
+  var on = false;
+  var jwt;
 
   //const socket = new WebSocket('wss://192.168.1.85/wss');
-  const socket = new WebSocket('wss://mediatrix.darktech.org/wss');
-  console.log(socket);
+  socket = new WebSocket('wss://mediatrix.darktech.org/wss');
 
-  //wird bei einer Exception geworfen
+  //wirft eine Exception
   socket.onError = function(error) {
     console.log("WebSocket Error: " + error);
   };
@@ -55,30 +36,44 @@ window.onload = function() {
     console.log(data);
   }
 
+  $(".menu-item").each(function(){
+    this.addEventListener("click", Beamer);
+  });
+
+  $(".menu-open-button").on("click", Beamer)
+
+  $(".mode").each(function(){
+    this.addEventListener("click", Buttons);
+  });
+
   //Werte der Slider auslesen
-  function Slider() {
-    switch (this.target.getAttribute("data-type")) {
+  function Slider(slider) {
+    switch (slider.target.getAttribute("data-type")) {
       case "av":
-        console.log("Dieser Slider ist von einem AV-Receiver: "+this.get());
+        console.log("Dieser Slider ist von einem AV-Receiver: "+slider.target.getAttribute("data-type"));
         var data = {
           "av": {
-            "volume": this.get()
+            "volume": (slider.get()/100)
           }
         };
         return data;
         break
       case "mixer":
-        console.log("Dieser Slider ist von einem Mixer: "+this.get());
-
+        console.log("Dieser Slider ist von einem Mixer: "+slider.get());
+        var data = {
+          "mixer": {
+            "volume": (slider.get()/100)
+          }
+        };
         return data;
         break
       case "licht":
-        console.log("Dieser Slider ist von einem DMX Gerät: "+this.get());
+        console.log("Dieser Slider ist von einem DMX Gerät: "+"ID: "+ slider.target.getAttribute("data-id") +" "+slider.get());
         var data = {
           "dmx": {
             "scheinwerfer": {
-              "id": this.target.getAttribute("data-id"),
-              "hue": this.get()
+              "id": slider.target.getAttribute("data-id"),
+              "hue": slider.get()
             }
           }
         };
@@ -87,8 +82,43 @@ window.onload = function() {
     }
   };
 
-  for(var i=0;i<allItems.length;i++){
-    noUiSlider.create(allItems[i], {
+  //Werte der Beamer Steuerung auslesen
+  function Beamer() {
+    var data = {
+      "beamer": {}
+    };
+    //Kontrollieren ob vom Typ Beamer
+    if($(this).attr("data-type") == "beamer") {
+      //Power Knopf erkennen
+      if($(this).attr("data-value") == "power") {
+        if(!on){
+          on = true;
+          data.on = 1;
+          console.log("ein "+data.on);
+        }else {
+          on = false;
+          data.off = 0;
+          console.log("aus "+data.off);
+        }
+      }else {
+        console.log("Beamer - Value: "+$(this).attr("data-value"));
+        if($(this).attr("data-value") == "src"){
+          data.beamer.src = 1;
+        }
+        console.log(data);
+      }
+    }
+  };
+
+  //Werte der Modes des AV-Receivers auslesen
+  function Buttons() {
+    if($(this).attr("data-type") == "av") {
+     console.log("Data-type="+$(this).attr("data-type")+" Value: "+$(this).html());
+    }
+  };
+
+  sliders.forEach(function(slider){
+    noUiSlider.create(slider, {
       start: 0,
       format: wNumb({
         decimals: 0
@@ -101,55 +131,17 @@ window.onload = function() {
         'max': 100
       }
     });
-  }
-
-  //AV Slider Value
-  avSlider1.noUiSlider.on('update', function(values, handle){
-      avSlider1Value.innerHTML = values[handle];
   });
-  avSlider1.noUiSlider.on("slide", Slider);
 
-  //Mikrofon Slider Value
-  mikroSlider1.noUiSlider.on('update', function(values, handle){
-      mikroSlider1Value.innerHTML = values[handle];
+  sliders.forEach(function(slider, i) {
+    slider.noUiSlider.on('slide', function(values, handle){
+      Slider(this);
+      document.getElementsByClassName("valueField")[i].innerHTML = values[handle];
+    });
   });
-  mikroSlider1.noUiSlider.on("slide", Slider);
 
-  mikroSlider2.noUiSlider.on('update', function(values, handle){
-      mikroSlider2Value.innerHTML = values[handle];
-  });
-  mikroSlider2.noUiSlider.on("slide", Slider);
+  function setPreset() {
 
-  mikroMasterSlider.noUiSlider.on('update', function(values, handle){
-      mikroMasterSliderValue.innerHTML = values[handle];
-  });
-  mikroMasterSlider.noUiSlider.on("slide", Slider);
-
-  //Licht Slider Value
-  lichtSlider1.noUiSlider.on('update', function(values, handle){
-      lichtSlider1Value.innerHTML = values[handle];
-  });
-  lichtSlider1.noUiSlider.on("slide", Slider);
-
-  lichtSlider2.noUiSlider.on('update', function(values, handle){
-      lichtSlider2Value.innerHTML = values[handle];
-  });
-  lichtSlider2.noUiSlider.on("slide", Slider);
-
-  lichtSlider3.noUiSlider.on('update', function(values, handle){
-      lichtSlider3Value.innerHTML = values[handle];
-  });
-  lichtSlider3.noUiSlider.on("slide", Slider);
-
-  lichtWeissSlider.noUiSlider.on('update', function(values, handle){
-      lichtWeissSliderValue.innerHTML = values[handle];
-  });
-  lichtWeissSlider.noUiSlider.on("slide", Slider);
-
-
-  //Data JSON erstellen
-  function build() {
-    return "";
   }
 }
 
