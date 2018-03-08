@@ -36,13 +36,13 @@ window.onload = function() {
     console.log(data);
   }
 
-  $(".menu-item").each(function(){
+  $(".menu-item").each(function() {
     this.addEventListener("click", Beamer);
   });
 
   $(".menu-open-button").on("click", Beamer)
 
-  $(".mode").each(function(){
+  $(".mode").each(function() {
     this.addEventListener("click", Buttons);
   });
 
@@ -50,25 +50,31 @@ window.onload = function() {
   function Slider(slider) {
     switch (slider.target.getAttribute("data-type")) {
       case "av":
-        console.log("Dieser Slider ist von einem AV-Receiver: "+slider.target.getAttribute("data-type"));
+        console.log("Dieser Slider ist von einem AV-Receiver: " + slider.target
+          .getAttribute("data-type"));
         var data = {
           "av": {
-            "volume": (slider.get()/100)
+            "volume": (slider.get() / 100),
+            "channel": slider.target.getAttribute("data-id")
           }
         };
+        console.log(data);
         return data;
         break
       case "mixer":
-        console.log("Dieser Slider ist von einem Mixer: "+slider.get());
+        console.log("Dieser Slider ist von einem Mixer: " + slider.get());
         var data = {
           "mixer": {
-            "volume": (slider.get()/100)
+            "volume": (slider.get() / 100),
+            "channel": slider.target.getAttribute("data-id")
           }
         };
+        console.log(data);
         return data;
         break
       case "licht":
-        console.log("Dieser Slider ist von einem DMX Gerät: "+"ID: "+ slider.target.getAttribute("data-id") +" "+slider.get());
+        console.log("Dieser Slider ist von einem DMX Gerät: " + "ID: " +
+          slider.target.getAttribute("data-id") + " " + slider.get());
         var data = {
           "dmx": {
             "scheinwerfer": {
@@ -77,6 +83,7 @@ window.onload = function() {
             }
           }
         };
+        console.log(data);
         return data;
         break
     }
@@ -88,21 +95,21 @@ window.onload = function() {
       "beamer": {}
     };
     //Kontrollieren ob vom Typ Beamer
-    if($(this).attr("data-type") == "beamer") {
+    if ($(this).attr("data-type") == "beamer") {
       //Power Knopf erkennen
-      if($(this).attr("data-value") == "power") {
-        if(!on){
+      if ($(this).attr("data-value") == "power") {
+        if (!on) {
           on = true;
           data.on = 1;
-          console.log("ein "+data.on);
-        }else {
+          console.log("ein " + data.on);
+        } else {
           on = false;
           data.off = 0;
-          console.log("aus "+data.off);
+          console.log("aus " + data.off);
         }
-      }else {
-        console.log("Beamer - Value: "+$(this).attr("data-value"));
-        if($(this).attr("data-value") == "src"){
+      } else {
+        console.log("Beamer - Value: " + $(this).attr("data-value"));
+        if ($(this).attr("data-value") == "src") {
           data.beamer.src = 1;
         }
         console.log(data);
@@ -112,12 +119,13 @@ window.onload = function() {
 
   //Werte der Modes des AV-Receivers auslesen
   function Buttons() {
-    if($(this).attr("data-type") == "av") {
-     console.log("Data-type="+$(this).attr("data-type")+" Value: "+$(this).html());
+    if ($(this).attr("data-type") == "av") {
+      console.log("Data-type=" + $(this).attr("data-type") + " Value: " + $(
+        this).html());
     }
   };
 
-  sliders.forEach(function(slider){
+  sliders.forEach(function(slider) {
     noUiSlider.create(slider, {
       start: 0,
       format: wNumb({
@@ -134,9 +142,10 @@ window.onload = function() {
   });
 
   sliders.forEach(function(slider, i) {
-    slider.noUiSlider.on('slide', function(values, handle){
+    slider.noUiSlider.on('slide', function(values, handle) {
       Slider(this);
-      document.getElementsByClassName("valueField")[i].innerHTML = values[handle];
+      document.getElementsByClassName("valueField")[i].innerHTML =
+        values[handle];
     });
   });
 

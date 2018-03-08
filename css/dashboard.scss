@@ -118,6 +118,7 @@ a{
 
     &::before{
       margin-top: 12px;
+      border-radius: 6px;
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
       -o-transform: rotate(45deg);
@@ -126,6 +127,7 @@ a{
 
     &:after{
       margin-top: -6px;
+      border-radius: 6px;
       -webkit-transform: rotate(-45deg);
       -moz-transform: rotate(-45deg);
       -o-transform: rotate(-45deg);
