@@ -1,102 +1,101 @@
 html, body{
-    margin: 0;
-    padding: 0;
-    -webkit-font-smoothing: antialiased;
-    color: #000;
-    font-family: 'Lato', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  color: #000;
+  font-family: 'Lato', 'Helvetica Neue', sans-serif;
 }
 
 body{
-    width: 100vw;
-    height: 100vh;
-    background: #EF4C4F;
+  width: 100vw;
+  height: 100vh;
+  background: #EF4C4F;
 }
 
 *{
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .main{
-    display: flex;
-    height: 60vh;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  height: 60vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
 }
 
 header{
-    position: fixed;
-    padding: 30px;
-    height: 200px;
-    width: 100%;
+  position: fixed;
+  padding: 30px;
+  height: 200px;
+  width: 100%;
 }
 
 header .menu-inner{
-    display: flex;
-    display: -webkit-flex;
-    height: 150px;
-    justify-content: center;
-    line-height: 30px;
+  display: flex;
+  display: -webkit-flex;
+  height: 100%;
+  justify-content: center;
 }
 
 header .menu-inner .avatar{
-    background-image: url(../images/Mediatrix_Hut.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 200px;
+  background-image: url(../images/Mediatrix_Hut.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 200px;
 }
 
 .box{
-    width: 400px;
-    height: 400px;
-    background: white;
-    color: #1E283D;
-    z-index: 10;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    box-shadow: 0px 70px 120px -30px rgba(142, 144, 128, .6), 0px 5px 15px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  height: 400px;
+  background: white;
+  color: #1E283D;
+  z-index: 10;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0px 70px 120px -30px rgba(142, 144, 128, .6), 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
 }
 
 input[type="text"], input[type="password"]{
-    width: 100%;
-    margin-bottom: 20px;
-    font-size: 16px;
-    padding: 5px;
-    color: #1E283D;
-    background: transparent;
-    border: 2px solid #1E283D;
-    border-radius: 5px;
-    outline: none;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 16px;
+  padding: 5px;
+  color: #1E283D;
+  background: transparent;
+  border: 2px solid #1E283D;
+  border-radius: 5px;
+  outline: none;
 }
 
 input[type="submit"]{
-    padding: 15px 45px;
-    color: white;
-    font-size: 1.4rem;
-    text-align: center;
-    border-radius: 10px;
-    background: #EF4C4F;
-    outline: none;
-    border: none;
-    transition: .35s;
-    cursor: pointer;
+  padding: 15px 45px;
+  color: white;
+  font-size: 1.4rem;
+  text-align: center;
+  border-radius: 10px;
+  background: #EF4C4F;
+  outline: none;
+  border: none;
+  transition: .35s;
+  cursor: pointer;
 }
 
 input[type="submit"]:hover{
-    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, .2)
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, .2)
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -113,9 +112,9 @@ input[type="submit"]:hover{
 }
 
 .wave{
-    background: white;
-    height: 40vh;
-    width: 100%;
+  background: white;
+  height: 40vh;
+  width: 100%;
 }
 
 .wave_white {
@@ -124,7 +123,6 @@ input[type="submit"]:hover{
   left: -2px;
   right: -2px;
   bottom: 40vh;
-
   display: block;
   height: 180px;
   background-image: url(../images/bg-waves-white.svg);
@@ -136,36 +134,36 @@ input[type="submit"]:hover{
 
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575px) {
-    .box{
-        width: 300px;
-        height: 300px;
-    }
+  .box{
+      width: 300px;
+      height: 300px;
+  }
 
-    .wave{
+  .wave_white{
+    width: 100%;
+    bottom: calc(25vh - 1px);
+  }
 
-    }
+  header .menu-inner{
+    display: flex;
+    display: -webkit-flex;
+    height: 120px;
+    width: 100%;
+    justify-content: center;
+    line-height: 30px;
+  }
 
-    .wave_white{
-        width: 100%;
-        bottom: calc(25vh - 1px);
-    }
+  header .menu-inner .avatar{
+    background-image: url(../images/Mediatrix_Hut.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100px;
+  }
+}
 
-    header .menu-inner{
-        display: flex;
-        display: -webkit-flex;
-        height: 120px;
-        width: 100%;
-        justify-content: center;
-        line-height: 30px;
-    }
-
-    header .menu-inner .avatar{
-        background-image: url(../images/Mediatrix_Hut.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 100px;
-    }
+@media (min-height: 0) and (max-height: 840px){
+  bottom: calc(-20% - 1px);
 }
 
 /* Small devices (landscape phones, less than 768px) */
