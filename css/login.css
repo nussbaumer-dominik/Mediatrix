@@ -3,6 +3,7 @@ html, body{
   padding: 0;
   -webkit-font-smoothing: antialiased;
   color: #000;
+  overflow: hidden;
   font-family: 'Lato', 'Helvetica Neue', sans-serif;
 }
 
@@ -122,7 +123,7 @@ input[type="submit"]:hover{
   margin: auto;
   left: -2px;
   right: -2px;
-  bottom: 40vh;
+  bottom: 38vh;
   display: block;
   height: 180px;
   background-image: url(../images/bg-waves-white.svg);
