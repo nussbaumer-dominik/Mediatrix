@@ -1,4 +1,4 @@
-var socket, jwt;
+var socket, jwt, ini;
 window.onload = function() {
 
   //Variablen
@@ -28,7 +28,8 @@ window.onload = function() {
   socket.onmessage = function(event) {
     console.log("message: " + event.data+" "+event.data.ini);
     if(event.data.ini != null){
-      console.log("das ist der ini-string: "+event.data)
+      console.log("das ist der ini-string: "+event.data);
+      ini = event.data;
     }
   };
 
