@@ -24,7 +24,7 @@ window.onload = function() {
   //wird bei response des Servers ausgegeben
   socket.onmessage = function(event) {
     console.log("message: " + event.data+" "+event.data.ini);
-    if(event.data.has("ini")){
+    if(event.data.ini != null){
       console.log("das ist der ini-string: "+event.data)
     }
   };
