@@ -33,7 +33,7 @@ class IR : public Php::Base {
 
         //reset the IR-Device
         serialPrintf(fd,":~:");
-        delay(20);
+        delay(200);
 
         //convert given code to string
         string code = params[0];
@@ -42,7 +42,7 @@ class IR : public Php::Base {
 
         //send code to IR-Device
         serialPrintf(fd,("p"+code+"]:").c_str());
-        delay(20);
+        delay(200);
 
         for( int i = 1; 99 * i <= times; i++){
             std::cout << "w99:" << endl;
