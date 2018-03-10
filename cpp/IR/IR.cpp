@@ -29,6 +29,8 @@ class IR : public Php::Base {
             return "{'success':'false','err':'Can not open Serial Connection to IR-Device'}";
         }
 
+        delay(100);
+
         //reset the IR-Device
         serialPrintf(fd,":~:");
         delay(20);
