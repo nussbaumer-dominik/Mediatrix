@@ -40,8 +40,8 @@ window.onload = function() {
 
   //Daten versenden
   function send(data) {
-    socket.send(data);
-    console.log(data);
+    socket.send(JSON.stringify(data));
+    console.log(JSON.stringify(data));
   }
 
   $(".menu-item").each(function() {
