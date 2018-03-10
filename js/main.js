@@ -2,8 +2,9 @@ var socket, jwt;
 window.onload = function() {
 
   //Variablen
-  var sliders = document.querySelectorAll(".slider");
-  var on = false;
+  var sliders = document.querySelectorAll(".slider"),
+      on = false,
+      currentConf={};
   jwt = localStorage.getItem("jwt");
 
   //const socket = new WebSocket('wss://192.168.1.85/wss');
@@ -18,12 +19,12 @@ window.onload = function() {
   //wird beim erfolgreichen Öffnen des Sockets ausgegeben
   socket.onopen = function(event) {
     if(jwt != null){
-      send('{"jwt":"'+jwt+'","ini":1}');
+      socket.send('{"jwt":"'+jwt+'","ini":1}');
     }
     console.log("socket open: " + socket + " " + event.data);
   };
 
-  //wird bei response des Servers ausgegeben
+  //wird bei Response des Servers ausgegeben
   socket.onmessage = function(event) {
     console.log("message: " + event.data+" "+event.data.ini);
     if(event.data.ini != null){
@@ -34,13 +35,13 @@ window.onload = function() {
   //wird ausgegeben, wenn die Verbindung gekappt wurde
   socket.onclose = function(event) {
     console.log("socket closed: " + socket + " " + event.data);
-    localStorage.removeItem("jwt");
+    //localStorage.removeItem("jwt");
   };
 
   //Daten versenden
   function send(data) {
-    //socket.send(data);
-    console.log(data);
+    socket.send(JSON.stringify(data));
+    console.log(JSON.stringify(data));
   }
 
   $(".menu-item").each(function() {
