@@ -49,7 +49,7 @@ class IR : public Php::Base {
 
             //send amount of repetitions of the code to the IR-Device
             serialPrintf(fd, "w99:");
-            delay(500+200*99);
+            delay(1000+200*99);
         }
 
         times %= 99;
@@ -64,7 +64,7 @@ class IR : public Php::Base {
 
         //send amount of repetitions of the code to the IR-Device
         serialPrintf(fd, ("w"+timesStr+":").c_str());
-        delay(500+200*times);
+        delay(1000+200*times);
 
         return "{'success':'true','err':''}";
      }
