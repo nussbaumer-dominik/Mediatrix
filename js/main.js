@@ -112,13 +112,13 @@ window.onload = function() {
       if ($(this).attr("data-value") == "power") {
         if (!on) {
           on = true;
-          data.on = 1;
-          console.log("ein " + data.on);
+          data.beamer.on = 1;
+          console.log("ein " + data.beamer.on);
           send(data);
         } else {
           on = false;
-          data.off = 0;
-          console.log("aus " + data.off);
+          data.beamer.off = 0;
+          console.log("aus " + data.beamer.off);
           send(data);
         }
       } else {
