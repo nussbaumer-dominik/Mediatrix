@@ -8,6 +8,7 @@ window.onload = function() {
 
   //const socket = new WebSocket('wss://192.168.1.85/wss');
   socket = new WebSocket("wss://mediatrix.darktech.org/wss");
+  //socket = new WebSocket("wss://193.154.93.223/wss");
 
   //wirft eine Exception
   socket.onerror = function(error) {
@@ -23,6 +24,9 @@ window.onload = function() {
   //wird bei response des Servers ausgegeben
   socket.onmessage = function(event) {
     console.log("message: " + event.data);
+    if(event.data.hasOwnProperty("ini")){
+      console.log("Das ist der ini-String");
+    }
   };
 
   //wird ausgegeben, wenn die Verbindung gekappt wurde
@@ -32,7 +36,7 @@ window.onload = function() {
 
   //Daten versenden
   function send(data) {
-    socket.send(data);
+    //socket.send(data);
     console.log(data);
   }
 
@@ -159,56 +163,12 @@ window.onload = function() {
 
   }
 
-  /*$('#login').submit(function(e) {
-    $.ajax({
-      url: 'https://mediatrix.darktech.org/Mediatrix/php/src/Login.php',
-      type: 'POST',
-      data: new FormData(this),
-      processData: false,
-      contentType: false
-    });
-    e.preventDefault();
-  });*/
-
-  /*$('#login').submit( function(e) {
-    e.preventDefault();
-
-    var data = new FormData(this); // <-- 'this' is your form element
-
-    $.ajax({
-      url: 'https://mediatrix.darktech.org/Mediatrix/php/src/Login.php',
-      data: data,
-      cache: false,
-      contentType: false,
-      processData: false,
-      type: 'POST',
-      success: function(data){
-
-      }
-    }).done(function( data ) {
-        console.log(data);
-    });
-  });*/
-
   //Login
   function login(user, pass) {
 
     var data = new FormData();
         data.append('user', user);
         data.append('passwd', pass);
-/*
-    function reqListener () {
-      console.log(this.responseText);
-    }
-
-    var data = new FormData();
-        data.append('user', user);
-        data.append('passwd', pass);
-
-    var oReq = new XMLHttpRequest();
-    oReq.addEventListener("load", reqListener);
-    oReq.open("POST", "https://mediatrix.darktech.org/Mediatrix/php/src/Login.php");
-    oReq.send(data);*/
 
     $.ajax({
         url:'https://mediatrix.darktech.org/Mediatrix/php/src/Login.php',
@@ -225,7 +185,9 @@ window.onload = function() {
         console.log("success: "+data);
         jwt = JSON && JSON.parse(data) || $.parseJSON(data);
         localStorage.setItem("jwt", jwt["jwt"]);
-        window.location.href = "dashboard.html";
+        if(jwt != null){
+          window.location.href = "dashboard.html";
+        }
     }).fail(function(data){
         console.log("error: "+data);
     });
