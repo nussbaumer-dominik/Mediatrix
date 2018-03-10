@@ -23,15 +23,13 @@ window.onload = function() {
 
   //wird bei response des Servers ausgegeben
   socket.onmessage = function(event) {
-    console.log("message: " + event.data);
-    if(event.data.contains("ini")){
-      console.log("Das ist der ini-String");
-    }
+    console.log("message: " + event.data+" "+event.data.ini);
   };
 
   //wird ausgegeben, wenn die Verbindung gekappt wurde
   socket.onclose = function(event) {
     console.log("socket closed: " + socket + " " + event.data);
+    localStorage.removeItem("jwt");
   };
 
   //Daten versenden
