@@ -17,7 +17,9 @@ window.onload = function() {
 
   //wird beim erfolgreichen Öffnen des Sockets ausgegeben
   socket.onopen = function(event) {
-    send('{"jwt":"'+jwt+'","ini":1}');
+    if(jwt != null){
+      send('{"jwt":"'+jwt+'","ini":1}');
+    }
     console.log("socket open: " + socket + " " + event.data);
   };
 
