@@ -1,4 +1,4 @@
-// Variablen
+// CSS Variablen
 :root{
   --color: #1E283D;
   --main: #EF4C4F;
@@ -42,7 +42,7 @@ a{
 .page-wrapper{
   width: 100vw;
   height: 100vh;
-  z-index: 2;
+ + z-index: 2;
 }
 
 .parent{
@@ -118,6 +118,7 @@ a{
 
     &::before{
       margin-top: 12px;
+      border-radius: 6px;
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
       -o-transform: rotate(45deg);
@@ -126,6 +127,7 @@ a{
 
     &:after{
       margin-top: -6px;
+      border-radius: 6px;
       -webkit-transform: rotate(-45deg);
       -moz-transform: rotate(-45deg);
       -o-transform: rotate(-45deg);
