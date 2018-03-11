@@ -45,11 +45,11 @@
             <i class="fa fa-save" aria-hidden="true"></i>
           </div>
           <ul>
-            <li><a href="#" id="camera"><i class="fa fa-video-camera boxButtons" data-boxbtn="1" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-volume-up boxButtons" data-boxbtn="2" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-microphone boxButtons" data-boxbtn="3" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-lightbulb-o boxButtons" data-boxbtn="4" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-desktop boxButtons" data-boxbtn="5" aria-hidden="true"></i></a></li>
+            <li class="boxButtons" data-boxbtn="1"><a href="#" id="camera"><i class="fa fa-video-camera" aria-hidden="true"></i></a></li>
+            <li class="boxButtons" data-boxbtn="2"><a href="#"><i class="fa fa-volume-up" aria-hidden="true"></i></a></li>
+            <li class="boxButtons" data-boxbtn="3"><a href="#"><i class="fa fa-microphone"  aria-hidden="true"></i></a></li>
+            <li class="boxButtons" data-boxbtn="4"><a href="#"><i class="fa fa-lightbulb-o"  aria-hidden="true"></i></a></li>
+            <li class="boxButtons" data-boxbtn="5"><a href="#"><i class="fa fa-desktop" aria-hidden="true"></i></a></li>
           </ul>
 
           <div class="avatar">
@@ -81,7 +81,7 @@
           </div>
 
           <div class="flex-container flex">
-            
+
           </div>
 
           <div class="mobileOptions">
@@ -130,7 +130,7 @@
 
       <!-- Templates -->
       <!-- Beamer Box -->
-      <script type="text/templates" id="beamerTemplate">
+      <script type="text/template" class="template" id="beamerTemplate">
         <div class="box" id="beamerBox" data-box="1">
           <h1>Beamer</h1>
           <nav class="menu">
@@ -155,7 +155,7 @@
       </script>
 
       <!-- Mikrofon Box -->
-      <script type="text/template" id="mikroTemplate">
+      <script type="text/template" class="template" id="mikroTemplate">
         <div class="box" id="mikrofonBox" data-box="3">
           <h1>Mikrofone</h1>
           <!-- Mikro 1 -->
@@ -183,7 +183,7 @@
       </script>
 
       <!-- AV-Receiver Box -->
-      <script type="text/template" id="avTemplate">
+      <script type="text/template" class="template" id="avTemplate">
         <div class="box" id="avBox" data-box="2">
           <h1>AV-Receiver</h1>
           <div class="flex-wrapper">
@@ -206,7 +206,7 @@
       </script>
 
       <!-- Licht Box -->
-      <script type="text/template" id="lichtTemplate">
+      <script type="text/template" class="template" id="lichtTemplate">
         <div class="box" id="lichtBox" data-box="4">
           <h1>Licht</h1>
           <div class="flex-wrapper space-between">
@@ -247,7 +247,7 @@
       <!--<script src="js/rangeslider.js"></script>-->
       <script src="js/nouislider.min.js"></script>
       <script src="js/snackbar.js"></script>
-      <script src="js/functions.js"></script>
+      <!--<script src="js/functions.js"></script>-->
       <script src="js/main.js"></script>
       <script src="js/themes.js"></script>
       <script src=js/wNumb.js></script>
