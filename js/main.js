@@ -176,7 +176,7 @@ window.onload = function() {
         data.append('passwd', pass);
 
     $.ajax({
-        url:'https://mediatrix.darktech.org/Mediatrix/php/src/Login.php',
+        url:'/Mediatrix/php/src/Login.php',
         traditional: true,
         method: "POST",
         data: data,
