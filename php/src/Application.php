@@ -459,6 +459,7 @@ class Application implements MessageComponentInterface
 
         try {
 
+
             //open Ini JSON-File
             $ini = file_get_contents($this->FILE, true);
             $ini = json_decode($ini, true);
