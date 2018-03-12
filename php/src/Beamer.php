@@ -86,7 +86,15 @@ class Beamer
     {
         echo "Beamer off\n";
 
-        return $this->on();
+        $erg = $this->on();
+
+        $r = $this->on();
+        if(!$r['success']){
+            $erg = $r;
+        }
+
+        return $erg;
+
     }
 
 
