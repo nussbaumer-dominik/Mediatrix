@@ -276,7 +276,7 @@ class Application implements MessageComponentInterface
             print count($dev);
 
             if (is_array($dev) && !(is_null($this->scheinwerfer[$dev['id']]))) {
-                if(count($dev) < 3 && count($this->scheinwerfer[$dev['id']]->getChannels()) == count($dev)) {
+                if(count($dev) < 3 && count($this->scheinwerfer[$dev['id']]->getChannels()) < 3) {
 
                     if (preg_match('/[0-9]+/', $dev['hue']) && 0 <= $dev['hue'] && $dev['hue'] <= 255) {
 
