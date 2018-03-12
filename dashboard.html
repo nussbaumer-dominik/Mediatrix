@@ -13,7 +13,7 @@
       <link rel="stylesheet" href="css/vertical-slider.css">
       <link rel="stylesheet" href="css/nouislider.min.css">
       <link rel="stylesheet" href="css/normalize.min.css">
-      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/fontawesome-all.min.css">
       <link rel="stylesheet" href="css/dashboard.css">
 
       <!-- Font -->
@@ -32,9 +32,9 @@
           <div class="modal-content">
             <form action="">
               <p>Derzeitige Konfiguration als Preset abspeichern?</p>
-              <input type="text" placeholder="Name des Presets">
+              <input type="text" placeholder="Name des Presets" id="presetName">
               <div class="formBtns">
-                <input type="submit" value="Bestätigen">
+                <input type="submit" value="Bestätigen" id="savePreset">
                 <input type="button" value="Abbrechen">
               </div>
             </form>
@@ -42,19 +42,25 @@
         </div>
         <div class="side-nav">
           <div class="savePreset trigger">
-            <i class="fa fa-save" aria-hidden="true"></i>
+            <i class="fas fa-save" aria-hidden="true"></i>
           </div>
           <ul>
-            <li class="boxButtons" data-boxbtn="1"><a href="#" id="camera"><i class="fa fa-video-camera" aria-hidden="true"></i></a></li>
-            <li class="boxButtons" data-boxbtn="2"><a href="#"><i class="fa fa-volume-up" aria-hidden="true"></i></a></li>
-            <li class="boxButtons" data-boxbtn="3"><a href="#"><i class="fa fa-microphone"  aria-hidden="true"></i></a></li>
-            <li class="boxButtons" data-boxbtn="4"><a href="#"><i class="fa fa-lightbulb-o"  aria-hidden="true"></i></a></li>
-            <li class="boxButtons" data-boxbtn="5"><a href="#"><i class="fa fa-desktop" aria-hidden="true"></i></a></li>
+            <li class="boxButtons" data-boxbtn="1"><a href="#"><i class="fas fa-video" aria-hidden="true"></i></a></li>
+            <li class="boxButtons" data-boxbtn="2"><a href="#"><i class="fas fa-volume-up" aria-hidden="true"></i></a></li>
+            <li class="boxButtons" data-boxbtn="3"><a href="#"><i class="fas fa-microphone"  aria-hidden="true"></i></a></li>
+            <li class="boxButtons" data-boxbtn="4"><a href="#"><i class="fas fa-lightbulb"  aria-hidden="true"></i></a></li>
+            <li class="boxButtons" data-boxbtn="5"><a href="#"><i class="fas fa-desktop" aria-hidden="true"></i></a></li>
           </ul>
 
           <div class="avatar">
             <div class="img"></div>
             <div class="tooltip">
+              <div class="extendedMode">
+                <h4>Normal</h4>
+                <input class="tgl tgl-light" id="cb1" type="checkbox"/>
+                <label class="tgl-btn" for="cb1"></label>
+                <h4>Erweitert</h4>
+              </div>
               <div class="colorOptions">
                 <h3>Design</h3>
                 <div class="designOptionsWrapper">
@@ -95,7 +101,7 @@
 
           <div class="presentation">
             <div class="preset">
-              <h2>Preset 1</h2>
+              <!--<h2>Preset 1</h2>-->
 
             </div>
             <div class="preset">
@@ -136,7 +142,7 @@
           <nav class="menu">
             <input type="checkbox" href="#" class="menu-open" id="power"/>
             <label class="menu-open-button" data-type="beamer" data-value="power" data-power="0" for="power">
-              <i class="fa fa-power-off" id="power" aria-hidden="true"></i>
+              <i class="fas fa-power-off" id="power" aria-hidden="true"></i>
             </label>
 
             <a href="#" class="menu-item" id="src" data-type="beamer" data-value="src">
@@ -144,12 +150,8 @@
                 <path d="M21 3.01H3c-1.1 0-2 .9-2 2V9h2V4.99h18v14.03H3V15H1v4.01c0 1.1.9 1.98 2 1.98h18c1.1 0 2-.88 2-1.98v-14c0-1.11-.9-2-2-2zM11 16l4-4-4-4v3H1v2h10v3z"/>
               </svg>
             </a>
-            <a href="#" class="menu-item clickable" id="menu" data-type="beamer" data-value="menu"> <i class="fa fa-bars"></i> </a>
-            <a href="#" class="menu-item clickable" id="up" data-type="beamer" data-value="up"> <i class="fa fa-caret-up"></i> </a>
-            <a href="#" class="menu-item clickable" id="right" data-type="beamer" data-value="right"> <i class="fa fa-caret-right"></i> </a>
-            <a href="#" class="menu-item clickable" id="down" data-type="beamer" data-value="down"> <i class="fa fa-caret-down"></i> </a>
-            <a href="#" class="menu-item clickable" id="left" data-type="beamer" data-value="left"> <i class="fa fa-caret-left"></i> </a>
-            <a href="#" class="menu-item clickable" id="ok" data-type="beamer" data-value="enter"> OK </a>
+            <a href="#" class="menu-item clickable" id="freeze" data-type="beamer" data-value="freeze"> <i class="fas fa-snowflake"></i> </a>
+            <a href="#" class="menu-item clickable" id="blackout" data-type="beamer" data-value="blackout"> <i class="fas fa-moon"></i> </a>
           </nav>
         </div>
       </script>
@@ -195,18 +197,22 @@
             </div>
             <div class="buttons">
               <ul>
-                <li class="mode" data-type="av">Praesentation</li>
-                <li class="mode" data-type="av">Musik</li>
-                <li class="mode" data-type="av">Film</li>
-                <li class="mode" data-type="av">Universal</li>
               </ul>
             </div>
           </div>
         </div>
       </script>
 
+      <script type="text/template" class="template" id="avButtons">
+        <li class="mode" data-type="av">Praesentation</li>
+        <li class="mode" data-type="av">Musik</li>
+        <li class="mode" data-type="av">Film</li>
+        <li class="mode" data-type="av">Universal</li>
+      </script>
+
       <!-- Licht Box -->
-      <script type="text/template" class="template" id="lichtTemplate">
+      <!-- RGBW -->
+      <script type="text/template" class="template" id="rgbwTemplate">
         <div class="box" id="lichtBox" data-box="4">
           <h1>Licht</h1>
           <div class="flex-wrapper space-between">
@@ -237,6 +243,21 @@
               <div class="blackout"></div>
               <div class="valueField" id="lichtWeissSliderValue">0</div>
               <div class="textField">Weiß</div>
+            </div>
+          </div>
+        </div>
+      </script>
+
+      <!-- L -->
+      <script type="text/template" class="template" id="hueTemplate">
+        <div class="box" id="lichtBox" data-box="4">
+          <h1>Licht</h1>
+          <div class="flex-wrapper space-between">
+            <!-- Licht Slider 1 -->
+            <div id="lichtSlider1-wrapper">
+              <div class="slider" id="lichtSlider1" data-type="licht" data-id="0"></div>
+              <div class="valueField" id="lichtSlider1Value">0</div>
+              <div class="textField">Rot</div>
             </div>
           </div>
         </div>
