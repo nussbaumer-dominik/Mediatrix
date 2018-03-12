@@ -125,7 +125,7 @@ window.onload = function() {
       } else {
         console.log("Beamer - Value: " + $(this).attr("data-value"));
         if ($(this).attr("data-value") == "src") {
-          data.beamer.src = 1;
+          data.beamer.source = 1;
         }
         send(data);
       }
