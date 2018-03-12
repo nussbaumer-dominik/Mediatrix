@@ -89,7 +89,7 @@ class Beamer
         $erg = $this->on();
 
         $r = $this->on();
-        if(!$r['success']){
+        if(!$r->success){
             $erg = $r;
         }
 
