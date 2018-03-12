@@ -7,8 +7,8 @@ window.onload = function() {
       currentConf={};
   jwt = localStorage.getItem("jwt");
 
-  //const socket = new WebSocket('wss://192.168.1.85/wss');
-  socket = new WebSocket("wss://mediatrix.darktech.org/wss");
+  socket = new WebSocket('wss://192.168.1.85/wss');
+  //socket = new WebSocket("wss://mediatrix.darktech.org/wss");
   //socket = new WebSocket("wss://193.154.93.223/wss");
 
   //wirft eine Exception
