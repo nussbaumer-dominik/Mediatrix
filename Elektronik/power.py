@@ -32,7 +32,7 @@ sstate = 0 #Zustand des Systems Lautsprecher (1=Ein, 0=Aus)
 def main():
     value = 0
 
-
+#Einschalter abfragen
     while True:
 
         if not GPIO.input(btn):
@@ -43,50 +43,52 @@ def main():
             if GPIO.input(btn):
                 print "gedrueckt"
                 main()
-                switchPower(pstate)
+                switchPower(pstate, sstate)
 
         time.sleep(0.03)
+
+
+# Magnetkontakt Panel abfragen
 
         if GPIO.input(panel):
             print "offen"
             main()
-            switchPower(sstate)
+            switchSpeaker(sstate)
 
         time.sleep(0.03)
+
+#Magnetkontakt Tür abfragen
 
         if GPIO.input(door):
             print "offen"
             main()
-            switchPower(sstate)
+            switchSpeaker(sstate)
 
         time.sleep(0.03)
 
     return 0
 
-if __name__ == '__main__':
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setup(btn, GPIO.IN)
-    main()
+
 
 #Strom schalten
-def switchPower(pstate):
+def switchPower():
 
     if pstate == 0:
         GPIO.output(rp, GPIO.HIGH) # an
-        time.sleep(20.00)
+        time.sleep(20)
         sstate = 1
         GPIO.output(rs, GPIO.HIGH) # an
 
     if pstate == 1:
         sstate = 0
         GPIO.output(rs, GPIO.LOW)  #aus
-        time.sleep(1.00)
+        time.sleep(1)
         GPIO.output(rp, GPIO.LOW)  #aus
 
 
 
 #Lautsprecher schalten
-def switchSpeaker(sstate):
+def switchSpeaker():
     if sstate == 0:
         GPIO.output(rs, GPIO.HIGH) # an
         sstate = 1
@@ -96,5 +98,8 @@ def switchSpeaker(sstate):
         sstate = 0
 
 
-
+if __name__ == '__main__':
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(btn, GPIO.IN)
+    main()
 
