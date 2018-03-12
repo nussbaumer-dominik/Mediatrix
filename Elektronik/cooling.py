@@ -20,13 +20,13 @@ def gettemp(id):
         return 99999
 
 
-# Lüftersteuerung
+# Lueftersteuerung
 def fanCon(mt):
     st = 35.0           #Solltemperatur in Grad Celsius (Temperaturraum 35-55 Grad)
-    maxspeed = 3800     #Maximale Geschwindigkeit des Lüfters in RPM
+    maxspeed = 3800     #Maximale Geschwindigkeit des Luefters in RPM
     if mt > st:
         rpm=(mt-st)*190     #Umdrehungen Pro Minute
-        prozent=(mt-35)*5   #Prozent der Drehzahl
+        prozent=(mt-st)*5   #Prozent der Drehzahl
 
     return prozent
 
