@@ -172,6 +172,13 @@ window.onload = function() {
         appendTo: "#avModes"
       });
     }
+    $('#avSlider1').noUiSlider({
+        range: {
+            min: ini.ini.av.minVolume,
+            max: ini.ini.av.maxVolume
+        }
+    }, true);
+    initSlider("#avBox");
     return true;
   }
 
@@ -246,7 +253,6 @@ window.onload = function() {
           $("#avBox").remove();
         }else{
           if(selectAvConf()){
-            initSlider("#avBox");
             $(".mode").each(function() {
               this.addEventListener("click", Buttons);
             });
