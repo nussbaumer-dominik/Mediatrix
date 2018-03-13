@@ -168,7 +168,7 @@ window.onload = function() {
       $(document.createElement('li')).addClass("mode")
           .attr("data-type", "av")
           .html(ini.ini.av.presets[i])
-          .appendTo($(".buttons"));
+          .appendTo($(".buttons ul"));
     }
   }
 
