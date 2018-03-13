@@ -182,8 +182,8 @@ window.onload = function() {
       direction: 'rtl',
       orientation: 'vertical',
       range: {
-        'min': ini.ini.av.minVolume,
-        'max': ini.ini.av.maxVolume
+        'min': parseInt(ini.ini.av.minVolume),
+        'max': parseInt(ini.ini.av.maxVolume)
       }
     });
     return true;
