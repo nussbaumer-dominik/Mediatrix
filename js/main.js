@@ -169,6 +169,13 @@ window.onload = function() {
           .attr("data-type", "av")
           .html(ini.ini.av.presets[i])
           .appendTo($("#avModes"));
+
+
+      $("<li/>", {
+        text: ""+ini.ini.av.presets[i],
+        "class": "mode",      // ('class' is still better in quotes)
+        appendTo: "#avModes"      // Finally, append to any selector
+      });
     }
   }
 
