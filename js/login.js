@@ -20,13 +20,13 @@ window.onload = function() {
   //wird bei Response des Servers ausgegeben
   socket.onmessage = function(event) {
     console.log("message: "+event.data);
-    /*if(event.data = "ini"){
+    if(event.data = "ini"){
       console.log("das ist der ini-string: "+event.data);
       ini = JSON && JSON.parse(event.data) || $.parseJSON(event.data);
       localStorage.setItem("ini", ini["ini"]);
     }else{
       console.log("message: "+event.data);
-    }*/
+    }
   };
 
   //wird ausgegeben, wenn die Verbindung gekappt wurde
