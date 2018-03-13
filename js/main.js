@@ -172,11 +172,6 @@ window.onload = function() {
     for(let i=0;i<Object.keys(ini.ini.dmx).length;i++){
       var scheinwerfer = ini.ini.dmx["scheinwerfer"+i];
       if(scheinwerfer.numberChannels == "4"){
-        console.log(scheinwerfer.id);
-        /*var cont = document.querySelector('#rgbwTemplate');
-        console.log(cont.querySelector('.slider'));
-        cont.querySelector('.slider').setAttribute("data-id", scheinwerfer.id);
-        $(".flex-container").append(cont);*/
         var t = document.querySelector('#rgbwTemplate').innerHTML;
         console.log(t+ " "+parseInt(scheinwerfer.numberChannels));
         for(let j=0;j<parseInt(scheinwerfer.numberChannels);j++){
@@ -184,12 +179,14 @@ window.onload = function() {
           t = t.replace(/{:id}/, scheinwerfer.id);
         }
         $(".flex-container").append(t);
-        //$(".flex-container").append($("#rgbwTemplate").html());
-        //$(".lichtBox").find(".slider").attr('data-id', scheinwerfer.id);
       }else if(scheinwerfer.numberChannels == "1"){
-        console.log(scheinwerfer.id);
-        $("#hueTemplate").find(".slider").attr('data-id', scheinwerfer.id);
-        $(".flex-container").append($("#hueTemplate").html());
+        var t = document.querySelector('#rgbwTemplate').innerHTML;
+        console.log(t+ " "+parseInt(scheinwerfer.numberChannels));
+        for(let j=0;j<parseInt(scheinwerfer.numberChannels);j++){
+          console.log("drinnen");
+          t = t.replace(/{:id}/, scheinwerfer.id);
+        }
+        $(".flex-container").append(t);
       }
     }
     return true;
