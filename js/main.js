@@ -173,19 +173,23 @@ window.onload = function() {
       li.text = ini.ini.av.presets[i];
       li.setAttribute("data-type", "av");
       li.class = "mode"*/
-      console.log($("<li class='mode' data-type='av'>"+ ini.ini.av.presets[i] +"</li>"));
-      $("#avModes").append($("<li class='mode' data-type='av'>"+ ini.ini.av.presets[i] +"</li>").html());
+      //console.log($("<li class='mode' data-type='av'>"+ ini.ini.av.presets[i] +"</li>"));
+      //$("#avModes").append($("<li class='mode' data-type='av'>"+ ini.ini.av.presets[i] +"</li>").html());
 
     /*$('<li/>',{
         text: ini.ini.av.presets[i],
         class: "mode"
     }).appendTo('#avModes');*/
-
-      /*$("<li></li>", {
+      console.log($("<li/>", {
         text: ""+ini.ini.av.presets[i],
         "class": "mode",      // ('class' is still better in quotes)
         appendTo: "#avModes"      // Finally, append to any selector
-      });*/
+      }));
+      $("<li/>", {
+        text: ""+ini.ini.av.presets[i],
+        "class": "mode",      // ('class' is still better in quotes)
+        appendTo: "#avModes"      // Finally, append to any selector
+      });
     }
   }
 
