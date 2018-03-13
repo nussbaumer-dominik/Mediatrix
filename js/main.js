@@ -39,7 +39,7 @@ window.onload = function() {
       console.log("das ist der ini-string: "+event.data);
       ini = JSON && JSON.parse(event.data) || $.parseJSON(event.data);
     }else{
-      console.log("message: "+JSON.parse(event.data)[0]);
+      console.log("message: "+JSON.parse(event.data));
     }
   };
 
