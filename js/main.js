@@ -15,7 +15,6 @@ window.onload = function() {
         "beamer": {}
       };
   jwt = localStorage.getItem("jwt");
-  ini = localStorage.getItem("ini");
 
   //const socket = new WebSocket('wss://192.168.1.85/wss');
   socket = new WebSocket("wss://mediatrix.darktech.org/wss");
@@ -39,7 +38,6 @@ window.onload = function() {
     if(event.data[0] = "ini"){
       console.log("das ist der ini-string: "+event.data);
       ini = JSON && JSON.parse(event.data) || $.parseJSON(event.data);
-      localStorage.setItem("ini", ini["ini"]);
     }else{
       console.log("message: "+event.data);
     }
