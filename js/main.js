@@ -173,11 +173,12 @@ window.onload = function() {
       var scheinwerfer = ini.ini.dmx["scheinwerfer"+i];
       if(scheinwerfer.numberChannels == "4"){
         console.log(scheinwerfer.id);
-        var cont = document.querySelector('#rgbwTemplate');
+        /*var cont = document.querySelector('#rgbwTemplate');
         console.log(cont.querySelector('.slider'));
-        cont.querySelectorAll('.slider').setAttribute("data-id", scheinwerfer.id);
-        $(".flex-container").append(cont);
-        //$("#rgbwTemplate").find(".slider").attr('data-id', scheinwerfer.id);
+        cont.querySelector('.slider').setAttribute("data-id", scheinwerfer.id);
+        $(".flex-container").append(cont);*/
+        $(".flex-container").append($("#rgbwTemplate").html());
+        $(".lichtBox").find(".slider").attr('data-id', scheinwerfer.id);
       }else if(scheinwerfer.numberChannels == "1"){
         console.log(scheinwerfer.id);
         $("#hueTemplate").find(".slider").attr('data-id', scheinwerfer.id);
