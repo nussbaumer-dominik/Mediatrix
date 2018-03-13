@@ -165,8 +165,7 @@ window.onload = function() {
     console.log("selectAvConf");
     for(let i=0;i<Object.keys(ini.ini.av.presets).length;i++){
       console.log("drinnen "+ini.ini.av.presets[i]);
-      li = document.createElement('li');
-      $(li).addClass("mode")
+      $(document.createElement('li')).addClass("mode")
           .attr("data-type", "av")
           .html(ini.ini.av.presets[i])
           .appendTo($("#avBox .flex-wrapper .buttons"));
