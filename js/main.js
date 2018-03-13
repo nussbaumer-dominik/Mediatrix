@@ -178,8 +178,9 @@ window.onload = function() {
         cont.querySelector('.slider').setAttribute("data-id", scheinwerfer.id);
         $(".flex-container").append(cont);*/
         var t = document.querySelector('#rgbwTemplate').innerHTML;
-        console.log(t);
+        console.log(t+ " "+parseInt(scheinwerfer.numberChannels));
         for(let j=0;j<parseInt(scheinwerfer.numberChannels);j++){
+          console.log("drinnen");
           t.replace("{:id}", scheinwerfer.id);
         }
         $(".flex-container").append(t);
