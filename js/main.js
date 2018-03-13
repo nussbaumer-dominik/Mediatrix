@@ -164,6 +164,7 @@ window.onload = function() {
   function selectAvConf(){
     console.log("selectAvConf");
     for(let i=0;i<Object.keys(ini.ini.av.presets).length;i++){
+      console.log("drinnen "+ini.ini.av.presets[i]);
       li = document.createElement('li');
       $(li).addClass("mode")
           .attr("data-type", "av")
