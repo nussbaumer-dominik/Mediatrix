@@ -174,9 +174,11 @@ window.onload = function() {
       if(scheinwerfer.numberChannels == "4"){
         console.log(scheinwerfer.id);
         $(".flex-container").append($("#rgbwTemplate").html());
+        initSlider(".lichtBox");
       }else if(scheinwerfer.numberChannels == "1"){
         console.log(scheinwerfer.id);
         $(".flex-container").append($("#hueTemplate").html());
+        initSlider(".lichtBox");
       }
     }
   }
@@ -252,7 +254,6 @@ window.onload = function() {
           $("#lichtBox").remove();
         }else{
           selectLichtConf();
-          initSlider(".lichtBox");
         }
         break;
     }
