@@ -173,17 +173,13 @@ window.onload = function() {
       var scheinwerfer = ini.ini.dmx["scheinwerfer"+i];
       if(scheinwerfer.numberChannels == "4"){
         var t = document.querySelector('#rgbwTemplate').innerHTML;
-        console.log(t+ " "+parseInt(scheinwerfer.numberChannels));
         for(let j=0;j<parseInt(scheinwerfer.numberChannels);j++){
-          console.log("drinnen");
           t = t.replace(/{:id}/, scheinwerfer.id);
         }
         $(".flex-container").append(t);
       }else if(scheinwerfer.numberChannels == "1"){
         var t = document.querySelector('#hueTemplate').innerHTML;
-        console.log(t+ " "+parseInt(scheinwerfer.numberChannels));
         for(let j=0;j<parseInt(scheinwerfer.numberChannels);j++){
-          console.log("drinnen");
           t = t.replace(/{:id}/, scheinwerfer.id);
         }
         $(".flex-container").append(t);
