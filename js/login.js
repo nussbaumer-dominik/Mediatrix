@@ -21,6 +21,7 @@ window.onload = function() {
       console.log("das ist der ini-string: "+event.data);
       ini = JSON && JSON.parse(event.data) || $.parseJSON(event.data);
       localStorage.setItem("ini", ini["ini"]);
+      window.location.href = "dashboard.html";
     }else{
       console.log("message: "+event.data);
     }
@@ -59,7 +60,7 @@ window.onload = function() {
         jwt = JSON && JSON.parse(data) || $.parseJSON(data);
         localStorage.setItem("jwt", jwt["jwt"]);
         if(jwt != null){
-          window.location.href = "dashboard.html";
+
         }
     }).fail(function(data){
         console.log("error: "+data);
