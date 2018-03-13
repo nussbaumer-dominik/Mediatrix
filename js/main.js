@@ -170,7 +170,7 @@ window.onload = function() {
           .html(ini.ini.av.presets[i])
           .appendTo($("#avModes"));*/
 
-    $.parseHTML('<li/>',{
+    $('<li/>',{
         text: ini.ini.av.presets[i],
         class: "mode"
     }).appendTo('#avModes');
