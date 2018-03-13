@@ -169,7 +169,7 @@ window.onload = function() {
     console.log("selectLichtConf");
     console.log(Object.keys(ini.ini.dmx).length);
 
-    for(var i=0;i<Object.keys(ini.ini.dmx).length;i++){
+    for(let i=0;i<Object.keys(ini.ini.dmx).length;i++){
       var scheinwerfer = ini.ini.dmx["scheinwerfer"+i];
       if(scheinwerfer.numberChannels == "4"){
         console.log(scheinwerfer.id);
@@ -177,8 +177,11 @@ window.onload = function() {
         console.log(cont.querySelector('.slider'));
         cont.querySelector('.slider').setAttribute("data-id", scheinwerfer.id);
         $(".flex-container").append(cont);*/
-        var t = document.querySelector('#rgbwTemplate');
-        console.log(t.innerHTML);
+        var t = document.querySelector('#rgbwTemplate').innerHTML;
+        console.log(t);
+        for(let j=0;j<parseInt(scheinwerfer.numberChannels);j++){
+          t.replace("{:id}", scheinwerfer.id);
+        }
         //$(".flex-container").append($("#rgbwTemplate").html());
         //$(".lichtBox").find(".slider").attr('data-id', scheinwerfer.id);
       }else if(scheinwerfer.numberChannels == "1"){
