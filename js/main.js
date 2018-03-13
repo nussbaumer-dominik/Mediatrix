@@ -36,7 +36,6 @@ window.onload = function() {
 
   //wird bei Response des Servers ausgegeben
   socket.onmessage = function(event) {
-    console.log("bin drinnen");
     if(event.data[0] = "ini"){
       console.log("das ist der ini-string: "+event.data);
       ini = JSON && JSON.parse(event.data) || $.parseJSON(event.data);
@@ -174,7 +173,7 @@ window.onload = function() {
     console.log(Object.keys(ini.ini.dmx).length);
 
     for(var i=0;i<Object.keys(ini.ini.dmx).length;i++){
-      console.log(ini.ini.dmx.scheinwerfer+"");
+      console.log(ini.ini.dmx.scheinwerfer+i+"");
     }
   }
 
