@@ -169,6 +169,11 @@ window.onload = function() {
           .attr("data-type", "av")
           .html(ini.ini.av.presets[i])
           .appendTo($("#avModes"));*/
+      /*var li = document.createElement("li");
+      li.text = ini.ini.av.presets[i];
+      li.setAttribute("data-type", "av");
+      li.class = "mode"*/
+      console.log($("<li class='mode' data-type='av'>"+ ini.ini.av.presets[i] +"</li>"));
       $("#avModes").append($("<li class='mode' data-type='av'>"+ ini.ini.av.presets[i] +"</li>").html());
 
     /*$('<li/>',{
