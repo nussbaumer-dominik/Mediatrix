@@ -171,7 +171,7 @@ window.onload = function() {
     console.log(Object.keys(ini.ini.dmx).length);
 
     for(var i=0;i<Object.keys(ini.ini.dmx).length;i++){
-      console.log(ini.ini.dmx[0]+" ");
+      console.log(ini.ini.dmx["scheinwerfer"+i]);
     }
   }
 
