@@ -182,6 +182,7 @@ window.onload = function() {
         for(let j=0;j<parseInt(scheinwerfer.numberChannels);j++){
           t.replace("{:id}", scheinwerfer.id);
         }
+        $(".flex-container").append(t);
         //$(".flex-container").append($("#rgbwTemplate").html());
         //$(".lichtBox").find(".slider").attr('data-id', scheinwerfer.id);
       }else if(scheinwerfer.numberChannels == "1"){
