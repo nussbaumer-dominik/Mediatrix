@@ -178,6 +178,7 @@ window.onload = function() {
         console.log(scheinwerfer.id);
         $(".flex-container").append($("#hueTemplate").html());
       }
+      return true;
     }
   }
 
