@@ -165,13 +165,13 @@ window.onload = function() {
     console.log("selectAvConf");
     for(let i=0;i<Object.keys(ini.ini.av.presets).length;i++){
       console.log("drinnen "+ini.ini.av.presets[i]);
-      $(document.createElement('li')).addClass("mode")
+      /*$(document.createElement('li')).addClass("mode")
           .attr("data-type", "av")
           .html(ini.ini.av.presets[i])
-          .appendTo($("#avModes"));
+          .appendTo($("#avModes"));*/
 
 
-      $("<li/>", {
+      $("<li></li>", {
         text: ""+ini.ini.av.presets[i],
         "class": "mode",      // ('class' is still better in quotes)
         appendTo: "#avModes"      // Finally, append to any selector
