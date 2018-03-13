@@ -173,14 +173,7 @@ window.onload = function() {
     console.log(Object.keys(ini.ini.dmx).length);
 
     for(var i=0;i<Object.keys(ini.ini.dmx).length;i++){
-      switch (ini.ini.dmx){
-        case 1:
-
-          break;
-        case 2:
-
-          break;
-      }
+      console.log(ini.ini.dmx.scheinwerfer+i);
     }
   }
 
