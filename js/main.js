@@ -180,11 +180,10 @@ window.onload = function() {
         text: ini.ini.av.presets[i],
         class: "mode"
     }).appendTo('#avModes');*/
-      console.log($("<li/>", {
-        text: ""+ini.ini.av.presets[i],
-        "class": "mode",      // ('class' is still better in quotes)
-        appendTo: "#avModes"      // Finally, append to any selector
-      }));
+      console.log($('<li/>',{
+          text: ini.ini.av.presets[i],
+          class: "mode"
+      }).appendTo('#avModes'));
       $("<li/>", {
         text: ""+ini.ini.av.presets[i],
         "class": "mode",      // ('class' is still better in quotes)
