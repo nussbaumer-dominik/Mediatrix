@@ -163,6 +163,7 @@ window.onload = function() {
 
   function selectAvConf(){
     console.log("selectAvConf");
+    $(".flex-container").append($("#avTemplate").html());
     for(let i=0;i<Object.keys(ini.ini.av.presets).length;i++){
       console.log("drinnen "+ini.ini.av.presets[i]);
       /*$(document.createElement('li')).addClass("mode")
@@ -180,10 +181,10 @@ window.onload = function() {
         text: ini.ini.av.presets[i],
         class: "mode"
     }).appendTo('#avModes');*/
-    $(".flex-container").append($("#avTemplate").html());
       $("<li/>", {
         text: ""+ini.ini.av.presets[i],
         "class": "mode",
+        "data-type": "av",
         appendTo: "#avModes"
       });
     }
