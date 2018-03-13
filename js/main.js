@@ -174,7 +174,7 @@ window.onload = function() {
       if(scheinwerfer.numberChannels == "4"){
         console.log(scheinwerfer.id);
       }else if(scheinwerfer.numberChannels == "1"){
-
+        console.log(scheinwerfer.id);
       }
     }
   }
