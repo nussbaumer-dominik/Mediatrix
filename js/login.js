@@ -11,15 +11,12 @@ window.onload = function() {
 
   //wird beim erfolgreichen Öffnen des Sockets ausgegeben
   socket.onopen = function(event) {
-    if(jwt != null){
-      socket.send('{"jwt":"'+jwt+'","ini":1}');
-    }
     console.log("socket open: " + socket + " " + event.data);
   };
 
   //wird bei Response des Servers ausgegeben
   socket.onmessage = function(event) {
-    console.log("message: "+event.data);
+    console.log("bin drinnen");
     if(event.data[0] = "ini"){
       console.log("das ist der ini-string: "+event.data);
       ini = JSON && JSON.parse(event.data) || $.parseJSON(event.data);
@@ -61,7 +58,7 @@ window.onload = function() {
         console.log("success: "+data);
         jwt = JSON && JSON.parse(data) || $.parseJSON(data);
         localStorage.setItem("jwt", jwt["jwt"]);
-        if(jwt!=null){
+        if(jwt != null){
           window.location.href = "dashboard.html";
         }
     }).fail(function(data){
