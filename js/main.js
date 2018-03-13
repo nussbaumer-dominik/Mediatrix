@@ -166,15 +166,15 @@ window.onload = function() {
   };
 
   function selectAvConf(){
-    console.log("selectAvConf "+ ini);
+    console.log("selectAvConf");
   }
 
   function selectLichtConf(){
-    console.log("selectLichtConf "+ ini);
+    console.log("selectLichtConf");
     console.log(Object.keys(ini.ini.dmx).length);
 
     for(var i=0;i<Object.keys(ini.ini.dmx).length;i++){
-      console.log(ini.ini.dmx.scheinwerfer+i);
+      console.log(ini.ini.dmx.scheinwerfer);
     }
   }
 
