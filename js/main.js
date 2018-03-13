@@ -163,6 +163,10 @@ window.onload = function() {
 
   function selectAvConf(){
     console.log("selectAvConf");
+    div = document.createElement('div');
+    $(d).addClass(classname)
+        .html(text)
+        .appendTo($("#myDiv"))
   }
 
   function selectLichtConf(){
@@ -255,8 +259,8 @@ window.onload = function() {
         }
         break;
       case "4":
-        if($("#lichtBox").parents(".flex-container").length == 1){
-          $("#lichtBox").remove();
+        if($(".lichtBox").parents(".flex-container").length == 1){
+          $(".lichtBox").remove();
         }else{
           if(selectLichtConf()){
             console.log("SelectLichtConf ist fertig");
