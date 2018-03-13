@@ -165,22 +165,6 @@ window.onload = function() {
     console.log("selectAvConf");
     $(".flex-container").append($("#avTemplate").html());
     for(let i=0;i<Object.keys(ini.ini.av.presets).length;i++){
-      console.log("drinnen "+ini.ini.av.presets[i]);
-      /*$(document.createElement('li')).addClass("mode")
-          .attr("data-type", "av")
-          .html(ini.ini.av.presets[i])
-          .appendTo($("#avModes"));*/
-      /*var li = document.createElement("li");
-      li.text = ini.ini.av.presets[i];
-      li.setAttribute("data-type", "av");
-      li.class = "mode"*/
-      //console.log($("<li class='mode' data-type='av'>"+ ini.ini.av.presets[i] +"</li>"));
-      //$("#avModes").append($("<li class='mode' data-type='av'>"+ ini.ini.av.presets[i] +"</li>").html());
-
-    /*$('<li/>',{
-        text: ini.ini.av.presets[i],
-        class: "mode"
-    }).appendTo('#avModes');*/
       $("<li/>", {
         text: ""+ini.ini.av.presets[i],
         "class": "mode",
@@ -193,8 +177,6 @@ window.onload = function() {
 
   function selectLichtConf(){
     console.log("selectLichtConf");
-    console.log(Object.keys(ini.ini.dmx).length);
-
     for(let i=0;i<Object.keys(ini.ini.dmx).length;i++){
       var scheinwerfer = ini.ini.dmx["scheinwerfer"+i];
       if(scheinwerfer.numberChannels == "4"){
