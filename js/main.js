@@ -174,6 +174,7 @@ window.onload = function() {
       if(scheinwerfer.numberChannels == "4"){
         console.log(scheinwerfer.id);
         $("#rgbwTemplate").find(".slider").data('data-id', scheinwerfer.id);
+        console.log($("#rgbwTemplate").find(".slider"));
         $(".flex-container").append($("#rgbwTemplate").html());
       }else if(scheinwerfer.numberChannels == "1"){
         console.log(scheinwerfer.id);
