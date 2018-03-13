@@ -174,7 +174,7 @@ window.onload = function() {
     console.log(Object.keys(ini.ini.dmx).length);
 
     for(var i=0;i<Object.keys(ini.ini.dmx).length;i++){
-      console.log(ini.ini.dmx.scheinwerfer);
+      console.log(ini.ini.dmx.scheinwerfer+"");
     }
   }
 
@@ -242,7 +242,6 @@ window.onload = function() {
           selectMixerConf();
           $(".flex-container").append($("#mikroTemplate").html());
           initSlider("#mikrofonBox");
-          console.log("drinnen");
         }
         break;
       case "4":
