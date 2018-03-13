@@ -180,16 +180,14 @@ window.onload = function() {
         text: ini.ini.av.presets[i],
         class: "mode"
     }).appendTo('#avModes');*/
-      console.log($('<li/>',{
-          text: ini.ini.av.presets[i],
-          class: "mode"
-      }).appendTo('#avModes'));
+    $(".flex-container").append($("#avTemplate").html());
       $("<li/>", {
         text: ""+ini.ini.av.presets[i],
-        "class": "mode",      // ('class' is still better in quotes)
-        appendTo: "#avModes"      // Finally, append to any selector
+        "class": "mode",
+        appendTo: "#avModes"
       });
     }
+    return true;
   }
 
   function selectLichtConf(){
@@ -264,12 +262,12 @@ window.onload = function() {
         if($("#avBox").parents(".flex-container").length == 1){
           $("#avBox").remove();
         }else{
-          selectAvConf();
-          $(".flex-container").append($("#avTemplate").html());
-          initSlider("#avBox");
-          $(".mode").each(function() {
-            this.addEventListener("click", Buttons);
-          });
+          if(selectAvConf()){
+            initSlider("#avBox");
+            $(".mode").each(function() {
+              this.addEventListener("click", Buttons);
+            });
+          }
         }
         break;
       case "3":
