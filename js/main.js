@@ -174,10 +174,17 @@ window.onload = function() {
     }
     var slider = document.querySelector("#avSlider1");
     noUiSlider.create(slider, {
+      start: 0,
+      format: wNumb({
+        decimals: 0
+      }),
+      connect: [false, false],
+      direction: 'rtl',
+      orientation: 'vertical',
       range: {
         'min': ini.ini.av.minVolume,
         'max': ini.ini.av.maxVolume
-        }
+      }
     });
     return true;
   }
