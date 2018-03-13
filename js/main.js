@@ -36,12 +36,14 @@ window.onload = function() {
 
   //wird bei Response des Servers ausgegeben
   socket.onmessage = function(event) {
-    var tmp = event.data;
-    if(tmp= "ini"){
-      console.log("das ist der ini-string: "+tmp);
-      ini = tmp;
+    console.log("bin drinnen");
+    if(event.data[0] = "ini"){
+      console.log("das ist der ini-string: "+event.data);
+      ini = JSON && JSON.parse(event.data) || $.parseJSON(event.data);
+      localStorage.setItem("ini", ini["ini"]);
+      window.location.href = "dashboard.html";
     }else{
-      console.log("message: "+tmp);
+      console.log("message: "+event.data);
     }
   };
 

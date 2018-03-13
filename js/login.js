@@ -1,8 +1,5 @@
-var socket, jwt, ini;
+var jwt, ini;
 window.onload = function() {
-  //const socket = new WebSocket('wss://192.168.1.85/wss');
-  socket = new WebSocket("wss://mediatrix.darktech.org/wss");
-  //socket = new WebSocket("wss://193.154.93.223/wss");
 
   //wirft eine Exception
   socket.onerror = function(error) {
@@ -16,15 +13,7 @@ window.onload = function() {
 
   //wird bei Response des Servers ausgegeben
   socket.onmessage = function(event) {
-    console.log("bin drinnen");
-    if(event.data[0] = "ini"){
-      console.log("das ist der ini-string: "+event.data);
-      ini = JSON && JSON.parse(event.data) || $.parseJSON(event.data);
-      localStorage.setItem("ini", ini["ini"]);
-      window.location.href = "dashboard.html";
-    }else{
-      console.log("message: "+event.data);
-    }
+    console.log("message: "+event.data);
   };
 
   //wird ausgegeben, wenn die Verbindung gekappt wurde
