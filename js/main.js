@@ -181,7 +181,7 @@ window.onload = function() {
         console.log(t+ " "+parseInt(scheinwerfer.numberChannels));
         for(let j=0;j<parseInt(scheinwerfer.numberChannels);j++){
           console.log("drinnen");
-          t.replace("{:id}", scheinwerfer.id);
+          t.replace(/{:id}/, scheinwerfer.id);
         }
         $(".flex-container").append(t);
         //$(".flex-container").append($("#rgbwTemplate").html());
