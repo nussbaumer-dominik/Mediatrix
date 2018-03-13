@@ -157,8 +157,7 @@ window.onload = function() {
   //Werte der Modes des AV-Receivers auslesen
   function Buttons() {
     if ($(this).attr("data-type") == "av") {
-      console.log("Data-type=" + $(this).attr("data-type") + " Value: " + $(
-        this).html());
+      console.log("Data-type=" + $(this).attr("data-type") + " Value: " + $(this).html());
     }
   };
 
@@ -171,7 +170,12 @@ window.onload = function() {
     console.log(Object.keys(ini.ini.dmx).length);
 
     for(var i=0;i<Object.keys(ini.ini.dmx).length;i++){
-      console.log(ini.ini.dmx["scheinwerfer"+i]);
+      var scheinwerfer = ini.ini.dmx["scheinwerfer"+i];
+      if(scheinwerfer.numberChannels == "4"){
+        console.log(scheinwerfer.id);
+      }else if(scheinwerfer.numberChannels == "1"){
+
+      }
     }
   }
 
