@@ -1,26 +1,6 @@
-var jwt, ini;
 window.onload = function() {
 
-  //wirft eine Exception
-  socket.onerror = function(error) {
-    console.log("WebSocket Error: " + error);
-  };
-
-  //wird beim erfolgreichen Öffnen des Sockets ausgegeben
-  socket.onopen = function(event) {
-    console.log("socket open: " + socket + " " + event.data);
-  };
-
-  //wird bei Response des Servers ausgegeben
-  socket.onmessage = function(event) {
-    console.log("message: "+event.data);
-  };
-
-  //wird ausgegeben, wenn die Verbindung gekappt wurde
-  socket.onclose = function(event) {
-    console.log("socket closed: " + socket + " " + event.data);
-  };
-
+  var jwt, ini;
   //Daten versenden
   function send(data) {
     socket.send(JSON.stringify(data));
