@@ -173,9 +173,11 @@ window.onload = function() {
       var scheinwerfer = ini.ini.dmx["scheinwerfer"+i];
       if(scheinwerfer.numberChannels == "4"){
         console.log(scheinwerfer.id);
+        $("#rgbwTempalte").find(".slider").data('data-id',scheinwerfer.id);
         $(".flex-container").append($("#rgbwTemplate").html());
       }else if(scheinwerfer.numberChannels == "1"){
         console.log(scheinwerfer.id);
+        $("#rgbwTempalte").find(".slider").data('data-id',scheinwerfer.id);
         $(".flex-container").append($("#hueTemplate").html());
       }
     }
