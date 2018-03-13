@@ -14,37 +14,6 @@ window.onload = function() {
         "mixer": {},
         "beamer": {}
       };
-      /*conf = {
-        "dmx":
-          {
-            "scheinwerfer1":
-            {
-              "id": 1,
-              "hue": 255
-            },
-            "scheinwerfer2":
-            {
-              "id": 2,
-              "rot":2,
-              "gruen":255,
-              "blau":100,
-              "weiss":255
-            },
-            "blackout":1
-          },
-        "beamer":
-          {
-             "on":1,
-             "off":1,
-             "source":1
-          },
-         "av":
-          {
-             "mode":1,
-             "source":1,
-             "volume":60
-          }
-        };*/
   jwt = localStorage.getItem("jwt");
 
   //const socket = new WebSocket('wss://192.168.1.85/wss');
@@ -66,8 +35,7 @@ window.onload = function() {
 
   //wird bei Response des Servers ausgegeben
   socket.onmessage = function(event) {
-    console.log("message: " + event.data+" "+event.data.ini);
-    if(event.data.ini != null){
+    if(event.data != null){
       console.log("das ist der ini-string: "+event.data);
       ini = event.data;
     }
