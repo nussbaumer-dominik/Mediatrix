@@ -19,7 +19,6 @@ window.onload = function() {
 
   //wird bei Response des Servers ausgegeben
   socket.onmessage = function(event) {
-    console.log("message: "+event.data);
     if(event.data[0]= "ini"){
       console.log("das ist der ini-string: "+event.data);
       ini = JSON && JSON.parse(event.data) || $.parseJSON(event.data);
