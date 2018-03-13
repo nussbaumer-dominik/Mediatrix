@@ -49,7 +49,7 @@ window.onload = function() {
         jwt = JSON && JSON.parse(data) || $.parseJSON(data);
         localStorage.setItem("jwt", jwt["jwt"]);
         if(jwt != null){
-
+          window.location.href = "dashboard.html";
         }
     }).fail(function(data){
         console.log("error: "+data);
