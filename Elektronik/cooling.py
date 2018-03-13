@@ -53,6 +53,8 @@ def pwm():
         print "Momentantemperatur : " + '{:.3f}'.format(mt)
         prozent = fanCon(mt)
 
+        print "Prozent: " + prozent
+
         fan_pwm.ChangeDutyCycle(prozent) #provide duty cycle in the range 0-100
         sleep(2)
 
