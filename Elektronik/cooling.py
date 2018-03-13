@@ -24,6 +24,7 @@ def gettemp(id):
 def fanCon(mt):
     st = 35.0           #Solltemperatur in Grad Celsius (Temperaturraum 35-55 Grad)
     maxspeed = 3800     #Maximale Geschwindigkeit des Luefters in RPM
+    prozent = 0
     if mt > st:
         rpm=(mt-st)*190     #Umdrehungen Pro Minute
         prozent=(mt-st)*5   #Prozent der Drehzahl
@@ -37,7 +38,7 @@ def pwm():
     import RPi.GPIO as GPIO
     from time import sleep
 
-    PWMpin = 33				# PWM pin zum Anschluss des Lüfters (PWM1 33,35)
+    PWMpin = 33				# PWM pin zum Anschluss des Luefters (PWM1 33,35)
     GPIO.setwarnings(False)			#disable warnings
     GPIO.setmode(GPIO.BOARD)		#set pin numbering system
     GPIO.setup(PWMpin,GPIO.OUT)
