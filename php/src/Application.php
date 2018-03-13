@@ -390,8 +390,22 @@ class Application implements MessageComponentInterface
         }
 
         /*
-         * Extendet
+         * Extended
          */
+        $isExtended = false;
+
+        $sqlite = new \SQLite3("../sqlite/db.sqlite");
+
+        $stm = $sqlite->prepare('SELECT isextendet FROM user WHERE id = :id');
+        $stm->bindParam(':id', $usr);
+
+        $result = $stm->execute();
+
+        while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
+            $isExtended = is_bool($res['isextendet'])?$res['isextendet']:false;
+        }
+
+        $presets = $hasResults? $presets:$this->defaultPresets;
 
 
 
@@ -430,7 +444,8 @@ class Application implements MessageComponentInterface
         return array("ini" => array(
             "presets" => $presets,
             "dmx" => $dmx,
-            "av" => $av
+            "av" => $av,
+            "isExtended" => $isExtended
         ));
     }
 

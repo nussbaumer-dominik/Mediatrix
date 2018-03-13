@@ -22,6 +22,10 @@ class IR : public Php::Base {
 
         int times = params[1];
 
+        if(times < 5){
+            times = times/3;
+        }
+
         //open serial connection to IR-Device
         int fd = serialOpen(IR::dev, 9600);
 
