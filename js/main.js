@@ -252,6 +252,7 @@ window.onload = function() {
           $("#lichtBox").remove();
         }else{
           if(selectLichtConf()){
+            console.log("SelectLichtConf ist fertig");
             initSlider(".lichtBox");
           }
         }
