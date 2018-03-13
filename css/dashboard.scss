@@ -645,13 +645,13 @@ a{
     justify-content: space-between;
   }
 
-  #avSlider1-wrapper{
+  #avSliderWrapper:nth-child(1){
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
   }
 
-  #mikroSlider1-wrapper{
+  #mikroSliderWrapper:nth-child(1){
     margin-right: 30px;
   }
 
