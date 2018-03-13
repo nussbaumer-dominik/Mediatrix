@@ -37,7 +37,7 @@ window.onload = function() {
   socket.onmessage = function(event) {
     if(event.data[0]= "ini"){
       console.log("das ist der ini-string: "+event.data);
-      ini = JSON && JSON.parse(data) || $.parseJSON(data);
+      ini = JSON && JSON.parse(event.data) || $.parseJSON(event.data);
       localStorage.setItem("ini", ini["ini"]);
     }else{
       console.log("message: "+event.data);
