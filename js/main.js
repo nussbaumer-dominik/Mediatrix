@@ -178,7 +178,7 @@ window.onload = function() {
         cont.querySelector('.slider').setAttribute("data-id", scheinwerfer.id);
         $(".flex-container").append(cont);*/
         var t = document.querySelector('#rgbwTemplate');
-        console.log(t);
+        console.log(t.innerHTML);
         //$(".flex-container").append($("#rgbwTemplate").html());
         //$(".lichtBox").find(".slider").attr('data-id', scheinwerfer.id);
       }else if(scheinwerfer.numberChannels == "1"){
