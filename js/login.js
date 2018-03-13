@@ -24,9 +24,7 @@ window.onload = function() {
       console.log("das ist der ini-string: "+event.data);
       ini = JSON && JSON.parse(event.data) || $.parseJSON(event.data);
       localStorage.setItem("ini", ini["ini"]);
-      if(ini != null){
-        window.location.href = "dashboard.html";
-      }
+      window.location.href = "dashboard.html";
     }else{
       console.log("message: "+event.data);
     }
