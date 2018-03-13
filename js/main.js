@@ -163,10 +163,13 @@ window.onload = function() {
 
   function selectAvConf(){
     console.log("selectAvConf");
-    div = document.createElement('div');
-    $(d).addClass(classname)
-        .html(text)
-        .appendTo($("#myDiv"))
+    for(let i=0;i<Object.keys(ini.ini.av.presets).length;i++){
+      li = document.createElement('li');
+      $(li).addClass("mode")
+          .attr("data-type", "av")
+          .html(ini.ini.av.presets[i])
+          .appendTo($("#avBox .flex-wrapper .buttons"));
+    }
   }
 
   function selectLichtConf(){
