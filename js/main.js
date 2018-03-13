@@ -252,7 +252,7 @@ window.onload = function() {
           $("#lichtBox").remove();
         }else{
           selectLichtConf();
-          initSlider("#lichtBox");
+          initSlider(".lichtBox");
         }
         break;
     }
