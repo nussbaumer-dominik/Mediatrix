@@ -186,6 +186,10 @@ window.onload = function() {
         'max': parseInt(ini.ini.av.maxVolume)
       }
     });
+    slider.noUiSlider.on('slide', function(values, handle) {
+      Slider(this);
+      document.getElementById("avSlider1Value").innerHTML = values[handle];
+    });
     return true;
   }
 
