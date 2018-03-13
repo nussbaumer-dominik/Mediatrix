@@ -87,6 +87,7 @@ window.onload = function() {
           "volume": (slider.get() / 100),
           "channel": slider.target.getAttribute("data-id")
         };
+        sendVolumeToMixer(conf.mixer);
         send(data);
         return data;
         break
@@ -406,6 +407,53 @@ window.onload = function() {
       });
     });
   }
+//mixer
+var request = $.ajax({
+  url: 'http://10.10.2.1/socket.io/',
+  success: function(data) {
+    sessId = data.substring(0, 20);
+  }
+});
+
+mixerSocket = new WebSocket('ws://10.10.2.1/socket.io/1/websocket/' + sessId);;
+console.log(mixerSocket);
+
+mixerSocket.onerror = function(error) {
+  console.log("WebSocket Error: " + error);
+};
+
+// Show a connected message when the WebSocket is opened
+mixerSocket.onopen = function(event) {
+  console.log(mixerSocket + " opened");
+};
+
+// Handle messages sent by the server
+mixerSocket.onmessage = function(event) {
+  var message = event.data;
+  console.log(message);
+};
+
+// Show a disconnected message when the WebSocket is closed
+mixerSocket.onclose = function(event) {
+  console.log(mixerSocket+" closed");
+};
+
+function sendVolumeToMixer(message){
+  //3:::SETD^i.0.mix^0.998
+  var command = "3:::SETD^i."+ message.channel+".mix^"+message.volume;
+  console.log(message);
+}
+
+function keepAlive() {
+  mixerSocket.send("3:::ALIVE");
+  console.log("Alive");
+}
+
+setTimeout(function() {
+  setInterval(function() {
+    keepAlive()
+  }, 15000)
+}, 3000);
 }
 
 //socket schließen
