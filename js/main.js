@@ -172,13 +172,13 @@ window.onload = function() {
         appendTo: "#avModes"
       });
     }
-    initSlider("#avBox");
-    $('#avSlider1').noUiSlider({
-        range: {
-            min: ini.ini.av.minVolume,
-            max: ini.ini.av.maxVolume
+    var slider = document.querySelector("#avSlider1");
+    noUiSlider.create(slider, {
+      range: {
+        'min': ini.ini.av.minVolume,
+        'max': ini.ini.av.maxVolume
         }
-    }, true);
+    });
     return true;
   }
 
