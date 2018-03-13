@@ -180,7 +180,7 @@ window.onload = function() {
         }
         $(".flex-container").append(t);
       }else if(scheinwerfer.numberChannels == "1"){
-        var t = document.querySelector('#rgbwTemplate').innerHTML;
+        var t = document.querySelector('#hueTemplate').innerHTML;
         console.log(t+ " "+parseInt(scheinwerfer.numberChannels));
         for(let j=0;j<parseInt(scheinwerfer.numberChannels);j++){
           console.log("drinnen");
