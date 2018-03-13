@@ -173,9 +173,9 @@ window.onload = function() {
       var scheinwerfer = ini.ini.dmx["scheinwerfer"+i];
       if(scheinwerfer.numberChannels == "4"){
         console.log(scheinwerfer.id);
-        $("#rgbwTemplate").find(".slider").data('data-id', scheinwerfer.id);
         console.log($("#rgbwTemplate").find(".slider"));
         $(".flex-container").append($("#rgbwTemplate").html());
+        $("#rgbwTemplate").find(".slider").data('data-id', scheinwerfer.id);
       }else if(scheinwerfer.numberChannels == "1"){
         console.log(scheinwerfer.id);
         $("#hueTemplate").find(".slider").data('data-id', scheinwerfer.id);
