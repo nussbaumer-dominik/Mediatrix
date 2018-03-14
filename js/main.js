@@ -55,7 +55,7 @@ window.onload = function() {
   }
 
   //mixer
-  var request = $.ajax({
+  /*var request = $.ajax({
     url: 'http://10.10.2.1/socket.io/',
     success: function(data) {
       sessId = data.substring(0, 20);
@@ -119,6 +119,7 @@ window.onload = function() {
     mixerSocket.send("3:::ALIVE");
     console.log("Alive");
   }
+*/
 
   setTimeout(function() {
     setInterval(function() {
@@ -229,8 +230,16 @@ window.onload = function() {
 
   //Werte der Modes des AV-Receivers auslesen
   function Buttons() {
+    var data = {
+      "jwt": jwt,
+      "av": {
+        "mode": ""
+      }
+    };
     if ($(this).attr("data-type") == "av") {
       console.log("Data-type=" + $(this).attr("data-type") + " Value: " + $(this).html());
+      data.av.mode = $(this).html();
+      console.log(data);
     }
   };
 
@@ -301,12 +310,18 @@ window.onload = function() {
   }
 
   function getPresets(container){
-
+    //ini.presets;
   }
 
   $("#savePreset").on("click", setPreset);
 
-  //Ein- Ausblenden
+  function chmod(){
+    console.log($(this).is(":checked"));
+
+  }
+
+  $(".tgl").on("click", chmod)
+
   var isMobile = ('ontouchstart' in document.documentElement && navigator.userAgent
     .match(/Mobi/));
 
@@ -363,18 +378,17 @@ window.onload = function() {
           }
         }
         break;
-    }
-
-    if (this.getAttribute("data-boxbtn") == "5") {
-      console.log("Präsentationsmodus einblenden");
-      //hide all boxes
-      removeChildren(".flex-container");
-      toggleFlexContainer(0);
-      togglePresMode(0);
-      toggleStatus(0);
-      if (isMobile) {
-        toggleMobileOptions(0);
-      }
+      case "5":
+        console.log("Präsentationsmodus einblenden");
+        //hide all boxes
+        removeChildren(".flex-container");
+        toggleFlexContainer(0);
+        togglePresMode(0);
+        toggleStatus(0);
+        if (isMobile) {
+          toggleMobileOptions(0);
+        }
+        break;
     }
   });
 
@@ -385,8 +399,7 @@ window.onload = function() {
           $(".presentation").removeClass("flex");
         } else {
           $(".presentation").addClass("flex");
-          removeChildren(".flex-container");
-          getPresets(".presentation");
+          //getPresets(".presentation");
         }
         break;
       case 1:
@@ -481,6 +494,3 @@ window.onload = function() {
     });
   }
 }
-
-//socket schließen
-//socket.close();
