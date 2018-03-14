@@ -671,23 +671,21 @@ a{
   }
 
   .lichtBox{
-    .flex-wrapper{
-      .valueField{
-        width: 100%;
-        min-width: 60px;
-        margin-top: 0px;
-        text-align: center;
-      }
+    .valueField{
+      width: 100%;
+      min-width: 60px;
+      margin-top: 0px;
+      text-align: center;
+    }
 
-      .textField{
-        font-size: 24px;
-        margin-top: 15px;
-        text-align: center;
-      }
-      .noUi-vertical{
-        width: 4px;
-        height: 350px;
-      }
+    .textField{
+      font-size: 24px;
+      margin-top: 15px;
+      text-align: center;
+    }
+    .noUi-vertical{
+      width: 4px;
+      height: 350px;
     }
   }
 
