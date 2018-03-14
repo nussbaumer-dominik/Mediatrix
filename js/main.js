@@ -364,7 +364,7 @@ window.onload = function() {
           selectMixerConf();
           $(".flex-container").append($("#mikroTemplate").html());
           initSlider("#mikrofonBox");
-          $(".mute").on("click", muteButton);
+          //$(".mute").on("click", muteButton);
         }
         break;
       case "4":
