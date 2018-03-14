@@ -1,4 +1,4 @@
-var socket, jwt, ini;
+var socket, jwt, ini, sessId;
 window.onload = function() {
 
   //Variablen
@@ -92,7 +92,7 @@ window.onload = function() {
         return data;
         break
       case "licht":
-        console.log("Dieser Slider ist von einem DMX Gerät: " + "ID: " +
+        console.log("Dieser Slider ist von einem DMX Gerät: " + "Id: " +
           slider.target.getAttribute("data-id") + " " + slider.get());
         var data = {
           "jwt": jwt,
@@ -154,6 +154,8 @@ window.onload = function() {
       }
     }
   };
+
+
 
   //Werte der Modes des AV-Receivers auslesen
   function Buttons() {
@@ -278,6 +280,7 @@ window.onload = function() {
           selectMixerConf();
           $(".flex-container").append($("#mikroTemplate").html());
           initSlider("#mikrofonBox");
+          $(".mute").on("click", muteButton);
         }
         break;
       case "4":
@@ -413,47 +416,64 @@ var request = $.ajax({
   success: function(data) {
     sessId = data.substring(0, 20);
   }
+}).done(function() {
+  mixerSocket = new WebSocket('ws://10.10.2.1/socket.io/1/websocket/' + sessId);;
+  console.log(mixerSocket);
+
+  mixerSocket.onerror = function(error) {
+    console.log("WebSocket Error: " + error);
+  };
+
+  // Show a connected message when the WebSocket is opened
+  mixerSocket.onopen = function(event) {
+    console.log(mixerSocket + " opened");
+  };
+
+  // Handle messages sent by the server
+  mixerSocket.onmessage = function(event) {
+    var message = event.data;
+    console.log(message);
+  };
+
+  // Show a disconnected message when the WebSocket is closed
+  mixerSocket.onclose = function(event) {
+    console.log(mixerSocket+" closed");
+  };
+
+  function sendVolumeToMixer(message){
+    //3:::SETD^i.0.mix^0.998
+    var command = "3:::SETD^i."+ message.channel+".mix^"+message.volume;
+    console.log(message);
+  }
+
+  function muteButton(){
+    if ($(this).attr("data-type") == "mixer") {
+      if ($(this).attr("data-state") == "0") {
+        $(this).attr("data-state", "1");
+        var command = "3:::SETD^i."+ $(this).attr("data-id") +".mute^"+1;
+        conf.mixer.mute = 1;
+        console.log(command);
+      } else {
+        $(this).attr("data-state", "0");
+        var command = "3:::SETD^i."+ $(this).attr("data-id") +".mute^"+0;
+        conf.mixer.mute = 0;
+        console.log(command);
+      }
+    }
+    mixerSocket.send(command);
+  }
+
+  function keepAlive() {
+    mixerSocket.send("3:::ALIVE");
+    console.log("Alive");
+  }
+
+  setTimeout(function() {
+    setInterval(function() {
+      keepAlive()
+    }, 15000)
+  }, 3000);
 });
-
-mixerSocket = new WebSocket('ws://10.10.2.1/socket.io/1/websocket/' + sessId);;
-console.log(mixerSocket);
-
-mixerSocket.onerror = function(error) {
-  console.log("WebSocket Error: " + error);
-};
-
-// Show a connected message when the WebSocket is opened
-mixerSocket.onopen = function(event) {
-  console.log(mixerSocket + " opened");
-};
-
-// Handle messages sent by the server
-mixerSocket.onmessage = function(event) {
-  var message = event.data;
-  console.log(message);
-};
-
-// Show a disconnected message when the WebSocket is closed
-mixerSocket.onclose = function(event) {
-  console.log(mixerSocket+" closed");
-};
-
-function sendVolumeToMixer(message){
-  //3:::SETD^i.0.mix^0.998
-  var command = "3:::SETD^i."+ message.channel+".mix^"+message.volume;
-  console.log(message);
-}
-
-function keepAlive() {
-  mixerSocket.send("3:::ALIVE");
-  console.log("Alive");
-}
-
-setTimeout(function() {
-  setInterval(function() {
-    keepAlive()
-  }, 15000)
-}, 3000);
 }
 
 //socket schließen
