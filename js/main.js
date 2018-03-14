@@ -417,7 +417,8 @@ var request = $.ajax({
     sessId = data.substring(0, 20);
   }
 }).done(function() {
-  mixerSocket = new WebSocket('ws://10.10.2.1/socket.io/1/websocket/' + sessId);;
+  mixerSocket = new WebSocket('ws://10.10.2.1/socket.io/1/websocket/' + sessId);
+  //mixerSocket = new WebSocket('ws://10.10.2.1/socket.io/1/websocket/' + sessId);
   console.log(mixerSocket);
 
   mixerSocket.onerror = function(error) {

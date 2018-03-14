@@ -15,8 +15,8 @@ window.onload = function() {
     }
   });
 
-  /*socket = new WebSocket('ws://10.10.2.1/socket.io/1/websocket/' + sessId);*/
-  socket = new WebSocket('wss://mediatrix.darktech.org/wss');
+  socket = new WebSocket('ws://10.10.2.1/socket.io/1/websocket/' + sessId);
+  //socket = new WebSocket('wss://mediatrix.darktech.org/wss');
   console.log(socket);
 
   // Handle any errors that occur
