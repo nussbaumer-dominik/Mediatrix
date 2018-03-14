@@ -119,13 +119,13 @@ window.onload = function() {
     mixerSocket.send("3:::ALIVE");
     console.log("Alive");
   }
-*/
+
 
   setTimeout(function() {
     setInterval(function() {
       keepAlive()
     }, 15000)
-  }, 3000);
+  }, 3000);*/
 
   //Werte der Slider auslesen
   function Slider(slider) {
@@ -160,8 +160,8 @@ window.onload = function() {
           "volume": (slider.get() / 100),
           "channel": slider.target.getAttribute("data-id")
         };
-        sendVolumeToMixer(conf.mixer);
-        send(data);
+        //sendVolumeToMixer(conf.mixer);
+        //send(data);
         return data;
         break
       case "licht":
@@ -317,7 +317,6 @@ window.onload = function() {
 
   function chmod(){
     console.log($(this).is(":checked"));
-
   }
 
   $(".tgl").on("click", chmod)
