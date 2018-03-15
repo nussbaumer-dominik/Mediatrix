@@ -69,12 +69,12 @@ a{
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
+}
 
-  .open{
+.modal-wrapper.open{
     opacity: 1;
     visibility: visible;
     //display: block;
-  }
 }
 
 .modal.open{
