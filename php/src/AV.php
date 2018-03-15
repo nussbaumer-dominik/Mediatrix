@@ -123,8 +123,6 @@ class AV
 
         $this->volumeLevel += $timesSent  * $this->volumeSteps;
 
-        var_dump($r);
-
         return $r;
     }
 
