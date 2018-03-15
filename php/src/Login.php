@@ -73,7 +73,7 @@ class Login
 
                 $stm->bindParam(":id", $username);
 
-                var_dump($stm->execute());
+                $stm->execute();
 
 
 
