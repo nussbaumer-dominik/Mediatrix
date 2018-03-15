@@ -392,7 +392,7 @@ class Application implements MessageComponentInterface
         /*
          * Extended
          */
-        $isExtended = false;
+        $isExtended = null;
 
         $sqlite = new \SQLite3("../sqlite/db.sqlite");
 
