@@ -536,7 +536,7 @@ class Application implements MessageComponentInterface
              * BEAMER:
              * TODO Add freez and blackout
              */
-            $this->beamer = new Beamer($ini['beamer']['source'], $ini['beamer']['power'],array(),array());
+            $this->beamer = new Beamer($ini['beamer']['source'], $ini['beamer']['power'],$ini['beamer']['freeze'],$ini['beamer']['blackout']);
 
 
             /*
