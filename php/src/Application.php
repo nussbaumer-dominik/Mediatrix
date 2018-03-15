@@ -267,11 +267,7 @@ class Application implements MessageComponentInterface
             unset($dmx["noblackout"]);
         }
 
-        var_dump($dmx);
-
         foreach ($dmx as $dev) {
-            echo "TESTING:######################";
-            var_dump($dev['id']);
 
             if (is_array($dev) && !(is_null($this->scheinwerfer[$dev['id']]))) {
                 if(count($dev)-1 < 3 && count($this->scheinwerfer[$dev['id']]->getChannels()) < 3) {
@@ -534,7 +530,6 @@ class Application implements MessageComponentInterface
 
             /*
              * BEAMER:
-             * TODO Add freez and blackout
              */
             $this->beamer = new Beamer($ini['beamer']['source'], $ini['beamer']['power'],$ini['beamer']['freeze'],$ini['beamer']['blackout']);
 
