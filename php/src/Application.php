@@ -276,7 +276,7 @@ class Application implements MessageComponentInterface
             print count($dev);
 
             if (is_array($dev) && !(is_null($this->scheinwerfer[$dev['id']]))) {
-                if(count($dev) < 3 && count($this->scheinwerfer[$dev['id']]->getChannels()) < 3) {
+                if(count($dev)-1 < 3 && count($this->scheinwerfer[$dev['id']]->getChannels()) < 3) {
 
                     if (preg_match('/[0-9]+/', $dev['hue']) && 0 <= $dev['hue'] && $dev['hue'] <= 255) {
 
@@ -290,7 +290,7 @@ class Application implements MessageComponentInterface
                 }elseif (preg_match('/[0-9]+/', $dev['r']) && 0 <= $dev['r'] && $dev['r'] <= 255 &&
                     preg_match('/[0-9]+/', $dev['g']) && 0 <= $dev['g'] && $dev['g'] <= 255 &&
                     preg_match('/[0-9]+/', $dev['b']) && 0 <= $dev['b'] && $dev['b'] <= 255  &&
-                    count($this->scheinwerfer[$dev['id']]->getChannels()) == count($dev)){
+                    count($this->scheinwerfer[$dev['id']]->getChannels()) == count($dev)-1){
 
                     $send = $dev;
                     unset($send['id']);

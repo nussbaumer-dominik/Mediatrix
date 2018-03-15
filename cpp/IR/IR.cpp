@@ -22,7 +22,7 @@ class IR : public Php::Base {
 
         int times = params[1];
 
-        if(times < 5){
+        if(times > 5){
             times = times/3;
         }
 
