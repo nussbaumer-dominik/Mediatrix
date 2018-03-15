@@ -58,7 +58,7 @@ class Application implements MessageComponentInterface
      */
     public function onMessage(ConnectionInterface $from, $msg)
     {
-        echo "Got Massage: {$msg} from: {$from->resourceId}\n";
+        echo "Got Message: {$msg} from: {$from->resourceId}\n";
 
         try {
 
@@ -69,8 +69,6 @@ class Application implements MessageComponentInterface
 
             //decode command json
             $commands = json_decode($msg, true);
-
-            var_dump($commands);
 
 
             //Check JWT
@@ -269,6 +267,7 @@ class Application implements MessageComponentInterface
             unset($dmx["noblackout"]);
         }
 
+        var_dump($dmx);
 
         foreach ($dmx as $dev) {
             echo "TESTING:######################";
