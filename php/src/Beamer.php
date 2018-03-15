@@ -51,8 +51,6 @@ class Beamer
     {
         echo "change Source \n";
 
-        var_dump($this->source);
-
         //get next active Source
         $next = array_pop(array_filter($this->source,function ($el){
             return $el['nextActive'] == true;

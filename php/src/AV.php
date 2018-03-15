@@ -147,14 +147,10 @@ class AV
     {
         echo "change Source \n";
 
-        var_dump($this->sources);
-
         //get next active Source
         $next = array_pop(array_filter($this->sources,function ($el){
             return $el['nextActive'] == true;
         }));
-
-        var_dump($next);
 
         $index = array_search($next,$this->sources);
 
@@ -162,8 +158,6 @@ class AV
         $code = $next['lastSendA'] ? $next['b']:$next['a'];
 
         $this->sources[$index]['lastSendA'] = !$this->sources[$index]['lastSendA'];
-
-        var_dump($code);
 
         //send IR code
         $r = json_decode(str_replace("'",'"',$this->ir->send($code,5)));
@@ -174,7 +168,7 @@ class AV
 
         $index + 1 > count($this->sources)-1 ? $index = 0 : $index++;
 
-        $this->source[$index]['nextActive'] = true;
+        $this->sources[$index]['nextActive'] = true;
 
         //return Result
         return $r;
