@@ -272,9 +272,6 @@ class Application implements MessageComponentInterface
 
         foreach ($dmx as $dev) {
 
-            var_dump($dev);
-            print count($dev);
-
             if (is_array($dev) && !(is_null($this->scheinwerfer[$dev['id']]))) {
                 if(count($dev)-1 < 3 && count($this->scheinwerfer[$dev['id']]->getChannels()) < 3) {
 
@@ -300,7 +297,12 @@ class Application implements MessageComponentInterface
                     if (!$r->success) {
                         array_push($result, $r);
                     }
+                }else{
+                    array_push($result, array('success' => false,'err' => 'Wrong number of channels'));
                 }
+            }else
+            {
+                array_push($result, array('success' => false,'err' => 'Scheinwerfer id not valid'));
             }
         }
 
