@@ -130,6 +130,16 @@ class Application implements MessageComponentInterface
                         $r->success ?: array_push($result, $r);
                     }
 
+                    if (isset($beamerCom['freeze'])) {
+                        $r = $this->beamer->freeze();
+                        $r->success ?: array_push($result, $r);
+                    }
+
+                    if (isset($beamerCom['blackout'])) {
+                        $r = $this->beamer->blackout();
+                        $r->success ?: array_push($result, $r);
+                    }
+
 
                 }
 
