@@ -402,7 +402,7 @@ class Application implements MessageComponentInterface
         $result = $stm->execute();
 
         while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
-            $isExtended = is_bool($res['isextendet'])?$res['isextendet']:false;
+            $isExtended = boolval($res['isextendet']);
         }
 
         $presets = $hasResults? $presets:$this->defaultPresets;
