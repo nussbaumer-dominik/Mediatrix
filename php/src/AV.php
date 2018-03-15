@@ -147,10 +147,14 @@ class AV
     {
         echo "change Source \n";
 
+        var_dump($this->sources);
+
         //get next active Source
         $next = array_pop(array_filter($this->sources,function ($el){
             return $el['nextActive'] == true;
         }));
+
+        var_dump($next);
 
         $index = array_search($next,$this->sources);
 
