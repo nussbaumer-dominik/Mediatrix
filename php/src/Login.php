@@ -73,7 +73,9 @@ class Login
 
                 $stm->bindParam(":id", $username);
 
-                $stm->execute();
+                var_dump($stm->execute());
+
+
 
                 $jwt = JWT::encode($data, $this->key,'HS256');
 
