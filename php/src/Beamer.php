@@ -54,13 +54,11 @@ class Beamer
         var_dump($this->source);
 
         //get next active Source
-        $next = array_flip(array_filter($this->source,function ($el){
+        $next = array_pop(array_filter($this->source,function ($el){
             return $el['nextActive'] == true;
         }));
 
         var_dump($next);
-
-        $next = $next[0];
 
         $index = array_search($next,$this->source);
 
