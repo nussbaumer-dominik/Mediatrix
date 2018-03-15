@@ -58,8 +58,6 @@ class Beamer
             return $el['nextActive'] == true;
         }));
 
-        var_dump($next);
-
         $index = array_search($next,$this->source);
 
         //get code
