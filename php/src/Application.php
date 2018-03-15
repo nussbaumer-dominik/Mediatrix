@@ -271,7 +271,8 @@ class Application implements MessageComponentInterface
 
 
         foreach ($dmx as $dev) {
-            var_dump($dev);
+            echo "TESTING:######################";
+            var_dump($dev['id']);
 
             if (is_array($dev) && !(is_null($this->scheinwerfer[$dev['id']]))) {
                 if(count($dev)-1 < 3 && count($this->scheinwerfer[$dev['id']]->getChannels()) < 3) {
