@@ -15,6 +15,7 @@
   --beamer-icons: #fff;
   --modal-btn: #1E283D;
   --green: #6BBC68;
+  --extendedBtn: #282B2F;
 }
 
 $green: #6BBC68;
@@ -42,7 +43,7 @@ a{
 .page-wrapper{
   width: 100vw;
   height: 100vh;
- + z-index: 2;
+  z-index: 2;
 }
 
 .parent{
@@ -62,19 +63,18 @@ a{
   z-index: 3;
   top: 0; left: 0;
   background: rgba(0,0,0,0.75);
-  //display: none;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-}
 
-.modal-wrapper.open{
-  opacity: 1;
-  visibility: visible;
-  //display: block;
+  .open{
+    opacity: 1;
+    visibility: visible;
+    //display: block;
+  }
 }
 
 .modal.open{
@@ -235,7 +235,7 @@ a{
     background-image: linear-gradient(to right, #4481eb 0%, #04befe 100%);
     cursor: pointer;
 
-    .fa{
+    .fas{
       font-size: 1.6rem;
       position: relative;
       left: 50%;
@@ -280,7 +280,74 @@ a{
       //Positioning
       display: flex;
       flex-direction: row;
-      align-items: center;
+      flex-wrap: wrap;
+
+      .extendedMode{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .tgl {
+        	display: none;
+
+        	&, &:after, &:before, & *, & *:after, & *:before, & + .tgl-btn {
+        		box-sizing: border-box;
+        		&::selection {
+        			background: none;
+        		}
+        	}
+
+        	+ .tgl-btn {
+        		outline: 0;
+        		display: block;
+        		width: 4em;
+        		height: 2em;
+        		position: relative;
+        		cursor: pointer;
+            user-select: none;
+        		&:after,
+            &:before {
+        			position: relative;
+        			display: block;
+        			content: "";
+        			width: 50%;
+        			height: 100%;
+        		}
+
+        		&:after {
+        			left: 0;
+        		}
+
+        		&:before {
+        			display: none;
+        		}
+        	}
+
+        	&:checked + .tgl-btn:after {
+        		left: 50%;
+        	}
+        }
+
+        // themes
+        .tgl-light {
+        	+ .tgl-btn {
+        		background: var(--extendedBtn);
+        		border-radius: 2em;
+        		padding: 2px;
+        		transition: background .2s ease;
+        		&:after {
+        			border-radius: 50%;
+        			background: #fff;
+        			transition: background .2s ease;
+        		}
+        	}
+
+        	&:checked + .tgl-btn {
+        		background: $green;
+        	}
+        }
+      }
 
       .colorOptions{
         width: 100%;
@@ -301,6 +368,7 @@ a{
             flex: 0 0 40px;
             border-radius: 50%;
             height: 40px;
+            cursor: pointer;
 
             -webkit-b-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
             -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
@@ -370,7 +438,7 @@ a{
         text-align: center;
         line-height: calc(40px + .5rem);
 
-        .fa{
+        .fas{
           font-size: 1.6rem;
         }
 
@@ -399,28 +467,34 @@ a{
   display: none;
   width: 100%;
   box-sizing: border-box;
-  height: 100vh;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 20px;
-  padding: 20px;
+  height: 100%;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+  padding: 10px;
 
   .preset{
-    background: white;
     border-radius: 10px;
     border: 4px solid var(--border-color);
     padding: 15px 15px;
+    margin: 10px;
+    background: var(--bg);
     -webkit-b-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
     -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
     box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+    box-sizing: border-box;
     transition: .2s;
+    flex: 1 0 30%;
+    height: 25%;
 
     h2{
       margin-top: 0;
     }
 
     &:hover {
-      transform: scale(1.02, 1.02);
+      transform: translateY(-4px);
+      //transform: scale(1.02, 1.02);
     }
   }
 }
@@ -457,7 +531,7 @@ a{
   box-sizing: border-box;
   padding: 0 7.5px;
   display: none;
-  overflow-x: scroll;
+  overflow-x: auto;
   justify-content: flex-start;
   align-items: flex-start;
 }
@@ -469,7 +543,7 @@ a{
 
   .statusGrid{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 100%;
     grid-column-gap: 18px;
     padding: 18px;
@@ -478,10 +552,21 @@ a{
       background: var(--bg);
       border-radius: 10px;
       border: 4px solid var(--border-color);
-      padding: 50px 15px;
+      padding: 30px 15px;
       -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
       -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
       box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+
+      span:nth-child(1){
+        font-size: .8rem;
+      }
+
+      span:nth-child(2){
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 5px;
+        display: block;
+      }
     }
   }
 }
@@ -490,7 +575,6 @@ a{
   flex: 0 0 500px;
   height: 600px;
   width: 500px;
-  display: none;
   box-sizing: border-box;
   background: var(--bg);
   border: 4px solid var(--border-color);
@@ -509,13 +593,36 @@ a{
   .valueField{
     width: 100%;
     min-width: 60px;
+    margin-top: 15px;
     text-align: center;
   }
 
   .textField{
     font-size: 24px;
-    margin-top: 25px;
+    margin-top: 5px;
     text-align: center;
+  }
+
+  button{
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: 4px solid var(--border-color);
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    border-radius: 50%;
+    transition: all .2s;
+
+    &:hover{
+      background: var(--border-color);
+    }
+
+    &:hover i{
+      color: white;
+    }
   }
 
   .buttons{
@@ -578,14 +685,20 @@ a{
     justify-content: space-between;
   }
 
-  #avSlider1-wrapper{
-    display: flex;
+  #avSliderWrapper:nth-child(1){
     flex-direction: column;
     justify-content: flex-start;
   }
 
-  #mikroSlider1-wrapper{
-    margin-right: 30px;
+  #mikroSliderWrapper, #mikroMasterSlider-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #mikroSliderWrapper:nth-child(1){
+    margin-right: 20px;
   }
 
   #mikroMasterSlider-wrapper{
@@ -603,6 +716,22 @@ a{
       }
     }
 
+    button{
+      border-color: var(--main);
+
+      i{
+        color: var(--main);
+      }
+
+      &:hover{
+        background: var(--main);
+      }
+
+      &:hover i{
+        color: white;
+      }
+    }
+
     .valueField{
       color: var(--main);
     }
@@ -612,11 +741,11 @@ a{
     }
   }
 
-  #lichtSlider1-wrapper, #lichtSlider2-wrapper{
+  #lichtSliderWrapper:nth-child(1), #lichtSliderWrapper:nth-child(2){
     margin-right: 25px;
   }
 
-  #lichtWeissSlider-wrapper{
+  #lichtWeissSliderWrapper{
     margin-left: auto;
   }
 
@@ -627,7 +756,7 @@ a{
 
   .noUi-vertical{
     width: 4px;
-    height: 350px;
+    height: 310px;
   }
 
   .noUi-handle{
@@ -662,8 +791,24 @@ a{
   }
 }
 
-#lichtBox{
+.lichtBox, #avBox{
+  .valueField{
+    width: 100%;
+    min-width: 60px;
+    position: relative;
+    top: 15px;
+    text-align: center;
+  }
 
+  .textField{
+    font-size: 24px;
+    margin-top: 35px;
+    text-align: center;
+  }
+  .noUi-vertical{
+    width: 4px;
+    height: 350px;
+  }
 }
 
 button{
@@ -674,7 +819,7 @@ button{
   display: block;
 }
 
-.grid, .toggleMobileOptions{
+.toggleMobileOptions{
   display: grid;
 }
 
@@ -705,18 +850,8 @@ button{
   transition: transform ease 200ms, -webkit-transform ease 200ms, -moz-transform ease 200ms;
 }
 
-#ok{
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
-  left: 10px;
-  top: 5px;
-  text-decoration: none;
-  position: absolute;
-}
-
-#up i, #down i, #right i, #left i{
-    transform: scale(1.5, 1.5);
+#freeze i{
+    transform: scale(1.3, 1.3);
 }
 
 .menu-open{
@@ -731,13 +866,13 @@ button{
   text-align: left;
 }
 
-.menu-item{
-
-  &:hover{
-    -webkit-transform: scale(1.1, 1.1);
-    -moz-transform: scale(1.1, 1.1);
-        transform: scale(1.1, 1.1);
-  }
+.menu-item:hover{
+  -webkit-transform: translate3d(0, 0, 0) scale(1.1, 1.1);
+  -moz-transform: translate3d(0, 0, 0) scale(1.1, 1.1);
+        transform: translate3d(0, 0, 0) scale(1.1, 1.1);
+  /*-webkit-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+      transform: scale(1.1, 1.1);*/
 }
 
 #src{
@@ -760,7 +895,7 @@ button{
   }
 }
 
-#menu, #up, #right, #down, #left, #ok, #src{
+#blackout, #freeze, #src{
   -webkit-transition-duration: 180ms;
   -moz-transition-duration: 180ms;
     transition-duration: 180ms;
@@ -811,7 +946,7 @@ button{
     transform: translate3d(-120px, 90.99997px, 0);
 }
 
-.menu-open:checked ~ #menu {
+.menu-open:checked ~ #blackout {
   -webkit-transition-duration: 180ms;
   -moz-transition-duration: 180ms;
       transition-duration: 180ms;
@@ -819,46 +954,13 @@ button{
   -moz-transform: translate3d(120px, 90.99997px, 0);
       transform: translate3d(120px, 90.99997px, 0);
 }
-.menu-open:checked ~ #up {
+.menu-open:checked ~ #freeze {
   -webkit-transition-duration: 180ms;
   -moz-transition-duration: 180ms;
       transition-duration: 180ms;
   -webkit-transform: translate3d(0px, 165.99997px, 0);
   -moz-transform: translate3d(0px, 165.99997px, 0);
       transform: translate3d(0px, 165.99997px, 0);
-}
-.menu-open:checked ~ #right {
-  -webkit-transition-duration: 180ms;
-  -moz-transition-duration: 180ms;
-      transition-duration: 180ms;
-  -webkit-transform: translate3d(120px, 280.99997px, 0);
-  -moz-transform: translate3d(120px, 280.99997px, 0);
-      transform: translate3d(120px, 280.99997px, 0);
-}
-.menu-open:checked ~ #down {
-  -webkit-transition-duration: 180ms;
-  -moz-transition-duration: 180ms;
-      transition-duration: 180ms;
-  -webkit-transform: translate3d(0px, 385.99997px, 0);
-  -moz-transform: translate3d(0px, 385.99997px, 0);
-      transform: translate3d(0px, 385.99997px, 0);
-}
-.menu-open:checked ~ #left {
-  -webkit-transition-duration: 180ms;
-  -moz-transition-duration: 180ms;
-      transition-duration: 180ms;
-  -webkit-transform: translate3d(-120px, 280.99997px, 0);
-  -moz-transform: translate3d(-120px, 280.99997px, 0);
-      transform: translate3d(-120px, 280.99997px, 0);
-}
-
-.menu-open:checked ~ #ok {
-  -webkit-transition-duration: 180ms;
-  -moz-transition-duration: 180ms;
-      transition-duration: 180ms;
-  -webkit-transform: translate3d(0px, 280.99997px, 0);
-  -moz-transform: translate3d(0px, 280.99997px, 0);
-      transform: translate3d(0px, 280.99997px, 0);
 }
 
 /* Media Queries */
@@ -911,6 +1013,23 @@ button{
     }
   }
 
+  .modal {
+    form{
+      input[type="text"]{
+        width: 75%;
+      }
+      .formBtns{
+        width: 70%;
+      }
+      input[type="button"], input[type="submit"]{
+        width: 55%
+      }
+      input[type="submit"]{
+        margin-right: 10px;
+      }
+    }
+  }
+
   .flex-container{
     padding: 10px 0px;
   }
@@ -922,21 +1041,27 @@ button{
   }
 
   .presentation{
-    height: 80%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
     padding: 10px;
+    overflow-y: auto;
 
     .preset{
-      background: white;
       border-radius: 10px;
       border: 4px solid var(--border-color);
       padding: 15px 15px;
+      margin: 10px;
       -webkit-b-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
       -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
       box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
       transition: .2s;
+      flex: 1 1 100%;
+      height: 30.5%;
 
       h2{
         margin-top: 0;
@@ -974,7 +1099,7 @@ button{
 
     .textField{
       font-size: 20px;
-      margin-top: 25px;
+      margin-top: 15px;
       width: 100%;
       min-width: 50px;
       text-align: center;
@@ -1035,13 +1160,6 @@ button{
     line-height: 80px;
   }
 
-  #ok{
-    margin-left: 36.5%;
-    margin-top: -10px;
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-  }
 
   .menu-open:checked ~ #src {
     -webkit-transition-duration: 180ms;
@@ -1051,7 +1169,7 @@ button{
     -moz-transform: translate3d(-100px, 60.99997px, 0);
           transform: translate3d(-100px, 60.99997px, 0);
   }
-  .menu-open:checked ~ #menu {
+  .menu-open:checked ~ #blackout {
     -webkit-transition-duration: 180ms;
     -moz-transition-duration: 180ms;
         transition-duration: 180ms;
@@ -1066,38 +1184,5 @@ button{
     -webkit-transform: translate3d(0px, 125.99997px, 0);
     -moz-transform: translate3d(0px, 125.99997px, 0);
         transform: translate3d(0px, 125.99997px, 0);
-  }
-  .menu-open:checked ~ #right {
-    -webkit-transition-duration: 180ms;
-    -moz-transition-duration: 180ms;
-        transition-duration: 180ms;
-    -webkit-transform: translate3d(100px, 210.99997px, 0);
-    -moz-transform: translate3d(100px, 210.99997px, 0);
-        transform: translate3d(100px, 210.99997px, 0);
-  }
-  .menu-open:checked ~ #down {
-    -webkit-transition-duration: 180ms;
-    -moz-transition-duration: 180ms;
-        transition-duration: 180ms;
-    -webkit-transform: translate3d(0px, 295.99997px, 0);
-    -moz-transform: translate3d(0px, 295.99997px, 0);
-        transform: translate3d(0px, 295.99997px, 0);
-  }
-  .menu-open:checked ~ #left {
-    -webkit-transition-duration: 180ms;
-    -moz-transition-duration: 180ms;
-        transition-duration: 180ms;
-    -webkit-transform: translate3d(-100px, 210.99997px, 0);
-    -moz-transform: translate3d(-100px, 210.99997px, 0);
-        transform: translate3d(-100px, 210.99997px, 0);
-  }
-
-  .menu-open:checked ~ #ok {
-    -webkit-transition-duration: 180ms;
-    -moz-transition-duration: 180ms;
-        transition-duration: 180ms;
-    -webkit-transform: translate3d(0px, 210.99997px, 0);
-    -moz-transform: translate3d(0px, 210.99997px, 0);
-        transform: translate3d(0px, 210.99997px, 0);
   }
 }

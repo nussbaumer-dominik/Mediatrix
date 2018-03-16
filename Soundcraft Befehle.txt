@@ -4,6 +4,12 @@ Befehl  3:::SETD^i.0.mute^1 -> 0...index, 1...ein
 	
 	3:::SETD^i.0.mix^0.998... -> Lautstärke verändern, mix...Fader, 0.998 - range von 0 - 1
 
+Line in: 3:::SETD^l.0.mix^0.81
+	 3:::SETD^l.1.mix^0.81
+
+Master Channel: 3:::SETD^m.mix^0.52
+
+
 TODO: herausfinden, wie die session id generiert wird
 
 http://ui-mixer.io/socket.io/1/ --> solved
