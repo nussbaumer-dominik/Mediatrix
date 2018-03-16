@@ -37,10 +37,10 @@ $(function() {
     if(JSON.parse(event.data)["ini"]){
       console.log("das ist der ini-string: "+event.data);
       ini = JSON && JSON.parse(event.data) || $.parseJSON(event.data);
-      liveStatus(ini);
+      liveStatus(ini.ini);
     }else{
       console.log("message: "+event.data);
-      liveStatus(ini);
+      liveStatus(ini.ini);
     }
   };
 
