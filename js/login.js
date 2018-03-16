@@ -50,6 +50,7 @@ window.onload = function() {
     }else if(username && password){
       login(username, password);
       ev.defaultPrevented;
+      ev.preventDefault();
     }
   });
 }
