@@ -120,7 +120,7 @@ class Login
 $l = new Login();
 
 preg_match('/^[A-za-z0-9]+$/',$_POST) or die('{"success":false,"err":"uUsername not valid"}');
-preg_match('/^[A-za-z0-9$/',$_POST) or die('{"success":false,"err":"uUsername not valid"}');
+preg_match('/^[A-za-z0-9]+$/',$_POST) or die('{"success":false,"err":"uUsername not valid"}');
 
 $username = $_POST['username'];
 $passwd = $_POST['password'];
