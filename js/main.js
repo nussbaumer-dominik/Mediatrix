@@ -326,9 +326,9 @@ $(function() {
   }
 
   function liveStatus(){
-    for(let i=0;i<Object.keys(inii.ini.presets).length;i++){
-      console.log(inii.ini.presets[i]);
-      $("<div>").append("<span>"+ inii.ini.presets[i] +"</span");
+    for(let i=0;i<Object.keys(ini.ini.presets).length;i++){
+      console.log(ini.ini.presets[i]);
+      $("<div>").append("<span>"+ ini.ini.presets[i] +"</span");
     }
   }
 
