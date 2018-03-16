@@ -108,6 +108,36 @@ class Application implements MessageComponentInterface
 
                 }
 
+                /*
+                 * Mikrofone
+                 */
+                if(isset($commands['mixer'])) {
+
+                    foreach ($commands['mixer']['mikrofone'] as $key => $val){
+
+                        if(!(is_null($this->mikrofone[$key])) && is_float($val) && $val >= 0 && $val <= 1){
+                            $r = $this->mikrofone[$key]->setVolume($val);
+                            $r['success'] ?: array_push($result, $r);
+                        }else
+                        {
+                            array_push($result, array('success' => false,'err' => 'Scheinwerfer id not valid'));
+                        }
+                    }
+
+                    if(isset($commands['mixer']['master']) && is_float($commands['mixer']['master']) && $commands['mixer']['master'] >= 0 &&
+                        $commands['mixer']['master'] <= 1){
+                        $r = $this->mixer->setMasterVolume($commands['mixer']['master']);
+                        $r['success'] ?: array_push($result, $r);
+                    }
+
+                    if(isset($commands['mixer']['line']) && is_float($commands['mixer']['master']) && $commands['mixer']['master'] >= 0 &&
+                        $commands['mixer']['master'] <= 1){
+                        $r = $this->mixer->setLineVolume($commands['mixer']['line']);
+                        $r['success'] ?: array_push($result, $r);
+                    }
+
+                }
+
 
                 /*
                  * Beamer:
@@ -469,10 +499,10 @@ class Application implements MessageComponentInterface
             )
         );
 
-        $result['dmx'] = array();
+        $result['live']['dmx'] = array();
 
         foreach ($this->scheinwerfer as $scheinw){
-            array_push($result['dmx'],$scheinw->getStatus());
+            array_push($result['live']['dmx'],$scheinw->getStatus());
         }
 
         return $result;
@@ -537,6 +567,22 @@ class Application implements MessageComponentInterface
 
             $this->scheinwerfer = $scheinwerfer;
 
+<<<<<<< HEAD
+=======
+            /*
+             * Mikrofon
+             */
+            $mikrofone = array();
+
+            foreach ($ini['mixer']['mikrofon'] as $key => $mic){
+
+                $mikrofone[$key] =new Mikrofon($this->mixer,$mic['channel']);
+
+            }
+
+            $this->mikrofone = $mikrofone;
+
+>>>>>>> Backend
 
             /*
              * BEAMER:

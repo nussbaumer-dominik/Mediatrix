@@ -34,7 +34,6 @@ window.onload = function() {
         jwt = JSON && JSON.parse(data) || $.parseJSON(data);
         localStorage.setItem("jwt", jwt["jwt"]);
     }).fail(function(data){
-      ev.defaultPrevented;
         console.log("error: "+data);
     });
   }
