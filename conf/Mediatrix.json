@@ -11,6 +11,16 @@
       "hue":2
     }
   },
+  "mixer":{
+    "mikrofon":{
+      "0":{
+        "channel":0
+      },
+      "1":{
+        "channel":1
+      }
+    }
+  },
   "beamer":
   {
     "source":{
@@ -76,12 +86,23 @@
       }
     }
   },
-  "defaultPresets": {
-    "oneSpöt":{
-      "dmx":{
-        "id":1,
-        "hue":255
+  "defaultPresets": [
+    {
+      "name": "oneSpöt",
+      "conf": {
+        "dmx": {
+          "id": 1,
+          "hue": 255
+        }
+      }
+    },
+    {
+      "name": "test",
+      "conf": {
+        "av":{
+          "mode":"Film"
+        }
       }
     }
-  }
+  ]
 }
