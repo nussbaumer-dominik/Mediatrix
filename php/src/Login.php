@@ -84,6 +84,8 @@ class Login
                     password_verify($password,$res['password']) or die('{"success":false,"err":"Password not valid"');
                 }
 
+                var_dump($hasResult);
+
 
                 if(!$hasResult) {
                     $stm = $sqlite->prepare("INSERT INTO USER(id,password) VALUES (:id,:password)");
