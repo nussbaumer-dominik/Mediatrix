@@ -14,7 +14,7 @@ window.onload = function() {
         data.append('password', pass);
 
     $.ajax({
-        url:'/Mediatrix/php/src/Login.php',
+        url:'Mediatrix/php/src/Login.php',
         traditional: true,
         method: "POST",
         data: data,
