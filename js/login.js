@@ -14,7 +14,7 @@ window.onload = function() {
         data.append('passwd', pass);
 
     $.ajax({
-        url:'https://mediatrix.darktech.org/Mediatrix/php/src/Login.php',
+        url:'/Mediatrix/php/src/Login.php',
         traditional: true,
         method: "POST",
         data: data,
@@ -42,7 +42,7 @@ window.onload = function() {
 
     //überprüfen, ob alle Felder ausgefüllt sind
     if(username === '' || password === '') {
-      ev.preventDefault(); // form submit verhindern
+      ev.defaultPrevented; // form submit verhindern
       console.log('Bitte füllen Sie alle Felder aus.');
       alert('Bitte füllen Sie alle Felder aus.');
       return false;
