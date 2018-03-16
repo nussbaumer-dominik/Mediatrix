@@ -37,10 +37,10 @@ $(function() {
     if(JSON.parse(event.data)["ini"]){
       console.log("das ist der ini-string: "+event.data);
       ini = JSON && JSON.parse(event.data) || $.parseJSON(event.data);
-      liveStatus();
+      liveStatus(ini);
     }else{
       console.log("message: "+event.data);
-      liveStatus();
+      liveStatus(ini);
     }
   };
 
@@ -325,10 +325,10 @@ $(function() {
     }
   }
 
-  function liveStatus(){
-    for(let i=0;i<Object.keys(ini.ini.presets).length;i++){
-      console.log(ini.ini.presets[i]);
-      $("<div>").append("<span>"+ ini.ini.presets[i] +"</span");
+  function liveStatus(init){
+    for(let i=0;i<Object.keys(init.ini.presets).length;i++){
+      console.log(init.ini.presets[i]);
+      $("<div>").append("<span>"+ init.ini.presets[i] +"</span");
     }
   }
 
