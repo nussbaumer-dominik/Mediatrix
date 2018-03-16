@@ -572,9 +572,9 @@ class Application implements MessageComponentInterface
              */
             $mikrofone = array();
 
-            foreach ($ini['mixer']['mikrofon'] as $mic){
+            foreach ($ini['mixer']['mikrofon'] as $key => $mic){
 
-                array_push($mikrofone,new Mikrofon($this->mixer,$mic['channel']));
+                $mikrofone[$key] =new Mikrofon($this->mixer,$mic['channel']);
 
             }
 
