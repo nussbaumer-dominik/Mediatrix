@@ -10,8 +10,8 @@ window.onload = function() {
   //Login
   function login(user, pass) {
     var data = new FormData();
-        data.append('user', user);
-        data.append('passwd', pass);
+        data.append('username', user);
+        data.append('password', pass);
 
     $.ajax({
         url:'/Mediatrix/php/src/Login.php',
