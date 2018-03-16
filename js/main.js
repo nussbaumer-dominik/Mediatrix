@@ -325,7 +325,7 @@ $(function() {
     }
   }
 
-  function liveStatus(init){
+  function liveStatus(){
     for(let i=0;i<Object.keys(inii.ini.presets).length;i++){
       console.log(inii.ini.presets[i]);
       $("<div>").append("<span>"+ inii.ini.presets[i] +"</span");
