@@ -1,10 +1,10 @@
-var socket, jwt, ini, sessId;
-window.onload = function() {
+$(function() {
 
   //Variablen
+  var socket, ini, sessId, jwt = localStorage.getItem("jwt");
   var on = false,
       currentConf = {
-        "jwt": "",
+        "jwt": jwt,
         "name": "",
         "conf": {}
       },
@@ -14,7 +14,6 @@ window.onload = function() {
         "mixer": {},
         "beamer": {}
       };
-  jwt = localStorage.getItem("jwt");
 
   socket = new WebSocket('wss://10.0.0.10/wss');
   //socket = new WebSocket("wss://mediatrix.darktech.org/wss");
@@ -200,7 +199,6 @@ window.onload = function() {
   //Werte der Beamer Steuerung auslesen
   function Beamer() {
     var data = {
-      "jwt": jwt,
       "beamer": {}
     };
     //Kontrollieren ob vom Typ Beamer
@@ -317,14 +315,26 @@ window.onload = function() {
     send(conf);
   }
 
+  $("#savePreset").on("click", setPreset);
+
   function getPresets(container){
-    ini.presets;
+    for(let i=0;i<Object.keys(ini.ini.presets).length;i++){
+      console.log(ini.ini.presets[i]);
+    }
   }
 
-  $("#savePreset").on("click", setPreset);
+  function liveStatus(){
+    for(let i=0;i<Object.keys(ini.ini.presets).length;i++){
+      console.log(ini.ini.presets[i]);
+      $("<div>").append("<span>"+ ini.ini.presets[i] +"</span");
+    }
+  }
 
   function chmod(){
     console.log($(this).is(":checked"));
+  }
+
+  $(".tgl").on("click", chmod);
 
   //Login
   function login(user, pass) {
@@ -529,5 +539,4 @@ window.onload = function() {
       });
     });
   }
-}
 }
