@@ -39,6 +39,7 @@ $(function() {
       ini = JSON && JSON.parse(event.data) || $.parseJSON(event.data);
     }else{
       console.log("message: "+event.data);
+      liveStatus();
     }
   };
 
