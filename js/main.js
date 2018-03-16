@@ -30,6 +30,7 @@ $(function() {
       socket.send('{"jwt":"'+jwt+'","ini":1}');
     }
     console.log("socket open: " + socket + " " + event.data);
+    liveStatus();
   };
 
   //wird bei Response des Servers ausgegeben
