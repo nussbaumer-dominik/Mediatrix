@@ -567,8 +567,6 @@ class Application implements MessageComponentInterface
 
             $this->scheinwerfer = $scheinwerfer;
 
-<<<<<<< HEAD
-=======
             /*
              * Mikrofon
              */
@@ -581,8 +579,6 @@ class Application implements MessageComponentInterface
             }
 
             $this->mikrofone = $mikrofone;
-
->>>>>>> Backend
 
             /*
              * BEAMER:
