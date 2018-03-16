@@ -26,12 +26,9 @@ class Application implements MessageComponentInterface
     private $defaultPresets;
     private $registerd;
     private $av;
-    private $mixer;
-    private $mikrofone;
 
-    public function __construct($mixer)
+    public function __construct()
     {
-        $this->mixer = $mixer;
         $this->iniMe();
     }
 
@@ -111,28 +108,6 @@ class Application implements MessageComponentInterface
 
                 }
 
-                /*
-                 * Mikrofone
-                 */
-                if(isset($commands['mixer'])) {
-
-                    foreach ($commands['mixer']['mikrofone'] as $key => $val){
-                        $r = $this->mikrofone[$key]->setVolume($val);
-                        $r['success'] ?: array_push($result, $r);
-                    }
-
-                    if(isset($commands['mixer']['master'])){
-                        $r = $this->mixer->setMasterVolume($commands['mixer']['master']);
-                        $r['success'] ?: array_push($result, $r);
-                    }
-
-                    if(isset($commands['mixer']['line'])){
-                        $r = $this->mixer->setLineVolume($commands['mixer']['line']);
-                        $r['success'] ?: array_push($result, $r);
-                    }
-
-                }
-
 
                 /*
                  * Beamer:
@@ -202,8 +177,9 @@ class Application implements MessageComponentInterface
 
                 /*
                  * No Command recognized
+                 * TODO
                  */
-                if (!(isset($commands["dmx"]) || isset($commands["beamer"]) || isset($commands["av"]) || isset($commands["mixer"]))) {
+                if (!(isset($commands["dmx"]) || isset($commands["beamer"]) || isset($commands["av"]))) {
                     $from->send(json_encode($this->addLiveStatus(array("success" => false, "err" => "Unrecognized Command"))));
                 }
 
@@ -408,7 +384,7 @@ class Application implements MessageComponentInterface
 
             while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
                 $hasResults = true;
-                array_push($presets, array('name' => $res['name'], 'conf' => $res['json']));
+                array_push($presets, $res['json']);
             }
 
         $presets = $hasResults? $presets:$this->defaultPresets;
@@ -457,11 +433,6 @@ class Application implements MessageComponentInterface
 
         }
 
-        /*
-         * Mikrofon
-         */
-        $microfone = array_keys($this->mikrofone);
-
 
         /*
          * BEAMER:
@@ -483,8 +454,7 @@ class Application implements MessageComponentInterface
             "presets" => $presets,
             "dmx" => $dmx,
             "av" => $av,
-            "isExtended" => $isExtended,
-            "mixer" => $microfone
+            "isExtended" => $isExtended
         ));
     }
 
@@ -566,19 +536,6 @@ class Application implements MessageComponentInterface
             }
 
             $this->scheinwerfer = $scheinwerfer;
-
-            /*
-             * Mikrofon
-             */
-            $mikrofone = array();
-
-            foreach ($ini['mixer']['mikrofon'] as $mic){
-
-                array_push($mikrofone,new Mikrofon($this->mixer,$mic['channel']));
-
-            }
-
-            $this->mikrofone = $mikrofone;
 
 
             /*

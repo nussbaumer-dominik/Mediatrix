@@ -11,8 +11,8 @@ class Mixer {
   protected $alive = "3:::ALIVE";
 
   //Konstruktor
-  public function __construct(string $ipAddress) {
-    $this->connectToScui();
+  public function __construct() {
+
   }
 
   //Verbindung mit Mischpult herstellen
@@ -44,15 +44,5 @@ class Mixer {
    */
   public function getVolume(){
 
-  }
-
-  public function setLineVolume($val){
-
-      return array("success" => true, "err" => "");
-  }
-
-  public function setMasterVolume($val){
-
-      return array("success" => true, "err" => "");
   }
 }

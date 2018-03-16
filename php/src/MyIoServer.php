@@ -15,15 +15,15 @@ use React\Socket\Server as Reactor;
 class MyIoServer extends \Ratchet\Server\IoServer
 {
     /**
-     * @param  \Ratchet\MessageComponentInterface $component The application that I/O will call when events are received
-     * @param  int $port The port to server sockets on
-     * @param Mixer $mixer
-     * @param  string $address The address to receive sockets on (0.0.0.0 means receive connections from any)
+     * @param  \Ratchet\MessageComponentInterface $component  The application that I/O will call when events are received
+     * @param  int                                $port       The port to server sockets on
+     * @param  string                             $address    The address to receive sockets on (0.0.0.0 means receive connections from any)
      * @return MyIoServer
      */
-    public static function factory(MessageComponentInterface $component, $port = 80,$address = '0.0.0.0', Mixer $mixer = null) {
+    public static function factory(MessageComponentInterface $component, $port = 80, $address = '0.0.0.0') {
         $loop   = LoopFactory::create();
 
+        $mixer = new Mixer();
         $loop->addPeriodicTimer(10, function() use (&$mixer) {
             $mixer->alive();
         });
