@@ -69,11 +69,28 @@ class Login
 
                 $sqlite = new \SQLite3("../../sqlite/db.sqlite");
 
-                $stm = $sqlite->prepare("INSERT INTO USER(id) VALUES (:id)");
+                $stm = $sqlite->prepare("SELECT password FROM USER WHERE id = :id");
 
                 $stm->bindParam(":id", $username);
 
-                $stm->execute();
+                $result = $stm->execute();
+
+                $hasResult = false;
+
+                while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
+                    $hasResult = true;
+                    password_verify($password,$res['password']) or die('{"success":false,"err":"Password not valid"');
+                }
+
+
+                if(!$hasResult) {
+                    $stm = $sqlite->prepare("INSERT INTO USER(id,passwor) VALUES (:id,:password)");
+
+                    $stm->bindParam(":id", $username);
+                    $stm->bindParam(":passwor", password_hash($password,PASSWORD_DEFAULT));
+
+                    $stm->execute();
+                }
 
 
 
