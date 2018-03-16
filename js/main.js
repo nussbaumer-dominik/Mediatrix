@@ -1,10 +1,10 @@
-var socket, jwt, ini, sessId;
-window.onload = function() {
+$(function() {
 
   //Variablen
+  var socket, ini, sessId, jwt = localStorage.getItem("jwt");
   var on = false,
       currentConf = {
-        "jwt": "",
+        "jwt": jwt,
         "name": "",
         "conf": {}
       },
@@ -14,9 +14,8 @@ window.onload = function() {
         "mixer": {},
         "beamer": {}
       };
-  jwt = localStorage.getItem("jwt");
 
-  socket = new WebSocket('wss://192.168.1.85/wss');
+  socket = new WebSocket('wss://10.0.0.10/wss');
   //socket = new WebSocket("wss://mediatrix.darktech.org/wss");
   //socket = new WebSocket("wss://193.154.93.223/wss");
 
@@ -38,8 +37,10 @@ window.onload = function() {
     if(JSON.parse(event.data)["ini"]){
       console.log("das ist der ini-string: "+event.data);
       ini = JSON && JSON.parse(event.data) || $.parseJSON(event.data);
+      liveStatus();
     }else{
       console.log("message: "+event.data);
+      liveStatus();
     }
   };
 
@@ -50,6 +51,7 @@ window.onload = function() {
 
   //Daten versenden
   function send(data) {
+    data.jwt = jwt;
     socket.send(JSON.stringify(data));
     console.log(JSON.stringify(data));
   }
@@ -127,6 +129,17 @@ window.onload = function() {
     }, 15000)
   }, 3000);*/
 
+
+/*    "mixer": {
+      "0": 1,
+      "1": 0.8
+    }
+  }
+
+  for(var x = 0;x<Object.keys(testJson.mixer);x++){
+    console.log("id: "+testJson.mixer[x]);
+  }*/
+
   //Werte der Slider auslesen
   function Slider(slider) {
     switch (slider.target.getAttribute("data-type")) {
@@ -134,7 +147,6 @@ window.onload = function() {
         console.log("Dieser Slider ist von einem AV-Receiver: " + slider.target
           .getAttribute("data-type"));
         var data = {
-          "jwt": jwt,
           "av": {
             "volume": (slider.get() / 100),
             "channel": slider.target.getAttribute("data-id")
@@ -150,7 +162,6 @@ window.onload = function() {
       case "mixer":
         console.log("Dieser Slider ist von einem Mixer: " + slider.get());
         var data = {
-          "jwt": jwt,
           "mixer": {
             "volume": (slider.get() / 100),
             "channel": slider.target.getAttribute("data-id")
@@ -168,7 +179,6 @@ window.onload = function() {
         console.log("Dieser Slider ist von einem DMX Gerät: " + "Id: " +
           slider.target.getAttribute("data-id") + " " + slider.get());
         var data = {
-          "jwt": jwt,
           "dmx": {
             "scheinwerfer": {
               "id": slider.target.getAttribute("data-id"),
@@ -191,7 +201,6 @@ window.onload = function() {
   //Werte der Beamer Steuerung auslesen
   function Beamer() {
     var data = {
-      "jwt": jwt,
       "beamer": {}
     };
     //Kontrollieren ob vom Typ Beamer
@@ -231,7 +240,6 @@ window.onload = function() {
   //Werte der Modes des AV-Receivers auslesen
   function Buttons() {
     var data = {
-      "jwt": jwt,
       "av": {
         "mode": ""
       }
@@ -303,20 +311,68 @@ window.onload = function() {
   function setPreset() {
     console.log("Preset '"+ $("#presetName").val() +"' speichern");
     var name = $("#presetName").val();
-    currentConf["jwt"] = jwt;
     currentConf["name"] = name;
     currentConf["conf"] = conf;
+    $.snackbar({content: "Das Preset "+ $("#presetName").val() +" wurde erfolgreich erstellt"});
     send(conf);
-  }
-
-  function getPresets(container){
-    //ini.presets;
   }
 
   $("#savePreset").on("click", setPreset);
 
+  function getPresets(container){
+    for(let i=0;i<Object.keys(ini.ini.presets).length;i++){
+      console.log(ini.ini.presets[i]);
+    }
+  }
+
+  function liveStatus(){
+    console.log(ini);
+    buildStatus("Master", ini.live.av.volume, "dB");
+    buildStatus("Helligkeit", ini.live.dmx[0], "");
+  }
+
+  function buildStatus(key, value, unit){
+    var div = $("<div>");
+    div.append("<span>"+ key +"</span><span>"+ value + unit +"</span>");
+    $(".statusGrid").append(div);
+    /*$(".statusGrid").append("<div>")
+    $(".statusGrid").find("div").append("<span>"+ key +"</span><span>"+ value + unit +"</span>");*/
+  }
+
   function chmod(){
     console.log($(this).is(":checked"));
+  }
+
+  $(".tgl").on("click", chmod);
+
+  //Login
+  function login(user, pass) {
+
+    var data = new FormData();
+        data.append('user', user);
+        data.append('passwd', pass);
+
+    $.ajax({
+        url:'/Mediatrix/php/src/Login.php',
+        traditional: true,
+        method: "POST",
+        data: data,
+        contentType: false,
+        processData: false,
+        xhrFields: {
+           withCredentials: true
+        },
+        crossDomain: true
+    }).done(function(data){
+        console.log("success: "+data);
+        jwt = JSON && JSON.parse(data) || $.parseJSON(data);
+        localStorage.setItem("jwt", jwt["jwt"]);
+        if(jwt != null){
+          window.location.href = "dashboard.html";
+        }
+    }).fail(function(data){
+        console.log("error: "+data);
+    });
   }
 
   $(".tgl").on("click", chmod)
@@ -492,4 +548,4 @@ window.onload = function() {
       });
     });
   }
-}
+});

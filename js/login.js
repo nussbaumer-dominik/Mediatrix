@@ -1,6 +1,6 @@
 window.onload = function() {
 
-  var jwt, ini;
+  var jwt;
   //Daten versenden
   function send(data) {
     socket.send(JSON.stringify(data));
@@ -8,10 +8,10 @@ window.onload = function() {
   }
 
   //Login
-  function login(user, pass) {
+  function login(username, password) {
     var data = new FormData();
-        data.append('username', user);
-        data.append('password', pass);
+        data.append('username', username);
+        data.append('password', password);
 
     $.ajax({
         url:'/Mediatrix/php/src/Login.php',
@@ -24,19 +24,18 @@ window.onload = function() {
            withCredentials: true
         },
         crossDomain: true,
-        error: function(event){
-            console.log(event);
+        complete: function(data){
+          if(jwt != null){
+            window.location.href = "dashboard.html";
+          }
         }
     }).done(function(data){
         console.log("success: "+data);
         jwt = JSON && JSON.parse(data) || $.parseJSON(data);
         localStorage.setItem("jwt", jwt["jwt"]);
-        if(jwt != null){
-          window.location.href = "dashboard.html";
-        }
     }).fail(function(data){
-        console.log("error "+data);
-        console.log(data);
+        console.log("error: "+data);
+        ev.defaultPrevented;
     });
   }
 
@@ -46,7 +45,7 @@ window.onload = function() {
 
     //überprüfen, ob alle Felder ausgefüllt sind
     if(username === '' || password === '') {
-      ev.preventDefault(); // form submit verhindern
+      ev.defaultPrevented; // form submit verhindern
       console.log('Bitte füllen Sie alle Felder aus.');
       alert('Bitte füllen Sie alle Felder aus.');
       return false;
