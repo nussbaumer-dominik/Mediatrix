@@ -16,8 +16,8 @@ window.onload = function() {
       };
   jwt = localStorage.getItem("jwt");
 
-  socket = new WebSocket('wss://192.168.1.85/wss');
-  //socket = new WebSocket("wss://mediatrix.darktech.org/wss");
+  //socket = new WebSocket('wss://192.168.1.85/wss');
+  socket = new WebSocket("wss://mediatrix.darktech.org/wss");
   //socket = new WebSocket("wss://193.154.93.223/wss");
 
   //wirft eine Exception
@@ -225,7 +225,6 @@ window.onload = function() {
         console.log("Beamer - Value: " + $(this).attr("data-value"));
         if ($(this).attr("data-value") == "src") {
           data.beamer.source = 1;
-<<<<<<< HEAD
           conf.beamer.source = 1;
         }else if($(this).attr("data-value") == "freeze"){
           data.beamer.freeze = 1;
@@ -233,8 +232,6 @@ window.onload = function() {
         }else if($(this).attr("data-value") == "blackout"){
           data.beamer.blackout = 1;
           conf.beamer.blackout = 1;
-=======
->>>>>>> Backend
         }
         send(data);
       }
@@ -325,12 +322,6 @@ window.onload = function() {
     //ini.presets;
   }
 
-<<<<<<< HEAD
-  $("#savePreset").on("click", setPreset);
-
-  function chmod(){
-    console.log($(this).is(":checked"));
-=======
   //Login
   function login(user, pass) {
 
@@ -359,7 +350,6 @@ window.onload = function() {
     }).fail(function(data){
         console.log("error: "+data);
     });
->>>>>>> Backend
   }
 
   $(".tgl").on("click", chmod)
