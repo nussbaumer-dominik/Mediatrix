@@ -91,7 +91,7 @@ class Login
                     $stm = $sqlite->prepare("INSERT INTO USER(id,password) VALUES (:id,:password)");
 
                     $stm->bindParam(":id", $username);
-                    $stm->bindParam(":passwor", password_hash($password,PASSWORD_DEFAULT));
+                    $stm->bindParam(":password", password_hash($password,PASSWORD_DEFAULT));
 
                     $stm->execute();
                 }
