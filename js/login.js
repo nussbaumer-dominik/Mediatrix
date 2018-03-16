@@ -23,7 +23,10 @@ window.onload = function() {
         xhrFields: {
            withCredentials: true
         },
-        crossDomain: true
+        crossDomain: true,
+        error: function(event){
+            console.log(event);
+        }
     }).done(function(data){
         console.log("success: "+data);
         jwt = JSON && JSON.parse(data) || $.parseJSON(data);
