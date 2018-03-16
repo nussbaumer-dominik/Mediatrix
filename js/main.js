@@ -327,8 +327,13 @@ $(function() {
 
   function liveStatus(){
     console.log(ini);
+    buildStatus("Master", ini.live.av.volume);
+    buildStatus("Helligkeit", ini.live.dmx[0]);
+  }
+
+  function buildStatus(key, value){
     $(".statusGrid").append("<div>")
-    $(".statusGrid").find("div").append("<span>Master</span><span>"+ ini.live.av.volume +"</span>");
+    $(".statusGrid").find("div").append("<span>"+ key +"</span><span>"+ value +"dB</span>");
   }
 
   function chmod(){
