@@ -1,4 +1,4 @@
-var socket, jwt, ini, sessId, testJson;
+var socket, jwt, ini, sessId;
 window.onload = function() {
 
   //Variablen
@@ -129,8 +129,7 @@ window.onload = function() {
   }, 3000);*/
 
 
-  testJson = {
-    "mixer": {
+/*    "mixer": {
       "0": 1,
       "1": 0.8
     }
@@ -138,7 +137,7 @@ window.onload = function() {
 
   for(var x = 0;x<Object.keys(testJson.mixer);x++){
     console.log("id: "+testJson.mixer[x]);
-  }
+  }*/
 
   //Werte der Slider auslesen
   function Slider(slider) {
