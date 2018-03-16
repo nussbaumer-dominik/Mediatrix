@@ -35,6 +35,10 @@ class Mixer {
 
   }
 
+  public function alive(){
+      echo "Alive\n";
+  }
+
   /**
    * @return array
    */

@@ -58,7 +58,7 @@ class Application implements MessageComponentInterface
      */
     public function onMessage(ConnectionInterface $from, $msg)
     {
-        echo "Got Massage: {$msg} from: {$from->resourceId}\n";
+        echo "Got Message: {$msg} from: {$from->resourceId}\n";
 
         try {
 
@@ -69,8 +69,6 @@ class Application implements MessageComponentInterface
 
             //decode command json
             $commands = json_decode($msg, true);
-
-            var_dump($commands);
 
 
             //Check JWT
@@ -129,6 +127,16 @@ class Application implements MessageComponentInterface
 
                     if (isset($beamerCom['source'])) {
                         $r = $this->beamer->changeSource();
+                        $r->success ?: array_push($result, $r);
+                    }
+
+                    if (isset($beamerCom['freeze'])) {
+                        $r = $this->beamer->freeze();
+                        $r->success ?: array_push($result, $r);
+                    }
+
+                    if (isset($beamerCom['blackout'])) {
+                        $r = $this->beamer->blackout();
                         $r->success ?: array_push($result, $r);
                     }
 
@@ -269,14 +277,10 @@ class Application implements MessageComponentInterface
             unset($dmx["noblackout"]);
         }
 
-
         foreach ($dmx as $dev) {
 
-            var_dump($dev);
-            print count($dev);
-
-            if (is_array($dev)) {
-                if(count($dev) < 3) {
+            if (is_array($dev) && !(is_null($this->scheinwerfer[$dev['id']]))) {
+                if(count($dev)-1 < 3 && count($this->scheinwerfer[$dev['id']]->getChannels()) < 3) {
 
                     if (preg_match('/[0-9]+/', $dev['hue']) && 0 <= $dev['hue'] && $dev['hue'] <= 255) {
 
@@ -289,7 +293,8 @@ class Application implements MessageComponentInterface
 
                 }elseif (preg_match('/[0-9]+/', $dev['r']) && 0 <= $dev['r'] && $dev['r'] <= 255 &&
                     preg_match('/[0-9]+/', $dev['g']) && 0 <= $dev['g'] && $dev['g'] <= 255 &&
-                    preg_match('/[0-9]+/', $dev['b']) && 0 <= $dev['b'] && $dev['b'] <= 255){
+                    preg_match('/[0-9]+/', $dev['b']) && 0 <= $dev['b'] && $dev['b'] <= 255  &&
+                    count($this->scheinwerfer[$dev['id']]->getChannels()) == count($dev)-1){
 
                     $send = $dev;
                     unset($send['id']);
@@ -299,7 +304,12 @@ class Application implements MessageComponentInterface
                     if (!$r->success) {
                         array_push($result, $r);
                     }
+                }else{
+                    array_push($result, array('success' => false,'err' => 'Wrong number of channels'));
                 }
+            }else
+            {
+                array_push($result, array('success' => false,'err' => 'Scheinwerfer id not valid'));
             }
         }
 
@@ -388,6 +398,25 @@ class Application implements MessageComponentInterface
             $presets[$key] = $value;
         }
 
+        /*
+         * Extended
+         */
+        $isExtended = null;
+
+        $sqlite = new \SQLite3("../sqlite/db.sqlite");
+
+        $stm = $sqlite->prepare('SELECT isextendet FROM user WHERE id = :id');
+        $stm->bindParam(':id', $usr);
+
+        $result = $stm->execute();
+
+        while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
+            $isExtended = boolval($res['isextendet']);
+        }
+
+        $presets = $hasResults? $presets:$this->defaultPresets;
+
+
 
         /*
          * DMX:
@@ -424,7 +453,8 @@ class Application implements MessageComponentInterface
         return array("ini" => array(
             "presets" => $presets,
             "dmx" => $dmx,
-            "av" => $av
+            "av" => $av,
+            "isExtended" => $isExtended
         ));
     }
 
@@ -452,6 +482,7 @@ class Application implements MessageComponentInterface
     {
 
         try {
+
 
             //open Ini JSON-File
             $ini = file_get_contents($this->FILE, true);
@@ -510,7 +541,7 @@ class Application implements MessageComponentInterface
             /*
              * BEAMER:
              */
-            $this->beamer = new Beamer($ini['beamer']['source'], $ini['beamer']['power']);
+            $this->beamer = new Beamer($ini['beamer']['source'], $ini['beamer']['power'],$ini['beamer']['freeze'],$ini['beamer']['blackout']);
 
 
             /*

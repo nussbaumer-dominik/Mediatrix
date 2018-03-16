@@ -123,8 +123,6 @@ class AV
 
         $this->volumeLevel += $timesSent  * $this->volumeSteps;
 
-        var_dump($r);
-
         return $r;
     }
 
@@ -150,9 +148,9 @@ class AV
         echo "change Source \n";
 
         //get next active Source
-        $next = array_filter($this->sources,function ($el){
+        $next = array_pop(array_filter($this->sources,function ($el){
             return $el['nextActive'] == true;
-        })[0];
+        }));
 
         $index = array_search($next,$this->sources);
 
@@ -170,7 +168,7 @@ class AV
 
         $index + 1 > count($this->sources)-1 ? $index = 0 : $index++;
 
-        $this->source[$index]['nextActive'] = true;
+        $this->sources[$index]['nextActive'] = true;
 
         //return Result
         return $r;

@@ -16,8 +16,8 @@ window.onload = function() {
       };
   jwt = localStorage.getItem("jwt");
 
-  //const socket = new WebSocket('wss://192.168.1.85/wss');
-  socket = new WebSocket("wss://mediatrix.darktech.org/wss");
+  socket = new WebSocket('wss://192.168.1.85/wss');
+  //socket = new WebSocket("wss://mediatrix.darktech.org/wss");
   //socket = new WebSocket("wss://193.154.93.223/wss");
 
   //wirft eine Exception
@@ -225,6 +225,7 @@ window.onload = function() {
         console.log("Beamer - Value: " + $(this).attr("data-value"));
         if ($(this).attr("data-value") == "src") {
           data.beamer.source = 1;
+<<<<<<< HEAD
           conf.beamer.source = 1;
         }else if($(this).attr("data-value") == "freeze"){
           data.beamer.freeze = 1;
@@ -232,6 +233,8 @@ window.onload = function() {
         }else if($(this).attr("data-value") == "blackout"){
           data.beamer.blackout = 1;
           conf.beamer.blackout = 1;
+=======
+>>>>>>> Backend
         }
         send(data);
       }
@@ -322,10 +325,41 @@ window.onload = function() {
     //ini.presets;
   }
 
+<<<<<<< HEAD
   $("#savePreset").on("click", setPreset);
 
   function chmod(){
     console.log($(this).is(":checked"));
+=======
+  //Login
+  function login(user, pass) {
+
+    var data = new FormData();
+        data.append('user', user);
+        data.append('passwd', pass);
+
+    $.ajax({
+        url:'/Mediatrix/php/src/Login.php',
+        traditional: true,
+        method: "POST",
+        data: data,
+        contentType: false,
+        processData: false,
+        xhrFields: {
+           withCredentials: true
+        },
+        crossDomain: true
+    }).done(function(data){
+        console.log("success: "+data);
+        jwt = JSON && JSON.parse(data) || $.parseJSON(data);
+        localStorage.setItem("jwt", jwt["jwt"]);
+        if(jwt != null){
+          window.location.href = "dashboard.html";
+        }
+    }).fail(function(data){
+        console.log("error: "+data);
+    });
+>>>>>>> Backend
   }
 
   $(".tgl").on("click", chmod)

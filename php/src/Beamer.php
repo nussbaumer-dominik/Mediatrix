@@ -14,8 +14,10 @@ class Beamer
     private $source = array();
     private $powerCode = array();
     private $ir;
+    private $freeze = array();
+    private $blackout = array();
 
-    public function __construct(array $source, array $powerCode)
+    public function __construct(array $source, array $powerCode, array $freeze, array $blackout)
     {
         foreach ($source as $k => $s){
             $source[$k]['nextActive'] = false;
@@ -31,6 +33,17 @@ class Beamer
 
         $this->powerCode = $powerCode;
 
+
+        $freeze['lastSendA'] = false;
+
+        $this->freeze = $freeze;
+
+
+        $blackout['lastSendA'] = false;
+
+        $this->blackout = $blackout;
+
+
         $this->ir = new \IR();
     }
 
@@ -39,9 +52,9 @@ class Beamer
         echo "change Source \n";
 
         //get next active Source
-        $next = array_filter($this->source,function ($el){
+        $next = array_pop(array_filter($this->source,function ($el){
             return $el['nextActive'] == true;
-        })[0];
+        }));
 
         $index = array_search($next,$this->source);
 
@@ -86,7 +99,45 @@ class Beamer
     {
         echo "Beamer off\n";
 
-        return $this->on();
+        $erg = $this->on();
+
+        $r = $this->on();
+        if(!$r->success){
+            $erg = $r;
+        }
+
+        return $erg;
+
+    }
+
+    function freeze(){
+        echo "Beamer freeze \n";
+
+        //get Code
+        $code = $this->freeze['lastSendA'] ? $this->freeze['b']:$this->freeze['a'];
+
+        $this->freeze['lastSendA'] = !$this->freeze['lastSendA'];
+
+        //send IR code
+        $r = json_decode(str_replace("'",'"',$this->ir->send($code,5)));
+
+        //return Result
+        return $r;
+    }
+
+    function blackout(){
+        echo "Beamer freeze \n";
+
+        //get Code
+        $code = $this->blackout['lastSendA'] ? $this->blackout['b']:$this->blackout['a'];
+
+        $this->blackout['lastSendA'] = !$this->blackout['lastSendA'];
+
+        //send IR code
+        $r = json_decode(str_replace("'",'"',$this->ir->send($code,5)));
+
+        //return Result
+        return $r;
     }
 
 

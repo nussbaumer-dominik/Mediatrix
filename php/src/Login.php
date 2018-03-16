@@ -75,6 +75,8 @@ class Login
 
                 $stm->execute();
 
+
+
                 $jwt = JWT::encode($data, $this->key,'HS256');
 
                 $unencodedArray = ['jwt' => $jwt];
