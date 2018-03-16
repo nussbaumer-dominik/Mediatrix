@@ -22,7 +22,7 @@ window.onload = function() {
 
   //wirft eine Exception
   socket.onerror = function(error) {
-    console.log("WebSocket Error: " + error);
+    console.log("WebSocket Error: " + error.data);
   };
 
   //wird beim erfolgreichen Öffnen des Sockets ausgegeben
