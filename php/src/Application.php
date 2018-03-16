@@ -117,16 +117,24 @@ class Application implements MessageComponentInterface
                 if(isset($commands['mixer'])) {
 
                     foreach ($commands['mixer']['mikrofone'] as $key => $val){
-                        $r = $this->mikrofone[$key]->setVolume($val);
-                        $r['success'] ?: array_push($result, $r);
+
+                        if(!(is_null($this->mikrofone[$key])) && is_float($val) && $val >= 0 && $val <= 1){
+                            $r = $this->mikrofone[$key]->setVolume($val);
+                            $r['success'] ?: array_push($result, $r);
+                        }else
+                        {
+                            array_push($result, array('success' => false,'err' => 'Scheinwerfer id not valid'));
+                        }
                     }
 
-                    if(isset($commands['mixer']['master'])){
+                    if(isset($commands['mixer']['master']) && is_float($commands['mixer']['master']) && $commands['mixer']['master'] >= 0 &&
+                        $commands['mixer']['master'] <= 1){
                         $r = $this->mixer->setMasterVolume($commands['mixer']['master']);
                         $r['success'] ?: array_push($result, $r);
                     }
 
-                    if(isset($commands['mixer']['line'])){
+                    if(isset($commands['mixer']['line']) && is_float($commands['mixer']['master']) && $commands['mixer']['master'] >= 0 &&
+                        $commands['mixer']['master'] <= 1){
                         $r = $this->mixer->setLineVolume($commands['mixer']['line']);
                         $r['success'] ?: array_push($result, $r);
                     }
