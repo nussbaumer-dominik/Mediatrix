@@ -35,6 +35,7 @@ window.onload = function() {
         localStorage.setItem("jwt", jwt["jwt"]);
     }).fail(function(data){
         console.log("error: "+data);
+        ev.defaultPrevented;
     });
   }
 
