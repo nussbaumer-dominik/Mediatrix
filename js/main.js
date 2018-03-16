@@ -1,4 +1,4 @@
-var socket, jwt, ini, sessId;
+var socket, jwt, ini, sessId, testJson;
 window.onload = function() {
 
   //Variablen
@@ -50,6 +50,7 @@ window.onload = function() {
 
   //Daten versenden
   function send(data) {
+    data.jwt = jwt;
     socket.send(JSON.stringify(data));
     console.log(JSON.stringify(data));
   }
@@ -127,6 +128,18 @@ window.onload = function() {
     }, 15000)
   }, 3000);*/
 
+
+  testJson = {
+    "mixer": {
+      "0": 1,
+      "1": 0.8
+    }
+  }
+
+  for(var x = 0;x<Object.keys(testJson.mixer);x++){
+    console.log("id: "+testJson.mixer[x]);
+  }
+
   //Werte der Slider auslesen
   function Slider(slider) {
     switch (slider.target.getAttribute("data-type")) {
@@ -134,7 +147,6 @@ window.onload = function() {
         console.log("Dieser Slider ist von einem AV-Receiver: " + slider.target
           .getAttribute("data-type"));
         var data = {
-          "jwt": jwt,
           "av": {
             "volume": (slider.get() / 100),
             "channel": slider.target.getAttribute("data-id")
@@ -150,7 +162,6 @@ window.onload = function() {
       case "mixer":
         console.log("Dieser Slider ist von einem Mixer: " + slider.get());
         var data = {
-          "jwt": jwt,
           "mixer": {
             "volume": (slider.get() / 100),
             "channel": slider.target.getAttribute("data-id")
@@ -168,7 +179,6 @@ window.onload = function() {
         console.log("Dieser Slider ist von einem DMX Gerät: " + "Id: " +
           slider.target.getAttribute("data-id") + " " + slider.get());
         var data = {
-          "jwt": jwt,
           "dmx": {
             "scheinwerfer": {
               "id": slider.target.getAttribute("data-id"),
@@ -231,7 +241,6 @@ window.onload = function() {
   //Werte der Modes des AV-Receivers auslesen
   function Buttons() {
     var data = {
-      "jwt": jwt,
       "av": {
         "mode": ""
       }
@@ -303,9 +312,9 @@ window.onload = function() {
   function setPreset() {
     console.log("Preset '"+ $("#presetName").val() +"' speichern");
     var name = $("#presetName").val();
-    currentConf["jwt"] = jwt;
     currentConf["name"] = name;
     currentConf["conf"] = conf;
+    $.snackbar({content: "Das Preset "+ $("#presetName").val() +" wurde erfolgreich erstellt"});
     send(conf);
   }
 
