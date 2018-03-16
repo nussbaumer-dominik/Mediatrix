@@ -329,7 +329,8 @@ $(function() {
     console.log(ini);
     for(let i=0;i<Object.keys(ini.live).length;i++){
       console.log(ini.live);
-      $(".statusGrid").append("<div>").append("<span>Master</span><span>"+ ini.live.av[i] +"</span>");
+      $(".statusGrid").append("<div>")
+      $(".statusGrid").find("div").append("<span>Master</span><span>"+ ini.live.av[i] +"</span>");
     }
   }
 
