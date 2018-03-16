@@ -10,7 +10,7 @@ class Mixer {
 
   //Konstruktor
   public function __construct(string $ipAddress) {
-    $this->connectToScui($ipAddress);
+    //$this->connectToScui($ipAddress);
   }
 
   //Verbindung mit Mischpult herstellen
@@ -43,7 +43,7 @@ class Mixer {
   }
 
   public function setMasterVolume($val) {
-    
+
     return array("success" => true, "err" => "");
   }
 }
