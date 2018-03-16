@@ -332,8 +332,11 @@ $(function() {
   }
 
   function buildStatus(key, value, unit){
-    $(".statusGrid").append("<div>")
-    $(".statusGrid").find("div").append("<span>"+ key +"</span><span>"+ value + unit +"</span>");
+    var div = $("<div>");
+    div.append("<span>"+ key +"</span><span>"+ value + unit +"</span>");
+    $(".statusGrid").append(div);
+    /*$(".statusGrid").append("<div>")
+    $(".statusGrid").find("div").append("<span>"+ key +"</span><span>"+ value + unit +"</span>");*/
   }
 
   function chmod(){
