@@ -84,7 +84,7 @@ class Login
 
 
                 if(!$hasResult) {
-                    $stm = $sqlite->prepare("INSERT INTO USER(id,passwor) VALUES (:id,:password)");
+                    $stm = $sqlite->prepare("INSERT INTO USER(id,password) VALUES (:id,:password)");
 
                     $stm->bindParam(":id", $username);
                     $stm->bindParam(":passwor", password_hash($password,PASSWORD_DEFAULT));
