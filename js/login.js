@@ -23,17 +23,18 @@ window.onload = function() {
         xhrFields: {
            withCredentials: true
         },
-        crossDomain: true
+        crossDomain: true,
+        complete: function(data){
+          if(jwt != null){
+            window.location.href = "dashboard.html";
+          }
+        }
     }).done(function(data){
         console.log("success: "+data);
         jwt = JSON && JSON.parse(data) || $.parseJSON(data);
         localStorage.setItem("jwt", jwt["jwt"]);
     }).fail(function(data){
         console.log("error: "+data);
-    }).complete(function(data){
-      if(jwt != null){
-        window.location.href = "dashboard.html";
-      }
     });
   }
 
