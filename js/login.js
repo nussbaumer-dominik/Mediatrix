@@ -35,7 +35,7 @@ window.onload = function() {
           window.location.href = "dashboard.html";
         }
     }).fail(function(data){
-        console.log("error");
+        console.log("error "+data);
         console.log(data);
     });
   }
@@ -53,7 +53,6 @@ window.onload = function() {
     }else if(username && password){
       login(username, password);
       ev.defaultPrevented;
-      ev.preventDefault();
     }
   });
 }
