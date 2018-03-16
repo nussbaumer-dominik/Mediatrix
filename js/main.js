@@ -30,7 +30,6 @@ $(function() {
       socket.send('{"jwt":"'+jwt+'","ini":1}');
     }
     console.log("socket open: " + socket + " " + event.data);
-    liveStatus();
   };
 
   //wird bei Response des Servers ausgegeben
@@ -38,6 +37,7 @@ $(function() {
     if(JSON.parse(event.data)["ini"]){
       console.log("das ist der ini-string: "+event.data);
       ini = JSON && JSON.parse(event.data) || $.parseJSON(event.data);
+      liveStatus();
     }else{
       console.log("message: "+event.data);
       liveStatus();
