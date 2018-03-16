@@ -69,7 +69,7 @@ class Login
 
                 $sqlite = new \SQLite3("../../sqlite/db.sqlite");
 
-                $stm = $sqlite->prepare("SELECT password FROM USER WHERE id = :id");
+                $stm = $sqlite->prepare("SELECT password FROM user WHERE id = :id");
 
                 $stm->bindParam(":id", $username);
 
