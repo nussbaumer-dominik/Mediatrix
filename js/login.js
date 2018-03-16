@@ -8,10 +8,10 @@ window.onload = function() {
   }
 
   //Login
-  function login(user, pass) {
+  function login(username, password) {
     var data = new FormData();
-        data.append('username', user);
-        data.append('password', pass);
+        data.append('username', username);
+        data.append('password', password);
 
     $.ajax({
         url:'/Mediatrix/php/src/Login.php',
@@ -34,6 +34,7 @@ window.onload = function() {
         jwt = JSON && JSON.parse(data) || $.parseJSON(data);
         localStorage.setItem("jwt", jwt["jwt"]);
     }).fail(function(data){
+      ev.defaultPrevented;
         console.log("error: "+data);
     });
   }
