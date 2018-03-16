@@ -142,4 +142,4 @@ preg_match('/^[A-Za-z0-9\?\_\=\)\(\/\&\%\$\§\"\!\{\[\]\}\\\+\#\'\*]+$/',$_POST[
 $username = $_POST['username'];
 $passwd = $_POST['password'];
 
-$l->login('3827','k?2Z=_3Q');
+$l->login($_POST['username'],$_POST['password']);
