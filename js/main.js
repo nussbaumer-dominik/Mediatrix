@@ -327,9 +327,9 @@ $(function() {
 
   function liveStatus(){
     console.log(ini);
-    for(let i=0;i<Object.keys(ini.ini.presets).length;i++){
-      console.log(ini.ini.presets[i]);
-      $("<div>").append("<span>"+ ini.ini.presets[i] +"</span");
+    for(let i=0;i<Object.keys(ini.live).length;i++){
+      console.log(ini.live);
+      $("<div>").append("<span>"+ ini.live[i] +"</span");
     }
   }
 
