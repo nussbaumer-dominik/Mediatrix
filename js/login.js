@@ -32,7 +32,8 @@ window.onload = function() {
           window.location.href = "dashboard.html";
         }
     }).fail(function(data){
-        console.log("error: "+data.data);
+        console.log("error");
+        console.log(data.data);
     });
   }
 
