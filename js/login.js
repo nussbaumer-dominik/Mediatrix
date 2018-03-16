@@ -24,23 +24,23 @@ window.onload = function() {
            withCredentials: true
         },
         crossDomain: true
-    }).done(data => {
+    }).done(function(data){
         console.log("success: "+data);
         jwt = JSON && JSON.parse(data) || $.parseJSON(data);
         localStorage.setItem("jwt", jwt["jwt"]);
     }).fail(function(data){
         console.log("error: "+data);
-    }).complete(data => {
+    }).complete(function(data){
       if(jwt != null){
         window.location.href = "dashboard.html";
       }
     });
   }
 
-  $('#login').submit(ev => {
+  $('#login').submit(function(ev){
     var username = $("#Benutzername").val(),
         password = $("#Passwort").val();
-        
+
     //überprüfen, ob alle Felder ausgefüllt sind
     if(username === '' || password === '') {
       ev.defaultPrevented; // form submit verhindern
