@@ -16,7 +16,7 @@ $server = new Server(
     "/imap/ssl/novalidate-cert"    // defaults to '/imap/ssl/validate-cert'
 );
 
-$connection is instance of \Ddeboer\Imap\Connection
+$connection is instance of \Ddeboer\Imap\Connection;
 //$connection = $server->authenticate('mediatrix@scharwitzl.com', 'ep4M@HTL3r17');
 
 

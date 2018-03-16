@@ -1,6 +1,6 @@
 window.onload = function() {
 
-  var jwt, ini;
+  var jwt;
   //Daten versenden
   function send(data) {
     socket.send(JSON.stringify(data));

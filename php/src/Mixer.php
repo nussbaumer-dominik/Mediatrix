@@ -1,9 +1,7 @@
 <?php
-
 namespace Mediatrix;
-
-
 class Mixer {
+
   //Variablen
   protected $session_id;
   protected $mixer;
@@ -11,23 +9,23 @@ class Mixer {
   protected $alive = "3:::ALIVE";
 
   //Konstruktor
-  public function __construct() {
-
+  public function __construct(string $ipAddress) {
+    $this->connectToScui($ipAddress);
   }
 
   //Verbindung mit Mischpult herstellen
-  public function connectToScui() {
-
+  public function connectToScui($ipAddress) {
+    // iwas mit cURL()
   }
 
   //Befehl an das Mischpult senden
   public function send($command) {
-
+    //Ratchet/Pawl für WebSocket
   }
 
   //Mute Befehl erstellen
   public function mute($mute, $channel) {
-
+    $command . "";
   }
 
   //Lautstärke regeln
@@ -35,14 +33,17 @@ class Mixer {
 
   }
 
-  public function alive(){
+  public function alive() {
       echo "Alive\n";
   }
 
-  /**
-   * @return array
-   */
-  public function getVolume(){
+  public function setLineVolume($val) {
 
+      return array("success" => true, "err" => "");
+  }
+
+  public function setMasterVolume($val) {
+    
+    return array("success" => true, "err" => "");
   }
 }

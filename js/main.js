@@ -16,13 +16,13 @@ window.onload = function() {
       };
   jwt = localStorage.getItem("jwt");
 
-  socket = new WebSocket('wss://192.168.1.85/wss');
+  socket = new WebSocket('wss://10.0.0.10/wss');
   //socket = new WebSocket("wss://mediatrix.darktech.org/wss");
   //socket = new WebSocket("wss://193.154.93.223/wss");
 
   //wirft eine Exception
   socket.onerror = function(error) {
-    console.log("WebSocket Error: " + error.data);
+    console.log("WebSocket Error: " + error);
   };
 
   //wird beim erfolgreichen Öffnen des Sockets ausgegeben
@@ -318,7 +318,7 @@ window.onload = function() {
   }
 
   function getPresets(container){
-    //ini.presets;
+    ini.presets;
   }
 
   $("#savePreset").on("click", setPreset);
