@@ -33,7 +33,7 @@ window.onload = function() {
         }
     }).fail(function(data){
         console.log("error");
-        console.log(data.data);
+        console.log(data);
     });
   }
 
