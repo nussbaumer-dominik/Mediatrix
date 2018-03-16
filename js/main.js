@@ -327,13 +327,13 @@ $(function() {
 
   function liveStatus(){
     console.log(ini);
-    buildStatus("Master", ini.live.av.volume);
-    buildStatus("Helligkeit", ini.live.dmx[0]);
+    buildStatus("Master", ini.live.av.volume, "dB");
+    buildStatus("Helligkeit", ini.live.dmx[0], "");
   }
 
-  function buildStatus(key, value){
+  function buildStatus(key, value, unit){
     $(".statusGrid").append("<div>")
-    $(".statusGrid").find("div").append("<span>"+ key +"</span><span>"+ value +"dB</span>");
+    $(".statusGrid").find("div").append("<span>"+ key +"</span><span>"+ value + unit +"</span>");
   }
 
   function chmod(){
