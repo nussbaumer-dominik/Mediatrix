@@ -15,22 +15,47 @@ class Mixer {
 
   //Verbindung mit Mischpult herstellen
   public function connectToScui($ipAddress) {
-    // iwas mit cURL()
+    $req = curl_init();
+    curl_setopt($req, CURLOPT_HEADER, 0);
+    curl_setopt($req, CURLOPT_VERBOSE, 1);
+    //curl_setopt($req, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($req, CURLOPT_SSL_VERIFYPEER, 0);
+    curl_setopt($req, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($req, CURLOPT_FAILONERROR, 0);
+    // curl_setopt($req, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
+    curl_setopt($req, CURLOPT_USERPWD, "$username:$password");
+    curl_setopt($req, CURLOPT_URL, $ipAddress . "/socket.io");
+
+    $return = curl_exec($req);
+
+    curl_close ($req);
+    var_dump($return);
   }
 
   //Befehl an das Mischpult senden
   public function send($command) {
-    //Ratchet/Pawl für WebSocket
+    \Ratchet\Client\connect("ws://"+ $ipAddress)->then(function($conn) {
+        $conn->on("Got message", function($msg) use ($conn) {
+            echo "Erhalten: {$msg}\n";
+            $conn->close();
+        });
+
+        $conn->send($command);
+    }, function ($e) {
+        echo "Verbindung fehlgeschlagen: {$e->getMessage()}\n";
+    });
   }
 
   //Mute Befehl erstellen
-  public function mute($mute, $channel) {
-    $command . "";
+  public function mute($mute, $reqannel) {
+    $command = $command . $reqannel . "mute" . $mute;
+    send($command);
   }
 
   //Lautstärke regeln
-  public function mix($val, $channel) {
-
+  public function mix($val, $reqannel) {
+    $command = $command . $reqannel . "mix^" . $val;
+    send($command);
   }
 
   public function alive() {

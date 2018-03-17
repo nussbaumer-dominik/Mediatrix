@@ -325,6 +325,12 @@ $(function() {
     }
   }
 
+  function selectPreset(){
+    $(this).attr("data-preset");
+  }
+
+  $(".preset").on("click", selectPreset);
+
   function liveStatus(){
     console.log(ini);
     buildStatus("Master", ini.live.av.volume, "dB");
@@ -335,8 +341,6 @@ $(function() {
     var div = $("<div>");
     div.append("<span>"+ key +"</span><span>"+ value + unit +"</span>");
     $(".statusGrid").append(div);
-    /*$(".statusGrid").append("<div>")
-    $(".statusGrid").find("div").append("<span>"+ key +"</span><span>"+ value + unit +"</span>");*/
   }
 
   function chmod(){
