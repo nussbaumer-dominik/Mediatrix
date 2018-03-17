@@ -377,7 +377,7 @@ $(function() {
     buildStatus("Helligkeit", ini.live.dmx[0], "");
     console.log($("#avSlider1") + " " + $("#avSlider1").noUiSlider + " " + document.getElementById("#avSlider1"));
 
-    setSlider("#avSlider1", ini.live.av.volume);
+    setSlider("avSlider1", ini.live.av.volume);
   }
 
   function buildStatus(key, value, unit){
