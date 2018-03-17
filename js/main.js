@@ -203,14 +203,14 @@ $(function() {
           "dmx": {
             "scheinwerfer": {
               "id": slider.target.getAttribute("data-id"),
-              tmpcol: slider.get(),
+              [slider.target.getAttribute("data-col")]: slider.get(),
             }
           }
         };
         conf.dmx = {
           "scheinwerfer": {
             "id": slider.target.getAttribute("data-id"),
-            tmpcol: slider.get(),
+            [tmpcol]: slider.get(),
           }
         };
         send(data);
