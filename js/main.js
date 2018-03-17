@@ -366,6 +366,7 @@ $(function() {
 
   function selectPreset(){
     console.log($(this).attr("data-preset"));
+    console.log(presets);
   }
 
   $(".preset").on("click", selectPreset);
