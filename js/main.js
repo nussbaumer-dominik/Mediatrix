@@ -370,7 +370,7 @@ $(function() {
       console.log(presets[i].name);
       console.log(presets[i].conf);
       for(let j=0;i<Object.keys(presets[i].conf).length;j++){
-        console.log(presets[i].conf[j]);
+        console.log(j);
       }
     }
 
