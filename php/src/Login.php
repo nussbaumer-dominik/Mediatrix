@@ -79,7 +79,7 @@ class Login
 
                 while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
                     $hasResult = true;
-                    password_verify($password,$res['password']) or die('{"success":false,"err":"Password not valid"');
+                    password_verify($password,$res['password']) or die('{"success":false,"err":"Wrong Password"}');
                 }
 
                 $result->finalize();
