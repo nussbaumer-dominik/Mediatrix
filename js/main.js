@@ -369,7 +369,30 @@ $(function() {
     for(let i=0;i<Object.keys(presets).length;i++){
       console.log(presets[i].name);
       console.log(presets[i].conf);
+      for(let j=0;i<Object.keys(presets[i].conf).length;j++){
+        console.log(presets[i].conf[j]);
+      }
     }
+
+    /*<div class="preset" data-preset="HDMI + Ein Mikrofon">
+      <h2>HDMI + Ein Mikrofon</h2>
+      <div>
+        <i class="fas fa-lightbulb"></i>
+        <h3>0</h3>
+      </div>
+      <div>
+        <i class="fas fa-video"></i>
+        <h3>HDMI</h3>
+      </div>
+      <div>
+        <i class="fas fa-volume-up"></i>
+        <h3>Praesentation</h3>
+      </div>
+      <div>
+        <i class="fas fa-microphone"></i>
+        <h3>1</h3>
+      </div>
+    </div>*/
   }
 
   function selectPreset(){
