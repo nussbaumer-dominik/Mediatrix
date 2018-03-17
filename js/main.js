@@ -380,10 +380,8 @@ $(function() {
   $(".preset").on("click", selectPreset);
 
   function liveStatus(){
-    console.log(ini);
     buildStatus("Master", ini.live.av.volume, "dB");
     buildStatus("Helligkeit", ini.live.dmx[0], "");
-    console.log($("#avSlider1") + " " + $("#avSlider1").noUiSlider + " " + document.getElementById("#avSlider1"));
   }
 
   function updateSliders(){
@@ -432,9 +430,6 @@ $(function() {
         console.log("error: "+data);
     });
   }
-
-  $(".tgl").on("click", chmod)
-
   var isMobile = ('ontouchstart' in document.documentElement && navigator.userAgent
     .match(/Mobi/));
 
