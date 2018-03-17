@@ -369,9 +369,9 @@ $(function() {
     for(let i=0;i<Object.keys(presets).length;i++){
       console.log(presets[i].name);
       console.log(presets[i].conf);
-      for(let j=0;i<Object.keys(presets[i].conf).length;j++){
+      /*for(let j=0;i<Object.keys(presets[i].conf).length;j++){
         console.log(j);
-      }
+      }*/
     }
 
     /*<div class="preset" data-preset="HDMI + Ein Mikrofon">
