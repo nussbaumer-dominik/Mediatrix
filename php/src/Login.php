@@ -84,6 +84,8 @@ class Login
 
                 $result->finalize();
 
+                $stm->close();
+
                 if(!$hasResult) {
                     $password = password_hash($password,PASSWORD_DEFAULT);
 
@@ -97,7 +99,7 @@ class Login
                     $stm->close();
                 }
 
-
+                $sqlite->close();
 
                 $jwt = JWT::encode($data, $this->key,'HS256');
 
