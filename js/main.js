@@ -40,7 +40,6 @@ $(function() {
       liveStatus();
     }else{
       console.log("message: "+event.data);
-      liveStatus();
     }
   };
 
