@@ -352,7 +352,7 @@ $(function() {
     buildStatus("Master", ini.live.av.volume, "dB");
     buildStatus("Helligkeit", ini.live.dmx[0], "");
 
-    document.querySelector("#avSlider1").noUiSlider.set(ini.live.av.volume);
+    document.querySelectorAll("#avSlider1").noUiSlider.set(ini.live.av.volume);
   }
 
   function buildStatus(key, value, unit){
