@@ -388,6 +388,7 @@ $(function() {
 
   function updateSliders(){
     setSlider("avSlider1", ini.live.av.volume);
+    document.getElementById("avSlider1Value").innerHTML = ini.live.av.volume;
   }
 
   function buildStatus(key, value, unit){
