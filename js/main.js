@@ -15,7 +15,7 @@ $(function() {
         "beamer": {}
       };
 
-  socket = new WebSocket('wss://10.0.0.10/wss');
+  socket = new WebSocket('wss://mediatrix.darktech.org/wss');
   //socket = new WebSocket("wss://mediatrix.darktech.org/wss");
   //socket = new WebSocket("wss://193.154.93.223/wss");
 
