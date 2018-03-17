@@ -372,37 +372,27 @@ $(function() {
       /*for(let j=0;i<Object.keys(presets[i].conf).length;j++){
         console.log(j);
       }*/
+      var numberOfLights = 0;
+      for(let k=0;k<Object.keys(presets[i].conf.dmx).length;k++){
+        if(presets[i].conf.dmx){
+          numberOfLights++;
+        }
+      }
       var div = $("<div/>", {
         class: "preset",
       }).attr("data-preset", i);
       div.append("<h2>" + presets[i].name + "</h2>")
       if(presets[i].conf.dmx){
-        div.append("<div> <i class='fas fa-lightbulb'> </i> <h3>" + Object.keys(presets[i].conf.dmx).length + "</h3> </div>");
+        div.append("<div> <i class='fas fa-lightbulb'> </i> <h3>" + numberOfLights + "</h3> </div>");
       }else if(presets[i].av){
-        div.append("<div> <i class='fas fa-video'> </i> <h3>" + presets[i].conf.av.mode + "</h3> </div>");
+        div.append("<div> <i class='fas fa-volume-up'> </i> <h3>" + presets[i].conf.av.mode + "</h3> </div>");
+      }else if(presets[i].beamer){
+        div.append("<div> <i class='fas fa-video'> </i> <h3>" + presets[i].conf.beamer + "</h3> </div>");
+      }else if(presets[i].mixer){
+        div.append("<div> <i class='fas fa-microphone'> </i> <h3>" + presets[i].conf.mixer + "</h3> </div>");
       }
       $(".presentation").append(div);
     }
-
-    /*<div class="preset" data-preset="HDMI + Ein Mikrofon">
-      <h2>HDMI + Ein Mikrofon</h2>
-      <div>
-        <i class="fas fa-lightbulb"></i>
-        <h3>0</h3>
-      </div>
-      <div>
-        <i class="fas fa-video"></i>
-        <h3>HDMI</h3>
-      </div>
-      <div>
-        <i class="fas fa-volume-up"></i>
-        <h3>Praesentation</h3>
-      </div>
-      <div>
-        <i class="fas fa-microphone"></i>
-        <h3>1</h3>
-      </div>
-    </div>*/
   }
 
   function selectPreset(){
