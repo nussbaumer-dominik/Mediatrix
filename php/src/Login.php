@@ -82,7 +82,7 @@ class Login
                     password_verify($password,$res['password']) or die('{"success":false,"err":"Password not valid"');
                 }
 
-                $stm->close();
+                $result->finalize();
 
                 if(!$hasResult) {
                     $password = password_hash($password,PASSWORD_DEFAULT);
