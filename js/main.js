@@ -198,7 +198,6 @@ $(function() {
       case "rgbw":
       console.log("Dieser Slider ist von einem DMX Gerät: " + "Id: " +
         slider.target.getAttribute("data-id") + " " + slider.get());
-        let tmpCol = slider.target.getAttribute("data-col");
         var data = {
           "dmx": {
             "scheinwerfer": {
@@ -210,7 +209,7 @@ $(function() {
         conf.dmx = {
           "scheinwerfer": {
             "id": slider.target.getAttribute("data-id"),
-            [tmpcol]: slider.get(),
+            [slider.target.getAttribute("data-col")]: slider.get(),
           }
         };
         send(data);
