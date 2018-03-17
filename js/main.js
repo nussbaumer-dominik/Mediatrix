@@ -483,7 +483,7 @@ $(function() {
       case "5":
         console.log("Präsentationsmodus einblenden");
         //hide all boxes
-        $(container).empty(".flex-container");
+        $(".flex-container").empty();
         toggleFlexContainer(0);
         togglePresMode(0);
         toggleStatus(0);
