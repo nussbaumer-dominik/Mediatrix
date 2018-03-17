@@ -367,8 +367,7 @@ $(function() {
 
   function getPresets(){
     for(let i=0;i<Object.keys(presets).length;i++){
-      console.log(presets[i].name);
-      console.log(presets[i].conf);
+      console.log(presets[i].name + " conf:" + presets[i].conf);
       /*for(let j=0;i<Object.keys(presets[i].conf).length;j++){
         console.log(j);
       }*/
