@@ -15,7 +15,7 @@ $(function() {
         "beamer": {}
       };
 
-  socket = new WebSocket('wss://10.0.0.10/wss');
+  socket = new WebSocket('wss://10.0.0.117/wss');
   //socket = new WebSocket("wss://mediatrix.darktech.org/wss");
   //socket = new WebSocket("wss://193.154.93.223/wss");
 
@@ -171,7 +171,7 @@ $(function() {
           "channel": slider.target.getAttribute("data-id")
         };
         //sendVolumeToMixer(conf.mixer);
-        //send(data);
+        send(data);
         return data;
         break
       case "licht":
@@ -196,6 +196,24 @@ $(function() {
         break
     }
   };
+
+  function muteButton(){
+    if ($(this).attr("data-type") == "mixer") {
+      if ($(this).attr("data-state") == "0") {
+        $(this).attr("data-state", "1");
+        conf.mixer.mute = 1;
+        console.log(conf.mixer);
+      } else {
+        $(this).attr("data-state", "0");
+        //var command = "3:::SETD^i."+ $(this).attr("data-id") +".mute^"+0;
+        conf.mixer.mute = 0;
+        console.log(conf.mixer);
+      }
+    }
+    send(conf.mixer);
+  }
+
+  $(".mute").on("click", muteButton);
 
   //Werte der Beamer Steuerung auslesen
   function Beamer() {
