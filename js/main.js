@@ -351,6 +351,7 @@ $(function() {
     console.log(ini);
     buildStatus("Master", ini.live.av.volume, "dB");
     buildStatus("Helligkeit", ini.live.dmx[0], "");
+    console.log($("#avSlider1") + " " + $("#avSlider1").noUiSlider + " " + document.querySelector("#avSlider1"));
 
     $("#avSlider1").noUiSlider.set(ini.live.av.volume);
   }
