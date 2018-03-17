@@ -1,7 +1,7 @@
 $(function() {
 
   //Variablen
-  var socket, ini, sessId, jwt = localStorage.getItem("jwt");
+  var socket, ini, sessId, presets, jwt = localStorage.getItem("jwt");
   var on = false,
       currentConf = {
         "jwt": jwt,
@@ -36,7 +36,7 @@ $(function() {
     if(JSON.parse(event.data)["ini"]){
       console.log("das ist der ini-string: "+event.data);
       ini = JSON && JSON.parse(event.data) || $.parseJSON(event.data);
-      var presets = ini.ini.presets;
+      presets = ini.ini.presets;
       liveStatus();
       getPresets();
     }else{
