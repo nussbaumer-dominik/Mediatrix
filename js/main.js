@@ -377,7 +377,7 @@ $(function() {
       }).attr("data-preset", i);
       div.append("<h2>" + presets[i].name + "</h2>")
       if(presets[i].conf.dmx){
-        div.append("<div> <i class='fas fa-lightbulb'> </i> <h3>" + Obejct.keys(presets[i].conf.dmx).length + "</h3> </div>");
+        div.append("<div> <i class='fas fa-lightbulb'> </i> <h3>" + Object.keys(presets[i].conf.dmx).length + "</h3> </div>");
       }else if(presets[i].av){
         div.append("<div> <i class='fas fa-video'> </i> <h3>" + presets[i].conf.av.mode + "</h3> </div>");
       }
