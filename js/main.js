@@ -377,7 +377,7 @@ $(function() {
     buildStatus("Helligkeit", ini.live.dmx[0], "");
     console.log($("#avSlider1") + " " + $("#avSlider1").noUiSlider + " " + document.getElementById("#avSlider1"));
 
-    setSlider(".avBox", ini.live.av.volume);
+    setSlider("#avSlider1", ini.live.av.volume);
   }
 
   function buildStatus(key, value, unit){
@@ -559,11 +559,9 @@ $(function() {
     }
   }
 
-  function setSlider(container, val){
-    var sliders = $(container).find(".slider");
-    sliders.each(function(slider){
-      this.noUiSlider.set(val);
-    });
+  function setSlider(id, val){
+    var slider = document.getElementById(id);
+    slider.noUiSlider.set(val);
   }
 
   //Slider initialisieren, je nach dem, welche gerade im Markup eingeblendet sind
