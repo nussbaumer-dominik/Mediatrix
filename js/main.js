@@ -219,19 +219,26 @@ $(function() {
   };
 
   function muteButton(){
-    if ($(this).attr("data-type") == "mixer") {
-      if ($(this).attr("data-state") == "0") {
-        $(this).attr("data-state", "1");
+    var $this = $(this);
+    if ($this.attr("data-type") == "mixer") {
+      if ($this.attr("data-state") == "0") {
+        $this.attr("data-state", "1");
+        var data ={
+          "id": $this.attr("data-id"),
+          "mute": 1
+        }
         conf.mixer.mute = 1;
-        console.log(conf.mixer);
       } else {
-        $(this).attr("data-state", "0");
+        $this.attr("data-state", "0");
         //var command = "3:::SETD^i."+ $(this).attr("data-id") +".mute^"+0;
+        var data ={
+          "id": $this.attr("data-id"),
+          "mute": 0
+        }
         conf.mixer.mute = 0;
-        console.log(conf.mixer);
       }
     }
-    send(conf.mixer);
+    send(data);
   }
 
   $(".mute").on("click", muteButton);
@@ -318,6 +325,7 @@ $(function() {
       Slider(this);
       document.getElementById("avSlider1Value").innerHTML = values[handle];
     });
+    updateSliders();
     return true;
   }
 
@@ -376,7 +384,9 @@ $(function() {
     buildStatus("Master", ini.live.av.volume, "dB");
     buildStatus("Helligkeit", ini.live.dmx[0], "");
     console.log($("#avSlider1") + " " + $("#avSlider1").noUiSlider + " " + document.getElementById("#avSlider1"));
+  }
 
+  function updateSliders(){
     setSlider("avSlider1", ini.live.av.volume);
   }
 
