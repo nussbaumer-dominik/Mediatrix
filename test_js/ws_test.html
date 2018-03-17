@@ -36,7 +36,7 @@
         var data = new FormData();
         data.append('jwt', jwt);
         data.append('data', '{"dmx":{"scheinwerfer1":{"id":0,"hue":255}}}');
-        data.append('data', 'test');
+        data.append('name', 'test');
 
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", function(){console.log(this.responseText)});
@@ -59,7 +59,7 @@
         var data = new FormData();
         data.append('jwt', jwt);
         data.append('data', '{"dmx":{"scheinwerfer1":{"id":0,"hue":255}}}');
-        data.append('data', 'test1');
+        data.append('name', 'test1');
 
 
         var oReq = new XMLHttpRequest();
