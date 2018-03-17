@@ -36,7 +36,9 @@ $(function() {
     if(JSON.parse(event.data)["ini"]){
       console.log("das ist der ini-string: "+event.data);
       ini = JSON && JSON.parse(event.data) || $.parseJSON(event.data);
+      var presets = ini.ini.presets;
       liveStatus();
+      getPresets();
     }else{
       console.log("message: "+event.data);
     }
@@ -173,7 +175,7 @@ $(function() {
         send(data);
         return data;
         break
-      case "licht":
+      case "hue":
         console.log("Dieser Slider ist von einem DMX Gerät: " + "Id: " +
           slider.target.getAttribute("data-id") + " " + slider.get());
         var data = {
@@ -193,6 +195,27 @@ $(function() {
         send(data);
         return data;
         break
+      case "rgbw":
+      console.log("Dieser Slider ist von einem DMX Gerät: " + "Id: " +
+        slider.target.getAttribute("data-id") + " " + slider.get());
+        let tmpCol = slider.target.getAttribute("data-col");
+        var data = {
+          "dmx": {
+            "scheinwerfer": {
+              "id": slider.target.getAttribute("data-id"),
+              tmpcol: slider.get(),
+            }
+          }
+        };
+        conf.dmx = {
+          "scheinwerfer": {
+            "id": slider.target.getAttribute("data-id"),
+            tmpcol: slider.get(),
+          }
+        };
+        send(data);
+        return data;
+        break;
     }
   };
 
@@ -335,9 +358,10 @@ $(function() {
 
   $("#savePreset").on("click", setPreset);
 
-  function getPresets(container){
-    for(let i=0;i<Object.keys(ini.ini.presets).length;i++){
-      console.log(ini.ini.presets[i]);
+  function getPresets(){
+    for(let i=0;i<Object.keys(presets).length;i++){
+      console.log(presets[i].name);
+      console.log(presets[i].conf);
     }
   }
 
@@ -351,7 +375,7 @@ $(function() {
     console.log(ini);
     buildStatus("Master", ini.live.av.volume, "dB");
     buildStatus("Helligkeit", ini.live.dmx[0], "");
-    console.log($("#avSlider1") + " " + $("#avSlider1").noUiSlider + " " + document.querySelector("#avSlider1"));
+    console.log($("#avSlider1") + " " + $("#avSlider1").noUiSlider + " " + document.getElementById("#avSlider1"));
 
     $("#avSlider1").noUiSlider.set(ini.live.av.volume);
   }
