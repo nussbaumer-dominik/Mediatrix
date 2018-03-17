@@ -372,6 +372,16 @@ $(function() {
       /*for(let j=0;i<Object.keys(presets[i].conf).length;j++){
         console.log(j);
       }*/
+      var div = $("<div/>", {
+        class: "preset",
+      }).attr("data-preset", i);
+      div.append("<h2>" + presets[i].name + "</h2>")
+      if(presets[i].conf.dmx){
+        div.append("<div> <i class='fas fa-lightbulb'> </i> <h3>" + Obejct.keys(presets[i].conf.dmx).length + "</h3> </div>");
+      }else if(presets[i].av){
+        div.append("<div> <i class='fas fa-video'> </i> <h3>" + presets[i].conf.av.mode + "</h3> </div>");
+      }
+      $(".presentation").append(div);
     }
 
     /*<div class="preset" data-preset="HDMI + Ein Mikrofon">
