@@ -377,7 +377,7 @@ $(function() {
     buildStatus("Helligkeit", ini.live.dmx[0], "");
     console.log($("#avSlider1") + " " + $("#avSlider1").noUiSlider + " " + document.getElementById("#avSlider1"));
 
-    $("#avSlider1").noUiSlider.set(ini.live.av.volume);
+    setSlider(".avBox", ini.live.av.volume);
   }
 
   function buildStatus(key, value, unit){
@@ -483,7 +483,7 @@ $(function() {
       case "5":
         console.log("Präsentationsmodus einblenden");
         //hide all boxes
-        removeChildren(".flex-container");
+        $(container).empty(".flex-container");
         toggleFlexContainer(0);
         togglePresMode(0);
         toggleStatus(0);
@@ -559,12 +559,11 @@ $(function() {
     }
   }
 
-  function removeChildren(container){
-    $(container).empty();
-  }
-
-  function initDMX(){
-
+  function setSlider(container, val){
+    var sliders = $(container).find(".slider");
+    sliders.each(function(slider){
+      this.noUiSlider.set(val);
+    });
   }
 
   //Slider initialisieren, je nach dem, welche gerade im Markup eingeblendet sind
