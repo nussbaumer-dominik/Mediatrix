@@ -17,7 +17,6 @@ $(function() {
 
   socket = new WebSocket('wss://10.0.0.117/wss');
   //socket = new WebSocket("wss://mediatrix.darktech.org/wss");
-  //socket = new WebSocket("wss://193.154.93.223/wss");
 
   //wirft eine Exception
   socket.onerror = function(error) {
@@ -343,7 +342,7 @@ $(function() {
   }
 
   function selectPreset(){
-    $(this).attr("data-preset");
+    console.log($(this).attr("data-preset"));
   }
 
   $(".preset").on("click", selectPreset);
@@ -352,6 +351,8 @@ $(function() {
     console.log(ini);
     buildStatus("Master", ini.live.av.volume, "dB");
     buildStatus("Helligkeit", ini.live.dmx[0], "");
+
+    document.querySelector("#avSlider1").noUiSlider.set(ini.live.av.volume);
   }
 
   function buildStatus(key, value, unit){
