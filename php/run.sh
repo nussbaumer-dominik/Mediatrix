@@ -36,6 +36,8 @@ olad -f
 
 printf "\n#####check DB:#####\n"
 sudo php src/createDB.php
+sudo chown www-data ../sqlite -R
+
 
 printf "\n#####Run Server:#####\n"
 sudo -u www-data php src/websocket.php
