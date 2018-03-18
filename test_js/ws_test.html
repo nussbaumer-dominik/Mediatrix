@@ -35,7 +35,8 @@
     document.getElementById('savePreset').addEventListener('click',function (event){
         var data = new FormData();
         data.append('jwt', jwt);
-        data.append('data', '{"test":1}');
+        data.append('data', '{"dmx":{"scheinwerfer1":{"id":0,"hue":255}}}');
+        data.append('name', 'test');
 
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", function(){console.log(this.responseText)});
@@ -57,8 +58,10 @@
     document.getElementById('updatePreset').addEventListener('click',function (event){
         var data = new FormData();
         data.append('jwt', jwt);
-        data.append('data', '{"test":2}');
-        data.append('id', '1');
+        data.append('data', '{"dmx":{"scheinwerfer1":{"id":0,"hue":255}}}');
+        data.append('name', 'test1');
+        data.append('id', 1);
+
 
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", function(){console.log(this.responseText)});
