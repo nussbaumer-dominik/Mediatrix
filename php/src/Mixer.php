@@ -23,7 +23,7 @@ class Mixer {
     curl_setopt($req, CURLOPT_AUTOREFERER, TRUE);
     $result = curl_exec($req);
 
-    $session_id = substr($result);
+    $session_id = substr($result, 0, 20);
 
     echo $result;
     curl_close ($req);
