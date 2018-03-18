@@ -1,7 +1,7 @@
 # Mediatrix
 
 WS command structure (JSON):
-```JSON
+```JSON 
 {
 "jwt":"ilsdugfilsagufisgf",
 "dmx":
@@ -32,7 +32,7 @@ WS command structure (JSON):
  "av":
   {
        "mode":1/2/3/4,
-       "source":1/0,
+       "source":1/0
        "volume":255
   }
 }
