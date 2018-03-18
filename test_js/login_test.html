@@ -21,10 +21,14 @@
     }
 
     document.getElementById("btn").addEventListener('click', function(){
+        var data = new FormData();
+        data.append('username', '3827');
+        data.append('password', 'k?2Z=_3Q');
+
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", reqListener);
         oReq.open("POST", "../php/src/Login.php");
-        oReq.send();
+        oReq.send(data);
     });
 
 </script>

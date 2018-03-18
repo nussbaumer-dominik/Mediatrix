@@ -26,9 +26,11 @@ class Application implements MessageComponentInterface
     private $defaultPresets;
     private $registerd;
     private $av;
+    protected $mixer;
 
-    public function __construct()
+    public function __construct($mixer)
     {
+        $this->mixer = $mixer;
         $this->iniMe();
     }
 

@@ -19,8 +19,8 @@ class Mikrofon
         return array("success" => true, "err" => "");
         $this->mixer::mix($value);
     }
-    function mute(){
+    function mute($muted){
         return array("success" => true, "err" => "");
-        $this->mixer::mute();
+        $this->mixer::mute($muted);
     }
 }

@@ -16,4 +16,4 @@ preg_match('/^[0-9A-Za-z_-]+$/', $_POST['name']) or die('{"success":false,"err",
 json_decode($_POST['data']);
 json_last_error() == JSON_ERROR_NONE or die('{"success":false,"err":"json not valid"}');
 
-Preset::create($_POST['name'],$_POST['data'],$_POST['jwt']);
+echo Preset::create($_POST['name'],$_POST['data'],$_POST['jwt']);

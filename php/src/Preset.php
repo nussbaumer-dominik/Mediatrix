@@ -32,6 +32,8 @@ class Preset
             $stm->execute();
         }
 
+        return '{"success":true,"err:""}';
+
 
     }
 
@@ -50,6 +52,8 @@ class Preset
 
         $stm->execute();
 
+        return '{"success":true,"err:""}';
+
     }
 
     static function delete($id, $jwt)
@@ -65,6 +69,8 @@ class Preset
         $stm->bindParam(':userId', $userId);
 
         $stm->execute();
+
+        return '{"success":true,"err:""}';
 
     }
 

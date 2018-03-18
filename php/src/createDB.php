@@ -10,6 +10,7 @@ $sqlite = new \SQLite3("../sqlite/db.sqlite");
 
 $sqlite->exec('create table if not exists user(
 	id string primary key,
+	password string not null,
     isextendet BOOLEAN DEFAULT 0
 );');
 
