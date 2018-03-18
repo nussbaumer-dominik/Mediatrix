@@ -7,6 +7,7 @@ class Mixer {
   protected $mixer;
   protected $command = "3:::SETD^i.";
   protected $alive = "3:::ALIVE";
+  protected $conn;
 
   //Konstruktor
   public function __construct(string $ipAddress) {
@@ -27,25 +28,24 @@ class Mixer {
 
     echo $result;
     curl_close ($req);
+
+      try {
+          \Ratchet\Client\connect("ws://"+ $ipAddress . "socket.io/1/websocket" . $session_id)->then(function($conn) {
+              $this->conn = $conn;
+
+          }, function ($e) {
+              echo "Verbindung fehlgeschlagen: {$e->getMessage()}\n";
+          });
+      }catch (Exception $ex){
+          return array("success" => false, "err" => $ex);
+      }
+
+      $this->conn->send("TSEST");
   }
 
   //Befehl an das Mischpult senden
   public function send($command) {
-    try {
-      \Ratchet\Client\connect("ws://"+ $ipAddress . "socket.io/1/websocket" . $session_id)->then(function($conn) {
-          $conn->on("Got message", function($msg) use ($conn) {
-              echo "Erhalten: {$msg}\n";
-              $conn->close();
-          });
 
-          $conn->send($command);
-          return array("success" => true, "err" => "");
-      }, function ($e) {
-          echo "Verbindung fehlgeschlagen: {$e->getMessage()}\n";
-      });
-    }catch (Exception $ex){
-      return array("success" => false, "err" => $ex);
-    }
   }
 
   //Mute Befehl erstellen
