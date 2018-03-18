@@ -15,7 +15,6 @@ $(function() {
       };
 
   socket = new WebSocket('wss://10.0.0.121/wss');
-  //socket = new WebSocket("wss://mediatrix.darktech.org/wss");
 
   //wirft eine Exception
   socket.onerror = function(error) {
@@ -373,18 +372,13 @@ $(function() {
       /*for(let j=0;i<Object.keys(presets[i].conf).length;j++){
         console.log(j);
       }*/
-      var numberOfLights = 0;
-      for(let k=0;k<Object.keys(presets[i].conf.dmx).length;k++){
-        if(presets[i].conf.dmx){
-          numberOfLights++;
-        }
-      }
+
       var div = $("<div/>", {
         class: "preset",
       }).attr("data-preset", i);
       div.append("<h2>" + presets[i].name + "</h2>")
       if(presets[i].conf.dmx){
-        div.append("<div> <i class='fas fa-lightbulb'> </i> <h3>" + numberOfLights + "</h3> </div>");
+        div.append("<div> <i class='fas fa-lightbulb'> </i> <h3>" + Object.keys(presets[i].conf.dmx).length + "</h3> </div>");
       }else if(presets[i].av){
         div.append("<div> <i class='fas fa-volume-up'> </i> <h3>" + presets[i].conf.av.mode + "</h3> </div>");
       }else if(presets[i].beamer){
@@ -397,8 +391,9 @@ $(function() {
   }
 
   function selectPreset(){
-    console.log($(this).attr("data-preset"));
+    console.log(typeof $(this).attr("data-preset"));
     console.log(presets);
+    send(presets[parseInt($(this).attr("data-preset"))]);
   }
 
   $(".preset").on("click", selectPreset);
