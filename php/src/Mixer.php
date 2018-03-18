@@ -51,29 +51,29 @@ class Mixer {
   //Mute Befehl erstellen
   public function mute($mute, $channel) {
     $command = $command . $channel . "mute" . $mute;
-    send($command);
+    $this->send($command);
   }
 
   //Lautstärke regeln
   public function mix($val, $channel) {
     $command = $command . $channel . "mix^" . $val;
-    send($command);
+    $this->send($command);
   }
 
   public function alive() {
-      echo "Alive\n";
-      send($alive);
+    echo "Alive\n";
+    $this->send($alive);
   }
 
   public function setLineVolume($val) {
     $commandl = "3:::SETD^l.0.mix^" . $val;
     $commandr = "3:::SETD^l.1.mix^" . $val;
-    send($commandl);
-    send($commandr);
+    $this->send($commandl);
+    $this->send($commandr);
   }
 
   public function setMasterVolume($val) {
     $command = "3:::SETD^m.mix^" . $val;
-    send($command);
+    $this->send($command);
   }
 }
