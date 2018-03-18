@@ -40,24 +40,19 @@ class Mixer {
           return array("success" => false, "err" => $ex);
       }
 
-      $this->conn->send("TSEST");
-  }
-
-  //Befehl an das Mischpult senden
-  public function send($command) {
-
+      $this->conn->send("TEST");
   }
 
   //Mute Befehl erstellen
   public function mute($mute, $channel) {
     $command = $command . $channel . "mute" . $mute;
-    $this->send($command);
+    $this->conn->send($command);
   }
 
   //Lautstärke regeln
   public function mix($val, $channel) {
     $command = $command . $channel . "mix^" . $val;
-    $this->send($command);
+    $this->conn->send($command);
   }
 
   public function alive() {
@@ -68,12 +63,12 @@ class Mixer {
   public function setLineVolume($val) {
     $commandl = "3:::SETD^l.0.mix^" . $val;
     $commandr = "3:::SETD^l.1.mix^" . $val;
-    $this->send($commandl);
-    $this->send($commandr);
+    $this->conn->send($commandl);
+    $this->conn->send($commandr);
   }
 
   public function setMasterVolume($val) {
     $command = "3:::SETD^m.mix^" . $val;
-    $this->send($command);
+    $this->conn->send($command);
   }
 }
