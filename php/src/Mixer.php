@@ -15,57 +15,62 @@ class Mixer {
 
   //Verbindung mit Mischpult herstellen
   public function connectToScui($ipAddress) {
-    $req = curl_init();
-    curl_setopt($req, CURLOPT_HEADER, 0);
-    curl_setopt($req, CURLOPT_VERBOSE, 1);
-    curl_setopt($req, CURLOPT_SSL_VERIFYPEER, 0);
-    curl_setopt($req, CURLOPT_SSL_VERIFYHOST, 0);
-    curl_setopt($req, CURLOPT_FAILONERROR, 0);
-    curl_setopt($req, CURLOPT_URL, $ipAddress . "/socket.io");
+    $req = curl_init($ipAddress . "/socket.io");
+    curl_setopt($req, CURLOPT_RETURNTRANSFER, TRUE);
+    curl_setopt($req, CURLOPT_FOLLOWLOCATION, TRUE);
+    curl_setopt($req, CURLOPT_AUTOREFERER, TRUE);
+    $result = curl_exec($req);
 
-    $return = curl_exec($req);
+    echo $result;
 
     curl_close ($req);
-    var_dump($return);
   }
 
   //Befehl an das Mischpult senden
   public function send($command) {
-    \Ratchet\Client\connect("ws://"+ $ipAddress)->then(function($conn) {
-        $conn->on("Got message", function($msg) use ($conn) {
-            echo "Erhalten: {$msg}\n";
-            $conn->close();
-        });
+    try {
+      \Ratchet\Client\connect("ws://"+ $ipAddress)->then(function($conn) {
+          $conn->on("Got message", function($msg) use ($conn) {
+              echo "Erhalten: {$msg}\n";
+              $conn->close();
+          });
 
-        $conn->send($command);
-    }, function ($e) {
-        echo "Verbindung fehlgeschlagen: {$e->getMessage()}\n";
-    });
+          $conn->send($command);
+          return array("success" => true, "err" => "");
+      }, function ($e) {
+          echo "Verbindung fehlgeschlagen: {$e->getMessage()}\n";
+      });
+    }catch {
+      return array("success" => false, "err" => "");
+    }
   }
 
   //Mute Befehl erstellen
-  public function mute($mute, $reqannel) {
-    $command = $command . $reqannel . "mute" . $mute;
+  public function mute($mute, $channel) {
+    $command = $command . $channel . "mute" . $mute;
     send($command);
   }
 
   //Lautstärke regeln
-  public function mix($val, $reqannel) {
-    $command = $command . $reqannel . "mix^" . $val;
+  public function mix($val, $channel) {
+    $command = $command . $channel . "mix^" . $val;
     send($command);
   }
 
   public function alive() {
       echo "Alive\n";
+      send($alive);
   }
 
   public function setLineVolume($val) {
-
-      return array("success" => true, "err" => "");
+    var $commandl = "3:::SETD^l.0.mix^" . $val;
+    var $commandr = "3:::SETD^l.1.mix^" . $val;
+    send($commandl);
+    send($commandr);
   }
 
   public function setMasterVolume($val) {
-
-    return array("success" => true, "err" => "");
+    var $command = "3:::SETD^m.mix^" . $val;
+    send($command);
   }
 }
