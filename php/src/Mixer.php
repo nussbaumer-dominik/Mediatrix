@@ -22,7 +22,6 @@ class Mixer {
     $result = curl_exec($req);
 
     echo $result;
-
     curl_close ($req);
   }
 
@@ -40,8 +39,8 @@ class Mixer {
       }, function ($e) {
           echo "Verbindung fehlgeschlagen: {$e->getMessage()}\n";
       });
-    }catch {
-      return array("success" => false, "err" => "");
+    }catch (Exception $ex){
+      return array("success" => false, "err" => $ex);
     }
   }
 
