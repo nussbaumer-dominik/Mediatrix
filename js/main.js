@@ -420,34 +420,6 @@ $(function() {
 
   $(".tgl").on("click", chmod);
 
-  //Login
-  function login(user, pass) {
-
-    var data = new FormData();
-        data.append('user', user);
-        data.append('passwd', pass);
-
-    $.ajax({
-        url:'/Mediatrix/php/src/Login.php',
-        traditional: true,
-        method: "POST",
-        data: data,
-        contentType: false,
-        processData: false,
-        xhrFields: {
-           withCredentials: true
-        },
-        crossDomain: true
-    }).done(function(data){
-        console.log("success: "+data);
-        jwt = JSON && JSON.parse(data) || $.parseJSON(data);
-        localStorage.setItem("jwt", jwt["jwt"]);
-        if(jwt != null){
-          window.location.href = "dashboard.html";
-        }
-    }).fail(function(data){
-        console.log("error: "+data);
-    });
   }
   var isMobile = ('ontouchstart' in document.documentElement && navigator.userAgent
     .match(/Mobi/));
