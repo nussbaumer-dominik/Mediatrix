@@ -23,6 +23,8 @@ class Mixer {
     curl_setopt($req, CURLOPT_AUTOREFERER, TRUE);
     $result = curl_exec($req);
 
+    $session_id = substr($result);
+
     echo $result;
     curl_close ($req);
   }
@@ -30,7 +32,7 @@ class Mixer {
   //Befehl an das Mischpult senden
   public function send($command) {
     try {
-      \Ratchet\Client\connect("ws://"+ $ipAddress)->then(function($conn) {
+      \Ratchet\Client\connect("ws://"+ $ipAddress . "socket.io/1/websocket" . $session_id)->then(function($conn) {
           $conn->on("Got message", function($msg) use ($conn) {
               echo "Erhalten: {$msg}\n";
               $conn->close();
