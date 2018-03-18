@@ -4,7 +4,6 @@ $(function() {
   var socket, ini, sessId, presets, jwt = localStorage.getItem("jwt");
   var on = false,
       currentConf = {
-        "jwt": jwt,
         "name": "",
         "conf": {}
       },
@@ -28,25 +27,27 @@ $(function() {
     if(jwt != null){
       socket.send('{"jwt":"'+jwt+'","ini":1}');
     }
-    console.log("socket open: " + socket + " " + event.data);
+    console.log("socket open: " + socket + " " + event);
   };
 
   //wird bei Response des Servers ausgegeben
   socket.onmessage = function(event) {
     if(JSON.parse(event.data)["ini"]){
-      console.log("das ist der ini-string: "+event.data);
+      console.log("das ist der ini-string: "+ event.data);
       ini = JSON && JSON.parse(event.data) || $.parseJSON(event.data);
       presets = ini.ini.presets;
       liveStatus();
       getPresets();
     }else{
-      console.log("message: "+event.data);
+      console.log("message: "+ event);
+      $(".statusGrid").empty();
+      liveStatus();
     }
   };
 
   //wird ausgegeben, wenn die Verbindung gekappt wurde
   socket.onclose = function(event) {
-    console.log("socket closed: " + socket + " " + event.data);
+    console.log("socket closed: " + socket + " " + event);
   };
 
   //Daten versenden

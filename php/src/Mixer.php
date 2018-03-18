@@ -10,7 +10,7 @@ class Mixer {
 
   //Konstruktor
   public function __construct(string $ipAddress) {
-    //$this->connectToScui($ipAddress);
+    $this->connectToScui($ipAddress);
   }
 
   //Verbindung mit Mischpult herstellen
@@ -18,12 +18,9 @@ class Mixer {
     $req = curl_init();
     curl_setopt($req, CURLOPT_HEADER, 0);
     curl_setopt($req, CURLOPT_VERBOSE, 1);
-    //curl_setopt($req, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($req, CURLOPT_SSL_VERIFYPEER, 0);
     curl_setopt($req, CURLOPT_SSL_VERIFYHOST, 0);
     curl_setopt($req, CURLOPT_FAILONERROR, 0);
-    // curl_setopt($req, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
-    curl_setopt($req, CURLOPT_USERPWD, "$username:$password");
     curl_setopt($req, CURLOPT_URL, $ipAddress . "/socket.io");
 
     $return = curl_exec($req);
