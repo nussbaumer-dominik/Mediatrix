@@ -62,14 +62,14 @@ class Mixer {
   }
 
   public function setLineVolume($val) {
-    var $commandl = "3:::SETD^l.0.mix^" . $val;
-    var $commandr = "3:::SETD^l.1.mix^" . $val;
+    $commandl = "3:::SETD^l.0.mix^" . $val;
+    $commandr = "3:::SETD^l.1.mix^" . $val;
     send($commandl);
     send($commandr);
   }
 
   public function setMasterVolume($val) {
-    var $command = "3:::SETD^m.mix^" . $val;
+    $command = "3:::SETD^m.mix^" . $val;
     send($command);
   }
 }
