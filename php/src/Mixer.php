@@ -16,7 +16,7 @@ class Mixer {
 
   //Verbindung mit Mischpult herstellen
   public function connectToScui($ipAddress) {
-    $url = $ipAddress . "/socket.io";
+    /*$url = $ipAddress . "/socket.io";
     $req = curl_init();
     curl_setopt($req, CURLOPT_URL, $this->$url);
     curl_setopt($req, CURLOPT_RETURNTRANSFER, TRUE);
@@ -40,35 +40,35 @@ class Mixer {
           return array("success" => false, "err" => $ex);
       }
 
-      $this->conn->send("TEST");
+      $this->conn->send("TEST");*/
   }
 
   //Mute Befehl erstellen
   public function mute($mute, $channel) {
     $command = $command . $channel . "mute" . $mute;
-    $this->conn->send($command);
+    //$this->conn->send($command);
   }
 
   //Lautstärke regeln
   public function mix($val, $channel) {
     $command = $command . $channel . "mix^" . $val;
-    $this->conn->send($command);
+    //$this->conn->send($command);
   }
 
   public function alive() {
     echo "Alive\n";
-    $this->send($alive);
+    //$this->send($alive);
   }
 
   public function setLineVolume($val) {
     $commandl = "3:::SETD^l.0.mix^" . $val;
     $commandr = "3:::SETD^l.1.mix^" . $val;
-    $this->conn->send($commandl);
-    $this->conn->send($commandr);
+    //$this->conn->send($commandl);
+    //$this->conn->send($commandr);
   }
 
   public function setMasterVolume($val) {
     $command = "3:::SETD^m.mix^" . $val;
-    $this->conn->send($command);
+    //$this->conn->send($command);
   }
 }
