@@ -420,7 +420,6 @@ $(function() {
 
     $(".tgl").on("click", chmod);
 
-}
 var isMobile = ('ontouchstart' in document.documentElement && navigator.userAgent
     .match(/Mobi/));
 
