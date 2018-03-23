@@ -583,7 +583,7 @@ class Application implements MessageComponentInterface
             /*
              * BEAMER:
              */
-            $this->beamer = new Beamer($ini['beamer']['source'], $ini['beamer']['power'],$ini['beamer']['freeze'],$ini['beamer']['blackout']);
+            $this->beamer = new Beamer($ini['beamer']['source'], $ini['beamer']['power'],$ini['beamer']['freeze'],$ini['beamer']['blackout'],$ini['beamer']['gpio']);
 
 
             /*
