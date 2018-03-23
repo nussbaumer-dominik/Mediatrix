@@ -203,6 +203,8 @@ class AV
 
         echo "AV on \n";
 
+        var_dump($this->powerCodes);
+
         //get Code
         $code = $this->powerCodes['lastSendA'] ? $this->powerCodes['b']:$this->powerCodes['a'];
 
