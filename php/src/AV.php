@@ -20,6 +20,8 @@ class AV
     private $presets;
     private $ir;
     private $sources;
+    private $gpio;
+    private $powerCodes;
 
     /**
      * AV constructor.
@@ -27,7 +29,7 @@ class AV
      * @param array $volumeCodes
      * @param array $presets
      */
-    function __construct(array $source, array $volumeCodes, array $presets, int $volumeSteps, int $maxVolume, int $minVolume)
+    function __construct(array $source, array $volumeCodes, array $presets, int $volumeSteps, int $maxVolume, int $minVolume, int $gpio, array $powerCodes)
     {
 
         $this->ir = new \IR();
@@ -73,7 +75,14 @@ class AV
         $this->setVolumeLevel($minVolume + ($maxVolume-$minVolume)/2);
 
 
+        $powerCodes['lastSendA'] = false;
 
+        $this->powerCodes = $powerCodes;
+
+
+        $this->gpio = $gpio;
+
+        exec('gpio -g mode '.$gpio.' in');
 
     }
 
@@ -91,6 +100,10 @@ class AV
      */
     public function setVolumeLevel($volumeLevel)
     {
+
+        if(!$this->isOn()){
+            $this->on();
+        }
 
         echo "change AV-Volume\n";
 
@@ -133,6 +146,10 @@ class AV
     public function setPreset($preset)
     {
 
+        if(!$this->isOn()){
+            $this->on();
+        }
+
         //get Code
         $code = $this->presets[$preset]['lastSendA'] ? $this->presets[$preset]['b']:$this->presets[$preset]['a'];
 
@@ -145,6 +162,10 @@ class AV
 
     function changeSource()
     {
+        if(!$this->isOn()){
+            $this->on();
+        }
+
         echo "change Source \n";
 
         //get next active Source
@@ -172,6 +193,41 @@ class AV
 
         //return Result
         return $r;
+    }
+
+    function on()
+    {
+        if($this->isOn()){
+            array("success"=>true,"err"=>"");
+        }
+
+        echo "AV on \n";
+
+        //get Code
+        $code = $this->powerCodes['lastSendA'] ? $this->powerCodes['b']:$this->powerCodes['a'];
+
+        $this->powerCodes['lastSendA'] = !$this->powerCodes['lastSendA'];
+
+        //send IR code
+        $r = json_decode(str_replace("'",'"',$this->ir->send($code,5)));
+
+        //return Result
+        return $r;
+
+    }
+
+    function off()
+    {
+        if(!$this->isOn()){
+            return array("success"=>true,"err"=>"");
+        }
+
+        echo "AV off\n";
+
+        $erg = $this->on();
+
+        return $erg;
+
     }
 
     /**
@@ -205,4 +261,10 @@ class AV
     {
         return "test";
     }
+
+    function isOn(){
+
+        return exec('gpio -g read '.$this->gpio) == 1;
+    }
+
 }

@@ -591,7 +591,7 @@ class Application implements MessageComponentInterface
              */
             $av = $ini['av'];
 
-            $this->av = new AV($av['sources'], $av['volume'], $av['presets'], $av['dbPerClick'], $av['maxVolume'], $av['minVolume']);
+            $this->av = new AV($av['sources'], $av['volume'], $av['presets'], $av['dbPerClick'], $av['maxVolume'], $av['minVolume'], $av['gpio'], $av['power']);
 
 
         } catch (\Exception $ex) {
