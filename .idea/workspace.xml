@@ -28,8 +28,8 @@
       <file leaf-file-name="Mediatrix.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="91" column="6" lean-forward="false" selection-start-line="91" selection-start-column="6" selection-end-line="91" selection-end-column="6" />
+            <state relative-caret-position="522">
+              <caret line="65" column="7" lean-forward="true" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -38,8 +38,8 @@
       <file leaf-file-name="AV.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/AV.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="205" column="36" lean-forward="false" selection-start-line="205" selection-start-column="36" selection-end-line="205" selection-end-column="36" />
+            <state relative-caret-position="198">
+              <caret line="82" column="30" lean-forward="false" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -58,8 +58,8 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="593" column="156" lean-forward="true" selection-start-line="593" selection-start-column="156" selection-end-line="593" selection-end-column="156" />
+            <state relative-caret-position="408">
+              <caret line="603" column="0" lean-forward="true" selection-start-line="603" selection-start-column="0" selection-end-line="603" selection-end-column="0" />
               <folding>
                 <marker date="1521849071697" expanded="true" signature="12697:12737" ph="SELECT * FRO... preset" />
                 <marker date="1521849071697" expanded="true" signature="13437:13479" ph="SELECT isext... user" />
@@ -933,14 +933,7 @@
       <workItem from="1520094454103" duration="1724000" />
       <workItem from="1520863877630" duration="4927000" />
       <workItem from="1520871051662" duration="1218000" />
-      <workItem from="1521826085975" duration="3327000" />
-    </task>
-    <task id="LOCAL-00098" summary="change websocket address test_js">
-      <created>1516490170314</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1516490170314</updated>
+      <workItem from="1521826085975" duration="3492000" />
     </task>
     <task id="LOCAL-00099" summary="debug JWT">
       <created>1516490483614</created>
@@ -1278,11 +1271,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521849098321</updated>
     </task>
-    <option name="localTasksCounter" value="147" />
+    <task id="LOCAL-00147" summary="debug AV">
+      <created>1521849373174</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1521849373174</updated>
+    </task>
+    <option name="localTasksCounter" value="148" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142466000" />
+    <option name="totallyTimeSpent" value="142631000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1351,7 +1351,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change session expire seconds" />
     <MESSAGE value="change websocket address test_js" />
     <MESSAGE value="debug JWT" />
     <MESSAGE value="fix call of scheinwerfer class in application php" />
@@ -1376,7 +1375,8 @@
     <MESSAGE value="Fertig zum testem" />
     <MESSAGE value="add isOn to Beamer" />
     <MESSAGE value="add on and off function to AV&#10;add isOn with check to AV" />
-    <option name="LAST_COMMIT_MESSAGE" value="add on and off function to AV&#10;add isOn with check to AV" />
+    <MESSAGE value="debug AV" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug AV" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1674,10 +1674,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="65" column="7" lean-forward="true" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="593" column="156" lean-forward="true" selection-start-line="593" selection-start-column="156" selection-end-line="593" selection-end-column="156" />
+        <state relative-caret-position="408">
+          <caret line="603" column="0" lean-forward="true" selection-start-line="603" selection-start-column="0" selection-end-line="603" selection-end-column="0" />
           <folding>
             <marker date="1521849071697" expanded="true" signature="12697:12737" ph="SELECT * FRO... preset" />
             <marker date="1521849071697" expanded="true" signature="13437:13479" ph="SELECT isext... user" />
@@ -1685,18 +1693,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="91" column="6" lean-forward="false" selection-start-line="91" selection-start-column="6" selection-end-line="91" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/AV.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="205" column="36" lean-forward="false" selection-start-line="205" selection-start-column="36" selection-end-line="205" selection-end-column="36" />
+        <state relative-caret-position="198">
+          <caret line="82" column="30" lean-forward="false" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
           <folding />
         </state>
       </provider>

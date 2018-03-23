@@ -28,6 +28,11 @@ class AV
      * @param array $source
      * @param array $volumeCodes
      * @param array $presets
+     * @param int $volumeSteps
+     * @param int $maxVolume
+     * @param int $minVolume
+     * @param int $gpio
+     * @param array $powerCodes
      */
     function __construct(array $source, array $volumeCodes, array $presets, int $volumeSteps, int $maxVolume, int $minVolume, int $gpio, array $powerCodes)
     {
@@ -74,6 +79,8 @@ class AV
 
         $this->setVolumeLevel($minVolume + ($maxVolume-$minVolume)/2);
 
+
+        var_dump($powerCodes);
 
         $powerCodes['lastSendA'] = false;
 
