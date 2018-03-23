@@ -360,6 +360,14 @@ $(function() {
         var name = $("#presetName").val();
         currentConf["name"] = name;
         currentConf["conf"] = conf;
+        /*var request = $.ajax({
+            url: '',
+            success: function(data) {
+                sessId = data.substring(0, 20);
+            }
+            }).done(function() {
+
+        });*/
         $.snackbar({ content: "Das Preset " + $("#presetName").val() + " wurde erfolgreich erstellt" });
         send(conf);
     }
