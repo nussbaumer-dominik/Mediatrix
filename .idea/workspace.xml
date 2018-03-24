@@ -81,8 +81,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="422" column="0" lean-forward="true" selection-start-line="422" selection-start-column="0" selection-end-line="422" selection-end-column="0" />
+            <state relative-caret-position="324">
+              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -960,14 +960,7 @@
       <workItem from="1520094454103" duration="1724000" />
       <workItem from="1520863877630" duration="4927000" />
       <workItem from="1520871051662" duration="1218000" />
-      <workItem from="1521826085975" duration="4257000" />
-    </task>
-    <task id="LOCAL-00106" summary="fix call of scheinwerfer class in application php">
-      <created>1516491625462</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1516491625462</updated>
+      <workItem from="1521826085975" duration="4310000" />
     </task>
     <task id="LOCAL-00107" summary="debug beamerCom Applications php">
       <created>1516491738204</created>
@@ -1305,11 +1298,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521850117704</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="debug main.js">
+      <created>1521850313053</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1521850313053</updated>
+    </task>
+    <option name="localTasksCounter" value="156" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143396000" />
+    <option name="totallyTimeSpent" value="143449000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1378,7 +1378,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="debug beamerCom Applications php" />
     <MESSAGE value="fix Beamer php" />
     <MESSAGE value="change parameters IR cpp" />
     <MESSAGE value="debug Beamer php" />
@@ -1403,7 +1402,8 @@
     <MESSAGE value="fix AV" />
     <MESSAGE value="remove var_dump" />
     <MESSAGE value="comment things in Mixer" />
-    <option name="LAST_COMMIT_MESSAGE" value="comment things in Mixer" />
+    <MESSAGE value="debug main.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug main.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1724,8 +1724,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="422" column="0" lean-forward="true" selection-start-line="422" selection-start-column="0" selection-end-line="422" selection-end-column="0" />
+        <state relative-caret-position="324">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding />
         </state>
       </provider>
