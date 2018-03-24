@@ -26,9 +26,11 @@ class Application implements MessageComponentInterface
     private $defaultPresets;
     private $registerd;
     private $av;
+    protected $mixer;
 
-    public function __construct()
+    public function __construct($mixer)
     {
+        $this->mixer = $mixer;
         $this->iniMe();
     }
 
@@ -209,7 +211,7 @@ class Application implements MessageComponentInterface
                  * No Command recognized
                  * TODO
                  */
-                if (!(isset($commands["dmx"]) || isset($commands["beamer"]) || isset($commands["av"]))) {
+                if (!(isset($commands["dmx"]) || isset($commands["beamer"]) || isset($commands["av"]) || isset($commands["mixer"]))) {
                     $from->send(json_encode($this->addLiveStatus(array("success" => false, "err" => "Unrecognized Command"))));
                 }
 
@@ -414,7 +416,7 @@ class Application implements MessageComponentInterface
 
             while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
                 $hasResults = true;
-                array_push($presets, $res['json']);
+                array_push($presets, array('name' => $res['name'], 'conf' => $res['json']));
             }
 
         $presets = $hasResults? $presets:$this->defaultPresets;
@@ -479,12 +481,18 @@ class Application implements MessageComponentInterface
 
         $av['minVolume'] = $this->av->getMinVolume();
 
+        /*
+         * Mikrofon
+         */
+        $mikrofone = array_keys($this->mikrofone);
+
 
         return array("ini" => array(
             "presets" => $presets,
             "dmx" => $dmx,
             "av" => $av,
-            "isExtended" => $isExtended
+            "isExtended" => $isExtended,
+            "mixer" => $mikrofone
         ));
     }
 
@@ -573,9 +581,7 @@ class Application implements MessageComponentInterface
             $mikrofone = array();
 
             foreach ($ini['mixer']['mikrofon'] as $key => $mic){
-
                 $mikrofone[$key] =new Mikrofon($this->mixer,$mic['channel']);
-
             }
 
             $this->mikrofone = $mikrofone;

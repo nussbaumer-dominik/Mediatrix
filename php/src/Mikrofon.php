@@ -17,8 +17,10 @@ class Mikrofon
     }
     function setVolume($value){
         return array("success" => true, "err" => "");
+        $this->mixer::mix($value);
     }
-    function mute(){
+    function mute($muted){
         return array("success" => true, "err" => "");
+        $this->mixer::mute($muted);
     }
 }

@@ -20,10 +20,10 @@ class MyIoServer extends \Ratchet\Server\IoServer
      * @param  string                             $address    The address to receive sockets on (0.0.0.0 means receive connections from any)
      * @return MyIoServer
      */
-    public static function factory(MessageComponentInterface $component, $port = 80, $address = '0.0.0.0') {
+    public static function factory(MessageComponentInterface $component, $port = 80, $address = '0.0.0.0', $mixer) {
         $loop   = LoopFactory::create();
 
-        $mixer = new Mixer("10.0.0.21");
+
         $loop->addPeriodicTimer(10, function() use (&$mixer) {
             $mixer->alive();
         });
