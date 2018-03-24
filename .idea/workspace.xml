@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/AV.php" afterPath="$PROJECT_DIR$/php/src/AV.php" />
-      <change beforePath="$PROJECT_DIR$/php/src/Mixer.php" afterPath="$PROJECT_DIR$/php/src/Mixer.php" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,11 +68,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mixer.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Mixer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Mixer.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="291">
               <caret line="66" column="35" lean-forward="true" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="422" column="0" lean-forward="true" selection-start-line="422" selection-start-column="0" selection-end-line="422" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -142,6 +151,7 @@
         <option value="$PROJECT_DIR$/php/src/Application.php" />
         <option value="$PROJECT_DIR$/php/src/AV.php" />
         <option value="$PROJECT_DIR$/php/src/Mixer.php" />
+        <option value="$PROJECT_DIR$/js/main.js" />
       </list>
     </option>
   </component>
@@ -234,6 +244,11 @@
               <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="conf" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
@@ -945,14 +960,7 @@
       <workItem from="1520094454103" duration="1724000" />
       <workItem from="1520863877630" duration="4927000" />
       <workItem from="1520871051662" duration="1218000" />
-      <workItem from="1521826085975" duration="4058000" />
-    </task>
-    <task id="LOCAL-00105" summary="fix call of scheinwerfer class in application php">
-      <created>1516491554870</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1516491554870</updated>
+      <workItem from="1521826085975" duration="4257000" />
     </task>
     <task id="LOCAL-00106" summary="fix call of scheinwerfer class in application php">
       <created>1516491625462</created>
@@ -1290,11 +1298,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521849988745</updated>
     </task>
-    <option name="localTasksCounter" value="154" />
+    <task id="LOCAL-00154" summary="comment things in Mixer">
+      <created>1521850117704</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1521850117704</updated>
+    </task>
+    <option name="localTasksCounter" value="155" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143197000" />
+    <option name="totallyTimeSpent" value="143396000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1363,7 +1378,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix call of scheinwerfer class in application php" />
     <MESSAGE value="debug beamerCom Applications php" />
     <MESSAGE value="fix Beamer php" />
     <MESSAGE value="change parameters IR cpp" />
@@ -1388,20 +1402,14 @@
     <MESSAGE value="debug AV" />
     <MESSAGE value="fix AV" />
     <MESSAGE value="remove var_dump" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove var_dump" />
+    <MESSAGE value="comment things in Mixer" />
+    <option name="LAST_COMMIT_MESSAGE" value="comment things in Mixer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/php/unnötig/data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/unnötig/composer.lock">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1710,6 +1718,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
           <caret line="66" column="35" lean-forward="true" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="422" column="0" lean-forward="true" selection-start-line="422" selection-start-column="0" selection-end-line="422" selection-end-column="0" />
           <folding />
         </state>
       </provider>
