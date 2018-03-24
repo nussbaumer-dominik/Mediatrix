@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/AV.php" afterPath="$PROJECT_DIR$/php/src/AV.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,13 +28,13 @@
         <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="414">
-              <caret line="65" column="7" lean-forward="true" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
+              <caret line="65" column="7" lean-forward="false" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AV.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AV.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/AV.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
@@ -49,20 +48,20 @@
         <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="201">
-              <caret line="132" column="9" lean-forward="true" selection-start-line="130" selection-start-column="8" selection-end-line="132" selection-end-column="9" />
+              <caret line="132" column="9" lean-forward="false" selection-start-line="130" selection-start-column="8" selection-end-line="132" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="603" column="0" lean-forward="true" selection-start-line="603" selection-start-column="0" selection-end-line="603" selection-end-column="0" />
+            <state relative-caret-position="367">
+              <caret line="602" column="34" lean-forward="true" selection-start-line="602" selection-start-column="34" selection-end-line="602" selection-end-column="34" />
               <folding>
-                <marker date="1521849071697" expanded="true" signature="12697:12737" ph="SELECT * FRO... preset" />
-                <marker date="1521849071697" expanded="true" signature="13437:13479" ph="SELECT isext... user" />
+                <marker date="1521849687693" expanded="true" signature="12785:12825" ph="SELECT * FRO... preset" />
+                <marker date="1521849687693" expanded="true" signature="13566:13608" ph="SELECT isext... user" />
               </folding>
             </state>
           </provider>
@@ -933,14 +932,7 @@
       <workItem from="1520094454103" duration="1724000" />
       <workItem from="1520863877630" duration="4927000" />
       <workItem from="1520871051662" duration="1218000" />
-      <workItem from="1521826085975" duration="3578000" />
-    </task>
-    <task id="LOCAL-00100" summary="debug JWT">
-      <created>1516490593289</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1516490593289</updated>
+      <workItem from="1521826085975" duration="3676000" />
     </task>
     <task id="LOCAL-00101" summary="debug JWT">
       <created>1516490670759</created>
@@ -1278,11 +1270,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521849535269</updated>
     </task>
-    <option name="localTasksCounter" value="149" />
+    <task id="LOCAL-00149" summary="debug AV">
+      <created>1521849622853</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1521849622853</updated>
+    </task>
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142717000" />
+    <option name="totallyTimeSpent" value="142815000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1669,7 +1668,7 @@
     <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
-          <caret line="132" column="9" lean-forward="true" selection-start-line="130" selection-start-column="8" selection-end-line="132" selection-end-column="9" />
+          <caret line="132" column="9" lean-forward="false" selection-start-line="130" selection-start-column="8" selection-end-line="132" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1677,19 +1676,8 @@
     <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
-          <caret line="65" column="7" lean-forward="true" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
+          <caret line="65" column="7" lean-forward="false" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="603" column="0" lean-forward="true" selection-start-line="603" selection-start-column="0" selection-end-line="603" selection-end-column="0" />
-          <folding>
-            <marker date="1521849071697" expanded="true" signature="12697:12737" ph="SELECT * FRO... preset" />
-            <marker date="1521849071697" expanded="true" signature="13437:13479" ph="SELECT isext... user" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1698,6 +1686,17 @@
         <state relative-caret-position="306">
           <caret line="82" column="30" lean-forward="false" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="602" column="34" lean-forward="true" selection-start-line="602" selection-start-column="34" selection-end-line="602" selection-end-column="34" />
+          <folding>
+            <marker date="1521849687693" expanded="true" signature="12785:12825" ph="SELECT * FRO... preset" />
+            <marker date="1521849687693" expanded="true" signature="13566:13608" ph="SELECT isext... user" />
+          </folding>
         </state>
       </provider>
     </entry>
