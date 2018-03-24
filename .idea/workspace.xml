@@ -49,10 +49,10 @@
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="295">
-              <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+              <caret line="508" column="34" lean-forward="false" selection-start-line="508" selection-start-column="34" selection-end-line="508" selection-end-column="34" />
               <folding>
-                <marker date="1521891032096" expanded="true" signature="12974:13014" ph="SELECT * FRO... preset" />
-                <marker date="1521891032096" expanded="true" signature="13755:13797" ph="SELECT isext... user" />
+                <marker date="1521891116089" expanded="true" signature="12974:13014" ph="SELECT * FRO... preset" />
+                <marker date="1521891116089" expanded="true" signature="13755:13797" ph="SELECT isext... user" />
               </folding>
             </state>
           </provider>
@@ -922,13 +922,6 @@
       <workItem from="1520871051662" duration="1218000" />
       <workItem from="1521826085975" duration="5653000" />
     </task>
-    <task id="LOCAL-00116" summary="add return in beamercoms">
-      <created>1516492890630</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1516492890630</updated>
-    </task>
     <task id="LOCAL-00117" summary="clean up">
       <created>1516492991014</created>
       <option name="number" value="00117" />
@@ -1265,11 +1258,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521890686287</updated>
     </task>
-    <option name="localTasksCounter" value="165" />
+    <task id="LOCAL-00165" summary="debug hue in rgbw scheinwerfer">
+      <created>1521891043763</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1521891043763</updated>
+    </task>
+    <option name="localTasksCounter" value="166" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148563000" />
+    <option name="totallyTimeSpent" value="148643000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1834,10 +1834,10 @@
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
-          <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <caret line="508" column="34" lean-forward="false" selection-start-line="508" selection-start-column="34" selection-end-line="508" selection-end-column="34" />
           <folding>
-            <marker date="1521891032096" expanded="true" signature="12974:13014" ph="SELECT * FRO... preset" />
-            <marker date="1521891032096" expanded="true" signature="13755:13797" ph="SELECT isext... user" />
+            <marker date="1521891116089" expanded="true" signature="12974:13014" ph="SELECT * FRO... preset" />
+            <marker date="1521891116089" expanded="true" signature="13755:13797" ph="SELECT isext... user" />
           </folding>
         </state>
       </provider>

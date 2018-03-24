@@ -506,6 +506,8 @@ class Application implements MessageComponentInterface
     private function addLiveStatus($result)
     {
 
+        $result = (array) $result;
+
         $result['live'] = array(
             'av' => array(
                 'volume' => $this->av->getVolumeLevel(),
