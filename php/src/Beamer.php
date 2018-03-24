@@ -89,7 +89,7 @@ class Beamer
     function on()
     {
         if($this->isOn()){
-            return array("success"=>true,"err"=>"");
+            return (object) array("success"=>true,"err"=>"");
         }
 
         echo "Beamer on \n";
@@ -110,7 +110,7 @@ class Beamer
     function off()
     {
         if(!$this->isOn()){
-            return array("success"=>true,"err"=>"");
+            return (object) array("success"=>true,"err"=>"");
         }
 
         echo "Beamer off\n";

@@ -211,7 +211,7 @@ class AV
         if($this->isOn()){
             $this->volumeLevel = $this->iniLevel;
 
-            return array("success"=>true,"err"=>"");
+            return (object) array("success"=>true,"err"=>"");
         }
 
         echo "AV on \n";
@@ -236,7 +236,7 @@ class AV
     function off()
     {
         if(!$this->isOn()){
-            return array("success"=>true,"err"=>"");
+            return (object) array("success"=>true,"err"=>"");
         }
 
         echo "AV off\n";
