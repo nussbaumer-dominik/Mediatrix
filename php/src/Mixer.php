@@ -1,8 +1,5 @@
 <?php
 namespace Mediatrix;
-
-require __DIR__ . '/../vendor/autoload.php';
-
 use WebSocket\Client;
 
 class Mixer {

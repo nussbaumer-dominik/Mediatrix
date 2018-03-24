@@ -5,6 +5,7 @@ use Ratchet\Http\HttpServer;
 use Ratchet\Server\IoServer;
 use Mediatrix\Application;
 use Ratchet\WebSocket\WsServer;
+use WebSocket\Client;
 
 require __DIR__ . '/../vendor/autoload.php';
 
