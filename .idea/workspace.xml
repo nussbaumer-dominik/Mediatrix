@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/AV.php" afterPath="$PROJECT_DIR$/php/src/AV.php" />
-      <change beforePath="$PROJECT_DIR$/php/src/Beamer.php" afterPath="$PROJECT_DIR$/php/src/Beamer.php" />
+      <change beforePath="$PROJECT_DIR$/conf/Mediatrix.json" afterPath="$PROJECT_DIR$/conf/Mediatrix.json" />
+      <change beforePath="$PROJECT_DIR$/php/src/RGBWScheinwerfer.php" afterPath="$PROJECT_DIR$/php/src/RGBWScheinwerfer.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,42 +25,22 @@
     <favorites_list name="Mediatrix" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Mediatrix.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="82" column="14" lean-forward="false" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="14" />
+            <state relative-caret-position="489">
+              <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AV.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/php/src/AV.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4104">
-              <caret line="233" column="5" lean-forward="true" selection-start-line="233" selection-start-column="5" selection-end-line="233" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Beamer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-681">
-              <caret line="112" column="28" lean-forward="false" selection-start-line="112" selection-start-column="28" selection-end-line="112" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RGBWScheinwerfer.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RGBWScheinwerfer.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/RGBWScheinwerfer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+            <state relative-caret-position="363">
+              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -69,42 +49,12 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1141">
-              <caret line="609" column="0" lean-forward="true" selection-start-line="609" selection-start-column="0" selection-end-line="609" selection-end-column="0" />
+            <state relative-caret-position="507">
+              <caret line="609" column="0" lean-forward="false" selection-start-line="609" selection-start-column="0" selection-end-line="609" selection-end-column="0" />
               <folding>
-                <marker date="1521851209181" expanded="true" signature="12785:12825" ph="SELECT * FRO... preset" />
-                <marker date="1521851209181" expanded="true" signature="13566:13608" ph="SELECT isext... user" />
+                <marker date="1521852730910" expanded="true" signature="12785:12825" ph="SELECT * FRO... preset" />
+                <marker date="1521852730910" expanded="true" signature="13566:13608" ph="SELECT isext... user" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Mixer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/src/Mixer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="66" column="35" lean-forward="true" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ws_test.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_js/ws_test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -169,10 +119,11 @@
         <option value="$PROJECT_DIR$/php/src/Mixer.php" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/test_js/ws_test.html" />
-        <option value="$PROJECT_DIR$/conf/Mediatrix.json" />
         <option value="$PROJECT_DIR$/php/src/Application.php" />
         <option value="$PROJECT_DIR$/php/src/Beamer.php" />
         <option value="$PROJECT_DIR$/php/src/AV.php" />
+        <option value="$PROJECT_DIR$/conf/Mediatrix.json" />
+        <option value="$PROJECT_DIR$/php/src/RGBWScheinwerfer.php" />
       </list>
     </option>
   </component>
@@ -265,17 +216,6 @@
               <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="conf" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="php" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="php" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
@@ -1330,7 +1270,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144792000" />
+    <option name="totallyTimeSpent" value="145464000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1352,18 +1292,29 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943144" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26365665" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3729097" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1966581" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1673,40 +1624,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Elektronik/cooling.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Mixer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="66" column="35" lean-forward="true" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_js/ws_test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="82" column="14" lean-forward="false" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="14" />
+        <state relative-caret-position="216">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1719,37 +1638,207 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/RGBWScheinwerfer.php">
+    <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1141">
-          <caret line="609" column="0" lean-forward="true" selection-start-line="609" selection-start-column="0" selection-end-line="609" selection-end-column="0" />
+        <state relative-caret-position="324">
+          <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding>
-            <marker date="1521851209181" expanded="true" signature="12785:12825" ph="SELECT * FRO... preset" />
-            <marker date="1521851209181" expanded="true" signature="13566:13608" ph="SELECT isext... user" />
+            <marker date="1521852730879" expanded="true" signature="13:18569" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="147:205" ph="{&quot;name&quot;: &quot;&quot;...}" />
+            <marker date="1521852730879" expanded="true" signature="222:328" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="458:515" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="615:778" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="642:711" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="868:1291" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="913:1158" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="1164:1285" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="1389:1459" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="1508:1625" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="1643:3698" ph="/*...*/" />
+            <marker date="1521852730879" expanded="true" signature="3705:3890" ph="/*...*/" />
+            <marker date="1521852730879" expanded="true" signature="3952:6922" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="4011:6916" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="4035:4646" ph="..." />
+            <marker date="1521852730879" expanded="true" signature="4200:4398" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="4228:4380" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="4426:4566" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="4672:5284" ph="..." />
+            <marker date="1521852730879" expanded="true" signature="4783:4984" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="4814:4966" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="5015:5155" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="5308:6058" ph="..." />
+            <marker date="1521852730879" expanded="true" signature="5498:5757" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="5527:5739" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="5569:5717" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="5786:5978" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="5824:5960" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="6083:6906" ph="..." />
+            <marker date="1521852730879" expanded="true" signature="6273:6568" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="6302:6550" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="6344:6528" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="6597:6825" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="6635:6807" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="6951:7657" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="7030:7631" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="7081:7306" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="7157:7255" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="7312:7621" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="7472:7570" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="7764:9127" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="7785:7821" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="7916:9121" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="8008:8499" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="8035:8255" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="8261:8485" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="8505:9111" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="8642:8749" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="8799:8906" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="8958:9069" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="9201:9531" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="9222:9294" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="9242:9284" ph="{&quot;mode&quot;: &quot;&quot;...}" />
+            <marker date="1521852730879" expanded="true" signature="9343:9525" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="9562:10630" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="9736:9943" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="9761:9931" ph="{&quot;class&quot;: &quot;mode&quot;...}" />
+            <marker date="1521852730879" expanded="true" signature="10037:10390" ph="{&quot;direction&quot;: 'rtl'...}" />
+            <marker date="1521852730879" expanded="true" signature="10087:10130" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="10256:10380" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="10457:10576" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="10663:11569" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="10771:11542" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="10889:11188" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="11046:11126" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="11234:11532" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="11390:11470" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="11602:11656" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="11683:12002" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="12076:13246" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="12140:13240" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="12249:12352" ph="/*...*/" />
+            <marker date="1521852730879" expanded="true" signature="12388:12436" ph="{&quot;class&quot;: &quot;preset&quot;...}" />
+            <marker date="1521852730879" expanded="true" signature="12558:12708" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="12733:12867" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="12896:13025" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="13053:13186" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="13276:13432" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="13505:13625" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="13656:13797" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="13842:13998" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="14021:14073" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="14304:16114" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="14397:14434" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="14475:16110" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="14492:14857" ph="..." />
+            <marker date="1521852730879" expanded="true" signature="14559:14606" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="14610:14842" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="14722:14776" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="14873:15163" ph="..." />
+            <marker date="1521852730879" expanded="true" signature="14936:14979" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="14983:15148" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="15013:15138" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="15054:15124" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="15179:15509" ph="..." />
+            <marker date="1521852730879" expanded="true" signature="15248:15297" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="15301:15494" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="15525:15804" ph="..." />
+            <marker date="1521852730879" expanded="true" signature="15591:15637" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="15641:15789" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="15674:15779" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="15820:16104" ph="..." />
+            <marker date="1521852730879" expanded="true" signature="16044:16089" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="16151:16616" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="16172:16612" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="16187:16418" ph="..." />
+            <marker date="1521852730879" expanded="true" signature="16237:16298" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="16304:16403" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="16432:16529" ph="..." />
+            <marker date="1521852730879" expanded="true" signature="16543:16606" ph="..." />
+            <marker date="1521852730879" expanded="true" signature="16656:16960" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="16677:16956" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="16692:16888" ph="..." />
+            <marker date="1521852730879" expanded="true" signature="16744:16807" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="16813:16873" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="16903:16950" ph="..." />
+            <marker date="1521852730879" expanded="true" signature="16993:17309" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="17014:17305" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="17029:17234" ph="..." />
+            <marker date="1521852730879" expanded="true" signature="17084:17150" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="17156:17219" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="17249:17299" ph="..." />
+            <marker date="1521852730879" expanded="true" signature="17349:17709" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="17370:17705" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="17385:17623" ph="..." />
+            <marker date="1521852730879" expanded="true" signature="17451:17528" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="17534:17608" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="17638:17699" ph="..." />
+            <marker date="1521852730879" expanded="true" signature="17740:17823" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="17939:18567" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="18080:18365" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="18112:18357" ph="{&quot;direction&quot;: 'rtl'...}" />
+            <marker date="1521852730879" expanded="true" signature="18154:18187" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="18297:18349" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="18406:18561" ph="{...}" />
+            <marker date="1521852730879" expanded="true" signature="18467:18553" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
+    <entry file="file://$PROJECT_DIR$/test_js/ws_test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-681">
-          <caret line="112" column="28" lean-forward="false" selection-start-line="112" selection-start-column="28" selection-end-line="112" selection-end-column="28" />
+        <state relative-caret-position="306">
+          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/AV.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4104">
-          <caret line="233" column="5" lean-forward="true" selection-start-line="233" selection-start-column="5" selection-end-line="233" selection-end-column="5" />
+        <state relative-caret-position="458">
+          <caret line="229" column="0" lean-forward="true" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="112" column="28" lean-forward="false" selection-start-line="112" selection-start-column="28" selection-end-line="112" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Mixer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="66" column="35" lean-forward="false" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="609" column="0" lean-forward="false" selection-start-line="609" selection-start-column="0" selection-end-line="609" selection-end-column="0" />
+          <folding>
+            <marker date="1521852730910" expanded="true" signature="12785:12825" ph="SELECT * FRO... preset" />
+            <marker date="1521852730910" expanded="true" signature="13566:13608" ph="SELECT isext... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/RGBWScheinwerfer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
         </state>
       </provider>
