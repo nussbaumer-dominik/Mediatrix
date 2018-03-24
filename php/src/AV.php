@@ -80,6 +80,7 @@ class AV
         $this->setVolumeLevel($minVolume + ($maxVolume-$minVolume)/2);
 
 
+        echo "konstruktor:\n";
         var_dump($powerCodes);
 
         $powerCodes['lastSendA'] = false;
