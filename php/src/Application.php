@@ -106,7 +106,7 @@ class Application implements MessageComponentInterface
 
 
                         $r = $this->sendDmx($commands["dmx"]);
-                        $r['success'] ?: array_push($result, $r);
+                        $r->success ?: array_push($result, $r);
 
                 }
 
@@ -342,12 +342,12 @@ class Application implements MessageComponentInterface
                         }
                     }
                 }else{
-                    array_push($result, array('success' => false,'err' => 'Wrong number of channels'));
+                    array_push($result, (object) array('success' => false,'err' => 'Wrong number of channels'));
                 }
 
             }else
             {
-                array_push($result, array('success' => false,'err' => 'Scheinwerfer id not valid'));
+                array_push($result, (object) array('success' => false,'err' => 'Scheinwerfer id not valid'));
             }
         }
 
