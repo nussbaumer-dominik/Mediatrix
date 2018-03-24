@@ -104,11 +104,11 @@ class RGBWScheinwerfer extends Scheinwerfer
     {
         $erg = $this->channels;
 
+        var_dump($erg);
+
         if(isset($this->channels['hue'])){
             unset($erg['hue']);
         }
-
-        var_dump($erg);
 
         return $erg;
     }
