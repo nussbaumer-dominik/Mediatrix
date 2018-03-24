@@ -105,8 +105,8 @@ class Application implements MessageComponentInterface
                 if (isset($commands["dmx"])) {
 
 
-                        $r = $this->sendDmx($commands["dmx"]);
-                        $r->success ?: array_push($result, $r);
+                    $r = $this->sendDmx($commands["dmx"]);
+                    $r->success ?: array_push($result, $r);
 
                 }
 
@@ -420,10 +420,10 @@ class Application implements MessageComponentInterface
 
         $hasResults = false;
 
-            while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
-                $hasResults = true;
-                array_push($presets, array('name' => $res['name'], 'conf' => $res['json']));
-            }
+        while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
+            $hasResults = true;
+            array_push($presets, array('name' => $res['name'], 'conf' => $res['json']));
+        }
 
         $presets = $hasResults? $presets:$this->defaultPresets;
 
@@ -552,30 +552,17 @@ class Application implements MessageComponentInterface
                     if (count($entry) == 4) {
 
                         if(isset($entry['weiss'])) {
-                            if(isset($entry['hue'])){
-                                array_push($scheinwerfer,
-                                    new RGBWScheinwerfer(array(
-                                            "r" => $entry["rot"] - 1,
-                                            "g" => $entry["gruen"] - 1,
-                                            "b" => $entry["blau"] - 1,
-                                            "w" => $entry["weiss"] - 1,
-                                            "hue" => $entry["hue"] - 1
-                                        )
+                            array_push($scheinwerfer,
+                                new RGBWScheinwerfer(array(
+                                        "r" => $entry["rot"] - 1,
+                                        "g" => $entry["gruen"] - 1,
+                                        "b" => $entry["blau"] - 1,
+                                        "w" => $entry["weiss"] - 1
                                     )
-                                );
-                            }else{
-                                array_push($scheinwerfer,
-                                    new RGBWScheinwerfer(array(
-                                            "r" => $entry["rot"] - 1,
-                                            "g" => $entry["gruen"] - 1,
-                                            "b" => $entry["blau"] - 1,
-                                            "w" => $entry["weiss"] - 1
-                                        )
-                                    )
-                                );
-                            }
-                        }else{
+                                )
+                            );
 
+                        }elseif(isset($entry['hue'])) {
                             array_push($scheinwerfer,
                                 new RGBWScheinwerfer(array(
                                         "r" => $entry["rot"] - 1,
@@ -587,31 +574,31 @@ class Application implements MessageComponentInterface
                             );
                         }
 
+                    }else if(count($entry) == 3) {
 
-                    } else {
-                        if(isset($entry['hue'])){
-                            array_push($scheinwerfer,
-                                new RGBWScheinwerfer(array(
-                                        "r" => $entry["rot"] - 1,
-                                        "g" => $entry["gruen"] - 1,
-                                        "b" => $entry["blau"] - 1,
-                                        "hue" => $entry["hue"] - 1
-                                    )
+                        array_push($scheinwerfer,
+                            new RGBWScheinwerfer(array(
+                                    "r" => $entry["rot"] - 1,
+                                    "g" => $entry["gruen"] - 1,
+                                    "b" => $entry["blau"] - 1
                                 )
-                            );
-                        }else{
-                            array_push($scheinwerfer,
-                                new RGBWScheinwerfer(array(
-                                        "r" => $entry["rot"] - 1,
-                                        "g" => $entry["gruen"] - 1,
-                                        "b" => $entry["blau"] - 1
-                                    )
+                            )
+                        );
+                    }elseif (count($entry) == 5){
+
+                        array_push($scheinwerfer,
+                            new RGBWScheinwerfer(array(
+                                    "r" => $entry["rot"] - 1,
+                                    "g" => $entry["gruen"] - 1,
+                                    "b" => $entry["blau"] - 1,
+                                    "w" => $entry["weiss"] - 1,
+                                    "hue" => $entry["hue"] - 1
                                 )
-                            );
-                        }
+                            )
+                        );
                     }
 
-                } else {
+                }else {
 
                     array_push($scheinwerfer,
                         new Scheinwerfer(array(
