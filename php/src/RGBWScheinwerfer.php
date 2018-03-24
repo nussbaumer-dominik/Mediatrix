@@ -24,21 +24,12 @@ class RGBWScheinwerfer extends Scheinwerfer
             $this->channels['b'] => $val['b']
         );
 
-        if(count($val) == 4 && count($this->channels) == 4){
-            if(isset($this->channels['w']) && isset($val['w'])) {
-                $data[$this->channels['w']] = $val['w'];
-            }else if(isset($this->channels['hue'])){
-                $data[$this->channels['hue']] = 255;
-            }else{
-                return (object) array("success"=>false,"err"=>"Worng Channels for Scheinwerfer");
-            }
+        if(isset($this->channels['w']) && isset($val['w'])){
+            $data[$this->channels['w']] = $val['w'];
         }
 
-        if(count($val) == 4 && count($this->channels) == 5){
-            $data[$this->channels['w']] = $val['w'];
+        if(isset($this->channels['hue'])){
             $data[$this->channels['hue']] = 255;
-        }else{
-            return (object) array("success"=>false,"err"=>"Worng Channels for Scheinwerfer");
         }
 
         $r = json_decode(str_replace("'",'"',$this->dmx::sendChannel($data)));
