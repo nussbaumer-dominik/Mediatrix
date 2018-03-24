@@ -83,12 +83,12 @@ class AV
         $this->minVolume = $minVolume;
 
 
-        //set Volume Level to min Vaule ad then to half
+        /*//set Volume Level to min Vaule ad then to half
         $this->volumeLevel = $maxVolume;
 
         $this->setVolumeLevel($minVolume);
 
-        $this->setVolumeLevel($minVolume + ($maxVolume-$minVolume)/2);
+        $this->setVolumeLevel($minVolume + ($maxVolume-$minVolume)/2);*/
 
     }
 

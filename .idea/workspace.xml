@@ -4,6 +4,7 @@
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/php/src/AV.php" afterPath="$PROJECT_DIR$/php/src/AV.php" />
+      <change beforePath="$PROJECT_DIR$/php/src/Mixer.php" afterPath="$PROJECT_DIR$/php/src/Mixer.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AV.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AV.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/AV.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="209" column="24" lean-forward="false" selection-start-line="209" selection-start-column="24" selection-end-line="209" selection-end-column="24" />
+            <state relative-caret-position="162">
+              <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -68,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mixer.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Mixer.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Mixer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3">
-              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="291">
+              <caret line="66" column="35" lean-forward="true" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -139,8 +140,8 @@
         <option value="$PROJECT_DIR$/php/src/Beamer.php" />
         <option value="$PROJECT_DIR$/conf/Mediatrix.json" />
         <option value="$PROJECT_DIR$/php/src/Application.php" />
-        <option value="$PROJECT_DIR$/php/src/Mixer.php" />
         <option value="$PROJECT_DIR$/php/src/AV.php" />
+        <option value="$PROJECT_DIR$/php/src/Mixer.php" />
       </list>
     </option>
   </component>
@@ -944,14 +945,7 @@
       <workItem from="1520094454103" duration="1724000" />
       <workItem from="1520863877630" duration="4927000" />
       <workItem from="1520871051662" duration="1218000" />
-      <workItem from="1521826085975" duration="3935000" />
-    </task>
-    <task id="LOCAL-00104" summary="fix call of scheinwerfer class in application php">
-      <created>1516491408226</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1516491408226</updated>
+      <workItem from="1521826085975" duration="4058000" />
     </task>
     <task id="LOCAL-00105" summary="fix call of scheinwerfer class in application php">
       <created>1516491554870</created>
@@ -1289,11 +1283,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521849941435</updated>
     </task>
-    <option name="localTasksCounter" value="153" />
+    <task id="LOCAL-00153" summary="remove var_dump">
+      <created>1521849988745</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1521849988745</updated>
+    </task>
+    <option name="localTasksCounter" value="154" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143074000" />
+    <option name="totallyTimeSpent" value="143197000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1362,7 +1363,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="debug JWT" />
     <MESSAGE value="fix call of scheinwerfer class in application php" />
     <MESSAGE value="debug beamerCom Applications php" />
     <MESSAGE value="fix Beamer php" />
@@ -1387,7 +1387,8 @@
     <MESSAGE value="add on and off function to AV&#10;add isOn with check to AV" />
     <MESSAGE value="debug AV" />
     <MESSAGE value="fix AV" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix AV" />
+    <MESSAGE value="remove var_dump" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove var_dump" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1670,14 +1671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Mixer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -1707,8 +1700,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/AV.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="209" column="24" lean-forward="false" selection-start-line="209" selection-start-column="24" selection-end-line="209" selection-end-column="24" />
+        <state relative-caret-position="162">
+          <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Mixer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="66" column="35" lean-forward="true" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
           <folding />
         </state>
       </provider>
