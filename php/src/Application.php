@@ -282,7 +282,7 @@ class Application implements MessageComponentInterface
     private function sendDmx(array $dmx)
     {
         $result = array();
-        array_push($result, array("success" => true, "err" => ""));
+        array_push($result, (object) array("success" => true, "err" => ""));
 
 
         if (isset($dmx["blackout"])) {
