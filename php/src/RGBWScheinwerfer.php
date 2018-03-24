@@ -34,12 +34,12 @@ class RGBWScheinwerfer extends Scheinwerfer
             }
         }
 
-        if(count($val) == 5 && count($this->channels) == 5){
+        if(count($val) == 4 && count($this->channels) == 5){
             $data[$this->channels['w']] = $val['w'];
             $data[$this->channels['hue']] = 255;
+        }else{
+            return (object) array("success"=>false,"err"=>"Worng Channels for Scheinwerfer");
         }
-
-        var_dump($data);
 
         $r = json_decode(str_replace("'",'"',$this->dmx::sendChannel($data)));
 
@@ -98,5 +98,16 @@ class RGBWScheinwerfer extends Scheinwerfer
                 )
             )
         );
+    }
+
+    function getChannels(): array
+    {
+        $erg = $this->channels;
+
+        if(isset($this->channels['hue'])){
+            unset($erg['hue']);
+        }
+
+        return $erg;
     }
 }

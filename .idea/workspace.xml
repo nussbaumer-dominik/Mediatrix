@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
+      <change beforePath="$PROJECT_DIR$/php/src/RGBWScheinwerfer.php" afterPath="$PROJECT_DIR$/php/src/RGBWScheinwerfer.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,32 +28,31 @@
       <file leaf-file-name="Mediatrix.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+            <state relative-caret-position="291">
+              <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RGBWScheinwerfer.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RGBWScheinwerfer.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/RGBWScheinwerfer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1026">
-              <caret line="80" column="39" lean-forward="true" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
+            <state relative-caret-position="255">
+              <caret line="41" column="9" lean-forward="false" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="564" column="29" lean-forward="false" selection-start-line="564" selection-start-column="29" selection-end-line="564" selection-end-column="29" />
+            <state relative-caret-position="345">
+              <caret line="341" column="25" lean-forward="true" selection-start-line="341" selection-start-column="25" selection-end-line="341" selection-end-column="25" />
               <folding>
                 <marker date="1521889809723" expanded="true" signature="12958:12998" ph="SELECT * FRO... preset" />
                 <marker date="1521889809723" expanded="true" signature="13739:13781" ph="SELECT isext... user" />
-                <marker date="1521889809723" expanded="true" signature="16613:17056" ph="..." />
               </folding>
             </state>
           </provider>
@@ -122,8 +121,8 @@
         <option value="$PROJECT_DIR$/php/src/Beamer.php" />
         <option value="$PROJECT_DIR$/php/src/AV.php" />
         <option value="$PROJECT_DIR$/conf/Mediatrix.json" />
-        <option value="$PROJECT_DIR$/php/src/RGBWScheinwerfer.php" />
         <option value="$PROJECT_DIR$/php/src/Application.php" />
+        <option value="$PROJECT_DIR$/php/src/RGBWScheinwerfer.php" />
       </list>
     </option>
   </component>
@@ -923,13 +922,6 @@
       <workItem from="1520871051662" duration="1218000" />
       <workItem from="1521826085975" duration="5653000" />
     </task>
-    <task id="LOCAL-00114" summary="add return in beamercoms">
-      <created>1516492721847</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1516492721847</updated>
-    </task>
     <task id="LOCAL-00115" summary="add return in beamercoms">
       <created>1516492839438</created>
       <option name="number" value="00115" />
@@ -1266,11 +1258,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521889485979</updated>
     </task>
-    <option name="localTasksCounter" value="163" />
+    <task id="LOCAL-00163" summary="fix application">
+      <created>1521889821652</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1521889821652</updated>
+    </task>
+    <option name="localTasksCounter" value="164" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147347000" />
+    <option name="totallyTimeSpent" value="148202000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1350,7 +1349,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="debug Application" />
     <MESSAGE value="debug return" />
     <MESSAGE value="fix return" />
     <MESSAGE value="add cout to IR cpp" />
@@ -1375,7 +1373,8 @@
     <MESSAGE value="debug float values for step max and min volume av" />
     <MESSAGE value="add ini Volume Level to Av" />
     <MESSAGE value="add hue in rgbw scheinwerfer" />
-    <option name="LAST_COMMIT_MESSAGE" value="add hue in rgbw scheinwerfer" />
+    <MESSAGE value="fix application" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix application" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1818,29 +1817,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/RGBWScheinwerfer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="80" column="39" lean-forward="true" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
+        <state relative-caret-position="291">
+          <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="564" column="29" lean-forward="false" selection-start-line="564" selection-start-column="29" selection-end-line="564" selection-end-column="29" />
+        <state relative-caret-position="345">
+          <caret line="341" column="25" lean-forward="true" selection-start-line="341" selection-start-column="25" selection-end-line="341" selection-end-column="25" />
           <folding>
             <marker date="1521889809723" expanded="true" signature="12958:12998" ph="SELECT * FRO... preset" />
             <marker date="1521889809723" expanded="true" signature="13739:13781" ph="SELECT isext... user" />
-            <marker date="1521889809723" expanded="true" signature="16613:17056" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/RGBWScheinwerfer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="41" column="9" lean-forward="false" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
