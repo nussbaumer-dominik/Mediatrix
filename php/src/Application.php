@@ -589,14 +589,26 @@ class Application implements MessageComponentInterface
 
 
                     } else {
-                        array_push($scheinwerfer,
-                            new RGBWScheinwerfer(array(
-                                    "r" => $entry["rot"] - 1,
-                                    "g" => $entry["gruen"] - 1,
-                                    "b" => $entry["blau"] - 1
+                        if(isset($entry['hue'])){
+                            array_push($scheinwerfer,
+                                new RGBWScheinwerfer(array(
+                                        "r" => $entry["rot"] - 1,
+                                        "g" => $entry["gruen"] - 1,
+                                        "b" => $entry["blau"] - 1,
+                                        "hue" => $entry["hue"] - 1
+                                    )
                                 )
-                            )
-                        );
+                            );
+                        }else{
+                            array_push($scheinwerfer,
+                                new RGBWScheinwerfer(array(
+                                        "r" => $entry["rot"] - 1,
+                                        "g" => $entry["gruen"] - 1,
+                                        "b" => $entry["blau"] - 1
+                                    )
+                                )
+                            );
+                        }
                     }
 
                 } else {
