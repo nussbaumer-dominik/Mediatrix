@@ -38,8 +38,8 @@
       <file leaf-file-name="AV.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/AV.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="77" column="42" lean-forward="false" selection-start-line="77" selection-start-column="42" selection-end-line="77" selection-end-column="42" />
+            <state relative-caret-position="306">
+              <caret line="209" column="24" lean-forward="false" selection-start-line="209" selection-start-column="24" selection-end-line="209" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -944,14 +944,7 @@
       <workItem from="1520094454103" duration="1724000" />
       <workItem from="1520863877630" duration="4927000" />
       <workItem from="1520871051662" duration="1218000" />
-      <workItem from="1521826085975" duration="3889000" />
-    </task>
-    <task id="LOCAL-00103" summary="fix call of scheinwerfer class in application php">
-      <created>1516491065118</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1516491065118</updated>
+      <workItem from="1521826085975" duration="3935000" />
     </task>
     <task id="LOCAL-00104" summary="fix call of scheinwerfer class in application php">
       <created>1516491408226</created>
@@ -1289,11 +1282,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521849809636</updated>
     </task>
-    <option name="localTasksCounter" value="152" />
+    <task id="LOCAL-00152" summary="fix AV">
+      <created>1521849941435</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1521849941435</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143028000" />
+    <option name="totallyTimeSpent" value="143074000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1362,7 +1362,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change websocket address test_js" />
     <MESSAGE value="debug JWT" />
     <MESSAGE value="fix call of scheinwerfer class in application php" />
     <MESSAGE value="debug beamerCom Applications php" />
@@ -1387,7 +1386,8 @@
     <MESSAGE value="add isOn to Beamer" />
     <MESSAGE value="add on and off function to AV&#10;add isOn with check to AV" />
     <MESSAGE value="debug AV" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug AV" />
+    <MESSAGE value="fix AV" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix AV" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1707,8 +1707,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/AV.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="77" column="42" lean-forward="false" selection-start-line="77" selection-start-column="42" selection-end-line="77" selection-end-column="42" />
+        <state relative-caret-position="306">
+          <caret line="209" column="24" lean-forward="false" selection-start-line="209" selection-start-column="24" selection-end-line="209" selection-end-column="24" />
           <folding />
         </state>
       </provider>

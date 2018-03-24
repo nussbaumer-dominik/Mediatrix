@@ -65,8 +65,6 @@ class AV
         $this->presets = $presets;
 
 
-        echo "konstruktor:\n";
-        var_dump($powerCodes);
 
         $powerCodes['lastSendA'] = false;
 
@@ -210,8 +208,6 @@ class AV
         }
 
         echo "AV on \n";
-
-        var_dump($this->powerCodes);
 
         //get Code
         $code = $this->powerCodes['lastSendA'] ? $this->powerCodes['b']:$this->powerCodes['a'];
