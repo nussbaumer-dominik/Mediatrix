@@ -108,6 +108,8 @@ class RGBWScheinwerfer extends Scheinwerfer
             unset($erg['hue']);
         }
 
+        var_dump($erg);
+
         return $erg;
     }
 }
