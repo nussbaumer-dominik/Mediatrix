@@ -16,7 +16,7 @@ class Mixer {
 
   //Verbindung mit Mischpult herstellen
   public function connectToScui($ipAddress) {
-    $url = $ipAddress . "/socket.io";
+    /*$url = $ipAddress . "/socket.io";
     $req = curl_init();
     curl_setopt($req, CURLOPT_URL, $this->$url);
     curl_setopt($req, CURLOPT_RETURNTRANSFER, TRUE);
@@ -40,7 +40,7 @@ class Mixer {
           return array("success" => false, "err" => $ex);
       }
 
-      $this->conn->send("TEST");
+      $this->conn->send("TEST");*/
   }
 
   //Mute Befehl erstellen
