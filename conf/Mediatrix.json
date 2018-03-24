@@ -80,6 +80,7 @@
     "dbPerClick":0.5,
     "maxVolume":98,
     "minVolume":0,
+    "iniVolume":49,
     "sources":{
       "0":{
         "a":"gjkdsf",

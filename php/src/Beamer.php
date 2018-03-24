@@ -89,7 +89,7 @@ class Beamer
     function on()
     {
         if($this->isOn()){
-            array("success"=>true,"err"=>"");
+            return array("success"=>true,"err"=>"");
         }
 
         echo "Beamer on \n";

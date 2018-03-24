@@ -22,6 +22,7 @@ class AV
     private $sources;
     private $gpio;
     private $powerCodes;
+    private $iniLevel;
 
     /**
      * AV constructor.
@@ -34,7 +35,7 @@ class AV
      * @param int $gpio
      * @param array $powerCodes
      */
-    function __construct(array $source, array $volumeCodes, array $presets, $volumeSteps, $maxVolume, $minVolume, int $gpio, array $powerCodes)
+    function __construct(array $source, array $volumeCodes, array $presets, $volumeSteps, $maxVolume, $minVolume, int $gpio, array $powerCodes, $iniVolume)
     {
 
         $this->ir = new \IR();
@@ -81,6 +82,10 @@ class AV
         $this->maxVolume = $maxVolume;
 
         $this->minVolume = $minVolume;
+
+        $this->iniLevel = $iniVolume;
+
+        $this->on();
 
 
         /*//set Volume Level to min Vaule ad then to half
@@ -204,7 +209,9 @@ class AV
     function on()
     {
         if($this->isOn()){
-            array("success"=>true,"err"=>"");
+            $this->volumeLevel = $this->iniLevel;
+
+            return array("success"=>true,"err"=>"");
         }
 
         echo "AV on \n";
@@ -216,6 +223,10 @@ class AV
 
         //send IR code
         $r = json_decode(str_replace("'",'"',$this->ir->send($code,5)));
+
+        if($r->success){
+            $this->volumeLevel = $this->iniLevel;
+        }
 
         //return Result
         return $r;
