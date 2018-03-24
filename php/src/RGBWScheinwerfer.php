@@ -27,8 +27,8 @@ class RGBWScheinwerfer extends Scheinwerfer
         if(count($val) == 4 && count($this->channels) == 4){
             if(isset($this->channels['w']) && isset($val['w'])) {
                 $data[$this->channels['w']] = $val['w'];
-            }else if(isset($this->channels['hue']) && isset($val['hue'])){
-                $data[$this->channels['hue']] = $val['hue'];
+            }else if(isset($this->channels['hue'])){
+                $data[$this->channels['hue']] = 255;
             }else{
                 return (object) array("success"=>false,"err"=>"Worng Channels for Scheinwerfer");
             }
@@ -36,7 +36,7 @@ class RGBWScheinwerfer extends Scheinwerfer
 
         if(count($val) == 5 && count($this->channels) == 5){
             $data[$this->channels['w']] = $val['w'];
-            $data[$this->channels['hue']] = $val['hue'];
+            $data[$this->channels['hue']] = 255;
         }
 
         var_dump($data);
