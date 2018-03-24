@@ -65,6 +65,19 @@ class AV
         $this->presets = $presets;
 
 
+        echo "konstruktor:\n";
+        var_dump($powerCodes);
+
+        $powerCodes['lastSendA'] = false;
+
+        $this->powerCodes = $powerCodes;
+
+
+        $this->gpio = $gpio;
+
+        exec('gpio -g mode '.$gpio.' in');
+
+
         $this->volumeSteps = $volumeSteps;
 
         $this->maxVolume = $maxVolume;
@@ -78,19 +91,6 @@ class AV
         $this->setVolumeLevel($minVolume);
 
         $this->setVolumeLevel($minVolume + ($maxVolume-$minVolume)/2);
-
-
-        echo "konstruktor:\n";
-        var_dump($powerCodes);
-
-        $powerCodes['lastSendA'] = false;
-
-        $this->powerCodes = $powerCodes;
-
-
-        $this->gpio = $gpio;
-
-        exec('gpio -g mode '.$gpio.' in');
 
     }
 
