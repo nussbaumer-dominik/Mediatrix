@@ -101,7 +101,7 @@ def my_callback(channel):
         if GPIO.input(18): # and check again the input
             print("Movement!")
 
-GPIO.add_event_detect(7, GPIO.RISING, callback=my_callback, bouncetime=300)
+GPIO.add_event_detect(18, GPIO.RISING, callback=my_callback, bouncetime=300)
 
 
 if __name__ == '__main__':
