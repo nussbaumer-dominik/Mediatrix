@@ -107,4 +107,4 @@ GPIO.add_event_detect(7, GPIO.RISING, callback=my_callback, bouncetime=300)
 if __name__ == '__main__':
 
     #main()
-
+    print "los"
