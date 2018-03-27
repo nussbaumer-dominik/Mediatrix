@@ -1,13 +1,16 @@
 #!usr/bin/python
 
-import time
 import RPi.GPIO as GPIO
+from time import sleep
+
+GPIO.setwarnings(False)			#disable warnings
 
 GPIO.setmode(GPIO.BCM) # GPIO Nummern statt Board Nummern
 
 # SET GPIO Button-Pin
 btn = 15
 door = 8
+PWMpin = 13				# PWM pin zum Anschluss des Luefters (PWM1 33,35)
 
 #Relais
 rs = 2 #Relais Fur Lautsprecher
@@ -20,14 +23,13 @@ GPIO.setup(door, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
 GPIO.setup(rs, GPIO.OUT)
 GPIO.setup(rp, GPIO.OUT)
 
+GPIO.setup(PWMpin,GPIO.OUT)
+
 
 #Einschalten
 
 pstate = 0 #Zustand des Systems Strom (1=Ein, 0=Aus)
 sstate = 0 #Zustand des Systems Lautsprecher (1=Ein, 0=Aus)
-
-
-
 
 
 
@@ -67,14 +69,6 @@ def fanCon(mt):
 
 
 def pwm():
-
-    import RPi.GPIO as GPIO
-    from time import sleep
-
-    PWMpin = 33				# PWM pin zum Anschluss des Luefters (PWM1 33,35)
-    GPIO.setwarnings(False)			#disable warnings
-    GPIO.setmode(GPIO.BOARD)		#set pin numbering system
-    GPIO.setup(PWMpin,GPIO.OUT)
     fan_pwm = GPIO.PWM(PWMpin,100)		#create PWM instance with frequency
     fan_pwm.start(0)				#start PWM of required Duty Cycle
     while True:
@@ -110,7 +104,7 @@ def switchPower(evt):
 
     if pstate == 0:
         GPIO.output(rp, GPIO.HIGH) # an
-        time.sleep(20)
+        sleep(20)
         sstate = 1
         GPIO.output(rs, GPIO.HIGH) # an
         pstate = 1
@@ -118,7 +112,7 @@ def switchPower(evt):
     if pstate == 1:
         sstate = 0
         GPIO.output(rs, GPIO.LOW)  #aus
-        time.sleep(1)
+        sleep(1)
         GPIO.output(rp, GPIO.LOW)  #aus
         pstate = 0
 
