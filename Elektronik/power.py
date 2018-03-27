@@ -110,3 +110,4 @@ if __name__ == '__main__':
     print "los"
     while True:
         print "cool"
+        sleep(10)
