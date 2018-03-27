@@ -64,6 +64,8 @@ def main():
 def switchPower(evt):
     global sstate, pstate
 
+    GPIO.remove_event_detect(btn)
+
     print "changing Power-State"
     print pstate
 
@@ -80,6 +82,8 @@ def switchPower(evt):
         time.sleep(1)
         GPIO.output(rp, GPIO.LOW)  #aus
         pstate = 0
+
+    GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower, bouncetime=300)
 
 
 
