@@ -125,7 +125,7 @@ def switchSpeaker(evt):
     global sstate
 
     print "changing Speaker-State"
-    print pstate
+    print sstate
 
     GPIO.remove_event_detect(door)
 
