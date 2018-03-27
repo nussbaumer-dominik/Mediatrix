@@ -54,6 +54,8 @@ def main():
 
         time.sleep(0.03)
 
+        print value;
+
     return 0
 
 
