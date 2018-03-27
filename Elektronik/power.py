@@ -64,6 +64,7 @@ def main():
 def switchPower(evt):
 
     print "changing Power-State"
+    print pstate
 
     if pstate == 0:
         GPIO.output(rp, GPIO.HIGH) # an
