@@ -61,7 +61,9 @@ def main():
 
 
 #Strom schalten
-def switchPower():
+def switchPower(evt):
+
+    print "changing Power-State"
 
     if pstate == 0:
         GPIO.output(rp, GPIO.HIGH) # an
@@ -86,14 +88,6 @@ def switchSpeaker():
     if sstate == 1:
         GPIO.output(rs, GPIO.LOW) # aus
         sstate = 0
-
-
-
-var=1
-counter = 0
-
-
-
 
 GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower, bouncetime=300)
 
