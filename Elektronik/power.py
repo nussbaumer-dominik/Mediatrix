@@ -88,7 +88,23 @@ def switchSpeaker():
         sstate = 0
 
 
+
+var=1
+counter = 0
+
+
+GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+
+def my_callback(channel):
+    if var == 1:
+        sleep(1.5)  # confirm the movement by waiting 1.5 sec
+        if GPIO.input(18): # and check again the input
+            print("Movement!")
+
+GPIO.add_event_detect(7, GPIO.RISING, callback=my_callback, bouncetime=300)
+
+
 if __name__ == '__main__':
 
-    main()
+    #main()
 
