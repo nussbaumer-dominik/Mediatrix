@@ -144,7 +144,7 @@ def switchSpeaker(evt):
 
 
 GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower, bouncetime=300)
-GPIO.add_event_detect(door, GPIO.RISING, callback=switchPower, bouncetime=300)
+GPIO.add_event_detect(door, GPIO.RISING, callback=switchSpeaker, bouncetime=300)
 
 
 if __name__ == '__main__':
