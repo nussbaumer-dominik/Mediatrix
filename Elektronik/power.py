@@ -15,7 +15,7 @@ rs = 2 #Relais Für Lautsprecher
 rp = 3 #Relais für Strom //momentan für test
 
 # GPIO Modus zuweisen
-GPIO.setup(btn, GPIO.IN)
+GPIO.setup(btn, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
 GPIO.setup(door, GPIO.IN)
 
 GPIO.setup(rs, GPIO.OUT)
