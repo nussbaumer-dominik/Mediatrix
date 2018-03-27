@@ -16,7 +16,7 @@ rp = 3 #Relais für Strom //momentan für test
 
 # GPIO Modus zuweisen
 GPIO.setup(btn, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
-GPIO.setup(door, GPIO.IN)
+GPIO.setup(door, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
 
 GPIO.setup(rs, GPIO.OUT)
 GPIO.setup(rp, GPIO.OUT)
@@ -88,7 +88,11 @@ def switchPower(evt):
 
 
 #Lautsprecher schalten
-def switchSpeaker():
+def switchSpeaker(evt):
+    global sstate
+
+    GPIO.remove_event_detect(door)
+
     if sstate == 0:
         GPIO.output(rs, GPIO.HIGH) # an
         sstate = 1
@@ -97,7 +101,12 @@ def switchSpeaker():
         GPIO.output(rs, GPIO.LOW) # aus
         sstate = 0
 
+    GPIO.add_event_detect(door, GPIO.RISING, callback=switchPower, bouncetime=300)
+
+
+
 GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower, bouncetime=300)
+GPIO.add_event_detect(door, GPIO.RISING, callback=switchPower, bouncetime=300)
 
 
 if __name__ == '__main__':
