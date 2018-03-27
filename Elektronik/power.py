@@ -62,6 +62,7 @@ def main():
 
 #Strom schalten
 def switchPower(evt):
+    global sstate, pstate
 
     print "changing Power-State"
     print pstate
