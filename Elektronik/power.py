@@ -8,7 +8,6 @@ GPIO.setmode(GPIO.BCM) # GPIO Nummern statt Board Nummern
 
 # SET GPIO Button-Pin
 btn = 15
-panel = 7
 door = 8
 
 #Relais
@@ -17,7 +16,6 @@ rp = 3 #Relais für Strom //momentan für test
 
 # GPIO Modus zuweisen
 GPIO.setup(btn, GPIO.IN)
-GPIO.setup(panel, GPIO.IN)
 GPIO.setup(door, GPIO.IN)
 
 GPIO.setup(rs, GPIO.OUT)
@@ -44,16 +42,6 @@ def main():
                 print "gedrueckt"
                 main()
                 switchPower(pstate, sstate)
-
-        time.sleep(0.03)
-
-
-# Magnetkontakt Panel abfragen
-
-        if GPIO.input(panel):
-            print "offen"
-            main()
-            switchSpeaker(sstate)
 
         time.sleep(0.03)
 
@@ -99,7 +87,6 @@ def switchSpeaker():
 
 
 if __name__ == '__main__':
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setup(btn, GPIO.IN)
+
     main()
 

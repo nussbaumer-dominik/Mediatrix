@@ -28,6 +28,8 @@ def fanCon(mt):
     if mt > st:
         rpm=(mt-st)*190     #Umdrehungen Pro Minute
         prozent=(mt-st)*5   #Prozent der Drehzahl
+        if prozent > 100:
+            prozent = 100
 
     return prozent
 
@@ -57,6 +59,10 @@ def pwm():
 
         if prozent > 20:
             fan_pwm.ChangeDutyCycle(prozent) #provide duty cycle in the range 0-100
+            sleep(2)
+
+        if prozent < 20:
+            fan_pwm.ChangeDutyCycle(0)
             sleep(2)
 
 
