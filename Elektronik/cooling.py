@@ -137,7 +137,7 @@ def switchSpeaker(evt):
         GPIO.output(rs, GPIO.LOW) # aus
         sstate = 0
 
-    GPIO.add_event_detect(door, GPIO.RISING, callback=switchPower, bouncetime=300)
+    GPIO.add_event_detect(door, GPIO.RISING, callback=switchSpeaker, bouncetime=300)
 
 
 
