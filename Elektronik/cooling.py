@@ -10,8 +10,8 @@ btn = 15
 door = 8
 
 #Relais
-rs = 2 #Relais Für Lautsprecher
-rp = 3 #Relais für Strom //momentan für test
+rs = 2 #Relais Fur Lautsprecher
+rp = 3 #Relais fur Strom //momentan fur test
 
 # GPIO Modus zuweisen
 GPIO.setup(btn, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
