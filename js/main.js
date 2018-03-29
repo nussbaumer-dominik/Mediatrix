@@ -412,7 +412,7 @@ $(function() {
 
 	function liveStatus() {
 		buildStatus("Master", ini.live.av.volume, "dB");
-		buildStatus("Beamer", ini.live.beamer.source, "");
+		//buildStatus("Beamer", ini.live.beamer.source, "");
 		buildStatus("Helligkeit", ini.live.dmx[0], "");
 	}
 

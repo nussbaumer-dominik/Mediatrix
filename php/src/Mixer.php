@@ -9,7 +9,7 @@ class Mixer {
 	protected $mixer;
 	protected $command = "3:::SETD^i.";
 	protected $alive = "3:::ALIVE";
-	protected $conn;
+	//protected $conn;
 
 	//Konstruktor
 	public function __construct(string $ipAddress) {
@@ -33,7 +33,7 @@ class Mixer {
 
 		try {
 			$conn = new Client("ws://" . $ipAddress . "/socket.io/1/websocket/" . $session_id);
-
+			echo $conn;
 			echo $conn->receive(); 
 		}catch (Exception $ex){
 			return array("success" => false, "err" => $ex);
@@ -55,7 +55,8 @@ class Mixer {
 
 	public function alive() {
 		echo "Alive\n";
-		$this->$conn->send($alive);
+		//$this->$conn->send($alive);
+		$conn->send($alive);
 	}
 
 	public function setLineVolume($val) {
