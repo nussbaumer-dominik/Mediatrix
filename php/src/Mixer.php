@@ -55,7 +55,7 @@ class Mixer {
 
 	public function alive() {
 		echo "Alive\n";
-		$this->$mixer->send($alive);
+		//$this->$mixer->send($alive);
 	}
 
 	public function setLineVolume($val) {
