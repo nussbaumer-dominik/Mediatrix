@@ -478,15 +478,18 @@ $(function() {
 	}
 
 	function chmod() {
+		var mode = "";
 		console.log($(this).is(":checked"));
 		if ($(this).is(":checked")) {
 			var data = new FormData();
 			data.append("jwt", jwt);
 			data.append("ex", 1);
+			mode = "ex";
 		} else {
 			var data = new FormData();
 			data.append("jwt", jwt);
 			data.append("base", 1);
+			mode = "base";
 		}
 
 		$.ajax({
@@ -503,7 +506,10 @@ $(function() {
 			complete: function(data) {}
 		})
 			.done(function(data) {
-				console.log("success: " + data);
+				if (mode == "ex") {
+				} else if (mode == "base") {
+				}
+				console.log("success: " + mode);
 			})
 			.fail(function(data) {
 				console.log("error: ");
@@ -653,6 +659,15 @@ $(function() {
 	function setSlider(id, val) {
 		var slider = document.getElementById(id);
 		slider.noUiSlider.set(val);
+	}
+
+	function toggleBase() {
+		toggleFlexContainer(0);
+		togglePresMode(1);
+	}
+
+	function toggleEx() {
+		toggleFlexContainer(1);
 	}
 
 	//Slider initialisieren, je nach dem, welche gerade im Markup eingeblendet sind
