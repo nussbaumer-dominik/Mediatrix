@@ -42,6 +42,7 @@ $(function() {
 			presets = ini.ini.presets;
 			liveStatus();
 			getPresets();
+			toggleBase();
 		} else {
 			console.log("message: " + event.data);
 			console.log(event);
@@ -723,6 +724,4 @@ $(function() {
 			});
 		});
 	}
-
-	toggleBase();
 });
