@@ -495,9 +495,9 @@ $(function() {
 	}
 
 	function chmod() {
-		var mode = "";
-		console.log($(this).is(":checked"));
-		if ($(this).is(":checked")) {
+		var mode = $(this).is(":checked");
+		console.log(mode);
+		if (mode) {
 			var data = new FormData();
 			data.append("jwt", jwt);
 			data.append("ex", 1);
@@ -523,9 +523,9 @@ $(function() {
 			complete: function(data) {}
 		})
 			.done(function(data) {
-				if (mode == "ex") {
+				if (mode) {
 					toggleEx();
-				} else if (mode == "base") {
+				} else {
 					toggleBase();
 				}
 				console.log("success: " + mode + " " + data);
@@ -682,6 +682,7 @@ $(function() {
 	function toggleBase() {
 		toggleFlexContainer(0);
 		togglePresMode(1);
+		toggleStatus(0);
 	}
 
 	function toggleEx() {
