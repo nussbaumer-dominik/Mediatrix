@@ -8,7 +8,6 @@ class Mixer {
 	protected $session_id;
 	protected $mixer;
 	protected $command = "3:::SETD^i.";
-	protected $alive = "3:::ALIVE";
 
 	//Konstruktor
 	public function __construct(string $ipAddress) {
