@@ -35,7 +35,7 @@ class Mixer {
 			$this->mixer->send("Hallo");
 
 			echo $this->mixer->receive(); 
-		}catch (Exception $ex){
+		} catch (Exception $ex){
 			return array("success" => false, "err" => $ex);
 			echo "Error";
 			print "Error";
