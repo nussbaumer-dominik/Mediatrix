@@ -13,7 +13,6 @@ class Mixer {
 	//Konstruktor
 	public function __construct(string $ipAddress) {
 		$this->connectToScui($ipAddress);
-		print $mixer;
 	}
 
 	//Verbindung mit Mischpult herstellen
@@ -32,7 +31,7 @@ class Mixer {
 		curl_close ($req);
 
 		try {
-			print $mixer;
+			print $this->$mixer;
 			$this->$mixer = new Client("ws://" . $ipAddress . "/socket.io/1/websocket/" . $session_id);
 
 			echo $this->$mixer->receive(); 
