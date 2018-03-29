@@ -494,12 +494,6 @@ $(function() {
 			traditional: true,
 			method: "POST",
 			data: data,
-			contentType: false,
-			processData: false,
-			xhrFields: {
-				withCredentials: true
-			},
-			crossDomain: true,
 			complete: function(data) {}
 		})
 			.done(function(data) {
