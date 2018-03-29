@@ -119,7 +119,7 @@ class Application implements MessageComponentInterface
                         var_dump($key);
                         var_dump($val);
 
-                        if(!(is_null($this->mikrofone[$key])) && is_numeric($val) && $val >= 0 && $val <= 1){
+                        if(!(is_null($this->mikrofone[$key])) && $val >= 0 && $val <= 1){
                             $r = $this->mikrofone[$key]->setVolume($val);
                             $r['success'] ?: array_push($result, $r);
                         }else
