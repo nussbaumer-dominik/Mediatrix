@@ -490,7 +490,7 @@ $(function() {
 		}
 
 		$.ajax({
-			url: "/Mediatrix/php/src/changeuserMode.php",
+			url: "/Mediatrix/php/src/changeUserMode.php",
 			traditional: true,
 			method: "POST",
 			data: data,
