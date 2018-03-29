@@ -73,12 +73,12 @@ $(function() {
 				);
 				var data = {
 					av: {
-						volume: slider.get() / 100,
+						volume: slider.get(),
 						channel: slider.target.getAttribute("data-id")
 					}
 				};
 				conf.av = {
-					volume: slider.get() / 100,
+					volume: slider.get(),
 					channel: slider.target.getAttribute("data-id")
 				};
 				send(data);
