@@ -479,6 +479,37 @@ $(function() {
 
 	function chmod() {
 		console.log($(this).is(":checked"));
+		if ($(this).is(":checked")) {
+			var data = new FormData();
+			data.append("jwt", jwt);
+			data.append("ex", 1);
+		} else {
+			var data = new FormData();
+			data.append("jwt", jwt);
+			data.append("base", 1);
+		}
+
+		$.ajax({
+			url: "/Mediatrix/php/src/changeuserMode.php",
+			traditional: true,
+			method: "POST",
+			data: data,
+			contentType: false,
+			processData: false,
+			xhrFields: {
+				withCredentials: true
+			},
+			crossDomain: true,
+			complete: function(data) {}
+		})
+			.done(function(data) {
+				console.log("success: " + data);
+			})
+			.fail(function(data) {
+				console.log("error: ");
+				console.log(data);
+				ev.defaultPrevented;
+			});
 	}
 
 	$(".tgl").on("click", chmod);
