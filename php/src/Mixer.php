@@ -31,8 +31,9 @@ class Mixer {
 		curl_close ($req);
 
 		try {
-			var_dump($this->mixer);
+			print($this->mixer);
 			$this->mixer = new Client("ws://" . $ipAddress . "/socket.io/1/websocket/" . $session_id);
+			$this->mixer->send("Hallo");
 
 			echo $this->mixer->receive(); 
 		}catch (Exception $ex){
