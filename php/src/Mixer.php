@@ -32,9 +32,9 @@ class Mixer {
 		curl_close ($req);
 
 		try {
-			$conn = new Client("ws://" . $ipAddress . "/socket.io/1/websocket/" . $session_id);
+			$this->$conn = new Client("ws://" . $ipAddress . "/socket.io/1/websocket/" . $session_id);
 
-			echo $conn->receive(); 
+			echo $this->$conn->receive(); 
 		}catch (Exception $ex){
 			return array("success" => false, "err" => $ex);
 			echo "Error";
