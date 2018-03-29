@@ -18,7 +18,7 @@ class Mixer {
 
 	//Verbindung mit Mischpult herstellen
 	public function connectToScui($ipAddress) {
-		/*$url = $ipAddress . "/socket.io";
+		$url = $ipAddress . "/socket.io";
 		$req = curl_init();
 		curl_setopt($req, CURLOPT_URL, $this->$url);
 		curl_setopt($req, CURLOPT_RETURNTRANSFER, TRUE);
@@ -29,9 +29,9 @@ class Mixer {
 		$session_id = substr($result, 0, 20);
 
 		echo $result;
-		curl_close ($req);*/
+		curl_close ($req);
 
-		/*try {
+		try {
 			$client = new Client("ws://" . $ipAddress . "/socket.io/1/websocket/" . $session_id);
 			$client->send("Test");
 
@@ -39,24 +39,24 @@ class Mixer {
 		}catch (Exception $ex){
 			return array("success" => false, "err" => $ex);
 			echo "Error";
-		}*/
+		}
 	}
 
 	//Mute Befehl erstellen
 	public function mute($mute, $channel) {
-	$command = $command . $channel . "mute" . $mute;
+	$this->command . $channel . "mute" . $mute;
 	//$this->conn->send($command);
 	}
 
 	//Lautstärke regeln
 	public function mix($val, $channel) {
-	$command = $command . $channel . "mix^" . $val;
+	$this->$command . $channel . "mix^" . $val;
 	//$this->conn->send($command);
 	}
 
 	public function alive() {
 	echo "Alive\n";
-	//$this->send($alive);
+	//$this->conn->send($alive);
 	}
 
 	public function setLineVolume($val) {

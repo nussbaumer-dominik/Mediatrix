@@ -38,6 +38,7 @@ window.onload = function() {
 				console.log("error: ");
 				console.log(data);
 				ev.defaultPrevented;
+				ev.preventDefault();
 			});
 	}
 
@@ -48,12 +49,14 @@ window.onload = function() {
 		//überprüfen, ob alle Felder ausgefüllt sind
 		if (username === "" || password === "") {
 			ev.defaultPrevented; // form submit verhindern
+			ev.preventDefault();
 			console.log("Bitte füllen Sie alle Felder aus.");
 			alert("Bitte füllen Sie alle Felder aus.");
 			return false;
 		} else if (username && password) {
 			login(username, password);
 			ev.defaultPrevented;
+			ev.preventDefault();
 		}
 	});
 };
