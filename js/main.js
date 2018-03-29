@@ -3,6 +3,7 @@ $(function() {
 	var socket,
 		ini,
 		sessId,
+		presetStart = 0,
 		presets,
 		jwt = localStorage.getItem("jwt");
 	var on = false,
@@ -433,7 +434,7 @@ $(function() {
 	$("#savePreset").on("click", setPreset);
 
 	function getPresets() {
-		for (let i = 0; i < Object.keys(presets).length; i++) {
+		for (let i = presetStart; i < Object.keys(presets).length; i++) {
 			console.log(presets[i].name + " conf:");
 			console.log(presets[i].conf);
 
@@ -467,6 +468,7 @@ $(function() {
 				);
 			}
 			$(".presentation").append(div);
+			presetStart++;
 		}
 		$(".preset").on("click", selectPreset);
 	}
