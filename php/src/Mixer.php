@@ -28,7 +28,7 @@ class Mixer {
 
 		$session_id = substr($result, 0, 20);
 
-		echo $result;
+		echo $session_id;
 		curl_close ($req);
 
 		try {
