@@ -13,7 +13,6 @@ class Mixer {
 	//Konstruktor
 	public function __construct(string $ipAddress) {
 		$this->connectToScui($ipAddress);
-		$this->mixer;
 	}
 
 	//Verbindung mit Mischpult herstellen
@@ -44,7 +43,7 @@ class Mixer {
 
 	//Mute Befehl erstellen
 	public function mute($mute, $channel) {
-		$this->command . $channel . "mute" . $mute;
+		$this->command . $channel . "mute^" . $mute;
 		//$this->$mixer->send($command);
 	}
 
