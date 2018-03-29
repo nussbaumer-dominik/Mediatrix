@@ -657,6 +657,9 @@ $(function() {
 
 			case 1:
 				$(".statusBox").addClass("toggleStatus");
+				break;
+			case 2:
+				$(".statusBox").removeClass("toggleStatus");
 		}
 	}
 
@@ -683,7 +686,7 @@ $(function() {
 	function toggleBase() {
 		toggleFlexContainer(0);
 		togglePresMode(1);
-		toggleStatus(0);
+		toggleStatus(2);
 		$(".savePreset").css("display", "none");
 		$(".side-nav ul").css("display", "none");
 	}
