@@ -93,8 +93,10 @@ $(function() {
 					var data = {
 						mixer: {
 							mikrofone: {
-								volume: slider.get() / 100,
-								channel: slider.target.getAttribute("data-id")
+								channel: parseInt(
+									slider.target.getAttribute("data-id")
+								),
+								volume: slider.get() / 100
 							}
 						}
 					};
