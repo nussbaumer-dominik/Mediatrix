@@ -415,7 +415,7 @@ $(function() {
 	$("#savePreset").on("click", setPreset);
 
 	function getPresets() {
-		for (let i = 0; i <= Object.keys(presets).length; i++) {
+		for (let i = 0; i < Object.keys(presets).length; i++) {
 			console.log(presets[i]);
 			console.log(presets[i].name + " conf:");
 			console.log(presets[i].conf);
