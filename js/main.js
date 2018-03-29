@@ -42,7 +42,8 @@ $(function() {
 			liveStatus();
 			getPresets();
 		} else {
-			console.log("message: " + event);
+			console.log("message: " + event.data);
+			console.log(event);
 			$(".statusGrid").empty();
 			liveStatus();
 		}
@@ -418,9 +419,6 @@ $(function() {
 		for (let i = 0; i < Object.keys(presets).length; i++) {
 			console.log(presets[i].name + " conf:");
 			console.log(presets[i].conf);
-			/*for(let j=0;i<Object.keys(presets[i].conf).length;j++){
-              console.log(j);
-            }*/
 
 			var div = $("<div/>", {
 				class: "preset"
