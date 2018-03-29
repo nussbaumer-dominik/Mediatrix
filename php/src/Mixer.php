@@ -6,7 +6,7 @@ class Mixer {
 
 	//Variablen
 	protected $session_id;
-	public $mix;
+	protected $mixer = "";
 	protected $command = "3:::SETD^i.";
 	protected $alive = "3:::ALIVE";
 
@@ -31,10 +31,10 @@ class Mixer {
 		curl_close ($req);
 
 		try {
-			print $this->$mix;
-			$this->$mix = new Client("ws://" . $ipAddress . "/socket.io/1/websocket/" . $session_id);
+			print $this->$mixer;
+			$this->$mixer = new Client("ws://" . $ipAddress . "/socket.io/1/websocket/" . $session_id);
 
-			echo $this->$mix->receive(); 
+			echo $this->$mixer->receive(); 
 		}catch (Exception $ex){
 			return array("success" => false, "err" => $ex);
 			echo "Error";
@@ -51,7 +51,7 @@ class Mixer {
 	//Lautstärke regeln
 	public function mix($val, $channel) {
 		$this->$command . $channel . "mix^" . $val;
-		$this->$mix->send($command);
+		$this->$mixer->send($command);
 	}
 
 	public function alive() {
