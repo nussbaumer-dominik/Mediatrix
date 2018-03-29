@@ -9,7 +9,6 @@ class Mixer {
 	protected $mixer;
 	protected $command = "3:::SETD^i.";
 	protected $alive = "3:::ALIVE";
-	protected $conn;
 
 	//Konstruktor
 	public function __construct(string $ipAddress) {
@@ -32,41 +31,42 @@ class Mixer {
 		curl_close ($req);
 
 		try {
-			$this->$conn = new Client("ws://" . $ipAddress . "/socket.io/1/websocket/" . $session_id);
+			$this->$mixer = new Client("ws://" . $ipAddress . "/socket.io/1/websocket/" . $session_id);
 
-			echo $this->$conn->receive(); 
+			echo $this->$mixer->receive(); 
 		}catch (Exception $ex){
 			return array("success" => false, "err" => $ex);
 			echo "Error";
+			print "Error";
 		}
 	}
 
 	//Mute Befehl erstellen
 	public function mute($mute, $channel) {
 		$this->command . $channel . "mute" . $mute;
-		//$this->$conn->send($command);
+		//$this->$mixer->send($command);
 	}
 
 	//Lautstärke regeln
 	public function mix($val, $channel) {
 		$this->$command . $channel . "mix^" . $val;
-		$this->$conn->send($command);
+		$this->$mixer->send($command);
 	}
 
 	public function alive() {
 		echo "Alive\n";
-		$this->$conn->send($alive);
+		$this->$mixer->send($alive);
 	}
 
 	public function setLineVolume($val) {
 		$commandl = "3:::SETD^l.0.mix^" . $val;
 		$commandr = "3:::SETD^l.1.mix^" . $val;
-		//$this->$conn->send($commandl);
-		//$this->$conn->send($commandr);
+		//$this->$mixer->send($commandl);
+		//$this->$mixer->send($commandr);
 	}
 
 	public function setMasterVolume($val) {
 		$command = "3:::SETD^m.mix^" . $val;
-		//$this->$conn->send($command);
+		//$this->$mixer->send($command);
 	}
 }
