@@ -494,6 +494,11 @@ $(function() {
 			traditional: true,
 			method: "POST",
 			data: data,
+
+			xhrFields: {
+				withCredentials: true
+			},
+			crossDomain: true,
 			complete: function(data) {}
 		})
 			.done(function(data) {
