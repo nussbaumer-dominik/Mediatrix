@@ -396,21 +396,38 @@ $(function() {
 		var name = $("#presetName").val();
 		currentConf["name"] = name;
 		currentConf["conf"] = conf;
-		/*var request = $.ajax({
-            url: '',
-            success: function(data) {
-                sessId = data.substring(0, 20);
-            }
-            }).done(function() {
+		var data = new FormData();
+		data.append("jwt", jwt);
+		data.append("name", name);
+		data.append("conf", conf);
 
-        });*/
 		$.snackbar({
 			content:
 				"Das Preset " +
 				$("#presetName").val() +
 				" wurde erfolgreich erstellt"
 		});
-		send(conf);
+
+		$.ajax({
+			url: "/Mediatrix/php/src/savePreset.php",
+			traditional: true,
+			method: "POST",
+			data: data,
+			contentType: false,
+			processData: false,
+			xhrFields: {
+				withCredentials: true
+			},
+			crossDomain: true,
+			complete: function(data) {}
+		})
+			.done(function(data) {
+				console.log("success: " + data);
+			})
+			.fail(function(data) {
+				console.log("error: ");
+				console.log(data);
+			});
 	}
 
 	$("#savePreset").on("click", setPreset);
@@ -507,14 +524,15 @@ $(function() {
 		})
 			.done(function(data) {
 				if (mode == "ex") {
+					toggleEx();
 				} else if (mode == "base") {
+					toggleBase();
 				}
-				console.log("success: " + mode);
+				console.log("success: " + mode + " " + data);
 			})
 			.fail(function(data) {
 				console.log("error: ");
 				console.log(data);
-				ev.defaultPrevented;
 			});
 	}
 
@@ -668,6 +686,8 @@ $(function() {
 
 	function toggleEx() {
 		toggleFlexContainer(1);
+		togglePresMode(2);
+		toggleStatus(1);
 	}
 
 	//Slider initialisieren, je nach dem, welche gerade im Markup eingeblendet sind
