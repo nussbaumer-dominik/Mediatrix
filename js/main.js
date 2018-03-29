@@ -86,7 +86,10 @@ $(function() {
 				break;
 			case "mixer":
 				var id = slider.target.getAttribute("data-id");
-				if (parseInt(id)) {
+				if (!isNaN(id)) {
+					console.log(
+						"Dieser Slider ist von einem Mixer: " + slider.get()
+					);
 					var data = {
 						mixer: {
 							mikrofone: {
@@ -104,10 +107,6 @@ $(function() {
 				} else if (id == "m") {
 				} else if (id == "l") {
 				}
-
-				console.log(
-					"Dieser Slider ist von einem Mixer: " + slider.get()
-				);
 
 				send(data);
 				return data;
