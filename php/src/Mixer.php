@@ -33,7 +33,6 @@ class Mixer {
 
 		try {
 			$conn = new Client("ws://" . $ipAddress . "/socket.io/1/websocket/" . $session_id);
-			//$conn->send("Hallo");
 
 			echo $conn->receive(); 
 		}catch (Exception $ex){
@@ -51,13 +50,12 @@ class Mixer {
 	//Lautstärke regeln
 	public function mix($val, $channel) {
 		$this->$command . $channel . "mix^" . $val;
-		//$this->$conn->send($command);
+		$this->$conn->send($command);
 	}
 
 	public function alive() {
 		echo "Alive\n";
 		//$this->$conn->send($alive);
-		$this->$conn->send($alive);
 	}
 
 	public function setLineVolume($val) {
