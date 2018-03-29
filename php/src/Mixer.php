@@ -6,7 +6,7 @@ class Mixer {
 
 	//Variablen
 	protected $session_id;
-	protected $mixer;
+	protected $mixer = Client;
 	protected $command = "3:::SETD^i.";
 	protected $alive = "3:::ALIVE";
 
@@ -27,7 +27,7 @@ class Mixer {
 
 		$session_id = substr($result, 0, 20);
 
-		echo $session_id;
+		echo $session_id . " ";
 		curl_close ($req);
 
 		try {
