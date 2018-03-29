@@ -6,7 +6,7 @@ class Mixer {
 
 	//Variablen
 	protected $session_id;
-	protected $mixer = "";
+	protected $mixer;
 	protected $command = "3:::SETD^i.";
 	protected $alive = "3:::ALIVE";
 
@@ -31,7 +31,6 @@ class Mixer {
 		curl_close ($req);
 
 		try {
-			print $this->$mixer;
 			$this->$mixer = new Client("ws://" . $ipAddress . "/socket.io/1/websocket/" . $session_id);
 
 			echo $this->$mixer->receive(); 

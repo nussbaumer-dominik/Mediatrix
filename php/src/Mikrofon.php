@@ -6,8 +6,7 @@
  * Time: 08:26
  */
 namespace Mediatrix;
-class Mikrofon
-{
+class Mikrofon {
     protected $mixer;
     protected $channelId;
     function __construct($mixer, $channelId)
@@ -17,10 +16,10 @@ class Mikrofon
     }
     function setVolume($value){
         return array("success" => true, "err" => "");
-        //$this->mixer->mix($value, $this->channelId);
+        $this->mixer->mix($value, $this->channelId);
     }
     function mute($muted){
         return array("success" => true, "err" => "");
-        //$this->mixer->mute($muted, $this->channelId);
+        $this->mixer->mute($muted, $this->channelId);
     }
 }
