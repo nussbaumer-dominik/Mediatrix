@@ -31,17 +31,15 @@ class Mixer {
 		echo $result;
 		curl_close ($req);*/
 
-		try {
+		/*try {
 			$client = new Client("ws://" . $ipAddress . "/socket.io/1/websocket/" . $session_id);
-			$client->send("Hallo");
+			$client->send("Test");
 
 			echo $client->receive(); 
 		}catch (Exception $ex){
 			return array("success" => false, "err" => $ex);
 			echo "Error";
-		}
-
-		$this->conn->send("TEST");
+		}*/
 	}
 
 	//Mute Befehl erstellen
