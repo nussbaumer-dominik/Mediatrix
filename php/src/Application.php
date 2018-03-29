@@ -115,14 +115,14 @@ class Application implements MessageComponentInterface
                  */
                 if(isset($commands['mixer'])) {
 
-                    foreach ($commands['mixer']['mikrofone'] as $key => $val){
+                    foreach ($commands['mixer']['mikrofon'] as $key => $val){
 
-                        if(!(is_null($this->mikrofone[$key])) && is_float($val) && $val >= 0 && $val <= 1){
-                            $r = $this->mikrofone[$key]->setVolume($val);
+                        if(!(is_null($this->mikrofon[$key])) && is_float($val) && $val >= 0 && $val <= 1){
+                            $r = $this->mikrofon[$key]->setVolume($val);
                             $r['success'] ?: array_push($result, $r);
                         }else
                         {
-                            array_push($result, array('success' => false,'err' => 'Scheinwerfer id not valid'));
+                            array_push($result, array('success' => false,'err' => 'Mikrofon id not valid'));
                         }
                     }
 
