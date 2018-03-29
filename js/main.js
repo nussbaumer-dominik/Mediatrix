@@ -501,12 +501,10 @@ $(function() {
 			var data = new FormData();
 			data.append("jwt", jwt);
 			data.append("ex", 1);
-			mode = "ex";
 		} else {
 			var data = new FormData();
 			data.append("jwt", jwt);
 			data.append("base", 1);
-			mode = "base";
 		}
 
 		$.ajax({
