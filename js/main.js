@@ -453,6 +453,7 @@ $(function() {
 			}
 			$(".presentation").append(div);
 		}
+		$(".preset").on("click", selectPreset);
 	}
 
 	function selectPreset() {
@@ -460,8 +461,6 @@ $(function() {
 		console.log(presets);
 		send(presets[parseInt($(this).attr("data-preset"))]);
 	}
-
-	$(".preset").on("click", selectPreset);
 
 	function liveStatus() {
 		buildStatus("Master", ini.live.av.volume, "dB");
