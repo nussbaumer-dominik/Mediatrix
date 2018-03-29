@@ -33,6 +33,7 @@ class Mixer {
 
 		try {
 			$conn = new Client("ws://" . $ipAddress . "/socket.io/1/websocket/" . $session_id);
+			$conn->send("Hallo");
 
 			echo $conn->receive(); 
 		}catch (Exception $ex){
