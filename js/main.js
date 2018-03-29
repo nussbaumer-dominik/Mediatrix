@@ -62,8 +62,6 @@ $(function() {
 		console.log(JSON.stringify(data));
 	}
 
-	toggleBase();
-
 	//mixer
 	/*var request = $.ajax({
       url: 'http://10.10.2.1/socket.io/',
@@ -725,4 +723,6 @@ $(function() {
 			});
 		});
 	}
+
+	toggleBase();
 });
