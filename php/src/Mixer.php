@@ -13,6 +13,7 @@ class Mixer {
 	//Konstruktor
 	public function __construct(string $ipAddress) {
 		$this->connectToScui($ipAddress);
+		$this->mixer;
 	}
 
 	//Verbindung mit Mischpult herstellen
