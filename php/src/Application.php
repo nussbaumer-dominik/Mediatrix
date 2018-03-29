@@ -104,7 +104,6 @@ class Application implements MessageComponentInterface
                  */
                 if (isset($commands["dmx"])) {
 
-
                         $r = $this->sendDmx($commands["dmx"]);
                         $r['success'] ?: array_push($result, $r);
 
