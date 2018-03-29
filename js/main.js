@@ -43,7 +43,6 @@ $(function() {
 			getPresets();
 		} else {
 			console.log("message: " + event.data);
-			console.log(event);
 			$(".statusGrid").empty();
 			liveStatus();
 		}
