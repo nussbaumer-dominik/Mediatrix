@@ -58,14 +58,13 @@ class Mixer {
 	}
 
 	public function setLineVolume($val) {
-		$commandl = "3:::SETD^l.0.mix^" . $val;
-		$commandr = "3:::SETD^l.1.mix^" . $val;
-		$this->mixer->send($commandl);
-		$this->mixer->send($commandr);
+		echo $val . " ";
+		$this->mixer->send("3:::SETD^l.0.mix^" . $val);
+		$this->mixer->send("3:::SETD^l.1.mix^" . $val);
 	}
 
 	public function setMasterVolume($val) {
-		$command = "3:::SETD^m.mix^" . $val;
-		$this->mixer->send($command);
+		echo $val . " ";
+		$this->mixer->send("3:::SETD^m.mix^" . $val);
 	}
 }

@@ -97,20 +97,6 @@ $(function() {
 						}
 					];
 
-					/*{
-					"mixer":{
-						"mikrofone":[
-						{
-							"id":0,
-							"volume":0.67
-						}
-						],
-						"master":0.67,
-						"line":0.67
-					}
-
-					}*/
-
 					console.log(data);
 					send(data);
 					conf.mixer.mikrofone = [
