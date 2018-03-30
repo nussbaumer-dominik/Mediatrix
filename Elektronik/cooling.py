@@ -99,6 +99,8 @@ def switchPower(evt):
 
     GPIO.remove_event_detect(btn)
 
+    sleep(1)
+
     if GPIO.input(btn):
         print "changing Power-State"
         print pstate
