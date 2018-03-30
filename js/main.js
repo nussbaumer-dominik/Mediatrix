@@ -5,7 +5,8 @@ $(function() {
 		sessId,
 		presetStart = 0,
 		presets,
-		jwt = localStorage.getItem("jwt");
+		jwt = localStorage.getItem("jwt"),
+		Mikrofone = [];
 	var on = false,
 		currentConf = {
 			name: "",
@@ -73,12 +74,12 @@ $(function() {
 				);
 				var data = {
 					av: {
-						volume: slider.get(),
+						value: slider.get(),
 						channel: slider.target.getAttribute("data-id")
 					}
 				};
 				conf.av = {
-					volume: slider.get(),
+					value: slider.get(),
 					channel: slider.target.getAttribute("data-id")
 				};
 				send(data);
@@ -90,22 +91,32 @@ $(function() {
 					console.log(
 						"Dieser Slider ist von einem Mixer: " + slider.get()
 					);
-					var data = {
-						mixer: {
-							mikrofone: {
-								channel: slider.target.getAttribute("data-id"),
-								volume: slider.get() / 100
-							}
+					var data = { mixer: [] };
+
+					var mixer = {
+						mikrofone: {
+							id: slider.target.getAttribute("data-id"),
+							value: slider.get() / 100
 						}
 					};
+					Mikrofone.push(mixer);
+					data.mixer = Mikrofone;
+					console.log(Mikrofone);
+					console.log(data);
 					conf.mixer = {
 						mikrofone: {
-							volume: slider.get() / 100,
-							channel: slider.target.getAttribute("data-id")
+							id: slider.target.getAttribute("data-id"),
+							value: slider.get() / 100
 						}
 					};
 				} else if (id == "m") {
+					var mixer = {
+						master: slider.get() / 100
+					};
 				} else if (id == "l") {
+					var mixer = {
+						master: slider.get() / 100
+					};
 				}
 
 				send(data);
