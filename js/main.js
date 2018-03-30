@@ -97,7 +97,7 @@ $(function() {
 						value: slider.get() / 100
 					};
 
-					data.mixer.push(mic);
+					data.mixer = mic;
 					console.log(mic);
 					console.log(data);
 					send(data);
