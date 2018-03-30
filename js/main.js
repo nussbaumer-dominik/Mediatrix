@@ -90,27 +90,15 @@ $(function() {
 						"Dieser Slider ist von einem Mixer: " + slider.get()
 					);
 					var data = { mixer: [] };
-					/*var tmp = [];
 					var mic = {
 						id: id,
 						value: slider.get() / 100
 					};
-					tmp.push(mic);*/
-					var mic = { id: id, value: slider.get() / 100 };
 
 					data.mixer.push(mic);
-
-					/*data.mixer["mikrofone"] = {};
-
-					data.mixer["mikrofone"].id = id;
-					data.mixer["mikrofone"].value = slider.get() / 100;*/
-
-					//data.mixer = tmp;
-					//console.log(tmp);
 					console.log(data);
-					console.log(JSON.stringify(data));
 					send(data);
-					//conf.mixer = mic;
+					conf.mixer.push(mic);
 				} else if (id == "m") {
 					var mixer = {
 						master: slider.get() / 100
