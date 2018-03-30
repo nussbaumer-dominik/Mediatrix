@@ -51,8 +51,9 @@ class Mixer {
 
 	//Lautstärke regeln
 	public function mix($val, $channel) {
-		$this->$command = $this->$command . $channel . "mix^" . $val;
-		$this->mixer->send($this->$command);
+		echo $this->command;
+		$this->command . $channel . "mix^" . $val;
+		$this->mixer->send($this->command);
 	}
 
 	public function alive() {
