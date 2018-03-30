@@ -120,7 +120,9 @@ def switchPower(evt):
     print pstate
     print sstate
 
-    GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower, bouncetime=300)
+    sleep(2)
+
+    GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower)
 
 
 
@@ -155,7 +157,7 @@ def speakerOff(evt):
 
 
 
-GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower, bouncetime=20000)
+GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower)
 GPIO.add_event_detect(door, GPIO.FALLING, callback=speakerOff, bouncetime=300)
 
 
