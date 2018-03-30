@@ -96,11 +96,14 @@ $(function() {
 						value: slider.get() / 100
 					};
 					tmp.push(mic);*/
+					var mic = { id: id, value: slider.get() / 100 };
 
-					data.mixer["mikrofone"] = {};
+					data.mixer["mikrofone"].push(mic);
+
+					/*data.mixer["mikrofone"] = {};
 
 					data.mixer["mikrofone"].id = id;
-					data.mixer["mikrofone"].value = slider.get() / 100;
+					data.mixer["mikrofone"].value = slider.get() / 100;*/
 
 					//data.mixer = tmp;
 					//console.log(tmp);
