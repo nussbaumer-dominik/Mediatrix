@@ -97,17 +97,17 @@ $(function() {
 					};
 					tmp.push(mic);*/
 
-					data.mixer.mikrofone = {};
+					data.mixer["mikrofone"] = {};
 
-					data.mixer.mikrofone.id = id;
-					data.mixer.mikrofone.value = slider.get() / 100;
+					data.mixer["mikrofone"].id = id;
+					data.mixer["mikrofone"].value = slider.get() / 100;
 
 					//data.mixer = tmp;
 					//console.log(tmp);
 					console.log(data);
 					console.log(JSON.stringify(data));
 					send(data);
-					conf.mixer = mic;
+					//conf.mixer = mic;
 				} else if (id == "m") {
 					var mixer = {
 						master: slider.get() / 100
