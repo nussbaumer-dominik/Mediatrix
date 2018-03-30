@@ -14,7 +14,7 @@ $(function() {
 		conf = {
 			av: {},
 			dmx: {},
-			mixer: [],
+			mixer: {},
 			beamer: {}
 		};
 
@@ -89,16 +89,17 @@ $(function() {
 					console.log(
 						"Dieser Slider ist von einem Mixer: " + slider.get()
 					);
-					var data = { mixer: [] };
-					var mic = {
-						id: id,
-						value: slider.get() / 100
-					};
+					var data = { mixer: {} };
+					data.mixer = [
+						{
+							id: id,
+							value: slider.get() / 100
+						}
+					];
 
-					data.mixer.push(mic);
 					console.log(data);
 					send(data);
-					conf.mixer.push(mic);
+					conf.mixer = [{ id: id, value: slider.get() / 100 }];
 				} else if (id == "m") {
 					var mixer = {
 						master: slider.get() / 100
