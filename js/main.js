@@ -19,7 +19,6 @@ $(function() {
 			beamer: {}
 		};
 
-	//socket = new WebSocket('wss://10.0.0.121/wss');
 	socket = new WebSocket("wss://10.0.0.144/wss");
 
 	//wirft eine Exception
@@ -99,6 +98,7 @@ $(function() {
 							value: slider.get() / 100
 						}
 					};
+
 					Mikrofone.push(mixer);
 					data.mixer = Mikrofone;
 					console.log(Mikrofone);
@@ -120,7 +120,6 @@ $(function() {
 			case "hue":
 				console.log(
 					"Dieser Slider ist von einem DMX Gerät: " +
-						"Id: " +
 						slider.target.getAttribute("data-id") +
 						" " +
 						slider.get()
