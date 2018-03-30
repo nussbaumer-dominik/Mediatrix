@@ -137,7 +137,6 @@ def speakerOn(evt):
     sstate = 1
 
     GPIO.add_event_detect(door, GPIO.FALLING, callback=speakerOff, bouncetime=300)
-    GPIO.add_event_detect(door, GPIO.RISING, callback=speakerOn, bouncetime=300)
 
 
 def speakerOff(evt):
@@ -151,7 +150,6 @@ def speakerOff(evt):
     GPIO.output(rs, GPIO.LOW) # aus
     sstate = 0
 
-    GPIO.add_event_detect(door, GPIO.FALLING, callback=speakerOff, bouncetime=300)
     GPIO.add_event_detect(door, GPIO.RISING, callback=speakerOn, bouncetime=300)
 
 
@@ -159,7 +157,6 @@ def speakerOff(evt):
 
 GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower, bouncetime=900)
 GPIO.add_event_detect(door, GPIO.FALLING, callback=speakerOff, bouncetime=300)
-GPIO.add_event_detect(door, GPIO.RISING, callback=speakerOn, bouncetime=300)
 
 
 if __name__ == '__main__':

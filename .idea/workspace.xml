@@ -28,8 +28,8 @@
       <file leaf-file-name="cooling.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Elektronik/cooling.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="161" column="52" lean-forward="false" selection-start-line="161" selection-start-column="52" selection-end-line="161" selection-end-column="52" />
+            <state relative-caret-position="281">
+              <caret line="158" column="78" lean-forward="false" selection-start-line="158" selection-start-column="78" selection-end-line="158" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -939,13 +939,6 @@
       <workItem from="1520871051662" duration="1218000" />
       <workItem from="1521826085975" duration="5653000" />
     </task>
-    <task id="LOCAL-00158" summary="debug float values for step max and min volume av">
-      <created>1521850946070</created>
-      <option name="number" value="00158" />
-      <option name="presentableId" value="LOCAL-00158" />
-      <option name="project" value="LOCAL" />
-      <updated>1521850946070</updated>
-    </task>
     <task id="LOCAL-00159" summary="add ini Volume Level to Av">
       <created>1521851273021</created>
       <option name="number" value="00159" />
@@ -1282,11 +1275,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522398364031</updated>
     </task>
-    <option name="localTasksCounter" value="207" />
+    <task id="LOCAL-00207" summary="python dev">
+      <created>1522398427119</created>
+      <option name="number" value="00207" />
+      <option name="presentableId" value="LOCAL-00207" />
+      <option name="project" value="LOCAL" />
+      <updated>1522398427119</updated>
+    </task>
+    <option name="localTasksCounter" value="208" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160153000" />
+    <option name="totallyTimeSpent" value="160408000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1719,8 +1719,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Elektronik/cooling.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="161" column="52" lean-forward="false" selection-start-line="161" selection-start-column="52" selection-end-line="161" selection-end-column="52" />
+        <state relative-caret-position="281">
+          <caret line="158" column="78" lean-forward="false" selection-start-line="158" selection-start-column="78" selection-end-line="158" selection-end-column="78" />
           <folding />
         </state>
       </provider>
