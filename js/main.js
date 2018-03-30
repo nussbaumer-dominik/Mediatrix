@@ -92,7 +92,7 @@ $(function() {
 					var data = { mixer };
 
 					var mixer = [];
-					mixer["mikrofone"] = {
+					mixer.mikrofone = {
 						id: id,
 						value: slider.get() / 100
 					};
