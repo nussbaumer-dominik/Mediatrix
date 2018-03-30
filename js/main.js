@@ -6,7 +6,7 @@ $(function() {
 		presetStart = 0,
 		presets,
 		jwt = localStorage.getItem("jwt"),
-	var on = false,
+		on = false,
 		currentConf = {
 			name: "",
 			conf: {}
