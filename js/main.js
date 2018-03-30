@@ -97,7 +97,7 @@ $(function() {
 						value: slider.get() / 100
 					};*/
 
-					var mic = {};
+					var mic = [];
 					mic.mikrofone = {
 						id: id,
 						value: slider.get() / 100
