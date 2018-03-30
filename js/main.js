@@ -6,7 +6,6 @@ $(function() {
 		presetStart = 0,
 		presets,
 		jwt = localStorage.getItem("jwt"),
-		Mikrofone = [];
 	var on = false,
 		currentConf = {
 			name: "",
@@ -104,9 +103,7 @@ $(function() {
 						}
 					};*/
 
-					Mikrofone.push(mixer);
-					console.log("Mikrofon Array: " + Mikrofone);
-					data.mixer = mixer[0];
+					data.mixer.push(mixer);
 					console.log("data.mixer: " + mixer);
 					send(data);
 					conf.mixer = mixer;
