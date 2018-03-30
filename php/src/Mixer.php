@@ -33,7 +33,6 @@ class Mixer {
 		try {
 			echo($this->mixer);
 			$this->mixer = new Client("ws://" . $ipAddress . "/socket.io/1/websocket/" . $session_id);
-			$this->mixer->send("Hallo");
 
 			echo $this->mixer->receive();
 		} catch (Exception $ex){
@@ -52,6 +51,7 @@ class Mixer {
 	//Lautstärke regeln
 	public function mix($val, $channel) {
 		//$this->command = $this->command . $channel . "mix^" . $val;
+		echo $this->command = $this->command . $channel . ".mix^" . $val;
 		$this->mixer->send($this->command = $this->command . $channel . ".mix^" . $val);
 	}
 
