@@ -461,9 +461,9 @@ $(function() {
 		})
 			.done(function(data) {
 				if (mode) {
-					toggleBase();
-				} else {
 					toggleEx();
+				} else {
+					toggleBase();
 				}
 				console.log("success: mode: " + mode + " " + data);
 			})
