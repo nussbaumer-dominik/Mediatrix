@@ -99,8 +99,6 @@ $(function() {
 						}
 					};
 
-					//{"mixer":[{"mikrofone":{"id":"0","value":0.01}}]
-
 					Mikrofone.push(mixer);
 					data.mixer.push(mixer);
 					console.log(Mikrofone);
@@ -457,12 +455,12 @@ $(function() {
 			complete: function(data) {}
 		})
 			.done(function(data) {
-				if (mode) {
+				if (!mode) {
 					toggleEx();
 				} else {
 					toggleBase();
 				}
-				console.log("success: " + mode + " " + data);
+				console.log("success: mode: " + mode + " " + data);
 			})
 			.fail(function(data) {
 				console.log("error: ");
