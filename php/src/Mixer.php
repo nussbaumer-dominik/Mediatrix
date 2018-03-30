@@ -45,13 +45,12 @@ class Mixer {
 
 	//Mute Befehl erstellen
 	public function mute($mute, $channel) {
-		$this->command . $channel . "mute^" . $mute;
+		$this->command . $channel . ".mute^" . $mute;
 		//$this->mixer->send($command);
 	}
 
 	//Lautstärke regeln
 	public function mix($val, $channel) {
-		echo " " . $this->command;
 		//$this->command = $this->command . $channel . "mix^" . $val;
 		$this->mixer->send($this->command = $this->command . $channel . ".mix^" . $va);
 	}
