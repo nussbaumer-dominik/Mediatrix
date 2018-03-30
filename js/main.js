@@ -98,7 +98,7 @@ $(function() {
 					tmp.push(mic);*/
 					var mic = { id: id, value: slider.get() / 100 };
 
-					data.mixer = mic;
+					data.mixer.push(mic);
 
 					/*data.mixer["mikrofone"] = {};
 
