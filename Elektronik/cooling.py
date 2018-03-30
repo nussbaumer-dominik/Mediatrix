@@ -155,7 +155,7 @@ def speakerOff(evt):
 
 
 
-GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower, bouncetime=900)
+GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower, bouncetime=20000)
 GPIO.add_event_detect(door, GPIO.FALLING, callback=speakerOff, bouncetime=300)
 
 
