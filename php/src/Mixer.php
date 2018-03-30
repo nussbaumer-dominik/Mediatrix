@@ -56,7 +56,7 @@ class Mixer {
 	}
 
 	public function alive() {
-		echo "Alive\n";
+		echo "Alive " . "3:::ALIVE\n";
 		$this->mixer->send("3:::ALIVE");
 	}
 

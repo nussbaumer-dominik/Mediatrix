@@ -92,8 +92,8 @@ $(function() {
 					);
 					var data = { mixer: [] };
 
-					var mixer = {};
-					mixer["mikrofone"] = {
+					var mixer = [];
+					mixer.mikrofone = {
 						id: id,
 						value: slider.get() / 100
 					};
@@ -106,7 +106,7 @@ $(function() {
 
 					Mikrofone.push(mixer);
 					data.mixer.push(mixer);
-					console.log(Mikrofone);
+					console.log(mixer);
 					send(data);
 					conf.mixer = mixer;
 				} else if (id == "m") {
