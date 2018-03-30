@@ -124,6 +124,8 @@ def switchPower(evt):
 def switchSpeaker(evt):
     global sstate
 
+    GPIO.remove_event_detect(door)
+
     print "changing Speaker-State"
     print sstate
 
