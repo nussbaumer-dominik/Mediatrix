@@ -89,7 +89,7 @@ $(function() {
 					console.log(
 						"Dieser Slider ist von einem Mixer: " + slider.get()
 					);
-					var data = { mixer };
+					var data = { mixer: [] };
 					/*var tmp = [];
 					var mic = {
 						id: id,
@@ -97,21 +97,10 @@ $(function() {
 					};
 					tmp.push(mic);*/
 
-					var array = [];
-					var obj = {};
-					var mic = { id: id, value: slider.get() / 100 };
+					data.mixer.mikrofone = {};
 
-					obj["mikrofone"] = mic;
-					array.push(obj);
-
-					/*var obj = {};
-					obj[x] = y;
-					array.push(obj);
-
-					{[x]: y}*/
-
-					console.log(obj);
-					console.log(array);
+					data.mixer.mikrofone.id = id;
+					data.mixer.mikrofone.value = slider.get() / 100;
 
 					//data.mixer = tmp;
 					//console.log(tmp);
