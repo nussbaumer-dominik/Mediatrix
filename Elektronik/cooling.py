@@ -125,7 +125,7 @@ def switchPower(evt):
 
 
 #Lautsprecher schalten
-def switchSpeaker(evt):
+def speakerOn(evt):
     global sstate
 
     GPIO.remove_event_detect(door)
@@ -133,22 +133,33 @@ def switchSpeaker(evt):
     print "changing Speaker-State"
     print sstate
 
-    if sstate == 0:
-        GPIO.output(rs, GPIO.HIGH) # an
-        sstate = 1
+    GPIO.output(rs, GPIO.HIGH) # an
+    sstate = 1
 
-    if sstate == 1:
-        GPIO.output(rs, GPIO.LOW) # aus
-        sstate = 0
+    GPIO.add_event_detect(door, GPIO.FALLING, callback=SpeakerOff, bouncetime=300)
+    GPIO.add_event_detect(door, GPIO.RISING, callback=SpeakerOn, bouncetime=300)
 
-    GPIO.add_event_detect(door, GPIO.RISING, callback=switchSpeaker, bouncetime=300)
 
+def speakerOff(evt):
+    global sstate
+
+    GPIO.remove_event_detect(door)
+
+    print "changing Speaker-State"
+    print sstate
+
+    GPIO.output(rs, GPIO.LOW) # aus
+    sstate = 0
+
+    GPIO.add_event_detect(door, GPIO.FALLING, callback=SpeakerOff, bouncetime=300)
+    GPIO.add_event_detect(door, GPIO.RISING, callback=SpeakerOn, bouncetime=300)
 
 
 
 
 GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower, bouncetime=900)
-GPIO.add_event_detect(door, GPIO.FALLING, callback=switchSpeaker, bouncetime=2000)
+GPIO.add_event_detect(door, GPIO.FALLING, callback=SpeakerOff, bouncetime=300)
+GPIO.add_event_detect(door, GPIO.RISING, callback=SpeakerOn, bouncetime=300)
 
 
 if __name__ == '__main__':
