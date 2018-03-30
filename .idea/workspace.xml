@@ -38,8 +38,8 @@
       <file leaf-file-name="power.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Elektronik/power.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="38" column="8" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
+            <state relative-caret-position="-115">
+              <caret line="30" column="11" lean-forward="false" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -48,7 +48,7 @@
       <file leaf-file-name="speaker.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Elektronik/speaker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
+            <state relative-caret-position="515">
               <caret line="53" column="23" lean-forward="true" selection-start-line="52" selection-start-column="12" selection-end-line="53" selection-end-column="23" />
               <folding />
             </state>
@@ -950,13 +950,6 @@
       <workItem from="1520871051662" duration="1218000" />
       <workItem from="1521826085975" duration="5653000" />
     </task>
-    <task id="LOCAL-00169" summary="debug hue in rgbw scheinwerfer">
-      <created>1521891612663</created>
-      <option name="number" value="00169" />
-      <option name="presentableId" value="LOCAL-00169" />
-      <option name="project" value="LOCAL" />
-      <updated>1521891612663</updated>
-    </task>
     <task id="LOCAL-00170" summary="debug hue in rgbw scheinwerfer">
       <created>1521891662937</created>
       <option name="number" value="00170" />
@@ -1293,11 +1286,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522405534962</updated>
     </task>
-    <option name="localTasksCounter" value="218" />
+    <task id="LOCAL-00218" summary="python dev">
+      <created>1522405776255</created>
+      <option name="number" value="00218" />
+      <option name="presentableId" value="LOCAL-00218" />
+      <option name="project" value="LOCAL" />
+      <updated>1522405776255</updated>
+    </task>
+    <option name="localTasksCounter" value="219" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165037000" />
+    <option name="totallyTimeSpent" value="165269000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1729,7 +1729,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Elektronik/speaker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
+        <state relative-caret-position="515">
           <caret line="53" column="23" lean-forward="true" selection-start-line="52" selection-start-column="12" selection-end-line="53" selection-end-column="23" />
           <folding />
         </state>
@@ -1737,8 +1737,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Elektronik/power.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="38" column="8" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
+        <state relative-caret-position="-115">
+          <caret line="30" column="11" lean-forward="false" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
           <folding />
         </state>
       </provider>

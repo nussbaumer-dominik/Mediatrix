@@ -27,7 +27,8 @@ sstate = 0 #Zustand des Systems Lautsprecher (1=Ein, 0=Aus)
 
 #Strom schalten
 def switchPower():
-    global sstate, pstate
+    global sstate
+    global pstate
 
     print "changing Power-State"
     print pstate
