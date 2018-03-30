@@ -115,10 +115,10 @@ class Application implements MessageComponentInterface
                  */
                 if(isset($commands['mixer'])) {
 
-                    foreach ($commands['mixer']['mikrofone'] as $key => $val){
+                    foreach ($commands['mixer']['mikrofone'] as $val){
 
-                        if(!(is_null($this->mikrofone[$key])) && is_float($val) && $val >= 0 && $val <= 1){
-                            $r = $this->mikrofone[$key]->setVolume($val);
+                        if(!(is_null($this->mikrofone[$val['id']])) && is_float($val['value']) && $val['value'] >= 0 && $val['value'] <= 1){
+                            $r = $this->mikrofone[$val['id']]->setVolume($val['value']);
                             $r['success'] ?: array_push($result, $r);
                         }else
                         {
@@ -132,8 +132,8 @@ class Application implements MessageComponentInterface
                         $r['success'] ?: array_push($result, $r);
                     }
 
-                    if(isset($commands['mixer']['line']) && is_float($commands['mixer']['master']) && $commands['mixer']['master'] >= 0 &&
-                        $commands['mixer']['master'] <= 1){
+                    if(isset($commands['mixer']['line']) && is_float($commands['mixer']['line']) && $commands['mixer']['line'] >= 0 &&
+                        $commands['mixer']['line'] <= 1){
                         $r = $this->mixer->setLineVolume($commands['mixer']['line']);
                         $r['success'] ?: array_push($result, $r);
                     }
