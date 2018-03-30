@@ -129,8 +129,6 @@ def switchSpeaker(evt):
     print "changing Speaker-State"
     print sstate
 
-    GPIO.remove_event_detect(door)
-
     if sstate == 0:
         GPIO.output(rs, GPIO.HIGH) # an
         sstate = 1
@@ -145,8 +143,8 @@ def switchSpeaker(evt):
 
 
 
-GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower, bouncetime=300)
-GPIO.add_event_detect(door, GPIO.RISING, callback=switchSpeaker, bouncetime=300)
+GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower, bouncetime=500)
+GPIO.add_event_detect(door, GPIO.RISING, callback=switchSpeaker, bouncetime=500)
 
 
 if __name__ == '__main__':
