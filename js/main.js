@@ -19,7 +19,7 @@ $(function() {
 			beamer: {}
 		};
 
-	socket = new WebSocket("wss://192.168.1.2/wss");
+	socket = new WebSocket("wss://10.0.0.144/wss");
 
 	//wirft eine Exception
 	socket.onerror = function(error) {
