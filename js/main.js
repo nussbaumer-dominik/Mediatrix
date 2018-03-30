@@ -105,8 +105,9 @@ $(function() {
 					};*/
 
 					Mikrofone.push(mixer);
-					data.mixer = mixer;
-					console.log(mixer);
+					console.log("Mikrofon Array: " + Mikrofone);
+					data.mixer = mixer[0];
+					console.log("data.mixer: " + mixer);
 					send(data);
 					conf.mixer = mixer;
 				} else if (id == "m") {
