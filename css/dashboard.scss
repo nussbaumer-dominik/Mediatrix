@@ -781,7 +781,8 @@ a {
 		align-items: center;
 	}
 
-	#mikroSliderWrapper:nth-child(1) {
+	#mikroSliderWrapper:nth-child(1),
+	#mikroSliderWrapper:nth-child(2) {
 		margin-right: 20px;
 	}
 
