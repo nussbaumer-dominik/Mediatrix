@@ -34,8 +34,11 @@ def switchPower():
     print sstate
 
     if pstate == 0:
+
+        print pstate
+        print sstate
         GPIO.output(rp, GPIO.HIGH) # an
-        sleep(1)
+        sleep(20)
         sstate = 1
         GPIO.output(rs, GPIO.HIGH) # an
         pstate = 1
@@ -46,9 +49,6 @@ def switchPower():
         sleep(1)
         GPIO.output(rp, GPIO.LOW)  #aus
         pstate = 0
-
-    print pstate
-    print sstate
 
 
 if __name__ == '__main__':
