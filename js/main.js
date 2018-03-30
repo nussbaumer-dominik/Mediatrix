@@ -93,14 +93,14 @@ $(function() {
 					var data = { mixer: [] };
 
 					var mikrofon = {
-						id: slider.target.getAttribute("data-id"),
+						id: id,
 						value: slider.get() / 100
 					};
 
 					//{"mixer":[{"mikrofone":{"id":"0","value":0.01}}]
 
 					Mikrofone.push(mikrofon);
-					data.mixer = Mikrofon;
+					data.mixer = Mikrofone;
 					console.log("Mikrofone: " + Mikrofone);
 					send(data);
 					conf.mixer = mikrofon;
