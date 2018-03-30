@@ -89,13 +89,7 @@ $(function() {
 					console.log(
 						"Dieser Slider ist von einem Mixer: " + slider.get()
 					);
-					var data = { mixer };
-
-					//var mixer = [];
-					/*mixer.mikrofone = {
-						id: id,
-						value: slider.get() / 100
-					};*/
+					var data = { mixer: [] };
 
 					var mic = [];
 					mic["mikrofone"] = {
@@ -103,8 +97,9 @@ $(function() {
 						value: slider.get() / 100
 					};
 
-					data.mixer = mic;
+					data.mixer.push(mic);
 					console.log(mic);
+					console.log(data);
 					send(data);
 					conf.mixer = mic;
 				} else if (id == "m") {
