@@ -35,7 +35,7 @@ class Mixer {
 			$this->mixer = new Client("ws://" . $ipAddress . "/socket.io/1/websocket/" . $session_id);
 			$this->mixer->send("Hallo");
 
-			echo $this->mixer->receive(); 
+			echo $this->mixer->receive();
 		} catch (Exception $ex){
 			return array("success" => false, "err" => $ex);
 			echo "Error";
