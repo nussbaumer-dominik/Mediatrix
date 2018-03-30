@@ -105,7 +105,7 @@ def switchPower(evt):
 
     if pstate == 0:
         GPIO.output(rp, GPIO.HIGH) # an
-        sleep(20)
+        sleep(1)
         sstate = 1
         GPIO.output(rs, GPIO.HIGH) # an
         pstate = 1
@@ -147,7 +147,7 @@ def switchSpeaker(evt):
 
 
 
-GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower, bouncetime=20000)
+GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower, bouncetime=300)
 GPIO.add_event_detect(door, GPIO.RISING, callback=switchSpeaker, bouncetime=2000)
 
 
