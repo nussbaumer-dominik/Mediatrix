@@ -455,10 +455,10 @@ $(function() {
 			complete: function(data) {}
 		})
 			.done(function(data) {
-				if (!mode) {
-					toggleEx();
-				} else {
+				if (mode) {
 					toggleBase();
+				} else {
+					toggleEx();
 				}
 				console.log("success: mode: " + mode + " " + data);
 			})

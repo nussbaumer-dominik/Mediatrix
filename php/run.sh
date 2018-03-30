@@ -26,7 +26,7 @@ sudo make install
 
 cd ../../php
 
-printf "\n#####Restart Apche:#####\n"
+printf "\n#####Restart Apache:#####\n"
 
 sudo service apache2 restart
 
