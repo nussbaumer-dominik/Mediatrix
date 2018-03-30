@@ -100,6 +100,7 @@ $(function() {
 					data.mixer = mic;
 					console.log(mic);
 					console.log(data);
+					console.log(JSON.stringify(data));
 					send(data);
 					conf.mixer = mic;
 				} else if (id == "m") {
