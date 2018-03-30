@@ -18,7 +18,7 @@ rp = 3 #Relais fur Strom //momentan fur test
 
 # GPIO Modus zuweisen
 GPIO.setup(btn, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
-GPIO.setup(door, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
+GPIO.setup(door, GPIO.IN, pull_up_down = GPIO.PUD_UP)
 
 GPIO.setup(rs, GPIO.OUT)
 GPIO.setup(rp, GPIO.OUT)
@@ -148,7 +148,7 @@ def switchSpeaker(evt):
 
 
 GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower, bouncetime=900)
-GPIO.add_event_detect(door, GPIO.RISING, callback=switchSpeaker, bouncetime=2000)
+GPIO.add_event_detect(door, GPIO.FALLING, callback=switchSpeaker, bouncetime=2000)
 
 
 if __name__ == '__main__':
