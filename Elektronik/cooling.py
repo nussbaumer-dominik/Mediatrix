@@ -101,7 +101,7 @@ def switchPower(evt):
 
     sleep(1)
 
-    if GPIO.input(btn):
+    if GPIO.input(btn) == GPIO.HIGH:
         print "changing Power-State"
         print pstate
         print sstate
