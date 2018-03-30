@@ -105,7 +105,7 @@ $(function() {
 					};*/
 
 					Mikrofone.push(mixer);
-					data.mixer.push(mixer);
+					data.mixer = mixer;
 					console.log(mixer);
 					send(data);
 					conf.mixer = mixer;
