@@ -92,12 +92,17 @@ $(function() {
 					);
 					var data = { mixer: [] };
 
-					var mixer = {
+					var mixer = [];
+					mixer["mikrofone"] = {
+						id: id,
+						value: slider.get() / 100
+					};
+					/*var mixer = {
 						mikrofone: {
 							id: id,
 							value: slider.get() / 100
 						}
-					};
+					};*/
 
 					Mikrofone.push(mixer);
 					data.mixer.push(mixer);
