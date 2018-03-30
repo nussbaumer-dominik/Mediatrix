@@ -15,11 +15,12 @@ class Mikrofon {
         $this->channelId = $channelId;
     }
     function setVolume($value){
-        return array("success" => true, "err" => "");
+        //return array("success" => true, "err" => "");
+        echo $value;
         $this->mixer->mix($value, $this->channelId);
     }
     function mute($muted){
-        return array("success" => true, "err" => "");
+        //return array("success" => true, "err" => "");
         $this->mixer->mute($muted, $this->channelId);
     }
 }
