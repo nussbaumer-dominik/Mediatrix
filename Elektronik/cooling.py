@@ -99,30 +99,31 @@ def switchPower(evt):
 
     GPIO.remove_event_detect(btn)
 
-    print "changing Power-State"
-    print pstate
-    print sstate
+    if GPIO.input(7):
+        print "changing Power-State"
+        print pstate
+        print sstate
 
-    if pstate == 0:
-        GPIO.output(rp, GPIO.HIGH) # an
-        sleep(1)
-        sstate = 1
-        GPIO.output(rs, GPIO.HIGH) # an
-        pstate = 1
+        if pstate == 0:
+            GPIO.output(rp, GPIO.HIGH) # an
+            sleep(1)
+            sstate = 1
+            GPIO.output(rs, GPIO.HIGH) # an
+            pstate = 1
 
-    if pstate == 1:
-        sstate = 0
-        GPIO.output(rs, GPIO.LOW)  #aus
-        sleep(1)
-        GPIO.output(rp, GPIO.LOW)  #aus
-        pstate = 0
+        if pstate == 1:
+            sstate = 0
+            GPIO.output(rs, GPIO.LOW)  #aus
+            sleep(1)
+            GPIO.output(rp, GPIO.LOW)  #aus
+            pstate = 0
 
-    print pstate
-    print sstate
+        print pstate
+        print sstate
 
-    sleep(2)
+        sleep(2)
 
-    GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower)
+        GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower)
 
 
 
