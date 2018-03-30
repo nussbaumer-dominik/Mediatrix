@@ -92,22 +92,16 @@ $(function() {
 					);
 					var data = { mixer: [] };
 
-					var mixer = {
-						mikrofone: {
-							id: slider.target.getAttribute("data-id"),
-							value: slider.get() / 100
-						}
+					var mikrofone = {
+						id: slider.target.getAttribute("data-id"),
+						value: slider.get() / 100
 					};
-
-					console.log(JSON.stringify(mixer.mikrofone));
-					console.log(JSON.stringify(mixer));
 
 					//{"mixer":[{"mikrofone":{"id":"0","value":0.01}}],"jwt":
 
 					Mikrofone.push(mixer);
 					data.mixer = Mikrofone;
-					console.log(Mikrofone);
-					console.log(data);
+					console.log("Mikrofone: " + Mikrofone);
 					send(data);
 					conf.mixer = Mikrofone;
 				} else if (id == "m") {
