@@ -89,7 +89,7 @@ $(function() {
 					console.log(
 						"Dieser Slider ist von einem Mixer: " + slider.get()
 					);
-					var data = { mixer };
+					var data = { mixer = [] };
 
 					//var mixer = [];
 					/*mixer.mikrofone = {
@@ -97,17 +97,16 @@ $(function() {
 						value: slider.get() / 100
 					};*/
 
-					var mixer = [
-						"mikrofone" = {
-							id: id,
-							value: slider.get() / 100
-						}
-					];
+					var mic = {};
+					mic.mikrofone = {
+						id: id,
+						value: slider.get() / 100
+					};
 
-					data.mixer = mixer;
-					console.log("data.mixer: " + mixer);
+					data.mixer = mic;
+					console.log("data.mixer: " + mic);
 					send(data);
-					conf.mixer = mixer;
+					conf.mixer = mic;
 				} else if (id == "m") {
 					var mixer = {
 						master: slider.get() / 100
