@@ -63,7 +63,7 @@ $(function() {
 	}
 
 	//Werte der Slider auslesen
-	function Slider(slider) {
+	var Slider = slider => {
 		switch (slider.target.getAttribute("data-type")) {
 			case "av":
 				console.log(
@@ -163,7 +163,7 @@ $(function() {
 				return data;
 				break;
 		}
-	}
+	};
 
 	function muteButton() {
 		var $this = $(this);
