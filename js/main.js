@@ -99,6 +99,11 @@ $(function() {
 						}
 					};
 
+					console.log(JSON.stringify(mixer.mikrofone));
+					console.log(JSON.stringify(mixer));
+
+					//{"mixer":[{"mikrofone":{"id":"0","value":0.01}}],"jwt":
+
 					Mikrofone.push(mixer);
 					data.mixer = Mikrofone;
 					console.log(Mikrofone);
