@@ -102,7 +102,7 @@ $(function() {
 					//{"mixer":[{"mikrofone":{"id":"0","value":0.01}}]
 
 					Mikrofone.push(mixer);
-					data.mixer = mixer;
+					data.mixer.push(mixer);
 					console.log(Mikrofone);
 					send(data);
 					conf.mixer = mixer;
