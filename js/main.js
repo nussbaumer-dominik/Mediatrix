@@ -15,7 +15,7 @@ $(function() {
 		conf = {
 			av: {},
 			dmx: {},
-			mixer: {},
+			mixer: [],
 			beamer: {}
 		};
 
@@ -103,24 +103,19 @@ $(function() {
 					data.mixer = Mikrofone;
 					console.log(Mikrofone);
 					console.log(data);
-					conf.mixer = {
-						mikrofone: {
-							id: slider.target.getAttribute("data-id"),
-							value: slider.get() / 100
-						}
-					};
+					send(data);
+					conf.mixer = Mikrofone;
 				} else if (id == "m") {
 					var mixer = {
 						master: slider.get() / 100
 					};
+					send(mixer);
 				} else if (id == "l") {
 					var mixer = {
 						master: slider.get() / 100
 					};
+					send(mixer);
 				}
-
-				send(data);
-				return data;
 				break;
 			case "hue":
 				console.log(
