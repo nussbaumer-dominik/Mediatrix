@@ -470,7 +470,7 @@ $(() => {
 		navigator.userAgent.match(/Mobi/);
 
 	//EventListener den Box Buttons hinzufügen
-	$(".boxButtons").on("click", () => {
+	$(".boxButtons").on("click", function() {
 		toggleFlexContainer(1);
 		togglePresMode(2);
 		toggleStatus(1);
@@ -624,7 +624,7 @@ $(() => {
 	};
 
 	//Slider initialisieren, je nach dem, welche gerade im Markup eingeblendet sind
-	var initSlider = container => {
+	var initSlider = function(container) {
 		var sliders = $(container).find(".slider");
 		var valueFields = $(container).find(".valueField");
 
@@ -644,8 +644,8 @@ $(() => {
 			});
 		});
 
-		sliders.each((i, slider) => {
-			this.noUiSlider.on("slide", (values, handle) => {
+		sliders.each(function(i, slider) {
+			this.noUiSlider.on("slide", function(values, handle) {
 				Slider(this);
 				valueFields.get(i).innerHTML = values[handle];
 			});
