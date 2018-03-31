@@ -372,30 +372,30 @@ $(function() {
 			}).attr("data-preset", i);
 			div.append("<h2>" + presets[i].name + "</h2>");
 			if (presets[i].conf.dmx) {
-				var count = presets[i].conf.export.filter(i => {
+				/*var count = presets[i].conf.export.filter(i => {
 					return i.id;
-				}).length;
-				/*var count = 0;
-				for (var key in presets[i])
-					if (json.hasOwnProperty("id")) count++;*/
+				}).length;*/
+				var count = 0;
+				for (let key in presets[i].conf)
+					if (presets[i].conf.hasOwnProperty("id")) count++;
 				div.append(
 					"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
 						count +
 						"</h3> </div>"
 				);
-			} else if (presets[i].av) {
+			} else if (presets[i].conf.av) {
 				div.append(
 					"<div> <i class='fas fa-volume-up'> </i> <h3>" +
 						presets[i].conf.av.mode +
 						"</h3> </div>"
 				);
-			} else if (presets[i].beamer) {
+			} else if (presets[i].conf.beamer) {
 				div.append(
 					"<div> <i class='fas fa-video'> </i> <h3>" +
 						presets[i].conf.beamer +
 						"</h3> </div>"
 				);
-			} else if (presets[i].mixer) {
+			} else if (presets[i].conf.mixer) {
 				div.append(
 					"<div> <i class='fas fa-microphone'> </i> <h3>" +
 						presets[i].conf.mixer +
