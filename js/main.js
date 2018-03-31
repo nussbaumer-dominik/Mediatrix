@@ -1,5 +1,3 @@
-import { log } from "util";
-
 $(function() {
 	//Variablen
 	var socket,
