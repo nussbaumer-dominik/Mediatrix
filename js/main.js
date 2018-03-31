@@ -103,8 +103,8 @@ $(function() {
 						{ id: id, value: slider.get() / 100 }
 					];
 				} else if (id == "m") {
-					
-					var data.mixer = {
+					var data = { mixer: {} };
+					data.mixer = {
 						master: slider.get() / 100
 					};
 					send(data);
