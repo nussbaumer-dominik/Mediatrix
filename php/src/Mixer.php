@@ -35,6 +35,7 @@ class Mixer {
 			$this->mixer = new Client("ws://" . $ipAddress . "/socket.io/1/websocket/" . $session_id);
 
 			echo $this->mixer->receive();
+			return array("success" => true, "err" => "");
 		} catch (Exception $ex){
 			return array("success" => false, "err" => $ex);
 			echo "Error";
@@ -44,27 +45,52 @@ class Mixer {
 
 	//Mute Befehl erstellen
 	public function mute($mute, $channel) {
-		$this->mixer->send($this->command . $channel . ".mute^" . $mute);
+		try{
+			$this->mixer->send($this->command . $channel . ".mute^" . $mute);
+			return array("success" => true, "err" => "");
+		} catch(Exception $ex) {
+			return array("success" => false, "err" => $ex);
+		}
 	}
 
 	//Lautstärke regeln
 	public function mix($val, $channel) {
-		$this->mixer->send($this->command . $channel . ".mix^" . $val);
+		try {
+			$this->mixer->send($this->command . $channel . ".mix^" . $val);
+			return array("success" => true, "err" => "");
+		} catch(Exception $ex) {
+			return array("success" => false, "err" => $ex);
+		}
 	}
 
 	public function alive() {
-		echo "Alive " . "3:::ALIVE\n";
-		$this->mixer->send("3:::ALIVE");
+		try {
+			echo "Alive " . "3:::ALIVE\n";
+			$this->mixer->send("3:::ALIVE");
+			return array("success" => true, "err" => "");
+		} catch(Exception $ex) {
+			return array("success" => false, "err" => $ex);
+		}
 	}
 
 	public function setLineVolume($val) {
-		echo $val . " ";
-		$this->mixer->send("3:::SETD^l.0.mix^" . $val);
-		$this->mixer->send("3:::SETD^l.1.mix^" . $val);
+		echo $val . "";
+		try {
+			$this->mixer->send("3:::SETD^l.0.mix^" . $val);
+			$this->mixer->send("3:::SETD^l.1.mix^" . $val);
+			return array("success" => true, "err" => "");
+		} catch(Exception $ex) {
+			return array("success" => false, "err" => $ex);
+		}
 	}
 
 	public function setMasterVolume($val) {
-		echo $val . " ";
-		$this->mixer->send("3:::SETD^m.mix^" . $val);
+		echo $val . "";
+		try {
+			$this->mixer->send("3:::SETD^m.mix^" . $val);
+			return array("success" => true, "err" => "");
+		} catch(Exception $ex) {
+			return array("success" => false, "err" => $ex);
+		}
 	}
 }

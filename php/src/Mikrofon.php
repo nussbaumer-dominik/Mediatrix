@@ -15,12 +15,19 @@ class Mikrofon {
         $this->channelId = $channelId;
     }
     function setVolume($value){
-        //return array("success" => true, "err" => "");
-        echo $value;
-        $this->mixer->mix($value, $this->channelId);
+        try{
+            $this->mixer->mix($value, $this->channelId);
+        } catch (Exception $ex) {
+            return array("success" => false, "err" => "" . $ex);
+        }
+        return array("success" => true, "err" => "");
     }
     function mute($muted){
-        //return array("success" => true, "err" => "");
-        $this->mixer->mute($muted, $this->channelId);
+        try{
+            $this->mixer->mute($muted, $this->channelId);
+        } catch (Exception $ex) {
+            return array("success" => false, "err" => "" . $ex);
+        }
+        return array("success" => true, "err" => "");
     }
 }
