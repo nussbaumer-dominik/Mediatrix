@@ -1,4 +1,4 @@
-$(function() {
+$(() => {
 	//Variablen
 	var socket,
 		ini,
@@ -22,12 +22,12 @@ $(function() {
 	socket = new WebSocket("wss://10.0.0.144/wss");
 
 	//wirft eine Exception
-	socket.onerror = function(error) {
+	socket.onerror = error => {
 		console.log("WebSocket Error: " + error);
 	};
 
 	//wird beim erfolgreichen Öffnen des Sockets ausgegeben
-	socket.onopen = function(event) {
+	socket.onopen = event => {
 		if (jwt != null) {
 			socket.send('{"jwt":"' + jwt + '","ini":1}');
 		}
@@ -35,7 +35,7 @@ $(function() {
 	};
 
 	//wird bei Response des Servers ausgegeben
-	socket.onmessage = function(event) {
+	socket.onmessage = event => {
 		if (JSON.parse(event.data)["ini"]) {
 			console.log("das ist der ini-string: " + event.data);
 			ini = (JSON && JSON.parse(event.data)) || $.parseJSON(event.data);
@@ -52,16 +52,16 @@ $(function() {
 	};
 
 	//wird ausgegeben, wenn die Verbindung gekappt wurde
-	socket.onclose = function(event) {
+	socket.onclose = event => {
 		console.log("socket closed: " + socket + " " + event);
 	};
 
 	//Daten versenden
-	function send(data) {
+	var send = data => {
 		data.jwt = jwt;
 		socket.send(JSON.stringify(data));
 		console.log(JSON.stringify(data));
-	}
+	};
 
 	//Werte der Slider auslesen
 	var Slider = slider => {
@@ -160,7 +160,7 @@ $(function() {
 		}
 	};
 
-	function muteButton() {
+	var muteButton = () => {
 		var $this = $(this);
 		if ($this.attr("data-type") == "mixer") {
 			if ($this.attr("data-state") == "0") {
@@ -184,12 +184,12 @@ $(function() {
 			}
 		}
 		send(data);
-	}
+	};
 
 	$(".mute").on("click", muteButton);
 
 	//Werte der Beamer Steuerung auslesen
-	function Beamer() {
+	var Beamer = () => {
 		var data = {
 			beamer: {}
 		};
@@ -225,10 +225,10 @@ $(function() {
 				send(data);
 			}
 		}
-	}
+	};
 
 	//Werte der Modes des AV-Receivers auslesen
-	function Buttons() {
+	var Buttons = () => {
 		var data = {
 			av: {
 				mode: ""
@@ -244,9 +244,9 @@ $(function() {
 			data.av.mode = $(this).html();
 			console.log(data);
 		}
-	}
+	};
 
-	function selectAvConf() {
+	var selectAvConf = () => {
 		console.log("selectAvConf");
 		$(".flex-container").append($("#avTemplate").html());
 		for (let i = 0; i < Object.keys(ini.ini.av.presets).length; i++) {
@@ -278,9 +278,9 @@ $(function() {
 		});
 		updateSliders();
 		return true;
-	}
+	};
 
-	function selectLichtConf() {
+	var selectLichtConf = () => {
 		console.log("selectLichtConf");
 		for (let i = 0; i < Object.keys(ini.ini.dmx).length; i++) {
 			var scheinwerfer = ini.ini.dmx["scheinwerfer" + i];
@@ -311,11 +311,11 @@ $(function() {
 			}
 		}
 		return true;
-	}
+	};
 
-	function selectMixerConf() {
+	var selectMixerConf = () => {
 		console.log("selectMixerConf");
-	}
+	};
 
 	$("#savePreset").on("click", ev => {
 		ev.preventDefault();
@@ -349,19 +349,18 @@ $(function() {
 				withCredentials: true
 			},
 			crossDomain: true,
-			complete: function(data) {}
+			complete: () => {}
 		})
-			.done(function(data) {
+			.done(data => {
 				console.log("success: " + data);
-				data.defaultPrevented;
 			})
-			.fail(function(data) {
+			.fail(data => {
 				console.log("error: ");
 				console.log(data);
 			});
 	});
 
-	function getPresets() {
+	var getPresets = () => {
 		for (let i = presetStart; i < Object.keys(presets).length; i++) {
 			console.log(presets[i].name + " conf:");
 			console.log(presets[i].conf);
@@ -402,32 +401,32 @@ $(function() {
 			presetStart++;
 		}
 		$(".preset").on("click", selectPreset);
-	}
+	};
 
-	function selectPreset() {
+	var selectPreset = () => {
 		console.log(presets);
 		send(presets[parseInt($(this).attr("data-preset"))]);
-	}
+	};
 
-	function liveStatus() {
+	var liveStatus = () => {
 		buildStatus("Master", ini.live.av.volume, "dB");
 		//buildStatus("Beamer", ini.live.beamer.source, "");
 		buildStatus("Helligkeit", ini.live.dmx[0], "");
-	}
+	};
 
-	function updateSliders() {
+	var updateSliders = () => {
 		setSlider("avSlider1", ini.live.av.volume);
 		document.getElementById("avSlider1Value").innerHTML =
 			ini.live.av.volume;
-	}
+	};
 
-	function buildStatus(key, value, unit) {
+	var buildStatus = (key, value, unit) => {
 		var div = $("<div>");
 		div.append("<span>" + key + "</span><span>" + value + unit + "</span>");
 		$(".statusGrid").append(div);
-	}
+	};
 
-	function chmod() {
+	$(".tgl").on("click", () => {
 		var mode = $(this).is(":checked");
 		console.log(mode);
 		if (mode) {
@@ -465,23 +464,19 @@ $(function() {
 				console.log("error: ");
 				console.log(data);
 			});
-	}
-
-	$(".tgl").on("click", chmod);
+	});
 
 	var isMobile =
 		"ontouchstart" in document.documentElement &&
 		navigator.userAgent.match(/Mobi/);
 
 	//EventListener den Box Buttons hinzufügen
-	$(".boxButtons").on("click", function() {
+	$(".boxButtons").on("click", () => {
 		toggleFlexContainer(1);
 		togglePresMode(2);
 		toggleStatus(1);
 
-		if (isMobile) {
-			toggleMobileOptions(1);
-		}
+		if (isMobile) toggleMobileOptions(1);
 
 		switch ($(this).attr("data-boxbtn")) {
 			case "1":
@@ -540,7 +535,7 @@ $(function() {
 		}
 	});
 
-	function togglePresMode(count) {
+	var togglePresMode = count => {
 		switch (count) {
 			case 0:
 				if ($(".presentation").hasClass("flex")) {
@@ -558,9 +553,9 @@ $(function() {
 				$(".presentation").removeClass("flex");
 				break;
 		}
-	}
+	};
 
-	function toggleFlexContainer(count) {
+	var toggleFlexContainer = count => {
 		switch (count) {
 			case 0:
 				if ($(".flex-container").hasClass("flex")) {
@@ -573,9 +568,9 @@ $(function() {
 			case 1:
 				$(".flex-container").addClass("flex");
 		}
-	}
+	};
 
-	function toggleStatus(count) {
+	var toggleStatus = count => {
 		switch (count) {
 			case 0:
 				if ($(".statusBox").hasClass("toggleStatus")) {
@@ -591,9 +586,9 @@ $(function() {
 			case 2:
 				$(".statusBox").removeClass("toggleStatus");
 		}
-	}
+	};
 
-	function toggleMobileOptions(count) {
+	var toggleMobileOptions = count => {
 		switch (count) {
 			case 0:
 				if ($(".mobileOptions").hasClass("toggleMobileOptions")) {
@@ -606,31 +601,31 @@ $(function() {
 			case 1:
 				$(".mobileOptions").addClass("toggleMobileOptions");
 		}
-	}
+	};
 
-	function setSlider(id, val) {
+	var setSlider = (id, val) => {
 		var slider = document.getElementById(id);
 		slider.noUiSlider.set(val);
-	}
+	};
 
-	function toggleBase() {
+	var toggleBase = () => {
 		toggleFlexContainer(0);
 		togglePresMode(1);
 		toggleStatus(2);
 		$(".savePreset").css("display", "none");
 		$(".side-nav ul").css("display", "none");
-	}
+	};
 
-	function toggleEx() {
+	var toggleEx = () => {
 		toggleFlexContainer(1);
 		togglePresMode(2);
 		toggleStatus(1);
 		$(".savePreset").css("display", "block");
 		$(".side-nav ul").css("display", "block");
-	}
+	};
 
 	//Slider initialisieren, je nach dem, welche gerade im Markup eingeblendet sind
-	function initSlider(container) {
+	var initSlider = container => {
 		var sliders = $(container).find(".slider");
 		var valueFields = $(container).find(".valueField");
 
@@ -650,11 +645,11 @@ $(function() {
 			});
 		});
 
-		sliders.each(function(i, slider) {
-			this.noUiSlider.on("slide", function(values, handle) {
+		sliders.each((i, slider) => {
+			this.noUiSlider.on("slide", (values, handle) => {
 				Slider(this);
 				valueFields.get(i).innerHTML = values[handle];
 			});
 		});
-	}
+	};
 });
