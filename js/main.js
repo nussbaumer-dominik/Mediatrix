@@ -11,13 +11,13 @@ $(() => {
 			name: "",
 			conf: {}
 		},
-		data = { mixer: {} };
-	conf = {
-		av: {},
-		dmx: {},
-		mixer: {},
-		beamer: {}
-	};
+		data = { mixer: {} },
+		conf = {
+			av: {},
+			dmx: {},
+			mixer: {},
+			beamer: {}
+		};
 
 	socket = new WebSocket("wss://10.0.0.144/wss");
 
