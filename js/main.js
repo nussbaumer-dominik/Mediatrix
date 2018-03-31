@@ -372,7 +372,7 @@ $(function() {
 			}).attr("data-preset", i);
 			div.append("<h2>" + presets[i].name + "</h2>");
 			if (presets[i].conf.dmx) {
-				var count = data.export.filter(i => {
+				var count = presets[i].export.filter(i => {
 					return i.id;
 				}).length;
 				/*var count = 0;
