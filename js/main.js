@@ -86,7 +86,7 @@ $(function() {
 				var id = slider.target.getAttribute("data-id");
 				console.log(mixerData);
 				mixerData.mixer.mikrofone = [];
-				mixerData.mixer.mikrofone = [];
+				conf.mixer.mikrofone = [];
 				if (!isNaN(id)) {
 					console.log(
 						"Dieser Slider ist von einem Mixer: " + slider.get()
