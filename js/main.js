@@ -426,7 +426,7 @@ $(function() {
 		$(".statusGrid").append(div);
 	};
 
-	$(".tgl").on("click", () => {
+	var chmod = () => {
 		var mode = $(this).is(":checked");
 		console.log(mode);
 		if (mode) {
@@ -449,8 +449,7 @@ $(function() {
 			xhrFields: {
 				withCredentials: true
 			},
-			crossDomain: true,
-			complete: function(data) {}
+			crossDomain: true
 		})
 			.done(function(data) {
 				if (mode) {
@@ -464,7 +463,9 @@ $(function() {
 				console.log("error ");
 				console.log(data);
 			});
-	});
+	};
+
+	$(".tgl").on("click", chmod);
 
 	var isMobile =
 		"ontouchstart" in document.documentElement &&
@@ -612,7 +613,7 @@ $(function() {
 		toggleFlexContainer(0);
 		togglePresMode(1);
 		toggleStatus(2);
-		$(".savePreset").css("display", "none");
+		$("#savePreset").css("display", "none");
 		$(".side-nav ul").css("display", "none");
 	};
 
@@ -620,7 +621,7 @@ $(function() {
 		toggleFlexContainer(1);
 		togglePresMode(2);
 		toggleStatus(1);
-		$(".savePreset").css("display", "block");
+		$("#savePreset").css("display", "block");
 		$(".side-nav ul").css("display", "block");
 	};
 
