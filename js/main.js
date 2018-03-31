@@ -613,7 +613,7 @@ $(function() {
 		toggleFlexContainer(0);
 		togglePresMode(1);
 		toggleStatus(2);
-		$("#savePreset").css("display", "none");
+		$(".savePreset").css("display", "none");
 		$(".side-nav ul").css("display", "none");
 	};
 
@@ -621,7 +621,7 @@ $(function() {
 		toggleFlexContainer(1);
 		togglePresMode(2);
 		toggleStatus(1);
-		$("#savePreset").css("display", "block");
+		$(".savePreset").css("display", "block");
 		$(".side-nav ul").css("display", "block");
 	};
 
