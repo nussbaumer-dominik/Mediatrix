@@ -294,6 +294,7 @@ $(function() {
 			var scheinwerfer = ini.ini.dmx["scheinwerfer" + i];
 			if (scheinwerfer.numberChannels == "4") {
 				var t = document.querySelector("#rgbwTemplate").innerHTML;
+
 				for (
 					let j = 0;
 					j < parseInt(scheinwerfer.numberChannels);
@@ -301,6 +302,8 @@ $(function() {
 				) {
 					t = t.replace(/{:id}/, scheinwerfer.id);
 				}
+
+				t = t.replace(/{:lightNumber}/, scheinwerfer.id);
 				$(".flex-container").append(t);
 			} else if (scheinwerfer.numberChannels == "1") {
 				var t = document.querySelector("#hueTemplate").innerHTML;
@@ -311,6 +314,7 @@ $(function() {
 				) {
 					t = t.replace(/{:id}/, scheinwerfer.id);
 				}
+				t = t.replace(/{:lightNumber}/, scheinwerfer.id);
 				$(".flex-container").append(t);
 			}
 		}

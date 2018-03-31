@@ -120,8 +120,7 @@ class Application implements MessageComponentInterface
                         if(!(is_null($this->mikrofone[$val['id']])) && is_float($val['value']) && $val['value'] >= 0 && $val['value'] <= 1){
                             $r = $this->mikrofone[$val['id']]->setVolume($val['value']);
                             $r['success'] ?: array_push($result, $r);
-                        }else
-                        {
+                        }else {
                             array_push($result, array('success' => false,'err' => 'Mikrofon id not valid'));
                         }
                     }
