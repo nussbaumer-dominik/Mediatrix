@@ -45,51 +45,51 @@ class Mixer {
 
 	//Mute Befehl erstellen
 	public function mute($mute, $channel) {
-		try{
+		try {
 			$this->mixer->send($this->command . $channel . ".mute^" . $mute);
 			return array("success" => true, "err" => "");
-		} catch(Exception $ex) {
+		} catch(Exception $ex) {
 			return array("success" => false, "err" => $ex);
 		}
 	}
 
 	//Lautstärke regeln
 	public function mix($val, $channel) {
-		try {
+		try {
 			$this->mixer->send($this->command . $channel . ".mix^" . $val);
 			return array("success" => true, "err" => "");
-		} catch(Exception $ex) {
+		} catch(Exception $ex) {
 			return array("success" => false, "err" => $ex);
 		}
 	}
 
 	public function alive() {
-		try {
+		try {
 			echo "Alive " . "3:::ALIVE\n";
 			$this->mixer->send("3:::ALIVE");
 			return array("success" => true, "err" => "");
-		} catch(Exception $ex) {
+		} catch(Exception $ex) {
 			return array("success" => false, "err" => $ex);
 		}
 	}
 
 	public function setLineVolume($val) {
 		echo $val . "";
-		try {
+		try {
 			$this->mixer->send("3:::SETD^l.0.mix^" . $val);
 			$this->mixer->send("3:::SETD^l.1.mix^" . $val);
 			return array("success" => true, "err" => "");
-		} catch(Exception $ex) {
+		} catch(Exception $ex) {
 			return array("success" => false, "err" => $ex);
 		}
 	}
 
 	public function setMasterVolume($val) {
 		echo $val . "";
-		try {
+		try {
 			$this->mixer->send("3:::SETD^m.mix^" . $val);
 			return array("success" => true, "err" => "");
-		} catch(Exception $ex) {
+		} catch(Exception $ex) {
 			return array("success" => false, "err" => $ex);
 		}
 	}
