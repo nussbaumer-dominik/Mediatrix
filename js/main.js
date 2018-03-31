@@ -372,9 +372,15 @@ $(function() {
 			}).attr("data-preset", i);
 			div.append("<h2>" + presets[i].name + "</h2>");
 			if (presets[i].conf.dmx) {
+				var count = data.export.filter(i => {
+					return i.id;
+				}).length;
+				/*var count = 0;
+				for (var key in presets[i])
+					if (json.hasOwnProperty("id")) count++;*/
 				div.append(
 					"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
-						Object.keys(presets[i].conf.dmx).length +
+						count +
 						"</h3> </div>"
 				);
 			} else if (presets[i].av) {
