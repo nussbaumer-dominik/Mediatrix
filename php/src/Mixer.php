@@ -55,9 +55,12 @@ class Mixer {
 
 	//Lautstärke regeln
 	public function mix($val, $channel) {
+		echo "" . $val . " " . $channel . " "; 
 		try {
+			echo "im Try Block ";
 			$this->mixer->send($this->command . $channel . ".mix^" . $val);
 			return array("success" => true, "err" => "");
+			echo "success";
 		} catch(Exception $ex) {
 			return array("success" => false, "err" => $ex);
 		}
