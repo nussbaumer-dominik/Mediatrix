@@ -1,3 +1,5 @@
+import { log } from "util";
+
 $(function() {
 	//Variablen
 	var socket,
@@ -322,10 +324,15 @@ $(function() {
 	}
 
 	function setPreset() {
+		ev.preventDefault();
 		console.log("Preset '" + $("#presetName").val() + "' speichern");
 		var name = $("#presetName").val();
+		console.log(currentConf["name"]);
+		console.log(currentConf["conf"]);
+		console.log(conf);
 		currentConf["name"] = name;
 		currentConf["conf"] = conf;
+
 		var data = new FormData();
 		data.append("jwt", jwt);
 		data.append("name", name);
@@ -353,6 +360,7 @@ $(function() {
 		})
 			.done(function(data) {
 				console.log("success: " + data);
+				data.defaultPrevented;
 			})
 			.fail(function(data) {
 				console.log("error: ");
@@ -360,7 +368,7 @@ $(function() {
 			});
 	}
 
-	$("#savePreset").on("click", setPreset);
+	$("#savePreset").on("submit", setPreset(ev));
 
 	function getPresets() {
 		for (let i = presetStart; i < Object.keys(presets).length; i++) {
@@ -372,12 +380,9 @@ $(function() {
 			}).attr("data-preset", i);
 			div.append("<h2>" + presets[i].name + "</h2>");
 			if (presets[i].conf.dmx) {
-				/*var count = presets[i].conf.export.filter(i => {
-					return i.id;
-				}).length;*/
 				var count = 0;
 				for (let key in presets[i].conf)
-					if (presets[i].conf.hasOwnProperty("id")) count++;
+					if (presets[i].conf.hasOwnProperty(key)) count++;
 				div.append(
 					"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
 						count +
@@ -409,7 +414,6 @@ $(function() {
 	}
 
 	function selectPreset() {
-		console.log(typeof $(this).attr("data-preset"));
 		console.log(presets);
 		send(presets[parseInt($(this).attr("data-preset"))]);
 	}
