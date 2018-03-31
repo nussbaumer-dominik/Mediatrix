@@ -429,11 +429,11 @@ $(function() {
 		var mode = $(".tgl").prop("checked");
 		console.log(mode);
 		if (mode) {
-			let data = new FormData();
+			var data = new FormData();
 			data.append("jwt", jwt);
 			data.append("ex", 1);
 		} else {
-			let data = new FormData();
+			var data = new FormData();
 			data.append("jwt", jwt);
 			data.append("base", 1);
 		}
