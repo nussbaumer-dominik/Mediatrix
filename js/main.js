@@ -429,12 +429,12 @@ $(() => {
 	$(".tgl").on("click", () => {
 		var mode = $(this).is(":checked");
 		console.log(mode);
-		if (mode) {
-			var data = new FormData();
+		if (!mode) {
+			let data = new FormData();
 			data.append("jwt", jwt);
 			data.append("ex", 1);
 		} else {
-			var data = new FormData();
+			let data = new FormData();
 			data.append("jwt", jwt);
 			data.append("base", 1);
 		}
