@@ -321,7 +321,7 @@ $(function() {
 		console.log("selectMixerConf");
 	}
 
-	$("#savePreset").on("submit", ev => {
+	$("#savePreset").on("click", ev => {
 		ev.preventDefault();
 		console.log("Preset '" + $("#presetName").val() + "' speichern");
 		var name = $("#presetName").val();
