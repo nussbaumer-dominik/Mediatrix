@@ -426,8 +426,8 @@ $(function() {
 		$(".statusGrid").append(div);
 	};
 
-	var chmod = () => {
-		var mode = $(this).is(":checked");
+	$(".tgl").on("click", () => {
+		var mode = $(".tgl").prop("checked");
 		console.log(mode);
 		if (mode) {
 			let data = new FormData();
@@ -463,9 +463,7 @@ $(function() {
 				console.log("error ");
 				console.log(data);
 			});
-	};
-
-	$(".tgl").on("click", chmod);
+	});
 
 	var isMobile =
 		"ontouchstart" in document.documentElement &&
