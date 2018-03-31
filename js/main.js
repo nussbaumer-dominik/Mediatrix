@@ -325,16 +325,15 @@ $(function() {
 		ev.preventDefault();
 		console.log("Preset '" + $("#presetName").val() + "' speichern");
 		var name = $("#presetName").val();
-		console.log(currentConf["name"]);
-		console.log(currentConf["conf"]);
-		console.log(conf);
-		currentConf["name"] = name;
-		currentConf["conf"] = conf;
+		currentConf.name = name;
+		currentConf.conf = conf;
+		console.dir(currentConf);
 
 		var data = new FormData();
 		data.append("jwt", jwt);
-		data.append("name", name);
-		data.append("conf", conf);
+		data.append("name", currentConf.name);
+		data.append("conf", currentConf.conf);
+		console.table(data);
 
 		$.snackbar({
 			content:
