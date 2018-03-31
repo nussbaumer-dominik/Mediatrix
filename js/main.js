@@ -159,8 +159,9 @@ $(function() {
 		}
 	}
 
-	var muteButton = () => {
+	function muteButton() {
 		var $this = $(this);
+		console.log($this);
 		if ($this.attr("data-type") == "mixer") {
 			if ($this.attr("data-state") == "0") {
 				$this.attr("data-state", "1");
@@ -183,7 +184,7 @@ $(function() {
 			}
 		}
 		send(data);
-	};
+	}
 
 	$(".mute").on("click", muteButton);
 
@@ -521,7 +522,6 @@ $(function() {
 				break;
 			case "5":
 				console.log("Präsentationsmodus einblenden");
-				//hide all boxes
 				$(".flex-container").empty();
 				toggleFlexContainer(0);
 				togglePresMode(0);
