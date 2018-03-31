@@ -86,27 +86,23 @@ $(function() {
 			case "mixer":
 				var id = slider.target.getAttribute("data-id");
 				var data = { mixer: {} };
+				data.mixer.mikrofone = [];
+				conf.mixer.mikrofone = [];
 				if (!isNaN(id)) {
 					console.log(
 						"Dieser Slider ist von einem Mixer: " + slider.get()
 					);
-					data.mixer.mikrofone = [
-						{
-							id: id,
-							value: slider.get() / 100
-						}
-					];
-
-					console.log(data);
+					var obj = { id: id, value: slider.get() / 100 };
+					data.mixer.mikrofone.push(obj);
+					conf.mixer.mikrofone.push(obj);
 					send(data);
-					conf.mixer.mikrofone = [
-						{ id: id, value: slider.get() / 100 }
-					];
 				} else if (id == "m") {
 					data.mixer = { master: slider.get() / 100 };
+					conf.mixer = { master: slider.get() / 100 };
 					send(data);
 				} else if (id == "l") {
 					data.mixer = { line: slider.get() / 100 };
+					conf.mixer = { line: slider.get() / 100 };
 					send(data);
 				}
 				break;
