@@ -296,7 +296,7 @@ $(function() {
 					j < parseInt(scheinwerfer.numberChannels);
 					j++
 				) {
-					t = t.replace(/{:id}/, scheinwerfer.id);
+					t = t.replace(/{:id}/, scheinwerfer.id + 1);
 				}
 
 				t = t.replace(/{:lightNumber}/, scheinwerfer.id);
@@ -310,7 +310,7 @@ $(function() {
 				) {
 					t = t.replace(/{:id}/, scheinwerfer.id);
 				}
-				t = t.replace(/{:lightNumber}/, scheinwerfer.id);
+				t = t.replace(/{:lightNumber}/, scheinwerfer.id + 1);
 				$(".flex-container").append(t);
 			}
 		}
