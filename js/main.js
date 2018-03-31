@@ -1,4 +1,4 @@
-$(() => {
+$(function() {
 	//Variablen
 	var socket,
 		ini,
@@ -429,7 +429,7 @@ $(() => {
 	$(".tgl").on("click", () => {
 		var mode = $(this).is(":checked");
 		console.log(mode);
-		if (!mode) {
+		if (mode) {
 			let data = new FormData();
 			data.append("jwt", jwt);
 			data.append("ex", 1);
@@ -461,7 +461,7 @@ $(() => {
 				console.log("success: mode: " + mode + " " + data);
 			})
 			.fail(function(data) {
-				console.log("error: ");
+				console.log("error ");
 				console.log(data);
 			});
 	});
