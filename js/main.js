@@ -86,6 +86,7 @@ $(() => {
 				break;
 			case "mixer":
 				var id = slider.target.getAttribute("data-id");
+				console.log(data);
 				data.mixer.mikrofone = [];
 				conf.mixer.mikrofone = [];
 				if (!isNaN(id)) {
