@@ -11,12 +11,13 @@ $(function() {
 			name: "",
 			conf: {}
 		},
-		conf = {
-			av: {},
-			dmx: {},
-			mixer: {},
-			beamer: {}
-		};
+		data = { mixer: {} };
+	conf = {
+		av: {},
+		dmx: {},
+		mixer: {},
+		beamer: {}
+	};
 
 	socket = new WebSocket("wss://10.0.0.144/wss");
 
@@ -85,7 +86,6 @@ $(function() {
 				break;
 			case "mixer":
 				var id = slider.target.getAttribute("data-id");
-				var data = { mixer: {} };
 				data.mixer.mikrofone = [];
 				conf.mixer.mikrofone = [];
 				if (!isNaN(id)) {
@@ -329,7 +329,7 @@ $(function() {
 		data.append("jwt", jwt);
 		data.append("name", currentConf.name);
 		data.append("conf", currentConf.conf);
-		console.table(data);
+		console.log(data);
 
 		$.snackbar({
 			content:
