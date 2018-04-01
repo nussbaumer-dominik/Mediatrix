@@ -227,7 +227,7 @@ $(function() {
 		}
 	};
 
-	//Werte der Modes des AV-Receivers auslesen
+	//Werte der Modi des AV-Receivers auslesen
 	var Buttons = () => {
 		var data = {
 			av: {
