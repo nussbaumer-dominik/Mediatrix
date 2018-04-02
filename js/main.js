@@ -102,8 +102,7 @@ $(function() {
 						if (conf.mixer.mikrofone.some(e => e.id === id)) {
 							conf.mixer.mikrofone[i].value = val;
 						} else {
-							conf.mixer.mikrofone[i].id = id;
-							conf.mixer.mikrofone[i].value = val;
+							conf.mixer.mikrofone[i] = obj;
 						}
 					}
 
