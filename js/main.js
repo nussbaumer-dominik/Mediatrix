@@ -90,11 +90,13 @@ $(function() {
 					);
 					var obj = { id: id, value: val };
 					mixerData.mixer.mikrofone = obj;
+					console.log(conf.mixer.mikrofone[0]);
 					for (
 						let i = 0;
 						i <= Object.keys(conf.mixer.mikrofone).length;
 						i++
 					) {
+						console.log(conf.mixer.mikrofone[0].id);
 						if (conf.mixer.mikrofone[i].id == "") {
 							conf.mixer.mikrofone[i].id = id;
 							conf.mixer.mikrofone[i].value = val;
