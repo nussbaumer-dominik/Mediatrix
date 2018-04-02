@@ -474,6 +474,7 @@ $(function() {
 	}
 
 	var liveStatus = () => {
+		console.log(ini);
 		buildStatus("Master", ini.live.av.volume, "dB");
 		//buildStatus("Beamer", ini.live.beamer.source, "");
 		buildStatus("Helligkeit", ini.live.dmx[0], "");
@@ -485,7 +486,7 @@ $(function() {
 			ini.live.av.volume;
 	};
 
-	var buildStatus = (key, value, unit) => {
+	function buildStatus(key, value, unit) {
 		var div = $("<div>");
 		div.append("<span>" + key + "</span><span>" + value + unit + "</span>");
 		$(".statusGrid").append(div);
