@@ -97,7 +97,7 @@ $(function() {
 					console.log(conf.mixer.mikrofone.length);
 
 					for (let i = 0; i <= conf.mixer.mikrofone.length; i++) {
-						console.log(obj.id);
+						console.log("Durchlauf Nr.: " + i + 1);
 
 						if (conf.mixer.mikrofone.some(e => e.id === id)) {
 							console.log(conf.mixer.mikrofone);
