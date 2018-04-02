@@ -330,7 +330,7 @@ $(function() {
 		let name = $("#presetName").val();
 		currentConf.name = name;
 		currentConf.conf = conf;
-		//console.log(currentConf);
+		console.log(JSON.stringify(conf));
 
 		let data = new FormData();
 		data.append("jwt", jwt);
@@ -360,7 +360,7 @@ $(function() {
 		})
 			.done(data => {
 				console.log("success: " + data);
-				addPreset(data);
+				addPreset(currentConf);
 			})
 			.fail(data => {
 				console.log("error: ");
