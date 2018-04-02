@@ -70,7 +70,7 @@ $(function() {
 					"Dieser Slider ist von einem AV-Receiver: " +
 						slider.target.getAttribute("data-type")
 				);
-				var data = {
+				var avdata = {
 					av: {
 						value: slider.get(),
 						channel: slider.target.getAttribute("data-id")
@@ -80,8 +80,7 @@ $(function() {
 					value: slider.get(),
 					channel: slider.target.getAttribute("data-id")
 				};
-				send(data);
-				return data;
+				send(avdata);
 				break;
 			case "mixer":
 				let id = slider.target.getAttribute("data-id");
@@ -120,7 +119,7 @@ $(function() {
 						" " +
 						slider.get()
 				);
-				let data = {
+				var huedata = {
 					dmx: {
 						scheinwerfer: {
 							id: slider.target.getAttribute("data-id"),
@@ -134,8 +133,7 @@ $(function() {
 						hue: slider.get()
 					}
 				};
-				send(data);
-				return data;
+				send(huedata);
 				break;
 			case "rgbw":
 				console.log(
@@ -145,7 +143,7 @@ $(function() {
 						" " +
 						slider.get()
 				);
-				var data = {
+				var rgbwdata = {
 					dmx: {
 						scheinwerfer: {
 							id: slider.target.getAttribute("data-id"),
@@ -159,8 +157,7 @@ $(function() {
 					id: slider.target.getAttribute("data-id"),
 					[slider.target.getAttribute("data-col")]: slider.get()
 				};
-				send(data);
-				return data;
+				send(rgbwdata);
 				break;
 		}
 	}
@@ -171,7 +168,7 @@ $(function() {
 		if ($this.attr("data-type") == "mixer") {
 			if ($this.attr("data-state") == "0") {
 				$this.attr("data-state", "1");
-				var data = {
+				var mutedata = {
 					id: $this.attr("data-id"),
 					mute: 1
 				};
@@ -181,14 +178,14 @@ $(function() {
 				conf.mixer.mute = 1;
 			} else {
 				$this.attr("data-state", "0");
-				var data = {
+				var mutedata = {
 					id: $this.attr("data-id"),
 					mute: 0
 				};
 				conf.mixer.mute = 0;
 			}
 		}
-		send(data);
+		send(mutedata);
 	}
 
 	$(".mute").on("click", muteButton);
