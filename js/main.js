@@ -482,10 +482,12 @@ $(function() {
 			let daten = new FormData();
 			daten.append("jwt", jwt);
 			daten.append("ex", 1);
+			console.log(daten);
 		} else {
 			let daten = new FormData();
 			daten.append("jwt", jwt);
 			daten.append("base", 1);
+			console.log(daten);
 		}
 
 		$.ajax({
