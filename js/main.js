@@ -672,7 +672,7 @@ $(function() {
 	};
 
 	//Slider initialisieren, je nach dem, welche gerade im Markup eingeblendet sind
-	var initSlider = function(container) {
+	function initSlider(container) {
 		var sliders = $(container).find(".slider");
 		var valueFields = $(container).find(".valueField");
 
@@ -698,5 +698,5 @@ $(function() {
 				valueFields.get(i).innerHTML = values[handle];
 			});
 		});
-	};
+	}
 });
