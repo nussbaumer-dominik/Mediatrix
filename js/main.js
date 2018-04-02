@@ -403,10 +403,10 @@ $(function() {
 		$(".preset").on("click", selectPreset);
 	};
 
-	var selectPreset = () => {
+	function selectPreset(data) {
 		console.log(presets);
 		send(presets[parseInt($(this).attr("data-preset"))]);
-	};
+	}
 
 	var liveStatus = () => {
 		buildStatus("Master", ini.live.av.volume, "dB");
