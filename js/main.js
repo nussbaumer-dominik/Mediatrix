@@ -101,6 +101,9 @@ $(function() {
 					for (let i = 0; i < conf.mixer.mikrofone.length; i++) {
 						if (conf.mixer.mikrofone[i].id == obj.id) {
 							console.log("ja");
+							conf.mixer.mikrofone[i].value = val;
+						} else {
+							conf.mixer.mikrofone.push(obj);
 						}
 					}
 
