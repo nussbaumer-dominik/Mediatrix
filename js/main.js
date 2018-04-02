@@ -193,6 +193,10 @@ $(function() {
 					mixerData.mixer.mikrofone[1].mute = 0;
 					conf.mixer.mikrofone[1].mute = 0;
 				}
+
+				$.snackbar({
+					content: "Das Mikrofon wurde freigegeben"
+				});
 			}
 		}
 		send(mixerData);
