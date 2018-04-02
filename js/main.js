@@ -103,8 +103,6 @@ $(function() {
 								i +
 								" des Conf Objekts mit index: "
 						);
-						console.log(conf.mixer.mikrofone[i].id);
-
 						if (conf.mixer.mikrofone[i].id == "") {
 							conf.mixer.mikrofone[i].id = id;
 							conf.mixer.mikrofone[i].value = val;
