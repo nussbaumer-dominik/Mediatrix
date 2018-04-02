@@ -86,6 +86,7 @@ $(function() {
 				let id = slider.target.getAttribute("data-id");
 				let val = slider.get() / 100;
 				console.log(mixerData);
+				console.log("conf Objekt: " + conf.mixer);
 				if (!isNaN(id)) {
 					console.log(
 						"Dieser Slider ist von einem Mixer: " + slider.get()
