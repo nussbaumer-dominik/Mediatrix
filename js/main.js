@@ -102,24 +102,6 @@ $(function() {
 						conf.mixer.mikrofone[1].value = val;
 					}
 
-					/*if (Object.keys(conf.mixer.mikrofone).length < 2) {
-						if(){
-
-						}
-						conf.mixer.mikrofone.push(obj);
-					} else {
-						for (
-							let i = 0;
-							i <= Object.keys(conf.mixer.mikrofone).length;
-							i++
-						) {
-							console.log(i);
-							if (conf.mixer.mikrofone[i].id == id) {
-								conf.mixer.mikrofone[i].value = val;
-							}
-						}
-					}*/
-
 					send(mixerData);
 				} else if (id == "m") {
 					mixerData.mixer.master = val;
@@ -201,7 +183,6 @@ $(function() {
 				conf.mixer.mute = 1;
 			} else {
 				$this.attr("data-state", "0");
-				//var command = "3:::SETD^i."+ $(this).attr("data-id") +".mute^"+0;
 				var data = {
 					id: $this.attr("data-id"),
 					mute: 0
@@ -215,7 +196,7 @@ $(function() {
 	$(".mute").on("click", muteButton);
 
 	//Werte der Beamer Steuerung auslesen
-	var Beamer = () => {
+	function Beamer() {
 		var data = {
 			beamer: {}
 		};
@@ -251,10 +232,10 @@ $(function() {
 				send(data);
 			}
 		}
-	};
+	}
 
 	//Werte der Modi des AV-Receivers auslesen
-	var Buttons = () => {
+	function Buttons() {
 		var data = {
 			av: {
 				mode: ""
@@ -270,9 +251,9 @@ $(function() {
 			data.av.mode = $(this).html();
 			console.log(data);
 		}
-	};
+	}
 
-	var selectAvConf = () => {
+	function selectAvConf() {
 		console.log("selectAvConf");
 		$(".flex-container").append($("#avTemplate").html());
 		for (let i = 0; i < Object.keys(ini.ini.av.presets).length; i++) {
@@ -304,7 +285,7 @@ $(function() {
 		});
 		updateSliders();
 		return true;
-	};
+	}
 
 	var selectLichtConf = () => {
 		console.log("selectLichtConf");
@@ -349,7 +330,7 @@ $(function() {
 		var name = $("#presetName").val();
 		currentConf.name = name;
 		currentConf.conf = conf;
-		console.dir(currentConf);
+		console.log(currentConf);
 
 		var data = new FormData();
 		data.append("jwt", jwt);
@@ -379,6 +360,7 @@ $(function() {
 		})
 			.done(data => {
 				console.log("success: " + data);
+				addPreset();
 			})
 			.fail(data => {
 				console.log("error: ");
