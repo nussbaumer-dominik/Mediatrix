@@ -95,7 +95,7 @@ $(function() {
 					send(mixerData);
 				} else if (id == "m") {
 					mixerData.mixer.master = slider.get() / 100;
-					conf.mixer.master = masterslider.get() / 100;
+					conf.mixer.master = slider.get() / 100;
 					send(mixerData);
 				} else if (id == "l") {
 					mixerData.mixer.line = slider.get() / 100;
