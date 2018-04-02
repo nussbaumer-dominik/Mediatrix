@@ -22,7 +22,7 @@ GPIO.setup(rp, GPIO.OUT)
 
 #Einschalten
 
-pstate = 0 #Zustand des Systems Strom (1=Ein, 0=Aus)
+
 
 #Strom schalten
 def switchPower(pstate):
@@ -47,6 +47,8 @@ def switchPower(pstate):
 
 
 if __name__ == '__main__':
+
+    pstate = 0 #Zustand des Systems Strom (1=Ein, 0=Aus)
 
     while True:
         GPIO.wait_for_edge(btn, GPIO.RISING)
