@@ -336,7 +336,7 @@ $(function() {
 		data.append("jwt", jwt);
 		data.append("name", currentConf.name);
 		data.append("conf", currentConf.conf);
-		console.log(daten);
+		console.log(data);
 
 		$.snackbar({
 			content:
