@@ -104,7 +104,9 @@ $(function() {
 						);
 						console.log(conf.mixer.mikrofone[0]);
 						console.log(
-							"Id des erstes Element des Conf Objetks mit index: "
+							"Id des Elements " +
+								j +
+								" des Conf Objekts mit index: "
 						);
 						console.log(conf.mixer.mikrofone[j].id);
 
