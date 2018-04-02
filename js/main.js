@@ -10,7 +10,7 @@ $(function() {
 			av: {},
 			dmx: {},
 			mixer: {
-				mikrofone: []
+				mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }]
 			},
 			beamer: {}
 		};
@@ -96,25 +96,12 @@ $(function() {
 					mixerData.mixer.mikrofone = [obj];
 					console.log(conf.mixer.mikrofone.length);
 
-					for (let i = 0; i <= conf.mixer.mikrofone.length; i++) {
-						console.log("Durchlauf Nr.: " + (i + 1));
-
-						/*if (conf.mixer.mikrofone[i].id === id) {
-							console.log("id vorhanden");
-							conf.mixer.mikrofone[i].value = val;
-						} else {
-							console.log("id nicht vorhanden");
-							conf.mixer.mikrofone[i] = obj;
-						}*/
-
-						if (conf.mixer.mikrofone.find(el => el.id === id)) {
-							console.log("id " + id + " vorhanden");
-							conf.mixer.mikrofone[i].value = val;
-						} else {
-							console.log("id nicht vorhanden");
-							conf.mixer.mikrofone[i] = obj;
-						}
+					if (id === "0") {
+						conf.mixer.mikrofone[0].value = val;
+					} else if (id === "1") {
+						conf.mixer.mikrofone[1].value = val;
 					}
+
 					/*if (Object.keys(conf.mixer.mikrofone).length < 2) {
 						if(){
 
