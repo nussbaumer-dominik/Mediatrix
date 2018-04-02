@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
+    <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="change pin for power.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Elektronik/cooling.py" afterPath="$PROJECT_DIR$/Elektronik/cooling.py" />
+      <change beforePath="$PROJECT_DIR$/Elektronik/power.py" afterPath="$PROJECT_DIR$/Elektronik/power.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cooling.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cooling.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Elektronik/cooling.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
-              <caret line="41" column="25" lean-forward="true" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+              <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -55,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="power.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="power.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Elektronik/power.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="401">
-              <caret line="52" column="17" lean-forward="false" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+              <caret line="52" column="35" lean-forward="false" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -195,9 +195,9 @@
         <option value="$PROJECT_DIR$/php/src/websocket.php" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/php/src/MyIoServer.php" />
-        <option value="$PROJECT_DIR$/Elektronik/power.py" />
         <option value="$PROJECT_DIR$/php/src/Application.php" />
         <option value="$PROJECT_DIR$/Elektronik/cooling.py" />
+        <option value="$PROJECT_DIR$/Elektronik/power.py" />
       </list>
     </option>
   </component>
@@ -1015,14 +1015,7 @@
       <workItem from="1521826085975" duration="5653000" />
       <workItem from="1522444561593" duration="4571000" />
       <workItem from="1522603476619" duration="11805000" />
-      <workItem from="1522687387850" duration="4338000" />
-    </task>
-    <task id="LOCAL-00188" summary="debug python">
-      <created>1522168254658</created>
-      <option name="number" value="00188" />
-      <option name="presentableId" value="LOCAL-00188" />
-      <option name="project" value="LOCAL" />
-      <updated>1522168254658</updated>
+      <workItem from="1522687387850" duration="5844000" />
     </task>
     <task id="LOCAL-00189" summary="debug python">
       <created>1522168449845</created>
@@ -1360,11 +1353,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522690785421</updated>
     </task>
-    <option name="localTasksCounter" value="237" />
+    <task id="LOCAL-00237" summary="change rpm cooling.py">
+      <created>1522691880943</created>
+      <option name="number" value="00237" />
+      <option name="presentableId" value="LOCAL-00237" />
+      <option name="project" value="LOCAL" />
+      <updated>1522691880943</updated>
+    </task>
+    <option name="localTasksCounter" value="238" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186980000" />
+    <option name="totallyTimeSpent" value="188486000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1433,7 +1433,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add isOn to Beamer" />
     <MESSAGE value="add on and off function to AV&#10;add isOn with check to AV" />
     <MESSAGE value="debug AV" />
     <MESSAGE value="fix AV" />
@@ -1458,7 +1457,8 @@
     <MESSAGE value="add mute function" />
     <MESSAGE value="python dev" />
     <MESSAGE value="fix live status" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix live status" />
+    <MESSAGE value="change rpm cooling.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="change rpm cooling.py" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1760,14 +1760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Elektronik/power.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="52" column="17" lean-forward="false" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/AV.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3604">
@@ -1799,7 +1791,15 @@
     <entry file="file://$PROJECT_DIR$/Elektronik/cooling.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="41" column="25" lean-forward="true" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Elektronik/power.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="52" column="35" lean-forward="false" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
           <folding />
         </state>
       </provider>

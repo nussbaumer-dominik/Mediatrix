@@ -50,4 +50,4 @@ if __name__ == '__main__':
 
     while True:
         GPIO.wait_for_edge(btn, GPIO.RISING)
-        pstate = switchPower(pstate, sstate)
+        pstate = switchPower(pstate)
