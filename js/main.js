@@ -392,13 +392,13 @@ $(function() {
 		} else if (data.conf.beamer) {
 			div.append(
 				"<div> <i class='fas fa-video'> </i> <h3>" +
-					data.conf.beamer +
+					data.conf.beamer.source +
 					"</h3> </div>"
 			);
 		} else if (data.conf.mixer) {
 			div.append(
 				"<div> <i class='fas fa-microphone'> </i> <h3>" +
-					data.conf.mixer +
+					data.conf.mixer.mikrofone.length +
 					"</h3> </div>"
 			);
 		}
