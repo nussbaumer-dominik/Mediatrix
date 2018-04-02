@@ -23,37 +23,31 @@ GPIO.setup(rp, GPIO.OUT)
 #Einschalten
 
 pstate = 0 #Zustand des Systems Strom (1=Ein, 0=Aus)
-sstate = 0 #Zustand des Systems Lautsprecher (1=Ein, 0=Aus)
 
 #Strom schalten
-def switchPower():
-    global sstate
-    global pstate
+def switchPower(pstate):
 
     print "changing Power-State"
     print pstate
-    print sstate
 
     if pstate == 0:
-
-        print pstate
-        print sstate
         GPIO.output(rp, GPIO.HIGH) # an
         sleep(20)
-        sstate = 1
         GPIO.output(rs, GPIO.HIGH) # an
         pstate = 1
 
     if pstate == 1:
-        sstate = 0
         GPIO.output(rs, GPIO.LOW)  #aus
         sleep(1)
         GPIO.output(rp, GPIO.LOW)  #aus
         pstate = 0
+
+    return pstate
+
 
 
 if __name__ == '__main__':
 
     while True:
         GPIO.wait_for_edge(btn, GPIO.RISING)
-        switchPower()
+        pstate = switchPower(pstate, sstate)
