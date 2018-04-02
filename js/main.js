@@ -98,7 +98,9 @@ $(function() {
 						i++
 					) {
 						console.log("i: " + i);
+						console.log("erstes Element des Conf Objekts ohne Index: ");
 						console.log(conf.mixer.mikrofone[0]);
+						console.log("Id des erstes Element des Conf Objetks mit index: ");
 						console.log(conf.mixer.mikrofone[i].id);
 						if (conf.mixer.mikrofone[i].id == id) {
 							conf.mixer.mikrofone[i].value = val;
