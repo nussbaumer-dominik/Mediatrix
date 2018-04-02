@@ -8,7 +8,7 @@ $(function() {
 		currentConf = { name: "", conf: {} },
 		conf = {
 			av: {},
-			dmx: { scheinwerfer: {}},
+			dmx: { scheinwerfer: {} },
 			mixer: {
 				mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }]
 			},
@@ -373,7 +373,7 @@ $(function() {
 		}).attr("data-preset", presetStart + 1);
 		div.append("<h2>" + data.name + "</h2>");
 		if (data.conf.dmx) {
-			let count = Object.keys(value).length);
+			let count = Object.keys(value).length;
 			div.append(
 				"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
 					count +
