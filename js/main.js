@@ -98,7 +98,7 @@ $(function() {
 						i++
 					) {
 						console.log("i: " + i);
-						console.log(conf.mixer.mikrofone[0].id);
+						console.log(conf.mixer.mikrofone[0]);
 						console.log(conf.mixer.mikrofone[i].id);
 						if (conf.mixer.mikrofone[i].id == id) {
 							conf.mixer.mikrofone[i].value = val;
