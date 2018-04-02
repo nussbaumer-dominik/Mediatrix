@@ -97,7 +97,7 @@ $(function() {
 					var obj = { id: id, value: val };
 					mixerData.mixer.mikrofone = [obj];
 
-					if (!conf.mixer.mikrofone) {
+					if (Object.keys(conf.mixer.mikrofone).length < 2) {
 						conf.mixer.mikrofone.push(obj);
 					} else {
 						for (
