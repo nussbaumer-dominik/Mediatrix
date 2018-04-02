@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Elektronik/power.py" afterPath="$PROJECT_DIR$/Elektronik/power.py" />
+      <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,7 +55,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="power.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="power.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Elektronik/power.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="401">
@@ -68,7 +68,7 @@
       <file leaf-file-name="AV.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/AV.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
+            <state relative-caret-position="3604">
               <caret line="290" column="5" lean-forward="false" selection-start-line="290" selection-start-column="5" selection-end-line="290" selection-end-column="5" />
               <folding />
             </state>
@@ -95,15 +95,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+            <state relative-caret-position="234">
+              <caret line="516" column="13" lean-forward="false" selection-start-line="516" selection-start-column="13" selection-end-line="516" selection-end-column="13" />
               <folding>
                 <element signature="e#639#1153#0#PHP" expanded="false" />
-                <marker date="1522689010940" expanded="true" signature="13311:13351" ph="SELECT * FRO... preset" />
-                <marker date="1522689010940" expanded="true" signature="14076:14118" ph="SELECT isext... user" />
+                <marker date="1522690532487" expanded="true" signature="13311:13351" ph="SELECT * FRO... preset" />
+                <marker date="1522690532487" expanded="true" signature="14076:14118" ph="SELECT isext... user" />
               </folding>
             </state>
           </provider>
@@ -143,6 +143,7 @@
       <find>Algorithm not allowed</find>
       <find>encode</find>
       <find>time</find>
+      <find>live</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -195,8 +196,8 @@
         <option value="$PROJECT_DIR$/php/src/websocket.php" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/php/src/MyIoServer.php" />
-        <option value="$PROJECT_DIR$/php/src/Application.php" />
         <option value="$PROJECT_DIR$/Elektronik/power.py" />
+        <option value="$PROJECT_DIR$/php/src/Application.php" />
       </list>
     </option>
   </component>
@@ -1014,14 +1015,7 @@
       <workItem from="1521826085975" duration="5653000" />
       <workItem from="1522444561593" duration="4571000" />
       <workItem from="1522603476619" duration="11805000" />
-      <workItem from="1522687387850" duration="1908000" />
-    </task>
-    <task id="LOCAL-00185" summary="debug python">
-      <created>1522167746105</created>
-      <option name="number" value="00185" />
-      <option name="presentableId" value="LOCAL-00185" />
-      <option name="project" value="LOCAL" />
-      <updated>1522167746105</updated>
+      <workItem from="1522687387850" duration="3115000" />
     </task>
     <task id="LOCAL-00186" summary="debug python">
       <created>1522167849084</created>
@@ -1359,11 +1353,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522689054277</updated>
     </task>
-    <option name="localTasksCounter" value="234" />
+    <task id="LOCAL-00234" summary="python dev">
+      <created>1522689334259</created>
+      <option name="number" value="00234" />
+      <option name="presentableId" value="LOCAL-00234" />
+      <option name="project" value="LOCAL" />
+      <updated>1522689334259</updated>
+    </task>
+    <option name="localTasksCounter" value="235" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184550000" />
+    <option name="totallyTimeSpent" value="185757000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1449,7 +1450,6 @@
     <MESSAGE value="debug hue in rgbw scheinwerfer" />
     <MESSAGE value="debug python" />
     <MESSAGE value="change mixer command structure" />
-    <MESSAGE value="python dev" />
     <MESSAGE value="change test ws address" />
     <MESSAGE value="config dmx" />
     <MESSAGE value="cleanup cooling.py" />
@@ -1457,7 +1457,8 @@
     <MESSAGE value="Merge branch 'Backend' into AllesNeu&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;Elektronik/cooling.py&#10;#&#9;Elektronik/power.py&#10;#&#9;conf/Mediatrix.json&#10;#&#9;php/src/AV.php&#10;#&#9;php/src/Beamer.php&#10;#&#9;test_js/ws_test.html" />
     <MESSAGE value="change ips" />
     <MESSAGE value="add mute function" />
-    <option name="LAST_COMMIT_MESSAGE" value="add mute function" />
+    <MESSAGE value="python dev" />
+    <option name="LAST_COMMIT_MESSAGE" value="python dev" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1743,14 +1744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/AV.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="290" column="5" lean-forward="false" selection-start-line="290" selection-start-column="5" selection-end-line="290" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -1783,23 +1776,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-          <folding>
-            <element signature="e#639#1153#0#PHP" expanded="false" />
-            <marker date="1522689010940" expanded="true" signature="13311:13351" ph="SELECT * FRO... preset" />
-            <marker date="1522689010940" expanded="true" signature="14076:14118" ph="SELECT isext... user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Elektronik/power.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="401">
           <caret line="52" column="17" lean-forward="false" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/AV.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3604">
+          <caret line="290" column="5" lean-forward="false" selection-start-line="290" selection-start-column="5" selection-end-line="290" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="516" column="13" lean-forward="false" selection-start-line="516" selection-start-column="13" selection-end-line="516" selection-end-column="13" />
+          <folding>
+            <element signature="e#639#1153#0#PHP" expanded="false" />
+            <marker date="1522690532487" expanded="true" signature="13311:13351" ph="SELECT * FRO... preset" />
+            <marker date="1522690532487" expanded="true" signature="14076:14118" ph="SELECT isext... user" />
+          </folding>
         </state>
       </provider>
     </entry>

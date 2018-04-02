@@ -514,7 +514,7 @@ class Application implements MessageComponentInterface
 
         $result = (array) $result;
 
-        $result['live'] = array(
+        $live = array(
             'av' => array(
                 'volume' => $this->av->getVolumeLevel(),
                 'source' => $this->av->getSource()
