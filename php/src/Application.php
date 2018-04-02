@@ -534,10 +534,6 @@ class Application implements MessageComponentInterface
 
         $result['live'] = $live;
 
-        foreach ($this->clients as $client){
-            $client->send(json_encode(array('live' => $live)));
-        }
-
         return $result;
     }
 
