@@ -100,7 +100,7 @@ $(function() {
 						i <= Object.keys(conf.mixer.mikrofone).length;
 						i++
 					) {
-						if (conf.mixer.mikrofone[i]) {
+						if (conf.mixer.mikrofone[i].id) {
 							if (conf.mixer.mikrofone[i].id == "0") {
 								conf.mixer.mikrofone[i].value = val;
 							} else if (conf.mixer.mikrofone[i].id == "0") {
