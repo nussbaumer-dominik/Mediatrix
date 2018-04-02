@@ -656,7 +656,7 @@ $(function() {
 
 	var toggleBase = () => {
 		toggleFlexContainer(0);
-		togglePresMode(2);
+		togglePresMode(1);
 		toggleStatus(2);
 		$(".savePreset").css("display", "none");
 		$(".side-nav ul").css("display", "none");
