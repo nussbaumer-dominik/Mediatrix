@@ -70,7 +70,7 @@ $(function() {
 					"Dieser Slider ist von einem AV-Receiver: " +
 						slider.target.getAttribute("data-type")
 				);
-				var data = {
+				let data = {
 					av: {
 						value: slider.get(),
 						channel: slider.target.getAttribute("data-id")
@@ -145,7 +145,7 @@ $(function() {
 						" " +
 						slider.get()
 				);
-				var data = {
+				let data = {
 					dmx: {
 						scheinwerfer: {
 							id: slider.target.getAttribute("data-id"),
