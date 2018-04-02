@@ -51,8 +51,8 @@ if __name__ == '__main__':
     while True:
         if sstate == 0:
             GPIO.wait_for_edge(door, GPIO.RISING)
-            speakerOn()
+            speakerOff()
 
         if sstate == 1:
             GPIO.wait_for_edge(door, GPIO.FALLING)
-            speakerOff()
+            speakerOn()
