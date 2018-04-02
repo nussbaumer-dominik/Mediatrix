@@ -373,37 +373,36 @@ $(function() {
 			var div = $("<div/>", {
 				class: "preset"
 			}).attr("data-preset", i);
-			div.append("<h2>" + presets[i].name + "</h2>");
-			if (presets[i].conf.dmx) {
+			div.append("<h2>" + data[i].name + "</h2>");
+			if (data[i].conf.dmx) {
 				var count = 0;
-				for (let key in presets[i].conf)
-					if (presets[i].conf.hasOwnProperty(key)) count++;
+				for (let key in data[i].conf)
+					if (data[i].conf.hasOwnProperty(key)) count++;
 				div.append(
 					"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
 						count +
 						"</h3> </div>"
 				);
-			} else if (presets[i].conf.av) {
+			} else if (data[i].conf.av) {
 				div.append(
 					"<div> <i class='fas fa-volume-up'> </i> <h3>" +
-						presets[i].conf.av.mode +
+						data[i].conf.av.mode +
 						"</h3> </div>"
 				);
-			} else if (presets[i].conf.beamer) {
+			} else if (data[i].conf.beamer) {
 				div.append(
 					"<div> <i class='fas fa-video'> </i> <h3>" +
-						presets[i].conf.beamer +
+						data[i].conf.beamer +
 						"</h3> </div>"
 				);
-			} else if (presets[i].conf.mixer) {
+			} else if (data[i].conf.mixer) {
 				div.append(
 					"<div> <i class='fas fa-microphone'> </i> <h3>" +
-						presets[i].conf.mixer +
+						data[i].conf.mixer +
 						"</h3> </div>"
 				);
 			}
 			$(".presentation").append(div);
-			presetStart++;
 		}
 		$(".preset").on("click", selectPreset);
 	}
