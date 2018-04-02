@@ -9,7 +9,7 @@ $(function() {
 		conf = {
 			av: {},
 			dmx: {},
-			mixer: { mikrofone: [{ id: "", value: 0 }] },
+			mixer: { mikrofone: [{}] },
 			beamer: {}
 		};
 
@@ -103,7 +103,7 @@ $(function() {
 								i +
 								" des Conf Objekts mit index: "
 						);
-						if (typeof conf.mixer.mikrofone[i] === "undefined") {
+						if (conf.mixer.mikrofone[i] == {}) {
 							conf.mixer.mikrofone[i] = { id: id, value: val };
 						} else if (conf.mixer.mikrofone[i].id == "") {
 							conf.mixer.mikrofone[i].id = id;
