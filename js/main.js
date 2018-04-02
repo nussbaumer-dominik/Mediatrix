@@ -101,6 +101,7 @@ $(function() {
 
 						if (conf.mixer.mikrofone.find(el => el.id === id)) {
 							console.log("id vorhanden");
+							console.log(el);
 							conf.mixer.mikrofone[i].value = val;
 						} else {
 							console.log("id nicht vorhanden");
