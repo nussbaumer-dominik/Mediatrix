@@ -10,7 +10,7 @@ $(function() {
 			av: {},
 			dmx: {},
 			mixer: {
-				mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }]
+				mikrofone: []
 			},
 			beamer: {}
 		};
