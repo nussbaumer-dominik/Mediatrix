@@ -21,7 +21,7 @@ class MyIoServer extends \Ratchet\Server\IoServer
      * @return MyIoServer
      */
     public static function factory(MessageComponentInterface $component, $port = 80, $address = '0.0.0.0', $mixer) {
-        $loop = LoopFactory::create();
+        $loop   = LoopFactory::create();
 
 
         $loop->addPeriodicTimer(10, function() use (&$mixer) {

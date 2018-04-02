@@ -1,38 +1,5 @@
 #!usr/bin/python
 
-import RPi.GPIO as GPIO
-from time import sleep
-
-GPIO.setwarnings(False)			#disable warnings
-
-GPIO.setmode(GPIO.BCM) # GPIO Nummern statt Board Nummern
-
-# SET GPIO Button-Pin
-btn = 15
-door = 8
-PWMpin = 13				# PWM pin zum Anschluss des Luefters (PWM1 33,35)
-
-#Relais
-rs = 2 #Relais Fur Lautsprecher
-rp = 3 #Relais fur Strom //momentan fur test
-
-# GPIO Modus zuweisen
-GPIO.setup(btn, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
-GPIO.setup(door, GPIO.IN, pull_up_down = GPIO.PUD_UP)
-
-GPIO.setup(rs, GPIO.OUT)
-GPIO.setup(rp, GPIO.OUT)
-
-GPIO.setup(PWMpin,GPIO.OUT)
-
-
-#Einschalten
-
-pstate = 0 #Zustand des Systems Strom (1=Ein, 0=Aus)
-sstate = 0 #Zustand des Systems Lautsprecher (1=Ein, 0=Aus)
-
-
-
 #Measuring temperature
 def gettemp(id):
     try:
@@ -61,14 +28,20 @@ def fanCon(mt):
     if mt > st:
         rpm=(mt-st)*190     #Umdrehungen Pro Minute
         prozent=(mt-st)*5   #Prozent der Drehzahl
-        if prozent > 100:
-            prozent = 100
 
     return prozent
 
 
 
 def pwm():
+
+    import RPi.GPIO as GPIO
+    from time import sleep
+
+    PWMpin = 33				# PWM pin zum Anschluss des Luefters (PWM1 33,35)
+    GPIO.setwarnings(False)			#disable warnings
+    GPIO.setmode(GPIO.BOARD)		#set pin numbering system
+    GPIO.setup(PWMpin,GPIO.OUT)
     fan_pwm = GPIO.PWM(PWMpin,100)		#create PWM instance with frequency
     fan_pwm.start(0)				#start PWM of required Duty Cycle
     while True:
@@ -86,82 +59,8 @@ def pwm():
             fan_pwm.ChangeDutyCycle(prozent) #provide duty cycle in the range 0-100
             sleep(2)
 
-        if prozent < 20:
-            fan_pwm.ChangeDutyCycle(0)
-            sleep(2)
-
 
     return
-
-#Strom schalten
-def switchPower(evt):
-    global sstate, pstate
-
-    GPIO.remove_event_detect(btn)
-
-    sleep(1)
-
-    if GPIO.input(btn) == GPIO.HIGH:
-        print "changing Power-State"
-        print pstate
-        print sstate
-
-        if pstate == 0:
-            GPIO.output(rp, GPIO.HIGH) # an
-            sleep(1)
-            sstate = 1
-            GPIO.output(rs, GPIO.HIGH) # an
-            pstate = 1
-
-        if pstate == 1:
-            sstate = 0
-            GPIO.output(rs, GPIO.LOW)  #aus
-            sleep(1)
-            GPIO.output(rp, GPIO.LOW)  #aus
-            pstate = 0
-
-        print pstate
-        print sstate
-
-        sleep(2)
-
-    GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower, bouncetime=300)
-
-
-
-#Lautsprecher schalten
-def speakerOn(evt):
-    global sstate
-
-    GPIO.remove_event_detect(door)
-
-    print "changing Speaker-State"
-    print sstate
-
-    GPIO.output(rs, GPIO.HIGH) # an
-    sstate = 1
-
-    GPIO.add_event_detect(door, GPIO.FALLING, callback=speakerOff, bouncetime=300)
-
-
-def speakerOff(evt):
-    global sstate
-
-    GPIO.remove_event_detect(door)
-
-    print "changing Speaker-State"
-    print sstate
-
-    GPIO.output(rs, GPIO.LOW) # aus
-    sstate = 0
-
-    GPIO.add_event_detect(door, GPIO.RISING, callback=speakerOn, bouncetime=300)
-
-
-
-
-GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower, bouncetime=300)
-GPIO.add_event_detect(door, GPIO.FALLING, callback=speakerOff, bouncetime=300)
 
 
 if __name__ == '__main__':

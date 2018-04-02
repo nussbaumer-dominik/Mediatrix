@@ -24,13 +24,11 @@ class RGBWScheinwerfer extends Scheinwerfer
             $this->channels['b'] => $val['b']
         );
 
-        if(isset($this->channels['w']) && isset($val['w'])){
+        if(count($val) == 4 && count($this->channels) == 4){
             $data[$this->channels['w']] = $val['w'];
         }
 
-        if(isset($this->channels['hue'])){
-            $data[$this->channels['hue']] = 255;
-        }
+        var_dump($data);
 
         $r = json_decode(str_replace("'",'"',$this->dmx::sendChannel($data)));
 
@@ -45,12 +43,8 @@ class RGBWScheinwerfer extends Scheinwerfer
           $this->channels['b'] => 0
         );
 
-        if(isset($this->channels['w'])){
+        if(count($this->channels) == 4){
             $data[$this->channels['w']] = 0;
-        }
-
-        if(isset($this->channels['hue'])){
-            $data[$this->channels['hue']] = 0;
         }
 
         return json_decode(
@@ -67,17 +61,13 @@ class RGBWScheinwerfer extends Scheinwerfer
     function on()
     {
         $data = array(
-            $this->channels['r'] => 255,
-            $this->channels['g'] => 255,
-            $this->channels['b'] => 255
+            $this->channels['r'] => 0,
+            $this->channels['g'] => 0,
+            $this->channels['b'] => 0
         );
 
-        if(isset($this->channels['w'])){
-            $data[$this->channels['w']] = 255;
-        }
-
-        if(isset($this->channels['hue'])){
-            $data[$this->channels['hue']] = 255;
+        if(count($this->channels) == 4){
+            $data[$this->channels['w']] = 0;
         }
 
         return json_decode(
@@ -89,18 +79,5 @@ class RGBWScheinwerfer extends Scheinwerfer
                 )
             )
         );
-    }
-
-    function getChannels(): array
-    {
-        $erg = $this->channels;
-
-        var_dump($erg);
-
-        if(isset($this->channels['hue'])){
-            unset($erg['hue']);
-        }
-
-        return $erg;
     }
 }

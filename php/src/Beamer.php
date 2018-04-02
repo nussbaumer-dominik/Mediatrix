@@ -16,9 +16,8 @@ class Beamer
     private $ir;
     private $freeze = array();
     private $blackout = array();
-    private $gpio;
 
-    public function __construct(array $source, array $powerCode, array $freeze, array $blackout, int $gpio)
+    public function __construct(array $source, array $powerCode, array $freeze, array $blackout)
     {
         foreach ($source as $k => $s){
             $source[$k]['nextActive'] = false;
@@ -44,19 +43,12 @@ class Beamer
 
         $this->blackout = $blackout;
 
-        $this->gpio = $gpio;
-
-        exec('gpio -g mode '.$gpio.' in');
 
         $this->ir = new \IR();
     }
 
     function changeSource()
     {
-        if(!$this->isOn()){
-            $this->on();
-        }
-
         echo "change Source \n";
 
         //get next active Source
@@ -88,10 +80,6 @@ class Beamer
 
     function on()
     {
-        if($this->isOn()){
-            return (object) array("success"=>true,"err"=>"");
-        }
-
         echo "Beamer on \n";
 
         //get Code
@@ -109,10 +97,6 @@ class Beamer
 
     function off()
     {
-        if(!$this->isOn()){
-            return (object) array("success"=>true,"err"=>"");
-        }
-
         echo "Beamer off\n";
 
         $erg = $this->on();
@@ -127,11 +111,6 @@ class Beamer
     }
 
     function freeze(){
-
-        if(!$this->isOn()){
-            $this->on();
-        }
-
         echo "Beamer freeze \n";
 
         //get Code
@@ -147,12 +126,7 @@ class Beamer
     }
 
     function blackout(){
-
-        if(!$this->isOn()){
-            $this->on();
-        }
-
-        echo "Beamer blackout \n";
+        echo "Beamer freeze \n";
 
         //get Code
         $code = $this->blackout['lastSendA'] ? $this->blackout['b']:$this->blackout['a'];
@@ -164,11 +138,6 @@ class Beamer
 
         //return Result
         return $r;
-    }
-
-    function isOn(){
-
-        return exec('gpio -g read '.$this->gpio) == 1;
     }
 
 
