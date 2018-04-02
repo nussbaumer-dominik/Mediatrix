@@ -34,7 +34,7 @@ def speakerOn():
     print sstate
 
     GPIO.output(rs, GPIO.HIGH) # an
-    sstate = 1
+    sstate = 0
 
 
 def speakerOff():
@@ -44,20 +44,16 @@ def speakerOff():
     print sstate
 
     GPIO.output(rs, GPIO.LOW) # aus
-    sstate = 0
+    sstate = 1
 
 if __name__ == '__main__':
 
-    try:
-        while True:
-            if sstate == 0:
-                GPIO.wait_for_edge(door, GPIO.RISING)
-                speakerOff()
 
-            if sstate == 1:
-                GPIO.wait_for_edge(door, GPIO.FALLING)
-                speakerOn()
+    while True:
+        if sstate == 0:
+            GPIO.wait_for_edge(door, GPIO.RISING)
+            speakerOff()
 
-    except KeyboardInterrupt:
-        GPIO.cleanup()       # clean up GPIO on CTRL+C exit
-
+        if sstate == 1:
+            GPIO.wait_for_edge(door, GPIO.FALLING)
+            speakerOn()
