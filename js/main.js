@@ -372,7 +372,7 @@ $(function() {
 		console.log(data);
 		var div = $("<div/>", {
 			class: "preset"
-		}).attr("data-preset", i);
+		}).attr("data-preset", presetStart + 1);
 		div.append("<h2>" + data.name + "</h2>");
 		if (data.conf.dmx) {
 			var count = 0;
@@ -403,6 +403,7 @@ $(function() {
 			);
 		}
 		$(".presentation").append(div);
+		presetStart++;
 		$(".preset").on("click", selectPreset);
 	}
 
