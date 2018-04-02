@@ -82,25 +82,23 @@ $(function() {
 			case "mixer":
 				let id = slider.target.getAttribute("data-id");
 				let val = slider.get() / 100;
-				console.log(mixerData);
-				console.log(conf.mixer.mikrofone[0]);
+				console.log("MixerData: " + mixerData);
+				console.log(
+					"erstes Element von Conf: " + conf.mixer.mikrofone[0]
+				);
 				if (!isNaN(id)) {
 					console.log(
 						"Dieser Slider ist von einem Mixer: " + slider.get()
 					);
 					var obj = { id: id, value: val };
 					mixerData.mixer.mikrofone = obj;
-					console.log(conf.mixer.mikrofone[0]);
 					for (
 						let i = 0;
 						i <= Object.keys(conf.mixer.mikrofone).length;
 						i++
 					) {
 						console.log(conf.mixer.mikrofone[0].id);
-						if (typeof conf.mixer.mikrofone[i].id === "string") {
-							conf.mixer.mikrofone[i].id = id;
-							conf.mixer.mikrofone[i].value = val;
-						} else if (conf.mixer.mikrofone[i].id == id) {
+						if (conf.mixer.mikrofone[i].id == id) {
 							conf.mixer.mikrofone[i].value = val;
 						}
 						/*if (conf.mixer.mikrofone[i].id == "") {
