@@ -202,7 +202,7 @@ $(function() {
 		send(mixerData);
 	}
 
-	$(".mute").on("click", muteButton);
+	//$(".mute").on("click", muteButton);
 
 	//Werte der Beamer Steuerung auslesen
 	function Beamer() {
@@ -474,10 +474,15 @@ $(function() {
 	}
 
 	var liveStatus = () => {
-		console.log(ini);
-		buildStatus("Master", ini.live.av.volume, "dB");
-		//buildStatus("Beamer", ini.live.beamer.source, "");
-		buildStatus("Helligkeit", ini.live.dmx[0], "");
+		if(ini.live.av.volume){
+			buildStatus("Master", ini.live.av.volume, "dB");
+		}
+		if(ini.live.dmx){
+			buildStatus("Helligkeit", ini.live.dmx[0], "");
+		}
+		if(ini.live.beamer.source){
+			buildStatus("Beamer", ini.live.beamer.source, "");
+		}
 	};
 
 	var updateSliders = () => {
@@ -573,7 +578,7 @@ $(function() {
 					selectMixerConf();
 					$(".flex-container").append($("#mikroTemplate").html());
 					initSlider("#mikrofonBox");
-					//$(".mute").on("click", muteButton);
+					$(".mute").on("click", muteButton);
 				}
 				break;
 			case "4":
