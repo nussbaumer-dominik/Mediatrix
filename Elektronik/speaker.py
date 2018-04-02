@@ -15,7 +15,7 @@ rs = 2 #Relais Fur Lautsprecher
 rp = 3 #Relais fur Strom //momentan fur test
 
 # GPIO Modus zuweisen
-GPIO.setup(door, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
+GPIO.setup(door, GPIO.IN, pull_up_down = GPIO.PUD_UP)
 
 GPIO.setup(rs, GPIO.OUT)
 GPIO.setup(rp, GPIO.OUT)
@@ -48,6 +48,7 @@ def speakerOff():
 
 if __name__ == '__main__':
 
+    GPIO.output(rs, GPIO.HIGH) # aus
 
     while True:
         if sstate == 0:
