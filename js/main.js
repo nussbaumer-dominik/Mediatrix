@@ -375,7 +375,7 @@ $(function() {
 		}).attr("data-preset", presetStart + 1);
 		div.append("<h2>" + data.name + "</h2>");
 		if (data.conf.dmx) {
-			var count = 0;
+			let count = 0;
 			for (let key in data.conf)
 				if (data.conf.hasOwnProperty(key)) count++;
 			div.append(
@@ -395,7 +395,8 @@ $(function() {
 					data.conf.beamer.source +
 					"</h3> </div>"
 			);
-		} else if (data.conf.mixer) {
+		}
+		if (data.conf.mixer) {
 			div.append(
 				"<div> <i class='fas fa-microphone'> </i> <h3>" +
 					data.conf.mixer.mikrofone.length +
