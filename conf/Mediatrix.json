@@ -15,18 +15,18 @@
       "gruen":12,
       "blau":13,
       "weiss":14,
-      "hue":10
+      "hue":18
     },
     "3":{
-      "rot":17,
-      "gruen":18,
-      "blau":19,
-      "hue":16
+      "rot":20,
+      "gruen":21,
+      "blau":22,
+      "hue":23
     },
     "4":{
-      "rot":21,
-      "gruen":22,
-      "blau":23
+      "rot":25,
+      "gruen":26,
+      "blau":27
     }
   },
   "mixer":{
