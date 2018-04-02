@@ -99,9 +99,11 @@ $(function() {
 					for (let i = 0; i <= conf.mixer.mikrofone.length; i++) {
 						console.log(obj.id);
 						if (typeof conf.mixer.mikrofone === "undefined") {
+							console.log("undefined");
 							conf.mixer.mikrofone.push(obj);
 							break;
 						} else if (conf.mixer.mikrofone[i].id == obj.id) {
+							console.log("defined");
 							console.log(conf.mixer.mikrofone[i]);
 							conf.mixer.mikrofone[i].value = val;
 						}
