@@ -1,13 +1,12 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: cleme
+ * User: nuss
  * Date: 16.03.2018
  * Time: 08:26
  */
 namespace Mediatrix;
-class Mikrofon
-{
+class Mikrofon {
     protected $mixer;
     protected $channelId;
     function __construct($mixer, $channelId)
@@ -16,11 +15,19 @@ class Mikrofon
         $this->channelId = $channelId;
     }
     function setVolume($value){
+        try{
+            $this->mixer->mix($value, $this->channelId);
+        } catch (Exception $ex) {
+            return array("success" => false, "err" => "" . $ex);
+        }
         return array("success" => true, "err" => "");
-        //$this->mixer::mix($value);
     }
     function mute($muted){
+        try{
+            $this->mixer->mute($muted, $this->channelId);
+        } catch (Exception $ex) {
+            return array("success" => false, "err" => "" . $ex);
+        }
         return array("success" => true, "err" => "");
-        //$this->mixer::mute($muted);
     }
 }

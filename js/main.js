@@ -1,33 +1,32 @@
 $(function() {
-	//Variablen
-	var socket,
-		ini,
+	var ini,
 		sessId,
 		presetStart = 0,
 		presets,
-		jwt = localStorage.getItem("jwt");
-	var on = false,
-		currentConf = {
-			name: "",
-			conf: {}
-		},
+		jwt = localStorage.getItem("jwt"),
+		on = false,
+		currentConf = { name: "", conf: {} },
 		conf = {
 			av: {},
-			dmx: {},
-			mixer: {},
+			dmx: { scheinwerfer: {} },
+			mixer: {
+				mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }]
+			},
 			beamer: {}
 		};
 
-	//socket = new WebSocket('wss://10.0.0.121/wss');
-	socket = new WebSocket("wss://10.0.0.144/wss");
+	var mixerData = {
+		mixer: { mikrofone: [] }
+	};
+	var socket = new WebSocket("wss://10.0.0.144/wss");
 
 	//wirft eine Exception
-	socket.onerror = function(error) {
+	socket.onerror = error => {
 		console.log("WebSocket Error: " + error);
 	};
 
 	//wird beim erfolgreichen Öffnen des Sockets ausgegeben
-	socket.onopen = function(event) {
+	socket.onopen = event => {
 		if (jwt != null) {
 			socket.send('{"jwt":"' + jwt + '","ini":1}');
 		}
@@ -35,7 +34,7 @@ $(function() {
 	};
 
 	//wird bei Response des Servers ausgegeben
-	socket.onmessage = function(event) {
+	socket.onmessage = event => {
 		if (JSON.parse(event.data)["ini"]) {
 			console.log("das ist der ini-string: " + event.data);
 			ini = (JSON && JSON.parse(event.data)) || $.parseJSON(event.data);
@@ -45,106 +44,22 @@ $(function() {
 			toggleBase();
 		} else {
 			console.log("message: " + event.data);
-			console.log(event);
 			$(".statusGrid").empty();
 			liveStatus();
 		}
 	};
 
 	//wird ausgegeben, wenn die Verbindung gekappt wurde
-	socket.onclose = function(event) {
+	socket.onclose = event => {
 		console.log("socket closed: " + socket + " " + event);
 	};
 
 	//Daten versenden
-	function send(data) {
+	var send = data => {
 		data.jwt = jwt;
 		socket.send(JSON.stringify(data));
 		console.log(JSON.stringify(data));
-	}
-
-	//mixer
-	/*var request = $.ajax({
-      url: 'http://10.10.2.1/socket.io/',
-      success: function(data) {
-        sessId = data.substring(0, 20);
-      }
-    }).done(function() {
-
-    });
-
-    mixerSocket = new WebSocket('ws://10.10.2.1/socket.io/1/websocket/' + sessId);
-    //mixerSocket = new WebSocket('ws://10.10.2.1/socket.io/1/websocket/' + sessId);
-    console.log(mixerSocket);
-
-    mixerSocket.onerror = function(error) {
-      console.log("WebSocket Error: " + error);
-    };
-
-    // Show a connected message when the WebSocket is opened
-    mixerSocket.onopen = function(event) {
-      console.log(mixerSocket + " opened");
-    };
-
-    // Handle messages sent by the server
-    mixerSocket.onmessage = function(event) {
-      var message = event.data;
-      //console.log(message);
-    };
-
-    // Show a disconnected message when the WebSocket is closed
-    mixerSocket.onclose = function(event) {
-      console.log(mixerSocket+" closed "+ event.data);
-    };
-
-    function sendVolumeToMixer(message){
-      if(message.channel == "m"){
-        var command = "3:::SETD^"+message.channel+".mix^"+message.volume;
-      }else{
-        var command = "3:::SETD^i."+message.channel+".mix^"+message.volume;
-      }
-      console.log(command);
-      mixerSocket.send(command);
-    }
-
-    function muteButton(){
-      if ($(this).attr("data-type") == "mixer") {
-        if ($(this).attr("data-state") == "0") {
-          $(this).attr("data-state", "1");
-          var command = "3:::SETD^i."+ $(this).attr("data-id") +".mute^"+1;
-          conf.mixer.mute = 1;
-          console.log(command);
-        } else {
-          $(this).attr("data-state", "0");
-          var command = "3:::SETD^i."+ $(this).attr("data-id") +".mute^"+0;
-          conf.mixer.mute = 0;
-          console.log(command);
-        }
-      }
-      mixerSocket.send(command);
-    }
-
-    function keepAlive() {
-      mixerSocket.send("3:::ALIVE");
-      console.log("Alive");
-    }
-
-
-    setTimeout(function() {
-      setInterval(function() {
-        keepAlive()
-      }, 15000)
-    }, 3000);*/
-
-	/*    "mixer": {
-          "0": 1,
-          "1": 0.8
-        }
-      }
-
-      for(var x = 0;x<Object.keys(testJson.mixer);x++){
-        console.log("id: "+testJson.mixer[x]);
-      }*/
+	};
 
 	//Werte der Slider auslesen
 	function Slider(slider) {
@@ -154,46 +69,56 @@ $(function() {
 					"Dieser Slider ist von einem AV-Receiver: " +
 						slider.target.getAttribute("data-type")
 				);
-				var data = {
+				var avdata = {
 					av: {
-						volume: slider.get() / 100,
+						value: slider.get(),
 						channel: slider.target.getAttribute("data-id")
 					}
 				};
 				conf.av = {
-					volume: slider.get() / 100,
+					value: slider.get(),
 					channel: slider.target.getAttribute("data-id")
 				};
-				send(data);
-				return data;
+				send(avdata);
 				break;
 			case "mixer":
-				console.log(
-					"Dieser Slider ist von einem Mixer: " + slider.get()
-				);
-				var data = {
-					mixer: {
-						volume: slider.get() / 100,
-						channel: slider.target.getAttribute("data-id")
+				let id = slider.target.getAttribute("data-id");
+				let val = slider.get() / 100;
+				console.log("MixerData: ");
+				console.log(mixerData);
+				if (!isNaN(id)) {
+					console.log(
+						"Dieser Slider ist von einem Mixer: " + slider.get()
+					);
+					var obj = { id: id, value: val };
+					mixerData.mixer.mikrofone = [obj];
+					console.log(conf.mixer.mikrofone.length);
+
+					if (id === "0") {
+						conf.mixer.mikrofone[0].value = val;
+					} else if (id === "1") {
+						conf.mixer.mikrofone[1].value = val;
 					}
-				};
-				conf.mixer = {
-					volume: slider.get() / 100,
-					channel: slider.target.getAttribute("data-id")
-				};
-				//sendVolumeToMixer(conf.mixer);
-				send(data);
-				return data;
+
+					send(mixerData);
+				} else if (id == "m") {
+					mixerData.mixer.master = val;
+					conf.mixer.master = val;
+					send(mixerData);
+				} else if (id == "l") {
+					mixerData.mixer.line = val;
+					conf.mixer.line = val;
+					send(mixerData);
+				}
 				break;
 			case "hue":
 				console.log(
 					"Dieser Slider ist von einem DMX Gerät: " +
-						"Id: " +
 						slider.target.getAttribute("data-id") +
 						" " +
 						slider.get()
 				);
-				var data = {
+				var huedata = {
 					dmx: {
 						scheinwerfer: {
 							id: slider.target.getAttribute("data-id"),
@@ -207,8 +132,7 @@ $(function() {
 						hue: slider.get()
 					}
 				};
-				send(data);
-				return data;
+				send(huedata);
 				break;
 			case "rgbw":
 				console.log(
@@ -218,7 +142,7 @@ $(function() {
 						" " +
 						slider.get()
 				);
-				var data = {
+				var rgbwdata = {
 					dmx: {
 						scheinwerfer: {
 							id: slider.target.getAttribute("data-id"),
@@ -228,24 +152,24 @@ $(function() {
 						}
 					}
 				};
-				conf.dmx = {
-					scheinwerfer: {
-						id: slider.target.getAttribute("data-id"),
-						[slider.target.getAttribute("data-col")]: slider.get()
-					}
-				};
-				send(data);
-				return data;
+				conf.dmx.scheinwerfer.id = slider.target.getAttribute(
+					"data-id"
+				);
+				conf.dmx.scheinwerfer[
+					slider.target.getAttribute("data-col")
+				] = slider.get();
+				send(rgbwdata);
 				break;
 		}
 	}
 
 	function muteButton() {
 		var $this = $(this);
+		console.log($this);
 		if ($this.attr("data-type") == "mixer") {
 			if ($this.attr("data-state") == "0") {
 				$this.attr("data-state", "1");
-				var data = {
+				var mutedata = {
 					id: $this.attr("data-id"),
 					mute: 1
 				};
@@ -255,15 +179,14 @@ $(function() {
 				conf.mixer.mute = 1;
 			} else {
 				$this.attr("data-state", "0");
-				//var command = "3:::SETD^i."+ $(this).attr("data-id") +".mute^"+0;
-				var data = {
+				var mutedata = {
 					id: $this.attr("data-id"),
 					mute: 0
 				};
 				conf.mixer.mute = 0;
 			}
 		}
-		send(data);
+		send(mutedata);
 	}
 
 	$(".mute").on("click", muteButton);
@@ -307,9 +230,9 @@ $(function() {
 		}
 	}
 
-	//Werte der Modes des AV-Receivers auslesen
+	//Werte der Modi des AV-Receivers auslesen
 	function Buttons() {
-		var data = {
+		let data = {
 			av: {
 				mode: ""
 			}
@@ -360,19 +283,22 @@ $(function() {
 		return true;
 	}
 
-	function selectLichtConf() {
+	var selectLichtConf = () => {
 		console.log("selectLichtConf");
 		for (let i = 0; i < Object.keys(ini.ini.dmx).length; i++) {
 			var scheinwerfer = ini.ini.dmx["scheinwerfer" + i];
 			if (scheinwerfer.numberChannels == "4") {
 				var t = document.querySelector("#rgbwTemplate").innerHTML;
+
 				for (
 					let j = 0;
 					j < parseInt(scheinwerfer.numberChannels);
 					j++
 				) {
-					t = t.replace(/{:id}/, scheinwerfer.id);
+					t = t.replace(/{:id}/, scheinwerfer.id + 1);
 				}
+
+				t = t.replace(/{:lightNumber}/, scheinwerfer.id + 1);
 				$(".flex-container").append(t);
 			} else if (scheinwerfer.numberChannels == "1") {
 				var t = document.querySelector("#hueTemplate").innerHTML;
@@ -383,25 +309,34 @@ $(function() {
 				) {
 					t = t.replace(/{:id}/, scheinwerfer.id);
 				}
+				t = t.replace(/{:lightNumber}/, scheinwerfer.id + 1);
 				$(".flex-container").append(t);
 			}
 		}
 		return true;
-	}
+	};
 
-	function selectMixerConf() {
+	var selectMixerConf = () => {
 		console.log("selectMixerConf");
-	}
+	};
 
-	function setPreset() {
+	$("#savePreset").on("click", ev => {
+		ev.preventDefault();
 		console.log("Preset '" + $("#presetName").val() + "' speichern");
-		var name = $("#presetName").val();
-		currentConf["name"] = name;
-		currentConf["conf"] = conf;
-		var data = new FormData();
+		let name = $("#presetName").val();
+		currentConf.name = name;
+		currentConf.conf = conf;
+
+		/*let data = new FormData();
 		data.append("jwt", jwt);
 		data.append("name", name);
-		data.append("conf", conf);
+		data.append("conf", JSON.stringify(conf));
+		console.log(data);*/
+
+		let preset = {};
+		preset.jwt = jwt;
+		preset.name = name;
+		preset.conf = conf;
 
 		$.snackbar({
 			content:
@@ -414,27 +349,67 @@ $(function() {
 			url: "/Mediatrix/php/src/savePreset.php",
 			traditional: true,
 			method: "POST",
-			data: data,
+			data: JSON.stringify(preset),
 			contentType: false,
 			processData: false,
 			xhrFields: {
 				withCredentials: true
 			},
 			crossDomain: true,
-			complete: function(data) {}
+			complete: () => {}
 		})
-			.done(function(data) {
+			.done(data => {
 				console.log("success: " + data);
+				addPreset(currentConf);
+				presets.push(currentConf);
 			})
-			.fail(function(data) {
+			.fail(data => {
 				console.log("error: ");
 				console.log(data);
 			});
+	});
+
+	function addPreset(data) {
+		console.log(data);
+		var div = $("<div/>", {
+			class: "preset"
+		}).attr("data-preset", presetStart + 1);
+		div.append("<h2>" + data.name + "</h2>");
+		if (data.conf.dmx) {
+			let count = Object.keys(data.conf.dmx).length;
+			div.append(
+				"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
+					count +
+					"</h3> </div>"
+			);
+		}
+		if (data.conf.av) {
+			div.append(
+				"<div> <i class='fas fa-volume-up'> </i> <h3>" +
+					data.conf.av.mode +
+					"</h3> </div>"
+			);
+		}
+		if (data.conf.beamer) {
+			div.append(
+				"<div> <i class='fas fa-video'> </i> <h3>" +
+					data.conf.beamer.source +
+					"</h3> </div>"
+			);
+		}
+		if (data.conf.mixer) {
+			div.append(
+				"<div> <i class='fas fa-microphone'> </i> <h3>" +
+					data.conf.mixer.mikrofone.length +
+					"</h3> </div>"
+			);
+		}
+		$(".presentation").append(div);
+		presetStart++;
+		$(".preset").on("click", selectPreset);
 	}
 
-	$("#savePreset").on("click", setPreset);
-
-	function getPresets() {
+	var getPresets = () => {
 		for (let i = presetStart; i < Object.keys(presets).length; i++) {
 			console.log(presets[i].name + " conf:");
 			console.log(presets[i].conf);
@@ -444,24 +419,30 @@ $(function() {
 			}).attr("data-preset", i);
 			div.append("<h2>" + presets[i].name + "</h2>");
 			if (presets[i].conf.dmx) {
+				var count = 0;
+				for (let key in presets[i].conf)
+					if (presets[i].conf.hasOwnProperty(key)) count++;
 				div.append(
 					"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
-						Object.keys(presets[i].conf.dmx).length +
+						count +
 						"</h3> </div>"
 				);
-			} else if (presets[i].av) {
+			}
+			if (presets[i].conf.av) {
 				div.append(
 					"<div> <i class='fas fa-volume-up'> </i> <h3>" +
 						presets[i].conf.av.mode +
 						"</h3> </div>"
 				);
-			} else if (presets[i].beamer) {
+			}
+			if (presets[i].conf.beamer) {
 				div.append(
 					"<div> <i class='fas fa-video'> </i> <h3>" +
 						presets[i].conf.beamer +
 						"</h3> </div>"
 				);
-			} else if (presets[i].mixer) {
+			}
+			if (presets[i].conf.mixer) {
 				div.append(
 					"<div> <i class='fas fa-microphone'> </i> <h3>" +
 						presets[i].conf.mixer +
@@ -472,34 +453,33 @@ $(function() {
 			presetStart++;
 		}
 		$(".preset").on("click", selectPreset);
-	}
+	};
 
-	function selectPreset() {
-		console.log(typeof $(this).attr("data-preset"));
+	function selectPreset(data) {
 		console.log(presets);
 		send(presets[parseInt($(this).attr("data-preset"))]);
 	}
 
-	function liveStatus() {
+	var liveStatus = () => {
 		buildStatus("Master", ini.live.av.volume, "dB");
-		buildStatus("Beamer", ini.live.beamer.source, "");
+		//buildStatus("Beamer", ini.live.beamer.source, "");
 		buildStatus("Helligkeit", ini.live.dmx[0], "");
-	}
+	};
 
-	function updateSliders() {
+	var updateSliders = () => {
 		setSlider("avSlider1", ini.live.av.volume);
 		document.getElementById("avSlider1Value").innerHTML =
 			ini.live.av.volume;
-	}
+	};
 
-	function buildStatus(key, value, unit) {
+	var buildStatus = (key, value, unit) => {
 		var div = $("<div>");
 		div.append("<span>" + key + "</span><span>" + value + unit + "</span>");
 		$(".statusGrid").append(div);
-	}
+	};
 
-	function chmod() {
-		var mode = $(this).is(":checked");
+	$(".tgl").on("click", () => {
+		var mode = $(".tgl").prop("checked");
 		console.log(mode);
 		if (mode) {
 			var data = new FormData();
@@ -521,8 +501,7 @@ $(function() {
 			xhrFields: {
 				withCredentials: true
 			},
-			crossDomain: true,
-			complete: function(data) {}
+			crossDomain: true
 		})
 			.done(function(data) {
 				if (mode) {
@@ -530,15 +509,13 @@ $(function() {
 				} else {
 					toggleBase();
 				}
-				console.log("success: " + mode + " " + data);
+				console.log("success: mode: " + mode + " " + data);
 			})
 			.fail(function(data) {
-				console.log("error: ");
+				console.log("error ");
 				console.log(data);
 			});
-	}
-
-	$(".tgl").on("click", chmod);
+	});
 
 	var isMobile =
 		"ontouchstart" in document.documentElement &&
@@ -550,9 +527,7 @@ $(function() {
 		togglePresMode(2);
 		toggleStatus(1);
 
-		if (isMobile) {
-			toggleMobileOptions(1);
-		}
+		if (isMobile) toggleMobileOptions(1);
 
 		switch ($(this).attr("data-boxbtn")) {
 			case "1":
@@ -599,7 +574,6 @@ $(function() {
 				break;
 			case "5":
 				console.log("Präsentationsmodus einblenden");
-				//hide all boxes
 				$(".flex-container").empty();
 				toggleFlexContainer(0);
 				togglePresMode(0);
@@ -611,7 +585,7 @@ $(function() {
 		}
 	});
 
-	function togglePresMode(count) {
+	var togglePresMode = count => {
 		switch (count) {
 			case 0:
 				if ($(".presentation").hasClass("flex")) {
@@ -629,9 +603,9 @@ $(function() {
 				$(".presentation").removeClass("flex");
 				break;
 		}
-	}
+	};
 
-	function toggleFlexContainer(count) {
+	var toggleFlexContainer = count => {
 		switch (count) {
 			case 0:
 				if ($(".flex-container").hasClass("flex")) {
@@ -644,9 +618,9 @@ $(function() {
 			case 1:
 				$(".flex-container").addClass("flex");
 		}
-	}
+	};
 
-	function toggleStatus(count) {
+	var toggleStatus = count => {
 		switch (count) {
 			case 0:
 				if ($(".statusBox").hasClass("toggleStatus")) {
@@ -662,9 +636,9 @@ $(function() {
 			case 2:
 				$(".statusBox").removeClass("toggleStatus");
 		}
-	}
+	};
 
-	function toggleMobileOptions(count) {
+	var toggleMobileOptions = count => {
 		switch (count) {
 			case 0:
 				if ($(".mobileOptions").hasClass("toggleMobileOptions")) {
@@ -677,28 +651,28 @@ $(function() {
 			case 1:
 				$(".mobileOptions").addClass("toggleMobileOptions");
 		}
-	}
+	};
 
-	function setSlider(id, val) {
+	var setSlider = (id, val) => {
 		var slider = document.getElementById(id);
 		slider.noUiSlider.set(val);
-	}
+	};
 
-	function toggleBase() {
+	var toggleBase = () => {
 		toggleFlexContainer(0);
 		togglePresMode(1);
 		toggleStatus(2);
 		$(".savePreset").css("display", "none");
 		$(".side-nav ul").css("display", "none");
-	}
+	};
 
-	function toggleEx() {
+	var toggleEx = () => {
 		toggleFlexContainer(1);
 		togglePresMode(2);
 		toggleStatus(1);
 		$(".savePreset").css("display", "block");
 		$(".side-nav ul").css("display", "block");
-	}
+	};
 
 	//Slider initialisieren, je nach dem, welche gerade im Markup eingeblendet sind
 	function initSlider(container) {

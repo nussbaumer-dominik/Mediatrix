@@ -232,7 +232,7 @@ a {
 		width: 64px;
 		box-sizing: border-box;
 		height: 64px;
-		display: block;
+		display: none;
 		border-radius: 50%;
 		position: absolute;
 		top: 20px;
@@ -482,6 +482,7 @@ a {
 		width: 100%;
 		margin: 0;
 		padding: 0;
+		display: none;
 		list-style-type: none;
 
 		li {
@@ -581,7 +582,7 @@ a {
 	width: 100%;
 	box-sizing: border-box;
 	height: calc(100% - 460px);
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
 	grid-gap: 10px;
 	padding: 0 10px 10px 10px;
@@ -781,8 +782,14 @@ a {
 		align-items: center;
 	}
 
-	#mikroSliderWrapper:nth-child(1) {
+	#mikroSliderWrapper:nth-child(1),
+	#mikroSliderWrapper:nth-child(2) {
 		margin-right: 20px;
+	}
+
+	#lineSliderValue,
+	#mikroMasterSliderValue {
+		margin-top: 62px;
 	}
 
 	#mikroMasterSlider-wrapper {
@@ -1206,7 +1213,7 @@ button {
 
 		.textField {
 			font-size: 20px;
-			margin-top: 15px;
+			margin-top: 5px;
 			width: 100%;
 			min-width: 50px;
 			text-align: center;
@@ -1214,6 +1221,19 @@ button {
 
 		.valueField {
 			font-size: 14px;
+			margin-top: 5px;
+		}
+
+		#lineSliderValue {
+			margin-top: 53px;
+		}
+
+		#mikroMasterSlider {
+			margin-top: -25px;
+		}
+
+		#mikroMasterSliderValue  {
+			margin-top: 51.5px;
 		}
 	}
 
