@@ -376,8 +376,9 @@ $(function() {
 		div.append("<h2>" + data.name + "</h2>");
 		if (data.conf.dmx) {
 			let count = 0;
-			for (let key in data.conf)
-				if (data.conf.hasOwnProperty(key)) count++;
+			let counter = data.conf.dmx.filter(x => {
+				return x.id;
+			}).length;
 			div.append(
 				"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
 					count +
