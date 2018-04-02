@@ -10,7 +10,7 @@ $(function() {
 			av: {},
 			dmx: {},
 			mixer: {
-				mikrofone: []
+				mikrofone: [{}]
 			},
 			beamer: {}
 		};
@@ -97,13 +97,12 @@ $(function() {
 					var obj = { id: id, value: val };
 					mixerData.mixer.mikrofone = [obj];
 					console.log(conf.mixer.mikrofone.length);
-					console.log(Object.keys(conf.mixer.mikrofone).length);
 
-					for (
-						let i = 0;
-						i < Object.keys(conf.mixer.mikrofone).length;
-						i++
-					) {}
+					for (let i = 0; i < conf.mixer.mikrofone.length; i++) {
+						if (conf.mixer.mikrofone[i].id == obj.id) {
+							console.log("ja");
+						}
+					}
 
 					/*if (Object.keys(conf.mixer.mikrofone).length < 2) {
 						if(){
