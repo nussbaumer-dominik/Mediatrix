@@ -8,7 +8,7 @@ $(function() {
 		currentConf = { name: "", conf: {} },
 		conf = {
 			av: {},
-			dmx: {},
+			dmx: { scheinwerfer: {}},
 			mixer: {
 				mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }]
 			},
@@ -120,7 +120,7 @@ $(function() {
 						" " +
 						slider.get()
 				);
-				var data = {
+				let data = {
 					dmx: {
 						scheinwerfer: {
 							id: slider.target.getAttribute("data-id"),
@@ -155,11 +155,9 @@ $(function() {
 						}
 					}
 				};
-				conf.dmx = {
-					scheinwerfer: {
-						id: slider.target.getAttribute("data-id"),
-						[slider.target.getAttribute("data-col")]: slider.get()
-					}
+				conf.dmx.scheinwerfer = {
+					id: slider.target.getAttribute("data-id"),
+					[slider.target.getAttribute("data-col")]: slider.get()
 				};
 				send(data);
 				return data;
@@ -302,7 +300,7 @@ $(function() {
 					t = t.replace(/{:id}/, scheinwerfer.id + 1);
 				}
 
-				t = t.replace(/{:lightNumber}/, scheinwerfer.id);
+				t = t.replace(/{:lightNumber}/, scheinwerfer.id + 1);
 				$(".flex-container").append(t);
 			} else if (scheinwerfer.numberChannels == "1") {
 				var t = document.querySelector("#hueTemplate").innerHTML;
@@ -375,10 +373,7 @@ $(function() {
 		}).attr("data-preset", presetStart + 1);
 		div.append("<h2>" + data.name + "</h2>");
 		if (data.conf.dmx) {
-			let count = 0;
-			let counter = data.conf.dmx.filter(x => {
-				return x.id;
-			}).length;
+			let count = Object.keys(value).length);
 			div.append(
 				"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
 					count +
