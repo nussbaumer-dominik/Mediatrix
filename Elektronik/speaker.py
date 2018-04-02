@@ -46,16 +46,18 @@ def speakerOff():
     GPIO.output(rs, GPIO.LOW) # aus
     sstate = 0
 
-except KeyboardInterrupt:
-    GPIO.cleanup()       # clean up GPIO on CTRL+C exit
-
 if __name__ == '__main__':
 
-    while True:
-        if sstate == 0:
-            GPIO.wait_for_edge(door, GPIO.RISING)
-            speakerOff()
+    try:
+        while True:
+            if sstate == 0:
+                GPIO.wait_for_edge(door, GPIO.RISING)
+                speakerOff()
 
-        if sstate == 1:
-            GPIO.wait_for_edge(door, GPIO.FALLING)
-            speakerOn()
+            if sstate == 1:
+                GPIO.wait_for_edge(door, GPIO.FALLING)
+                speakerOn()
+
+    except KeyboardInterrupt:
+        GPIO.cleanup()       # clean up GPIO on CTRL+C exit
+
