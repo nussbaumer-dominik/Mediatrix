@@ -165,28 +165,41 @@ $(function() {
 
 	function muteButton() {
 		var $this = $(this);
+		let id = $this.attr("data-id");
 		console.log($this);
 		if ($this.attr("data-type") == "mixer") {
 			if ($this.attr("data-state") == "0") {
 				$this.attr("data-state", "1");
-				var mutedata = {
-					id: $this.attr("data-id"),
-					mute: 1
-				};
+
+				if ( id === "0") {
+					mixerData.mixer.mikrofone[0].mute = 1;
+					conf.mixer.mikrofone[0].mute = 1;
+				} else if (id === "1") {
+					mixerData.mixer.mikrofone[1].mute = 1;
+					conf.mixer.mikrofone[1].mute = 1;
+				}
+
 				$.snackbar({
 					content: "Das Mikrofon wurde stumm geschalten"
 				});
 				conf.mixer.mute = 1;
 			} else {
 				$this.attr("data-state", "0");
-				var mutedata = {
-					id: $this.attr("data-id"),
-					mute: 0
-				};
-				conf.mixer.mute = 0;
+
+				if ( id === "0") {
+					mixerData.mixer.mikrofone[0].mute = 0;
+					conf.mixer.mikrofone[0].mute = 0;
+				} else if (id === "1") {
+					mixerData.mixer.mikrofone[1].mute = 0;
+					conf.mixer.mikrofone[1].mute = 0;
+				}
+
+				$.snackbar({
+					content: "Das Mikrofon wurde freigegeben"
+				});
 			}
 		}
-		send(mutedata);
+		send(mixerData);
 	}
 
 	$(".mute").on("click", muteButton);
@@ -461,6 +474,7 @@ $(function() {
 	}
 
 	var liveStatus = () => {
+		console.log(ini);
 		buildStatus("Master", ini.live.av.volume, "dB");
 		//buildStatus("Beamer", ini.live.beamer.source, "");
 		buildStatus("Helligkeit", ini.live.dmx[0], "");
@@ -472,7 +486,7 @@ $(function() {
 			ini.live.av.volume;
 	};
 
-	var buildStatus = (key, value, unit) => {
+	function buildStatus(key, value, unit) {
 		var div = $("<div>");
 		div.append("<span>" + key + "</span><span>" + value + unit + "</span>");
 		$(".statusGrid").append(div);
