@@ -171,7 +171,7 @@ $(function() {
 		if ($this.attr("data-type") == "mixer") {
 			if ($this.attr("data-state") == "0") {
 				$this.attr("data-state", "1");
-				var data = {
+				let data = {
 					id: $this.attr("data-id"),
 					mute: 1
 				};
@@ -181,7 +181,7 @@ $(function() {
 				conf.mixer.mute = 1;
 			} else {
 				$this.attr("data-state", "0");
-				var data = {
+				let data = {
 					id: $this.attr("data-id"),
 					mute: 0
 				};
@@ -195,7 +195,7 @@ $(function() {
 
 	//Werte der Beamer Steuerung auslesen
 	function Beamer() {
-		var data = {
+		let data = {
 			beamer: {}
 		};
 		//Kontrollieren ob vom Typ Beamer
@@ -479,11 +479,11 @@ $(function() {
 		var mode = $(".tgl").prop("checked");
 		console.log(mode);
 		if (mode) {
-			var data = new FormData();
+			let data = new FormData();
 			data.append("jwt", jwt);
 			data.append("ex", 1);
 		} else {
-			var data = new FormData();
+			let data = new FormData();
 			data.append("jwt", jwt);
 			data.append("base", 1);
 		}
@@ -672,9 +672,9 @@ $(function() {
 	};
 
 	//Slider initialisieren, je nach dem, welche gerade im Markup eingeblendet sind
-	var initSlider = function(container) {
-		var sliders = $(container).find(".slider");
-		var valueFields = $(container).find(".valueField");
+	function initSlider(container) {
+		let sliders = $(container).find(".slider");
+		let valueFields = $(container).find(".valueField");
 
 		sliders.each(function(slider) {
 			noUiSlider.create(this, {
@@ -698,5 +698,5 @@ $(function() {
 				valueFields.get(i).innerHTML = values[handle];
 			});
 		});
-	};
+	}
 });
