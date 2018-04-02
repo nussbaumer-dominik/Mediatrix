@@ -479,20 +479,20 @@ $(function() {
 		var mode = $(".tgl").prop("checked");
 		console.log(mode);
 		if (mode) {
-			let data = new FormData();
-			data.append("jwt", jwt);
-			data.append("ex", 1);
+			let daten = new FormData();
+			daten.append("jwt", jwt);
+			daten.append("ex", 1);
 		} else {
-			let data = new FormData();
-			data.append("jwt", jwt);
-			data.append("base", 1);
+			let daten = new FormData();
+			daten.append("jwt", jwt);
+			daten.append("base", 1);
 		}
 
 		$.ajax({
 			url: "/Mediatrix/php/src/changeUserMode.php",
 			traditional: true,
 			method: "POST",
-			data: data,
+			data: daten,
 			contentType: false,
 			processData: false,
 			xhrFields: {
