@@ -515,10 +515,21 @@ class Application implements MessageComponentInterface
             )
         );
 
-        $result['live']['dmx'] = array();
+        $live['dmx'] = array();
 
-        foreach ($this->scheinwerfer as $scheinw){
-            array_push($result['live']['dmx'],$scheinw->getStatus());
+        foreach ($this->scheinwerfer as $key =>$scheinw){
+            $channels = $scheinw->getStatus();
+            $help = array('id' => $key, 'channels' => $channels);
+            array_push($live['dmx'],$help);
+        }
+
+        $live['beamer'] = array('on' => $this->beamer->isOn());
+
+
+        $result['live'] = $live;
+
+        foreach ($this->clients as $client){
+            $client->send(json_encode(array('live' => $live)));
         }
 
         return $result;

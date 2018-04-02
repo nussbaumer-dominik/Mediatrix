@@ -8,6 +8,9 @@
 #include <map>
 #include <array>
 #include <vector>
+#include <string>
+
+
 
 //TEst
 
@@ -48,7 +51,15 @@ class DMX : public Php::Base {
         }
 
         static Php::Value getStatus(){
-            return channels;
+             string returnstring = "[";
+             returnstring += to_string(channels[0]);
+              for (int i = 1; i < 512; i++)
+                returnstring += ","+to_string(channels[i]);
+
+             returnstring += "]";
+
+
+            return returnstring;
         }
 
 

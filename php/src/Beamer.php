@@ -17,6 +17,7 @@ class Beamer
     private $freeze = array();
     private $blackout = array();
     private $gpio;
+    private $isOn;
 
     public function __construct(array $source, array $powerCode, array $freeze, array $blackout, int $gpio)
     {
@@ -49,6 +50,8 @@ class Beamer
         exec('gpio -g mode '.$gpio.' in');
 
         $this->ir = new \IR();
+
+        $this->isOn = false;
     }
 
     function changeSource()
@@ -102,6 +105,8 @@ class Beamer
         //send IR code
         $r = json_decode(str_replace("'",'"',$this->ir->send($code,5)));
 
+        $this->isOn = $r->success;
+
         //return Result
         return $r;
 
@@ -121,6 +126,8 @@ class Beamer
         if(!$r->success){
             $erg = $r;
         }
+
+        $this->isOn = !$erg->success;
 
         return $erg;
 
