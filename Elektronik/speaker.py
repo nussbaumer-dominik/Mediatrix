@@ -46,6 +46,9 @@ def speakerOff():
     GPIO.output(rs, GPIO.LOW) # aus
     sstate = 0
 
+except KeyboardInterrupt:
+    GPIO.cleanup()       # clean up GPIO on CTRL+C exit
+
 if __name__ == '__main__':
 
     while True:
