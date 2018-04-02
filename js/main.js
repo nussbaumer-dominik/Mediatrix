@@ -16,7 +16,7 @@ $(function() {
 			beamer: {}
 		};
 
-	var mixerData = { mixer: { mikrofone: [] } };
+	var mixerData = { mixer: { mikrofone: [{ id: "", value: 0 }] } };
 	var socket = new WebSocket("wss://10.0.0.144/wss");
 
 	//wirft eine Exception
@@ -83,23 +83,36 @@ $(function() {
 				return data;
 				break;
 			case "mixer":
-				var id = slider.target.getAttribute("data-id");
+				let id = slider.target.getAttribute("data-id");
+				let val = slider.get() / 100;
 				console.log(mixerData);
 				if (!isNaN(id)) {
 					console.log(
 						"Dieser Slider ist von einem Mixer: " + slider.get()
 					);
-					var obj = { id: id, value: slider.get() / 100 };
+					var obj = { id: id, value: val };
 					mixerData.mixer.mikrofone = obj;
-					conf.mixer.mikrofone = obj;
+					for (
+						let i = 0;
+						i <= Object.keys(conf.mixer.mikrofone).length;
+						i++
+					) {
+						if (conf.mixer.mikrofone[i].id == "") {
+							conf.mixer.mikrofone[i].id = id;
+							conf.mixer.mikrofone[i].value = val;
+						} else if (conf.mixer.mikrofone[i].id == id) {
+							conf.mixer.mikrofone[i].value = val;
+						}
+					}
+
 					send(mixerData);
 				} else if (id == "m") {
-					mixerData.mixer.master = slider.get() / 100;
-					conf.mixer.master = slider.get() / 100;
+					mixerData.mixer.master = val;
+					conf.mixer.master = val;
 					send(mixerData);
 				} else if (id == "l") {
-					mixerData.mixer.line = slider.get() / 100;
-					conf.mixer.line = slider.get() / 100;
+					mixerData.mixer.line = val;
+					conf.mixer.line = val;
 					send(mixerData);
 				}
 				break;
