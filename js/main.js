@@ -100,10 +100,10 @@ $(function() {
 						console.log("Durchlauf Nr.: " + (i + 1));
 
 						if (conf.mixer.mikrofone.find(el => el.id === id)) {
-							console.log(conf.mixer.mikrofone);
+							console.log("id vorhanden");
 							conf.mixer.mikrofone[i].value = val;
 						} else {
-							console.log(conf.mixer.mikrofone);
+							console.log("id nicht vorhanden");
 							conf.mixer.mikrofone[i] = obj;
 						}
 					}
