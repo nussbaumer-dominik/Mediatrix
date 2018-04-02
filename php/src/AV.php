@@ -286,4 +286,8 @@ class AV
         return $index;
     }
 
+    function isOn(){
+        return exec('gpio -g read '.$this->gpio) == 1;
+    }
+
 }
