@@ -8,7 +8,7 @@ GPIO.setwarnings(False)			#disable warnings
 GPIO.setmode(GPIO.BCM) # GPIO Nummern statt Board Nummern
 
 # SET GPIO Button-Pin
-door = 8
+door = 7
 
 #Relais
 rs = 2 #Relais Fur Lautsprecher
