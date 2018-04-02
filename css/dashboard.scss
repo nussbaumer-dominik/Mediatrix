@@ -582,7 +582,7 @@ a {
 	width: 100%;
 	box-sizing: border-box;
 	height: calc(100% - 460px);
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
 	grid-gap: 10px;
 	padding: 0 10px 10px 10px;
@@ -1071,11 +1071,6 @@ button {
 		flex-direction: column;
 	}
 
-	#lineSliderValue,
-	#mikroMasterSliderValue {
-		margin-top: 62px;
-	}
-
 	.side-nav {
 		order: 2;
 		width: 100vw;
@@ -1218,7 +1213,7 @@ button {
 
 		.textField {
 			font-size: 20px;
-			margin-top: 15px;
+			margin-top: 5px;
 			width: 100%;
 			min-width: 50px;
 			text-align: center;
@@ -1226,6 +1221,19 @@ button {
 
 		.valueField {
 			font-size: 14px;
+			margin-top: 5px;
+		}
+
+		#lineSliderValue {
+			margin-top: 53px;
+		}
+
+		#mikroMasterSlider {
+			margin-top: -25px;
+		}
+
+		#mikroMasterSliderValue  {
+			margin-top: 51.5px;
 		}
 	}
 
