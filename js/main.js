@@ -100,10 +100,10 @@ $(function() {
 						console.log(obj.id);
 						if (typeof conf.mixer.mikrofone === "undefined") {
 							conf.mixer.mikrofone.push(obj);
+							break;
 						} else if (conf.mixer.mikrofone[i].id == obj.id) {
 							console.log(conf.mixer.mikrofone[i]);
 							conf.mixer.mikrofone[i].value = val;
-							break;
 						}
 					}
 
