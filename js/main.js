@@ -300,7 +300,7 @@ $(function() {
 					t = t.replace(/{:id}/, scheinwerfer.id + 1);
 				}
 
-				t = t.replace(/{:lightNumber}/, scheinwerfer.id + 1);
+				t = t.replace(/{:lightNumber}/, scheinwerfer.id);
 				$(".flex-container").append(t);
 			} else if (scheinwerfer.numberChannels == "1") {
 				var t = document.querySelector("#hueTemplate").innerHTML;
