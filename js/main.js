@@ -96,7 +96,7 @@ $(function() {
 					mixerData.mixer.mikrofone = [obj];
 					console.log(conf.mixer.mikrofone.length);
 
-					for (let i = 0; i < conf.mixer.mikrofone.length; i++) {
+					for (let i = 0; i <= conf.mixer.mikrofone.length; i++) {
 						console.log(obj.id);
 						if (!conf.mixer.mikrofone[i]) {
 							conf.mixer.mikrofone.push(obj);
