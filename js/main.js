@@ -369,6 +369,7 @@ $(function() {
 	});
 
 	function addPreset(data) {
+		console.log(data);
 		for (let i = 0; i < Object.keys(data).length; i++) {
 			var div = $("<div/>", {
 				class: "preset"
