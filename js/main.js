@@ -98,7 +98,7 @@ $(function() {
 
 					for (let i = 0; i <= conf.mixer.mikrofone.length; i++) {
 						console.log(obj.id);
-						if (!conf.mixer.mikrofone[i]) {
+						if (typeof conf.mixer.mikrofone === "undefined") {
 							conf.mixer.mikrofone.push(obj);
 						} else if (conf.mixer.mikrofone[i].id == obj.id) {
 							console.log(conf.mixer.mikrofone[i]);
