@@ -99,21 +99,21 @@ $(function() {
 					for (let i = 0; i <= conf.mixer.mikrofone.length; i++) {
 						console.log("Durchlauf Nr.: " + (i + 1));
 
-						if (conf.mixer.mikrofone[i].id === id) {
-							console.log("id vorhanden");
-							conf.mixer.mikrofone[i].value = val;
-						} else {
-							console.log("id nicht vorhanden");
-							conf.mixer.mikrofone[i] = obj;
-						}
-
-						/*if (conf.mixer.mikrofone.find(el => el.id === id)) {
+						/*if (conf.mixer.mikrofone[i].id === id) {
 							console.log("id vorhanden");
 							conf.mixer.mikrofone[i].value = val;
 						} else {
 							console.log("id nicht vorhanden");
 							conf.mixer.mikrofone[i] = obj;
 						}*/
+
+						if (conf.mixer.mikrofone.find(el => el.id === id)) {
+							console.log("id " + id + " vorhanden");
+							conf.mixer.mikrofone[i].value = val;
+						} else {
+							console.log("id nicht vorhanden");
+							conf.mixer.mikrofone[i] = obj;
+						}
 					}
 					/*if (Object.keys(conf.mixer.mikrofone).length < 2) {
 						if(){
