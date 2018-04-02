@@ -94,7 +94,7 @@ $(function() {
 					mixerData.mixer.mikrofone = obj;
 					for (
 						let i = 0;
-						i <= Object.keys(conf.mixer.mikrofone).length;
+						i < Object.keys(conf.mixer.mikrofone).length;
 						i++
 					) {
 						console.log("i: " + i);
