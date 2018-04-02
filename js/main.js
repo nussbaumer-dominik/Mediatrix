@@ -10,7 +10,7 @@ $(function() {
 			av: {},
 			dmx: {},
 			mixer: {
-				mikrofone: [{}]
+				mikrofone: []
 			},
 			beamer: {}
 		};
@@ -88,8 +88,6 @@ $(function() {
 				let val = slider.get() / 100;
 				console.log("MixerData: ");
 				console.log(mixerData);
-				console.log("erstes Element von Conf: ");
-				console.log(conf.mixer.mikrofone[0]);
 				if (!isNaN(id)) {
 					console.log(
 						"Dieser Slider ist von einem Mixer: " + slider.get()
@@ -98,7 +96,7 @@ $(function() {
 					mixerData.mixer.mikrofone = [obj];
 					console.log(conf.mixer.mikrofone.length);
 
-					for (let i = 0; i < conf.mixer.mikrofone.length; i++) {
+					for (let i = 0; i <= conf.mixer.mikrofone.length; i++) {
 						if (conf.mixer.mikrofone[i].id == obj.id) {
 							console.log("ja");
 							conf.mixer.mikrofone[i].value = val;
