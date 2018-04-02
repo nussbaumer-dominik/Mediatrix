@@ -91,7 +91,7 @@ $(function() {
 						"Dieser Slider ist von einem Mixer: " + slider.get()
 					);
 					var obj = { id: id, value: val };
-					mixerData.mixer.mikrofone = obj;
+					mixerData.mixer.mikrofone[] = obj;
 					for (
 						let i = 0;
 						i < Object.keys(conf.mixer.mikrofone).length;
