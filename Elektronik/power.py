@@ -8,6 +8,7 @@ GPIO.setmode(GPIO.BCM) # GPIO Nummern statt Board Nummern
 
 # SET GPIO Button-Pin
 btn = 15
+panel = 7
 door = 8
 
 #Relais
@@ -15,8 +16,9 @@ rs = 2 #Relais Für Lautsprecher
 rp = 3 #Relais für Strom //momentan für test
 
 # GPIO Modus zuweisen
-GPIO.setup(btn, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
-GPIO.setup(door, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
+GPIO.setup(btn, GPIO.IN)
+GPIO.setup(panel, GPIO.IN)
+GPIO.setup(door, GPIO.IN)
 
 GPIO.setup(rs, GPIO.OUT)
 GPIO.setup(rp, GPIO.OUT)
@@ -45,6 +47,16 @@ def main():
 
         time.sleep(0.03)
 
+
+# Magnetkontakt Panel abfragen
+
+        if GPIO.input(panel):
+            print "offen"
+            main()
+            switchSpeaker(sstate)
+
+        time.sleep(0.03)
+
 #Magnetkontakt Tür abfragen
 
         if GPIO.input(door):
@@ -54,45 +66,29 @@ def main():
 
         time.sleep(0.03)
 
-        print value;
-
     return 0
 
 
 
 #Strom schalten
-def switchPower(evt):
-    global sstate, pstate
-
-    GPIO.remove_event_detect(btn)
-
-    print "changing Power-State"
-    print pstate
+def switchPower():
 
     if pstate == 0:
         GPIO.output(rp, GPIO.HIGH) # an
         time.sleep(20)
         sstate = 1
         GPIO.output(rs, GPIO.HIGH) # an
-        pstate = 1
 
     if pstate == 1:
         sstate = 0
         GPIO.output(rs, GPIO.LOW)  #aus
         time.sleep(1)
         GPIO.output(rp, GPIO.LOW)  #aus
-        pstate = 0
-
-    GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower, bouncetime=300)
 
 
 
 #Lautsprecher schalten
-def switchSpeaker(evt):
-    global sstate
-
-    GPIO.remove_event_detect(door)
-
+def switchSpeaker():
     if sstate == 0:
         GPIO.output(rs, GPIO.HIGH) # an
         sstate = 1
@@ -101,18 +97,9 @@ def switchSpeaker(evt):
         GPIO.output(rs, GPIO.LOW) # aus
         sstate = 0
 
-    GPIO.add_event_detect(door, GPIO.RISING, callback=switchPower, bouncetime=300)
-
-
-
-GPIO.add_event_detect(btn, GPIO.RISING, callback=switchPower, bouncetime=300)
-GPIO.add_event_detect(door, GPIO.RISING, callback=switchPower, bouncetime=300)
-
 
 if __name__ == '__main__':
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(btn, GPIO.IN)
+    main()
 
-    #main()
-    print "los"
-    while True:
-        print "cool"
-        time.sleep(10)

@@ -20,22 +20,14 @@ class AV
     private $presets;
     private $ir;
     private $sources;
-    private $gpio;
-    private $powerCodes;
-    private $iniLevel;
 
     /**
      * AV constructor.
      * @param array $source
      * @param array $volumeCodes
      * @param array $presets
-     * @param int $volumeSteps
-     * @param int $maxVolume
-     * @param int $minVolume
-     * @param int $gpio
-     * @param array $powerCodes
      */
-    function __construct(array $source, array $volumeCodes, array $presets, $volumeSteps, $maxVolume, $minVolume, int $gpio, array $powerCodes, $iniVolume)
+    function __construct(array $source, array $volumeCodes, array $presets, int $volumeSteps, int $maxVolume, int $minVolume)
     {
 
         $this->ir = new \IR();
@@ -66,34 +58,22 @@ class AV
         $this->presets = $presets;
 
 
-
-        $powerCodes['lastSendA'] = false;
-
-        $this->powerCodes = $powerCodes;
-
-
-        $this->gpio = $gpio;
-
-        exec('gpio -g mode '.$gpio.' in');
-
-
         $this->volumeSteps = $volumeSteps;
 
         $this->maxVolume = $maxVolume;
 
         $this->minVolume = $minVolume;
 
-        $this->iniLevel = $iniVolume;
 
-        $this->on();
-
-
-        /*//set Volume Level to min Vaule ad then to half
+        //set Volume Level to min Vaule ad then to half
         $this->volumeLevel = $maxVolume;
 
         $this->setVolumeLevel($minVolume);
 
-        $this->setVolumeLevel($minVolume + ($maxVolume-$minVolume)/2);*/
+        $this->setVolumeLevel($minVolume + ($maxVolume-$minVolume)/2);
+
+
+
 
     }
 
@@ -111,10 +91,6 @@ class AV
      */
     public function setVolumeLevel($volumeLevel)
     {
-
-        if(!$this->isOn()){
-            $this->on();
-        }
 
         echo "change AV-Volume\n";
 
@@ -157,10 +133,6 @@ class AV
     public function setPreset($preset)
     {
 
-        if(!$this->isOn()){
-            $this->on();
-        }
-
         //get Code
         $code = $this->presets[$preset]['lastSendA'] ? $this->presets[$preset]['b']:$this->presets[$preset]['a'];
 
@@ -173,10 +145,6 @@ class AV
 
     function changeSource()
     {
-        if(!$this->isOn()){
-            $this->on();
-        }
-
         echo "change Source \n";
 
         //get next active Source
@@ -204,47 +172,6 @@ class AV
 
         //return Result
         return $r;
-    }
-
-    function on()
-    {
-        if($this->isOn()){
-            $this->volumeLevel = $this->iniLevel;
-
-            return (object) array("success"=>true,"err"=>"");
-        }
-
-        echo "AV on \n";
-
-        //get Code
-        $code = $this->powerCodes['lastSendA'] ? $this->powerCodes['b']:$this->powerCodes['a'];
-
-        $this->powerCodes['lastSendA'] = !$this->powerCodes['lastSendA'];
-
-        //send IR code
-        $r = json_decode(str_replace("'",'"',$this->ir->send($code,5)));
-
-        if($r->success){
-            $this->volumeLevel = $this->iniLevel;
-        }
-
-        //return Result
-        return $r;
-
-    }
-
-    function off()
-    {
-        if(!$this->isOn()){
-            return (object) array("success"=>true,"err"=>"");
-        }
-
-        echo "AV off\n";
-
-        $erg = $this->on();
-
-        return $erg;
-
     }
 
     /**
@@ -278,10 +205,4 @@ class AV
     {
         return "test";
     }
-
-    function isOn(){
-
-        return exec('gpio -g read '.$this->gpio) == 1;
-    }
-
 }
