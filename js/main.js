@@ -153,10 +153,12 @@ $(function() {
 						}
 					}
 				};
-				conf.dmx.scheinwerfer = {
-					id: slider.target.getAttribute("data-id"),
-					[slider.target.getAttribute("data-col")]: slider.get()
-				};
+				conf.dmx.scheinwerfer.id = slider.target.getAttribute(
+					"data-id"
+				);
+				conf.dmx.scheinwerfer[
+					slider.target.getAttribute("data-col")
+				] = slider.get();
 				send(rgbwdata);
 				break;
 		}
