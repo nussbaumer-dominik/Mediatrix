@@ -36,7 +36,7 @@ def switchPower(pstate):
         GPIO.output(rs, GPIO.HIGH) # an
         pstate = 1
 
-    if pstate == 1:
+    elif pstate == 1:
         GPIO.output(rs, GPIO.LOW)  #aus
         sleep(1)
         GPIO.output(rp, GPIO.LOW)  #aus
@@ -52,5 +52,4 @@ if __name__ == '__main__':
 
     while True:
         GPIO.wait_for_edge(btn, GPIO.RISING)
-        print pstate
         pstate = switchPower(pstate)
