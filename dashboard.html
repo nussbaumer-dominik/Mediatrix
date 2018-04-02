@@ -102,7 +102,7 @@
         <div class="statusGrid"></div>
       </div>
 
-      <div class="flex-container flex">
+      <div class="flex-container">
 
       </div>
 
@@ -115,7 +115,7 @@
         </div>
       </div>
 
-      <div class="presentation">
+      <div class="presentation flex">
         <div class="preset" data-preset="default1">
           <h2>Zwei Personen</h2>
           <div>
@@ -220,138 +220,147 @@
   <!-- Templates -->
   <!-- Beamer Box -->
   <script type="text/template" class="template" id="beamerTemplate">
-        <div class="box" id="beamerBox" data-box="1">
-          <h1>Beamer</h1>
-          <nav class="menu">
-            <input type="checkbox" href="#" class="menu-open" id="power"/>
-            <label class="menu-open-button" data-type="beamer" data-value="power" data-power="0" for="power">
-              <i class="fas fa-power-off" id="power" aria-hidden="true"></i>
-            </label>
+    <div class="box" id="beamerBox" data-box="1">
+      <h1>Beamer</h1>
+      <nav class="menu">
+        <input type="checkbox" href="#" class="menu-open" id="power" />
+        <label class="menu-open-button" data-type="beamer" data-value="power" data-power="0" for="power">
+          <i class="fas fa-power-off" id="power" aria-hidden="true"></i>
+        </label>
 
-            <a href="#" class="menu-item" id="src" data-type="beamer" data-value="src">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <path d="M21 3.01H3c-1.1 0-2 .9-2 2V9h2V4.99h18v14.03H3V15H1v4.01c0 1.1.9 1.98 2 1.98h18c1.1 0 2-.88 2-1.98v-14c0-1.11-.9-2-2-2zM11 16l4-4-4-4v3H1v2h10v3z"/>
-              </svg>
-            </a>
-            <a href="#" class="menu-item clickable" id="freeze" data-type="beamer" data-value="freeze"> <i class="fas fa-snowflake"></i> </a>
-            <a href="#" class="menu-item clickable" id="blackout" data-type="beamer" data-value="blackout"> <i class="fas fa-moon"></i> </a>
-          </nav>
-        </div>
-      </script>
+        <a href="#" class="menu-item" id="src" data-type="beamer" data-value="src">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M21 3.01H3c-1.1 0-2 .9-2 2V9h2V4.99h18v14.03H3V15H1v4.01c0 1.1.9 1.98 2 1.98h18c1.1 0 2-.88 2-1.98v-14c0-1.11-.9-2-2-2zM11 16l4-4-4-4v3H1v2h10v3z"
+            />
+          </svg>
+        </a>
+        <a href="#" class="menu-item clickable" id="freeze" data-type="beamer" data-value="freeze">
+          <i class="fas fa-snowflake"></i>
+        </a>
+        <a href="#" class="menu-item clickable" id="blackout" data-type="beamer" data-value="blackout">
+          <i class="fas fa-moon"></i>
+        </a>
+      </nav>
+    </div>
+  </script>
 
   <!-- Mikrofon Box -->
   <script type="text/template" class="template" id="mikroTemplate">
-        <div class="box" id="mikrofonBox" data-box="3">
-          <h1>Mikrofone</h1>
-          <!-- Mikro 1 -->
-          <div class="flex-wrapper">
-            <div id="mikroSliderWrapper">
-              <div class="slider" id="mikroSlider1" data-type="mixer" data-id="0"></div>
-              <button class="mute" data-type="mixer" data-id="0" data-state="0"><i class="fas fa-volume-off"></i></button>
-              <div class="valueField" id="mikroSlider1Value">0</div>
-              <div class="textField">Mikro 1</div>
-            </div>
-            <!-- Mikro 2 -->
-            <div id="mikroSliderWrapper">
-              <div class="slider" id="mikroSlider2" data-type="mixer" data-id="1"></div>
-              <button class="mute" data-type="mixer" data-id="1" data-state="0"><i class="fas fa-volume-off"></i></button>
-              <div class="valueField" id="mikroSlider2Value">0</div>
-              <div class="textField">Mikro 2</div>
-            </div>
-            <!-- Mikro 3
+    <div class="box" id="mikrofonBox" data-box="3">
+      <h1>Mikrofone</h1>
+      <!-- Mikro 1 -->
+      <div class="flex-wrapper">
+        <div id="mikroSliderWrapper">
+          <div class="slider" id="mikroSlider1" data-type="mixer" data-id="0"></div>
+          <button class="mute" data-type="mixer" data-id="0" data-state="0">
+            <i class="fas fa-volume-off"></i>
+          </button>
+          <div class="valueField" id="mikroSlider1Value">0</div>
+          <div class="textField">Mikro 1</div>
+        </div>
+        <!-- Mikro 2 -->
+        <div id="mikroSliderWrapper">
+          <div class="slider" id="mikroSlider2" data-type="mixer" data-id="1"></div>
+          <button class="mute" data-type="mixer" data-id="1" data-state="0">
+            <i class="fas fa-volume-off"></i>
+          </button>
+          <div class="valueField" id="mikroSlider2Value">0</div>
+          <div class="textField">Mikro 2</div>
+        </div>
+        <!-- Mikro 3
             <div id="mikroSliderWrapper">
               <div class="slider" id="mikroSlider3" data-type="mixer" data-id="2"></div>
               <div class="valueField" id="mikroSlider3Value">0</div>
               <div class="textField">Mikro 3</div>
             </div>-->
-            <!-- Line -->
-            <div id="mikroSliderWrapper">
-              <div class="slider" id="lineSlider" data-type="mixer" data-id="l"></div>
-              <div class="valueField" id="lineSliderValue">0</div>
-              <div class="textField">Line L/R</div>
-            </div>
-
-            <!-- Master -->
-            <div id="mikroMasterSlider-wrapper">
-              <div class="slider" id="mikroMasterSlider" data-type="mixer" data-id="m"></div>
-              <div class="valueField" id="mikroMasterSliderValue">0</div>
-              <div class="textField">Master</div>
-            </div>
-          </div>
+        <!-- Line -->
+        <div id="mikroSliderWrapper">
+          <div class="slider" id="lineSlider" data-type="mixer" data-id="l"></div>
+          <div class="valueField" id="lineSliderValue">0</div>
+          <div class="textField">Line L/R</div>
         </div>
-      </script>
+
+        <!-- Master -->
+        <div id="mikroMasterSlider-wrapper">
+          <div class="slider" id="mikroMasterSlider" data-type="mixer" data-id="m"></div>
+          <div class="valueField" id="mikroMasterSliderValue">0</div>
+          <div class="textField">Master</div>
+        </div>
+      </div>
+    </div>
+  </script>
 
   <!-- AV-Receiver Box -->
   <script type="text/template" class="template" id="avTemplate">
-        <div class="box" id="avBox" data-box="2">
-          <h1>AV-Receiver</h1>
-          <div class="flex-wrapper">
-            <!-- AV Slider 1 -->
-            <div id="avSliderWrapper">
-              <div class="slider" id="avSlider1" data-type="av" data-id="0"></div>
-              <div class="valueField" id="avSlider1Value">0</div>
-              <div class="textField">Master</div>
-            </div>
-            <div class="buttons">
-              <ul id="avModes">
-              </ul>
-            </div>
-          </div>
+    <div class="box" id="avBox" data-box="2">
+      <h1>AV-Receiver</h1>
+      <div class="flex-wrapper">
+        <!-- AV Slider 1 -->
+        <div id="avSliderWrapper">
+          <div class="slider" id="avSlider1" data-type="av" data-id="0"></div>
+          <div class="valueField" id="avSlider1Value">0</div>
+          <div class="textField">Master</div>
         </div>
-      </script>
+        <div class="buttons">
+          <ul id="avModes">
+          </ul>
+        </div>
+      </div>
+    </div>
+  </script>
 
   <!-- Licht Box -->
   <!-- RGBW -->
   <script type="text/template" class="template" id="rgbwTemplate">
-        <div class="box lichtBox" data-box="4">
-          <h1>Scheinwerfer {:lightNumber}</h1>
-          <div class="flex-wrapper space-between">
-            <!-- Licht Slider 1 -->
-            <div id="lichtSliderWrapper">
-              <div class="slider" id="lichtSlider1" data-type="rgbw" data-col="rot" data-id="{:id}"></div>
-              <div class="valueField" id="lichtSlider1Value">0</div>
-              <div class="textField">Rot</div>
-            </div>
-
-            <!-- Licht Slider 2 -->
-            <div id="lichtSliderWrapper">
-              <div class="slider" id="lichtSlider2" data-type="rgbw" data-col="gruen" data-id="{:id}"></div>
-              <div class="valueField" id="lichtSlider2Value">0</div>
-              <div class="textField">Grün</div>
-            </div>
-
-            <!-- Licht Slider 3 -->
-            <div id="lichtSliderWrapper">
-              <div class="slider" id="lichtSlider3" data-type="rgbw" data-col="blau" data-id="{:id}"></div>
-              <div class="valueField" id="lichtSlider3Value">0</div>
-              <div class="textField">Blau</div>
-            </div>
-
-            <!-- Licht Helligkeit Slider -->
-            <div id="lichtWeissSliderWrapper">
-              <div class="slider" id="lichtWeissSlider" data-type="rgbw" data-col="weiss" data-id="{:id}"></div>
-              <div class="blackout"></div>
-              <div class="valueField" id="lichtWeissSliderValue">0</div>
-              <div class="textField">Weiß</div>
-            </div>
-          </div>
+    <div class="box lichtBox" data-box="4">
+      <h1>Scheinwerfer {:lightNumber}</h1>
+      <div class="flex-wrapper space-between">
+        <!-- Licht Slider 1 -->
+        <div id="lichtSliderWrapper">
+          <div class="slider" id="lichtSlider1" data-type="rgbw" data-col="rot" data-id="{:id}"></div>
+          <div class="valueField" id="lichtSlider1Value">0</div>
+          <div class="textField">Rot</div>
         </div>
-      </script>
+
+        <!-- Licht Slider 2 -->
+        <div id="lichtSliderWrapper">
+          <div class="slider" id="lichtSlider2" data-type="rgbw" data-col="gruen" data-id="{:id}"></div>
+          <div class="valueField" id="lichtSlider2Value">0</div>
+          <div class="textField">Grün</div>
+        </div>
+
+        <!-- Licht Slider 3 -->
+        <div id="lichtSliderWrapper">
+          <div class="slider" id="lichtSlider3" data-type="rgbw" data-col="blau" data-id="{:id}"></div>
+          <div class="valueField" id="lichtSlider3Value">0</div>
+          <div class="textField">Blau</div>
+        </div>
+
+        <!-- Licht Helligkeit Slider -->
+        <div id="lichtWeissSliderWrapper">
+          <div class="slider" id="lichtWeissSlider" data-type="rgbw" data-col="weiss" data-id="{:id}"></div>
+          <div class="blackout"></div>
+          <div class="valueField" id="lichtWeissSliderValue">0</div>
+          <div class="textField">Weiß</div>
+        </div>
+      </div>
+    </div>
+  </script>
 
   <!-- Licht -->
   <script type="text/template" class="template" id="hueTemplate">
-        <div class="box lichtBox" data-box="4">
-          <h1>Scheinwerfer {:lightNumber}</h1>
-          <div class="flex-wrapper space-between">
-            <!-- Licht Slider 1 -->
-            <div id="lichtSlider1Wrapper">
-              <div class="slider" id="lichtSlider1" data-type="hue" data-id="{:id}"></div>
-              <div class="valueField" id="lichtSlider1Value">0</div>
-              <div class="textField">Helligkeit</div>
-            </div>
-          </div>
+    <div class="box lichtBox" data-box="4">
+      <h1>Scheinwerfer {:lightNumber}</h1>
+      <div class="flex-wrapper space-between">
+        <!-- Licht Slider 1 -->
+        <div id="lichtSlider1Wrapper">
+          <div class="slider" id="lichtSlider1" data-type="hue" data-id="{:id}"></div>
+          <div class="valueField" id="lichtSlider1Value">0</div>
+          <div class="textField">Helligkeit</div>
         </div>
-      </script>
+      </div>
+    </div>
+  </script>
 
   <!-- jQuery -->
   <script src="js/jquery-3.2.1.min.js"></script>
