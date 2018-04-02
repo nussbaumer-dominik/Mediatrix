@@ -94,23 +94,20 @@ $(function() {
 					);
 					var obj = { id: id, value: val };
 					mixerData.mixer.mikrofone = [obj];
+
 					for (
 						let i = 0;
 						i <= Object.keys(conf.mixer.mikrofone).length;
 						i++
 					) {
-						console.log("i: " + i);
-						console.log(
-							"Id des Elements " +
-								i +
-								" des Conf Objekts mit index: "
-						);
-						if (conf.mixer.mikrofone[i].id == id) {
-							conf.mixer.mikrofone[i].value = val;
-						} else if (
-							typeof conf.mixer.mikrofone[i] === "undefined"
-						) {
-							break;
+						if (conf.mixer.mikrofone[i]) {
+							if (conf.mixer.mikrofone[i].id == "0") {
+								conf.mixer.mikrofone[i].value = val;
+							} else if (conf.mixer.mikrofone[i].id == "0") {
+								conf.mixer.mikrofone[i].value = val;
+							} else {
+								console.log("beides traf nicht zu");
+							}
 						}
 					}
 
