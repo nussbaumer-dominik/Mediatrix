@@ -383,13 +383,15 @@ $(function() {
 					count +
 					"</h3> </div>"
 			);
-		} else if (data.conf.av) {
+		}
+		if (data.conf.av) {
 			div.append(
 				"<div> <i class='fas fa-volume-up'> </i> <h3>" +
 					data.conf.av.mode +
 					"</h3> </div>"
 			);
-		} else if (data.conf.beamer) {
+		}
+		if (data.conf.beamer) {
 			div.append(
 				"<div> <i class='fas fa-video'> </i> <h3>" +
 					data.conf.beamer.source +
@@ -426,19 +428,22 @@ $(function() {
 						count +
 						"</h3> </div>"
 				);
-			} else if (presets[i].conf.av) {
+			}
+			if (presets[i].conf.av) {
 				div.append(
 					"<div> <i class='fas fa-volume-up'> </i> <h3>" +
 						presets[i].conf.av.mode +
 						"</h3> </div>"
 				);
-			} else if (presets[i].conf.beamer) {
+			}
+			if (presets[i].conf.beamer) {
 				div.append(
 					"<div> <i class='fas fa-video'> </i> <h3>" +
 						presets[i].conf.beamer +
 						"</h3> </div>"
 				);
-			} else if (presets[i].conf.mixer) {
+			}
+			if (presets[i].conf.mixer) {
 				div.append(
 					"<div> <i class='fas fa-microphone'> </i> <h3>" +
 						presets[i].conf.mixer +
