@@ -236,7 +236,7 @@ $(function() {
 
 	//Werte der Modi des AV-Receivers auslesen
 	function Buttons() {
-		var data = {
+		let data = {
 			av: {
 				mode: ""
 			}
@@ -327,16 +327,16 @@ $(function() {
 	$("#savePreset").on("click", ev => {
 		ev.preventDefault();
 		console.log("Preset '" + $("#presetName").val() + "' speichern");
-		var name = $("#presetName").val();
+		let name = $("#presetName").val();
 		currentConf.name = name;
 		currentConf.conf = conf;
 		console.log(currentConf);
 
-		var data = new FormData();
+		let data = new FormData();
 		data.append("jwt", jwt);
 		data.append("name", currentConf.name);
 		data.append("conf", currentConf.conf);
-		console.log(data);
+		console.log(daten);
 
 		$.snackbar({
 			content:
@@ -360,13 +360,53 @@ $(function() {
 		})
 			.done(data => {
 				console.log("success: " + data);
-				addPreset();
+				addPreset(data);
 			})
 			.fail(data => {
 				console.log("error: ");
 				console.log(data);
 			});
 	});
+
+	function addPreset(data) {
+		for (let i = 0; i < Object.keys(data).length; i++) {
+			var div = $("<div/>", {
+				class: "preset"
+			}).attr("data-preset", i);
+			div.append("<h2>" + presets[i].name + "</h2>");
+			if (presets[i].conf.dmx) {
+				var count = 0;
+				for (let key in presets[i].conf)
+					if (presets[i].conf.hasOwnProperty(key)) count++;
+				div.append(
+					"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
+						count +
+						"</h3> </div>"
+				);
+			} else if (presets[i].conf.av) {
+				div.append(
+					"<div> <i class='fas fa-volume-up'> </i> <h3>" +
+						presets[i].conf.av.mode +
+						"</h3> </div>"
+				);
+			} else if (presets[i].conf.beamer) {
+				div.append(
+					"<div> <i class='fas fa-video'> </i> <h3>" +
+						presets[i].conf.beamer +
+						"</h3> </div>"
+				);
+			} else if (presets[i].conf.mixer) {
+				div.append(
+					"<div> <i class='fas fa-microphone'> </i> <h3>" +
+						presets[i].conf.mixer +
+						"</h3> </div>"
+				);
+			}
+			$(".presentation").append(div);
+			presetStart++;
+		}
+		$(".preset").on("click", selectPreset);
+	}
 
 	var getPresets = () => {
 		for (let i = presetStart; i < Object.keys(presets).length; i++) {
