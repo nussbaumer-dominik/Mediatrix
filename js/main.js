@@ -110,6 +110,9 @@ $(function() {
 							conf.mixer.mikrofone[i].value = val;
 						} else if (conf.mixer.mikrofone[i].id == id) {
 							conf.mixer.mikrofone[i].value = val;
+						} else if (!conf.mixer.mikrofone[i]) {
+							conf.mixer.mikrofone[i].id = id;
+							conf.mixer.mikrofone[i].value = val;
 						}
 					}
 
