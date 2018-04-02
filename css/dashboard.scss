@@ -1071,6 +1071,11 @@ button {
 		flex-direction: column;
 	}
 
+	#lineSliderValue,
+	#mikroMasterSliderValue {
+		margin-top: 62px;
+	}
+
 	.side-nav {
 		order: 2;
 		width: 100vw;

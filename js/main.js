@@ -358,6 +358,7 @@ $(function() {
 			.done(data => {
 				console.log("success: " + data);
 				addPreset(currentConf);
+				presets.push(currentConf);
 			})
 			.fail(data => {
 				console.log("error: ");
