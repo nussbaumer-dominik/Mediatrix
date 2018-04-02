@@ -370,41 +370,39 @@ $(function() {
 
 	function addPreset(data) {
 		console.log(data);
-		for (let i = 0; i < Object.keys(data).length; i++) {
-			var div = $("<div/>", {
-				class: "preset"
-			}).attr("data-preset", i);
-			div.append("<h2>" + data[i].name + "</h2>");
-			if (data[i].conf.dmx) {
-				var count = 0;
-				for (let key in data[i].conf)
-					if (data[i].conf.hasOwnProperty(key)) count++;
-				div.append(
-					"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
-						count +
-						"</h3> </div>"
-				);
-			} else if (data[i].conf.av) {
-				div.append(
-					"<div> <i class='fas fa-volume-up'> </i> <h3>" +
-						data[i].conf.av.mode +
-						"</h3> </div>"
-				);
-			} else if (data[i].conf.beamer) {
-				div.append(
-					"<div> <i class='fas fa-video'> </i> <h3>" +
-						data[i].conf.beamer +
-						"</h3> </div>"
-				);
-			} else if (data[i].conf.mixer) {
-				div.append(
-					"<div> <i class='fas fa-microphone'> </i> <h3>" +
-						data[i].conf.mixer +
-						"</h3> </div>"
-				);
-			}
-			$(".presentation").append(div);
+		var div = $("<div/>", {
+			class: "preset"
+		}).attr("data-preset", i);
+		div.append("<h2>" + data.name + "</h2>");
+		if (data.conf.dmx) {
+			var count = 0;
+			for (let key in data.conf)
+				if (data.conf.hasOwnProperty(key)) count++;
+			div.append(
+				"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
+					count +
+					"</h3> </div>"
+			);
+		} else if (data.conf.av) {
+			div.append(
+				"<div> <i class='fas fa-volume-up'> </i> <h3>" +
+					data.conf.av.mode +
+					"</h3> </div>"
+			);
+		} else if (data.conf.beamer) {
+			div.append(
+				"<div> <i class='fas fa-video'> </i> <h3>" +
+					data.conf.beamer +
+					"</h3> </div>"
+			);
+		} else if (data.conf.mixer) {
+			div.append(
+				"<div> <i class='fas fa-microphone'> </i> <h3>" +
+					data.conf.mixer +
+					"</h3> </div>"
+			);
 		}
+		$(".presentation").append(div);
 		$(".preset").on("click", selectPreset);
 	}
 
