@@ -100,8 +100,10 @@ $(function() {
 						console.log(obj.id);
 
 						if (conf.mixer.mikrofone.some(e => e.id === id)) {
+							console.log(conf.mixer.mikrofone);
 							conf.mixer.mikrofone[i].value = val;
 						} else {
+							console.log(conf.mixer.mikrofone);
 							conf.mixer.mikrofone[i] = obj;
 						}
 					}
