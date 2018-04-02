@@ -36,7 +36,7 @@ def switchPower(pstate):
         GPIO.output(rp, GPIO.LOW) # an
         #sleep(20)
         GPIO.output(rs, GPIO.LOW) # an
-        sleep(2)
+        #sleep(2)
         pstate = 1
 
     elif pstate == 1:
