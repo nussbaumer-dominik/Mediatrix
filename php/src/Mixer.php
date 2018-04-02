@@ -44,6 +44,7 @@ class Mixer {
 
 	//Mute Befehl erstellen
 	public function mute($mute, $channel) {
+		echo $mute
 		try {
 			$this->mixer->send($this->command . $channel . ".mute^" . $mute);
 			return array("success" => true, "err" => "");
@@ -54,7 +55,7 @@ class Mixer {
 
 	//Lautstärke regeln
 	public function mix($val, $channel) {
-		echo "" . $val . " " . $channel . " "; 
+		echo "" . $val . " " . $channel . " ";
 		try {
 			echo "im Try Block ";
 			$this->mixer->send($this->command . $channel . ".mix^" . $val);
