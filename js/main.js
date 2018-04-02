@@ -9,12 +9,14 @@ $(function() {
 		conf = {
 			av: {},
 			dmx: {},
-			mixer: { mikrofone: [{}] },
+			mixer: {
+				mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }]
+			},
 			beamer: {}
 		};
 
 	var mixerData = {
-		mixer: { mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }] }
+		mixer: { mikrofone: [] }
 	};
 	var socket = new WebSocket("wss://10.0.0.144/wss");
 
