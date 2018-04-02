@@ -98,8 +98,8 @@ $(function() {
 
 					for (let i = 0; i < conf.mixer.mikrofone.length; i++) {
 						console.log(obj.id);
-						if (conf.mixer.mikrofone == null) {
-							conf.mixer.mikrofone.push(obj);
+						if (typeof conf.mixer.mikrofone[i] === undefined) {
+							conf.mixer.mikrofone[i].push(obj);
 						} else if (conf.mixer.mikrofone[i].id == obj.id) {
 							console.log(conf.mixer.mikrofone[i]);
 							conf.mixer.mikrofone[i].value = val;
