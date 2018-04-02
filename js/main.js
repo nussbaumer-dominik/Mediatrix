@@ -70,7 +70,7 @@ $(function() {
 					"Dieser Slider ist von einem AV-Receiver: " +
 						slider.target.getAttribute("data-type")
 				);
-				let data = {
+				var data = {
 					av: {
 						value: slider.get(),
 						channel: slider.target.getAttribute("data-id")
@@ -145,7 +145,7 @@ $(function() {
 						" " +
 						slider.get()
 				);
-				let data = {
+				var data = {
 					dmx: {
 						scheinwerfer: {
 							id: slider.target.getAttribute("data-id"),
@@ -171,7 +171,7 @@ $(function() {
 		if ($this.attr("data-type") == "mixer") {
 			if ($this.attr("data-state") == "0") {
 				$this.attr("data-state", "1");
-				let data = {
+				var data = {
 					id: $this.attr("data-id"),
 					mute: 1
 				};
@@ -181,7 +181,7 @@ $(function() {
 				conf.mixer.mute = 1;
 			} else {
 				$this.attr("data-state", "0");
-				let data = {
+				var data = {
 					id: $this.attr("data-id"),
 					mute: 0
 				};
@@ -195,7 +195,7 @@ $(function() {
 
 	//Werte der Beamer Steuerung auslesen
 	function Beamer() {
-		let data = {
+		var data = {
 			beamer: {}
 		};
 		//Kontrollieren ob vom Typ Beamer
@@ -479,22 +479,20 @@ $(function() {
 		var mode = $(".tgl").prop("checked");
 		console.log(mode);
 		if (mode) {
-			var daten = new FormData();
-			daten.append("jwt", jwt);
-			daten.append("ex", 1);
-			console.log(daten);
+			var data = new FormData();
+			data.append("jwt", jwt);
+			data.append("ex", 1);
 		} else {
-			var daten = new FormData();
-			daten.append("jwt", jwt);
-			daten.append("base", 1);
-			console.log(daten);
+			var data = new FormData();
+			data.append("jwt", jwt);
+			data.append("base", 1);
 		}
 
 		$.ajax({
 			url: "/Mediatrix/php/src/changeUserMode.php",
 			traditional: true,
 			method: "POST",
-			data: daten,
+			data: data,
 			contentType: false,
 			processData: false,
 			xhrFields: {
@@ -674,9 +672,9 @@ $(function() {
 	};
 
 	//Slider initialisieren, je nach dem, welche gerade im Markup eingeblendet sind
-	function initSlider(container) {
-		let sliders = $(container).find(".slider");
-		let valueFields = $(container).find(".valueField");
+	var initSlider = function(container) {
+		var sliders = $(container).find(".slider");
+		var valueFields = $(container).find(".valueField");
 
 		sliders.each(function(slider) {
 			noUiSlider.create(this, {
@@ -700,5 +698,5 @@ $(function() {
 				valueFields.get(i).innerHTML = values[handle];
 			});
 		});
-	}
+	};
 });
