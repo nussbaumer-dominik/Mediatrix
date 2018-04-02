@@ -370,7 +370,7 @@ $(function() {
 		}).attr("data-preset", presetStart + 1);
 		div.append("<h2>" + data.name + "</h2>");
 		if (data.conf.dmx) {
-			let count = Object.keys(value).length;
+			let count = Object.keys(data.conf.dmx).length;
 			div.append(
 				"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
 					count +
