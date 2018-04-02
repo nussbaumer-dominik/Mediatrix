@@ -330,12 +330,12 @@ $(function() {
 		let name = $("#presetName").val();
 		currentConf.name = name;
 		currentConf.conf = conf;
-		console.log(currentConf);
+		//console.log(currentConf);
 
 		let data = new FormData();
 		data.append("jwt", jwt);
-		data.append("name", currentConf.name);
-		data.append("conf", currentConf.conf);
+		data.append("name", name);
+		data.append("conf", JSON.stringify(conf));
 		console.log(data);
 
 		$.snackbar({
