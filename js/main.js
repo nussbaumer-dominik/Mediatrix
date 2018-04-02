@@ -96,8 +96,19 @@ $(function() {
 					);
 					var obj = { id: id, value: val };
 					mixerData.mixer.mikrofone = [obj];
+					console.log(conf.mixer.mikrofone.length);
+					console.log(Object.keys(conf.mixer.mikrofone).length);
 
-					if (Object.keys(conf.mixer.mikrofone).length < 2) {
+					for (
+						let i = 0;
+						i < Object.keys(conf.mixer.mikrofone).length;
+						i++
+					) {}
+
+					/*if (Object.keys(conf.mixer.mikrofone).length < 2) {
+						if(){
+
+						}
 						conf.mixer.mikrofone.push(obj);
 					} else {
 						for (
@@ -110,9 +121,7 @@ $(function() {
 								conf.mixer.mikrofone[i].value = val;
 							}
 						}
-					}
-
-					/**/
+					}*/
 
 					send(mixerData);
 				} else if (id == "m") {
