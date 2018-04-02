@@ -82,10 +82,10 @@ $(function() {
 			case "mixer":
 				let id = slider.target.getAttribute("data-id");
 				let val = slider.get() / 100;
-				console.log("MixerData: " + mixerData);
-				console.log(
-					"erstes Element von Conf: " + conf.mixer.mikrofone[0]
-				);
+				console.log("MixerData: ");
+				console.log(mixerData);
+				console.log("erstes Element von Conf: ");
+				console.log(conf.mixer.mikrofone[0]);
 				if (!isNaN(id)) {
 					console.log(
 						"Dieser Slider ist von einem Mixer: " + slider.get()
@@ -97,6 +97,7 @@ $(function() {
 						i <= Object.keys(conf.mixer.mikrofone).length;
 						i++
 					) {
+						console.log(i);
 						console.log(conf.mixer.mikrofone[i].id);
 						if (conf.mixer.mikrofone[i].id == id) {
 							conf.mixer.mikrofone[i].value = val;
