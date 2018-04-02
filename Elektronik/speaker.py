@@ -33,7 +33,7 @@ def speakerOn():
     print "changing Speaker-State"
     print sstate
 
-    GPIO.output(rs, GPIO.HIGH) # an
+    GPIO.output(rs, GPIO.LOW) # an
     sstate = 0
 
 
@@ -43,12 +43,12 @@ def speakerOff():
     print "changing Speaker-State"
     print sstate
 
-    GPIO.output(rs, GPIO.LOW) # aus
+    GPIO.output(rs, GPIO.HIGH) # aus
     sstate = 1
 
 if __name__ == '__main__':
 
-    GPIO.output(rs, GPIO.HIGH) # aus
+    GPIO.output(rs, GPIO.LOW) # aus
 
     while True:
         if sstate == 0:
