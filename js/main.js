@@ -97,9 +97,9 @@ $(function() {
 					console.log(conf.mixer.mikrofone.length);
 
 					for (let i = 0; i <= conf.mixer.mikrofone.length; i++) {
-						console.log("Durchlauf Nr.: " + i + 1);
+						console.log("Durchlauf Nr.: " + (i + 1));
 
-						if (conf.mixer.mikrofone.some(e => e.id === id)) {
+						if (conf.mixer.mikrofone.find(el => el.id === id)) {
 							console.log(conf.mixer.mikrofone);
 							conf.mixer.mikrofone[i].value = val;
 						} else {
@@ -107,7 +107,6 @@ $(function() {
 							conf.mixer.mikrofone[i] = obj;
 						}
 					}
-
 					/*if (Object.keys(conf.mixer.mikrofone).length < 2) {
 						if(){
 
