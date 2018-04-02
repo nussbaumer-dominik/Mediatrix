@@ -5,18 +5,15 @@ $(function() {
 		presets,
 		jwt = localStorage.getItem("jwt"),
 		on = false,
-		currentConf = {
-			name: "",
-			conf: {}
-		},
+		currentConf = { name: "", conf: {} },
 		conf = {
 			av: {},
 			dmx: {},
-			mixer: { mikrofone: [] },
+			mixer: { mikrofone: [{ id: "", value: 0 }] },
 			beamer: {}
 		};
 
-	var mixerData = { mixer: { mikrofone: [{ id: "", value: 0 }] } };
+	var mixerData = { mixer: { mikrofone: [] } };
 	var socket = new WebSocket("wss://10.0.0.144/wss");
 
 	//wirft eine Exception
