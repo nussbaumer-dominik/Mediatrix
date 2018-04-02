@@ -106,7 +106,7 @@ $(function() {
 							i++
 						) {
 							console.log(i);
-							if (conf.mixer.mikrofone[i] == id) {
+							if (conf.mixer.mikrofone[i].id == id) {
 								conf.mixer.mikrofone[i].value = val;
 							}
 						}
