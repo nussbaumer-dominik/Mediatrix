@@ -97,21 +97,27 @@ $(function() {
 					var obj = { id: id, value: val };
 					mixerData.mixer.mikrofone = [obj];
 
-					for (
-						let i = 0;
-						i <= Object.keys(conf.mixer.mikrofone).length;
-						i++
-					) {
-						if (conf.mixer.mikrofone[i]) {
-							if (conf.mixer.mikrofone[i].id == "0") {
-								conf.mixer.mikrofone[i].value = val;
-							} else if (conf.mixer.mikrofone[i].id == "1") {
-								conf.mixer.mikrofone[i].value = val;
+					if (!conf.mixer.mikrofone) {
+						conf.mixer.mikrofone.push(obj);
+					} else {
+						for (
+							let i = 0;
+							i <= Object.keys(conf.mixer.mikrofone).length;
+							i++
+						) {
+							if (conf.mixer.mikrofone[i]) {
+								if (conf.mixer.mikrofone[i].id == "0") {
+									conf.mixer.mikrofone[i].value = val;
+								} else if (conf.mixer.mikrofone[i].id == "1") {
+									conf.mixer.mikrofone[i].value = val;
+								}
+							} else {
+								console.log("nicht vorhanden: " + i);
 							}
-						} else {
-							console.log("nicht vorhanden: " + i);
 						}
 					}
+
+					/**/
 
 					send(mixerData);
 				} else if (id == "m") {
