@@ -97,7 +97,7 @@ $(function() {
 					console.log(conf.mixer.mikrofone.length);
 
 					for (let i = 0; i < conf.mixer.mikrofone.length; i++) {
-						console.log(id);
+						console.log(slider.target.getAttribute("data-id"));
 						if (conf.mixer.mikrofone[i].id == id) {
 							console.log("ja");
 							conf.mixer.mikrofone[i].value = val;
