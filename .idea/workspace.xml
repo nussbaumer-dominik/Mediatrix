@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Elektronik/power.py" afterPath="$PROJECT_DIR$/Elektronik/power.py" />
+      <change beforePath="$PROJECT_DIR$/Elektronik/speaker.py" afterPath="$PROJECT_DIR$/Elektronik/speaker.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="power.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="power.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Elektronik/power.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="54" column="20" lean-forward="false" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+            <state relative-caret-position="155">
+              <caret line="37" column="38" lean-forward="true" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -75,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="speaker.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="speaker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Elektronik/speaker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="50" column="29" lean-forward="false" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+            <state relative-caret-position="299">
+              <caret line="51" column="1" lean-forward="false" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -144,6 +144,7 @@
       <find>encode</find>
       <find>time</find>
       <find>live</find>
+      <find>GPIO.HIGH</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -188,7 +189,6 @@
         <option value="$PROJECT_DIR$/php/src/Mixer.php" />
         <option value="$PROJECT_DIR$/php/src/Beamer.php" />
         <option value="$PROJECT_DIR$/php/src/RGBWScheinwerfer.php" />
-        <option value="$PROJECT_DIR$/Elektronik/speaker.py" />
         <option value="$PROJECT_DIR$/test_js/ws_test.html" />
         <option value="$PROJECT_DIR$/conf/Mediatrix.json" />
         <option value="$PROJECT_DIR$/php/src/AV.php" />
@@ -198,6 +198,7 @@
         <option value="$PROJECT_DIR$/php/src/Application.php" />
         <option value="$PROJECT_DIR$/Elektronik/cooling.py" />
         <option value="$PROJECT_DIR$/Elektronik/power.py" />
+        <option value="$PROJECT_DIR$/Elektronik/speaker.py" />
       </list>
     </option>
   </component>
@@ -258,7 +259,7 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="793" />
     <option name="width" value="814" />
     <option name="height" value="867" />
@@ -1003,77 +1004,7 @@
       <workItem from="1521826085975" duration="5653000" />
       <workItem from="1522444561593" duration="4571000" />
       <workItem from="1522603476619" duration="11805000" />
-      <workItem from="1522687387850" duration="6621000" />
-    </task>
-    <task id="LOCAL-00191" summary="debug python">
-      <created>1522168876879</created>
-      <option name="number" value="00191" />
-      <option name="presentableId" value="LOCAL-00191" />
-      <option name="project" value="LOCAL" />
-      <updated>1522168876880</updated>
-    </task>
-    <task id="LOCAL-00192" summary="debug python">
-      <created>1522168972109</created>
-      <option name="number" value="00192" />
-      <option name="presentableId" value="LOCAL-00192" />
-      <option name="project" value="LOCAL" />
-      <updated>1522168972110</updated>
-    </task>
-    <task id="LOCAL-00193" summary="debug python">
-      <created>1522169284314</created>
-      <option name="number" value="00193" />
-      <option name="presentableId" value="LOCAL-00193" />
-      <option name="project" value="LOCAL" />
-      <updated>1522169284314</updated>
-    </task>
-    <task id="LOCAL-00194" summary="debug python">
-      <created>1522169486411</created>
-      <option name="number" value="00194" />
-      <option name="presentableId" value="LOCAL-00194" />
-      <option name="project" value="LOCAL" />
-      <updated>1522169486411</updated>
-    </task>
-    <task id="LOCAL-00195" summary="debug python">
-      <created>1522169690890</created>
-      <option name="number" value="00195" />
-      <option name="presentableId" value="LOCAL-00195" />
-      <option name="project" value="LOCAL" />
-      <updated>1522169690890</updated>
-    </task>
-    <task id="LOCAL-00196" summary="debug python">
-      <created>1522169742853</created>
-      <option name="number" value="00196" />
-      <option name="presentableId" value="LOCAL-00196" />
-      <option name="project" value="LOCAL" />
-      <updated>1522169742853</updated>
-    </task>
-    <task id="LOCAL-00197" summary="change mixer command structure">
-      <created>1522393635272</created>
-      <option name="number" value="00197" />
-      <option name="presentableId" value="LOCAL-00197" />
-      <option name="project" value="LOCAL" />
-      <updated>1522393635272</updated>
-    </task>
-    <task id="LOCAL-00198" summary="change mixer command structure">
-      <created>1522394954767</created>
-      <option name="number" value="00198" />
-      <option name="presentableId" value="LOCAL-00198" />
-      <option name="project" value="LOCAL" />
-      <updated>1522394954768</updated>
-    </task>
-    <task id="LOCAL-00199" summary="python dev">
-      <created>1522395276593</created>
-      <option name="number" value="00199" />
-      <option name="presentableId" value="LOCAL-00199" />
-      <option name="project" value="LOCAL" />
-      <updated>1522395276593</updated>
-    </task>
-    <task id="LOCAL-00200" summary="python dev">
-      <created>1522395573271</created>
-      <option name="number" value="00200" />
-      <option name="presentableId" value="LOCAL-00200" />
-      <option name="project" value="LOCAL" />
-      <updated>1522395573271</updated>
+      <workItem from="1522687387850" duration="10292000" />
     </task>
     <task id="LOCAL-00201" summary="python dev">
       <created>1522396379525</created>
@@ -1348,23 +1279,93 @@
       <option name="project" value="LOCAL" />
       <updated>1522694077107</updated>
     </task>
-    <option name="localTasksCounter" value="240" />
+    <task id="LOCAL-00240" summary="debug python">
+      <created>1522694620560</created>
+      <option name="number" value="00240" />
+      <option name="presentableId" value="LOCAL-00240" />
+      <option name="project" value="LOCAL" />
+      <updated>1522694620560</updated>
+    </task>
+    <task id="LOCAL-00241" summary="fix python">
+      <created>1522694777671</created>
+      <option name="number" value="00241" />
+      <option name="presentableId" value="LOCAL-00241" />
+      <option name="project" value="LOCAL" />
+      <updated>1522694777671</updated>
+    </task>
+    <task id="LOCAL-00242" summary="change high to low">
+      <created>1522695559594</created>
+      <option name="number" value="00242" />
+      <option name="presentableId" value="LOCAL-00242" />
+      <option name="project" value="LOCAL" />
+      <updated>1522695559594</updated>
+    </task>
+    <task id="LOCAL-00243" summary="debug python">
+      <created>1522696501241</created>
+      <option name="number" value="00243" />
+      <option name="presentableId" value="LOCAL-00243" />
+      <option name="project" value="LOCAL" />
+      <updated>1522696501241</updated>
+    </task>
+    <task id="LOCAL-00244" summary="debug python">
+      <created>1522696979045</created>
+      <option name="number" value="00244" />
+      <option name="presentableId" value="LOCAL-00244" />
+      <option name="project" value="LOCAL" />
+      <updated>1522696979045</updated>
+    </task>
+    <task id="LOCAL-00245" summary="debug python">
+      <created>1522697295591</created>
+      <option name="number" value="00245" />
+      <option name="presentableId" value="LOCAL-00245" />
+      <option name="project" value="LOCAL" />
+      <updated>1522697295591</updated>
+    </task>
+    <task id="LOCAL-00246" summary="debug python">
+      <created>1522697464292</created>
+      <option name="number" value="00246" />
+      <option name="presentableId" value="LOCAL-00246" />
+      <option name="project" value="LOCAL" />
+      <updated>1522697464292</updated>
+    </task>
+    <task id="LOCAL-00247" summary="debug python">
+      <created>1522697545439</created>
+      <option name="number" value="00247" />
+      <option name="presentableId" value="LOCAL-00247" />
+      <option name="project" value="LOCAL" />
+      <updated>1522697545439</updated>
+    </task>
+    <task id="LOCAL-00248" summary="debug python">
+      <created>1522697596874</created>
+      <option name="number" value="00248" />
+      <option name="presentableId" value="LOCAL-00248" />
+      <option name="project" value="LOCAL" />
+      <updated>1522697596874</updated>
+    </task>
+    <task id="LOCAL-00249" summary="debug python">
+      <created>1522697658324</created>
+      <option name="number" value="00249" />
+      <option name="presentableId" value="LOCAL-00249" />
+      <option name="project" value="LOCAL" />
+      <updated>1522697658324</updated>
+    </task>
+    <option name="localTasksCounter" value="250" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189263000" />
+    <option name="totallyTimeSpent" value="192934000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="793" y="0" width="814" height="867" extended-state="0" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2281167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.110539846" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28163266" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2782258" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3729097" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1451,8 +1452,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add on and off function to AV&#10;add isOn with check to AV" />
-    <MESSAGE value="debug AV" />
     <MESSAGE value="fix AV" />
     <MESSAGE value="remove var_dump" />
     <MESSAGE value="comment things in Mixer" />
@@ -1464,7 +1463,6 @@
     <MESSAGE value="add hue in rgbw scheinwerfer" />
     <MESSAGE value="fix application" />
     <MESSAGE value="debug hue in rgbw scheinwerfer" />
-    <MESSAGE value="debug python" />
     <MESSAGE value="change mixer command structure" />
     <MESSAGE value="change test ws address" />
     <MESSAGE value="config dmx" />
@@ -1476,7 +1474,10 @@
     <MESSAGE value="fix live status" />
     <MESSAGE value="change rpm cooling.py" />
     <MESSAGE value="python dev" />
-    <option name="LAST_COMMIT_MESSAGE" value="python dev" />
+    <MESSAGE value="fix python" />
+    <MESSAGE value="change high to low" />
+    <MESSAGE value="debug python" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug python" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1754,14 +1755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Mixer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/MyIoServer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1806,18 +1799,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Elektronik/speaker.py">
+    <entry file="file://$PROJECT_DIR$/Elektronik/power.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="50" column="29" lean-forward="false" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+        <state relative-caret-position="155">
+          <caret line="37" column="38" lean-forward="true" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Elektronik/power.py">
+    <entry file="file://$PROJECT_DIR$/php/src/Mixer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="54" column="20" lean-forward="false" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Elektronik/speaker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="51" column="1" lean-forward="false" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
           <folding />
         </state>
       </provider>
