@@ -13,7 +13,9 @@ $(function() {
 			beamer: {}
 		};
 
-	var mixerData = { mixer: { mikrofone: [] } };
+	var mixerData = {
+		mixer: { mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }] }
+	};
 	var socket = new WebSocket("wss://10.0.0.144/wss");
 
 	//wirft eine Exception
@@ -103,12 +105,7 @@ $(function() {
 								i +
 								" des Conf Objekts mit index: "
 						);
-						if (conf.mixer.mikrofone[i] == {}) {
-							conf.mixer.mikrofone[i] = { id: id, value: val };
-						} else if (conf.mixer.mikrofone[i].id == "") {
-							conf.mixer.mikrofone[i].id = id;
-							conf.mixer.mikrofone[i].value = val;
-						} else if (conf.mixer.mikrofone[i].id == id) {
+						if (conf.mixer.mikrofone[i].id == id) {
 							conf.mixer.mikrofone[i].value = val;
 						}
 					}
