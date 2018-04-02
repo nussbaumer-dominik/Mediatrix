@@ -16,8 +16,10 @@ class Beamer
     private $ir;
     private $freeze = array();
     private $blackout = array();
+    private $gpio;
+    private $isOn;
 
-    public function __construct(array $source, array $powerCode, array $freeze, array $blackout)
+    public function __construct(array $source, array $powerCode, array $freeze, array $blackout, int $gpio)
     {
         foreach ($source as $k => $s){
             $source[$k]['nextActive'] = false;
@@ -43,12 +45,21 @@ class Beamer
 
         $this->blackout = $blackout;
 
+        $this->gpio = $gpio;
+
+        exec('gpio -g mode '.$gpio.' in');
 
         $this->ir = new \IR();
+
+        $this->isOn = false;
     }
 
     function changeSource()
     {
+        if(!$this->isOn()){
+            $this->on();
+        }
+
         echo "change Source \n";
 
         //get next active Source
@@ -80,6 +91,10 @@ class Beamer
 
     function on()
     {
+        if($this->isOn()){
+            return (object) array("success"=>true,"err"=>"");
+        }
+
         echo "Beamer on \n";
 
         //get Code
@@ -90,6 +105,8 @@ class Beamer
         //send IR code
         $r = json_decode(str_replace("'",'"',$this->ir->send($code,5)));
 
+        $this->isOn = $r->success;
+
         //return Result
         return $r;
 
@@ -97,6 +114,10 @@ class Beamer
 
     function off()
     {
+        if(!$this->isOn()){
+            return (object) array("success"=>true,"err"=>"");
+        }
+
         echo "Beamer off\n";
 
         $erg = $this->on();
@@ -106,11 +127,18 @@ class Beamer
             $erg = $r;
         }
 
+        $this->isOn = !$erg->success;
+
         return $erg;
 
     }
 
     function freeze(){
+
+        if(!$this->isOn()){
+            $this->on();
+        }
+
         echo "Beamer freeze \n";
 
         //get Code
@@ -126,7 +154,12 @@ class Beamer
     }
 
     function blackout(){
-        echo "Beamer freeze \n";
+
+        if(!$this->isOn()){
+            $this->on();
+        }
+
+        echo "Beamer blackout \n";
 
         //get Code
         $code = $this->blackout['lastSendA'] ? $this->blackout['b']:$this->blackout['a'];
@@ -138,6 +171,11 @@ class Beamer
 
         //return Result
         return $r;
+    }
+
+    function isOn(){
+
+        return exec('gpio -g read '.$this->gpio) == 1;
     }
 
 

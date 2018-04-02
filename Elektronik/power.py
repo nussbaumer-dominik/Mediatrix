@@ -1,105 +1,59 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
+#!usr/bin/python
 
-import time
 import RPi.GPIO as GPIO
+from time import sleep
+
+GPIO.setwarnings(False)			#disable warnings
 
 GPIO.setmode(GPIO.BCM) # GPIO Nummern statt Board Nummern
 
 # SET GPIO Button-Pin
 btn = 15
-panel = 7
-door = 8
 
 #Relais
-rs = 2 #Relais Für Lautsprecher
-rp = 3 #Relais für Strom //momentan für test
+rs = 2 #Relais Fur Lautsprecher
+rp = 3 #Relais fur Strom //momentan fur test
 
 # GPIO Modus zuweisen
-GPIO.setup(btn, GPIO.IN)
-GPIO.setup(panel, GPIO.IN)
-GPIO.setup(door, GPIO.IN)
+GPIO.setup(btn, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
 
 GPIO.setup(rs, GPIO.OUT)
 GPIO.setup(rp, GPIO.OUT)
-
 
 #Einschalten
 
 pstate = 0 #Zustand des Systems Strom (1=Ein, 0=Aus)
 sstate = 0 #Zustand des Systems Lautsprecher (1=Ein, 0=Aus)
 
-def main():
-    value = 0
-
-#Einschalter abfragen
-    while True:
-
-        if not GPIO.input(btn):
-            value += 0.01
-
-        if value > 0:
-
-            if GPIO.input(btn):
-                print "gedrueckt"
-                main()
-                switchPower(pstate, sstate)
-
-        time.sleep(0.03)
-
-
-# Magnetkontakt Panel abfragen
-
-        if GPIO.input(panel):
-            print "offen"
-            main()
-            switchSpeaker(sstate)
-
-        time.sleep(0.03)
-
-#Magnetkontakt Tür abfragen
-
-        if GPIO.input(door):
-            print "offen"
-            main()
-            switchSpeaker(sstate)
-
-        time.sleep(0.03)
-
-    return 0
-
-
-
 #Strom schalten
 def switchPower():
+    global sstate
+    global pstate
+
+    print "changing Power-State"
+    print pstate
+    print sstate
 
     if pstate == 0:
+
+        print pstate
+        print sstate
         GPIO.output(rp, GPIO.HIGH) # an
-        time.sleep(20)
+        sleep(20)
         sstate = 1
         GPIO.output(rs, GPIO.HIGH) # an
+        pstate = 1
 
     if pstate == 1:
         sstate = 0
         GPIO.output(rs, GPIO.LOW)  #aus
-        time.sleep(1)
+        sleep(1)
         GPIO.output(rp, GPIO.LOW)  #aus
-
-
-
-#Lautsprecher schalten
-def switchSpeaker():
-    if sstate == 0:
-        GPIO.output(rs, GPIO.HIGH) # an
-        sstate = 1
-
-    if sstate == 1:
-        GPIO.output(rs, GPIO.LOW) # aus
-        sstate = 0
+        pstate = 0
 
 
 if __name__ == '__main__':
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setup(btn, GPIO.IN)
-    main()
 
+    while True:
+        GPIO.wait_for_edge(btn, GPIO.RISING)
+        switchPower()

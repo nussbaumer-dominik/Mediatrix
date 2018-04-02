@@ -1,5 +1,16 @@
 #!usr/bin/python
 
+import RPi.GPIO as GPIO
+from time import sleep
+
+GPIO.setwarnings(False)			#disable warnings
+
+GPIO.setmode(GPIO.BCM) # GPIO Nummern statt Board Nummern
+
+PWMpin = 13				# PWM pin zum Anschluss des Luefters (PWM1 33,35)
+
+GPIO.setup(PWMpin,GPIO.OUT)
+
 #Measuring temperature
 def gettemp(id):
     try:
@@ -28,20 +39,14 @@ def fanCon(mt):
     if mt > st:
         rpm=(mt-st)*190     #Umdrehungen Pro Minute
         prozent=(mt-st)*5   #Prozent der Drehzahl
+        if prozent > 100:
+            prozent = 100
 
     return prozent
 
 
 
 def pwm():
-
-    import RPi.GPIO as GPIO
-    from time import sleep
-
-    PWMpin = 33				# PWM pin zum Anschluss des Luefters (PWM1 33,35)
-    GPIO.setwarnings(False)			#disable warnings
-    GPIO.setmode(GPIO.BOARD)		#set pin numbering system
-    GPIO.setup(PWMpin,GPIO.OUT)
     fan_pwm = GPIO.PWM(PWMpin,100)		#create PWM instance with frequency
     fan_pwm.start(0)				#start PWM of required Duty Cycle
     while True:
@@ -59,9 +64,12 @@ def pwm():
             fan_pwm.ChangeDutyCycle(prozent) #provide duty cycle in the range 0-100
             sleep(2)
 
+        if prozent < 20:
+            fan_pwm.ChangeDutyCycle(0)
+            sleep(2)
+
 
     return
-
 
 if __name__ == '__main__':
 
