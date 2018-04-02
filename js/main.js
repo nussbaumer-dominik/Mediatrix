@@ -93,11 +93,12 @@ $(function() {
 					var obj = { id: id, value: val };
 					mixerData.mixer.mikrofone = [obj];
 					for (
-						let i = 0;
-						i < Object.keys(conf.mixer.mikrofone).length;
+						let i = 1;
+						i <= Object.keys(conf.mixer.mikrofone).length;
 						i++
 					) {
-						console.log("i: " + i);
+						let j = i - 1;
+						console.log("i: " + j);
 						console.log(
 							"erstes Element des Conf Objekts ohne Index: "
 						);
@@ -105,13 +106,13 @@ $(function() {
 						console.log(
 							"Id des erstes Element des Conf Objetks mit index: "
 						);
-						console.log(conf.mixer.mikrofone[i].id);
+						console.log(conf.mixer.mikrofone[j].id);
 
-						if (conf.mixer.mikrofone[i].id == "") {
-							conf.mixer.mikrofone[i].id = id;
-							conf.mixer.mikrofone[i].value = val;
-						} else if (conf.mixer.mikrofone[i].id == id) {
-							conf.mixer.mikrofone[i].value = val;
+						if (conf.mixer.mikrofone[j].id == "") {
+							conf.mixer.mikrofone[j].id = id;
+							conf.mixer.mikrofone[j].value = val;
+						} else if (conf.mixer.mikrofone[j].id == id) {
+							conf.mixer.mikrofone[j].value = val;
 						}
 					}
 
