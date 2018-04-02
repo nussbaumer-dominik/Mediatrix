@@ -97,12 +97,18 @@ $(function() {
 						i++
 					) {
 						console.log(conf.mixer.mikrofone[0].id);
-						if (conf.mixer.mikrofone[i].id == "") {
+						if (typeof conf.mixer.mikrofone[i].id == "") {
 							conf.mixer.mikrofone[i].id = id;
 							conf.mixer.mikrofone[i].value = val;
 						} else if (conf.mixer.mikrofone[i].id == id) {
 							conf.mixer.mikrofone[i].value = val;
 						}
+						/*if (conf.mixer.mikrofone[i].id == "") {
+							conf.mixer.mikrofone[i].id = id;
+							conf.mixer.mikrofone[i].value = val;
+						} else if (conf.mixer.mikrofone[i].id == id) {
+							conf.mixer.mikrofone[i].value = val;
+						}*/
 					}
 
 					send(mixerData);
