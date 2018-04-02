@@ -18,7 +18,7 @@ $(function() {
 	var mixerData = {
 		mixer: { mikrofone: [] }
 	};
-	var socket = new WebSocket("wss://10.0.0.144/wss");
+	var socket = new WebSocket("wss://10.0.0.85/wss");
 
 	//wirft eine Exception
 	socket.onerror = error => {
