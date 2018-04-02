@@ -90,8 +90,8 @@ $(function() {
 						"Dieser Slider ist von einem Mixer: " + slider.get()
 					);
 					var obj = { id: id, value: slider.get() / 100 };
-					mixerData.mixer.mikrofone.push(obj);
-					conf.mixer.mikrofone.push(obj);
+					mixerData.mixer.mikrofone = obj;
+					conf.mixer.mikrofone = obj;
 					send(mixerData);
 				} else if (id == "m") {
 					mixerData.mixer.master = slider.get() / 100;
