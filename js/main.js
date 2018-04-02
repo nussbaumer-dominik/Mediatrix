@@ -44,7 +44,6 @@ $(function() {
 			toggleBase();
 		} else {
 			console.log("message: " + event.data);
-			console.log(event);
 			$(".statusGrid").empty();
 			liveStatus();
 		}
@@ -327,13 +326,17 @@ $(function() {
 		let name = $("#presetName").val();
 		currentConf.name = name;
 		currentConf.conf = conf;
-		console.log(JSON.stringify(conf));
 
-		let data = new FormData();
+		/*let data = new FormData();
 		data.append("jwt", jwt);
 		data.append("name", name);
 		data.append("conf", JSON.stringify(conf));
-		console.log(data);
+		console.log(data);*/
+
+		let preset = {};
+		preset.jwt = jwt;
+		preset.name = name;
+		preset.conf = conf;
 
 		$.snackbar({
 			content:
@@ -346,7 +349,7 @@ $(function() {
 			url: "/Mediatrix/php/src/savePreset.php",
 			traditional: true,
 			method: "POST",
-			data: data,
+			data: JSON.stringify(preset),
 			contentType: false,
 			processData: false,
 			xhrFields: {
