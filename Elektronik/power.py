@@ -20,7 +20,8 @@ GPIO.setup(btn, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
 GPIO.setup(rs, GPIO.OUT)
 GPIO.setup(rp, GPIO.OUT)
 
-#Einschalten
+GPIO.output(rs, GPIO.HIGH)  #aus
+GPIO.output(rp, GPIO.HIGH)
 
 
 
