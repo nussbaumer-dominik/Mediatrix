@@ -103,13 +103,13 @@ $(function() {
 								i +
 								" des Conf Objekts mit index: "
 						);
-						if (conf.mixer.mikrofone[i].id == "") {
+						if (typeof conf.mixer.mikrofone[i] === "undefined") {
+							conf.mixer.mikrofone[i].id = id;
+							conf.mixer.mikrofone[i].value = val;
+						} else if (conf.mixer.mikrofone[i].id == "") {
 							conf.mixer.mikrofone[i].id = id;
 							conf.mixer.mikrofone[i].value = val;
 						} else if (conf.mixer.mikrofone[i].id == id) {
-							conf.mixer.mikrofone[i].value = val;
-						} else if (!conf.mixer.mikrofone[i]) {
-							conf.mixer.mikrofone[i].id = id;
 							conf.mixer.mikrofone[i].value = val;
 						}
 					}
