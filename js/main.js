@@ -98,7 +98,10 @@ $(function() {
 
 					for (let i = 0; i < conf.mixer.mikrofone.length; i++) {
 						console.log(obj.id);
-						if (conf.mixer.mikrofone.length <= 2) {
+						if (
+							conf.mixer.mikrofone == null ||
+							conf.mixer.mikrofone.length < 2
+						) {
 							conf.mixer.mikrofone.push(obj);
 						}
 						if (conf.mixer.mikrofone[i].id == obj.id) {
