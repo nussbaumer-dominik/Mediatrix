@@ -389,7 +389,9 @@ $(function() {
 		}).attr("data-preset", presetStart);
 		div.append("<h2>" + data.name + "</h2>");
 		if (data.conf.dmx) {
-			let count = Object.keys(data.conf.dmx).length;
+			//let count = Object.keys(data.conf.dmx).length;
+			let count = 0;
+			data.conf.dmx.find(el => {if(el.id) count++ })
 			div.append(
 				"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
 					count +
