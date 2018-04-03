@@ -252,6 +252,7 @@ $(function() {
 					$(this).html()
 			);
 			data.av.mode = $(this).html();
+			conf.av.mode = $(this).html();
 			console.log(data);
 		}
 	}
@@ -480,7 +481,7 @@ $(function() {
 			buildStatus("Helligkeit", ini.live.dmx[0], "");
 		}
 		if (ini.live.beamer.source) {
-			buildStatus("Beamer", ini.live.beamer.source, "");
+			buildStatus("Beamer", ini.live.beamer.on, "");
 		}
 	};
 
