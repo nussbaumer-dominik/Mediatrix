@@ -689,7 +689,7 @@ a {
 		width: 50px;
 		height: 50px;
 		background: white;
-		border: 4px solid var(--border-color);
+		border: 4px solid var(--fader-color);
 		font-size: 1.3rem;
 		display: flex;
 		justify-content: center;
@@ -699,7 +699,7 @@ a {
 		transition: all 0.2s;
 
 		&:hover {
-			background: var(--border-color);
+			background: var(--fader-color);
 		}
 
 		&:hover i {

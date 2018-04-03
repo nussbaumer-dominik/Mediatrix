@@ -15,6 +15,7 @@ $(() => {
 		"--modal-btn",
 		"--extendedBtn"
 	];
+
 	//Themes
 	let dark = [
 		"#ECECEC",
@@ -101,7 +102,6 @@ $(() => {
 	$(".trigger").click(function() {
 		$(".modal-wrapper").toggleClass("open");
 		$(".modal").toggleClass("open");
-		return false;
 	});
 
 	$(".modal-wrapper").click(function() {
