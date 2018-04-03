@@ -18,7 +18,8 @@ $(function() {
 	var mixerData = {
 		mixer: { mikrofone: [] }
 	};
-	var socket = new WebSocket("wss://10.0.0.85/wss");
+	//var socket = new WebSocket("wss://10.0.0.85/wss");
+	var socket = new WebSocket("wss://10.0.0.144/wss");
 
 	//wirft eine Exception
 	socket.onerror = error => {
@@ -172,7 +173,7 @@ $(function() {
 			if ($this.attr("data-state") == "0") {
 				$this.attr("data-state", "1");
 
-				if ( id === "0") {
+				if (id === "0") {
 					mixerData.mixer.mikrofone[0].mute = 1;
 					conf.mixer.mikrofone[0].mute = 1;
 				} else if (id === "1") {
@@ -187,7 +188,7 @@ $(function() {
 			} else {
 				$this.attr("data-state", "0");
 
-				if ( id === "0") {
+				if (id === "0") {
 					mixerData.mixer.mikrofone[0].mute = 0;
 					conf.mixer.mikrofone[0].mute = 0;
 				} else if (id === "1") {
@@ -475,13 +476,13 @@ $(function() {
 	}
 
 	var liveStatus = () => {
-		if(ini.live.av.volume){
+		if (ini.live.av.volume) {
 			buildStatus("Master", ini.live.av.volume, "dB");
 		}
-		if(ini.live.dmx){
+		if (ini.live.dmx) {
 			buildStatus("Helligkeit", ini.live.dmx[0], "");
 		}
-		if(ini.live.beamer.source){
+		if (ini.live.beamer.source) {
 			buildStatus("Beamer", ini.live.beamer.source, "");
 		}
 	};
@@ -496,7 +497,7 @@ $(function() {
 		var div = $("<div>");
 		div.append("<span>" + key + "</span><span>" + value + unit + "</span>");
 		$(".statusGrid").append(div);
-	};
+	}
 
 	$(".tgl").on("click", () => {
 		var mode = $(".tgl").prop("checked");
