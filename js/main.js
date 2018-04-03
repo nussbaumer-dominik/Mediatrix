@@ -15,7 +15,9 @@ $(function() {
 			beamer: {}
 		};
 
-	var mixerData = { mixer: { mikrofone: [] } };
+	var mixerData = {
+		mixer: { mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }] }
+	};
 	//var socket = new WebSocket("wss://10.0.0.85/wss");
 	var socket = new WebSocket("wss://10.0.0.144/wss");
 
@@ -95,8 +97,10 @@ $(function() {
 					console.log(conf.mixer.mikrofone.length);
 
 					if (id === "0") {
+						mixerData.mixer.mikrofone[0].value = val;
 						conf.mixer.mikrofone[0].value = val;
 					} else if (id === "1") {
+						mixerData.mixer.mikrofone[1].value = val;
 						conf.mixer.mikrofone[1].value = val;
 					}
 
@@ -166,17 +170,17 @@ $(function() {
 	function muteButton() {
 		var $this = $(this);
 		let id = $this.attr("data-id");
-		console.log($this);
+		console.log(id);
 		if ($this.attr("data-type") == "mixer") {
 			if ($this.attr("data-state") == "0") {
 				$this.attr("data-state", "1");
 
 				if (id === "0") {
 					console.log(mixerData.mixer.mikrofone);
-					mixerData.mixer.mikrofone[0]["mute"] = 1;
+					mixerData.mixer.mikrofone[0].mute = 1;
 					conf.mixer.mikrofone[0]["mute"] = 1;
 				} else if (id === "1") {
-					mixerData.mixer.mikrofone[1]["mute"] = 1;
+					mixerData.mixer.mikrofone[1].mute = 1;
 					conf.mixer.mikrofone[1]["mute"] = 1;
 				}
 
