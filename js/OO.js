@@ -1,11 +1,25 @@
 
 function Mixer(id){
-    this.mikrofone = [];
     this.id = id;
+    this.mikrofone = [];
 
-    this.createMikrofon = () => {
+    this.addMikrofon = () => {
         console.log(this.id);
     }
+}
+
+function Dmx(id){
+    this.id = id;
+    this.scheinwerfer = [];
+
+    this.addScheinwerfer = () => {
+
+    }
+}
+
+function Av(id){
+    this.id = id;
+    this.add
 }
 
 function Preset(name, jwt, id){
