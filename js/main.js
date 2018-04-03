@@ -380,7 +380,7 @@ $(function() {
 		console.log(data);
 		var div = $("<div/>", {
 			class: "preset"
-		}).attr("data-preset", presetStart + 1);
+		}).attr("data-preset", presetStart);
 		div.append("<h2>" + data.name + "</h2>");
 		if (data.conf.dmx) {
 			let count = Object.keys(data.conf.dmx).length;
