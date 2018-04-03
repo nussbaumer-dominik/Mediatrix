@@ -9,15 +9,13 @@ $(function() {
 		conf = {
 			av: {},
 			dmx: { scheinwerfer: {} },
-			mixer: {
-				mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }]
-			},
+			mixer: { mikrofone: [] },
 			beamer: {}
 		};
 
-	var mixerData = {
-		mixer: { mikrofone: [] }
-	};
+	//mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }]
+
+	var mixerData = { mixer: { mikrofone: [] } };
 	//var socket = new WebSocket("wss://10.0.0.85/wss");
 	var socket = new WebSocket("wss://10.0.0.144/wss");
 
@@ -208,9 +206,7 @@ $(function() {
 
 	//Werte der Beamer Steuerung auslesen
 	function Beamer() {
-		var data = {
-			beamer: {}
-		};
+		var data = { beamer: {} };
 		//Kontrollieren ob vom Typ Beamer
 		if ($(this).attr("data-type") == "beamer") {
 			//Power Knopf erkennen
@@ -247,11 +243,7 @@ $(function() {
 
 	//Werte der Modi des AV-Receivers auslesen
 	function Buttons() {
-		let data = {
-			av: {
-				mode: ""
-			}
-		};
+		let data = { av: { mode: "" } };
 		if ($(this).attr("data-type") == "av") {
 			console.log(
 				"Data-type=" +
