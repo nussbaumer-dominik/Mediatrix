@@ -69,7 +69,7 @@ class Mixer {
 	public function alive() {
 		try {
 			echo "Alive " . "3:::ALIVE\n";
-			$this->mixer->send("3:::ALIVE");
+			//$this->mixer->send("3:::ALIVE");
 			return array("success" => true, "err" => "");
 		} catch(Exception $ex) {
 			return array("success" => false, "err" => $ex);
