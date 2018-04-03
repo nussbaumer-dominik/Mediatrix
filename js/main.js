@@ -172,6 +172,7 @@ $(function() {
 				$this.attr("data-state", "1");
 
 				if (id === "0") {
+					console.log(mixerData.mixer.mikrofone);
 					mixerData.mixer.mikrofone[0]["mute"] = 1;
 					conf.mixer.mikrofone[0]["mute"] = 1;
 				} else if (id === "1") {
