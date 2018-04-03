@@ -8,6 +8,10 @@ function Mixer(id){
     }
 }
 
-function Preset(){
-    
+function Preset(name, jwt, id){
+    this.name = name;
+    this.id = id;
+    this.jwt = jwt;
+
+    this.conf = {};
 }
