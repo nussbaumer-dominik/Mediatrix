@@ -58,6 +58,7 @@ $(function() {
 	var send = data => {
 		data.jwt = jwt;
 		socket.send(JSON.stringify(data));
+		console.log("Daten wurden gesendet ");
 		console.log(JSON.stringify(data));
 	};
 
