@@ -9,11 +9,11 @@ $(function() {
 		conf = {
 			av: {},
 			dmx: { scheinwerfer: {} },
-			mixer: { mikrofone: [] },
+			mixer: {
+				mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }]
+			},
 			beamer: {}
 		};
-
-	//mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }]
 
 	var mixerData = { mixer: { mikrofone: [] } };
 	//var socket = new WebSocket("wss://10.0.0.85/wss");
@@ -32,7 +32,7 @@ $(function() {
 		console.log("socket open: " + socket + " " + event);
 	};
 
-	//wird bei Response des Servers ausgegeben
+	//wird bei Response des Servers ausgelöst
 	socket.onmessage = event => {
 		if (JSON.parse(event.data)["ini"]) {
 			console.log("das ist der ini-string: " + event.data);
@@ -48,7 +48,7 @@ $(function() {
 		}
 	};
 
-	//wird ausgegeben, wenn die Verbindung gekappt wurde
+	//wird getriggered, wenn die Verbindung gekappt wurde
 	socket.onclose = event => {
 		console.log("socket closed: " + socket + " " + event);
 	};
