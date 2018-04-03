@@ -390,11 +390,15 @@ $(function() {
 					"</h3> </div>"
 			);
 		}
-		if (data.conf.av) {
+		if (data.conf.av.mode) {
 			div.append(
 				"<div> <i class='fas fa-volume-up'> </i> <h3>" +
 					data.conf.av.mode +
 					"</h3> </div>"
+			);
+		} else {
+			div.append(
+				"<div> <i class='fas fa-volume-up'> </i> <h3> 0 </h3> </div>"
 			);
 		}
 		if (data.conf.beamer) {
@@ -472,6 +476,7 @@ $(function() {
 			buildStatus("Master", ini.live.av.volume, "dB");
 		}
 		if (ini.live.dmx) {
+			console.log(ini.live.dmx);
 			buildStatus("Helligkeit", ini.live.dmx[0], "");
 		}
 		if (ini.live.beamer.source) {
