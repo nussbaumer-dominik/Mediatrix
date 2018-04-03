@@ -17,7 +17,8 @@ class Mixer {
 
 	//Verbindung mit Mischpult herstellen
 	public function connectToScui($ipAddress) {
-		/*$url = $ipAddress . "/socket.io/";
+		echo "Error";
+		$url = $ipAddress . "/socket.io/";
 		$req = curl_init();
 		curl_setopt($req, CURLOPT_URL, $url);
 		curl_setopt($req, CURLOPT_RETURNTRANSFER, TRUE);
@@ -37,9 +38,8 @@ class Mixer {
 			return array("success" => true, "err" => "");
 		} catch (Exception $ex){
 			return array("success" => false, "err" => $ex);
-			echo "Error";
 			print "Error";
-		}*/
+		}
 	}
 
 	//Mute Befehl erstellen
@@ -69,7 +69,7 @@ class Mixer {
 	public function alive() {
 		try {
 			echo "Alive " . "3:::ALIVE\n";
-			//$this->mixer->send("3:::ALIVE");
+			$this->mixer->send("3:::ALIVE");
 			return array("success" => true, "err" => "");
 		} catch(Exception $ex) {
 			return array("success" => false, "err" => $ex);

@@ -18,8 +18,8 @@ $(function() {
 	var mixerData = {
 		mixer: { mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }] }
 	};
-	//var socket = new WebSocket("wss://10.0.0.85/wss");
-	var socket = new WebSocket("wss://10.0.0.144/wss");
+	var socket = new WebSocket("wss://10.0.0.85/wss");
+	//var socket = new WebSocket("wss://10.0.0.144/wss");
 
 	//wirft eine Exception
 	socket.onerror = error => {
@@ -178,10 +178,10 @@ $(function() {
 				if (id === "0") {
 					console.log(mixerData.mixer.mikrofone);
 					mixerData.mixer.mikrofone[0].mute = 1;
-					conf.mixer.mikrofone[0]["mute"] = 1;
+					conf.mixer.mikrofone[0].mute = 1;
 				} else if (id === "1") {
 					mixerData.mixer.mikrofone[1].mute = 1;
-					conf.mixer.mikrofone[1]["mute"] = 1;
+					conf.mixer.mikrofone[1].mute = 1;
 				}
 
 				$.snackbar({
