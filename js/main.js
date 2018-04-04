@@ -146,8 +146,8 @@ $(function() {
 				);
 
 				let container = $(slider)
-					.parent("div")
-					.parent("div");
+					.parent()
+					.parent();
 				/*console.log(slider);
 				let sliderWrapper = $(slider).parent();
 				console.log(sliderWrapper);
