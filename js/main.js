@@ -74,13 +74,11 @@ $(function() {
 				);
 				let avdata = {
 					av: {
-						value: slider.get(),
-						channel: slider.target.getAttribute("data-id")
+						volume: slider.get()
 					}
 				};
 				conf.av = {
-					value: slider.get(),
-					channel: slider.target.getAttribute("data-id")
+					volume: slider.get()
 				};
 				send(avdata);
 				break;
@@ -114,91 +112,6 @@ $(function() {
 					send(mixerData);
 				}
 				break;
-			/*case "hue":
-				console.log(
-					"Dieser Slider ist von einem DMX Gerät: " +
-						"Id: " +
-						slider.target.getAttribute("data-id") +
-						" " +
-						slider.get()
-				);
-				scheinwerfer[slider.target.getAttribute("data-id")][
-					slider.target.getAttribute("data-col")
-				] = parseInt(slider.get());
-
-				let obj = { id: slider.target.getAttribute("data-id") };
-				for (farbe in scheinwerfer[
-					slider.target.getAttribute("data-id")
-				]) {
-					obj[farbe] =
-						scheinwerfer[slider.target.getAttribute("data-id")][
-							farbe
-						];
-				}
-				conf.dmx[
-					"scheinwerfer" + slider.target.getAttribute("data-id")
-				] = obj;
-				console.log(conf.dmx);
-				console.log(obj);
-				send(obj);
-				send(huedata);
-				break;
-			case "rgbw":
-				console.log(
-					"Dieser Slider ist von einem DMX Gerät: " +
-						"Id: " +
-						slider.target.getAttribute("data-id") +
-						" " +
-						slider.get()
-				);
-				scheinwerfer[slider.target.getAttribute("data-id")][
-					slider.target.getAttribute("data-col")
-				] = parseInt(slider.get());
-
-				let obj = { id: slider.target.getAttribute("data-id") };
-				for (farbe in scheinwerfer[
-					slider.target.getAttribute("data-id")
-				]) {
-					obj[farbe] =
-						scheinwerfer[slider.target.getAttribute("data-id")][
-							farbe
-						];
-				}
-				conf.dmx[
-					"scheinwerfer" + slider.target.getAttribute("data-id")
-				] = obj;
-				console.log(conf.dmx);
-				console.log(obj);
-				send(obj);
-				break;
-			case "rgb":
-				console.log(
-					"Dieser Slider ist von einem DMX Gerät: " +
-						"Id: " +
-						slider.target.getAttribute("data-id") +
-						" " +
-						slider.get()
-				);
-				scheinwerfer[slider.target.getAttribute("data-id")][
-					slider.target.getAttribute("data-col")
-				] = parseInt(slider.get());
-
-				let obj = { id: slider.target.getAttribute("data-id") };
-				for (farbe in scheinwerfer[
-					slider.target.getAttribute("data-id")
-				]) {
-					obj[farbe] =
-						scheinwerfer[slider.target.getAttribute("data-id")][
-							farbe
-						];
-				}
-				conf.dmx[
-					"scheinwerfer" + slider.target.getAttribute("data-id")
-				] = obj;
-				console.log(conf.dmx);
-				console.log(obj);
-				send(obj);
-				break;*/
 			case "dmx":
 				console.log(
 					"Dieser Slider ist von einem DMX Gerät: " +
@@ -317,7 +230,7 @@ $(function() {
 	//Werte der Modi des AV-Receivers auslesen
 	function Buttons() {
 		let $this = $(this);
-		let avdata = { av: { mode: "" } };
+		let avdata = { av: {} };
 		if ($this.attr("data-type") == "av") {
 			console.log(
 				"Data-type=" +
