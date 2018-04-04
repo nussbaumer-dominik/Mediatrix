@@ -552,7 +552,7 @@ $(function() {
 	}
 
 	function updateStatus(key, value, unit, id) {
-		$(".statusGrid").remove(id);
+		$(".statusGrid").remove("#" + id);
 		var div = $("<div id='" + id + "'>");
 		div.append("<span>" + key + "</span><span>" + value + unit + "</span>");
 		$(".statusGrid").append(div);
