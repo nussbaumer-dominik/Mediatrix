@@ -477,7 +477,7 @@ $(function() {
 
 	function selectPreset(data) {
 		console.log(presets);
-		send(presets[parseInt($(this).attr("data-preset"))]);
+		send(presets[parseInt($(this).attr("data-preset"))].conf);
 	}
 
 	var firstLiveStatus = () => {
@@ -510,8 +510,6 @@ $(function() {
 			/*if (value !== live[counter]) {
 
 			}*/
-			console.log(counter);
-			counter++;
 		}
 		/*if (live.av.volume) {
 			updateStatus("Master", live.av.volume, "dB");
