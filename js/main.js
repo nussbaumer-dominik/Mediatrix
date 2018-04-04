@@ -8,7 +8,7 @@ $(function() {
 		currentConf = { name: "", conf: {} },
 		conf = {
 			av: {},
-			dmx: { scheinwerfer: {} },
+			dmx: {},
 			mixer: {
 				mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }]
 			},
@@ -137,6 +137,41 @@ $(function() {
 				send(huedata);
 				break;
 			case "rgbw":
+				console.log(
+					"Dieser Slider ist von einem DMX Gerät: " +
+						"Id: " +
+						slider.target.getAttribute("data-id") +
+						" " +
+						slider.get()
+				);
+
+				let sliderWrapper = slider.parent();
+				let container = sliderWrapper.parent();
+				console.log(container);
+
+				$.each(function(key, value) {
+					console.log(this + " " + key + " " + value);
+				});
+
+				var rgbwdata = {
+					dmx: {
+						scheinwerfer: {
+							id: slider.target.getAttribute("data-id"),
+							[slider.target.getAttribute(
+								"data-col"
+							)]: slider.get()
+						}
+					}
+				};
+				conf.dmx.scheinwerfer.id = slider.target.getAttribute(
+					"data-id"
+				);
+				conf.dmx.scheinwerfer[
+					slider.target.getAttribute("data-col")
+				] = slider.get();
+				send(rgbwdata);
+				break;
+			case "rgb":
 				console.log(
 					"Dieser Slider ist von einem DMX Gerät: " +
 						"Id: " +
@@ -322,6 +357,19 @@ $(function() {
 				) {
 					t = t.replace(/{:id}/, scheinwerfer.id);
 				}
+				t = t.replace(/{:lightNumber}/, scheinwerfer.id + 1);
+				$(".flex-container").append(t);
+			} else if (scheinwerfer.numberChannels == "3") {
+				var t = document.querySelector("#rgbTemplate").innerHTML;
+
+				for (
+					let j = 0;
+					j < parseInt(scheinwerfer.numberChannels);
+					j++
+				) {
+					t = t.replace(/{:id}/, scheinwerfer.id + 1);
+				}
+
 				t = t.replace(/{:lightNumber}/, scheinwerfer.id + 1);
 				$(".flex-container").append(t);
 			}
