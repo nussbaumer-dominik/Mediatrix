@@ -339,29 +339,22 @@ $(function() {
 		currentConf.name = name;
 		currentConf.conf = conf;
 
-		/*let data = new FormData();
-		data.append("jwt", jwt);
-		data.append("name", name);
-		data.append("conf", JSON.stringify(conf));
-		console.log(data);*/
+		let preset = new FormData();
+		preset.append("jwt", jwt);
+		preset.append("name", name);
+		preset.append("conf", JSON.stringify(conf));
+		console.log(preset);
 
-		let preset = {};
+		/*let preset = {};
 		preset.jwt = jwt;
 		preset.name = name;
-		preset.conf = conf;
-
-		$.snackbar({
-			content:
-				"Das Preset " +
-				$("#presetName").val() +
-				" wurde erfolgreich erstellt"
-		});
+		preset.conf = conf;*/
 
 		$.ajax({
 			url: "/Mediatrix/php/src/savePreset.php",
 			traditional: true,
 			method: "POST",
-			data: JSON.stringify(preset),
+			data: preset,
 			contentType: false,
 			processData: false,
 			xhrFields: {
@@ -374,6 +367,12 @@ $(function() {
 				console.log("success: " + data);
 				addPreset(currentConf);
 				presets.push(currentConf);
+				$.snackbar({
+					content:
+						"Das Preset " +
+						$("#presetName").val() +
+						" wurde erfolgreich erstellt"
+				});
 			})
 			.fail(data => {
 				console.log("error: ");
@@ -384,19 +383,16 @@ $(function() {
 	function addPreset(data) {
 		console.log(data);
 		var div = $("<div/>", {
-			class: "preset",
-			click: selectPreset
+			class: "preset"
+			//click: selectPreset
 		}).attr("data-preset", presetStart);
 		div.append("<h2>" + data.name + "</h2>");
 		if (data.conf.dmx) {
 			//let count = Object.keys(data.conf.dmx).length;
-			let count = 0;
-			data.conf.dmx.find(el => {
-				if (el.id) count++;
-			});
+
 			div.append(
 				"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
-					count +
+					data.conf.dmx.length +
 					"</h3> </div>"
 			);
 		}
@@ -412,11 +408,15 @@ $(function() {
 			);
 		}
 		if (data.conf.beamer) {
-			div.append(
-				"<div> <i class='fas fa-video'> </i> <h3>" +
-					data.conf.beamer.source +
-					"</h3> </div>"
-			);
+			if (data.conf.beamer.on) {
+				div.append(
+					"<div> <i class='fas fa-video'> </i> <h3>ein</h3> </div>"
+				);
+			} else {
+				div.append(
+					"<div> <i class='fas fa-video'> </i> <h3>aus</h3> </div>"
+				);
+			}
 		}
 		if (data.conf.mixer) {
 			div.append(
@@ -427,7 +427,7 @@ $(function() {
 		}
 		$(".presentation").append(div);
 		presetStart++;
-		//$(".preset").on("click", selectPreset);
+		$(".preset").on("click", selectPreset);
 	}
 
 	var getPresets = () => {
