@@ -8,7 +8,7 @@ $(function() {
 		currentConf = { name: "", conf: {} },
 		conf = {
 			av: {},
-			dmx: { scheinwerfer: {} },
+			dmx: {},
 			mixer: {
 				mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }]
 			},
@@ -114,27 +114,33 @@ $(function() {
 					send(mixerData);
 				}
 				break;
-			case "hue":
+			/*case "hue":
 				console.log(
 					"Dieser Slider ist von einem DMX Gerät: " +
+						"Id: " +
 						slider.target.getAttribute("data-id") +
 						" " +
 						slider.get()
 				);
-				var huedata = {
-					dmx: {
-						scheinwerfer: {
-							id: slider.target.getAttribute("data-id"),
-							hue: slider.get()
-						}
-					}
-				};
-				conf.dmx = {
-					scheinwerfer: {
-						id: slider.target.getAttribute("data-id"),
-						hue: slider.get()
-					}
-				};
+				scheinwerfer[slider.target.getAttribute("data-id")][
+					slider.target.getAttribute("data-col")
+				] = parseInt(slider.get());
+
+				let obj = { id: slider.target.getAttribute("data-id") };
+				for (farbe in scheinwerfer[
+					slider.target.getAttribute("data-id")
+				]) {
+					obj[farbe] =
+						scheinwerfer[slider.target.getAttribute("data-id")][
+							farbe
+						];
+				}
+				conf.dmx[
+					"scheinwerfer" + slider.target.getAttribute("data-id")
+				] = obj;
+				console.log(conf.dmx);
+				console.log(obj);
+				send(obj);
 				send(huedata);
 				break;
 			case "rgbw":
@@ -147,7 +153,7 @@ $(function() {
 				);
 				scheinwerfer[slider.target.getAttribute("data-id")][
 					slider.target.getAttribute("data-col")
-				] = slider.get();
+				] = parseInt(slider.get());
 
 				let obj = { id: slider.target.getAttribute("data-id") };
 				for (farbe in scheinwerfer[
@@ -158,13 +164,12 @@ $(function() {
 							farbe
 						];
 				}
+				conf.dmx[
+					"scheinwerfer" + slider.target.getAttribute("data-id")
+				] = obj;
+				console.log(conf.dmx);
 				console.log(obj);
-
-				/*
-				conf.dmx.scheinwerfer[
-					slider.target.getAttribute("data-col")
-				] = slider.get();
-				send(rgbwdata);*/
+				send(obj);
 				break;
 			case "rgb":
 				console.log(
@@ -174,23 +179,58 @@ $(function() {
 						" " +
 						slider.get()
 				);
-				var rgbwdata = {
-					dmx: {
-						scheinwerfer: {
-							id: slider.target.getAttribute("data-id"),
-							[slider.target.getAttribute(
-								"data-col"
-							)]: slider.get()
-						}
-					}
-				};
-				conf.dmx.scheinwerfer.id = slider.target.getAttribute(
-					"data-id"
-				);
-				conf.dmx.scheinwerfer[
+				scheinwerfer[slider.target.getAttribute("data-id")][
 					slider.target.getAttribute("data-col")
-				] = slider.get();
-				send(rgbwdata);
+				] = parseInt(slider.get());
+
+				let obj = { id: slider.target.getAttribute("data-id") };
+				for (farbe in scheinwerfer[
+					slider.target.getAttribute("data-id")
+				]) {
+					obj[farbe] =
+						scheinwerfer[slider.target.getAttribute("data-id")][
+							farbe
+						];
+				}
+				conf.dmx[
+					"scheinwerfer" + slider.target.getAttribute("data-id")
+				] = obj;
+				console.log(conf.dmx);
+				console.log(obj);
+				send(obj);
+				break;*/
+			case "dmx":
+				console.log(
+					"Dieser Slider ist von einem DMX Gerät: " +
+						"Id: " +
+						slider.target.getAttribute("data-id") +
+						" " +
+						slider.get()
+				);
+				scheinwerfer[slider.target.getAttribute("data-id")][
+					slider.target.getAttribute("data-col")
+				] = parseInt(slider.get());
+
+				let obj = { id: slider.target.getAttribute("data-id") };
+				for (farbe in scheinwerfer[
+					slider.target.getAttribute("data-id")
+				]) {
+					obj[farbe] =
+						scheinwerfer[slider.target.getAttribute("data-id")][
+							farbe
+						];
+				}
+				let sendObj = { dmx: {} };
+				sendObj.dmx[
+					"scheinwerfer" + slider.target.getAttribute("data-id")
+				] = obj;
+				conf.dmx[
+					"scheinwerfer" + slider.target.getAttribute("data-id")
+				] = obj;
+
+				console.log(conf.dmx);
+				console.log(sendObj);
+				send(sendObj);
 				break;
 		}
 	}
@@ -393,6 +433,7 @@ $(function() {
 		let name = $("#presetName").val();
 		currentConf.name = name;
 		currentConf.conf = conf;
+		currentConf.conf.scheinwerfer;
 
 		/*let data = new FormData();
 		data.append("jwt", jwt);
