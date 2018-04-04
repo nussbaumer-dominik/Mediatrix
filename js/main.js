@@ -19,8 +19,8 @@ $(function() {
 		mixer: { mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }] }
 	};
 	var scheinwerfer = {};
-	var socket = new WebSocket("wss://10.0.0.85/wss");
-	//var socket = new WebSocket("wss://10.0.0.144/wss");
+	//var socket = new WebSocket("wss://10.0.0.85/wss");
+	var socket = new WebSocket("wss://10.0.0.144/wss");
 
 	//wirft eine Exception
 	socket.onerror = error => {
