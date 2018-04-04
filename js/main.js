@@ -41,13 +41,13 @@ $(function() {
 			console.log("das ist der ini-string: " + event.data);
 			ini = (JSON && JSON.parse(event.data)) || $.parseJSON(event.data);
 			presets = ini.ini.presets;
-			liveStatus();
+			firstLiveStatus();
 			getPresets();
 			toggleBase();
 		} else {
 			console.log("message: " + event.data);
 			$(".statusGrid").empty();
-			liveStatus();
+			liveStatus(event.data.live);
 		}
 	};
 
@@ -74,26 +74,21 @@ $(function() {
 				);
 				let avdata = {
 					av: {
-						value: slider.get(),
-						channel: slider.target.getAttribute("data-id")
+						volume: slider.get()
 					}
 				};
 				conf.av = {
-					value: slider.get(),
-					channel: slider.target.getAttribute("data-id")
+					volume: slider.get()
 				};
 				send(avdata);
 				break;
 			case "mixer":
 				let id = slider.target.getAttribute("data-id");
 				let val = slider.get() / 100;
-				console.log("MixerData: ");
-				console.log(mixerData);
 				if (!isNaN(id)) {
 					console.log(
 						"Dieser Slider ist von einem Mixer: " + slider.get()
 					);
-					console.log(conf.mixer.mikrofone.length);
 
 					if (id === "0") {
 						mixerData.mixer.mikrofone[0].value = val;
@@ -114,91 +109,6 @@ $(function() {
 					send(mixerData);
 				}
 				break;
-			/*case "hue":
-				console.log(
-					"Dieser Slider ist von einem DMX Gerät: " +
-						"Id: " +
-						slider.target.getAttribute("data-id") +
-						" " +
-						slider.get()
-				);
-				scheinwerfer[slider.target.getAttribute("data-id")][
-					slider.target.getAttribute("data-col")
-				] = parseInt(slider.get());
-
-				let obj = { id: slider.target.getAttribute("data-id") };
-				for (farbe in scheinwerfer[
-					slider.target.getAttribute("data-id")
-				]) {
-					obj[farbe] =
-						scheinwerfer[slider.target.getAttribute("data-id")][
-							farbe
-						];
-				}
-				conf.dmx[
-					"scheinwerfer" + slider.target.getAttribute("data-id")
-				] = obj;
-				console.log(conf.dmx);
-				console.log(obj);
-				send(obj);
-				send(huedata);
-				break;
-			case "rgbw":
-				console.log(
-					"Dieser Slider ist von einem DMX Gerät: " +
-						"Id: " +
-						slider.target.getAttribute("data-id") +
-						" " +
-						slider.get()
-				);
-				scheinwerfer[slider.target.getAttribute("data-id")][
-					slider.target.getAttribute("data-col")
-				] = parseInt(slider.get());
-
-				let obj = { id: slider.target.getAttribute("data-id") };
-				for (farbe in scheinwerfer[
-					slider.target.getAttribute("data-id")
-				]) {
-					obj[farbe] =
-						scheinwerfer[slider.target.getAttribute("data-id")][
-							farbe
-						];
-				}
-				conf.dmx[
-					"scheinwerfer" + slider.target.getAttribute("data-id")
-				] = obj;
-				console.log(conf.dmx);
-				console.log(obj);
-				send(obj);
-				break;
-			case "rgb":
-				console.log(
-					"Dieser Slider ist von einem DMX Gerät: " +
-						"Id: " +
-						slider.target.getAttribute("data-id") +
-						" " +
-						slider.get()
-				);
-				scheinwerfer[slider.target.getAttribute("data-id")][
-					slider.target.getAttribute("data-col")
-				] = parseInt(slider.get());
-
-				let obj = { id: slider.target.getAttribute("data-id") };
-				for (farbe in scheinwerfer[
-					slider.target.getAttribute("data-id")
-				]) {
-					obj[farbe] =
-						scheinwerfer[slider.target.getAttribute("data-id")][
-							farbe
-						];
-				}
-				conf.dmx[
-					"scheinwerfer" + slider.target.getAttribute("data-id")
-				] = obj;
-				console.log(conf.dmx);
-				console.log(obj);
-				send(obj);
-				break;*/
 			case "dmx":
 				console.log(
 					"Dieser Slider ist von einem DMX Gerät: " +
@@ -254,7 +164,7 @@ $(function() {
 				}
 
 				$.snackbar({
-					content: "Das Mikrofon wurde stumm geschalten"
+					content: "Das Mikrofon wurde stumm geschalten."
 				});
 			} else {
 				$this.attr("data-state", "0");
@@ -268,22 +178,21 @@ $(function() {
 				}
 
 				$.snackbar({
-					content: "Das Mikrofon wurde freigegeben"
+					content: "Das Mikrofon wurde freigegeben."
 				});
 			}
 		}
 		send(mixerData);
 	}
 
-	//$(".mute").on("click", muteButton);
-
 	//Werte der Beamer Steuerung auslesen
 	function Beamer() {
-		var data = { beamer: {} };
+		let data = { beamer: {} };
+		let $this = $(this);
 		//Kontrollieren ob vom Typ Beamer
-		if ($(this).attr("data-type") == "beamer") {
+		if ($this.attr("data-type") == "beamer") {
 			//Power Knopf erkennen
-			if ($(this).attr("data-value") == "power") {
+			if ($this.attr("data-value") == "power") {
 				if (!on) {
 					on = true;
 					data.beamer.on = 1;
@@ -298,14 +207,14 @@ $(function() {
 					send(data);
 				}
 			} else {
-				console.log("Beamer - Value: " + $(this).attr("data-value"));
-				if ($(this).attr("data-value") == "src") {
+				console.log("Beamer - Value: " + $this.attr("data-value"));
+				if ($this.attr("data-value") == "src") {
 					data.beamer.source = 1;
 					conf.beamer.source = 1;
-				} else if ($(this).attr("data-value") == "freeze") {
+				} else if ($this.attr("data-value") == "freeze") {
 					data.beamer.freeze = 1;
 					conf.beamer.freeze = 1;
-				} else if ($(this).attr("data-value") == "blackout") {
+				} else if ($this.attr("data-value") == "blackout") {
 					data.beamer.blackout = 1;
 					conf.beamer.blackout = 1;
 				}
@@ -317,7 +226,7 @@ $(function() {
 	//Werte der Modi des AV-Receivers auslesen
 	function Buttons() {
 		let $this = $(this);
-		let avdata = { av: { mode: "" } };
+		let avdata = { av: {} };
 		if ($this.attr("data-type") == "av") {
 			console.log(
 				"Data-type=" +
@@ -343,7 +252,7 @@ $(function() {
 				appendTo: "#avModes"
 			});
 		}
-		var slider = document.querySelector("#avSlider1");
+		let slider = document.querySelector("#avSlider1");
 		noUiSlider.create(slider, {
 			start: 0,
 			format: wNumb({
@@ -423,17 +332,12 @@ $(function() {
 		return true;
 	}
 
-	var selectMixerConf = () => {
-		console.log("selectMixerConf");
-	};
-
 	$("#savePreset").on("click", ev => {
 		ev.preventDefault();
 		console.log("Preset '" + $("#presetName").val() + "' speichern");
 		let name = $("#presetName").val();
 		currentConf.name = name;
 		currentConf.conf = conf;
-		currentConf.conf.scheinwerfer;
 
 		/*let data = new FormData();
 		data.append("jwt", jwt);
@@ -576,20 +480,46 @@ $(function() {
 		send(presets[parseInt($(this).attr("data-preset"))]);
 	}
 
-	var liveStatus = () => {
+	var firstLiveStatus = () => {
 		if (ini.live.av.volume) {
 			buildStatus("Master", ini.live.av.volume, "dB");
+		} else if (ini.live.beamer.on) {
+			if (ini.live.beamer.on) {
+				buildStatus("Beamer", "aus", "dB");
+			} else {
+				buildStatus("Beamer", "ein", "dB");
+			}
 		}
 		if (ini.live.dmx) {
 			console.log(ini.live.dmx);
-			buildStatus("Helligkeit", ini.live.dmx[0], "");
-		}
-		if (ini.live.beamer.source) {
-			buildStatus("Beamer", ini.live.beamer.on, "");
+			buildStatus("Helligkeit", ini.live.dmx.length, "");
 		}
 	};
 
-	var updateSliders = () => {
+	var liveStatus = live => {
+		let items = $(".statusGrid").contents();
+		console.log(items);
+		for (item of items) {
+			console.log("iterieren über items des liveStatus");
+			console.log(item);
+		}
+		/*if (live.av.volume) {
+			updateStatus("Master", live.av.volume, "dB");
+		}
+		if (live.beamer.on) {
+			if (live.beamer.on) {
+				updateStatus("Beamer", "aus", "dB");
+			} else {
+				updateStatus("Beamer", "ein", "dB");
+			}
+		}
+		if (live.dmx) {
+			console.log(live.dmx);
+			updateStatus("Helligkeit", live.dmx.length, "");
+		}*/
+	};
+
+	var updateSliders = (key, value, unit) => {
 		setSlider("avSlider1", ini.live.av.volume);
 		document.getElementById("avSlider1Value").innerHTML =
 			ini.live.av.volume;
@@ -600,6 +530,8 @@ $(function() {
 		div.append("<span>" + key + "</span><span>" + value + unit + "</span>");
 		$(".statusGrid").append(div);
 	}
+
+	function updateStatus() {}
 
 	$(".tgl").on("click", () => {
 		var mode = $(".tgl").prop("checked");
@@ -679,7 +611,6 @@ $(function() {
 				if ($("#mikrofonBox").parents(".flex-container").length == 1) {
 					$("#mikrofonBox").remove();
 				} else {
-					selectMixerConf();
 					$(".flex-container").append($("#mikroTemplate").html());
 					initSlider("#mikrofonBox");
 					$(".mute").on("click", muteButton);
@@ -715,7 +646,6 @@ $(function() {
 					$(".presentation").removeClass("flex");
 				} else {
 					$(".presentation").addClass("flex");
-					//getPresets(".presentation");
 				}
 				break;
 			case 1:
