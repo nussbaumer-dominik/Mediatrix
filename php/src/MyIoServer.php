@@ -24,10 +24,10 @@ class MyIoServer extends \Ratchet\Server\IoServer
         $loop = LoopFactory::create();
 
 
-        $loop->addPeriodicTimer(10, function() use (&$mixer) {
+        /*$loop->addPeriodicTimer(10, function() use (&$mixer) {
             $mixer->alive();
         });
-
+        */
         $socket = new Reactor($address . ':' . $port, $loop);
 
         return new static($component, $socket, $loop);
