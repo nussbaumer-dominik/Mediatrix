@@ -156,20 +156,7 @@ $(function() {
 				}
 
 				//let obj = { id: slider.target.getAttribute("data-id") };
-
-				/*var rgbwdata = {
-					dmx: {
-						scheinwerfer: {
-							id: slider.target.getAttribute("data-id"),
-							[slider.target.getAttribute(
-								"data-col"
-							)]: slider.get()
-						}
-					}
-				};
-				conf.dmx.scheinwerfer.id = slider.target.getAttribute(
-					"data-id"
-				);
+				/*
 				conf.dmx.scheinwerfer[
 					slider.target.getAttribute("data-col")
 				] = slider.get();
@@ -339,8 +326,9 @@ $(function() {
 		console.log("selectLichtConf");
 		for (let i = 0; i < Object.keys(ini.ini.dmx).length; i++) {
 			var scheinwerfer = ini.ini.dmx["scheinwerfer" + i];
+			console.log(scheinwerfer);
 			if (scheinwerfer.numberChannels == "4") {
-				scheinwerfer[scheinwerfer.id] = { r: 0, g: 0, b: 0, w: 0 };
+				scheinwerfer.scheinwerfer.id = { r: 0, g: 0, b: 0, w: 0 };
 
 				var t = document.querySelector("#rgbwTemplate").innerHTML;
 
