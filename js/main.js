@@ -18,7 +18,6 @@ $(function() {
 	var mixerData = {
 		mixer: { mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }] }
 	};
-
 	var socket = new WebSocket("wss://10.0.0.85/wss");
 	//var socket = new WebSocket("wss://10.0.0.144/wss");
 
@@ -93,8 +92,6 @@ $(function() {
 					console.log(
 						"Dieser Slider ist von einem Mixer: " + slider.get()
 					);
-					var obj = { id: id, value: val };
-					mixerData.mixer.mikrofone = [obj];
 					console.log(conf.mixer.mikrofone.length);
 
 					if (id === "0") {
