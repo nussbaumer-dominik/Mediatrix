@@ -510,7 +510,7 @@ $(function() {
 				}
 				console.log(Master);
 				if (parseInt(Master) != live.av.volume) {
-					item.innerHTML = live.av.volume + "dB";
+					item.innerText = live.av.volume + "dB";
 				}
 			} else if (value[0].innerText == "Scheinwerfer") {
 				console.log(value[1].innerText);
