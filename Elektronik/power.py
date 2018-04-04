@@ -33,7 +33,7 @@ def switchPower(pstate):
 
     if pstate == 0:
         print "ein"
-        GPIO.output(rs, GPIO.LOW) # an
+        GPIO.output(rs, GPIO.HIGH) # an
         GPIO.output(rp, GPIO.LOW) # an
         sleep(20)
         GPIO.output(rs, GPIO.LOW) # an
