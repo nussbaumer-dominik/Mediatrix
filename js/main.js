@@ -147,7 +147,7 @@ $(function() {
 
 				let sliderWrapper = slider.parent();
 				let container = sliderWrapper.parent();
-				console.log(container);
+				console.log("Der Container ist: " + { container });
 
 				$.each(function(key, value) {
 					console.log(this + " " + key + " " + value);
