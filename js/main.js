@@ -487,7 +487,7 @@ $(function() {
 		}
 	};
 
-	var liveStatus = live => {
+	function liveStatus(live) {
 		let items = $(".statusGrid").contents();
 		console.log(items);
 		console.log(live);
@@ -535,7 +535,7 @@ $(function() {
 				}
 			}
 		}
-	};
+	}
 
 	var updateSliders = () => {
 		setSlider("avSlider1", ini.live.av.volume);
