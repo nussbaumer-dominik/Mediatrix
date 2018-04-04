@@ -38,7 +38,7 @@ class Mixer {
 			return array("success" => true, "err" => "");
 		} catch (Exception $ex){
 			return array("success" => false, "err" => $ex);
-			echo "Error " .$ex;
+			echo "Error beim Verbindungsaufbau " . $ex;
 		}
 	}
 
