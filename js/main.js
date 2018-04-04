@@ -483,17 +483,17 @@ $(function() {
 
 	var firstLiveStatus = () => {
 		if (ini.live.av.volume) {
-			buildStatus("Master", ini.live.av.volume, "dB");
+			buildStatus("Master", ini.live.av.volume, "dB", "avStatus");
 		} else if (ini.live.beamer.on) {
 			if (ini.live.beamer.on) {
-				buildStatus("Beamer", "aus", "dB");
+				buildStatus("Beamer", "aus", "dB", "beamerStatus");
 			} else {
-				buildStatus("Beamer", "ein", "dB");
+				buildStatus("Beamer", "ein", "dB", "beamerStatus");
 			}
 		}
 		if (ini.live.dmx) {
 			console.log(ini.live.dmx);
-			buildStatus("Scheinwerfer", ini.live.dmx.length, "");
+			buildStatus("Scheinwerfer", ini.live.dmx.length, "", "dmxStatus");
 		}
 	};
 
@@ -516,45 +516,55 @@ $(function() {
 					newMaster = value[1].innerText.substring(5, 3);
 				}
 				console.log(newMaster);
+				if (parseInt(newMaster) != live.av.volume) {
+					updateStatus("Master", newMaster, "dB", "avStatus");
+				}
 			} else if (value[0].innerText == "Scheinwerfer") {
 				console.log(value[1].innerText);
+				if (value[1].innerText != live.dmx.scheinwerfer.length) {
+					updateStatus(
+						"Scheinwerfer",
+						live.dmx.scheinwerfer.length,
+						"",
+						"dmxStatus"
+					);
+				}
 			} else if (value[0].innerText == "Beamer") {
 				console.log(value[1].innerText);
-			}
-
-			/*if (value !== live[counter]) {
-
-			}*/
-		}
-		/*if (live.av.volume) {
-			updateStatus("Master", live.av.volume, "dB");
-		}
-		if (live.beamer.on) {
-			if (live.beamer.on) {
-				updateStatus("Beamer", "aus", "dB");
-			} else {
-				updateStatus("Beamer", "ein", "dB");
+				let active = live.beamer.on;
+				let current = false;
+				value[1].innerText == "ein"
+					? (current = true)
+					: (current = false);
+				if (active != current) {
+					if (current) {
+						updateStatus("Beamer", "ein", "", "beamerStatus");
+					} else {
+						updateStatus("Beamer", "aus", "", "beamerStatus");
+					}
+				}
 			}
 		}
-		if (live.dmx) {
-			console.log(live.dmx);
-			updateStatus("Scheinwerfer", live.dmx.length, "");
-		}*/
 	};
 
-	var updateSliders = (key, value, unit) => {
+	var updateSliders = () => {
 		setSlider("avSlider1", ini.live.av.volume);
 		document.getElementById("avSlider1Value").innerHTML =
 			ini.live.av.volume;
 	};
 
-	function buildStatus(key, value, unit) {
-		var div = $("<div>");
+	function buildStatus(key, value, unit, id) {
+		var div = $("<div id='" + id + "'>");
 		div.append("<span>" + key + "</span><span>" + value + unit + "</span>");
 		$(".statusGrid").append(div);
 	}
 
-	function updateStatus() {}
+	function updateStatus(key, value, unit, id) {
+		$(".statusGrid").remove(id);
+		var div = $("<div id='" + id + "'>");
+		div.append("<span>" + key + "</span><span>" + value + unit + "</span>");
+		$(".statusGrid").append(div);
+	}
 
 	$(".tgl").on("click", () => {
 		var mode = $(".tgl").prop("checked");
