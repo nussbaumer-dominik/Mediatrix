@@ -346,31 +346,33 @@ $(function() {
 					"Scheinwerfer" + (scheinwerferObj.id + 1)
 				);
 				$(".flex-container").append(t);
-			} else if (scheinwerfer.numberChannels == "1") {
+			} else if (scheinwerferObj.numberChannels == "1") {
+				scheinwerfer[scheinwerferObj.id] = { hue: 0 };
+
 				var t = document.querySelector("#hueTemplate").innerHTML;
 				for (
 					let j = 0;
-					j < parseInt(scheinwerfer.numberChannels);
+					j < parseInt(scheinwerferObj.numberChannels);
 					j++
 				) {
-					t = t.replace(/{:id}/, scheinwerfer.id);
+					t = t.replace(/{:id}/, scheinwerferObj.id);
 				}
-				t = t.replace(/{:lightNumber}/, scheinwerfer.id + 1);
+				t = t.replace(/{:lightNumber}/, scheinwerferObj.id + 1);
 				$(".flex-container").append(t);
-			} else if (scheinwerfer.numberChannels == "3") {
-				scheinwerfer[scheinwerfer.id] = { r: 0, g: 0, b: 0 };
+			} else if (scheinwerferObj.numberChannels == "3") {
+				scheinwerfer[scheinwerferObj.id] = { r: 0, g: 0, b: 0 };
 
 				var t = document.querySelector("#rgbTemplate").innerHTML;
 
 				for (
 					let j = 0;
-					j < parseInt(scheinwerfer.numberChannels);
+					j < parseInt(scheinwerferObj.numberChannels);
 					j++
 				) {
-					t = t.replace(/{:id}/, scheinwerfer.id + 1);
+					t = t.replace(/{:id}/, scheinwerferObj.id + 1);
 				}
 
-				t = t.replace(/{:lightNumber}/, scheinwerfer.id + 1);
+				t = t.replace(/{:lightNumber}/, scheinwerferObj.id + 1);
 				$(".flex-container").append(t);
 			}
 		}
