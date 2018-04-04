@@ -92,7 +92,7 @@ class DMX : public Php::Base {
 
             cout << "DMX sent" << endl;
 
-            return "{'success':'true','err':''}";
+            return "{'success':true,'err':''}";
         }
 
         // static void noBlackout(){
