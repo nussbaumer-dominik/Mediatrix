@@ -41,13 +41,13 @@ $(function() {
 			console.log("das ist der ini-string: " + event.data);
 			ini = (JSON && JSON.parse(event.data)) || $.parseJSON(event.data);
 			presets = ini.ini.presets;
-			liveStatus();
+			firstLiveStatus();
 			getPresets();
 			toggleBase();
 		} else {
 			console.log("message: " + event.data);
 			$(".statusGrid").empty();
-			liveStatus();
+			liveStatus(event.data.live);
 		}
 	};
 
@@ -480,7 +480,7 @@ $(function() {
 		send(presets[parseInt($(this).attr("data-preset"))]);
 	}
 
-	var liveStatus = () => {
+	var firstLiveStatus = () => {
 		if (ini.live.av.volume) {
 			buildStatus("Master", ini.live.av.volume, "dB");
 		} else if (ini.live.beamer.on) {
@@ -492,14 +492,34 @@ $(function() {
 		}
 		if (ini.live.dmx) {
 			console.log(ini.live.dmx);
-			buildStatus("Helligkeit", ini.live.dmx[0], "");
-		}
-		if (ini.live.beamer.source) {
-			buildStatus("Beamer", ini.live.beamer.on, "");
+			buildStatus("Helligkeit", ini.live.dmx.length, "");
 		}
 	};
 
-	var updateSliders = () => {
+	var liveStatus = live => {
+		let items = $(".statusGrid").contents();
+		console.log(items);
+		for (item of items) {
+			console.log("iterieren über items des liveStatus");
+			console.log(item);
+		}
+		/*if (live.av.volume) {
+			updateStatus("Master", live.av.volume, "dB");
+		}
+		if (live.beamer.on) {
+			if (live.beamer.on) {
+				updateStatus("Beamer", "aus", "dB");
+			} else {
+				updateStatus("Beamer", "ein", "dB");
+			}
+		}
+		if (live.dmx) {
+			console.log(live.dmx);
+			updateStatus("Helligkeit", live.dmx.length, "");
+		}*/
+	};
+
+	var updateSliders = (key, value, unit) => {
 		setSlider("avSlider1", ini.live.av.volume);
 		document.getElementById("avSlider1Value").innerHTML =
 			ini.live.av.volume;
@@ -510,6 +530,8 @@ $(function() {
 		div.append("<span>" + key + "</span><span>" + value + unit + "</span>");
 		$(".statusGrid").append(div);
 	}
+
+	function updateStatus() {}
 
 	$(".tgl").on("click", () => {
 		var mode = $(".tgl").prop("checked");
