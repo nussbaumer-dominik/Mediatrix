@@ -40,7 +40,9 @@ $(function() {
 		if (JSON.parse(event.data)["ini"]) {
 			console.log("das ist der ini-string: " + event.data);
 			ini = (JSON && JSON.parse(event.data)) || $.parseJSON(event.data);
-			presets = ini.ini.presets;
+			presets =
+				(JSON && JSON.parse(ini.ini.presets)) ||
+				$.parseJSON(ini.ini.presets);
 			firstLiveStatus();
 			getPresets();
 			toggleBase();
@@ -345,11 +347,6 @@ $(function() {
 		preset.append("conf", JSON.stringify(conf));
 		console.log(preset);
 
-		/*let preset = {};
-		preset.jwt = jwt;
-		preset.name = name;
-		preset.conf = conf;*/
-
 		$.ajax({
 			url: "/Mediatrix/php/src/savePreset.php",
 			traditional: true,
@@ -440,12 +437,9 @@ $(function() {
 			}).attr("data-preset", i);
 			div.append("<h2>" + presets[i].name + "</h2>");
 			if (presets[i].conf.dmx) {
-				var count = 0;
-				for (let key in presets[i].conf)
-					if (presets[i].conf.hasOwnProperty(key)) count++;
 				div.append(
 					"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
-						count +
+						presets[i].conf.dmx.length +
 						"</h3> </div>"
 				);
 			}
@@ -509,11 +503,11 @@ $(function() {
 				console.log(value[1].innerText);
 				let newMaster;
 				if (value[1].innerText.length == 3) {
-					newMaster = value[1].innerText.substring(3, 1);
+					newMaster = value[1].innerText.substring(1, 2);
 				} else if (value[1].innerText.length == 4) {
-					newMaster = value[1].innerText.substring(4, 2);
+					newMaster = value[1].innerText.substring(1, 2);
 				} else if (value[1].innerText.length == 5) {
-					newMaster = value[1].innerText.substring(5, 3);
+					newMaster = value[1].innerText.substring(1, 3);
 				}
 				console.log(newMaster);
 				if (parseInt(newMaster) != live.av.volume) {
