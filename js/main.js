@@ -325,25 +325,25 @@ $(function() {
 	function selectLichtConf() {
 		console.log("selectLichtConf");
 		for (let i = 0; i < Object.keys(ini.ini.dmx).length; i++) {
-			var scheinwerfer = ini.ini.dmx["scheinwerfer" + i];
+			var scheinwerferObj = ini.ini.dmx["scheinwerfer" + i];
 			console.log(scheinwerfer);
-			if (scheinwerfer.numberChannels == "4") {
-				scheinwerfer.scheinwerfer.id = { r: 0, g: 0, b: 0, w: 0 };
+			if (scheinwerferObj.numberChannels == "4") {
+				scheinwerfer[scheinwerferObj.id] = { r: 0, g: 0, b: 0, w: 0 };
 
 				var t = document.querySelector("#rgbwTemplate").innerHTML;
 
 				for (
 					let j = 0;
-					j < parseInt(scheinwerfer.numberChannels);
+					j < parseInt(scheinwerferObj.numberChannels);
 					j++
 				) {
-					t = t.replace(/{:id}/, scheinwerfer.id + 1);
+					t = t.replace(/{:id}/, scheinwerferObj.id + 1);
 				}
 
-				t = t.replace(/{:lightNumber}/, scheinwerfer.id + 1);
+				t = t.replace(/{:lightNumber}/, scheinwerferObj.id + 1);
 				t = t.replace(
 					/{{:id}}/,
-					"Scheinwerfer" + (scheinwerfer.id + 1)
+					"Scheinwerfer" + (scheinwerferObj.id + 1)
 				);
 				$(".flex-container").append(t);
 			} else if (scheinwerfer.numberChannels == "1") {
