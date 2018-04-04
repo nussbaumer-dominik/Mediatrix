@@ -382,8 +382,6 @@ $(function() {
 		}).attr("data-preset", presetStart);
 		div.append("<h2>" + data.name + "</h2>");
 		if (data.conf.dmx) {
-			//let count = Object.keys(data.conf.dmx).length;
-
 			div.append(
 				"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
 					data.conf.dmx.length +
@@ -500,11 +498,11 @@ $(function() {
 				console.log(value[1].innerText);
 				let newMaster;
 				if (value[1].innerText.length == 3) {
-					newMaster = value[1].innerText.substring(1, 2);
+					newMaster = value[1].innerText.substring(0, 1);
 				} else if (value[1].innerText.length == 4) {
-					newMaster = value[1].innerText.substring(1, 2);
+					newMaster = value[1].innerText.substring(0, 2);
 				} else if (value[1].innerText.length == 5) {
-					newMaster = value[1].innerText.substring(1, 3);
+					newMaster = value[1].innerText.substring(0, 3);
 				}
 				console.log(newMaster);
 				if (parseInt(newMaster) != live.av.volume) {
