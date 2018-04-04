@@ -24,6 +24,7 @@ class Mikrofon {
     }
     function mute($muted){
         try{
+            echo "Mute Mikrofone " . $muted;
             $this->mixer->mute($muted, $this->channelId);
         } catch (Exception $ex) {
             return array("success" => false, "err" => "" . $ex);
