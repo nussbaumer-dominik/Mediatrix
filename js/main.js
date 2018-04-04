@@ -145,9 +145,7 @@ $(function() {
 						slider.get()
 				);
 
-				let container = $(slider)
-					.parent()
-					.parent();
+				let container = $(slider).closest(".flex-wrapper");
 				/*console.log(slider);
 				let sliderWrapper = $(slider).parent();
 				console.log(sliderWrapper);
