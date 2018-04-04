@@ -145,8 +145,8 @@ $(function() {
 						slider.get()
 				);
 
-				let sliderWrapper = slider.parent();
-				let container = sliderWrapper.parent();
+				let sliderWrapper = $(slider).parent();
+				let container = $(sliderWrapper).parent();
 				console.log("Der Container ist: " + { container });
 
 				$.each(function(key, value) {
