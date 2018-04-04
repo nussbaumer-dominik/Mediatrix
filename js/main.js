@@ -379,7 +379,6 @@ $(function() {
 		console.log(data);
 		var div = $("<div/>", {
 			class: "preset"
-			//click: selectPreset
 		}).attr("data-preset", presetStart);
 		div.append("<h2>" + data.name + "</h2>");
 		if (data.conf.dmx) {
