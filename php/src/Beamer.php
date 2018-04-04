@@ -91,11 +91,13 @@ class Beamer
 
     function on()
     {
+        echo "Beamer on \n";
+
         if($this->isOn()){
             return (object) array("success"=>true,"err"=>"");
         }
 
-        echo "Beamer on \n";
+
 
         //get Code
         $code = $this->powerCode['lastSendA'] ? $this->powerCode['b']:$this->powerCode['a'];
