@@ -85,13 +85,10 @@ $(function() {
 			case "mixer":
 				let id = slider.target.getAttribute("data-id");
 				let val = slider.get() / 100;
-				console.log("MixerData: ");
-				console.log(mixerData);
 				if (!isNaN(id)) {
 					console.log(
 						"Dieser Slider ist von einem Mixer: " + slider.get()
 					);
-					console.log(conf.mixer.mikrofone.length);
 
 					if (id === "0") {
 						mixerData.mixer.mikrofone[0].value = val;
@@ -167,7 +164,7 @@ $(function() {
 				}
 
 				$.snackbar({
-					content: "Das Mikrofon wurde stumm geschalten"
+					content: "Das Mikrofon wurde stumm geschalten."
 				});
 			} else {
 				$this.attr("data-state", "0");
@@ -181,22 +178,21 @@ $(function() {
 				}
 
 				$.snackbar({
-					content: "Das Mikrofon wurde freigegeben"
+					content: "Das Mikrofon wurde freigegeben."
 				});
 			}
 		}
 		send(mixerData);
 	}
 
-	//$(".mute").on("click", muteButton);
-
 	//Werte der Beamer Steuerung auslesen
 	function Beamer() {
-		var data = { beamer: {} };
+		let data = { beamer: {} };
+		let $this = $(this);
 		//Kontrollieren ob vom Typ Beamer
-		if ($(this).attr("data-type") == "beamer") {
+		if ($this.attr("data-type") == "beamer") {
 			//Power Knopf erkennen
-			if ($(this).attr("data-value") == "power") {
+			if ($this.attr("data-value") == "power") {
 				if (!on) {
 					on = true;
 					data.beamer.on = 1;
@@ -211,14 +207,14 @@ $(function() {
 					send(data);
 				}
 			} else {
-				console.log("Beamer - Value: " + $(this).attr("data-value"));
-				if ($(this).attr("data-value") == "src") {
+				console.log("Beamer - Value: " + $this.attr("data-value"));
+				if ($this.attr("data-value") == "src") {
 					data.beamer.source = 1;
 					conf.beamer.source = 1;
-				} else if ($(this).attr("data-value") == "freeze") {
+				} else if ($this.attr("data-value") == "freeze") {
 					data.beamer.freeze = 1;
 					conf.beamer.freeze = 1;
-				} else if ($(this).attr("data-value") == "blackout") {
+				} else if ($this.attr("data-value") == "blackout") {
 					data.beamer.blackout = 1;
 					conf.beamer.blackout = 1;
 				}
@@ -256,7 +252,7 @@ $(function() {
 				appendTo: "#avModes"
 			});
 		}
-		var slider = document.querySelector("#avSlider1");
+		let slider = document.querySelector("#avSlider1");
 		noUiSlider.create(slider, {
 			start: 0,
 			format: wNumb({
@@ -336,17 +332,12 @@ $(function() {
 		return true;
 	}
 
-	var selectMixerConf = () => {
-		console.log("selectMixerConf");
-	};
-
 	$("#savePreset").on("click", ev => {
 		ev.preventDefault();
 		console.log("Preset '" + $("#presetName").val() + "' speichern");
 		let name = $("#presetName").val();
 		currentConf.name = name;
 		currentConf.conf = conf;
-		currentConf.conf.scheinwerfer;
 
 		/*let data = new FormData();
 		data.append("jwt", jwt);
@@ -592,7 +583,6 @@ $(function() {
 				if ($("#mikrofonBox").parents(".flex-container").length == 1) {
 					$("#mikrofonBox").remove();
 				} else {
-					selectMixerConf();
 					$(".flex-container").append($("#mikroTemplate").html());
 					initSlider("#mikrofonBox");
 					$(".mute").on("click", muteButton);
@@ -628,7 +618,6 @@ $(function() {
 					$(".presentation").removeClass("flex");
 				} else {
 					$(".presentation").addClass("flex");
-					//getPresets(".presentation");
 				}
 				break;
 			case 1:
