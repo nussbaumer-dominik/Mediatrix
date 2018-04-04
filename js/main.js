@@ -331,7 +331,7 @@ $(function() {
 		return true;
 	}
 
-	var selectLichtConf = () => {
+	function selectLichtConf() {
 		console.log("selectLichtConf");
 		for (let i = 0; i < Object.keys(ini.ini.dmx).length; i++) {
 			var scheinwerfer = ini.ini.dmx["scheinwerfer" + i];
@@ -375,7 +375,7 @@ $(function() {
 			}
 		}
 		return true;
-	};
+	}
 
 	var selectMixerConf = () => {
 		console.log("selectMixerConf");

@@ -833,12 +833,12 @@ a {
 		}
 	}
 
-	#lichtSliderWrapper:nth-child(1),
-	#lichtSliderWrapper:nth-child(2) {
+	.lichtSliderWrapper:nth-child(1),
+	.lichtSliderWrapper:nth-child(2) {
 		margin-right: 25px;
 	}
 
-	#lichtWeissSliderWrapper {
+	.lichtWeissSliderWrapper {
 		margin-left: auto;
 	}
 
