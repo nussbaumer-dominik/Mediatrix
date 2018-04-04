@@ -158,7 +158,7 @@ $(function() {
 				console.log("jQuery mit Container\n");
 				console.log($(container));
 
-				$(container).each(function(key, value) {
+				$().each(container, function(key, value) {
 					console.log("Loope durch den Container \n");
 					console.log("Objekt" + this + " " + key + " " + value);
 				});
