@@ -504,14 +504,8 @@ $(function() {
 		for (item of items) {
 			console.log("iterieren über items des liveStatus");
 			console.log(item);
-			/*let value = $(item)
-				.children()
-				.find(".value");*/
-			console.log(
-				$(item)
-					.children()
-					.find(".value")
-			);
+			let value = $(item).children();
+			console.log(value[1]);
 
 			/*if (value !== live[counter]) {
 
