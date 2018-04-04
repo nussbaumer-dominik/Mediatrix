@@ -153,6 +153,9 @@ $(function() {
 				console.log(sliderWrapper);
 				let container = $(sliderWrapper).parent();
 				console.log("Der Container ist: ");*/
+				console.log("ohne jQuery\n");
+				console.log(container);
+				console.log("jQuery mit Container\n");
 				console.log($(container));
 
 				$(container).each(function(key, value) {
