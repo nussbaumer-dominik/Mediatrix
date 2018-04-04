@@ -47,6 +47,7 @@ $(function() {
 		} else {
 			console.log("message: " + event.data);
 			//$(".statusGrid").empty();
+			console.log(event.data.live);
 			liveStatus(event.data.live);
 		}
 	};
