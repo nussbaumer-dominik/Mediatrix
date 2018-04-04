@@ -142,6 +142,11 @@ class AV
 
         $timesSent = intval($times);
 
+        var_dump($code);
+
+        var_dump($times);
+        var_dump($timesSent);
+
         //send IR code
         $r = json_decode(str_replace("'",'"',$this->ir->send($code,abs($timesSent))));
 
@@ -192,8 +197,6 @@ class AV
         $code = $next['lastSendA'] ? $next['b']:$next['a'];
 
         $this->sources[$index]['lastSendA'] = !$this->sources[$index]['lastSendA'];
-
-        var_dump($code);
 
         //send IR code
         $r = json_decode(str_replace("'",'"',$this->ir->send($code,5)));
