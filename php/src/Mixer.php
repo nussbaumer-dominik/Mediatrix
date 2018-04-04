@@ -46,7 +46,8 @@ class Mixer {
 	public function mute($mute, $channel) {
 		echo $mute . "\n";
 		try {
-			echo "im Try Block der Mute-Funktion gelandet";
+			echo "im Try Block der Mute-Funktion gelandet \n";
+			echo $this->command . $channel . ".mute^" . $mute;
 			$this->mixer->send($this->command . $channel . ".mute^" . $mute);
 			return array("success" => true, "err" => "");
 		} catch(Exception $ex) {
