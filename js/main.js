@@ -190,7 +190,7 @@ $(function() {
 				$this.attr("data-state", "0");
 
 				if (id === "0") {
-					mixerData.mixer.mikrofone[0].mute = 1;
+					mixerData.mixer.mikrofone[0].mute = 0;
 					conf.mixer.mikrofone[0].mute = 0;
 				} else if (id === "1") {
 					mixerData.mixer.mikrofone[1].mute = 0;
