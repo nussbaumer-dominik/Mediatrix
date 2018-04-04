@@ -437,7 +437,7 @@ $(function() {
 			if (presets[i].conf.dmx) {
 				div.append(
 					"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
-						presets[i].conf.dmx.length +
+						presets[i].conf.dmx.id +
 						"</h3> </div>"
 				);
 			}
