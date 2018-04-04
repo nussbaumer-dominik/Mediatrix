@@ -71,7 +71,7 @@ $(function() {
 					"Dieser Slider ist von einem AV-Receiver: " +
 						slider.target.getAttribute("data-type")
 				);
-				var avdata = {
+				let avdata = {
 					av: {
 						value: slider.get(),
 						channel: slider.target.getAttribute("data-id")
