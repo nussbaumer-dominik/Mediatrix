@@ -117,6 +117,8 @@ class Application implements MessageComponentInterface
 
                     foreach ($commands['mixer']['mikrofone'] as $val){
 
+                        var_dump($val);
+
                         if(isset($val['mute']) && !(is_null($this->mikrofone[$val['id']]))){
                             $r = $this->mikrofone[$val['id']]->mute(1);
                             $r['success'] ?: array_push($result, $r);

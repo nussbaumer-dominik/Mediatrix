@@ -88,12 +88,12 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+            <state relative-caret-position="324">
+              <caret line="119" column="39" lean-forward="false" selection-start-line="119" selection-start-column="39" selection-end-line="119" selection-end-column="39" />
               <folding>
                 <element signature="e#639#1153#0#PHP" expanded="false" />
-                <marker date="1522839076732" expanded="true" signature="13290:13330" ph="SELECT * FRO... preset" />
-                <marker date="1522839076732" expanded="true" signature="14055:14097" ph="SELECT isext... user" />
+                <marker date="1522839201885" expanded="true" signature="13331:13371" ph="SELECT * FRO... preset" />
+                <marker date="1522839201885" expanded="true" signature="14096:14138" ph="SELECT isext... user" />
               </folding>
             </state>
           </provider>
@@ -970,14 +970,7 @@
       <workItem from="1522687387850" duration="11123000" />
       <workItem from="1522712870194" duration="3386000" />
       <workItem from="1522788321987" duration="13000" />
-      <workItem from="1522834792299" duration="946000" />
-    </task>
-    <task id="LOCAL-00202" summary="python dev">
-      <created>1522396738460</created>
-      <option name="number" value="00202" />
-      <option name="presentableId" value="LOCAL-00202" />
-      <option name="project" value="LOCAL" />
-      <updated>1522396738460</updated>
+      <workItem from="1522834792299" duration="1072000" />
     </task>
     <task id="LOCAL-00203" summary="python dev">
       <created>1522397087218</created>
@@ -1315,14 +1308,22 @@
       <option name="project" value="LOCAL" />
       <updated>1522698619235</updated>
     </task>
-    <option name="localTasksCounter" value="251" />
+    <task id="LOCAL-00251" summary="debug mixer mute">
+      <created>1522839113819</created>
+      <option name="number" value="00251" />
+      <option name="presentableId" value="LOCAL-00251" />
+      <option name="project" value="LOCAL" />
+      <updated>1522839113819</updated>
+    </task>
+    <option name="localTasksCounter" value="252" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198110000" />
+    <option name="totallyTimeSpent" value="198236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11182519" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1330,7 +1331,7 @@
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2782258" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2782258" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3729097" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1417,7 +1418,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix AV" />
     <MESSAGE value="remove var_dump" />
     <MESSAGE value="comment things in Mixer" />
     <MESSAGE value="debug main.js" />
@@ -1442,7 +1442,8 @@
     <MESSAGE value="change high to low" />
     <MESSAGE value="debug python" />
     <MESSAGE value="fix python" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix python" />
+    <MESSAGE value="debug mixer mute" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug mixer mute" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1773,12 +1774,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+        <state relative-caret-position="324">
+          <caret line="119" column="39" lean-forward="false" selection-start-line="119" selection-start-column="39" selection-end-line="119" selection-end-column="39" />
           <folding>
             <element signature="e#639#1153#0#PHP" expanded="false" />
-            <marker date="1522839076732" expanded="true" signature="13290:13330" ph="SELECT * FRO... preset" />
-            <marker date="1522839076732" expanded="true" signature="14055:14097" ph="SELECT isext... user" />
+            <marker date="1522839201885" expanded="true" signature="13331:13371" ph="SELECT * FRO... preset" />
+            <marker date="1522839201885" expanded="true" signature="14096:14138" ph="SELECT isext... user" />
           </folding>
         </state>
       </provider>
