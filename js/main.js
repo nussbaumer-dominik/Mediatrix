@@ -384,7 +384,8 @@ $(function() {
 	function addPreset(data) {
 		console.log(data);
 		var div = $("<div/>", {
-			class: "preset"
+			class: "preset",
+			click: selectPreset
 		}).attr("data-preset", presetStart);
 		div.append("<h2>" + data.name + "</h2>");
 		if (data.conf.dmx) {
@@ -426,7 +427,7 @@ $(function() {
 		}
 		$(".presentation").append(div);
 		presetStart++;
-		$(".preset").on("click", selectPreset);
+		//$(".preset").on("click", selectPreset);
 	}
 
 	var getPresets = () => {
@@ -475,7 +476,7 @@ $(function() {
 		$(".preset").on("click", selectPreset);
 	};
 
-	function selectPreset(data) {
+	function selectPreset() {
 		console.log(presets);
 		send(presets[parseInt($(this).attr("data-preset"))].conf);
 	}
@@ -502,10 +503,15 @@ $(function() {
 		console.log(live);
 		let counter = 0;
 		for (item of items) {
-			console.log("iterieren über items des liveStatus");
-			console.log(item);
 			let value = $(item).children();
 			console.log(value[1]);
+			if (value[0].innerText == "Master") {
+				console.log(value[1].innerText);
+			} else if (value[0].innerText == "Scheinwerfer") {
+				console.log(value[1].innerText);
+			} else if (value[0].innerText == "Beamer") {
+				console.log(value[1].innerText);
+			}
 
 			/*if (value !== live[counter]) {
 
@@ -535,14 +541,7 @@ $(function() {
 
 	function buildStatus(key, value, unit) {
 		var div = $("<div>");
-		div.append(
-			"<span>" +
-				key +
-				"</span><span class='value'>" +
-				value +
-				unit +
-				"</span>"
-		);
+		div.append("<span>" + key + "</span><span>" + value + unit + "</span>");
 		$(".statusGrid").append(div);
 	}
 
