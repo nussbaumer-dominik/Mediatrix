@@ -168,6 +168,8 @@ class AV
 
         $this->presets[$preset]['lastSendA'] = !$this->presets[$preset]['lastSendA'];
 
+        var_dump($code);
+
         //send IR code
         return json_decode(str_replace("'",'"',$this->ir->send($code,5)));
 

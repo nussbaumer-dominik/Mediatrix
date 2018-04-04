@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
+      <change beforePath="$PROJECT_DIR$/php/src/AV.php" afterPath="$PROJECT_DIR$/php/src/AV.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AV.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AV.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/AV.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="142" column="36" lean-forward="false" selection-start-line="142" selection-start-column="36" selection-end-line="142" selection-end-column="36" />
+            <state relative-caret-position="-54">
+              <caret line="170" column="24" lean-forward="false" selection-start-line="170" selection-start-column="24" selection-end-line="170" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -85,7 +85,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
@@ -178,9 +178,9 @@
         <option value="$PROJECT_DIR$/php/src/readCode.php" />
         <option value="$PROJECT_DIR$/conf/Mediatrix.json" />
         <option value="$PROJECT_DIR$/php/src/MyIoServer.php" />
-        <option value="$PROJECT_DIR$/php/src/AV.php" />
         <option value="$PROJECT_DIR$/php/src/Beamer.php" />
         <option value="$PROJECT_DIR$/php/src/Application.php" />
+        <option value="$PROJECT_DIR$/php/src/AV.php" />
       </list>
     </option>
   </component>
@@ -996,14 +996,7 @@
       <workItem from="1522687387850" duration="11123000" />
       <workItem from="1522712870194" duration="3386000" />
       <workItem from="1522788321987" duration="13000" />
-      <workItem from="1522834792299" duration="13424000" />
-    </task>
-    <task id="LOCAL-00221" summary="python dev">
-      <created>1522673999503</created>
-      <option name="number" value="00221" />
-      <option name="presentableId" value="LOCAL-00221" />
-      <option name="project" value="LOCAL" />
-      <updated>1522673999503</updated>
+      <workItem from="1522834792299" duration="13819000" />
     </task>
     <task id="LOCAL-00222" summary="python dev">
       <created>1522674073134</created>
@@ -1341,11 +1334,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522858733890</updated>
     </task>
-    <option name="localTasksCounter" value="270" />
+    <task id="LOCAL-00270" summary="debug">
+      <created>1522858871896</created>
+      <option name="number" value="00270" />
+      <option name="presentableId" value="LOCAL-00270" />
+      <option name="project" value="LOCAL" />
+      <updated>1522858871896</updated>
+    </task>
+    <option name="localTasksCounter" value="271" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210588000" />
+    <option name="totallyTimeSpent" value="210983000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1802,14 +1802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/AV.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="142" column="36" lean-forward="false" selection-start-line="142" selection-start-column="36" selection-end-line="142" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
@@ -1827,6 +1819,14 @@
             <marker date="1522858860019" expanded="true" signature="13394:13434" ph="SELECT * FRO... preset" />
             <marker date="1522858860019" expanded="true" signature="14159:14201" ph="SELECT isext... user" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/AV.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-54">
+          <caret line="170" column="24" lean-forward="false" selection-start-line="170" selection-start-column="24" selection-end-line="170" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
