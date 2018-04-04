@@ -278,47 +278,78 @@
       <h1>Scheinwerfer {:lightNumber}</h1>
       <div class="flex-wrapper space-between">
         <!-- Licht Slider 1 -->
-        <div id="lichtSliderWrapper">
-          <div class="slider" id="lichtSlider1" data-type="rgbw" data-col="r" data-id="{:id}"></div>
-          <div class="valueField" id="lichtSlider1Value">0</div>
+        <div class="lichtSliderWrapper">
+          <div class="slider" data-type="rgbw" data-col="r" data-id="{:id}" data-val="0"></div>
+          <div class="valueField">0</div>
           <div class="textField">Rot</div>
         </div>
 
         <!-- Licht Slider 2 -->
-        <div id="lichtSliderWrapper">
-          <div class="slider" id="lichtSlider2" data-type="rgbw" data-col="g" data-id="{:id}"></div>
-          <div class="valueField" id="lichtSlider2Value">0</div>
+        <div class="lichtSliderWrapper">
+          <div class="slider" data-type="rgbw" data-col="g" data-id="{:id}" data-val="0"></div>
+          <div class="valueField">0</div>
           <div class="textField">Grün</div>
         </div>
 
         <!-- Licht Slider 3 -->
-        <div id="lichtSliderWrapper">
-          <div class="slider" id="lichtSlider3" data-type="rgbw" data-col="b" data-id="{:id}"></div>
-          <div class="valueField" id="lichtSlider3Value">0</div>
+        <div class="lichtSliderWrapper">
+          <div class="slider" data-type="rgbw" data-col="b" data-id="{:id}" data-val="0"></div>
+          <div class="valueField">0</div>
           <div class="textField">Blau</div>
         </div>
 
         <!-- Licht Helligkeit Slider -->
-        <div id="lichtWeissSliderWrapper">
-          <div class="slider" id="lichtWeissSlider" data-type="rgbw" data-col="w" data-id="{:id}"></div>
+        <div class="lichtWeissSliderWrapper">
+          <div class="slider" data-type="rgbw" data-col="w" data-id="{:id}" data-val="0"></div>
           <div class="blackout"></div>
-          <div class="valueField" id="lichtWeissSliderValue">0</div>
+          <div class="valueField">0</div>
           <div class="textField">Weiß</div>
         </div>
       </div>
     </div>
   </script>
 
-  <!-- Licht -->
+  <!-- Licht Box -->
+  <!-- Hue -->
   <script type="text/template" class="template" id="hueTemplate">
     <div class="box lichtBox" data-box="4">
       <h1>Scheinwerfer {:lightNumber}</h1>
       <div class="flex-wrapper space-between">
         <!-- Licht Slider 1 -->
         <div id="lichtSlider1Wrapper">
-          <div class="slider" id="lichtSlider1" data-type="hue" data-id="{:id}"></div>
-          <div class="valueField" id="lichtSlider1Value">0</div>
+          <div class="slider" data-type="hue" data-id="{:id}"></div>
+          <div class="valueField">0</div>
           <div class="textField">Helligkeit</div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <!-- Licht Box -->
+  <!-- Rgb -->
+  <script type="text/template" class="template" id="rgbTemplate">
+    <div class="box lichtBox" data-box="4">
+      <h1>Scheinwerfer {:lightNumber}</h1>
+      <div class="flex-wrapper space-between">
+        <!-- Licht Slider 1 -->
+        <div class="lichtSliderWrapper">
+          <div class="slider" data-type="rgb" data-col="r" data-id="{:id}" data-val="0"></div>
+          <div class="valueField">0</div>
+          <div class="textField">Rot</div>
+        </div>
+
+        <!-- Licht Slider 2 -->
+        <div class="lichtSliderWrapper">
+          <div class="slider" data-type="rgb" data-col="g" data-id="{:id}" data-val="0"></div>
+          <div class="valueField">0</div>
+          <div class="textField">Grün</div>
+        </div>
+
+        <!-- Licht Slider 3 -->
+        <div class="lichtSliderWrapper">
+          <div class="slider" data-type="rgb" data-col="b" data-id="{:id}" data-val="0"></div>
+          <div class="valueField">0</div>
+          <div class="textField">Blau</div>
         </div>
       </div>
     </div>
@@ -326,10 +357,8 @@
 
   <!-- jQuery -->
   <script src="js/jquery-3.2.1.min.js"></script>
-  <!--<script src="js/rangeslider.js"></script>-->
   <script src="js/nouislider.min.js"></script>
   <script src="js/snackbar.js"></script>
-  <!--<script src="js/functions.js"></script>-->
   <script src="js/main.js"></script>
   <script src="js/themes.js"></script>
   <script src=js/wNumb.js></script>

@@ -71,7 +71,7 @@ $(function() {
 					"Dieser Slider ist von einem AV-Receiver: " +
 						slider.target.getAttribute("data-type")
 				);
-				var avdata = {
+				let avdata = {
 					av: {
 						value: slider.get(),
 						channel: slider.target.getAttribute("data-id")
@@ -144,6 +144,43 @@ $(function() {
 						" " +
 						slider.get()
 				);
+
+				let sliderWrapper = $(slider).parent();
+				let container = $(sliderWrapper).parent();
+				console.log("Der Container ist: ");
+				console.log(container);
+
+				$(container).each(function(key, value) {
+					console.log("Loope durch den Container \n");
+					console.log("Objekt" + this + " " + key + " " + value);
+				});
+
+				/*var rgbwdata = {
+					dmx: {
+						scheinwerfer: {
+							id: slider.target.getAttribute("data-id"),
+							[slider.target.getAttribute(
+								"data-col"
+							)]: slider.get()
+						}
+					}
+				};
+				conf.dmx.scheinwerfer.id = slider.target.getAttribute(
+					"data-id"
+				);
+				conf.dmx.scheinwerfer[
+					slider.target.getAttribute("data-col")
+				] = slider.get();
+				send(rgbwdata);*/
+				break;
+			case "rgb":
+				console.log(
+					"Dieser Slider ist von einem DMX Gerät: " +
+						"Id: " +
+						slider.target.getAttribute("data-id") +
+						" " +
+						slider.get()
+				);
 				var rgbwdata = {
 					dmx: {
 						scheinwerfer: {
@@ -166,7 +203,7 @@ $(function() {
 	}
 
 	function muteButton() {
-		var $this = $(this);
+		let $this = $(this);
 		let id = $this.attr("data-id");
 		console.log(id);
 
@@ -190,7 +227,7 @@ $(function() {
 				$this.attr("data-state", "0");
 
 				if (id === "0") {
-					mixerData.mixer.mikrofone[0].mute = 1;
+					mixerData.mixer.mikrofone[0].mute = 0;
 					conf.mixer.mikrofone[0].mute = 0;
 				} else if (id === "1") {
 					mixerData.mixer.mikrofone[1].mute = 0;
@@ -246,18 +283,20 @@ $(function() {
 
 	//Werte der Modi des AV-Receivers auslesen
 	function Buttons() {
-		let data = { av: { mode: "" } };
-		if ($(this).attr("data-type") == "av") {
+		let $this = $(this);
+		let avdata = { av: { mode: "" } };
+		if ($this.attr("data-type") == "av") {
 			console.log(
 				"Data-type=" +
-					$(this).attr("data-type") +
+					$this.attr("data-type") +
 					" Value: " +
-					$(this).html()
+					$this.html()
 			);
-			data.av.mode = $(this).html();
-			conf.av.mode = $(this).html();
-			console.log(data);
+			avdata.av.mode = $this.html();
+			conf.av.mode = $this.html();
+			console.log(avdata);
 		}
+		send(avdata);
 	}
 
 	function selectAvConf() {
@@ -294,7 +333,7 @@ $(function() {
 		return true;
 	}
 
-	var selectLichtConf = () => {
+	function selectLichtConf() {
 		console.log("selectLichtConf");
 		for (let i = 0; i < Object.keys(ini.ini.dmx).length; i++) {
 			var scheinwerfer = ini.ini.dmx["scheinwerfer" + i];
@@ -322,10 +361,23 @@ $(function() {
 				}
 				t = t.replace(/{:lightNumber}/, scheinwerfer.id + 1);
 				$(".flex-container").append(t);
+			} else if (scheinwerfer.numberChannels == "3") {
+				var t = document.querySelector("#rgbTemplate").innerHTML;
+
+				for (
+					let j = 0;
+					j < parseInt(scheinwerfer.numberChannels);
+					j++
+				) {
+					t = t.replace(/{:id}/, scheinwerfer.id + 1);
+				}
+
+				t = t.replace(/{:lightNumber}/, scheinwerfer.id + 1);
+				$(".flex-container").append(t);
 			}
 		}
 		return true;
-	};
+	}
 
 	var selectMixerConf = () => {
 		console.log("selectMixerConf");
