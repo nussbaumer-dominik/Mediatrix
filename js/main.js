@@ -493,23 +493,29 @@ $(function() {
 		let items = $(".statusGrid").contents();
 		console.log(items);
 		console.log(live);
-		let counter = 0;
+
 		for (item of items) {
 			let value = $(item).children();
 			console.log(value[1]);
+			console.log(value[1].innerHTML);
 			if (value[0].innerText == "Master") {
 				console.log(value[1].innerText);
-				let newMaster;
+				let Master;
 				if (value[1].innerText.length == 3) {
-					newMaster = value[1].innerText.substring(0, 1);
+					Master = value[1].innerText.substring(0, 1);
 				} else if (value[1].innerText.length == 4) {
-					newMaster = value[1].innerText.substring(0, 2);
+					Master = value[1].innerText.substring(0, 2);
 				} else if (value[1].innerText.length == 5) {
-					newMaster = value[1].innerText.substring(0, 3);
+					Master = value[1].innerText.substring(0, 3);
 				}
-				console.log(newMaster);
-				if (parseInt(newMaster) != live.av.volume) {
-					updateStatus("Master", newMaster, "dB", "avStatus");
+				console.log(Master);
+				if (parseInt(Master) != live.av.volume) {
+					item.innerHTML = updateStatus(
+						"Master",
+						live.av.volume,
+						"dB",
+						"avStatus"
+					);
 				}
 			} else if (value[0].innerText == "Scheinwerfer") {
 				console.log(value[1].innerText);
@@ -546,13 +552,6 @@ $(function() {
 	};
 
 	function buildStatus(key, value, unit, id) {
-		var div = $("<div id='" + id + "'>");
-		div.append("<span>" + key + "</span><span>" + value + unit + "</span>");
-		$(".statusGrid").append(div);
-	}
-
-	function updateStatus(key, value, unit, id) {
-		$(".statusGrid").remove("#" + id);
 		var div = $("<div id='" + id + "'>");
 		div.append("<span>" + key + "</span><span>" + value + unit + "</span>");
 		$(".statusGrid").append(div);
