@@ -337,7 +337,7 @@ $(function() {
 					j < parseInt(scheinwerferObj.numberChannels);
 					j++
 				) {
-					t = t.replace(/{:id}/, scheinwerferObj.id + 1);
+					t = t.replace(/{:id}/, scheinwerferObj.id);
 				}
 
 				t = t.replace(/{:lightNumber}/, scheinwerferObj.id + 1);
@@ -369,7 +369,7 @@ $(function() {
 					j < parseInt(scheinwerferObj.numberChannels);
 					j++
 				) {
-					t = t.replace(/{:id}/, scheinwerferObj.id + 1);
+					t = t.replace(/{:id}/, scheinwerferObj.id);
 				}
 
 				t = t.replace(/{:lightNumber}/, scheinwerferObj.id + 1);
