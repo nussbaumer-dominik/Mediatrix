@@ -8,7 +8,7 @@ $(function() {
 		currentConf = { name: "", conf: {} },
 		conf = {
 			av: {},
-			dmx: {},
+			dmx: { scheinwerfer: {} },
 			mixer: {
 				mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }]
 			},
