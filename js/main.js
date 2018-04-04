@@ -221,7 +221,7 @@ $(function() {
 						];
 				}
 				let sendObj = { dmx: {} };
-				sendObj[
+				sendObj.dmx[
 					"scheinwerfer" + slider.target.getAttribute("data-id")
 				] = obj;
 				conf.dmx[
