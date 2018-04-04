@@ -513,7 +513,7 @@ $(function() {
 				}
 			} else if (value[0].innerText == "Scheinwerfer") {
 				console.log(value[1].innerText);
-				if (value[1].innerText != live.dmx.scheinwerfer.length) {
+				if (value[1].innerText != live.dmx.length) {
 					updateStatus(
 						"Scheinwerfer",
 						live.dmx.scheinwerfer.length,
