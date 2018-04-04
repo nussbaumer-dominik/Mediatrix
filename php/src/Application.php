@@ -160,7 +160,7 @@ class Application implements MessageComponentInterface
                     }
 
                     if (isset($beamerCom['off'])) {
-                        $r = $this->beamer->off();
+                        $r = (object) $this->beamer->off();
                         $r->success ?: array_push($result, $r);
                     }
 
