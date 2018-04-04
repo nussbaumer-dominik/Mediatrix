@@ -114,7 +114,7 @@ $(function() {
 					send(mixerData);
 				}
 				break;
-			case "hue":
+			/*case "hue":
 				console.log(
 					"Dieser Slider ist von einem DMX Gerät: " +
 						"Id: " +
@@ -198,7 +198,7 @@ $(function() {
 				console.log(conf.dmx);
 				console.log(obj);
 				send(obj);
-				break;
+				break;*/
 			case "dmx":
 				console.log(
 					"Dieser Slider ist von einem DMX Gerät: " +
