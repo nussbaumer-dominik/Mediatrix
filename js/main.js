@@ -342,7 +342,7 @@ $(function() {
 		let preset = new FormData();
 		preset.append("jwt", jwt);
 		preset.append("name", name);
-		preset.append("conf", conf);
+		preset.append("conf", JSON.stringify(conf));
 		console.log(preset);
 
 		$.ajax({
