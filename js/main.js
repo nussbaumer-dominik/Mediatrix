@@ -45,10 +45,12 @@ $(function() {
 			getPresets();
 			toggleBase();
 		} else {
-			console.log("message: " + event.data);
+			let msg = event.data;
+			console.log("message: " + msg);
 			//$(".statusGrid").empty();
-			console.log(event.data.live);
-			liveStatus(event.data.live);
+			console.log(msg);
+			console.log(msg.live);
+			liveStatus(msg.live);
 		}
 	};
 
