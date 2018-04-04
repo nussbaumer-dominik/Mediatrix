@@ -246,7 +246,7 @@ $(function() {
 
 	//Werte der Modi des AV-Receivers auslesen
 	function Buttons() {
-		let data = { av: { mode: "" } };
+		let avdata = { av: { mode: "" } };
 		if ($(this).attr("data-type") == "av") {
 			console.log(
 				"Data-type=" +
@@ -256,8 +256,9 @@ $(function() {
 			);
 			data.av.mode = $(this).html();
 			conf.av.mode = $(this).html();
-			console.log(data);
+			console.log(avdata);
 		}
+		send(avdata);
 	}
 
 	function selectAvConf() {
