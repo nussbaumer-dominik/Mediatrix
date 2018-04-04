@@ -171,10 +171,11 @@ $(function() {
 		var $this = $(this);
 		let id = $this.attr("data-id");
 		console.log(id);
+
 		if ($this.attr("data-type") == "mixer") {
 			if ($this.attr("data-state") == "0") {
 				$this.attr("data-state", "1");
-
+				console.log(mixerData.mixer.mikrofone);
 				if (id === "0") {
 					console.log(mixerData.mixer.mikrofone);
 					mixerData.mixer.mikrofone[0].mute = 1;
@@ -187,12 +188,11 @@ $(function() {
 				$.snackbar({
 					content: "Das Mikrofon wurde stumm geschalten"
 				});
-				conf.mixer.mute = 1;
 			} else {
 				$this.attr("data-state", "0");
 
 				if (id === "0") {
-					mixerData.mixer.mikrofone[0].mute = 0;
+					mixerData.mixer.mikrofone[0].mute = 1;
 					conf.mixer.mikrofone[0].mute = 0;
 				} else if (id === "1") {
 					mixerData.mixer.mikrofone[1].mute = 0;
@@ -391,7 +391,9 @@ $(function() {
 		if (data.conf.dmx) {
 			//let count = Object.keys(data.conf.dmx).length;
 			let count = 0;
-			data.conf.dmx.find(el => {if(el.id) count++ })
+			data.conf.dmx.find(el => {
+				if (el.id) count++;
+			});
 			div.append(
 				"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
 					count +
