@@ -150,7 +150,7 @@ $(function() {
 				console.log("Der Container ist: ");
 				console.log(container);
 
-				$.each(function(key, value) {
+				$.each(container, function(key, value) {
 					console.log(this + " " + key + " " + value);
 				});
 
