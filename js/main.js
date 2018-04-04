@@ -147,7 +147,7 @@ $(function() {
 				);
 				scheinwerfer[slider.target.getAttribute("data-id")][
 					slider.target.getAttribute("data-col")
-				] = slider.get();
+				] = parseInt(slider.get());
 
 				let obj = { id: slider.target.getAttribute("data-id") };
 				for (farbe in scheinwerfer[
@@ -158,6 +158,10 @@ $(function() {
 							farbe
 						];
 				}
+				conf.dmx[
+					"scheinwerfer" + slider.target.getAttribute("data-id")
+				] = obj;
+				console.log(conf.dmx);
 				console.log(obj);
 
 				/*
@@ -393,6 +397,7 @@ $(function() {
 		let name = $("#presetName").val();
 		currentConf.name = name;
 		currentConf.conf = conf;
+		currentConf.conf.scheinwerfer;
 
 		/*let data = new FormData();
 		data.append("jwt", jwt);
