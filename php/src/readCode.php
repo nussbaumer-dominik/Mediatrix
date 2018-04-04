@@ -65,6 +65,7 @@ try {
     $possibleKeys['av']['presets'] = array_keys((array)$json->av->presets);
     $possibleKeys['av']['volume'] = array_keys((array)$json->av->volume);
     $possibleKeys['av']['sources'] = array_keys((array)$json->av->sources);
+    $possibleKeys['av']['sources'] = "power";
 
     array_push($possibleKeys['beamer'], "power");
     array_push($possibleKeys['beamer'], "freeze");
