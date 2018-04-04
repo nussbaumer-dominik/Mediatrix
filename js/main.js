@@ -499,6 +499,7 @@ $(function() {
 	var liveStatus = live => {
 		let items = $(".statusGrid").contents();
 		console.log(items);
+		console.log(live);
 		let counter = 0;
 		for (item of items) {
 			console.log("iterieren über items des liveStatus");
