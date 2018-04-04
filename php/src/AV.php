@@ -142,11 +142,6 @@ class AV
 
         $timesSent = intval($times);
 
-        var_dump($code);
-
-        var_dump($times);
-        var_dump($timesSent);
-
         //send IR code
         $r = json_decode(str_replace("'",'"',$this->ir->send($code,abs($timesSent))));
 
