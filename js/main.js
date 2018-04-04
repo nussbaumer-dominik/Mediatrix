@@ -145,11 +145,14 @@ $(function() {
 						slider.get()
 				);
 
-				console.log(slider);
+				let container = $(slider)
+					.closest("div")
+					.closest("div");
+				/*console.log(slider);
 				let sliderWrapper = $(slider).parent();
 				console.log(sliderWrapper);
 				let container = $(sliderWrapper).parent();
-				console.log("Der Container ist: ");
+				console.log("Der Container ist: ");*/
 				console.log($(container));
 
 				$(container).each(function(key, value) {
