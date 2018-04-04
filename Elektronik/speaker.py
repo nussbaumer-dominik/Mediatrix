@@ -48,7 +48,7 @@ def speakerOff():
 
 if __name__ == '__main__':
 
-    GPIO.output(rs, GPIO.LOW) # aus
+    GPIO.output(rs, GPIO.HIGH) # aus
 
     while True:
         if sstate == 0:
