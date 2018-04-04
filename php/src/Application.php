@@ -429,7 +429,7 @@ class Application implements MessageComponentInterface
 
         while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
             $hasResults = true;
-            array_push($presets, array('name' => $res['name'], 'conf' => $res['json']));
+            array_push($presets, array('name' => $res['name'], 'conf' => json_decode($res['json'])));
         }
 
         $presets = $hasResults? $presets:$this->defaultPresets;
