@@ -149,13 +149,17 @@ $(function() {
 					slider.target.getAttribute("data-col")
 				] = slider.get();
 
+				let obj = { id: slider.target.getAttribute("data-id") };
 				for (farbe in scheinwerfer[
 					slider.target.getAttribute("data-id")
 				]) {
 					console.log(farbe);
+					obj[farbe] =
+						scheinwerfer[slider.target.getAttribute("data-id")][
+							farbe
+						];
 				}
 
-				//let obj = { id: slider.target.getAttribute("data-id") };
 				/*
 				conf.dmx.scheinwerfer[
 					slider.target.getAttribute("data-col")
