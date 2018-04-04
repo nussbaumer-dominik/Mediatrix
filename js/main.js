@@ -254,7 +254,7 @@ $(function() {
 					" Value: " +
 					$(this).html()
 			);
-			data.av.mode = $(this).html();
+			avdata.av.mode = $(this).html();
 			conf.av.mode = $(this).html();
 			console.log(avdata);
 		}
