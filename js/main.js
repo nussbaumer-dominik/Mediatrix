@@ -166,7 +166,7 @@ $(function() {
 	}
 
 	function muteButton() {
-		var $this = $(this);
+		let $this = $(this);
 		let id = $this.attr("data-id");
 		console.log(id);
 
@@ -246,16 +246,17 @@ $(function() {
 
 	//Werte der Modi des AV-Receivers auslesen
 	function Buttons() {
+		let $this = $(this);
 		let avdata = { av: { mode: "" } };
-		if ($(this).attr("data-type") == "av") {
+		if ($this.attr("data-type") == "av") {
 			console.log(
 				"Data-type=" +
-					$(this).attr("data-type") +
+					$this.attr("data-type") +
 					" Value: " +
-					$(this).html()
+					$this.html()
 			);
-			avdata.av.mode = $(this).html();
-			conf.av.mode = $(this).html();
+			avdata.av.mode = $this.html();
+			conf.av.mode = $this.html();
 			console.log(avdata);
 		}
 		send(avdata);
