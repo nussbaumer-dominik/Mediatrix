@@ -170,12 +170,12 @@ class AV
 
         var_dump($code);
 
-        $test = $this->ir->send($code,5);
+        $test = json_decode(str_replace("'",'"',$this->ir->send($code,5)));;
 
         var_dump($test);
 
         //send IR code
-        return json_decode(str_replace("'",'"',$test));
+        return $test;
 
     }
 
