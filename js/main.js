@@ -220,12 +220,17 @@ $(function() {
 							farbe
 						];
 				}
+				let sendObj = { dmx: {} };
+				sendObj[
+					"scheinwerfer" + slider.target.getAttribute("data-id")
+				] = obj;
 				conf.dmx[
 					"scheinwerfer" + slider.target.getAttribute("data-id")
 				] = obj;
+
 				console.log(conf.dmx);
-				console.log(obj);
-				send(obj);
+				console.log(sendObj);
+				send(sendObj);
 				break;
 		}
 	}
