@@ -58,8 +58,8 @@
       <file leaf-file-name="Beamer.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="142" column="21" lean-forward="false" selection-start-line="142" selection-start-column="21" selection-end-line="142" selection-end-column="21" />
+            <state relative-caret-position="347">
+              <caret line="139" column="27" lean-forward="true" selection-start-line="139" selection-start-column="27" selection-end-line="139" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -128,6 +128,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -995,14 +996,7 @@
       <workItem from="1522687387850" duration="11123000" />
       <workItem from="1522712870194" duration="3386000" />
       <workItem from="1522788321987" duration="13000" />
-      <workItem from="1522834792299" duration="13165000" />
-    </task>
-    <task id="LOCAL-00219" summary="python dev">
-      <created>1522406008525</created>
-      <option name="number" value="00219" />
-      <option name="presentableId" value="LOCAL-00219" />
-      <option name="project" value="LOCAL" />
-      <updated>1522406008525</updated>
+      <workItem from="1522834792299" duration="13287000" />
     </task>
     <task id="LOCAL-00220" summary="python dev">
       <created>1522673472300</created>
@@ -1340,11 +1334,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522857073370</updated>
     </task>
-    <option name="localTasksCounter" value="268" />
+    <task id="LOCAL-00268" summary="debug">
+      <created>1522858610553</created>
+      <option name="number" value="00268" />
+      <option name="presentableId" value="LOCAL-00268" />
+      <option name="project" value="LOCAL" />
+      <updated>1522858610553</updated>
+    </task>
+    <option name="localTasksCounter" value="269" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210329000" />
+    <option name="totallyTimeSpent" value="210451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1823,8 +1824,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="142" column="21" lean-forward="false" selection-start-line="142" selection-start-column="21" selection-end-line="142" selection-end-column="21" />
+        <state relative-caret-position="347">
+          <caret line="139" column="27" lean-forward="true" selection-start-line="139" selection-start-column="27" selection-end-line="139" selection-end-column="27" />
           <folding />
         </state>
       </provider>

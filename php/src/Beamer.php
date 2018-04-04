@@ -120,7 +120,7 @@ class Beamer
 
         echo "Beamer off\n";
 
-        $erg = array("success"=>true,"err"=>"");
+        $erg = array(array("success"=>true,"err"=>""));
 
         for ($i = 0; $i< 2;$i++) {
             //get Code
