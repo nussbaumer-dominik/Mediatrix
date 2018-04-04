@@ -339,29 +339,22 @@ $(function() {
 		currentConf.name = name;
 		currentConf.conf = conf;
 
-		/*let data = new FormData();
-		data.append("jwt", jwt);
-		data.append("name", name);
-		data.append("conf", JSON.stringify(conf));
-		console.log(data);*/
+		let preset = new FormData();
+		preset.append("jwt", jwt);
+		preset.append("name", name);
+		preset.append("conf", JSON.stringify(conf));
+		console.log(preset);
 
-		let preset = {};
+		/*let preset = {};
 		preset.jwt = jwt;
 		preset.name = name;
-		preset.conf = conf;
-
-		$.snackbar({
-			content:
-				"Das Preset " +
-				$("#presetName").val() +
-				" wurde erfolgreich erstellt"
-		});
+		preset.conf = conf;*/
 
 		$.ajax({
 			url: "/Mediatrix/php/src/savePreset.php",
 			traditional: true,
 			method: "POST",
-			data: JSON.stringify(preset),
+			data: preset,
 			contentType: false,
 			processData: false,
 			xhrFields: {
@@ -374,6 +367,12 @@ $(function() {
 				console.log("success: " + data);
 				addPreset(currentConf);
 				presets.push(currentConf);
+				$.snackbar({
+					content:
+						"Das Preset " +
+						$("#presetName").val() +
+						" wurde erfolgreich erstellt"
+				});
 			})
 			.fail(data => {
 				console.log("error: ");
@@ -385,17 +384,15 @@ $(function() {
 		console.log(data);
 		var div = $("<div/>", {
 			class: "preset"
+			//click: selectPreset
 		}).attr("data-preset", presetStart);
 		div.append("<h2>" + data.name + "</h2>");
 		if (data.conf.dmx) {
 			//let count = Object.keys(data.conf.dmx).length;
-			let count = 0;
-			data.conf.dmx.find(el => {
-				if (el.id) count++;
-			});
+
 			div.append(
 				"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
-					count +
+					data.conf.dmx.length +
 					"</h3> </div>"
 			);
 		}
@@ -411,11 +408,15 @@ $(function() {
 			);
 		}
 		if (data.conf.beamer) {
-			div.append(
-				"<div> <i class='fas fa-video'> </i> <h3>" +
-					data.conf.beamer.source +
-					"</h3> </div>"
-			);
+			if (data.conf.beamer.on) {
+				div.append(
+					"<div> <i class='fas fa-video'> </i> <h3>ein</h3> </div>"
+				);
+			} else {
+				div.append(
+					"<div> <i class='fas fa-video'> </i> <h3>aus</h3> </div>"
+				);
+			}
 		}
 		if (data.conf.mixer) {
 			div.append(
@@ -475,24 +476,24 @@ $(function() {
 		$(".preset").on("click", selectPreset);
 	};
 
-	function selectPreset(data) {
+	function selectPreset() {
 		console.log(presets);
 		send(presets[parseInt($(this).attr("data-preset"))].conf);
 	}
 
 	var firstLiveStatus = () => {
 		if (ini.live.av.volume) {
-			buildStatus("Master", ini.live.av.volume, "dB");
+			buildStatus("Master", ini.live.av.volume, "dB", "avStatus");
 		} else if (ini.live.beamer.on) {
 			if (ini.live.beamer.on) {
-				buildStatus("Beamer", "aus", "dB");
+				buildStatus("Beamer", "aus", "dB", "beamerStatus");
 			} else {
-				buildStatus("Beamer", "ein", "dB");
+				buildStatus("Beamer", "ein", "dB", "beamerStatus");
 			}
 		}
 		if (ini.live.dmx) {
 			console.log(ini.live.dmx);
-			buildStatus("Scheinwerfer", ini.live.dmx.length, "");
+			buildStatus("Scheinwerfer", ini.live.dmx.length, "", "dmxStatus");
 		}
 	};
 
@@ -502,51 +503,68 @@ $(function() {
 		console.log(live);
 		let counter = 0;
 		for (item of items) {
-			console.log("iterieren über items des liveStatus");
-			console.log(item);
 			let value = $(item).children();
 			console.log(value[1]);
-
-			/*if (value !== live[counter]) {
-
-			}*/
-		}
-		/*if (live.av.volume) {
-			updateStatus("Master", live.av.volume, "dB");
-		}
-		if (live.beamer.on) {
-			if (live.beamer.on) {
-				updateStatus("Beamer", "aus", "dB");
-			} else {
-				updateStatus("Beamer", "ein", "dB");
+			if (value[0].innerText == "Master") {
+				console.log(value[1].innerText);
+				let newMaster;
+				if (value[1].innerText.length == 3) {
+					newMaster = value[1].innerText.substring(3, 1);
+				} else if (value[1].innerText.length == 4) {
+					newMaster = value[1].innerText.substring(4, 2);
+				} else if (value[1].innerText.length == 5) {
+					newMaster = value[1].innerText.substring(5, 3);
+				}
+				console.log(newMaster);
+				if (parseInt(newMaster) != live.av.volume) {
+					updateStatus("Master", newMaster, "dB", "avStatus");
+				}
+			} else if (value[0].innerText == "Scheinwerfer") {
+				console.log(value[1].innerText);
+				if (value[1].innerText != live.dmx.scheinwerfer.length) {
+					updateStatus(
+						"Scheinwerfer",
+						live.dmx.scheinwerfer.length,
+						"",
+						"dmxStatus"
+					);
+				}
+			} else if (value[0].innerText == "Beamer") {
+				console.log(value[1].innerText);
+				let active = live.beamer.on;
+				let current = false;
+				value[1].innerText == "ein"
+					? (current = true)
+					: (current = false);
+				if (active != current) {
+					if (current) {
+						updateStatus("Beamer", "ein", "", "beamerStatus");
+					} else {
+						updateStatus("Beamer", "aus", "", "beamerStatus");
+					}
+				}
 			}
 		}
-		if (live.dmx) {
-			console.log(live.dmx);
-			updateStatus("Scheinwerfer", live.dmx.length, "");
-		}*/
 	};
 
-	var updateSliders = (key, value, unit) => {
+	var updateSliders = () => {
 		setSlider("avSlider1", ini.live.av.volume);
 		document.getElementById("avSlider1Value").innerHTML =
 			ini.live.av.volume;
 	};
 
-	function buildStatus(key, value, unit) {
-		var div = $("<div>");
-		div.append(
-			"<span>" +
-				key +
-				"</span><span class='value'>" +
-				value +
-				unit +
-				"</span>"
-		);
+	function buildStatus(key, value, unit, id) {
+		var div = $("<div id='" + id + "'>");
+		div.append("<span>" + key + "</span><span>" + value + unit + "</span>");
 		$(".statusGrid").append(div);
 	}
 
-	function updateStatus() {}
+	function updateStatus(key, value, unit, id) {
+		$(".statusGrid").remove(id);
+		var div = $("<div id='" + id + "'>");
+		div.append("<span>" + key + "</span><span>" + value + unit + "</span>");
+		$(".statusGrid").append(div);
+	}
 
 	$(".tgl").on("click", () => {
 		var mode = $(".tgl").prop("checked");
