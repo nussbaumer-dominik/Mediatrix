@@ -45,7 +45,7 @@ $(function() {
 			getPresets();
 			toggleBase();
 		} else {
-			console.log("message: " + event.data);
+			console.log("message: " + event.data + "\n");
 			//$(".statusGrid").empty();
 			console.log(event.data.live);
 			liveStatus(event.data.live);
