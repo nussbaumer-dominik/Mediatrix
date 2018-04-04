@@ -155,7 +155,7 @@ $(function() {
 					console.log("Objekt" + this + " " + key + " " + value);
 				});
 
-				var rgbwdata = {
+				/*var rgbwdata = {
 					dmx: {
 						scheinwerfer: {
 							id: slider.target.getAttribute("data-id"),
@@ -171,7 +171,7 @@ $(function() {
 				conf.dmx.scheinwerfer[
 					slider.target.getAttribute("data-col")
 				] = slider.get();
-				send(rgbwdata);
+				send(rgbwdata);*/
 				break;
 			case "rgb":
 				console.log(
