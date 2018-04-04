@@ -161,6 +161,8 @@ class AV
             $this->on();
         }
 
+        echo "set preset";
+
         //get Code
         $code = $this->presets[$preset]['lastSendA'] ? $this->presets[$preset]['b']:$this->presets[$preset]['a'];
 
