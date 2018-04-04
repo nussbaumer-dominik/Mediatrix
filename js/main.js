@@ -150,8 +150,9 @@ $(function() {
 				console.log("Der Container ist: ");
 				console.log(container);
 
-				$.each(container, function(key, value) {
-					console.log(this + " " + key + " " + value);
+				$(container).each(function(key, value) {
+					console.log("Loope durch den Container \n");
+					console.log("Objekt" + this + " " + key + " " + value);
 				});
 
 				var rgbwdata = {
