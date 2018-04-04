@@ -46,7 +46,7 @@ $(function() {
 			toggleBase();
 		} else {
 			console.log("message: " + event.data);
-			$(".statusGrid").empty();
+			//$(".statusGrid").empty();
 			liveStatus(event.data.live);
 		}
 	};
@@ -492,7 +492,7 @@ $(function() {
 		}
 		if (ini.live.dmx) {
 			console.log(ini.live.dmx);
-			buildStatus("Helligkeit", ini.live.dmx.length, "");
+			buildStatus("Scheinwerfer", ini.live.dmx.length, "");
 		}
 	};
 
@@ -515,7 +515,7 @@ $(function() {
 		}
 		if (live.dmx) {
 			console.log(live.dmx);
-			updateStatus("Helligkeit", live.dmx.length, "");
+			updateStatus("Scheinwerfer", live.dmx.length, "");
 		}*/
 	};
 
