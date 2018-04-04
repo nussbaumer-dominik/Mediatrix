@@ -120,16 +120,27 @@ class Beamer
 
         echo "Beamer off\n";
 
-        $erg = $this->on();
+        $erg = array(array("success"=>true,"err"=>""));
 
-        $r = $this->on();
-        if(!$r->success){
-            $erg = $r;
+        for ($i = 0; $i< 2;$i++) {
+            //get Code
+            $code = $this->powerCode['lastSendA'] ? $this->powerCode['b'] : $this->powerCode['a'];
+
+            $this->powerCode['lastSendA'] = !$this->powerCode['lastSendA'];
+
+            //send IR code
+            $r = json_decode(str_replace("'", '"', $this->ir->send($code, 5)));
+
+            if (!$r->success) {
+                array_push($erg, $r);
+            }
         }
 
-        $this->isOn = !$erg->success;
+        if(count($erg) > 1){
+            unset($erg[0]);
+        }
 
-        return $erg;
+        return $erg[0];
 
     }
 
