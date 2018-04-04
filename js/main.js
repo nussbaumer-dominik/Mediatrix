@@ -483,6 +483,12 @@ $(function() {
 	var liveStatus = () => {
 		if (ini.live.av.volume) {
 			buildStatus("Master", ini.live.av.volume, "dB");
+		} else if (ini.live.beamer.on) {
+			if (ini.live.beamer.on) {
+				buildStatus("Beamer", "aus", "dB");
+			} else {
+				buildStatus("Beamer", "ein", "dB");
+			}
 		}
 		if (ini.live.dmx) {
 			console.log(ini.live.dmx);
