@@ -507,6 +507,15 @@ $(function() {
 			console.log(value[1]);
 			if (value[0].innerText == "Master") {
 				console.log(value[1].innerText);
+				let newMaster;
+				if (value[1].innerText.length == 3) {
+					newMaster = value[1].innerText.substring(3, 1);
+				} else if (value[1].innerText.length == 4) {
+					newMaster = value[1].innerText.substring(4, 2);
+				} else if (value[1].innerText.length == 5) {
+					newMaster = value[1].innerText.substring(5, 3);
+				}
+				console.log(newMaster);
 			} else if (value[0].innerText == "Scheinwerfer") {
 				console.log(value[1].innerText);
 			} else if (value[0].innerText == "Beamer") {
