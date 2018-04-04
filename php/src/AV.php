@@ -193,6 +193,8 @@ class AV
 
         $this->sources[$index]['lastSendA'] = !$this->sources[$index]['lastSendA'];
 
+        var_dump($code);
+
         //send IR code
         $r = json_decode(str_replace("'",'"',$this->ir->send($code,5)));
 
