@@ -18,6 +18,7 @@ $(function() {
 	var mixerData = {
 		mixer: { mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }] }
 	};
+	var scheinwerfer = {};
 	var socket = new WebSocket("wss://10.0.0.85/wss");
 	//var socket = new WebSocket("wss://10.0.0.144/wss");
 
@@ -144,22 +145,17 @@ $(function() {
 						" " +
 						slider.get()
 				);
+				scheinwerfer[slider.target.getAttribute("data-id")][
+					slider.target.getAttribute("data-col")
+				] = slider.get();
 
-				let container = $(slider).closest(".flex-wrapper");
-				/*console.log(slider);
-				let sliderWrapper = $(slider).parent();
-				console.log(sliderWrapper);
-				let container = $(sliderWrapper).parent();
-				console.log("Der Container ist: ");*/
-				console.log("ohne jQuery\n");
-				console.log(container);
-				console.log("jQuery mit Container\n");
-				console.log($(container));
+				for (farbe in scheinwerfer[
+					slider.target.getAttribute("data-id")
+				]) {
+					console.log(farbe);
+				}
 
-				$().each(container, function(key, value) {
-					console.log("Loope durch den Container \n");
-					console.log("Objekt" + this + " " + key + " " + value);
-				});
+				//let obj = { id: slider.target.getAttribute("data-id") };
 
 				/*var rgbwdata = {
 					dmx: {
@@ -344,6 +340,8 @@ $(function() {
 		for (let i = 0; i < Object.keys(ini.ini.dmx).length; i++) {
 			var scheinwerfer = ini.ini.dmx["scheinwerfer" + i];
 			if (scheinwerfer.numberChannels == "4") {
+				scheinwerfer[scheinwerfer.id] = { r: 0, g: 0, b: 0, w: 0 };
+
 				var t = document.querySelector("#rgbwTemplate").innerHTML;
 
 				for (
@@ -355,6 +353,10 @@ $(function() {
 				}
 
 				t = t.replace(/{:lightNumber}/, scheinwerfer.id + 1);
+				t = t.replace(
+					/{{:id}}/,
+					"Scheinwerfer" + (scheinwerfer.id + 1)
+				);
 				$(".flex-container").append(t);
 			} else if (scheinwerfer.numberChannels == "1") {
 				var t = document.querySelector("#hueTemplate").innerHTML;
@@ -368,6 +370,8 @@ $(function() {
 				t = t.replace(/{:lightNumber}/, scheinwerfer.id + 1);
 				$(".flex-container").append(t);
 			} else if (scheinwerfer.numberChannels == "3") {
+				scheinwerfer[scheinwerfer.id] = { r: 0, g: 0, b: 0 };
+
 				var t = document.querySelector("#rgbTemplate").innerHTML;
 
 				for (

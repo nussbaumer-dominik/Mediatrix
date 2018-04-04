@@ -276,7 +276,7 @@
   <script type="text/template" class="template" id="rgbwTemplate">
     <div class="box lichtBox" data-box="4">
       <h1>Scheinwerfer {:lightNumber}</h1>
-      <div class="flex-wrapper space-between">
+      <div class="flex-wrapper space-between" id="{{:id}}">
         <!-- Licht Slider 1 -->
         <div class="lichtSliderWrapper">
           <div class="slider" data-type="rgbw" data-col="r" data-id="{:id}" data-val="0"></div>
@@ -330,7 +330,7 @@
   <script type="text/template" class="template" id="rgbTemplate">
     <div class="box lichtBox" data-box="4">
       <h1>Scheinwerfer {:lightNumber}</h1>
-      <div class="flex-wrapper space-between">
+      <div class="flex-wrapper space-between" id="{{:id}}">
         <!-- Licht Slider 1 -->
         <div class="lichtSliderWrapper">
           <div class="slider" data-type="rgb" data-col="r" data-id="{:id}" data-val="0"></div>
