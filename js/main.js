@@ -496,10 +496,7 @@ $(function() {
 
 		for (item of items) {
 			let value = $(item).children();
-			console.log(value[1]);
-			console.log(value[1].innerHTML);
 			if (value[0].innerText == "Master") {
-				console.log(value[1].innerText);
 				let Master;
 				if (value[1].innerText.length == 3) {
 					Master = value[1].innerText.substring(0, 1);
@@ -508,20 +505,13 @@ $(function() {
 				} else if (value[1].innerText.length == 5) {
 					Master = value[1].innerText.substring(0, 3);
 				}
-				console.log(Master);
-				console.log(item.innerText);
 				if (parseInt(Master) != live.av.volume) {
 					value[1].innerText = live.av.volume + "dB";
 				}
 			} else if (value[0].innerText == "Scheinwerfer") {
 				console.log(value[1].innerText);
 				if (value[1].innerText != live.dmx.length) {
-					/*updateStatus(
-						"Scheinwerfer",
-						live.dmx.scheinwerfer.length,
-						"",
-						"dmxStatus"
-					);*/
+					value[1].innerText = live.dmx.length;
 				}
 			} else if (value[0].innerText == "Beamer") {
 				console.log(value[1].innerText);
@@ -532,9 +522,9 @@ $(function() {
 					: (current = false);
 				if (active != current) {
 					if (current) {
-						//updateStatus("Beamer", "ein", "", "beamerStatus");
+						value[1].innerText = "ein";
 					} else {
-						//updateStatus("Beamer", "aus", "", "beamerStatus");
+						value[1].innerText = "aus";
 					}
 				}
 			}
