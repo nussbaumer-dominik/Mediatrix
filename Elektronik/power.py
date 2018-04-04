@@ -15,7 +15,7 @@ rs = 2 #Relais Fur Lautsprecher
 rp = 3 #Relais fur Strom //momentan fur test
 
 # GPIO Modus zuweisen
-GPIO.setup(btn, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
+GPIO.setup(btn, GPIO.IN, pull_up_down = GPIO.PUD_UP)
 
 GPIO.setup(rs, GPIO.OUT)
 GPIO.setup(rp, GPIO.OUT)
@@ -33,6 +33,7 @@ def switchPower(pstate):
 
     if pstate == 0:
         print "ein"
+        GPIO.output(rs, GPIO.LOW) # an
         GPIO.output(rp, GPIO.LOW) # an
         sleep(20)
         GPIO.output(rs, GPIO.LOW) # an
