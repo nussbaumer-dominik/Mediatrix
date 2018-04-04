@@ -48,7 +48,7 @@ $(function() {
 			let msg = event.data;
 			console.log("message: " + msg);
 			//$(".statusGrid").empty();
-			console.log(msg);
+			console.log(JSON.parse(msg));
 			console.log(msg.live);
 			liveStatus(msg.live);
 		}
