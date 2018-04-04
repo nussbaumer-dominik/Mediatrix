@@ -499,9 +499,25 @@ $(function() {
 	var liveStatus = live => {
 		let items = $(".statusGrid").contents();
 		console.log(items);
+		console.log(live);
+		let counter = 0;
 		for (item of items) {
 			console.log("iterieren über items des liveStatus");
 			console.log(item);
+			/*let value = $(item)
+				.children()
+				.find(".value");*/
+			console.log(
+				$(item)
+					.children()
+					.find(".value")
+			);
+
+			/*if (value !== live[counter]) {
+
+			}*/
+			console.log(counter);
+			counter++;
 		}
 		/*if (live.av.volume) {
 			updateStatus("Master", live.av.volume, "dB");
@@ -527,7 +543,14 @@ $(function() {
 
 	function buildStatus(key, value, unit) {
 		var div = $("<div>");
-		div.append("<span>" + key + "</span><span>" + value + unit + "</span>");
+		div.append(
+			"<span>" +
+				key +
+				"</span><span class='value'>" +
+				value +
+				unit +
+				"</span>"
+		);
 		$(".statusGrid").append(div);
 	}
 
