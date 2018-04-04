@@ -509,8 +509,9 @@ $(function() {
 					Master = value[1].innerText.substring(0, 3);
 				}
 				console.log(Master);
+				console.log(item.innerText);
 				if (parseInt(Master) != live.av.volume) {
-					item.innerText = live.av.volume + "dB";
+					value[1].innerText = live.av.volume + "dB";
 				}
 			} else if (value[0].innerText == "Scheinwerfer") {
 				console.log(value[1].innerText);
