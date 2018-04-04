@@ -510,22 +510,17 @@ $(function() {
 				}
 				console.log(Master);
 				if (parseInt(Master) != live.av.volume) {
-					item.innerHTML = updateStatus(
-						"Master",
-						live.av.volume,
-						"dB",
-						"avStatus"
-					);
+					item.innerHTML = live.av.volume + "dB";
 				}
 			} else if (value[0].innerText == "Scheinwerfer") {
 				console.log(value[1].innerText);
 				if (value[1].innerText != live.dmx.length) {
-					updateStatus(
+					/*updateStatus(
 						"Scheinwerfer",
 						live.dmx.scheinwerfer.length,
 						"",
 						"dmxStatus"
-					);
+					);*/
 				}
 			} else if (value[0].innerText == "Beamer") {
 				console.log(value[1].innerText);
@@ -536,9 +531,9 @@ $(function() {
 					: (current = false);
 				if (active != current) {
 					if (current) {
-						updateStatus("Beamer", "ein", "", "beamerStatus");
+						//updateStatus("Beamer", "ein", "", "beamerStatus");
 					} else {
-						updateStatus("Beamer", "aus", "", "beamerStatus");
+						//updateStatus("Beamer", "aus", "", "beamerStatus");
 					}
 				}
 			}
