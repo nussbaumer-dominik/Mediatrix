@@ -30,7 +30,7 @@ class IR : public Php::Base {
         int fd = serialOpen(IR::dev, 9600);
 
         if(fd == -1){
-            return "{'success':'false','err':'Can not open Serial Connection to IR-Device'}";
+            return "{'success':false,'err':'Can not open Serial Connection to IR-Device'}";
         }
 
         delay(200);
@@ -70,7 +70,7 @@ class IR : public Php::Base {
         serialPrintf(fd, ("w"+timesStr+":").c_str());
         delay(1000+300*times);
 
-        return "{'success':'true','err':''}";
+        return "{'success':true,'err':''}";
      }
 
      static Php::Value read(Php::Parameters &params){
@@ -84,7 +84,7 @@ class IR : public Php::Base {
         int fd = serialOpen(IR::dev, 9600);
 
         if(fd == -1){
-            return "{'success':'false','err':'Can not open Serial Connection to IR-Device'}";
+            return "{'success':false,'err':'Can not open Serial Connection to IR-Device'}";
         }
 
         serialPrintf(fd,":~:");
@@ -127,7 +127,7 @@ class IR : public Php::Base {
         int fd = serialOpen(IR::dev, 9600);
 
         if(fd == -1){
-            return "{'success':'false','err':'Can not open Serial Connection to IR-Device'}";
+            return "{'success':false,'err':'Can not open Serial Connection to IR-Device'}";
         }
 
         //reset the IR-Device
