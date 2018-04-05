@@ -5,6 +5,7 @@ $(function () {
 		presets,
 		jwt = localStorage.getItem("jwt"),
 		on = false,
+		isMobile,
 		currentConf = {
 			name: "",
 			conf: {}
@@ -664,8 +665,12 @@ $(function () {
 			.done(function (data) {
 				if (mode) {
 					toggleEx();
+					isMobile = "ontouchstart" in document.documentElement &&
+						navigator.userAgent.match(/Mobi/);
 				} else {
 					toggleBase();
+					isMobile = "ontouchstart" in document.documentElement &&
+						navigator.userAgent.match(/Mobi/);
 				}
 				console.log("success: mode: " + mode + " " + data);
 			})
@@ -674,10 +679,6 @@ $(function () {
 				console.log(data);
 			});
 	});
-
-	var isMobile =
-		"ontouchstart" in document.documentElement &&
-		navigator.userAgent.match(/Mobi/);
 
 	//EventListener den Box Buttons hinzufügen
 	$(".boxButtons").on("click", function () {
