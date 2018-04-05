@@ -1,22 +1,39 @@
-$(function() {
+$(function () {
 	var ini,
 		sessId,
 		presetStart = 0,
 		presets,
 		jwt = localStorage.getItem("jwt"),
 		on = false,
-		currentConf = { name: "", conf: {} },
+		currentConf = {
+			name: "",
+			conf: {}
+		},
 		conf = {
 			av: {},
 			dmx: {},
 			mixer: {
-				mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }]
+				mikrofone: [{
+					id: "0",
+					value: 0
+				}, {
+					id: "1",
+					value: 0
+				}]
 			},
 			beamer: {}
 		};
 
 	var mixerData = {
-		mixer: { mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }] }
+		mixer: {
+			mikrofone: [{
+				id: "0",
+				value: 0
+			}, {
+				id: "1",
+				value: 0
+			}]
+		}
 	};
 	var scheinwerfer = {};
 	var socket = new WebSocket("wss://10.0.0.85/wss");
@@ -73,7 +90,7 @@ $(function() {
 			case "av":
 				console.log(
 					"Dieser Slider ist von einem AV-Receiver: " +
-						slider.target.getAttribute("data-type")
+					slider.target.getAttribute("data-type")
 				);
 				let avdata = {
 					av: {
@@ -115,25 +132,28 @@ $(function() {
 			case "dmx":
 				console.log(
 					"Dieser Slider ist von einem DMX Gerät: " +
-						"Id: " +
-						slider.target.getAttribute("data-id") +
-						" " +
-						slider.get()
+					"Id: " +
+					slider.target.getAttribute("data-id") +
+					" " +
+					slider.get()
 				);
-				scheinwerfer[slider.target.getAttribute("data-id")][
-					slider.target.getAttribute("data-col")
-				] = parseInt(slider.get());
+				console.log(slider.target.getAttribute("data-col"));
+				scheinwerfer[slider.target.getAttribute("data-id")][slider.target.getAttribute("data-col")] = parseInt(slider.get());
 
-				let obj = { id: slider.target.getAttribute("data-id") };
+				let obj = {
+					id: slider.target.getAttribute("data-id")
+				};
 				for (farbe in scheinwerfer[
-					slider.target.getAttribute("data-id")
-				]) {
+						slider.target.getAttribute("data-id")
+					]) {
 					obj[farbe] =
 						scheinwerfer[slider.target.getAttribute("data-id")][
 							farbe
 						];
 				}
-				let sendObj = { dmx: {} };
+				let sendObj = {
+					dmx: {}
+				};
 				sendObj.dmx[
 					"scheinwerfer" + slider.target.getAttribute("data-id")
 				] = obj;
@@ -190,7 +210,9 @@ $(function() {
 
 	//Werte der Beamer Steuerung auslesen
 	function Beamer() {
-		let data = { beamer: {} };
+		let data = {
+			beamer: {}
+		};
 		let $this = $(this);
 		//Kontrollieren ob vom Typ Beamer
 		if ($this.attr("data-type") == "beamer") {
@@ -229,13 +251,15 @@ $(function() {
 	//Werte der Modi des AV-Receivers auslesen
 	function Buttons() {
 		let $this = $(this);
-		let avdata = { av: {} };
+		let avdata = {
+			av: {}
+		};
 		if ($this.attr("data-type") == "av") {
 			console.log(
 				"Data-type=" +
-					$this.attr("data-type") +
-					" Value: " +
-					$this.html()
+				$this.attr("data-type") +
+				" Value: " +
+				$this.html()
 			);
 			avdata.av.mode = $this.html();
 			conf.av.mode = $this.html();
@@ -269,7 +293,7 @@ $(function() {
 				max: parseInt(ini.ini.av.maxVolume)
 			}
 		});
-		slider.noUiSlider.on("slide", function(values, handle) {
+		slider.noUiSlider.on("slide", function (values, handle) {
 			Slider(this);
 			document.getElementById("avSlider1Value").innerHTML =
 				values[handle];
@@ -284,14 +308,17 @@ $(function() {
 			var scheinwerferObj = ini.ini.dmx["scheinwerfer" + i];
 			console.log(scheinwerfer);
 			if (scheinwerferObj.numberChannels == "4") {
-				scheinwerfer[scheinwerferObj.id] = { r: 0, g: 0, b: 0, w: 0 };
+				scheinwerfer[scheinwerferObj.id] = {
+					r: 0,
+					g: 0,
+					b: 0,
+					w: 0
+				};
 
 				var t = document.querySelector("#rgbwTemplate").innerHTML;
 
 				for (
-					let j = 0;
-					j < parseInt(scheinwerferObj.numberChannels);
-					j++
+					let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++
 				) {
 					t = t.replace(/{:id}/, scheinwerferObj.id);
 				}
@@ -303,27 +330,29 @@ $(function() {
 				);
 				$(".flex-container").append(t);
 			} else if (scheinwerferObj.numberChannels == "1") {
-				scheinwerfer[scheinwerferObj.id] = { hue: 0 };
+				scheinwerfer[scheinwerferObj.id] = {
+					hue: 0
+				};
 
 				var t = document.querySelector("#hueTemplate").innerHTML;
 				for (
-					let j = 0;
-					j < parseInt(scheinwerferObj.numberChannels);
-					j++
+					let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++
 				) {
 					t = t.replace(/{:id}/, scheinwerferObj.id);
 				}
 				t = t.replace(/{:lightNumber}/, scheinwerferObj.id + 1);
 				$(".flex-container").append(t);
 			} else if (scheinwerferObj.numberChannels == "3") {
-				scheinwerfer[scheinwerferObj.id] = { r: 0, g: 0, b: 0 };
+				scheinwerfer[scheinwerferObj.id] = {
+					r: 0,
+					g: 0,
+					b: 0
+				};
 
 				var t = document.querySelector("#rgbTemplate").innerHTML;
 
 				for (
-					let j = 0;
-					j < parseInt(scheinwerferObj.numberChannels);
-					j++
+					let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++
 				) {
 					t = t.replace(/{:id}/, scheinwerferObj.id);
 				}
@@ -332,6 +361,32 @@ $(function() {
 				$(".flex-container").append(t);
 			}
 		}
+
+		var sliders = $(".lichtBox").find(".lichtSlider");
+		var valueFields = $(".lichtBox").find(".lichtValue");
+
+		sliders.each(function (slider) {
+			noUiSlider.create(this, {
+				start: 0,
+				format: wNumb({
+					decimals: 0
+				}),
+				connect: [false, false],
+				direction: "rtl",
+				orientation: "vertical",
+				range: {
+					min: 0,
+					max: 255
+				}
+			});
+		});
+
+		sliders.each(function (i, slider) {
+			this.noUiSlider.on("slide", function (values, handle) {
+				Slider(this);
+				valueFields.get(i).innerHTML = values[handle];
+			});
+		});
 		return true;
 	}
 
@@ -349,25 +404,24 @@ $(function() {
 		console.log(preset);
 
 		$.ajax({
-			url: "/Mediatrix/php/src/savePreset.php",
-			traditional: true,
-			method: "POST",
-			data: preset,
-			contentType: false,
-			processData: false,
-			xhrFields: {
-				withCredentials: true
-			},
-			crossDomain: true,
-			complete: () => {}
-		})
+				url: "/Mediatrix/php/src/savePreset.php",
+				traditional: true,
+				method: "POST",
+				data: preset,
+				contentType: false,
+				processData: false,
+				xhrFields: {
+					withCredentials: true
+				},
+				crossDomain: true,
+				complete: () => {}
+			})
 			.done(data => {
 				console.log("success: " + data);
 				addPreset(currentConf);
 				presets.push(currentConf);
 				$.snackbar({
-					content:
-						"Das Preset " +
+					content: "Das Preset " +
 						$("#presetName").val() +
 						" wurde erfolgreich erstellt"
 				});
@@ -387,15 +441,15 @@ $(function() {
 		if (data.conf.dmx) {
 			div.append(
 				"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
-					data.conf.dmx.length +
-					"</h3> </div>"
+				data.conf.dmx.length +
+				"</h3> </div>"
 			);
 		}
 		if (data.conf.av.mode) {
 			div.append(
 				"<div> <i class='fas fa-volume-up'> </i> <h3>" +
-					data.conf.av.mode +
-					"</h3> </div>"
+				data.conf.av.mode +
+				"</h3> </div>"
 			);
 		} else {
 			div.append(
@@ -416,16 +470,17 @@ $(function() {
 		if (data.conf.mixer) {
 			div.append(
 				"<div> <i class='fas fa-microphone'> </i> <h3>" +
-					data.conf.mixer.mikrofone.length +
-					"</h3> </div>"
+				data.conf.mixer.mikrofone.length +
+				"</h3> </div>"
 			);
 		}
 		$(".presentation").append(div);
 		presetStart++;
+		console.log("getPresets: " + presetStart);
 		$(".preset").on("click", selectPreset);
 	}
 
-	var getPresets = () => {
+	function getPresets() {
 		for (let i = presetStart; i < Object.keys(presets).length; i++) {
 			console.log(presets[i].name + " conf:");
 			console.log(presets[i].conf);
@@ -437,33 +492,34 @@ $(function() {
 			if (presets[i].conf.dmx) {
 				div.append(
 					"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
-						presets[i].conf.dmx.id +
-						"</h3> </div>"
+					presets[i].conf.dmx.length +
+					"</h3> </div>"
 				);
 			}
 			if (presets[i].conf.av) {
 				div.append(
 					"<div> <i class='fas fa-volume-up'> </i> <h3>" +
-						presets[i].conf.av.mode +
-						"</h3> </div>"
+					presets[i].conf.av.mode +
+					"</h3> </div>"
 				);
 			}
 			if (presets[i].conf.beamer) {
 				div.append(
 					"<div> <i class='fas fa-video'> </i> <h3>" +
-						presets[i].conf.beamer +
-						"</h3> </div>"
+					presets[i].conf.beamer +
+					"</h3> </div>"
 				);
 			}
 			if (presets[i].conf.mixer) {
 				div.append(
 					"<div> <i class='fas fa-microphone'> </i> <h3>" +
-						presets[i].conf.mixer +
-						"</h3> </div>"
+					presets[i].conf.mixer +
+					"</h3> </div>"
 				);
 			}
 			$(".presentation").append(div);
 			presetStart++;
+			console.log("getPresets: " + presetStart);
 		}
 		$(".preset").on("click", selectPreset);
 	};
@@ -489,6 +545,42 @@ $(function() {
 			buildStatus("Scheinwerfer", ini.live.dmx.length, "", "dmxStatus");
 		}
 	};
+
+	function deletePreset(id) {
+
+		let preset = new FormData();
+		preset.append("jwt", jwt);
+		preset.append("id", id);
+		console.log(preset);
+
+		$.ajax({
+				url: "/Mediatrix/php/src/deletePreset.php",
+				traditional: true,
+				method: "POST",
+				data: preset,
+				contentType: false,
+				processData: false,
+				xhrFields: {
+					withCredentials: true
+				},
+				crossDomain: true,
+				complete: () => {}
+			})
+			.done(data => {
+				console.log("success: " + data);
+				addPreset(currentConf);
+				presets.push(currentConf);
+				$.snackbar({
+					content: "Das Preset " +
+						$("#presetName").val() +
+						" wurde erfolgreich erstellt"
+				});
+			})
+			.fail(data => {
+				console.log("error: ");
+				console.log(data);
+			});
+	}
 
 	function liveStatus(live) {
 		let items = $(".statusGrid").contents();
@@ -518,9 +610,9 @@ $(function() {
 				console.log(value[1].innerText);
 				let active = live.beamer.on;
 				let current = false;
-				value[1].innerText == "ein"
-					? (current = true)
-					: (current = false);
+				value[1].innerText == "ein" ?
+					(current = true) :
+					(current = false);
 				if (active != current) {
 					if (current) {
 						value[1].innerText = "ein";
@@ -558,18 +650,18 @@ $(function() {
 		}
 
 		$.ajax({
-			url: "/Mediatrix/php/src/changeUserMode.php",
-			traditional: true,
-			method: "POST",
-			data: data,
-			contentType: false,
-			processData: false,
-			xhrFields: {
-				withCredentials: true
-			},
-			crossDomain: true
-		})
-			.done(function(data) {
+				url: "/Mediatrix/php/src/changeUserMode.php",
+				traditional: true,
+				method: "POST",
+				data: data,
+				contentType: false,
+				processData: false,
+				xhrFields: {
+					withCredentials: true
+				},
+				crossDomain: true
+			})
+			.done(function (data) {
 				if (mode) {
 					toggleEx();
 				} else {
@@ -577,7 +669,7 @@ $(function() {
 				}
 				console.log("success: mode: " + mode + " " + data);
 			})
-			.fail(function(data) {
+			.fail(function (data) {
 				console.log("error ");
 				console.log(data);
 			});
@@ -588,7 +680,7 @@ $(function() {
 		navigator.userAgent.match(/Mobi/);
 
 	//EventListener den Box Buttons hinzufügen
-	$(".boxButtons").on("click", function() {
+	$(".boxButtons").on("click", function () {
 		toggleFlexContainer(1);
 		togglePresMode(2);
 		toggleStatus(1);
@@ -601,7 +693,7 @@ $(function() {
 					$("#beamerBox").remove();
 				} else {
 					$(".flex-container").append($("#beamerTemplate").html());
-					$(".menu-item").each(function() {
+					$(".menu-item").each(function () {
 						$(this).on("click", Beamer);
 					});
 					$(".menu-open-button").on("click", Beamer);
@@ -612,7 +704,7 @@ $(function() {
 					$("#avBox").remove();
 				} else {
 					if (selectAvConf()) {
-						$(".mode").each(function() {
+						$(".mode").each(function () {
 							this.addEventListener("click", Buttons);
 						});
 					}
@@ -743,7 +835,7 @@ $(function() {
 		var sliders = $(container).find(".slider");
 		var valueFields = $(container).find(".valueField");
 
-		sliders.each(function(slider) {
+		sliders.each(function (slider) {
 			noUiSlider.create(this, {
 				start: 0,
 				format: wNumb({
@@ -759,8 +851,8 @@ $(function() {
 			});
 		});
 
-		sliders.each(function(i, slider) {
-			this.noUiSlider.on("slide", function(values, handle) {
+		sliders.each(function (i, slider) {
+			this.noUiSlider.on("slide", function (values, handle) {
 				Slider(this);
 				valueFields.get(i).innerHTML = values[handle];
 			});
