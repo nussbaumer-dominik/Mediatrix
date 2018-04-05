@@ -5,7 +5,8 @@ $(function () {
 		presets,
 		jwt = localStorage.getItem("jwt"),
 		on = false,
-		isMobile,
+		isMobile = isMobile = "ontouchstart" in document.documentElement &&
+		navigator.userAgent.match(/Mobi/),
 		currentConf = {
 			name: "",
 			conf: {}
@@ -827,8 +828,13 @@ $(function () {
 		toggleFlexContainer(1);
 		togglePresMode(2);
 		toggleStatus(1);
-		$(".savePreset").css("display", "block");
-		$(".side-nav ul").css("display", "block");
+		if (isMobile) {
+			$(".savePreset").css("display", "none");
+			$(".side-nav ul").css("display", "flex");
+		} else  {
+			$(".savePreset").css("display", "block");
+			$(".side-nav ul").css("display", "flex");
+		}
 	};
 
 	//Slider initialisieren, je nach dem, welche gerade im Markup eingeblendet sind
