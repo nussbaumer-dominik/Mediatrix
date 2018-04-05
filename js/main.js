@@ -137,9 +137,8 @@ $(function () {
 					" " +
 					slider.get()
 				);
-				scheinwerfer[slider.target.getAttribute("data-id")][
-					slider.target.getAttribute("data-col")
-				] = parseInt(slider.get());
+				console.log(slider.target.getAttribute("data-col"));
+				scheinwerfer[slider.target.getAttribute("data-id")][slider.target.getAttribute("data-col")] = parseInt(slider.get());
 
 				let obj = {
 					id: slider.target.getAttribute("data-id")
