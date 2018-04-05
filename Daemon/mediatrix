@@ -1,0 +1,124 @@
+#! /bin/sh
+
+### BEGIN INIT INFO
+# Provides:          mediatrix
+# Required-Start:    $local_fs $network
+# Required-Stop:     $local_fs
+# Default-Start:     3 4 5
+# Default-Stop:      0 1 6 2
+# Short-Description: mediatrix
+# Description:       Daemon for starting Mediatrix Websocket-Server
+### END INIT INFO
+
+
+# Installation
+# - Move this to /etc/init.d/myservice
+# - chmod +x this
+#
+# Starting and stopping
+# - Start: `service myservice start` or `/etc/init.d/myservice start`
+# - Stop: `service myservice stop` or `/etc/init.d/myservice stop`
+
+#ref http://till.klampaeckel.de/blog/archives/94-start-stop-daemon,-Gearman-and-a-little-PHP.html
+#ref http://unix.stackexchange.com/questions/85033/use-start-stop-daemon-for-a-php-server/85570#85570
+#ref http://serverfault.com/questions/229759/launching-a-php-daemon-from-an-lsb-init-script-w-start-stop-daemon
+
+NAME=mediatrix
+DESC="Daemon for the mediatrix websocket server"
+PIDFILE="/var/run/${NAME}.pid"
+LOGFILE="/var/log/${NAME}.log"
+
+DAEMON="/usr/bin/php"
+DAEMON_OPTS="/var/www/html/Mediatrix/php/src/websocket.php"
+
+PYTHON_OPTS="--start --background --make-pidfile --chdir /var/www/html/Mediatrix/Elektronik"
+PYTHON="/usr/bin/python" 
+
+START_OPTS="--start --background --make-pidfile --pidfile ${PIDFILE} --chuid www-data --chdir /var/www/html/Mediatrix/php --exec ${DAEMON} ${DAEMON_OPTS}"
+STOP_OPTS="--stop --pidfile ${PIDFILE}"
+
+test -x $DAEMON || exit 0
+
+sudo chown www-data /var/log/mediatrix.log
+
+set -e
+
+case "$1" in
+    start)
+       cd /var/www/html/Mediatrix/php
+
+       printf "\n#####Restart Apche:#####\n" >> $LOGFILE
+
+       sudo service apache2 restart >> $LOGFILE
+
+       printf "\n#####Start Olad:#####\n"  >> $LOGFILE
+       sudo -u pi olad -f >> $LOGFILE
+
+
+       printf "\n#####check DB:#####\n" >> $LOGFILE
+       sudo php src/createDB.php >> $LOGFILE
+       sudo chown www-data ../sqlite -R >> $LOGFILE
+
+
+        echo -n "Starting ${DESC}: " >> $LOGFILE
+	echo -n "Starting ${DESC}: "
+        /sbin/start-stop-daemon $START_OPTS >> $LOGFILE
+        echo "$NAME." >> $LOGFILE
+	echo "$NAME."
+        
+	echo -n "Starting power.py: " >> $LOGFILE
+        echo -n "Starting power.py: "
+
+	/sbin/start-stop-daemon $PYTHON_OPTS --pidfile "/var/run/Mediatrix-power.pid" --exec $PYTHON power.py
+	
+	echo -n "Starting speaker.py: " >> $LOGFILE
+        echo -n "Starting speaker.py: "
+
+	/sbin/start-stop-daemon $PYTHON_OPTS --pidfile "/var/run/Mediatrix-speaker.pid" --exec $PYTHON speaker.py
+	
+	echo -n "Starting cooling.py " >> $LOGFILE
+        echo -n "Starting cooling.py"
+	/sbin/start-stop-daemon $PYTHON_OPTS --pidfile "/var/run/Mediatrix-cooling.pid" --exec $PYTHON cooling.py
+	;;
+    stop)
+        echo -n "Stopping $DESC: " >> $LOGFILE
+	echo -n "Stopping $DESC: "
+        /sbin/start-stop-daemon $STOP_OPTS
+        echo "$NAME." >> $LOGFILE
+	 echo "$NAME."
+        rm -f $PIDFILE
+	
+	echo -n "Stopping power.py: " >> $LOGFILE
+        echo -n "Stopping power.py: "
+        /sbin/start-stop-daemon --stop --pidfile "/var/run/Mediatrix-power.pid"
+        rm -f "/var/run/Mediatrix-power.pid"
+
+	echo -n "Stopping speaker.py: " >> $LOGFILE
+        echo -n "Stopping speaker.py: "
+        /sbin/start-stop-daemon --stop --pidfile "/var/run/Mediatrix-speaker.pid"
+        rm -f "/var/run/Mediatrix-speaker.pid"
+
+	echo -n "Stopping cooling.py: " >> $LOGFILE
+        echo -n "Stopping cooling.py: "
+        /sbin/start-stop-daemon --stop --pidfile "/var/run/Mediatrix-cooling.pid"
+        rm -f "/var/run/Mediatrix-cooling.pid"
+
+        echo "Stop Ola" >> $LOGFILE
+	sudo killall olad >> $LOGFILE
+
+        ;;
+    restart|force-reload)
+        echo -n "Restarting $DESC: "
+        /sbin/start-stop-daemon $STOP_OPTS
+        sleep 1
+        /sbin/start-stop-daemon $START_OPTS >> $LOGFILE
+        echo "$NAME."
+        ;;
+    *)
+        N=/etc/init.d/$NAME
+        echo "Usage: $N {start|stop|restart|force-reload}" >&2
+        exit 1
+        ;;
+esac
+
+exit 0
