@@ -35,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AV.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AV.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/AV.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="89" column="10" lean-forward="false" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
+            <state relative-caret-position="257">
+              <caret line="89" column="8" lean-forward="false" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -80,7 +80,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Beamer.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Beamer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
@@ -1021,14 +1021,7 @@
       <workItem from="1522834792299" duration="17698000" />
       <workItem from="1522871103039" duration="10000" />
       <workItem from="1522904585746" duration="3328000" />
-      <workItem from="1522924199783" duration="823000" />
-    </task>
-    <task id="LOCAL-00232" summary="change ips">
-      <created>1522688252175</created>
-      <option name="number" value="00232" />
-      <option name="presentableId" value="LOCAL-00232" />
-      <option name="project" value="LOCAL" />
-      <updated>1522688252175</updated>
+      <workItem from="1522924199783" duration="1656000" />
     </task>
     <task id="LOCAL-00233" summary="add mute function">
       <created>1522689054277</created>
@@ -1366,11 +1359,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522930098288</updated>
     </task>
-    <option name="localTasksCounter" value="281" />
+    <task id="LOCAL-00281" summary="fixing">
+      <created>1522930284745</created>
+      <option name="number" value="00281" />
+      <option name="presentableId" value="LOCAL-00281" />
+      <option name="project" value="LOCAL" />
+      <updated>1522930284745</updated>
+    </task>
+    <option name="localTasksCounter" value="282" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219023000" />
+    <option name="totallyTimeSpent" value="219856000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1479,7 +1479,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add hue in rgbw scheinwerfer" />
     <MESSAGE value="fix application" />
     <MESSAGE value="debug hue in rgbw scheinwerfer" />
     <MESSAGE value="change mixer command structure" />
@@ -1504,7 +1503,8 @@
     <MESSAGE value="debug" />
     <MESSAGE value="fix Leistungsmessung" />
     <MESSAGE value="add daemon file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add daemon file" />
+    <MESSAGE value="fixing" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1847,18 +1847,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/AV.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="89" column="10" lean-forward="false" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/AV.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="89" column="8" lean-forward="false" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
           <folding />
         </state>
       </provider>
