@@ -727,7 +727,7 @@ $(function () {
 				} else {
 					if (selectLichtConf()) {
 						console.log("SelectLichtConf ist fertig");
-						initSlider(".lichtBox");
+						//initSlider(".lichtBox");
 					}
 				}
 				break;
