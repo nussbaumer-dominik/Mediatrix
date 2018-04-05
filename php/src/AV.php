@@ -76,6 +76,8 @@ class AV
 
         exec('gpio -g mode '.$gpio.' in');
 
+        exec('gpio -g mode '.$gpio.' down');
+
 
         $this->volumeSteps = $volumeSteps;
 
