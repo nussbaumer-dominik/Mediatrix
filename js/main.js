@@ -476,10 +476,11 @@ $(function () {
 		}
 		$(".presentation").append(div);
 		presetStart++;
+		console.log("getPresets: " + presetStart);
 		$(".preset").on("click", selectPreset);
 	}
 
-	var getPresets = () => {
+	function getPresets() {
 		for (let i = presetStart; i < Object.keys(presets).length; i++) {
 			console.log(presets[i].name + " conf:");
 			console.log(presets[i].conf);
@@ -491,7 +492,7 @@ $(function () {
 			if (presets[i].conf.dmx) {
 				div.append(
 					"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
-					presets[i].conf.dmx.id +
+					presets[i].conf.dmx.length +
 					"</h3> </div>"
 				);
 			}
@@ -518,6 +519,7 @@ $(function () {
 			}
 			$(".presentation").append(div);
 			presetStart++;
+			console.log("getPresets: " + presetStart);
 		}
 		$(".preset").on("click", selectPreset);
 	};
@@ -543,6 +545,42 @@ $(function () {
 			buildStatus("Scheinwerfer", ini.live.dmx.length, "", "dmxStatus");
 		}
 	};
+
+	function deletePreset(id) {
+
+		let preset = new FormData();
+		preset.append("jwt", jwt);
+		preset.append("id", id);
+		console.log(preset);
+
+		$.ajax({
+				url: "/Mediatrix/php/src/deletePreset.php",
+				traditional: true,
+				method: "POST",
+				data: preset,
+				contentType: false,
+				processData: false,
+				xhrFields: {
+					withCredentials: true
+				},
+				crossDomain: true,
+				complete: () => {}
+			})
+			.done(data => {
+				console.log("success: " + data);
+				addPreset(currentConf);
+				presets.push(currentConf);
+				$.snackbar({
+					content: "Das Preset " +
+						$("#presetName").val() +
+						" wurde erfolgreich erstellt"
+				});
+			})
+			.fail(data => {
+				console.log("error: ");
+				console.log(data);
+			});
+	}
 
 	function liveStatus(live) {
 		let items = $(".statusGrid").contents();
