@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/AV.php" afterPath="$PROJECT_DIR$/php/src/AV.php" />
+      <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,8 +38,18 @@
       <file leaf-file-name="AV.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/AV.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="89" column="10" lean-forward="false" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
+            <state relative-caret-position="257">
+              <caret line="89" column="8" lean-forward="false" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -55,21 +65,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Preset.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/src/Preset.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1522164637996" expanded="true" signature="450:516" ph="INSERT INTO preset... " />
-                <marker date="1522164637996" expanded="true" signature="1003:1084" ph="UPDATE preset... " />
-                <marker date="1522164637996" expanded="true" signature="1569:1624" ph="DELETE FROM preset... " />
-                <marker date="1522164637996" expanded="true" signature="1925:1972" ph="SELECT count... USER" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="savePreset.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/savePreset.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -80,7 +75,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Beamer.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Beamer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
@@ -110,15 +105,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7326">
-              <caret line="433" column="0" lean-forward="false" selection-start-line="433" selection-start-column="0" selection-end-line="433" selection-end-column="0" />
+            <state relative-caret-position="234">
+              <caret line="127" column="24" lean-forward="false" selection-start-line="127" selection-start-column="24" selection-end-line="127" selection-end-column="24" />
               <folding>
                 <element signature="e#639#1153#0#PHP" expanded="false" />
-                <marker date="1522864019999" expanded="true" signature="13394:13434" ph="SELECT * FRO... preset" />
-                <marker date="1522864019999" expanded="true" signature="14172:14214" ph="SELECT isext... user" />
+                <marker date="1522933139117" expanded="true" signature="13415:13455" ph="SELECT * FRO... preset" />
+                <marker date="1522933139117" expanded="true" signature="14193:14235" ph="SELECT isext... user" />
               </folding>
             </state>
           </provider>
@@ -172,7 +167,6 @@
         <option value="$PROJECT_DIR$/php/Login.php" />
         <option value="$PROJECT_DIR$/php/websocket.php" />
         <option value="$PROJECT_DIR$/php/src/login.php" />
-        <option value="$PROJECT_DIR$/php/composer.json" />
         <option value="$PROJECT_DIR$/php/src/Ini.php" />
         <option value="$PROJECT_DIR$/cpp/Makefile" />
         <option value="$PROJECT_DIR$/php/src/test.php" />
@@ -203,10 +197,11 @@
         <option value="$PROJECT_DIR$/cpp/DMX/DMX.cpp" />
         <option value="$PROJECT_DIR$/Elektronik/power.py" />
         <option value="$PROJECT_DIR$/php/src/savePreset.php" />
-        <option value="$PROJECT_DIR$/php/src/Application.php" />
         <option value="$PROJECT_DIR$/php/src/Beamer.php" />
         <option value="$PROJECT_DIR$/conf/Mediatrix.json" />
         <option value="$PROJECT_DIR$/php/src/AV.php" />
+        <option value="$PROJECT_DIR$/php/composer.json" />
+        <option value="$PROJECT_DIR$/php/src/Application.php" />
       </list>
     </option>
   </component>
@@ -1021,28 +1016,7 @@
       <workItem from="1522834792299" duration="17698000" />
       <workItem from="1522871103039" duration="10000" />
       <workItem from="1522904585746" duration="3328000" />
-      <workItem from="1522924199783" duration="823000" />
-    </task>
-    <task id="LOCAL-00232" summary="change ips">
-      <created>1522688252175</created>
-      <option name="number" value="00232" />
-      <option name="presentableId" value="LOCAL-00232" />
-      <option name="project" value="LOCAL" />
-      <updated>1522688252175</updated>
-    </task>
-    <task id="LOCAL-00233" summary="add mute function">
-      <created>1522689054277</created>
-      <option name="number" value="00233" />
-      <option name="presentableId" value="LOCAL-00233" />
-      <option name="project" value="LOCAL" />
-      <updated>1522689054277</updated>
-    </task>
-    <task id="LOCAL-00234" summary="python dev">
-      <created>1522689334259</created>
-      <option name="number" value="00234" />
-      <option name="presentableId" value="LOCAL-00234" />
-      <option name="project" value="LOCAL" />
-      <updated>1522689334259</updated>
+      <workItem from="1522924199783" duration="2605000" />
     </task>
     <task id="LOCAL-00235" summary="fix live status">
       <created>1522690548070</created>
@@ -1366,11 +1340,32 @@
       <option name="project" value="LOCAL" />
       <updated>1522930098288</updated>
     </task>
-    <option name="localTasksCounter" value="281" />
+    <task id="LOCAL-00281" summary="fixing">
+      <created>1522930284745</created>
+      <option name="number" value="00281" />
+      <option name="presentableId" value="LOCAL-00281" />
+      <option name="project" value="LOCAL" />
+      <updated>1522930284745</updated>
+    </task>
+    <task id="LOCAL-00282" summary="fixing">
+      <created>1522932094231</created>
+      <option name="number" value="00282" />
+      <option name="presentableId" value="LOCAL-00282" />
+      <option name="project" value="LOCAL" />
+      <updated>1522932094231</updated>
+    </task>
+    <task id="LOCAL-00283" summary="change webscoket library version">
+      <created>1522932962813</created>
+      <option name="number" value="00283" />
+      <option name="presentableId" value="LOCAL-00283" />
+      <option name="project" value="LOCAL" />
+      <updated>1522932962813</updated>
+    </task>
+    <option name="localTasksCounter" value="284" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219023000" />
+    <option name="totallyTimeSpent" value="220805000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1479,8 +1474,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add hue in rgbw scheinwerfer" />
-    <MESSAGE value="fix application" />
     <MESSAGE value="debug hue in rgbw scheinwerfer" />
     <MESSAGE value="change mixer command structure" />
     <MESSAGE value="change test ws address" />
@@ -1504,7 +1497,9 @@
     <MESSAGE value="debug" />
     <MESSAGE value="fix Leistungsmessung" />
     <MESSAGE value="add daemon file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add daemon file" />
+    <MESSAGE value="fixing" />
+    <MESSAGE value="change webscoket library version" />
+    <option name="LAST_COMMIT_MESSAGE" value="change webscoket library version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1732,13 +1727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Mixer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -1778,18 +1766,6 @@
         <state relative-caret-position="234">
           <caret line="18" column="63" lean-forward="false" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7326">
-          <caret line="433" column="0" lean-forward="false" selection-start-line="433" selection-start-column="0" selection-end-line="433" selection-end-column="0" />
-          <folding>
-            <element signature="e#639#1153#0#PHP" expanded="false" />
-            <marker date="1522864019999" expanded="true" signature="13394:13434" ph="SELECT * FRO... preset" />
-            <marker date="1522864019999" expanded="true" signature="14172:14214" ph="SELECT isext... user" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1847,19 +1823,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/AV.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="89" column="10" lean-forward="false" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/AV.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="89" column="8" lean-forward="false" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="127" column="24" lean-forward="false" selection-start-line="127" selection-start-column="24" selection-end-line="127" selection-end-column="24" />
+          <folding>
+            <element signature="e#639#1153#0#PHP" expanded="false" />
+            <marker date="1522933139117" expanded="true" signature="13415:13455" ph="SELECT * FRO... preset" />
+            <marker date="1522933139117" expanded="true" signature="14193:14235" ph="SELECT isext... user" />
+          </folding>
         </state>
       </provider>
     </entry>

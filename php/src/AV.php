@@ -87,7 +87,7 @@ class AV
 
         $this->iniLevel = $iniVolume;
 
-        //$this->on();
+        $this->on();
 
 
         /*//set Volume Level to min Vaule ad then to half

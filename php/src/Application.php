@@ -123,7 +123,9 @@ class Application implements MessageComponentInterface
                             echo "Test\n";
                             $r = $this->mikrofone[$val['id']]->mute($val['mute']);
                             $r['success'] ?: array_push($result, $r);
-                        }else if(!(is_null($this->mikrofone[$val['id']])) && is_float($val['value']) && $val['value'] >= 0 && $val['value'] <= 1){
+                        }
+
+                        if(!(is_null($this->mikrofone[$val['id']])) && is_float($val['value']) && $val['value'] >= 0 && $val['value'] <= 1){
                             $this->mikrofone[$val['id']]->mute(0);
 
                             $r = $this->mikrofone[$val['id']]->setVolume($val['value']);
