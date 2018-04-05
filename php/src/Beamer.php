@@ -49,6 +49,8 @@ class Beamer
 
         exec('gpio -g mode '.$gpio.' in');
 
+        exec('gpio -g mode '.$gpio.' down');
+
         $this->ir = new \IR();
 
         $this->isOn = false;
