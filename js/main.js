@@ -363,8 +363,8 @@ $(function () {
 			}
 		}
 
-		var sliders = $(container).find(".lichtSlider");
-		var valueFields = $(container).find(".lichtValue");
+		var sliders = $(".lichtBox").find(".lichtSlider");
+		var valueFields = $(".lichtBox").find(".lichtValue");
 
 		sliders.each(function (slider) {
 			noUiSlider.create(this, {
