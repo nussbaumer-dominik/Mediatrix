@@ -38,7 +38,7 @@ $(function () {
 		}
 	};
 	var scheinwerfer = {};
-	var socket = new WebSocket("wss://10.0.0.85/wss");
+	var socket = new WebSocket("wss://10.20.255.100/wss");
 	//var socket = new WebSocket("wss://10.0.0.144/wss");
 
 	//wirft eine Exception
