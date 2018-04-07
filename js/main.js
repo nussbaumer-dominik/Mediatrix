@@ -38,8 +38,8 @@ $(function () {
 		}
 	};
 	var scheinwerfer = {};
-	var socket = new WebSocket("wss://10.20.255.100/wss");
-	//var socket = new WebSocket("wss://10.0.0.144/wss");
+	//var socket = new WebSocket("wss://10.20.255.100/wss");
+	var socket = new WebSocket("wss://10.0.0.144/wss");
 
 	//wirft eine Exception
 	socket.onerror = error => {
@@ -295,7 +295,7 @@ $(function () {
 				max: parseInt(ini.ini.av.maxVolume)
 			}
 		});
-		slider.noUiSlider.on("slide", function (values, handle) {
+		slider.noUiSlider.on("change", function (values, handle) {
 			Slider(this);
 			document.getElementById("avSlider1Value").innerHTML =
 				values[handle];
