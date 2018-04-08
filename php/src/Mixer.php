@@ -17,7 +17,7 @@ class Mixer {
 
 	//Verbindung mit Mischpult herstellen
 	public function connectToScui($ipAddress) {
-		echo "Error";
+		echo "connectToScui";
 		$url = $ipAddress . "/socket.io/";
 		$req = curl_init();
 		curl_setopt($req, CURLOPT_URL, $url);
