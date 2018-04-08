@@ -565,7 +565,9 @@ $(function () {
 	}
 
 	var firstLiveStatus = () => {
+		console.log(ini.live.av);
 		if (ini.live.av.volume) {
+			console.log(ini.live.av.volume);
 			buildStatus("Master", ini.live.av.volume, "dB", "avStatus");
 		}
 		console.log(ini.live.beamer);
@@ -574,6 +576,7 @@ $(function () {
 				console.log("Beamer ein");
 				buildStatus("Beamer", "ein", "", "beamerStatus");
 			} else {
+				console.log("Beamer aus");
 				buildStatus("Beamer", "aus", "", "beamerStatus");
 			}
 		}
