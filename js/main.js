@@ -59,7 +59,8 @@ $(function () {
 		if (JSON.parse(event.data)["ini"]) {
 			console.log("das ist der ini-string: " + event.data);
 			ini = (JSON && JSON.parse(event.data)) || $.parseJSON(event.data);
-			presets = JSON.parse(ini.ini.presets);
+			presets = ini.ini.presets;
+			console.log(presets);
 			firstLiveStatus();
 			getPresets();
 			toggleBase();
