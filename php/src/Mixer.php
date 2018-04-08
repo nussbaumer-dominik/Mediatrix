@@ -76,6 +76,7 @@ class Mixer {
 			return array("success" => true, "err" => "");
 		} catch(Exception $ex) {
 			return array("success" => false, "err" => $ex);
+			echo "Alive fehlgeschlagen - Fehlermeldung: " . $ex;
 		}
 	}
 
