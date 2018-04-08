@@ -568,6 +568,7 @@ $(function () {
 		if (ini.live.av.volume) {
 			buildStatus("Master", ini.live.av.volume, "dB", "avStatus");
 		}
+		console.log(ini.live.beamer.on);
 		if (ini.live.beamer.on) {
 			if (ini.live.beamer.on) {
 				buildStatus("Beamer", "ein", "", "beamerStatus");
@@ -616,7 +617,6 @@ $(function () {
 
 	function liveStatus(live) {
 		let items = $(".statusGrid").contents();
-		console.log(items);
 		console.log(live);
 
 		for (item of items) {
