@@ -7,7 +7,8 @@ class Mixer {
 	//Variablen
 	protected $session_id;
 	protected $mixer;
-	protected $count = 0;
+	protected $count = 1;
+	protected $lastVolume = 0.0;
 	protected $command = "3:::SETD^i.";
 
 	//Konstruktor
@@ -63,8 +64,11 @@ class Mixer {
 			echo "im Try Block der mix-Funktion gelandet \n"; 
 			echo "die Lautstärke ist: " . $val . " und der Channel: " . $channel . "\n";
 			$this->mixer->send($this->command . $channel . ".mix^" . $val);
-			return array("success" => true, "err" => "");
 			echo "success";
+			if($channel == "0"){
+				$this->$lastVolume = $channel;
+			}
+			return array("success" => true, "err" => "");
 		} catch(Exception $ex) {
 			return array("success" => false, "err" => $ex);
 			echo "stellen der Lautstärke fehlgeschlagen - Fehlermeldung: " . $ex;
@@ -75,6 +79,8 @@ class Mixer {
 		try {
 			echo "Alive " . "3:::ALIVE\n";
 			$this->mixer->send("3:::ALIVE");
+			$this->mixer->send("3:::SETD^i." . $channel . ".mix^0");
+			echo "3:::SETD^i." . $channel . ".mix^0\n";
 			if($this->count % 3 == 1){
 				echo "Alive " . "3:::SNAPSHOTLIST^Default\n";
 				$this->mixer->send("3:::SNAPSHOTLIST^Default");
