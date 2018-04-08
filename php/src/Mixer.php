@@ -47,7 +47,7 @@ class Mixer {
 		echo $mute . "\n";
 		try {
 			echo "im Try Block der Mute-Funktion gelandet \n";
-			echo $this->command . $channel . ".mute^" . $mute;
+			echo "Der Mute Wert ist: " . $mute . "\n";
 			$this->mixer->send($this->command . $channel . ".mute^" . $mute);
 			return array("success" => true, "err" => "");
 		} catch(Exception $ex) {
@@ -60,7 +60,8 @@ class Mixer {
 	public function mix($val, $channel) {
 		echo "" . $val . " " . $channel . " ";
 		try {
-			echo "im Try Block " . $val . " " . $channel; 
+			echo "im Try Block der mix-Funktion gelandet \n"; 
+			echo "die Lautstärke ist: " . $val . " und der Channel: " . $channel . "\n";
 			$this->mixer->send($this->command . $channel . ".mix^" . $val);
 			return array("success" => true, "err" => "");
 			echo "success";
