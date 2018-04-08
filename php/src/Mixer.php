@@ -66,7 +66,7 @@ class Mixer {
 			$this->mixer->send($this->command . $channel . ".mix^" . $val);
 			echo "success";
 			if($channel == "0"){
-				$this->$lastVolume = $channel;
+				$this->lastVolume = $channel;
 			}
 			return array("success" => true, "err" => "");
 		} catch(Exception $ex) {
@@ -79,8 +79,8 @@ class Mixer {
 		try {
 			echo "Alive " . "3:::ALIVE\n";
 			$this->mixer->send("3:::ALIVE");
-			$this->mixer->send("3:::SETD^i." . $channel . ".mix^0");
-			echo "3:::SETD^i." . $channel . ".mix^0\n";
+			$this->mixer->send("3:::SETD^i.0.mix^" . $this->lastVolume);
+			echo "3:::SETD^i.0.mix^" . $this->lastVolume. "\n";
 			if($this->count % 3 == 1){
 				echo "Alive " . "3:::SNAPSHOTLIST^Default\n";
 				$this->mixer->send("3:::SNAPSHOTLIST^Default");
