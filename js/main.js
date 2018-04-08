@@ -61,7 +61,6 @@ $(function () {
 			ini = (JSON && JSON.parse(event.data)) || $.parseJSON(event.data);
 			presets = ini.ini.presets;
 			console.log(presets);
-			console.log(presets.dmx.length);
 			firstLiveStatus();
 			getPresets();
 			toggleBase();
