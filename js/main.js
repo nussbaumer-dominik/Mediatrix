@@ -569,7 +569,7 @@ $(function () {
 			buildStatus("Master", ini.live.av.volume, "dB", "avStatus");
 		}
 		console.log(ini.live.beamer.on);
-		if (ini.live.beamer.on) {
+		if (ini.live.beamer) {
 			if (ini.live.beamer.on) {
 				buildStatus("Beamer", "ein", "", "beamerStatus");
 			} else {
