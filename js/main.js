@@ -508,7 +508,7 @@ $(function () {
 			}).attr("data-preset", i);
 			console.log(presets[i].conf);
 			div.append("<h2>" + presets[i].name + "</h2>");
-			if (presets[i].conf.dmx) {
+			if (presets[i].conf.dmx.length) {
 				div.append(
 					"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
 					presets[i].conf.dmx.length +
