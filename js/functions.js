@@ -12,16 +12,48 @@ $(document).ready(function() {
     if (isMobile) {
       toggleMobileOptions(1);
     }
-    //über die Boxelemente iterieren
+
+    switch($(this).attr("data-boxbtn")){
+      case "1":
+        if($("#beamerBox").parents(".flex-container").length == 1 ){
+          $("#beamerBox").remove();
+        }else{
+          $(".flex-container").append($("#beamerTemplate").html());
+        }
+        break;
+      case "2":
+        if($("#avBox").parents(".flex-container").length == 1 ){
+          $("#avBox").remove();
+        }else{
+          $(".flex-container").append($("#avTemplate").html());
+          initSlider();
+        }
+        break;
+      case "3":
+        if($("#mikrofonBox").parents(".flex-container").length == 1 ){
+          $("#mikrofonBox").remove();
+        }else{
+          $(".flex-container").append($("#mikroTemplate").html());
+          initSlider();
+        }
+        break;
+      case "4":
+        if($("#lichtBox").parents(".flex-container").length == 1 ){
+          $("#lichtBox").remove();
+        }else{
+          $(".flex-container").append($("#lichtTemplate").html());
+          initSlider();
+        }
+        break;
+    }
+
+    /*//über die Boxelemente iterieren
     for (var el of $(".box")) {
       //If Box Button matches Box -> show or hide it
-      if (this.getAttribute("data-boxbtn") == el.getAttribute(
-          "data-box")) {
-        el.className = "box visible" == el.className ?
-          "box" : "box visible";
-
+      if (this.getAttribute("data-boxbtn") == el.getAttribute("data-box")) {
+        el.className = "box visible" == el.className ? "box" : "box visible";
       }
-    }
+    }*/
 
     if (this.getAttribute("data-boxbtn") == "5") {
       console.log("Präsentationsmodus einblenden");
@@ -102,5 +134,32 @@ $(document).ready(function() {
       case 1:
         $(".mobileOptions").addClass("toggleMobileOptions");
     }
+  }
+
+  function initSlider(){
+    var sliders = document.querySelectorAll(".slider");
+    sliders.forEach(function(slider) {
+      noUiSlider.create(slider, {
+        start: 0,
+        format: wNumb({
+          decimals: 0
+        }),
+        connect: [false, false],
+        direction: 'rtl',
+        orientation: 'vertical',
+        range: {
+          'min': 0,
+          'max': 100
+        }
+      });
+    });
+
+    sliders.forEach(function(slider, i) {
+      slider.noUiSlider.on('slide', function(values, handle) {
+        Slider(this);
+        $(".valueField")[i].innerHTML =
+          values[handle];
+      });
+    });
   }
 });

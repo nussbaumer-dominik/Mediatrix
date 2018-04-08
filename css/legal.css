@@ -7,15 +7,18 @@ html, body {
   -webkit-font-smoothing: antialiased;
   background: #fff;
   color: black;
-  font-size: 16px; }
+  font-size: 16px;
+}
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 .container {
   width: 980px;
   max-width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 header {
   width: 100%;
@@ -25,41 +28,63 @@ header {
   justify-content: center;
   align-items: center;
   background: #EF4C4F;
-  color: white; }
-  @media (min-height: 0) and (max-height: 840px) {
-    header {
-      height: 80vh;
-      padding-bottom: 25vh; } }
+  color: white;
+}
+
+@media (min-height: 0) and (max-height: 840px) {
+  header {
+    height: 80vh;
+    padding-bottom: 25vh;
+  }
+}
+
+header figure {
+  width: 100px;
+  position: absolute;
+  left: 25vw;
+}
+
+header figure a {
+  height: 76px;
+}
+
+@media (max-width: 40em) {
   header figure {
-    width: 100px;
-    position: absolute;
-    left: 25vw; }
-    header figure a {
-      height: 76px; }
-    @media (max-width: 40em) {
-      header figure {
-        display: none; } }
+    display: none;
+  }
+}
+
+header .wave_white {
+  position: absolute;
+  margin: auto;
+  left: -2px;
+  right: -2px;
+  bottom: 40vh;
+  display: block;
+  height: 180px;
+  width: 101vw;
+  background-image: url(../images/bg-waves-white.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  transform: rotateY(180deg);
+}
+
+@media (max-width: 40em) {
   header .wave_white {
-    position: absolute;
-    margin: auto;
-    left: -2px;
-    right: -2px;
-    bottom: 40vh;
-    display: block;
-    height: 180px;
-    width: 101vw;
-    background-image: url(../images/bg-waves-white.svg);
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-    transform: rotateY(180deg); }
-    @media (max-width: 40em) {
-      header .wave_white {
-        display: none; } }
-    @media (min-height: 0) and (max-height: 840px) {
-      header .wave_white {
-        bottom: 20vh; } }
+    display: none;
+  }
+}
+
+@media (min-height: 0) and (max-height: 840px) {
+  header .wave_white {
+    bottom: 20vh;
+  }
+}
 
 @media (max-width: 40em) {
   section {
-    padding: 30px 0 30px 0; } }
+    padding: 30px 0 30px 0;
+  }
+}
+/*# sourceMappingURL=legal.css.map */

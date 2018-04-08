@@ -1,236 +1,365 @@
 <!DOCTYPE html>
 <html lang="de-AT">
-    <head>
-        <!-- Metadaten -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" viewport-fit=cover>
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Mediatrix | Dashboard</title>
 
-        <!-- Stylesheets -->
-        <link rel="stylesheet" href="css/material.css">
-        <link rel="stylesheet" href="css/snackbar.css">
-        <link rel="stylesheet" href="css/vertical-slider.css">
-        <link rel="stylesheet" href="css/nouislider.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/dashboard.css">
+<head>
+  <!-- Metadaten -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" viewport-fit=cover>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mediatrix | Dashboard</title>
 
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/material.css">
+  <link rel="stylesheet" href="css/snackbar.css">
+  <link rel="stylesheet" href="css/vertical-slider.css">
+  <link rel="stylesheet" href="css/nouislider.min.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="css/dashboard.min.css">
 
-        <!-- Font -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
-        <!-- Favicon -->
-        <link rel="shortcut icon" href="images/Mediatrix_Hut_rot.png" type="image/x-icon">
-        <link rel="icon" href="images/Mediatrix_Hut_rot.png" type="image/x-icon">
-    </head>
-    <body>
-      <div class="parent">
-        <div class="modal-wrapper">
-        </div>
-        <div class="modal">
-          <a class="btn-close trigger" href="javascript:;"></a>
-          <div class="modal-content">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/Mediatrix_Hut_rot.png" type="image/x-icon">
+  <link rel="icon" href="images/Mediatrix_Hut_rot.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="parent">
+    <div class="modal-wrapper">
+    </div>
+    <div class="modal">
+      <a class="btn-close trigger" href=""></a>
+      <div class="modal-content">
+        <form action="">
+          <p>Derzeitige Konfiguration als Preset abspeichern?</p>
+          <input type="text" placeholder="Name des Presets" id="presetName">
+          <div class="formBtns">
+            <input type="submit" value="Bestätigen" id="savePreset">
+            <input type="button" value="Abbrechen">
           </div>
-        </div>
-        <div class="side-nav">
-          <div class="savePreset trigger">
-            <i class="fa fa-save" aria-hidden="true"></i>
-          </div>
-          <ul>
-            <li><a href="#" id="camera"><i class="fa fa-video-camera boxButtons" data-boxbtn="1" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-volume-up boxButtons" data-boxbtn="2" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-microphone boxButtons" data-boxbtn="3" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-lightbulb-o boxButtons" data-boxbtn="4" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-desktop boxButtons" data-boxbtn="5" aria-hidden="true"></i></a></li>
-          </ul>
-
-          <div class="avatar">
-            <div class="img"></div>
-            <div class="tooltip">
-              <div class="colorOptions">
-                <h3>Design</h3>
-                <div class="designOptionsWrapper">
-                  <div class="whiteBlue themeBtn" value="whiteBlue"></div>
-                  <div class="dark themeBtn" value="dark"></div>
-                  <div class="minimalLight themeBtn" value="minimalLight"></div>
-                  <div class="minimalDark themeBtn" value="minimalDark"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="content">
-          <div class="statusBox ">
-            <div class="statusGrid">
-                <div>Eingang:</div>
-                <div>Master: </div>
-                <div>Mikro 1:</div>
-                <div>Mikro 2:</div>
-                <div>Helligkeit: </div>
-                <div>Hager: </div>
-            </div>
-          </div>
-
-          <div class="flex-container flex">
-            <!-- Beamer Box -->
-            <div class="box" id="beamerBox" data-box="1">
-              <h1>Beamer</h1>
-              <nav class="menu">
-                <input type="checkbox" href="#" class="menu-open" id="power"/>
-                <label class="menu-open-button" for="power">
-                  <i class="fa fa-power-off" id="power" aria-hidden="true"></i>
-                </label>
-
-                <a href="#" class="menu-item" id="src">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <path d="M21 3.01H3c-1.1 0-2 .9-2 2V9h2V4.99h18v14.03H3V15H1v4.01c0 1.1.9 1.98 2 1.98h18c1.1 0 2-.88 2-1.98v-14c0-1.11-.9-2-2-2zM11 16l4-4-4-4v3H1v2h10v3z"/>
-                  </svg>
-                </a>
-                <a href="#" class="menu-item clickable" id="menu"> <i class="fa fa-bars"></i> </a>
-                <a href="#" class="menu-item clickable" id="up"> <i class="fa fa-caret-up"></i> </a>
-                <a href="#" class="menu-item clickable" id="right"> <i class="fa fa-caret-right"></i> </a>
-                <a href="#" class="menu-item clickable" id="down"> <i class="fa fa-caret-down"></i> </a>
-                <a href="#" class="menu-item clickable" id="left"> <i class="fa fa-caret-left"></i> </a>
-                <a href="#" class="menu-item clickable" id="ok"> OK </a>
-              </nav>
-            </div>
-
-            <!-- AV-Receiver Box -->
-            <div class="box" id="avBox" data-box="2">
-              <h1>AV-Receiver</h1>
-              <div class="flex-wrapper">
-                <!-- AV Slider 1 -->
-                <div id="avSlider1-wrapper">
-                  <div class="slider" id="avSlider1" data-type="av" data-id="0"></div>
-                  <div class="valueField" id="avSlider1Value"></div>
-                  <div class="textField">Master</div>
-                </div>
-                <div class="buttons">
-                  <ul>
-                    <li class="mode">Praesentation</li>
-                    <li class="mode">Musik</li>
-                    <li class="mode">Film</li>
-                    <li class="mode">Universal</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Mikrofon Box -->
-            <div class="box" id="mikrofonBox" data-box="3">
-              <h1>Mikrofone</h1>
-              <!-- Mikro 1 -->
-              <div class="flex-wrapper">
-                <div id="mikroSlider1-wrapper">
-                  <div class="slider" id="mikroSlider1" data-type="mixer" data-id="0"></div>
-                  <div class="valueField" id="mikroSlider1Value"></div>
-                  <div class="textField">Mikro 1</div>
-                </div>
-                <!-- Mikro 2 -->
-                <div id="mikroSlider2-wrapper">
-                  <div class="slider" id="mikroSlider2" data-type="mixer" data-id="1"></div>
-                  <div class="valueField" id="mikroSlider2Value"></div>
-                  <div class="textField">Mikro 2</div>
-                </div>
-
-                <!-- Master -->
-                <div id="mikroMasterSlider-wrapper">
-                  <div class="slider" id="mikroMasterSlider" data-type="mixer" data-id="2"></div>
-                  <div class="valueField" id="mikroMasterSliderValue"></div>
-                  <div class="textField">Master</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Licht Box -->
-            <div class="box" id="lichtBox" data-box="4">
-              <h1>Licht</h1>
-              <div class="flex-wrapper space-between">
-                <!-- Licht Slider 1 -->
-                <div id="lichtSlider1-wrapper">
-                  <div class="slider" id="lichtSlider1" data-type="licht" data-id="0"></div>
-                  <div class="valueField" id="lichtSlider1Value"></div>
-                  <div class="textField">Rot</div>
-                </div>
-
-                <!-- Licht Slider 2 -->
-                <div id="lichtSlider2-wrapper">
-                  <div class="slider" id="lichtSlider2" data-type="licht" data-id="1"></div>
-                  <div class="valueField" id="lichtSlider2Value"></div>
-                  <div class="textField">Grün</div>
-                </div>
-
-                <!-- Licht Slider 3 -->
-                <div id="lichtSlider3-wrapper">
-                  <div class="slider" id="lichtSlider3" data-type="licht" data-id="2"></div>
-                  <div class="valueField" id="lichtSlider3Value"></div>
-                  <div class="textField">Blau</div>
-                </div>
-
-                <!-- Licht Helligkeit Slider -->
-                <div id="lichtWeissSlider-wrapper">
-                  <div class="slider" id="lichtWeissSlider" data-type="licht" data-id="3"></div>
-                  <div class="blackout"></div>
-                  <div class="valueField" id="lichtWeissSliderValue"></div>
-                  <div class="textField">Weiß</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mobileOptions">
-            <div class="mobileBtn showStatus"></div>
-            <div class="mobileBtn saveAsPreset">
-              <div class="savePreset-mobile trigger">
-                <i class="fa fa-save" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="presentation">
-            <div class="preset">
-              <h2>Preset 1</h2>
-
-            </div>
-            <div class="preset">
-
-            </div>
-            <div class="preset">
-
-            </div>
-            <div class="preset">
-
-            </div>
-            <div class="preset">
-
-            </div>
-            <div class="preset">
-
-            </div>
-            <div class="preset">
-
-            </div>
-            <div class="preset">
-
-            </div>
-            <div class="preset">
-
-            </div>
-          </div>
-
-        </div>
-          <span style="display: none;" class="btn" data-toggle="snackbar" data-content="message" data-timeout=0>Snackbar</span>
+        </form>
       </div>
-      <!-- jQuery -->
-      <script src="js/jquery-3.2.1.min.js"></script>
-      <!--<script src="js/rangeslider.js"></script>-->
-      <script src="js/nouislider.min.js"></script>
-      <script src="js/snackbar.js"></script>
-      <script src="js/functions.js"></script>
-      <script src="js/main.js"></script>
-      <script src="js/themes.js"></script>
-      <script src=js/wNumb.js></script>
-    </body>
+    </div>
+    <div class="side-nav">
+      <div class="savePreset trigger">
+        <i class="fas fa-save" aria-hidden="true"></i>
+      </div>
+      <ul>
+        <li class="boxButtons" data-boxbtn="1">
+          <a href="#">
+            <i class="fas fa-video" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="boxButtons" data-boxbtn="2">
+          <a href="#">
+            <i class="fas fa-volume-up" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="boxButtons" data-boxbtn="3">
+          <a href="#">
+            <i class="fas fa-microphone" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="boxButtons" data-boxbtn="4">
+          <a href="#">
+            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="boxButtons" data-boxbtn="5">
+          <a href="#">
+            <i class="fas fa-desktop" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+
+      <div class="avatar">
+        <div class="img">
+          <i class="fas fa-user" aria-hidden="true"></i>
+        </div>
+        <div class="tooltip">
+          <div class="extendedMode">
+            <h3>Modus</h3>
+            <input class="tgl tgl-flip" id="cb" type="checkbox" />
+            <label class="tgl-btn" data-tg-off="Standard" data-tg-on="Erweitert" for="cb"></label>
+          </div>
+          <div class="colorOptions">
+            <h3>Design</h3>
+            <div class="designOptionsWrapper">
+              <div class="whiteBlue themeBtn" value="whiteBlue"></div>
+              <div class="dark themeBtn" value="dark"></div>
+              <div class="minimalLight themeBtn" value="minimalLight"></div>
+              <div class="minimalDark themeBtn" value="minimalDark"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="statusBox ">
+        <div class="statusGrid"></div>
+      </div>
+
+      <div class="flex-container flex">
+
+      </div>
+
+      <div class="mobileOptions">
+        <div class="mobileBtn saveAsPreset">
+          <div class="savePreset-mobile trigger">
+            als Preset abspeichern
+          </div>
+        </div>
+      </div>
+
+      <div class="presentation">
+        <div class="preset" data-preset="default1">
+          <h2>Zwei Personen</h2>
+          <div>
+            <i class="fas fa-lightbulb"></i>
+            <h3>2</h3>
+          </div>
+          <div>
+            <i class="fas fa-video"></i>
+            <h3>HDMI</h3>
+          </div>
+          <div>
+            <i class="fas fa-volume-up"></i>
+            <h3>Praesentation</h3>
+          </div>
+          <div>
+            <i class="fas fa-microphone"></i>
+            <h3>2</h3>
+          </div>
+        </div>
+        <div class="preset" data-preset="default2">
+          <h2>Eine Person</h2>
+          <div>
+            <i class="fas fa-lightbulb"></i>
+            <h3>2</h3>
+          </div>
+          <div>
+            <i class="fas fa-video"></i>
+            <h3>VGA</h3>
+          </div>
+          <div>
+            <i class="fas fa-volume-up"></i>
+            <h3>Praesentation</h3>
+          </div>
+          <div>
+            <i class="fas fa-microphone"></i>
+            <h3>1</h3>
+          </div>
+        </div>
+        <div class="preset" data-preset="default3">
+          <h2>Film</h2>
+          <div>
+            <i class="fas fa-lightbulb"></i>
+            <h3>0</h3>
+          </div>
+          <div>
+            <i class="fas fa-video"></i>
+            <h3>HDMI</h3>
+          </div>
+          <div>
+            <i class="fas fa-volume-up"></i>
+            <h3>Film</h3>
+          </div>
+          <div>
+            <i class="fas fa-microphone"></i>
+            <h3>0</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <span style="display: none;" class="btn" data-toggle="snackbar" data-content="message" data-timeout=0>Snackbar</span>
+  </div>
+
+  <!-- Templates -->
+  <!-- Beamer Box -->
+  <script type="text/template" class="template" id="beamerTemplate">
+    <div class="box" id="beamerBox" data-box="1">
+      <h1>Beamer</h1>
+      <nav class="menu">
+        <input type="checkbox" href="#" class="menu-open" id="power" />
+        <label class="menu-open-button" data-type="beamer" data-value="power" data-power="0" for="power">
+          <i class="fas fa-power-off" id="power" aria-hidden="true"></i>
+        </label>
+
+        <a href="#" class="menu-item" id="src" data-type="beamer" data-value="src">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M21 3.01H3c-1.1 0-2 .9-2 2V9h2V4.99h18v14.03H3V15H1v4.01c0 1.1.9 1.98 2 1.98h18c1.1 0 2-.88 2-1.98v-14c0-1.11-.9-2-2-2zM11 16l4-4-4-4v3H1v2h10v3z"
+            />
+          </svg>
+        </a>
+        <a href="#" class="menu-item clickable" id="freeze" data-type="beamer" data-value="freeze">
+          <i class="fas fa-snowflake"></i>
+        </a>
+        <a href="#" class="menu-item clickable" id="blackout" data-type="beamer" data-value="blackout">
+          <i class="fas fa-moon"></i>
+        </a>
+      </nav>
+    </div>
+  </script>
+
+  <!-- Mikrofon Box -->
+  <script type="text/template" class="template" id="mikroTemplate">
+    <div class="box" id="mikrofonBox" data-box="3">
+      <h1>Mikrofone</h1>
+      <!-- Mikro 1 -->
+      <div class="flex-wrapper">
+        <div id="mikroSliderWrapper">
+          <div class="slider" id="mikroSlider1" data-type="mixer" data-id="0"></div>
+          <button class="mute" data-type="mixer" data-id="0" data-state="0">
+            <i class="fas fa-volume-off"></i>
+          </button>
+          <div class="valueField" id="mikroSlider1Value">0</div>
+          <div class="textField">Mikro 1</div>
+        </div>
+        <!-- Mikro 2 -->
+        <div id="mikroSliderWrapper">
+          <div class="slider" id="mikroSlider2" data-type="mixer" data-id="1"></div>
+          <button class="mute" data-type="mixer" data-id="1" data-state="0">
+            <i class="fas fa-volume-off"></i>
+          </button>
+          <div class="valueField" id="mikroSlider2Value">0</div>
+          <div class="textField">Mikro 2</div>
+        </div>
+        <!-- Mikro 3
+            <div id="mikroSliderWrapper">
+              <div class="slider" id="mikroSlider3" data-type="mixer" data-id="2"></div>
+              <div class="valueField" id="mikroSlider3Value">0</div>
+              <div class="textField">Mikro 3</div>
+            </div>-->
+        <!-- Line -->
+        <div id="mikroSliderWrapper">
+          <div class="slider" id="lineSlider" data-type="mixer" data-id="l"></div>
+          <div class="valueField" id="lineSliderValue">0</div>
+          <div class="textField">Line L/R</div>
+        </div>
+
+        <!-- Master -->
+        <div id="mikroMasterSlider-wrapper">
+          <div class="slider" id="mikroMasterSlider" data-type="mixer" data-id="m"></div>
+          <div class="valueField" id="mikroMasterSliderValue">0</div>
+          <div class="textField">Master</div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <!-- AV-Receiver Box -->
+  <script type="text/template" class="template" id="avTemplate">
+    <div class="box" id="avBox" data-box="2">
+      <h1>AV-Receiver</h1>
+      <div class="flex-wrapper">
+        <!-- AV Slider 1 -->
+        <div id="avSliderWrapper">
+          <div class="slider" id="avSlider1" data-type="av" data-id="0" data-col="hue"></div>
+          <div class="valueField" id="avSlider1Value">0</div>
+          <div class="textField">Master</div>
+        </div>
+        <div class="buttons">
+          <ul id="avModes">
+          </ul>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <!-- Licht Box -->
+  <!-- RGBW -->
+  <script type="text/template" class="template" id="rgbwTemplate">
+    <div class="box lichtBox" data-box="4">
+      <h1>Scheinwerfer {:lightNumber}</h1>
+      <div class="flex-wrapper space-between">
+        <!-- Licht Slider 1 -->
+        <div class="lichtSliderWrapper">
+          <div class="slider lichtSlider" data-type="dmx" data-col="r" data-id="{:id}" data-val="0"></div>
+          <div class="valueField lichtValue">0</div>
+          <div class="textField">Rot</div>
+        </div>
+
+        <!-- Licht Slider 2 -->
+        <div class="lichtSliderWrapper">
+          <div class="slider lichtSlider" data-type="dmx" data-col="g" data-id="{:id}" data-val="0"></div>
+          <div class="valueField lichtValue">0</div>
+          <div class="textField">Grün</div>
+        </div>
+
+        <!-- Licht Slider 3 -->
+        <div class="lichtSliderWrapper">
+          <div class="slider lichtSlider" data-type="dmx" data-col="b" data-id="{:id}" data-val="0"></div>
+          <div class="valueField lichtValue">0</div>
+          <div class="textField">Blau</div>
+        </div>
+
+        <!-- Licht Helligkeit Slider -->
+        <div class="lichtWeissSliderWrapper">
+          <div class="slider lichtSlider" data-type="dmx" data-col="w" data-id="{:id}" data-val="0"></div>
+          <div class="valueField lichtValue">0</div>
+          <div class="textField">Weiß</div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <!-- Licht Box -->
+  <!-- Hue -->
+  <script type="text/template" class="template" id="hueTemplate">
+    <div class="box lichtBox" data-box="4">
+      <h1>Scheinwerfer {:lightNumber}</h1>
+      <div class="flex-wrapper space-between">
+        <!-- Licht Slider 1 -->
+        <div id="lichtSlider1Wrapper">
+          <div class="slider lichtSlider" data-type="dmx" data-id="{:id}" data-col="hue"></div>
+          <div class="valueField lichtValue">0</div>
+          <div class="textField">Helligkeit</div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <!-- Licht Box -->
+  <!-- Rgb -->
+  <script type="text/template" class="template" id="rgbTemplate">
+    <div class="box lichtBox" data-box="4">
+      <h1>Scheinwerfer {:lightNumber}</h1>
+      <div class="flex-wrapper space-between" id="{{:id}}">
+        <!-- Licht Slider 1 -->
+        <div class="lichtSliderWrapper">
+          <div class="slider lichtSlider" data-type="dmx" data-col="r" data-id="{:id}" data-val="0"></div>
+          <div class="valueField lichtValue">0</div>
+          <div class="textField">Rot</div>
+        </div>
+
+        <!-- Licht Slider 2 -->
+        <div class="lichtSliderWrapper">
+          <div class="slider lichtSlider" data-type="dmx" data-col="g" data-id="{:id}" data-val="0"></div>
+          <div class="valueField lichtValue">0</div>
+          <div class="textField">Grün</div>
+        </div>
+
+        <!-- Licht Slider 3 -->
+        <div class="lichtSliderWrapper">
+          <div class="slider lichtSlider" data-type="dmx" data-col="b" data-id="{:id}" data-val="0"></div>
+          <div class="valueField lichtValue">0</div>
+          <div class="textField">Blau</div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <!-- jQuery -->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/nouislider.min.js"></script>
+  <script src="js/snackbar.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/themes.js"></script>
+  <script src=js/wNumb.js></script>
+</body>
+
 </html>

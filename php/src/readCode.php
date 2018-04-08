@@ -7,14 +7,14 @@
  */
 namespace Mediatrix;
 
-echo "Reading IR-Code";
+echo "Reading IR-Code\n\n";
 
 class readCode{
     private $ir;
 
     public function __construct()
     {
-        //$this->ir = new \IR();
+        $this->ir = new \IR();
     }
 
     function modes()
@@ -24,7 +24,7 @@ class readCode{
         $modes = $this->ir::getMode();
 
         if (!strlen($modes) > 0) {
-            throw new \Exception("IR-Device is bussy. Try again later, or disconnect and reconnect the device.\n");
+            throw new \Exception("IR-Device is busy. Try again later, or disconnect and reconnect the device.\n");
         }
 
         $modesArray = explode("\\", $modes);
@@ -65,21 +65,39 @@ try {
     $possibleKeys['av']['presets'] = array_keys((array)$json->av->presets);
     $possibleKeys['av']['volume'] = array_keys((array)$json->av->volume);
     $possibleKeys['av']['sources'] = array_keys((array)$json->av->sources);
+    $possibleKeys['av']['sources'] = "power";
 
     array_push($possibleKeys['beamer'], "power");
-    $possibleKeys['beamer']['sources'] = array_keys((array)$json->beamer->sources);
+    array_push($possibleKeys['beamer'], "freeze");
+    array_push($possibleKeys['beamer'], "blackout");
+    $possibleKeys['beamer']['source'] = array_keys((array)$json->beamer->source);
 
-    var_dump($possibleKeys);
+    $pK = array();
 
     $i = 0;
+
     foreach ($possibleKeys as $k1 => $v1){
         printf("[*] %s:\n", $k1);
         foreach ($v1 as $k2 => $v2) {
-            printf("[*]  |  %s:\n", $k2);
-            foreach ($v2 as $v3) {
-                printf("[%d]  |   |  %s\n", $i, $v3);
+            if(is_array($v2)){
+                printf("[*]  |  %s:\n", $k2);
+                foreach ($v2 as $v3) {
+                    printf("[%d]  |   |  %s\n", $i, $v3);
+                    $pK[$i][$k1][$k2][$v3] = "";
+                    $i++;
+                }
+            }else{
+                printf("[%d]  |  %s\n",$i, $v2);
+                $pK[$i][$k1][$v2] = "";
                 $i++;
             }
+        }
+    }
+
+    while(true){
+        $key = readline("\nWhich button do you want to read in? ");
+        if(preg_match('/^[0-9]+$/',$key)){
+            break;
         }
     }
 
@@ -87,31 +105,38 @@ try {
     $class = new readCode();
     $mode = $class->modes();
 
-    while(true){
-        echo "\nReading Code A:\n";
-        $codes['a'] = $class->read($mode);
+    $choice = 0;
 
-        if(strlen($codes['a'])>0){
-            echo "Code A read\n";
-            break;
+    while(true){
+
+        if($choice == 0 || $choice ==1){
+            while(true){
+                echo "\nReading Code A:\n";
+                $codes['a'] = $class->read($mode);
+
+                if(strlen($codes['a'])>0){
+                    echo "Code A read\n\n";
+                    break;
+                }
+
+                readline("Couldn't read a Code. Press ENTER to try again or press CRTL+C");
+
+            }
         }
 
-        readline("Couldn't read a Code. Press ENTER to try again or press CRTL+C");
+        if($choice == 0 || $choice == 2) {
+            while (true) {
+                echo "\nReading Code B:\n";
+                $codes['b'] = $class->read($mode);
 
-    }
+                if (strlen($codes['b']) > 0) {
+                    echo "Code B read\n\n";
+                    break;
+                }
 
-    while(true){
-        while(true){
-            echo "\nReading Code B:\n";
-            $codes['b'] = $class->read($mode);
+                readline("Couldn't read a Code. Press ENTER to try again or press CRTL+C");
 
-            if(strlen($codes['b'])>0){
-                echo "Code A read\n";
-                break;
             }
-
-            readline("Couldn't read a Code. Press ENTER to try again or press CRTL+C");
-
         }
 
 
@@ -120,9 +145,41 @@ try {
             break;
         }
 
-        readline("The Codes read are not valid. Press ENTER to try again or press CRTL+C");
+        echo "The Codes read are not valid.\n\nCodes:\n";
+
+        foreach($codes as $k => $v){
+            printf("Code %s: %s\n",strtoupper($k), $v);
+        }
+
+        echo ("What do you want to do?\n0.....read both again\n1.....read Code A again\n2.....read Code B again\n");
+        $choice = readline("");
     }
+
+    fwrite($myfile,json_encode($json));
+
+    foreach ($pK[$key] as $k1 => $v1){
+        foreach ($v1 as $k2 => $v2){
+            if(!$v2 == '') {
+                foreach ($v2 as $k3 => $v3) {
+                    $json->$k1->$k2->$k3 = $codes;
+                }
+            }else{
+                $json->$k1->$k2 = $codes;
+            }
+        }
+    }
+
+    $json = json_encode($json,JSON_PRETTY_PRINT);
+
+    ftruncate($myfile,0);
+    rewind($myfile);
+    fwrite($myfile,$json);
+
 }
 catch (\Exception $ex){
     echo $ex->getMessage();
+}
+finally
+{
+    fclose($myfile);
 }

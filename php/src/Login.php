@@ -32,8 +32,6 @@ class Login
     {
         //$this->ldap = new \Adldap\Adldap($this->config);
         $this->key = base64_decode(Key::getKey());
-
-
     }
 
     /**
@@ -71,11 +69,37 @@ class Login
 
                 $sqlite = new \SQLite3("../../sqlite/db.sqlite");
 
-                $stm = $sqlite->prepare("INSERT INTO USER(id) VALUES (:id)");
+                $stm = $sqlite->prepare("SELECT password FROM user WHERE id = :id");
 
                 $stm->bindParam(":id", $username);
 
-                $stm->execute();
+                $result = $stm->execute();
+
+                $hasResult = false;
+
+                while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
+                    $hasResult = true;
+                    password_verify($password,$res['password']) or die('{"success":false,"err":"Wrong Password"}');
+                }
+
+                $result->finalize();
+
+                $stm->close();
+
+                if(!$hasResult) {
+                    $password = password_hash($password,PASSWORD_DEFAULT);
+
+                    $stm = $sqlite->prepare("INSERT INTO USER(id,password) VALUES (:id,:password)");
+
+                    $stm->bindParam(":id", $username);
+                    $stm->bindParam(":password", $password);
+
+                    $stm->execute();
+
+                    $stm->close();
+                }
+
+                $sqlite->close();
 
                 $jwt = JWT::encode($data, $this->key,'HS256');
 
@@ -119,4 +143,10 @@ class Login
 
 $l = new Login();
 
-$l->login('3827','k?2Z=_3Q');
+preg_match('/^[A-Za-z0-9]+$/',$_POST['username']) or die('{"success":false,"err":"Username not valid"}');
+preg_match('/^[A-Za-z0-9\?\_\=\)\(\/\&\%\$\§\"\!\{\[\]\}\\\+\#\'\*]+$/',$_POST['password']) or die('{"success":false,"err":Password not valid"}');
+
+$username = $_POST['username'];
+$passwd = $_POST['password'];
+
+$l->login($_POST['username'],$_POST['password']);

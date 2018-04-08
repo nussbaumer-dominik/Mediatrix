@@ -6,7 +6,7 @@
     },
     "require": {
         "cboden/ratchet": "^0.4.0",
-        "adldap2/adldap2": "^8.0",
-        "firebase/php-jwt": "^5.0"
+        "firebase/php-jwt": "^5.0",
+        "textalk/websocket": "1.2.*"
     }
 }

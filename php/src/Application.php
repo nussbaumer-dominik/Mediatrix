@@ -26,9 +26,11 @@ class Application implements MessageComponentInterface
     private $defaultPresets;
     private $registerd;
     private $av;
+    protected $mixer;
 
-    public function __construct()
+    public function __construct($mixer)
     {
+        $this->mixer = $mixer;
         $this->clients = new \SplObjectStorage;
         $this->iniMe();
     }
@@ -51,7 +53,7 @@ class Application implements MessageComponentInterface
      */
     public function onMessage(ConnectionInterface $from, $msg)
     {
-        echo "Got Massage: {$msg} from: {$from->resourceId}\n";
+        echo "Got Message: {$msg} from: {$from->resourceId}\n";
 
         try {
 
@@ -76,6 +78,7 @@ class Application implements MessageComponentInterface
             $jwt = JWT::decode($jwt, $this->key, array("HS256"));
 
 
+
             //handle registration and send ini string
             if (isset($commands["ini"])) {
                 $from->send(json_encode($this->addLiveStatus($this->getIniString($jwt->data->userName))));
@@ -96,8 +99,47 @@ class Application implements MessageComponentInterface
                 if (isset($commands["dmx"])) {
 
 
-                        $r = $this->sendDmx($commands["dmx"]);
+                    $r = $this->sendDmx($commands["dmx"]);
+                    $r->success ?: array_push($result, $r);
+
+                }
+
+                /*
+                 * Mikrofone
+                 */
+                if(isset($commands['mixer'])) {
+
+                    foreach ($commands['mixer']['mikrofone'] as $val){
+
+                        var_dump($val);
+
+                        if(isset($val['mute']) && !(is_null($this->mikrofone[$val['id']]))){
+                            echo "Test\n";
+                            $r = $this->mikrofone[$val['id']]->mute($val['mute']);
+                            $r['success'] ?: array_push($result, $r);
+                        }
+
+                        if(!(is_null($this->mikrofone[$val['id']])) && is_float($val['value']) && $val['value'] >= 0 && $val['value'] <= 1){
+                            $this->mikrofone[$val['id']]->mute(0);
+
+                            $r = $this->mikrofone[$val['id']]->setVolume($val['value']);
+                            $r['success'] ?: array_push($result, $r);
+                        }else {
+                            array_push($result, array('success' => false,'err' => 'Mikrofon id not valid'));
+                        }
+                    }
+
+                    if(isset($commands['mixer']['master']) && is_float($commands['mixer']['master']) && $commands['mixer']['master'] >= 0 &&
+                        $commands['mixer']['master'] <= 1){
+                        $r = $this->mixer->setMasterVolume($commands['mixer']['master']);
                         $r['success'] ?: array_push($result, $r);
+                    }
+
+                    if(isset($commands['mixer']['line']) && is_float($commands['mixer']['line']) && $commands['mixer']['line'] >= 0 &&
+                        $commands['mixer']['line'] <= 1){
+                        $r = $this->mixer->setLineVolume($commands['mixer']['line']);
+                        $r['success'] ?: array_push($result, $r);
+                    }
 
                 }
 
@@ -114,12 +156,22 @@ class Application implements MessageComponentInterface
                     }
 
                     if (isset($beamerCom['off'])) {
-                        $r = $this->beamer->off();
+                        $r = (object) $this->beamer->off();
                         $r->success ?: array_push($result, $r);
                     }
 
                     if (isset($beamerCom['source'])) {
                         $r = $this->beamer->changeSource();
+                        $r->success ?: array_push($result, $r);
+                    }
+
+                    if (isset($beamerCom['freeze'])) {
+                        $r = $this->beamer->freeze();
+                        $r->success ?: array_push($result, $r);
+                    }
+
+                    if (isset($beamerCom['blackout'])) {
+                        $r = $this->beamer->blackout();
                         $r->success ?: array_push($result, $r);
                     }
 
@@ -162,7 +214,7 @@ class Application implements MessageComponentInterface
                  * No Command recognized
                  * TODO
                  */
-                if (!(isset($commands["dmx"]) || isset($commands["beamer"]) || isset($commands["av"]))) {
+                if (!(isset($commands["dmx"]) || isset($commands["beamer"]) || isset($commands["av"]) || isset($commands["mixer"]))) {
                     $from->send(json_encode($this->addLiveStatus(array("success" => false, "err" => "Unrecognized Command"))));
                 }
 
@@ -233,7 +285,7 @@ class Application implements MessageComponentInterface
     private function sendDmx(array $dmx)
     {
         $result = array();
-        array_push($result, array("success" => true, "err" => ""));
+        array_push($result, (object) array("success" => true, "err" => ""));
 
 
         if (isset($dmx["blackout"])) {
@@ -263,11 +315,11 @@ class Application implements MessageComponentInterface
 
         foreach ($dmx as $dev) {
 
-            var_dump($dev);
-            print count($dev);
+            //check if Scheinwerfer id is valid
+            if (is_array($dev) && !(is_null($this->scheinwerfer[$dev['id']]))) {
 
-            if (is_array($dev)) {
-                if(count($dev) < 3) {
+                //check if scheinwerfer has less than 3 channels
+                if(count($dev)-1 < 3 && count($this->scheinwerfer[$dev['id']]->getChannels()) < 3) {
 
                     if (preg_match('/[0-9]+/', $dev['hue']) && 0 <= $dev['hue'] && $dev['hue'] <= 255) {
 
@@ -278,19 +330,28 @@ class Application implements MessageComponentInterface
                         }
                     }
 
-                }elseif (preg_match('/[0-9]+/', $dev['r']) && 0 <= $dev['r'] && $dev['r'] <= 255 &&
-                    preg_match('/[0-9]+/', $dev['g']) && 0 <= $dev['g'] && $dev['g'] <= 255 &&
-                    preg_match('/[0-9]+/', $dev['b']) && 0 <= $dev['b'] && $dev['b'] <= 255){
+                }else if (count($this->scheinwerfer[$dev['id']]->getChannels()) == count($dev)-1){
 
-                    $send = $dev;
-                    unset($send['id']);
+                    if(preg_match('/[0-9]+/', $dev['r']) && 0 <= $dev['r'] && $dev['r'] <= 255 &&
+                        preg_match('/[0-9]+/', $dev['g']) && 0 <= $dev['g'] && $dev['g'] <= 255 &&
+                        preg_match('/[0-9]+/', $dev['b']) && 0 <= $dev['b'] && $dev['b'] <= 255) {
 
-                    $r = $this->scheinwerfer[$dev["id"]]->dimmen($send);
+                        $send = $dev;
+                        unset($send['id']);
 
-                    if (!$r->success) {
-                        array_push($result, $r);
+                        $r = $this->scheinwerfer[$dev["id"]]->dimmen($send);
+
+                        if (!$r->success) {
+                            array_push($result, $r);
+                        }
                     }
+                }else{
+                    array_push($result, (object) array('success' => false,'err' => 'Wrong number of channels'));
                 }
+
+            }else
+            {
+                array_push($result, (object) array('success' => false,'err' => 'Scheinwerfer id not valid'));
             }
         }
 
@@ -363,10 +424,10 @@ class Application implements MessageComponentInterface
 
         $hasResults = false;
 
-            while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
-                $hasResults = true;
-                array_push($presets, $res['json']);
-            }
+        while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
+            $hasResults = true;
+            array_push($presets, array('name' => $res['name'], 'conf' => json_decode($res['json'])));
+        }
 
         $presets = $hasResults? $presets:$this->defaultPresets;
 
@@ -378,6 +439,25 @@ class Application implements MessageComponentInterface
 
             $presets[$key] = $value;
         }
+
+        /*
+         * Extended
+         */
+        $isExtended = null;
+
+        $sqlite = new \SQLite3("../sqlite/db.sqlite");
+
+        $stm = $sqlite->prepare('SELECT isextendet FROM user WHERE id = :id');
+        $stm->bindParam(':id', $usr);
+
+        $result = $stm->execute();
+
+        while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
+            $isExtended = boolval($res['isextendet']);
+        }
+
+        $presets = $hasResults? $presets:$this->defaultPresets;
+
 
 
         /*
@@ -411,17 +491,26 @@ class Application implements MessageComponentInterface
 
         $av['minVolume'] = $this->av->getMinVolume();
 
+        /*
+         * Mikrofon
+         */
+        $mikrofone = array_keys($this->mikrofone);
+
 
         return array("ini" => array(
             "presets" => $presets,
             "dmx" => $dmx,
-            "av" => $av
+            "av" => $av,
+            "isExtended" => $isExtended,
+            "mixer" => $mikrofone
         ));
     }
 
 
     private function addLiveStatus($result)
     {
+
+        $result = (array) $result;
 
         $live = array(
             'av' => array(
@@ -440,12 +529,11 @@ class Application implements MessageComponentInterface
 
         $live['beamer'] = array('on' => $this->beamer->isOn());
 
-
-        $result['live'] = $live;
-
         foreach ($this->clients as $client){
             $client->send(json_encode(array('live' => $live)));
         }
+
+        $result['live'] = $live;
 
         return $result;
     }
@@ -473,28 +561,57 @@ class Application implements MessageComponentInterface
             foreach ($ini["dmx"] as $entry) {
 
                 if (isset($entry["rot"])) {
+
                     if (count($entry) == 4) {
+
+                        if(isset($entry['weiss'])) {
+                            array_push($scheinwerfer,
+                                new RGBWScheinwerfer(array(
+                                        "r" => $entry["rot"] - 1,
+                                        "g" => $entry["gruen"] - 1,
+                                        "b" => $entry["blau"] - 1,
+                                        "w" => $entry["weiss"] - 1
+                                    )
+                                )
+                            );
+
+                        }elseif(isset($entry['hue'])) {
+                            array_push($scheinwerfer,
+                                new RGBWScheinwerfer(array(
+                                        "r" => $entry["rot"] - 1,
+                                        "g" => $entry["gruen"] - 1,
+                                        "b" => $entry["blau"] - 1,
+                                        "hue" => $entry["hue"] - 1
+                                    )
+                                )
+                            );
+                        }
+
+                    }else if(count($entry) == 3) {
+
+                        array_push($scheinwerfer,
+                            new RGBWScheinwerfer(array(
+                                    "r" => $entry["rot"] - 1,
+                                    "g" => $entry["gruen"] - 1,
+                                    "b" => $entry["blau"] - 1
+                                )
+                            )
+                        );
+                    }elseif (count($entry) == 5){
+
                         array_push($scheinwerfer,
                             new RGBWScheinwerfer(array(
                                     "r" => $entry["rot"] - 1,
                                     "g" => $entry["gruen"] - 1,
                                     "b" => $entry["blau"] - 1,
-                                    "w" => $entry["weiss"] - 1
-                                )
-                            )
-                        );
-                    } else {
-                        array_push($scheinwerfer,
-                            new RGBWScheinwerfer(array(
-                                    "r" => $entry["rot"] - 1,
-                                    "g" => $entry["gruen"] - 1,
-                                    "b" => $entry["blaut"] - 1
+                                    "w" => $entry["weiss"] - 1,
+                                    "hue" => $entry["hue"] - 1
                                 )
                             )
                         );
                     }
 
-                } else {
+                }else {
 
                     array_push($scheinwerfer,
                         new Scheinwerfer(array(
@@ -508,11 +625,21 @@ class Application implements MessageComponentInterface
 
             $this->scheinwerfer = $scheinwerfer;
 
+            /*
+             * Mikrofon
+             */
+            $mikrofone = array();
+
+            foreach ($ini['mixer']['mikrofon'] as $key => $mic){
+                $mikrofone[$key] =new Mikrofon($this->mixer,$mic['channel']);
+            }
+
+            $this->mikrofone = $mikrofone;
 
             /*
              * BEAMER:
              */
-            $this->beamer = new Beamer($ini['beamer']['source'], $ini['beamer']['power']);
+            $this->beamer = new Beamer($ini['beamer']['source'], $ini['beamer']['power'],$ini['beamer']['freeze'],$ini['beamer']['blackout'],$ini['beamer']['gpio']);
 
 
             /*
@@ -520,7 +647,7 @@ class Application implements MessageComponentInterface
              */
             $av = $ini['av'];
 
-            $this->av = new AV($av['sources'], $av['volume'], $av['presets'], $av['dbPerClick'], $av['maxVolume'], $av['minVolume']);
+            $this->av = new AV($av['sources'], $av['volume'], $av['presets'], $av['dbPerClick'], $av['maxVolume'], $av['minVolume'], $av['gpio'], $av['power'],$av['iniVolume']);
 
 
         } catch (\Exception $ex) {

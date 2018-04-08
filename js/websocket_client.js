@@ -15,8 +15,8 @@ window.onload = function() {
     }
   });
 
-  socket = new WebSocket(
-    'ws://10.10.2.1/socket.io/1/websocket/' + sessId);
+  socket = new WebSocket('ws://10.10.2.1/socket.io/1/websocket/' + sessId);
+  //socket = new WebSocket('wss://mediatrix.darktech.org/wss');
   console.log(socket);
 
   // Handle any errors that occur
@@ -46,20 +46,13 @@ window.onload = function() {
   };
 
   // Send a message when the form is submitted
-  form.onsubmit = function(e) {
+  form.onSubmit = function(e) {
     e.preventDefault();
-
-    // Retrieve the message from the textarea
     var message = messageField.value;
-
-    // Send the message through the WebSocket
     socket.send(message);
-
-    // Add the message to the messages list.
     messagesList.innerHTML +=
       '<li class="sent"><span>Sent: </span>' + message + '</li>';
 
-    // Clear out the message field.
     messageField.value = '';
 
     return false;
