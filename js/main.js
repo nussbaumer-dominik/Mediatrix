@@ -424,15 +424,14 @@ $(function () {
 				console.log("success: " + data);
 				addPreset(currentConf);
 				presets.push(currentConf);
-				$.snackbar({
-					content: "Das Preset " +
-						$("#presetName").val() +
-						" wurde erfolgreich erstellt"
-				});
+				let message = "Das Preset " + $("#presetName").val() + " wurde erfolgreich erstellt";
+				outputMessage(message);
 			})
 			.fail(data => {
 				console.log("error: ");
 				console.log(data);
+				let message = "Das Preset " + $("#presetName").val() + " konnte nicht erfolgreich erstellt werden";
+				outputMessage(message);
 			});
 	});
 
@@ -574,11 +573,8 @@ $(function () {
 				console.log("success: " + data);
 				addPreset(currentConf);
 				presets.push(currentConf);
-				$.snackbar({
-					content: "Das Preset " +
-						$("#presetName").val() +
-						" wurde erfolgreich erstellt"
-				});
+				let message = "Das Preset " + $("#presetName").val() + " wurde erfolgreich erstellt";
+				outputMesssage(message);
 			})
 			.fail(data => {
 				console.log("error: ");
@@ -640,7 +636,7 @@ $(function () {
 		$(".statusGrid").append(div);
 	}
 
-	function outputError(message) {
+	function outputMessage(message) {
 		$.snackbar({
 			content: message
 		});
@@ -735,7 +731,6 @@ $(function () {
 				} else {
 					if (selectLichtConf()) {
 						console.log("SelectLichtConf ist fertig");
-						//initSlider(".lichtBox");
 					}
 				}
 				break;
