@@ -640,6 +640,12 @@ $(function () {
 		$(".statusGrid").append(div);
 	}
 
+	function outputError(message) {
+		$.snackbar({
+			content: message
+		});
+	}
+
 	$(".tgl").on("click", () => {
 		var mode = $(".tgl").prop("checked");
 		console.log(mode);
