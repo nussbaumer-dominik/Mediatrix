@@ -190,13 +190,13 @@ $(function () {
 					console.log(mixerData.mixer.mikrofone);
 					mixerData.mixer.mikrofone[0].mute = 1;
 					conf.mixer.mikrofone[0].mute = 1;
-					$this.find("i").removeClass("fa-volume-off");
-					$this.find("i").addClass("fa-volume-up");
+					$this.find("i").removeClass("fa-volume-up");
+					$this.find("i").addClass("fa-volume-off");
 				} else if (id === "1") {
 					mixerData.mixer.mikrofone[1].mute = 1;
 					conf.mixer.mikrofone[1].mute = 1;
-					$this.find("i").removeClass("fa-volume-off");
-					$this.find("i").addClass("fa-volume-up");
+					$this.find("i").removeClass("fa-volume-up");
+					$this.find("i").addClass("fa-volume-off");
 				}
 				outputMessage("Das Mikrofon wurde stumm geschalten.");
 			} else {
@@ -205,13 +205,13 @@ $(function () {
 				if (id === "0") {
 					mixerData.mixer.mikrofone[0].mute = 0;
 					conf.mixer.mikrofone[0].mute = 0;
-					$this.find("i").removeClass("fa-volume-up");
-					$this.find("i").addClass("fa-volume-off");
+					$this.find("i").removeClass("fa-volume-off");
+					$this.find("i").addClass("fa-volume-up");
 				} else if (id === "1") {
 					mixerData.mixer.mikrofone[1].mute = 0;
 					conf.mixer.mikrofone[1].mute = 0;
-					$this.find("i").removeClass("fa-volume-up");
-					$this.find("i").addClass("fa-volume-off");
+					$this.find("i").removeClass("fa-volume-off");
+					$this.find("i").addClass("fa-volume-up");
 				}
 				outputMessage("Das Mikrofon wurde freigegeben.");
 			}
