@@ -24,7 +24,7 @@ class MyIoServer extends \Ratchet\Server\IoServer
         $loop = LoopFactory::create();
 
 
-        $loop->addPeriodicTimer(5, function() use (&$mixer) {
+        $loop->addPeriodicTimer(4, function() use (&$mixer) {
             $mixer->alive();
         });
 
