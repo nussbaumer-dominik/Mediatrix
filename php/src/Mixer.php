@@ -7,7 +7,6 @@ class Mixer {
 	//Variablen
 	protected $session_id;
 	protected $mixer;
-	protected $count = 1;
 	protected $lastVolume;
 	protected $command = "3:::SETD^i.";
 
@@ -82,11 +81,6 @@ class Mixer {
 			$this->mixer->send("2::");
 			$this->mixer->send("3:::SETD^i.0.mix^" . $this->lastVolume);
 			echo "3:::SETD^i.0.mix^" . $this->lastVolume. "\n";
-			if($this->count % 3 == 1){
-				echo "Alive " . "3:::SNAPSHOTLIST^Default\n";
-				$this->mixer->send("3:::SNAPSHOTLIST^Default");
-			}
-			$this->count++;
 			return array("success" => true, "err" => "");
 		} catch(Exception $ex) {
 			return array("success" => false, "err" => $ex);
