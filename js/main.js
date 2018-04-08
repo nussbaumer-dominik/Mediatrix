@@ -77,6 +77,7 @@ $(function () {
 	//wird getriggered, wenn die Verbindung gekappt wurde
 	socket.onclose = event => {
 		console.log("socket closed: " + socket + " " + event);
+		outputMessage("Die Verbindung mit dem Server wurde geschlossen");
 	};
 
 	//Daten versenden
@@ -453,6 +454,10 @@ $(function () {
 				data.conf.dmx.length +
 				"</h3> </div>"
 			);
+		} else  {
+			div.append(
+				"<div> <i class='fas fa-lightbulb'> </i> <h3>0</h3> </div>"
+			);
 		}
 		if (data.conf.av.mode) {
 			div.append(
@@ -482,6 +487,10 @@ $(function () {
 				data.conf.mixer.mikrofone.length +
 				"</h3> </div>"
 			);
+		} else  {
+			div.append(
+				"<div> <i class='fas fa-microphone'> </i> <h3>0</h3> </div>"
+			);
 		}
 		$(".presentation").append(div);
 		presetStart++;
@@ -497,6 +506,7 @@ $(function () {
 			var div = $("<div/>", {
 				class: "preset"
 			}).attr("data-preset", i);
+			console.log(presets[i].conf);
 			div.append("<h2>" + presets[i].name + "</h2>");
 			if (presets[i].conf.dmx) {
 				div.append(
@@ -504,26 +514,42 @@ $(function () {
 					presets[i].conf.dmx.length +
 					"</h3> </div>"
 				);
+			} else  {
+				div.append(
+					"<div> <i class='fas fa-lightbulb'> </i> <h3>0</h3> </div>"
+				);
 			}
-			if (presets[i].conf.av) {
+			if (presets[i].conf.av.mode) {
 				div.append(
 					"<div> <i class='fas fa-volume-up'> </i> <h3>" +
 					presets[i].conf.av.mode +
 					"</h3> </div>"
 				);
-			}
-			if (presets[i].conf.beamer) {
+			} else {
 				div.append(
-					"<div> <i class='fas fa-video'> </i> <h3>" +
-					presets[i].conf.beamer +
-					"</h3> </div>"
+					"<div> <i class='fas fa-volume-up'> </i> <h3> 0 </h3> </div>"
 				);
 			}
-			if (presets[i].conf.mixer) {
+			if (presets[i].conf.beamer) {
+				if (presets[i].conf.beamer.on) {
+					div.append(
+						"<div> <i class='fas fa-video'> </i> <h3>ein</h3> </div>"
+					);
+				} else {
+					div.append(
+						"<div> <i class='fas fa-video'> </i> <h3>aus</h3> </div>"
+					);
+				}
+			}
+			if (data.conf.mixer) {
 				div.append(
 					"<div> <i class='fas fa-microphone'> </i> <h3>" +
-					presets[i].conf.mixer +
+					presets[i].conf.mixer.mikrofone.length +
 					"</h3> </div>"
+				);
+			} else  {
+				div.append(
+					"<div> <i class='fas fa-microphone'> </i> <h3>0</h3> </div>"
 				);
 			}
 			$(".presentation").append(div);
