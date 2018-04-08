@@ -66,6 +66,7 @@ class Mixer {
 			echo "success";
 		} catch(Exception $ex) {
 			return array("success" => false, "err" => $ex);
+			echo "stellen der Lautstärke fehlgeschlagen - Fehlermeldung: " . $ex;
 		}
 	}
 
