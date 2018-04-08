@@ -297,6 +297,8 @@ $(function () {
 		});
 		slider.noUiSlider.on("change", function (values, handle) {
 			Slider(this);
+		});
+		slider.noUiSlider.on("slide", function (values, handle) {
 			document.getElementById("avSlider1Value").innerHTML =
 				values[handle];
 		});
