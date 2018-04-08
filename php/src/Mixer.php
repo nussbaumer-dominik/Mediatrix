@@ -75,9 +75,9 @@ class Mixer {
 		try {
 			echo "Alive " . "3:::ALIVE\n";
 			$this->mixer->send("3:::ALIVE");
-			if($this->count % 3 == 1) {
-				$this->mixer->send("3:::SNAPSHOTLIST^Default")
-			};
+			if($this->count % 3 == 1){
+				$this->mixer->send("3:::SNAPSHOTLIST^Default");
+			}
 			$this->count++;
 			return array("success" => true, "err" => "");
 		} catch(Exception $ex) {
