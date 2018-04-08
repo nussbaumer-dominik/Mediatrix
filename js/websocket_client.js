@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function () {
 
   // Get references to elements on the page.
   var form = document.getElementById('message-form');
@@ -9,44 +9,43 @@ window.onload = function() {
   var socket, sessId = "";
   var alive = true;
   var request = $.ajax({
-    url: 'http://10.10.2.1/socket.io/',
-    success: function(data) {
+    url: 'http://10.0.0.53/socket.io/',
+    success: function (data) {
       sessId = data.substring(0, 20);
     }
   });
 
-  socket = new WebSocket('ws://10.10.2.1/socket.io/1/websocket/' + sessId);
-  //socket = new WebSocket('wss://mediatrix.darktech.org/wss');
+  socket = new WebSocket('ws://10.0.0.53/socket.io/1/websocket/' + sessId);
   console.log(socket);
 
   // Handle any errors that occur
-  socket.onerror = function(error) {
+  socket.onerror = function (error) {
     console.log('WebSocket Error: ' + error);
   };
 
   // Show a connected message when the WebSocket is opened
-  socket.onopen = function(event) {
+  socket.onopen = function (event) {
     socketStatus.innerHTML = 'Connected to: ' + event.currentTarget
       .url;
     socketStatus.className = 'open';
   };
 
   // Handle messages sent by the server
-  socket.onmessage = function(event) {
+  socket.onmessage = function (event) {
     var message = event.data;
-    messagesList.innerHTML +=
+    /*messagesList.innerHTML +=
       '<li class="received"><span>Received: </span>' + message +
-      '</li>';
+      '</li>';*/
   };
 
   // Show a disconnected message when the WebSocket is closed
-  socket.onclose = function(event) {
+  socket.onclose = function (event) {
     socketStatus.innerHTML = 'Disconnected from WebSocket.';
     socketStatus.className = 'closed';
   };
 
   // Send a message when the form is submitted
-  form.onSubmit = function(e) {
+  form.onSubmit = function (e) {
     e.preventDefault();
     var message = messageField.value;
     socket.send(message);
@@ -63,16 +62,16 @@ window.onload = function() {
     console.log("Alive");
   }
 
-  setTimeout(function() {
-    setInterval(function() {
+  setTimeout(function () {
+    setInterval(function () {
       keepAlive()
-    }, 15000)
+    }, 2000)
   }, 3000);
 
 
 
   // Close the WebSocket connection when the close button is clicked
-  closeBtn.onclick = function(e) {
+  closeBtn.onclick = function (e) {
     e.preventDefault();
 
     // Close the WebSocket.
