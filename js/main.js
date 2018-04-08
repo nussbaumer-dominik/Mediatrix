@@ -541,7 +541,7 @@ $(function () {
 					);
 				}
 			}
-			if (data.conf.mixer) {
+			if (presets[i].conf.mixer) {
 				div.append(
 					"<div> <i class='fas fa-microphone'> </i> <h3>" +
 					presets[i].conf.mixer.mikrofone.length +
