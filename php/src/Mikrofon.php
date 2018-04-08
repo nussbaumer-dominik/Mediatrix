@@ -16,6 +16,7 @@ class Mikrofon {
     }
     function setVolume($value){
         try{
+            echo "Lautstärke verändern\n";
             $this->mixer->mix($value, $this->channelId);
         } catch (Exception $ex) {
             return array("success" => false, "err" => "" . $ex);
@@ -24,7 +25,7 @@ class Mikrofon {
     }
     function mute($muted){
         try{
-            echo "Mute Mikrofone " . $muted;
+            echo "Mute Mikrofone\n";
             $this->mixer->mute($muted, $this->channelId);
         } catch (Exception $ex) {
             return array("success" => false, "err" => "" . $ex);

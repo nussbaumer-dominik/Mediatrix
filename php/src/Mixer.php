@@ -58,7 +58,6 @@ class Mixer {
 
 	//Lautstärke regeln
 	public function mix($val, $channel) {
-		echo "" . $val . " " . $channel . " ";
 		try {
 			echo "im Try Block der mix-Funktion gelandet \n"; 
 			echo "die Lautstärke ist: " . $val . " und der Channel: " . $channel . "\n";
