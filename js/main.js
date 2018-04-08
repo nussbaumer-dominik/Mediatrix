@@ -190,28 +190,30 @@ $(function () {
 					console.log(mixerData.mixer.mikrofone);
 					mixerData.mixer.mikrofone[0].mute = 1;
 					conf.mixer.mikrofone[0].mute = 1;
+					$this.find("i").removeClass("fa-volume-off");
+					$this.find("i").addClass("fa-volume-up");
 				} else if (id === "1") {
 					mixerData.mixer.mikrofone[1].mute = 1;
 					conf.mixer.mikrofone[1].mute = 1;
+					$this.find("i").removeClass("fa-volume-off");
+					$this.find("i").addClass("fa-volume-up");
 				}
-
-				$.snackbar({
-					content: "Das Mikrofon wurde stumm geschalten."
-				});
+				outputMessage("Das Mikrofon wurde stumm geschalten.");
 			} else {
 				$this.attr("data-state", "0");
 
 				if (id === "0") {
 					mixerData.mixer.mikrofone[0].mute = 0;
 					conf.mixer.mikrofone[0].mute = 0;
+					$this.find("i").removeClass("fa-volume-up");
+					$this.find("i").addClass("fa-volume-off");
 				} else if (id === "1") {
 					mixerData.mixer.mikrofone[1].mute = 0;
 					conf.mixer.mikrofone[1].mute = 0;
+					$this.find("i").removeClass("fa-volume-up");
+					$this.find("i").addClass("fa-volume-off");
 				}
-
-				$.snackbar({
-					content: "Das Mikrofon wurde freigegeben."
-				});
+				outputMessage("Das Mikrofon wurde freigegeben.");
 			}
 		}
 		send(mixerData);
