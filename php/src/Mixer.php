@@ -8,7 +8,7 @@ class Mixer {
 	protected $session_id;
 	protected $mixer;
 	protected $count = 1;
-	protected $lastVolume = 0.0;
+	protected $lastVolume;
 	protected $command = "3:::SETD^i.";
 
 	//Konstruktor
@@ -66,7 +66,7 @@ class Mixer {
 			$this->mixer->send($this->command . $channel . ".mix^" . $val);
 			echo "success";
 			if($channel == "0"){
-				$this->lastVolume = $channel;
+				$this->lastVolume = $val;
 			}
 			return array("success" => true, "err" => "");
 		} catch(Exception $ex) {
