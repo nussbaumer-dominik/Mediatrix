@@ -81,6 +81,7 @@ class Mixer {
 			$this->mixer->send("3:::ALIVE");
 			$this->mixer->send("3:::SETD^i.0.mix^" . $this->lastVolume);
 			echo "3:::SETD^i.0.mix^" . $this->lastVolume. "\n";
+			$this->receive();
 			if($this->count % 3 == 1){
 				echo "Alive " . "3:::SNAPSHOTLIST^Default\n";
 				$this->mixer->send("3:::SNAPSHOTLIST^Default");
