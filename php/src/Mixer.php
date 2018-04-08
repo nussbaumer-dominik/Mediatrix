@@ -76,6 +76,7 @@ class Mixer {
 			echo "Alive " . "3:::ALIVE\n";
 			$this->mixer->send("3:::ALIVE");
 			if($this->count % 3 == 1){
+				echo "Alive " . "3:::SNAPSHOTLIST^Default\n";
 				$this->mixer->send("3:::SNAPSHOTLIST^Default");
 			}
 			$this->count++;
