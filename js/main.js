@@ -67,7 +67,6 @@ $(function () {
 		} else {
 			let msg = event.data;
 			console.log("message: " + msg);
-			//$(".statusGrid").empty();
 			msg = JSON.parse(msg);
 			console.log(msg.live);
 			liveStatus(msg.live);
@@ -90,7 +89,6 @@ $(function () {
 		} catch (data) {
 			outputMessage(data);
 		}
-
 	};
 
 	//Werte der Slider auslesen
@@ -225,9 +223,7 @@ $(function () {
 			beamer: {}
 		};
 		let $this = $(this);
-		//Kontrollieren ob vom Typ Beamer
 		if ($this.attr("data-type") == "beamer") {
-			//Power Knopf erkennen
 			if ($this.attr("data-value") == "power") {
 				if (!on) {
 					on = true;
@@ -311,7 +307,7 @@ $(function () {
 			document.getElementById("avSlider1Value").innerHTML =
 				values[handle];
 		});
-		updateSliders();
+		updateAvSlider();
 		return true;
 	}
 
@@ -577,9 +573,11 @@ $(function () {
 			if (ini.live.beamer.on) {
 				console.log("Beamer ein");
 				buildStatus("Beamer", "ein", "", "beamerStatus");
+				on = true;
 			} else {
 				console.log("Beamer aus");
 				buildStatus("Beamer", "aus", "", "beamerStatus");
+				on = false;
 			}
 		}
 		if (ini.live.dmx) {
@@ -589,7 +587,6 @@ $(function () {
 	};
 
 	function deletePreset(id) {
-
 		let preset = new FormData();
 		preset.append("jwt", jwt);
 		preset.append("id", id);
@@ -662,7 +659,13 @@ $(function () {
 		}
 	}
 
-	var updateSliders = () => {
+	function updateSliders() {
+		setSlider("avSlider1", ini.live.av.volume);
+		document.getElementById("avSlider1Value").innerHTML =
+			ini.live.av.volume;
+	};
+
+	function updateAvSlider() {
 		setSlider("avSlider1", ini.live.av.volume);
 		document.getElementById("avSlider1Value").innerHTML =
 			ini.live.av.volume;
