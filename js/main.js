@@ -1,5 +1,5 @@
 $(function () {
-	var ini,
+	let ini,
 		sessId,
 		presetStart = 0,
 		presets,
@@ -26,7 +26,7 @@ $(function () {
 			beamer: {}
 		};
 
-	var mixerData = {
+	let mixerData = {
 		mixer: {
 			mikrofone: [{
 				id: "0",
@@ -37,9 +37,9 @@ $(function () {
 			}]
 		}
 	};
-	var scheinwerfer = {};
-	var socket = new WebSocket("wss://10.20.255.100/wss");
-	//var socket = new WebSocket("wss://10.0.0.144/wss");
+	let scheinwerfer = {};
+	let socket = new WebSocket("wss://10.20.255.100/wss");
+	//let socket = new WebSocket("wss://10.0.0.144/wss");
 
 	//wirft eine Exception
 	socket.onerror = error => {
@@ -64,6 +64,8 @@ $(function () {
 			firstLiveStatus();
 			getPresets();
 			toggleBase();
+			on = ini.live.beamer.on ? true : false; 
+			beamerState();
 		} else {
 			let msg = event.data;
 			console.log("message: " + msg);
@@ -656,6 +658,12 @@ $(function () {
 					}
 				}
 			}
+		}
+	}
+
+	function beamerState() {
+		if (on) {
+			$("#power").prop("checked", true);
 		}
 	}
 
