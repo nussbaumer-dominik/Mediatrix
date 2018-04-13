@@ -60,13 +60,13 @@ def pwm():
 
         print "Prozent: " + '{:.3f}'.format(prozent)
 
-        if prozent > 20:
+        if prozent > 30:
             fan_pwm.ChangeDutyCycle(prozent) #provide duty cycle in the range 0-100
-            sleep(2)
+            sleep(60)
 
-        if prozent < 20:
+        if prozent < 3:
             fan_pwm.ChangeDutyCycle(0)
-            sleep(2)
+            sleep(60)
 
 
     return
