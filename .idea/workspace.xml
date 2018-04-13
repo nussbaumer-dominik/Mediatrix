@@ -48,8 +48,8 @@
       <file leaf-file-name="cooling.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Elektronik/cooling.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="55" column="29" lean-forward="false" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+            <state relative-caret-position="437">
+              <caret line="70" column="21" lean-forward="false" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -1020,14 +1020,7 @@
       <workItem from="1523214213066" duration="96000" />
       <workItem from="1523362971802" duration="3188000" />
       <workItem from="1523554078740" duration="2224000" />
-      <workItem from="1523613631969" duration="3900000" />
-    </task>
-    <task id="LOCAL-00241" summary="fix python">
-      <created>1522694777671</created>
-      <option name="number" value="00241" />
-      <option name="presentableId" value="LOCAL-00241" />
-      <option name="project" value="LOCAL" />
-      <updated>1522694777671</updated>
+      <workItem from="1523613631969" duration="4591000" />
     </task>
     <task id="LOCAL-00242" summary="change high to low">
       <created>1522695559594</created>
@@ -1365,11 +1358,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523617526979</updated>
     </task>
-    <option name="localTasksCounter" value="290" />
+    <task id="LOCAL-00290" summary="fix cooling.py">
+      <created>1523618394399</created>
+      <option name="number" value="00290" />
+      <option name="presentableId" value="LOCAL-00290" />
+      <option name="project" value="LOCAL" />
+      <updated>1523618394414</updated>
+    </task>
+    <option name="localTasksCounter" value="291" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233920000" />
+    <option name="totallyTimeSpent" value="234611000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="793" y="0" width="814" height="867" extended-state="0" />
@@ -1478,7 +1478,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merge branch 'Backend' into AllesNeu&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;Elektronik/cooling.py&#10;#&#9;Elektronik/power.py&#10;#&#9;conf/Mediatrix.json&#10;#&#9;php/src/AV.php&#10;#&#9;php/src/Beamer.php&#10;#&#9;test_js/ws_test.html" />
     <MESSAGE value="change ips" />
     <MESSAGE value="add mute function" />
     <MESSAGE value="fix live status" />
@@ -1503,7 +1502,8 @@
     <MESSAGE value="add file to python" />
     <MESSAGE value="fix:&#10;&#10;temperatur alle 60s&#10;send IR-Code 3x bei Beamer&#10;speaker nur wenn power gedrückt wurde&#10;Lüfter erst ab 30%" />
     <MESSAGE value="fix speaker.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix speaker.py" />
+    <MESSAGE value="fix cooling.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix cooling.py" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1844,8 +1844,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Elektronik/cooling.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="55" column="29" lean-forward="false" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+        <state relative-caret-position="437">
+          <caret line="70" column="21" lean-forward="false" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
           <folding />
         </state>
       </provider>
