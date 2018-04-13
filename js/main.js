@@ -63,8 +63,12 @@ $(function () {
 			firstLiveStatus();
 			getPresets();
 			toggleBase();
-			on = ini.live.beamer.on ? true : false; 
-			beamerState();
+			on = (ini.live.beamer.on === true) ? true : false; 
+			console.log("Der Beamer ist ein und die Aimation: " + on);
+			if (on) {
+				$("#power").prop("checked", true);
+				console.log("beamer ANimation wird getriggered: " + $("#power").prop("checked"));
+			}
 		} else {
 			let msg = event.data;
 			console.log("message: " + msg);
@@ -657,12 +661,6 @@ $(function () {
 					}
 				}
 			}
-		}
-	}
-
-	function beamerState() {
-		if (on) {
-			$("#power").prop("checked", true);
 		}
 	}
 
