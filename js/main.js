@@ -5,7 +5,7 @@ $(function () {
 		presets,
 		jwt = localStorage.getItem("jwt"),
 		on = false,
-		isMobile = isMobile = "ontouchstart" in document.documentElement &&
+		isMobile = "ontouchstart" in document.documentElement &&
 		navigator.userAgent.match(/Mobi/),
 		currentConf = {
 			name: "",
