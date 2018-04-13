@@ -52,7 +52,7 @@ $(function () {
 			socket.send('{"jwt":"' + jwt + '","ini":1}');
 		}
 		console.log("socket open: " + socket + " " + event);
-		outputMessage(event.data);
+		outputMessage("Die WebSocket-Verbindung konnte erfolgreich geöffnet werden");
 	};
 
 	//wird bei Response des Servers ausgelöst
