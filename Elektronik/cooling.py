@@ -33,7 +33,7 @@ def gettemp(id):
 
 # Lueftersteuerung
 def fanCon(mt):
-    st = 35.0           #Solltemperatur in Grad Celsius (Temperaturraum 35-55 Grad)
+    st = 30.0           #Solltemperatur in Grad Celsius (Temperaturraum 35-55 Grad)
     maxspeed = 1600     #Maximale Geschwindigkeit des Luefters in RPM
     prozent = 0
     if mt > st:
