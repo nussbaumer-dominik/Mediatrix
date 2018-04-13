@@ -63,8 +63,12 @@ $(function () {
 			firstLiveStatus();
 			getPresets();
 			toggleBase();
-			on = ini.live.beamer.on ? true : false; 
-			beamerState();
+			on = (ini.live.beamer.on === true) ? true : false; 
+			console.log("Der Beamer ist ein und die Aimation: " + on);
+			if (on) {
+				$("#power").prop("checked", true);
+				console.log("beamer ANimation wird getriggered: " + $("#power").prop("checked"));
+			}
 		} else {
 			let msg = event.data;
 			console.log("message: " + msg);
@@ -447,10 +451,10 @@ $(function () {
 			class: "preset"
 		}).attr("data-preset", presetStart);
 		div.append("<h2>" + data.name + "</h2>");
-		if (data.conf.dmx) {
+		if (data.conf.dmx.length) {
 			div.append(
 				"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
-				data.conf.dmx.length +
+				Object.keys(data.conf.dmx).length +
 				"</h3> </div>"
 			);
 		} else  {
@@ -466,7 +470,7 @@ $(function () {
 			);
 		} else {
 			div.append(
-				"<div> <i class='fas fa-volume-up'> </i> <h3> 0 </h3> </div>"
+				"<div> <i class='fas fa-volume-up'> </i> <h3> - </h3> </div>"
 			);
 		}
 		if (data.conf.beamer) {
@@ -483,7 +487,7 @@ $(function () {
 		if (data.conf.mixer) {
 			div.append(
 				"<div> <i class='fas fa-microphone'> </i> <h3>" +
-				data.conf.mixer.mikrofone.length +
+				Object.keys(data.conf.mixer.mikrofone) +
 				"</h3> </div>"
 			);
 		} else  {
@@ -507,10 +511,10 @@ $(function () {
 			}).attr("data-preset", i);
 			console.log(presets[i].conf);
 			div.append("<h2>" + presets[i].name + "</h2>");
-			if (presets[i].conf.dmx) {
+			if (presets[i].conf.dmx.length) {
 				div.append(
 					"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
-					presets[i].conf.dmx.length +
+					Object.keys(presets[i].conf.dmx).length +
 					"</h3> </div>"
 				);
 			} else  {
@@ -526,7 +530,7 @@ $(function () {
 				);
 			} else {
 				div.append(
-					"<div> <i class='fas fa-volume-up'> </i> <h3> 0 </h3> </div>"
+					"<div> <i class='fas fa-volume-up'> </i> <h3> - </h3> </div>"
 				);
 			}
 			if (presets[i].conf.beamer) {
@@ -543,7 +547,7 @@ $(function () {
 			if (presets[i].conf.mixer) {
 				div.append(
 					"<div> <i class='fas fa-microphone'> </i> <h3>" +
-					presets[i].conf.mixer.mikrofone.length +
+					Object.keys(presets[i].conf.mixer.mikrofone).length +
 					"</h3> </div>"
 				);
 			} else  {
@@ -657,12 +661,6 @@ $(function () {
 					}
 				}
 			}
-		}
-	}
-
-	function beamerState() {
-		if (on) {
-			$("#power").prop("checked", true);
 		}
 	}
 
