@@ -450,7 +450,7 @@ $(function () {
 		if (data.conf.dmx.length) {
 			div.append(
 				"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
-				data.conf.dmx.length +
+				Object.keys(data.conf.dmx).length +
 				"</h3> </div>"
 			);
 		} else  {
@@ -510,7 +510,7 @@ $(function () {
 			if (presets[i].conf.dmx.length) {
 				div.append(
 					"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
-					presets[i].conf.dmx.length +
+					Object.keys(presets[i].conf.dmx).length +
 					"</h3> </div>"
 				);
 			} else  {
