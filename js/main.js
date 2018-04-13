@@ -43,6 +43,7 @@ $(function () {
 	//wirft eine Exception
 	socket.onerror = error => {
 		console.log("WebSocket Error: " + error);
+		outputMessage(error.data);
 	};
 
 	//wird beim erfolgreichen Öffnen des Sockets ausgegeben
@@ -51,6 +52,7 @@ $(function () {
 			socket.send('{"jwt":"' + jwt + '","ini":1}');
 		}
 		console.log("socket open: " + socket + " " + event);
+		outputMessage(event.data);
 	};
 
 	//wird bei Response des Servers ausgelöst
@@ -69,6 +71,9 @@ $(function () {
 			msg = JSON.parse(msg);
 			console.log(msg.live);
 			liveStatus(msg.live);
+			if(!msg.success){
+				outputMessage(msg.err)
+			}
 		}
 	};
 
@@ -144,16 +149,9 @@ $(function () {
 				console.log(slider.target.getAttribute("data-col"));
 				scheinwerfer[slider.target.getAttribute("data-id")][slider.target.getAttribute("data-col")] = parseInt(slider.get());
 
-				let obj = {
-					id: slider.target.getAttribute("data-id")
-				};
-				for (farbe in scheinwerfer[
-						slider.target.getAttribute("data-id")
-					]) {
-					obj[farbe] =
-						scheinwerfer[slider.target.getAttribute("data-id")][
-							farbe
-						];
+				let obj = { id: slider.target.getAttribute("data-id") };
+				for (farbe in scheinwerfer[ slider.target.getAttribute("data-id") ]) {
+					obj[farbe] = scheinwerfer[slider.target.getAttribute("data-id")][ farbe ];
 				}
 				let sendObj = {
 					dmx: {}
@@ -425,7 +423,7 @@ $(function () {
 			class: "preset"
 		}).attr("data-preset", presetStart);
 		div.append("<h2>" + data.name + "</h2>");
-		if (data.conf.dmx.length) {
+		if (data.conf.dmx) {
 			div.append(
 				"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
 				Object.keys(data.conf.dmx).length +
@@ -590,7 +588,7 @@ $(function () {
 				addPreset(currentConf);
 				presets.push(currentConf);
 				let message = "Das Preset " + $("#presetName").val() + " wurde erfolgreich erstellt";
-				outputMesssage(message);
+				outputMessage(message);
 			})
 			.fail(data => {
 				console.log("error: ");
