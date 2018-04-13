@@ -63,13 +63,6 @@ $(function () {
 			firstLiveStatus();
 			getPresets();
 			toggleBase();
-			on = (ini.live.beamer.on === true) ? true : false; 
-			console.log("Der Beamer ist ein und die Aimation: " + on);
-			if (on) {
-				$(".menu-open").prop("checked", true);
-				$(".menu-open-button").attr("data-power", "1");
-				console.log("Beameranimation wird getriggered: " + $(".menu-open").prop("checked"));
-			}
 		} else {
 			let msg = event.data;
 			console.log("message: " + msg);
@@ -493,6 +486,7 @@ $(function () {
 			console.log(presets[i].conf);
 			div.append("<h2>" + presets[i].name + "</h2>");
 			if (presets[i].conf.dmx.length) {
+				console.log(Object.keys(presets[i].conf.dmx).length + " Die Anzahl der Scheinwerfer bei Preset + " + presets[i].name);
 				div.append(
 					"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
 					Object.keys(presets[i].conf.dmx).length +
@@ -864,6 +858,14 @@ $(function () {
 		} else  {
 			$(".savePreset").css("display", "block");
 			$(".side-nav ul").css("display", "flex");
+		}
+
+		on = (ini.live.beamer.on === true) ? true : false;
+		console.log("Der Beamer ist ein und die Animation: " + on);
+		if (on) {
+			$(".menu-open").prop("checked", true);
+			$(".menu-open-button").attr("data-power", "1");
+			console.log("Beameranimation wird getriggered: " + $(".menu-open").prop("checked"));
 		}
 	};
 
