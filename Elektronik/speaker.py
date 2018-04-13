@@ -46,6 +46,12 @@ def speakerOff():
     GPIO.output(rs, GPIO.HIGH) # aus
     sstate = 1
 
+def powerOn():
+    file = open("deviceson","r")
+    erg = file.read() == "1"
+    file.close()
+    return erg
+
 if __name__ == '__main__':
 
     GPIO.output(rs, GPIO.HIGH) # aus
@@ -57,4 +63,5 @@ if __name__ == '__main__':
 
         if sstate == 1:
             GPIO.wait_for_edge(door, GPIO.FALLING)
-            speakerOn()
+            if(powerOn()):
+                speakerOn()

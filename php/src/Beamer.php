@@ -77,7 +77,7 @@ class Beamer
         $this->source[$index]['lastSendA'] = !$this->source[$index]['lastSendA'];
 
         //send IR code
-        $r = json_decode(str_replace("'",'"',$this->ir->send($code,5)));
+        $r = json_decode(str_replace("'",'"',$this->ir->send($code,3)));
 
 
         //set next active Source
@@ -162,7 +162,7 @@ class Beamer
         $this->freeze['lastSendA'] = !$this->freeze['lastSendA'];
 
         //send IR code
-        $r = json_decode(str_replace("'",'"',$this->ir->send($code,5)));
+        $r = json_decode(str_replace("'",'"',$this->ir->send($code,3)));
 
         //return Result
         return $r;
@@ -182,7 +182,7 @@ class Beamer
         $this->blackout['lastSendA'] = !$this->blackout['lastSendA'];
 
         //send IR code
-        $r = json_decode(str_replace("'",'"',$this->ir->send($code,5)));
+        $r = json_decode(str_replace("'",'"',$this->ir->send($code,3)));
 
         //return Result
         return $r;
