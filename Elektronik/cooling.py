@@ -64,9 +64,13 @@ def pwm():
             fan_pwm.ChangeDutyCycle(prozent) #provide duty cycle in the range 0-100
             sleep(60)
 
-        if prozent < 3:
+        elif prozent < 3:
             fan_pwm.ChangeDutyCycle(0)
             sleep(60)
+        else:
+            sleep(60)
+
+
 
 
     return
