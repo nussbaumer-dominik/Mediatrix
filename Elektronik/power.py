@@ -39,6 +39,9 @@ def switchPower(pstate):
         GPIO.output(rs, GPIO.LOW) # an
         sleep(2)
         pstate = 1
+        file = open("deviceson","w")
+        file.write("1")
+        file.close()
 
     elif pstate == 1:
         print "aus"
@@ -46,6 +49,9 @@ def switchPower(pstate):
         sleep(1)
         GPIO.output(rp, GPIO.HIGH)  #aus
         pstate = 0
+        file = open("deviceson","w")
+        file.write("0")
+        file.close()
 
     return pstate
 
