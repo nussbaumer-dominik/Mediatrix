@@ -53,7 +53,7 @@ def pwm():
 
 
         #Script has been called directly
-        id = '10-000801a96106'
+        id = '28-0517605a65ff'
         mt = gettemp(id)/float(1000)    #Momentantemperatur
         print "Momentantemperatur : " + '{:.3f}'.format(mt)
         prozent = fanCon(mt)

@@ -61,6 +61,10 @@ if __name__ == '__main__':
 
     pstate = 0 #Zustand des Systems Strom (1=Ein, 0=Aus)
 
+    file = open("deviceson","w")
+    file.write("0")
+    file.close()
+
     while True:
         GPIO.wait_for_edge(btn, GPIO.RISING)
         pstate = switchPower(pstate)
