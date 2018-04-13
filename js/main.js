@@ -67,7 +67,7 @@ $(function () {
 			console.log("Der Beamer ist ein und die Aimation: " + on);
 			if (on) {
 				$("#power").prop("checked", true);
-				$("#beamerState").attr("data-state", "1");
+				$("#beamerState").attr("data-power", "1");
 				console.log("beamer ANimation wird getriggered: " + $("#power").prop("checked"));
 			}
 		} else {
