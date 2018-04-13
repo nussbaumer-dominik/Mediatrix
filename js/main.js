@@ -66,9 +66,9 @@ $(function () {
 			on = (ini.live.beamer.on === true) ? true : false; 
 			console.log("Der Beamer ist ein und die Aimation: " + on);
 			if (on) {
-				$("#power").prop("checked", true);
-				$("#beamerState").attr("data-power", "1");
-				console.log("beamer ANimation wird getriggered: " + $("#power").prop("checked"));
+				$(".menu-open").prop("checked", true);
+				$(".menu-open-button").attr("data-power", "1");
+				console.log("Beameranimation wird getriggered: " + $(".menu-open").prop("checked"));
 			}
 		} else {
 			let msg = event.data;
@@ -119,9 +119,7 @@ $(function () {
 				let id = slider.target.getAttribute("data-id");
 				let val = slider.get() / 100;
 				if (!isNaN(id)) {
-					console.log(
-						"Dieser Slider ist von einem Mixer: " + slider.get()
-					);
+					console.log("Dieser Slider ist von einem Mixer: " + slider.get());
 
 					if (id === "0") {
 						mixerData.mixer.mikrofone[0].value = val;
@@ -167,12 +165,8 @@ $(function () {
 				let sendObj = {
 					dmx: {}
 				};
-				sendObj.dmx[
-					"scheinwerfer" + slider.target.getAttribute("data-id")
-				] = obj;
-				conf.dmx[
-					"scheinwerfer" + slider.target.getAttribute("data-id")
-				] = obj;
+				sendObj.dmx["scheinwerfer" + slider.target.getAttribute("data-id")] = obj;
+				conf.dmx["scheinwerfer" + slider.target.getAttribute("data-id")] = obj;
 
 				console.log(conf.dmx);
 				console.log(sendObj);
@@ -248,7 +242,6 @@ $(function () {
 				console.log("Beamer - Value: " + $this.attr("data-value"));
 				if ($this.attr("data-value") == "src") {
 					data.beamer.source = 1;
-					conf.beamer.source = 1;
 				} else if ($this.attr("data-value") == "freeze") {
 					data.beamer.freeze = 1;
 					conf.beamer.freeze = 1;
@@ -264,7 +257,7 @@ $(function () {
 	//Werte der Modi des AV-Receivers auslesen
 	function Buttons() {
 		let $this = $(this);
-		let avdata = {
+		let avData = {
 			av: {}
 		};
 		if ($this.attr("data-type") == "av") {
@@ -274,11 +267,11 @@ $(function () {
 				" Value: " +
 				$this.html()
 			);
-			avdata.av.mode = $this.html();
+			avData.av.mode = $this.html();
 			conf.av.mode = $this.html();
-			console.log(avdata);
+			console.log(avData);
 		}
-		send(avdata);
+		send(avData);
 	}
 
 	function selectAvConf() {
@@ -323,12 +316,7 @@ $(function () {
 			var scheinwerferObj = ini.ini.dmx["scheinwerfer" + i];
 			console.log(scheinwerfer);
 			if (scheinwerferObj.numberChannels == "4") {
-				scheinwerfer[scheinwerferObj.id] = {
-					r: 0,
-					g: 0,
-					b: 0,
-					w: 0
-				};
+				scheinwerfer[scheinwerferObj.id] = { r: 0, g: 0, b: 0, w: 0 };
 
 				var t = document.querySelector("#rgbwTemplate").innerHTML;
 
@@ -350,25 +338,17 @@ $(function () {
 				};
 
 				var t = document.querySelector("#hueTemplate").innerHTML;
-				for (
-					let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++
-				) {
+				for (let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++ ) {
 					t = t.replace(/{:id}/, scheinwerferObj.id);
 				}
 				t = t.replace(/{:lightNumber}/, scheinwerferObj.id + 1);
 				$(".flex-container").append(t);
 			} else if (scheinwerferObj.numberChannels == "3") {
-				scheinwerfer[scheinwerferObj.id] = {
-					r: 0,
-					g: 0,
-					b: 0
-				};
+				scheinwerfer[scheinwerferObj.id] = { r: 0, g: 0, b: 0 };
 
 				var t = document.querySelector("#rgbTemplate").innerHTML;
 
-				for (
-					let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++
-				) {
+				for (let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++) {
 					t = t.replace(/{:id}/, scheinwerferObj.id);
 				}
 
