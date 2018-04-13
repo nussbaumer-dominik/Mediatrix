@@ -78,13 +78,13 @@ class Mixer {
 	public function alive() {
 		try {
 			//echo "Alive " . "2::\n";
-			$this->mixer->send("2::");
+			//$this->mixer->send("2::");
 			//$this->mixer->send("3:::SETD^i.0.mix^" . $this->lastVolume);
 			//echo "3:::SETD^i.0.mix^" . $this->lastVolume. "\n";
-			if($this->count % 10 == 1){
+			//if($this->count % 10 == 1){
 				//echo "3:::ALIVE\n";
 				$this->mixer->send("3:::ALIVE");
-			}
+			//}
 			$this->count++;
 			return array("success" => true, "err" => "");
 		} catch(Exception $ex) {
