@@ -644,10 +644,6 @@ $(function () {
 		}
 	}
 
-	function updateSliders(id, val) {
-		setSlider(id, val);
-	};
-
 	function updateAvSlider() {
 		setSlider("avSlider1", ini.live.av.volume);
 		document.getElementById("avSlider1Value").innerHTML =
@@ -659,6 +655,12 @@ $(function () {
 		slider.noUiSlider.set(val);
 		document.getElementById(id + "Value").innerHTML = val;
 	};
+
+	function updateLive(live) {
+		console.log(live);
+		
+		//setSlider(id, val);
+	}
 
 	function buildStatus(key, value, unit, id) {
 		var div = $("<div id='" + id + "'>");
@@ -864,10 +866,6 @@ $(function () {
 			$(".side-nav ul").css("display", "flex");
 		}
 	};
-
-	function updateLive(live){
-
-	}
 
 	//Slider initialisieren, je nach dem, welche gerade im Markup eingeblendet sind
 	function initSlider(container) {
