@@ -66,14 +66,13 @@ $(function () {
 			getPresets();
 			toggleBase();
 			on = (ini.live.beamer.on === true) ? true : false;
-			console.log("Der Beamer ist ein und die Animation: " + on);
 			if (on) {
 				$("#power").prop("checked", true);
 				$("#beamerState").attr("data-state", "1");
 			}
 		} else if(JSON.parse(event.data)["group"]){
 			alert(event.data);
-			
+			send(event.data);
 		} else {
 			let msg = JSON.parse(event.data);
 			console.log("message: " +{ msg });
@@ -542,7 +541,6 @@ $(function () {
 			}
 			$(".presentation").append(div);
 			presetStart++;
-			console.log("getPresets: " + presetStart);
 		}
 		$(".preset").on("click", selectPreset);
 	};
@@ -610,7 +608,6 @@ $(function () {
 
 	function liveStatus(live) {
 		let items = $(".statusGrid").contents();
-		console.log(live);
 
 		for (item of items) {
 			let value = $(item).children();
@@ -682,7 +679,6 @@ $(function () {
 
 	$(".tgl").on("click", () => {
 		var mode = $(".tgl").prop("checked");
-		console.log(mode);
 		if (mode) {
 			var data = new FormData();
 			data.append("jwt", jwt);
@@ -716,6 +712,7 @@ $(function () {
 						navigator.userAgent.match(/Mobi/);
 				}
 				console.log("success: mode: " + mode + " " + data);
+				outputMessage("Der Modus wurde gewechselt");
 			})
 			.fail(function (data) {
 				console.log("error ");
