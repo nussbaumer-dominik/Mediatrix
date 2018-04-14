@@ -37,7 +37,7 @@ $(function () {
 		}
 	};
 	let scheinwerfer = {};
-	let socket = new WebSocket("wss://10.20.255.100/wss");
+	let socket = new WebSocket("wss://192.168.1.235/wss");
 	//let socket = new WebSocket("wss://10.0.0.144/wss");
 
 	//wirft eine Exception
@@ -665,10 +665,8 @@ $(function () {
 		}
 	}
 
-	function updateSliders() {
-		setSlider("avSlider1", ini.live.av.volume);
-		document.getElementById("avSlider1Value").innerHTML =
-			ini.live.av.volume;
+	function updateSliders(id, val) {
+		setSlider(id, val);
 	};
 
 	function updateAvSlider() {
@@ -864,6 +862,7 @@ $(function () {
 	var setSlider = (id, val) => {
 		var slider = document.getElementById(id);
 		slider.noUiSlider.set(val);
+		//document.getElementById(id + "Value").innerHTML = ini.live.av.volume;
 	};
 
 	var toggleBase = () => {
