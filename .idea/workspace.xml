@@ -29,10 +29,10 @@
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="297" column="40" lean-forward="false" selection-start-line="297" selection-start-column="40" selection-end-line="297" selection-end-column="40" />
+              <caret line="561" column="34" lean-forward="false" selection-start-line="561" selection-start-column="34" selection-end-line="561" selection-end-column="34" />
               <folding>
-                <marker date="1523706703788" expanded="true" signature="14685:14725" ph="SELECT * FRO... preset" />
-                <marker date="1523706703788" expanded="true" signature="15463:15505" ph="SELECT isext... user" />
+                <marker date="1523707658859" expanded="true" signature="14685:14725" ph="SELECT * FRO... preset" />
+                <marker date="1523707658859" expanded="true" signature="15463:15505" ph="SELECT isext... user" />
               </folding>
             </state>
           </provider>
@@ -934,13 +934,6 @@
       <workItem from="1522924199783" duration="3998000" />
       <workItem from="1523110524525" duration="171000" />
     </task>
-    <task id="LOCAL-00250" summary="fix python">
-      <created>1522698619235</created>
-      <option name="number" value="00250" />
-      <option name="presentableId" value="LOCAL-00250" />
-      <option name="project" value="LOCAL" />
-      <updated>1522698619235</updated>
-    </task>
     <task id="LOCAL-00251" summary="debug mixer mute">
       <created>1522839113819</created>
       <option name="number" value="00251" />
@@ -1277,11 +1270,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523706529809</updated>
     </task>
-    <option name="localTasksCounter" value="299" />
+    <task id="LOCAL-00299" summary="add user to group">
+      <created>1523706717136</created>
+      <option name="number" value="00299" />
+      <option name="presentableId" value="LOCAL-00299" />
+      <option name="project" value="LOCAL" />
+      <updated>1523706717136</updated>
+    </task>
+    <option name="localTasksCounter" value="300" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="232393000" />
+    <option name="totallyTimeSpent" value="233033000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1776,10 +1776,10 @@
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="297" column="40" lean-forward="false" selection-start-line="297" selection-start-column="40" selection-end-line="297" selection-end-column="40" />
+          <caret line="561" column="34" lean-forward="false" selection-start-line="561" selection-start-column="34" selection-end-line="561" selection-end-column="34" />
           <folding>
-            <marker date="1523706703788" expanded="true" signature="14685:14725" ph="SELECT * FRO... preset" />
-            <marker date="1523706703788" expanded="true" signature="15463:15505" ph="SELECT isext... user" />
+            <marker date="1523707658859" expanded="true" signature="14685:14725" ph="SELECT * FRO... preset" />
+            <marker date="1523707658859" expanded="true" signature="15463:15505" ph="SELECT isext... user" />
           </folding>
         </state>
       </provider>

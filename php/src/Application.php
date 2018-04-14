@@ -558,9 +558,8 @@ class Application implements MessageComponentInterface
 
         $live['beamer'] = array('on' => $this->beamer->isOn());
 
-        foreach ($this->clients as $client){
-            $client->send(json_encode(array('live' => $live)));
-        }
+
+        $this->group->send(json_encode(array('live' => $live)));
 
         $result['live'] = $live;
 
