@@ -420,12 +420,12 @@ $(function () {
 				console.log("success: " + data);
 				addPreset(currentConf);
 				presets.push(currentConf);
-				outputMessage("Das Preset " + $("#presetName").val() + " wurde erfolgreich erstellt");
+				outputMessage("Das Preset " + $("#presetName").val() + " wurde erstellt");
 			})
 			.fail(data => {
 				console.log("error: ");
 				console.log(data);
-				outputMessage("Das Preset " + $("#presetName").val() + " konnte nicht erfolgreich erstellt werden");
+				outputMessage("Das Preset " + $("#presetName").val() + " konnte nicht erstellt werden");
 			});
 	});
 
