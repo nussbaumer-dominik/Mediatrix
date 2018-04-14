@@ -337,9 +337,7 @@ $(function () {
 				t = t.replace( /{{:id}}/, "Scheinwerfer" + (scheinwerferObj.id + 1) );
 				$(".flex-container").append(t);
 			} else if (scheinwerferObj.numberChannels == "1") {
-				scheinwerfer[scheinwerferObj.id] = {
-					hue: 0
-				};
+				scheinwerfer[scheinwerferObj.id] = { hue: 0 };
 
 				var t = document.querySelector("#hueTemplate").innerHTML;
 				for ( let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++ ) {
@@ -506,7 +504,7 @@ $(function () {
 					"<div> <i class='fas fa-lightbulb'> </i> <h3>0</h3> </div>"
 				);
 			}
-			if (typeof presets[i].conf.av !== "undefined") {
+			if (typeof presets[i].conf.av.mode !== "undefined") {
 				div.append(
 					"<div> <i class='fas fa-volume-up'> </i> <h3>" +
 					presets[i].conf.av.mode +
@@ -659,6 +657,10 @@ $(function () {
 	function updateLive(live) {
 		console.log("In der updateLive-Methode gelandet Live: ");
 		console.log(live);
+
+		/*if(){
+
+		}*/
 		
 		//setSlider(id, val);
 	}
