@@ -504,7 +504,7 @@ $(function () {
 					"<div> <i class='fas fa-lightbulb'> </i> <h3>0</h3> </div>"
 				);
 			}
-			if (typeof presets[i].conf.av !== "undefined") {
+			if (typeof presets[i].conf.av.mode !== "undefined") {
 				div.append(
 					"<div> <i class='fas fa-volume-up'> </i> <h3>" +
 					presets[i].conf.av.mode +
