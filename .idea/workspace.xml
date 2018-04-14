@@ -28,11 +28,11 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="44" column="47" lean-forward="false" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
+            <state relative-caret-position="198">
+              <caret line="48" column="45" lean-forward="false" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
               <folding>
-                <marker date="1523700431808" expanded="true" signature="13692:13732" ph="SELECT * FRO... preset" />
-                <marker date="1523700431808" expanded="true" signature="14470:14512" ph="SELECT isext... user" />
+                <marker date="1523700558392" expanded="true" signature="13738:13778" ph="SELECT * FRO... preset" />
+                <marker date="1523700558392" expanded="true" signature="14516:14558" ph="SELECT isext... user" />
               </folding>
             </state>
           </provider>
@@ -934,13 +934,6 @@
       <workItem from="1522924199783" duration="3998000" />
       <workItem from="1523110524525" duration="171000" />
     </task>
-    <task id="LOCAL-00239" summary="python dev">
-      <created>1522694077107</created>
-      <option name="number" value="00239" />
-      <option name="presentableId" value="LOCAL-00239" />
-      <option name="project" value="LOCAL" />
-      <updated>1522694077107</updated>
-    </task>
     <task id="LOCAL-00240" summary="debug python">
       <created>1522694620560</created>
       <option name="number" value="00240" />
@@ -1277,11 +1270,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523699976288</updated>
     </task>
-    <option name="localTasksCounter" value="288" />
+    <task id="LOCAL-00288" summary="multiuser login">
+      <created>1523700459970</created>
+      <option name="number" value="00288" />
+      <option name="presentableId" value="LOCAL-00288" />
+      <option name="project" value="LOCAL" />
+      <updated>1523700459970</updated>
+    </task>
+    <option name="localTasksCounter" value="289" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227841000" />
+    <option name="totallyTimeSpent" value="227967000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1402,7 +1402,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="merge Live status of Multiuser" />
     <MESSAGE value="Merge branch 'Backend' into AllesNeu&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;Elektronik/cooling.py&#10;#&#9;Elektronik/power.py&#10;#&#9;conf/Mediatrix.json&#10;#&#9;php/src/AV.php&#10;#&#9;php/src/Beamer.php&#10;#&#9;test_js/ws_test.html" />
     <MESSAGE value="change ips" />
     <MESSAGE value="add mute function" />
@@ -1427,7 +1426,8 @@
     <MESSAGE value="add group klass" />
     <MESSAGE value="comment mixer stuff" />
     <MESSAGE value="merge AllesNeue" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge AllesNeue" />
+    <MESSAGE value="multiuser login" />
+    <option name="LAST_COMMIT_MESSAGE" value="multiuser login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1775,11 +1775,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="44" column="47" lean-forward="false" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
+        <state relative-caret-position="198">
+          <caret line="48" column="45" lean-forward="false" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
           <folding>
-            <marker date="1523700431808" expanded="true" signature="13692:13732" ph="SELECT * FRO... preset" />
-            <marker date="1523700431808" expanded="true" signature="14470:14512" ph="SELECT isext... user" />
+            <marker date="1523700558392" expanded="true" signature="13738:13778" ph="SELECT * FRO... preset" />
+            <marker date="1523700558392" expanded="true" signature="14516:14558" ph="SELECT isext... user" />
           </folding>
         </state>
       </provider>

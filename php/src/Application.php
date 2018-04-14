@@ -46,6 +46,7 @@ class Application implements MessageComponentInterface
             if($this->group->getSlots() > $this->group->getUsers()->count()) {
                 $this->clients->attach($conn);
                 $this->registerd[$conn->resourceId] = "";
+                $this->group->addUser($conn);
 
                 echo "New connection! ({$conn->resourceId})\n";
             }else{
