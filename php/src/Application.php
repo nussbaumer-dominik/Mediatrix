@@ -24,7 +24,7 @@ class Application implements MessageComponentInterface
     private $beamer;
     private $key;
     private $defaultPresets;
-    private $registerd;
+    private $forRegister;
     private $av;
     protected $mixer;
     private $group;
@@ -32,9 +32,9 @@ class Application implements MessageComponentInterface
     public function __construct($mixer)
     {
         $this->mixer = $mixer;
-        $this->clients = new \SplObjectStorage;
         $this->group = new Group();
         $this->iniMe();
+        $this->forRegister = array();
     }
 
     public function onOpen(ConnectionInterface $conn)
@@ -44,9 +44,7 @@ class Application implements MessageComponentInterface
             var_dump($this->group->getUsers()->count());
             var_dump($this->group->getSlots());
             if($this->group->getSlots() > $this->group->getUsers()->count()) {
-                $this->clients->attach($conn);
-                $this->registerd[$conn->resourceId] = "";
-                $this->group->addUser($conn);
+                $this->forRegister[$conn->resourceId] = array('username' => "", 'conn' => $conn);
 
                 echo "New connection! ({$conn->resourceId})\n";
             }else{
@@ -91,9 +89,12 @@ class Application implements MessageComponentInterface
 
             //handle registration and send ini string
             if (isset($commands["ini"])) {
-                $from->send(json_encode($this->addLiveStatus($this->getIniString($jwt->data->userName))));
-                $this->registerd[$from->resourceId] = $jwt->data->userName;
-
+                if(is_null($this->group->getAdmin())) {
+                    $this->group->addUser($from);
+                    $from->send(json_encode($this->addLiveStatus($this->getIniString($jwt->data->userName))));
+                }else{
+                    $this->forRegister[$from->resourceId]['username'] = $jwt->data->userName;
+                }
                 echo "Connection {$from->resourceId} registered, Ini-String sent\n";
                 return;
             }
@@ -273,7 +274,7 @@ class Application implements MessageComponentInterface
 
     public function onClose(ConnectionInterface $conn)
     {
-        $this->registerd = false;
+        $this->forRegister = false;
 
         // The connection is closed, remove it, as we can no longer send it messages
         $this->clients = null;
