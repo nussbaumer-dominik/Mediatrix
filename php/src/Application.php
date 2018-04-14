@@ -96,7 +96,7 @@ class Application implements MessageComponentInterface
                     $this->forRegister[$from->resourceId]['username'] = $jwt->data->userName;
                     $this->group->getAdmin()->send('{"group":{"register":"' . $from->resourceId . '"}}');
                 }
-                echo "Connection {$from->resourceId} registered, Ini-String sent\n";
+                echo "Connection {$from->resourceId} registered";
                 return;
             }
 
@@ -104,10 +104,22 @@ class Application implements MessageComponentInterface
             //check if user has registered
             if ($this->group->getUsers()->contains(from)) {
 
-
                 /*
-                 * DMX:
-                 */
+                * Group
+                */
+                if (isset($commands['group'])){
+                    if(isset($commands['group']['register']) && isset($this->forRegister[$commands['group']['register']])){
+                        $this->group->addUser($this->forRegister[$commands['group']['register']]);
+                        unset($this->forRegister[$commands['group']['register']]);
+                    }else{
+                        array_push($result, json_decode('{"success":false,"err":"Connection Id not valid"}'));
+                    }
+                }
+
+
+                    /*
+                     * DMX:
+                     */
                 if (isset($commands["dmx"])) {
 
 
@@ -226,7 +238,7 @@ class Application implements MessageComponentInterface
                  * No Command recognized
                  * TODO
                  */
-                if (!(isset($commands["dmx"]) || isset($commands["beamer"]) || isset($commands["av"]) || isset($commands["mixer"]))) {
+                if (!(isset($commands["dmx"]) || isset($commands["beamer"]) || isset($commands["av"]) || isset($commands["mixer"]) || isset($commands['group']))) {
                     $from->send(json_encode($this->addLiveStatus(array("success" => false, "err" => "Unrecognized Command"))));
                 }
 
