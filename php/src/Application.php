@@ -94,6 +94,7 @@ class Application implements MessageComponentInterface
                     $from->send(json_encode($this->addLiveStatus($this->getIniString($jwt->data->userName))));
                 }else{
                     $this->forRegister[$from->resourceId]['username'] = $jwt->data->userName;
+                    $this->group->getAdmin()->send('{"group":{"register":"' . $from->resourceId . '"}}');
                 }
                 echo "Connection {$from->resourceId} registered, Ini-String sent\n";
                 return;
