@@ -55,6 +55,8 @@ $(function () {
 
 	//wird bei Response des Servers ausgelöst
 	socket.onmessage = event => {
+		console.log("Message: ");
+		console.log(event.data);
 		if (JSON.parse(event.data)["ini"]) {
 			console.log("das ist der ini-string: " + event.data);
 			ini = (JSON && JSON.parse(event.data)) || $.parseJSON(event.data);
@@ -69,9 +71,12 @@ $(function () {
 				$("#power").prop("checked", true);
 				$("#beamerState").attr("data-state", "1");
 			}
+		} else if(JSON.parse(event.data)["group"]){
+			alert(event.data);
+			
 		} else {
 			let msg = JSON.parse(event.data);
-			console.log("message: " + msg);
+			console.log("message: " +{ msg });
 			updateLive(msg.live);
 			liveStatus(msg.live);
 		}
@@ -431,7 +436,7 @@ $(function () {
 			class: "preset"
 		}).attr("data-preset", presetStart);
 		div.append("<h2>" + data.name + "</h2>");
-		if (data.conf.dmx.length !== undefined) {
+		if (typeof data.conf.dmx.length !== undefined) {
 			div.append(
 				"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
 				Object.keys(data.conf.dmx).length +
@@ -442,7 +447,7 @@ $(function () {
 				"<div> <i class='fas fa-lightbulb'> </i> <h3>0</h3> </div>"
 			);
 		}
-		if (data.conf.av.mode !== undefined) {
+		if (typeof data.conf.av.mode !== undefined) {
 			div.append(
 				"<div> <i class='fas fa-volume-up'> </i> <h3>" +
 				data.conf.av.mode +
@@ -453,7 +458,7 @@ $(function () {
 				"<div> <i class='fas fa-volume-up'> </i> <h3> - </h3> </div>"
 			);
 		}
-		if (data.conf.beamer !== undefined) {
+		if (typeof data.conf.beamer !== undefined) {
 			if (data.conf.beamer.on) {
 				div.append(
 					"<div> <i class='fas fa-video'> </i> <h3>ein</h3> </div>"
@@ -464,7 +469,7 @@ $(function () {
 				);
 			}
 		}
-		if (data.conf.mixer !== undefined) {
+		if (typeof data.conf.mixer !== undefined) {
 			div.append(
 				"<div> <i class='fas fa-microphone'> </i> <h3>" +
 				Object.keys(data.conf.mixer.mikrofone) +
@@ -491,7 +496,7 @@ $(function () {
 			}).attr("data-preset", i);
 			console.log(presets[i].conf);
 			div.append("<h2>" + presets[i].name + "</h2>");
-			if (presets[i].conf.dmx.length !== undefined) {
+			if (typeof presets[i].conf.dmx.length !== undefined) {
 				div.append(
 					"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
 					Object.keys(presets[i].conf.dmx).length +
@@ -502,7 +507,7 @@ $(function () {
 					"<div> <i class='fas fa-lightbulb'> </i> <h3>0</h3> </div>"
 				);
 			}
-			if (presets[i].conf.av.mode !== undefined) {
+			if (typeof presets[i].conf.av.mode !== undefined) {
 				div.append(
 					"<div> <i class='fas fa-volume-up'> </i> <h3>" +
 					presets[i].conf.av.mode +
@@ -513,7 +518,7 @@ $(function () {
 					"<div> <i class='fas fa-volume-up'> </i> <h3> - </h3> </div>"
 				);
 			}
-			if (presets[i].conf.beamer !== undefined) {
+			if (typeof presets[i].conf.beamer !== undefined) {
 				if (presets[i].conf.beamer.on) {
 					div.append(
 						"<div> <i class='fas fa-video'> </i> <h3>ein</h3> </div>"
@@ -524,7 +529,7 @@ $(function () {
 					);
 				}
 			}
-			if (presets[i].conf.mixer !== undefined) {
+			if (typeof presets[i].conf.mixer !== undefined) {
 				div.append(
 					"<div> <i class='fas fa-microphone'> </i> <h3>" +
 					Object.keys(presets[i].conf.mixer.mikrofone).length +
