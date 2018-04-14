@@ -506,7 +506,7 @@ $(function () {
 					"<div> <i class='fas fa-lightbulb'> </i> <h3>0</h3> </div>"
 				);
 			}
-			if (typeof presets[i].conf.av.mode !== undefined) {
+			if (typeof presets[i].conf.av !== undefined) {
 				div.append(
 					"<div> <i class='fas fa-volume-up'> </i> <h3>" +
 					presets[i].conf.av.mode +
@@ -624,12 +624,10 @@ $(function () {
 					value[1].innerText = live.av.volume + "dB";
 				}
 			} else if (value[0].innerText == "Scheinwerfer") {
-				console.log(value[1].innerText);
 				if (value[1].innerText != live.dmx.length) {
 					value[1].innerText = live.dmx.length;
 				}
 			} else if (value[0].innerText == "Beamer") {
-				console.log(value[1].innerText);
 				let active = live.beamer.on;
 				let current = false;
 				value[1].innerText == "ein" ?
