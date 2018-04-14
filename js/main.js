@@ -64,17 +64,15 @@ $(function () {
 			getPresets();
 			toggleBase();
 			on = (ini.live.beamer.on === true) ? true : false;
-			console.log("Der Beamer ist ein und die Aimation: " + on);
+			console.log("Der Beamer ist ein und die Animation: " + on);
 			if (on) {
 				$("#power").prop("checked", true);
 				$("#beamerState").attr("data-state", "1");
-				console.log("beamer ANimation wird getriggered: " + $("#power").prop("checked"));
 			}
 		} else {
-			let msg = event.data;
+			let msg = JSON.parse(event.data);
 			console.log("message: " + msg);
-			msg = JSON.parse(msg);
-			console.log(msg.live);
+			updateLive(msg.live);
 			liveStatus(msg.live);
 		}
 	};
@@ -314,7 +312,6 @@ $(function () {
 				values[handle];
 		});
 		updateAvSlider();
-		return true;
 	}
 
 	function selectLichtConf() {
@@ -323,26 +320,17 @@ $(function () {
 			var scheinwerferObj = ini.ini.dmx["scheinwerfer" + i];
 			console.log(scheinwerfer);
 			if (scheinwerferObj.numberChannels == "4") {
-				scheinwerfer[scheinwerferObj.id] = {
-					r: 0,
-					g: 0,
-					b: 0,
-					w: 0
-				};
+				scheinwerfer[scheinwerferObj.id] = { r: 0, g: 0, b: 0, w: 0 };
 
 				var t = document.querySelector("#rgbwTemplate").innerHTML;
 
-				for (
-					let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++
-				) {
+				for ( let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++ ) {
 					t = t.replace(/{:id}/, scheinwerferObj.id);
+					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + (scheinwerferObj.id + 1));
 				}
 
-				t = t.replace(/{:lightNumber}/, scheinwerferObj.id + 1);
-				t = t.replace(
-					/{{:id}}/,
-					"Scheinwerfer" + (scheinwerferObj.id + 1)
-				);
+				t = t.replace( /{:lightNumber}/, scheinwerferObj.id + 1 );
+				t = t.replace( /{{:id}}/, "Scheinwerfer" + (scheinwerferObj.id + 1) );
 				$(".flex-container").append(t);
 			} else if (scheinwerferObj.numberChannels == "1") {
 				scheinwerfer[scheinwerferObj.id] = {
@@ -350,26 +338,20 @@ $(function () {
 				};
 
 				var t = document.querySelector("#hueTemplate").innerHTML;
-				for (
-					let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++
-				) {
+				for ( let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++ ) {
 					t = t.replace(/{:id}/, scheinwerferObj.id);
+					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + (scheinwerferObj.id + 1));
 				}
 				t = t.replace(/{:lightNumber}/, scheinwerferObj.id + 1);
 				$(".flex-container").append(t);
 			} else if (scheinwerferObj.numberChannels == "3") {
-				scheinwerfer[scheinwerferObj.id] = {
-					r: 0,
-					g: 0,
-					b: 0
-				};
+				scheinwerfer[scheinwerferObj.id] = { r: 0, g: 0, b: 0 };
 
 				var t = document.querySelector("#rgbTemplate").innerHTML;
 
-				for (
-					let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++
-				) {
+				for ( let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++ ) {
 					t = t.replace(/{:id}/, scheinwerferObj.id);
+					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + (scheinwerferObj.id + 1));
 				}
 
 				t = t.replace(/{:lightNumber}/, scheinwerferObj.id + 1);
@@ -402,7 +384,6 @@ $(function () {
 				valueFields.get(i).innerHTML = values[handle];
 			});
 		});
-		return true;
 	}
 
 	$("#savePreset").on("click", ev => {
@@ -435,14 +416,12 @@ $(function () {
 				console.log("success: " + data);
 				addPreset(currentConf);
 				presets.push(currentConf);
-				let message = "Das Preset " + $("#presetName").val() + " wurde erfolgreich erstellt";
-				outputMessage(message);
+				outputMessage("Das Preset " + $("#presetName").val() + " wurde erfolgreich erstellt");
 			})
 			.fail(data => {
 				console.log("error: ");
 				console.log(data);
-				let message = "Das Preset " + $("#presetName").val() + " konnte nicht erfolgreich erstellt werden";
-				outputMessage(message);
+				outputMessage("Das Preset " + $("#presetName").val() + " konnte nicht erfolgreich erstellt werden");
 			});
 	});
 
@@ -675,6 +654,12 @@ $(function () {
 			ini.live.av.volume;
 	};
 
+	var setSlider = (id, val) => {
+		var slider = document.getElementById(id);
+		slider.noUiSlider.set(val);
+		document.getElementById(id + "Value").innerHTML = val;
+	};
+
 	function buildStatus(key, value, unit, id) {
 		var div = $("<div id='" + id + "'>");
 		div.append("<span>" + key + "</span><span>" + value + unit + "</span>");
@@ -859,12 +844,6 @@ $(function () {
 		}
 	};
 
-	var setSlider = (id, val) => {
-		var slider = document.getElementById(id);
-		slider.noUiSlider.set(val);
-		document.getElementById(id + "Value").innerHTML = val;
-	};
-
 	var toggleBase = () => {
 		toggleFlexContainer(0);
 		togglePresMode(1);
@@ -885,6 +864,10 @@ $(function () {
 			$(".side-nav ul").css("display", "flex");
 		}
 	};
+
+	function updateLive(live){
+
+	}
 
 	//Slider initialisieren, je nach dem, welche gerade im Markup eingeblendet sind
 	function initSlider(container) {
