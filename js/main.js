@@ -73,7 +73,7 @@ $(function () {
 			}
 		} else {
 			let msg = JSON.parse(event.data);
-			console.log("message: " + msg);
+			console.log("message: " +{ msg });
 			updateLive(msg.live);
 			liveStatus(msg.live);
 		}
