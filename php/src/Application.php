@@ -41,7 +41,8 @@ class Application implements MessageComponentInterface
     {
         // Store the new connection to send messages to later
 
-
+            var_dump($this->group->getUsers()->count());
+            var_dump($this->group->getSlots());
             if($this->group->getSlots() > $this->group->getUsers()->count()) {
                 $this->clients->attach($conn);
                 $this->registerd[$conn->resourceId] = "";
