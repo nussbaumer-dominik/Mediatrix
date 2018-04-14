@@ -504,7 +504,7 @@ $(function () {
 					"<div> <i class='fas fa-lightbulb'> </i> <h3>0</h3> </div>"
 				);
 			}
-			if (typeof presets[i].conf.av.mode !== "undefined") {
+			if (presets[i].conf.av["mode"]) {
 				div.append(
 					"<div> <i class='fas fa-volume-up'> </i> <h3>" +
 					presets[i].conf.av.mode +
@@ -644,8 +644,14 @@ $(function () {
 
 	function updateAvSlider() {
 		setSlider("avSlider1", ini.live.av.volume);
-		document.getElementById("avSlider1Value").innerHTML =
-			ini.live.av.volume;
+		if(ini.live.av.volume !== undefined){
+			document.getElementById("avSlider1Value").innerHTML = ini.live.av.volume;
+			return true;
+		} else {
+			document.getElementById("avSlider1Value").innerHTML = "0";
+		}
+
+		
 	};
 
 	var setSlider = (id, val) => {
