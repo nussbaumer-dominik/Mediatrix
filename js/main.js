@@ -72,7 +72,7 @@ $(function () {
 			}
 		} else if(JSON.parse(event.data)["group"]){
 			alert(event.data);
-			send(event.data);
+			send(JSON.parse(event.data));
 		} else {
 			let msg = JSON.parse(event.data);
 			console.log("message: " +{ msg });
