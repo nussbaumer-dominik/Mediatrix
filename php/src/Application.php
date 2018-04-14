@@ -102,7 +102,7 @@ class Application implements MessageComponentInterface
 
 
             //check if user has registered
-            if ($this->group->getUsers()->contains(from)) {
+            if ($this->group->getUsers()->contains($from)) {
 
                 /*
                 * Group
