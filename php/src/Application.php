@@ -293,10 +293,9 @@ class Application implements MessageComponentInterface
 
     public function onClose(ConnectionInterface $conn)
     {
-        $this->forRegister = false;
+        unset($this->forRegister[$conn->resourceId]);
 
-        // The connection is closed, remove it, as we can no longer send it messages
-        $this->clients = null;
+        $this->group->removeUser($conn);
 
         echo "Connection {$conn->resourceId} has disconnected\n";
     }
