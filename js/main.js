@@ -862,7 +862,7 @@ $(function () {
 	var setSlider = (id, val) => {
 		var slider = document.getElementById(id);
 		slider.noUiSlider.set(val);
-		//document.getElementById(id + "Value").innerHTML = ini.live.av.volume;
+		document.getElementById(id + "Value").innerHTML = val;
 	};
 
 	var toggleBase = () => {
