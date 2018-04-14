@@ -110,7 +110,8 @@ class Application implements MessageComponentInterface
                 if (isset($commands['group'])){
                     if(isset($commands['group']['register']) && isset($this->forRegister[$commands['group']['register']])){
                         $this->group->addUser($this->forRegister[$commands['group']['register']]);
-                        unset($this->forRegister[$commands['group']['register']]);
+                        unset($this->forRegister[$commands['group']['register']]['conn']);
+                        $from->send(json_encode($this->addLiveStatus($this->getIniString($this->forRegister[$commands['group']['register']]['username']))));
                     }else{
                         array_push($result, json_decode('{"success":false,"err":"Connection Id not valid"}'));
                     }
