@@ -55,6 +55,8 @@ $(function () {
 
 	//wird bei Response des Servers ausgelöst
 	socket.onmessage = event => {
+		console.log("Message: ");
+		console.log(event.data);
 		if (JSON.parse(event.data)["ini"]) {
 			console.log("das ist der ini-string: " + event.data);
 			ini = (JSON && JSON.parse(event.data)) || $.parseJSON(event.data);
