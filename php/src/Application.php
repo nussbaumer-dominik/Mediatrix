@@ -27,11 +27,13 @@ class Application implements MessageComponentInterface
     private $registerd;
     private $av;
     protected $mixer;
+    private $group;
 
     public function __construct($mixer)
     {
         $this->mixer = $mixer;
         $this->clients = new \SplObjectStorage;
+        $this->group = new Group();
         $this->iniMe();
     }
 
@@ -40,10 +42,16 @@ class Application implements MessageComponentInterface
         // Store the new connection to send messages to later
 
 
-            $this->clients->attach($conn);
-            $this->registerd[$conn->resourceId] = "";
+            if($this->group->getSlots() > $this->group->getUsers()->count()) {
+                $this->clients->attach($conn);
+                $this->registerd[$conn->resourceId] = "";
 
-            echo "New connection! ({$conn->resourceId})\n";
+                echo "New connection! ({$conn->resourceId})\n";
+            }else{
+
+                $conn->send('{"success":false,"err":"No open Slot in Group"');
+                $conn->close();
+            }
 
     }
 
@@ -90,7 +98,7 @@ class Application implements MessageComponentInterface
 
 
             //check if user has registered
-            if (strlen($this->registerd[$from->resourceId]) > 0) {
+            if ($this->group->getUsers()->contains(from)) {
 
 
                 /*
