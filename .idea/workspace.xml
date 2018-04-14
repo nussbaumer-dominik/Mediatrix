@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
       <change beforePath="$PROJECT_DIR$/php/src/Group.php" afterPath="$PROJECT_DIR$/php/src/Group.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -26,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="537">
               <caret line="95" column="93" lean-forward="false" selection-start-line="95" selection-start-column="93" selection-end-line="95" selection-end-column="93" />
               <folding>
                 <marker date="1523701861864" expanded="true" signature="13847:13887" ph="SELECT * FRO... preset" />
@@ -39,7 +38,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Group.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Group.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Group.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
@@ -122,8 +121,8 @@
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/php/src/websocket.php" />
         <option value="$PROJECT_DIR$/php/src/MyIoServer.php" />
-        <option value="$PROJECT_DIR$/php/src/Group.php" />
         <option value="$PROJECT_DIR$/php/src/Application.php" />
+        <option value="$PROJECT_DIR$/php/src/Group.php" />
       </list>
     </option>
   </component>
@@ -936,13 +935,6 @@
       <workItem from="1522924199783" duration="3998000" />
       <workItem from="1523110524525" duration="171000" />
     </task>
-    <task id="LOCAL-00242" summary="change high to low">
-      <created>1522695559594</created>
-      <option name="number" value="00242" />
-      <option name="presentableId" value="LOCAL-00242" />
-      <option name="project" value="LOCAL" />
-      <updated>1522695559594</updated>
-    </task>
     <task id="LOCAL-00243" summary="debug python">
       <created>1522696501241</created>
       <option name="number" value="00243" />
@@ -1279,11 +1271,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523700698969</updated>
     </task>
-    <option name="localTasksCounter" value="291" />
+    <task id="LOCAL-00291" summary="register multiuser">
+      <created>1523701883054</created>
+      <option name="number" value="00291" />
+      <option name="presentableId" value="LOCAL-00291" />
+      <option name="project" value="LOCAL" />
+      <updated>1523701883054</updated>
+    </task>
+    <option name="localTasksCounter" value="292" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229265000" />
+    <option name="totallyTimeSpent" value="229617000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1404,7 +1403,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merge branch 'Backend' into AllesNeu&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;Elektronik/cooling.py&#10;#&#9;Elektronik/power.py&#10;#&#9;conf/Mediatrix.json&#10;#&#9;php/src/AV.php&#10;#&#9;php/src/Beamer.php&#10;#&#9;test_js/ws_test.html" />
     <MESSAGE value="change ips" />
     <MESSAGE value="add mute function" />
     <MESSAGE value="fix live status" />
@@ -1429,7 +1427,8 @@
     <MESSAGE value="comment mixer stuff" />
     <MESSAGE value="merge AllesNeue" />
     <MESSAGE value="multiuser login" />
-    <option name="LAST_COMMIT_MESSAGE" value="multiuser login" />
+    <MESSAGE value="register multiuser" />
+    <option name="LAST_COMMIT_MESSAGE" value="register multiuser" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1767,22 +1766,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Group.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="537">
           <caret line="95" column="93" lean-forward="false" selection-start-line="95" selection-start-column="93" selection-end-line="95" selection-end-column="93" />
           <folding>
             <marker date="1523701861864" expanded="true" signature="13847:13887" ph="SELECT * FRO... preset" />
             <marker date="1523701861864" expanded="true" signature="14625:14667" ph="SELECT isext... user" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Group.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>

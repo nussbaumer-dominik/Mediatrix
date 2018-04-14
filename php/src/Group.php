@@ -15,7 +15,7 @@ class Group
     public function __construct()
     {
         $this->users = new \SplObjectStorage;
-        $this->slots = 1;
+        $this->slots = 2;
         $this->admin = null;
     }
 
