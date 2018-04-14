@@ -420,12 +420,12 @@ $(function () {
 				console.log("success: " + data);
 				addPreset(currentConf);
 				presets.push(currentConf);
-				outputMessage("Das Preset " + $("#presetName").val() + " wurde erfolgreich erstellt");
+				outputMessage("Das Preset " + $("#presetName").val() + " wurde erstellt");
 			})
 			.fail(data => {
 				console.log("error: ");
 				console.log(data);
-				outputMessage("Das Preset " + $("#presetName").val() + " konnte nicht erfolgreich erstellt werden");
+				outputMessage("Das Preset " + $("#presetName").val() + " konnte nicht erstellt werden");
 			});
 	});
 
@@ -435,7 +435,7 @@ $(function () {
 			class: "preset"
 		}).attr("data-preset", presetStart);
 		div.append("<h2>" + data.name + "</h2>");
-		if (typeof data.conf.dmx.length !== undefined) {
+		if (typeof data.conf.dmx.length !== "undefined") {
 			div.append(
 				"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
 				Object.keys(data.conf.dmx).length +
@@ -446,7 +446,7 @@ $(function () {
 				"<div> <i class='fas fa-lightbulb'> </i> <h3>0</h3> </div>"
 			);
 		}
-		if (typeof data.conf.av.mode !== undefined) {
+		if (typeof data.conf.av.mode !== "undefined") {
 			div.append(
 				"<div> <i class='fas fa-volume-up'> </i> <h3>" +
 				data.conf.av.mode +
@@ -457,7 +457,7 @@ $(function () {
 				"<div> <i class='fas fa-volume-up'> </i> <h3> - </h3> </div>"
 			);
 		}
-		if (typeof data.conf.beamer !== undefined) {
+		if (typeof data.conf.beamer !== "undefined") {
 			if (data.conf.beamer.on) {
 				div.append(
 					"<div> <i class='fas fa-video'> </i> <h3>ein</h3> </div>"
@@ -468,7 +468,7 @@ $(function () {
 				);
 			}
 		}
-		if (typeof data.conf.mixer !== undefined) {
+		if (typeof data.conf.mixer !== "undefined") {
 			div.append(
 				"<div> <i class='fas fa-microphone'> </i> <h3>" +
 				Object.keys(data.conf.mixer.mikrofone) +
@@ -495,7 +495,7 @@ $(function () {
 			}).attr("data-preset", i);
 			console.log(presets[i].conf);
 			div.append("<h2>" + presets[i].name + "</h2>");
-			if (typeof presets[i].conf.dmx.length !== undefined) {
+			if (typeof presets[i].conf.dmx.length !== "undefined") {
 				div.append(
 					"<div> <i class='fas fa-lightbulb'> </i> <h3>" +
 					Object.keys(presets[i].conf.dmx).length +
@@ -506,7 +506,7 @@ $(function () {
 					"<div> <i class='fas fa-lightbulb'> </i> <h3>0</h3> </div>"
 				);
 			}
-			if (typeof presets[i].conf.av.mode !== undefined) {
+			if (typeof presets[i].conf.av !== "undefined") {
 				div.append(
 					"<div> <i class='fas fa-volume-up'> </i> <h3>" +
 					presets[i].conf.av.mode +
@@ -517,7 +517,7 @@ $(function () {
 					"<div> <i class='fas fa-volume-up'> </i> <h3> - </h3> </div>"
 				);
 			}
-			if (typeof presets[i].conf.beamer !== undefined) {
+			if (typeof presets[i].conf.beamer !== "undefined") {
 				if (presets[i].conf.beamer.on) {
 					div.append(
 						"<div> <i class='fas fa-video'> </i> <h3>ein</h3> </div>"
@@ -528,7 +528,7 @@ $(function () {
 					);
 				}
 			}
-			if (typeof presets[i].conf.mixer !== undefined) {
+			if (typeof presets[i].conf.mixer !== "undefined") {
 				div.append(
 					"<div> <i class='fas fa-microphone'> </i> <h3>" +
 					Object.keys(presets[i].conf.mixer.mikrofone).length +
@@ -624,12 +624,10 @@ $(function () {
 					value[1].innerText = live.av.volume + "dB";
 				}
 			} else if (value[0].innerText == "Scheinwerfer") {
-				console.log(value[1].innerText);
 				if (value[1].innerText != live.dmx.length) {
 					value[1].innerText = live.dmx.length;
 				}
 			} else if (value[0].innerText == "Beamer") {
-				console.log(value[1].innerText);
 				let active = live.beamer.on;
 				let current = false;
 				value[1].innerText == "ein" ?
