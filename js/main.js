@@ -644,8 +644,14 @@ $(function () {
 
 	function updateAvSlider() {
 		setSlider("avSlider1", ini.live.av.volume);
-		document.getElementById("avSlider1Value").innerHTML =
-			ini.live.av.volume;
+		if(ini.live.av.volume !== undefined){
+			document.getElementById("avSlider1Value").innerHTML = ini.live.av.volume;
+			return true;
+		} else {
+			document.getElementById("avSlider1Value").innerHTML = "0";
+		}
+
+		
 	};
 
 	var setSlider = (id, val) => {
