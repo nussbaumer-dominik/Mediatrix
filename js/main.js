@@ -455,7 +455,7 @@ $(function () {
 				"<div> <i class='fas fa-volume-up'> </i> <h3> - </h3> </div>"
 			);
 		}
-		if (typeof data.conf.beamer !== "undefined") {
+		if (typeof data.conf.beamer.on !== "undefined") {
 			if (data.conf.beamer.on) {
 				div.append(
 					"<div> <i class='fas fa-video'> </i> <h3>ein</h3> </div>"
@@ -466,7 +466,7 @@ $(function () {
 				);
 			}
 		}
-		if (typeof data.conf.mixer !== "undefined") {
+		if (typeof data.conf.mixer.mikrofone !== "undefined") {
 			div.append(
 				"<div> <i class='fas fa-microphone'> </i> <h3>" +
 				Object.keys(data.conf.mixer.mikrofone) +
@@ -515,7 +515,7 @@ $(function () {
 					"<div> <i class='fas fa-volume-up'> </i> <h3> - </h3> </div>"
 				);
 			}
-			if (typeof presets[i].conf.beamer !== "undefined") {
+			if (typeof presets[i].conf.beamer.on !== "undefined") {
 				if (presets[i].conf.beamer.on) {
 					div.append(
 						"<div> <i class='fas fa-video'> </i> <h3>ein</h3> </div>"
@@ -526,7 +526,7 @@ $(function () {
 					);
 				}
 			}
-			if (typeof presets[i].conf.mixer !== "undefined") {
+			if (typeof presets[i].conf.mixer.mikrofone !== "undefined") {
 				div.append(
 					"<div> <i class='fas fa-microphone'> </i> <h3>" +
 					Object.keys(presets[i].conf.mixer.mikrofone).length +
