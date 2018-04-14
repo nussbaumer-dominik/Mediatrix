@@ -33,7 +33,7 @@ def gettemp(id):
 
 # Lueftersteuerung
 def fanCon(mt):
-    st = 35.0           #Solltemperatur in Grad Celsius (Temperaturraum 35-55 Grad)
+    st = 30.0           #Solltemperatur in Grad Celsius (Temperaturraum 35-55 Grad)
     maxspeed = 1600     #Maximale Geschwindigkeit des Luefters in RPM
     prozent = 0
     if mt > st:
@@ -53,20 +53,24 @@ def pwm():
 
 
         #Script has been called directly
-        id = '10-000801a96106'
+        id = '28-0517605a65ff'
         mt = gettemp(id)/float(1000)    #Momentantemperatur
         print "Momentantemperatur : " + '{:.3f}'.format(mt)
         prozent = fanCon(mt)
 
         print "Prozent: " + '{:.3f}'.format(prozent)
 
-        if prozent > 20:
+        if prozent > 30:
             fan_pwm.ChangeDutyCycle(prozent) #provide duty cycle in the range 0-100
-            sleep(2)
+            sleep(60)
 
-        if prozent < 20:
+        elif prozent < 3:
             fan_pwm.ChangeDutyCycle(0)
-            sleep(2)
+            sleep(60)
+        else:
+            sleep(60)
+
+
 
 
     return

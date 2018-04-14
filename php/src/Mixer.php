@@ -7,6 +7,8 @@ class Mixer {
 	//Variablen
 	protected $session_id;
 	protected $mixer;
+	protected $count = 1;
+	protected $lastVolume = 0.0;
 	protected $command = "3:::SETD^i.";
 
 	//Konstruktor
@@ -17,7 +19,7 @@ class Mixer {
 
 	//Verbindung mit Mischpult herstellen
 	public function connectToScui($ipAddress) {
-		echo "Error";
+		echo "connectToScui";
 		$url = $ipAddress . "/socket.io/";
 		$req = curl_init();
 		curl_setopt($req, CURLOPT_URL, $url);
@@ -47,7 +49,7 @@ class Mixer {
 		echo $mute . "\n";
 		try {
 			echo "im Try Block der Mute-Funktion gelandet \n";
-			echo $this->command . $channel . ".mute^" . $mute;
+			echo "Der Mute Wert ist: " . $mute . " und der Kanal: " . $channel . "\n";
 			$this->mixer->send($this->command . $channel . ".mute^" . $mute);
 			return array("success" => true, "err" => "");
 		} catch(Exception $ex) {
@@ -58,24 +60,36 @@ class Mixer {
 
 	//Lautstärke regeln
 	public function mix($val, $channel) {
-		echo "" . $val . " " . $channel . " ";
 		try {
-			echo "im Try Block " . $val . " " . $channel; 
+			echo "im Try Block der mix-Funktion gelandet \n";
+			echo "die Lautstärke ist: " . $val . " und der Channel: " . $channel . "\n";
 			$this->mixer->send($this->command . $channel . ".mix^" . $val);
-			return array("success" => true, "err" => "");
 			echo "success";
+			if($channel == "0"){
+				$this->lastVolume = $val;
+			}
+			return array("success" => true, "err" => "");
 		} catch(Exception $ex) {
 			return array("success" => false, "err" => $ex);
+			echo "stellen der Lautstärke fehlgeschlagen - Fehlermeldung: " . $ex;
 		}
 	}
 
 	public function alive() {
 		try {
-			echo "Alive " . "3:::ALIVE\n";
-			$this->mixer->send("3:::ALIVE");
+			//echo "Alive " . "2::\n";
+			$this->mixer->send("2::");
+			//$this->mixer->send("3:::SETD^i.0.mix^" . $this->lastVolume);
+			//echo "3:::SETD^i.0.mix^" . $this->lastVolume. "\n";
+			if($this->count % 10 == 1){
+				//echo "3:::ALIVE\n";
+				$this->mixer->send("3:::ALIVE");
+			}
+			$this->count++;
 			return array("success" => true, "err" => "");
 		} catch(Exception $ex) {
 			return array("success" => false, "err" => $ex);
+			echo "Alive fehlgeschlagen - Fehlermeldung: " . $ex;
 		}
 	}
 
