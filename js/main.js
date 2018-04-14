@@ -465,6 +465,8 @@ $(function () {
 					"<div> <i class='fas fa-video'> </i> <h3>aus</h3> </div>"
 				);
 			}
+		} else {
+			div.append("<div> <i class='fas fa-video'> </i> <h3>aus</h3> </div>");
 		}
 		if (typeof data.conf.mixer.mikrofone !== "undefined") {
 			div.append(
@@ -525,6 +527,8 @@ $(function () {
 						"<div> <i class='fas fa-video'> </i> <h3>aus</h3> </div>"
 					);
 				}
+			}else {
+				div.append("<div> <i class='fas fa-video'> </i> <h3> aus </h3> </div>");
 			}
 			if (typeof presets[i].conf.mixer.mikrofone !== "undefined") {
 				div.append(
