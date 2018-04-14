@@ -71,6 +71,9 @@ $(function () {
 				$("#power").prop("checked", true);
 				$("#beamerState").attr("data-state", "1");
 			}
+		} else if(JSON.parse(event.data)["group"]){
+			alert(event.data);
+			
 		} else {
 			let msg = JSON.parse(event.data);
 			console.log("message: " +{ msg });
