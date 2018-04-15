@@ -668,7 +668,7 @@ $(function () {
 		console.log("In der updateLive-Methode gelandet Live: ");
 		console.log(live);
 
-		for(let i=0;i<Object.keys().length;i++){
+		for(let i=0;i<Object.keys(live).length;i++){
 
 		}
 		
