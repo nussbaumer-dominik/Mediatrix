@@ -109,10 +109,10 @@ $(() => {
 		$("#presetModal").toggleClass("open");
 	});
 
-	$(".presetTrigger").click(function() {
+	/*$(".presetTrigger").click(function() {
 		$(".modal-wrapperGroup").toggleClass("open");
 		$("#groupModal").toggleClass("open");
-	});
+	});*/
 
 	$(".modal-wrapper").click(function() {
 		$(".modal-wrapperGroup").toggleClass("open");
