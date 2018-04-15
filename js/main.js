@@ -668,9 +668,9 @@ $(function () {
 		console.log("In der updateLive-Methode gelandet Live: ");
 		console.log(live);
 
-		/*if(){
+		for(let i=0;i<Object.keys().length;i++){
 
-		}*/
+		}
 		
 		//setSlider(id, val);
 	}
