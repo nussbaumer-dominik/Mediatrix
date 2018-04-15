@@ -258,9 +258,9 @@ a {
 		}
 		.tooltip {
 			position: absolute;
-			visibility: hidden;
+			visibility: visible;
 			width: 250px;
-			height: 250px;
+			height: 350px;
 			bottom: 0;
 			left: 80px;
 			color: var(--color);
@@ -373,9 +373,10 @@ a {
 					}
 				}
 			}
+
 			.colorOptions {
 				width: 100%;
-				height: auto;
+				height: 60px;
 				padding: 10px;
 				box-sizing: border-box;
 				h3 {
@@ -409,6 +410,68 @@ a {
 					}
 				}
 			}
+
+			.groupView {
+				width: 100%;
+				height: auto;
+				padding: 10px;
+				box-sizing: border-box;
+
+				h3 {
+					margin: 0;
+				}
+
+				.lenz{
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+					width: 100%;
+					height: 100%;
+
+					input[type="number"]{
+						border: none;
+						color: inherit;
+						font-size: 1.5rem;
+						background: var(--body);
+						padding: .5rem;
+						border-radius: 10px;
+					}
+
+					.groupWrapper {
+						position: relative;
+						display: flex;
+						width: 50%;
+						align-items: center;
+						justify-content: flex-end;
+
+						span {
+							width: 40px;
+							height: 40px;
+							border-radius: 100%;
+							position: absolute;
+							&:nth-child(1) {
+								background-color: #08AEEA;
+								background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+								right: 10px;
+								z-index: 10;
+							}
+							&:nth-child(2) {
+								background-color: #FEE140;
+								background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
+								right: 35px;
+								z-index: 9;
+							}
+							&:nth-child(3) {
+								background-color: #85FFBD;
+								background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+								right: 60px;
+								z-index: 8;
+							}
+						}
+					}
+				}
+			}
+
 			&::before {
 				content: "";
 				display: block;
@@ -424,11 +487,14 @@ a {
 				width: 0;
 			}
 		}
+
+
+		}
 		&:hover .tooltip,
 		&:active .tooltip {
 			visibility: visible;
 		}
-	}
+
 	ul {
 		width: 100%;
 		margin: 0;
