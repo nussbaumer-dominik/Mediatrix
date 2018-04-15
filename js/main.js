@@ -73,13 +73,13 @@ $(function () {
 		} else if(JSON.parse(event.data)["group"]){
 			$(".modal-wrapperGroup").toggleClass("open");
 			$("#groupModal").toggleClass("open");
-			$("#acceptUser").click( function(ev) { 
+			$("#acceptUser").click( ev => { 
 				ev.preventDefault();
 				send(JSON.parse(event.data));
 				$(".modal-wrapperGroup").toggleClass("open");
 				$("#groupModal").toggleClass("open");
 			} );
-			$("#dontAcceptUser").click(function(ev) {
+			$("#dontAcceptUser").click(ev => {
 				ev.preventDefault();
 				$(".modal-wrapperGroup").toggleClass("open");
 				$("#groupModal").toggleClass("open");
@@ -685,6 +685,16 @@ $(function () {
 		
 		//setSlider(id, val);
 	}
+
+	$("#slots").on("change", function(ev){
+		console.log(this.get());
+		let slots = {
+			group: {
+				slots: this.get()
+			}
+		}
+		send(slots);
+	});
 
 	function buildStatus(key, value, unit, id) {
 		var div = $("<div id='" + id + "'>");
