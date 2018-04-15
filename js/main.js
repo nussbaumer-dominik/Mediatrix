@@ -74,12 +74,12 @@ $(function () {
 				$(".modal-wrapperGroup").toggleClass("open");
 				$("#groupModal").toggleClass("open");
 					$("#acceptUser").click( function(ev) { 
-						ev.defaultPrevented;
+						ev.preventDefault();
 						send(JSON.parse(event.data));
 						$(".modal-wrapperGroup").toggleClass("open");
 						$("#groupModal").toggleClass("open");
 					} );
-					$("#dontAcceptUser").click(function() {
+					$("#dontAcceptUser").click(function(ev) {
 						ev.defaultPrevented;
 						$(".modal-wrapperGroup").toggleClass("open");
 						$("#groupModal").toggleClass("open");
