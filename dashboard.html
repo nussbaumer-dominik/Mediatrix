@@ -29,7 +29,20 @@
   <div class="parent">
     <div class="modal-wrapper">
     </div>
-    <div class="modal">
+    <div class="modal" id="presetModal">
+      <a class="btn-close trigger" href=""></a>
+      <div class="modal-content">
+        <form action="">
+          <p>Derzeitige Konfiguration als Preset abspeichern?</p>
+          <input type="text" placeholder="Name des Presets" id="presetName">
+          <div class="formBtns">
+            <input type="submit" value="Bestätigen" id="savePreset">
+            <input type="button" value="Abbrechen">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal" id="groupModal">
       <a class="btn-close trigger" href=""></a>
       <div class="modal-content">
         <form action="">
