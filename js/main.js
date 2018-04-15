@@ -687,7 +687,7 @@ $(function () {
 	}
 
 	$("#slots").on("change", function(ev){
-		console.log(this.value());
+		console.log(this.target.value());
 		let slots = {
 			group: {
 				slots: parseInt(this.value())
