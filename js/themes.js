@@ -100,12 +100,12 @@ $(() => {
 	});
 
 	$(".presetTrigger").click(function() {
-		$(".modal-wrapper").toggleClass("open");
+		$(".modal-wrapperPreset").toggleClass("open");
 		$("#presetModal").toggleClass("open");
 	});
 
-	$(".modal-wrapper").click(function() {
-		$(".modal-wrapper").toggleClass("open");
+	$(".modal-wrapperPreset").click(function() {
+		$(".modal-wrapperPreset").toggleClass("open");
 		$("#presetModal").toggleClass("open");
 	});
 
@@ -114,8 +114,8 @@ $(() => {
 		$("#groupModal").toggleClass("open");
 	});*/
 
-	/*$(".modal-wrapper").click(function() {
+	$(".modal-wrapperGroup").click(function() {
 		$(".modal-wrapperGroup").toggleClass("open");
 		$("#groupModal").toggleClass("open");
-	});*/
+	});
 });

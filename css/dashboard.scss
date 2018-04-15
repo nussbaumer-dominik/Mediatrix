@@ -56,7 +56,8 @@ a {
 	overflow: hidden;
 }
 
-.modal-wrapper, {
+.modal-wrapperPreset,
+.modal-wrapperGroup {
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
@@ -72,7 +73,8 @@ a {
 	transition: all 0.25s ease-in-out;
 }
 
-.modal-wrapper.open,{
+.modal-wrapperPreset.open,
+.modal-wrapperGroup.open {
 	opacity: 1;
 	visibility: visible; //display: block;
 }
@@ -195,9 +197,9 @@ a {
 	}
 }
 
-// .modal-wrapper.open .modal {
-// 	opacity: 1;
-// }
+.modal-wrapper.open .modal {
+	opacity: 1;
+}
 
 .side-nav {
 	background: var(--sidebar);
