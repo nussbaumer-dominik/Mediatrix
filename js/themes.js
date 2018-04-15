@@ -114,8 +114,8 @@ $(() => {
 		$("#groupModal").toggleClass("open");
 	});*/
 
-	$(".modal-wrapper").click(function() {
+	/*$(".modal-wrapper").click(function() {
 		$(".modal-wrapperGroup").toggleClass("open");
 		$("#groupModal").toggleClass("open");
-	});
+	});*/
 });
