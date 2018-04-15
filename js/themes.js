@@ -100,12 +100,12 @@ $(() => {
 	});
 
 	$(".presetTrigger").click(function() {
-		$(".modal-wrapperPreset").toggleClass("open");
+		$(".modal-wrapper").toggleClass("open");
 		$("#presetModal").toggleClass("open");
 	});
 
 	$(".modal-wrapper").click(function() {
-		$(".modal-wrapperPreset").toggleClass("open");
+		$(".modal-wrapper").toggleClass("open");
 		$("#presetModal").toggleClass("open");
 	});
 
