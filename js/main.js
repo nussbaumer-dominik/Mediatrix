@@ -687,10 +687,10 @@ $(function () {
 	}
 
 	$("#slots").on("change", function(ev){
-		console.log(this.get());
+		console.log($(this).get());
 		let slots = {
 			group: {
-				slots: this.get()
+				slots: parseInt($(this).get())
 			}
 		}
 		send(slots);
