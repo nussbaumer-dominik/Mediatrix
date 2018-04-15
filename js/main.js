@@ -679,8 +679,12 @@ $(function () {
 		console.log("In der updateLive-Methode gelandet Live: ");
 		console.log(live);
 
-		for(let i=0;i<Object.keys(live).length;i++){
+		if(live.av.volume !== null){
+			setSlider("avSlider1", live.av.volume);
+		}
 
+		for(let i=0;i<Object.keys(live).length;i++){
+			
 		}
 		
 		//setSlider(id, val);
