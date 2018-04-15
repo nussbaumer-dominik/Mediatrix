@@ -71,8 +71,17 @@ $(function () {
 				$("#beamerState").attr("data-state", "1");
 			}
 		} else if(JSON.parse(event.data)["group"]){
-			alert(event.data);
-			send(JSON.parse(event.data));
+				$(".modal-wrapperGroup").toggleClass("open");
+				$("#groupModal").toggleClass("open");
+					$("#acceptUser").click( function() { 
+						send(JSON.parse(event.data));
+						$(".modal-wrapperGroup").toggleClass("open");
+						$("#groupModal").toggleClass("open");
+					} );
+					$("#dontAcceptUser").click(function() {
+						$(".modal-wrapperGroup").toggleClass("open");
+						$("#groupModal").toggleClass("open");
+					});
 		} else {
 			let msg = JSON.parse(event.data);
 			console.log("message: " +{ msg });
