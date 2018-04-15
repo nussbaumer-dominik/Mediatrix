@@ -73,12 +73,14 @@ $(function () {
 		} else if(JSON.parse(event.data)["group"]){
 				$(".modal-wrapperGroup").toggleClass("open");
 				$("#groupModal").toggleClass("open");
-					$("#acceptUser").click( function() { 
+					$("#acceptUser").click( function(ev) { 
+						ev.defaultPrevented;
 						send(JSON.parse(event.data));
 						$(".modal-wrapperGroup").toggleClass("open");
 						$("#groupModal").toggleClass("open");
 					} );
 					$("#dontAcceptUser").click(function() {
+						ev.defaultPrevented;
 						$(".modal-wrapperGroup").toggleClass("open");
 						$("#groupModal").toggleClass("open");
 					});
