@@ -62,6 +62,10 @@ $(function () {
 		console.log(userspans.length);
 		console.log(message);
 
+		if(message.live.slots){
+			$("#slots").val(message.live.slots);
+		}
+
 		if (message.group) {
 			if (message.group.admin == true) {
 				$("#slots").prop('disabled', false);
