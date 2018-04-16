@@ -694,19 +694,14 @@ $(function () {
 	}
 
 	function updateAvSlider() {
-		setSlider("avSlider1", ini.live.av.volume);
+		document.getElementById("avSlider1").noUiSlider.set(val);
+		document.getElementById("avSlider1Value").innerHTML = val;
 		if(ini.live.av.volume !== undefined){
 			document.getElementById("avSlider1Value").innerHTML = ini.live.av.volume;
 			return true;
 		} else {
 			document.getElementById("avSlider1Value").innerHTML = "0";
 		}
-	};
-
-	var setSlider = (id, val) => {
-		var slider = document.getElementById(id);
-		slider.noUiSlider.set(val);
-		document.getElementById(id + "Value").innerHTML = val;
 	};
 
 	function setDMXSlider(id, val, col) {
@@ -725,7 +720,8 @@ $(function () {
 		console.log(live);
 
 		if(live.av.volume !== null){
-			setSlider("avSlider1", live.av.volume);
+			document.getElementById("avSlider1").noUiSlider.set(val);
+			document.getElementById("avSlider1Value").innerHTML = val;
 		}
 
 		for(let i=0; i<Object.keys(live.dmx).length; i++){
@@ -733,7 +729,8 @@ $(function () {
 			if (Object.keys(live.dmx[i].channels).length == 1) {
 				console.log("Hue Wert: " + live.dmx[i].channels.hue);
 				console.log("Scheinwerfer" + i);
-				setSlider("Scheinwerfer" + i + "Slider", live.dmx[i].channels.hue);
+				document.getElementById("Scheinwerfer" + i + "Slider").noUiSlider.set(val);
+				document.getElementById("Scheinwerfer" + i + "Value").innerHTML = val;
 			}
 
 			if (Object.keys(live.dmx[i].channels).length == 3) {
