@@ -353,6 +353,10 @@ $(function () {
 					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id);
 				}
 
+				for (let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++) {
+					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id);
+				}
+
 				t = t.replace( /{:lightNumber}/, scheinwerferObj.id + 1 );
 				t = t.replace( /{{:id}}/, "Scheinwerfer" + (scheinwerferObj.id + 1) );
 				$(".flex-container").append(t);
@@ -362,6 +366,10 @@ $(function () {
 				var t = document.querySelector("#hueTemplate").innerHTML;
 				for ( let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++ ) {
 					t = t.replace(/{:id}/, scheinwerferObj.id);
+					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id);
+				}
+				
+				for (let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++) {
 					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id);
 				}
 				t = t.replace(/{:lightNumber}/, scheinwerferObj.id + 1);
@@ -374,6 +382,10 @@ $(function () {
 				for ( let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++ ) {
 					t = t.replace(/{:id}/, scheinwerferObj.id);
 					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id );
+				}
+
+				for (let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++) {
+					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id);
 				}
 
 				t = t.replace(/{:lightNumber}/, scheinwerferObj.id + 1);
