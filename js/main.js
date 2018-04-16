@@ -71,7 +71,7 @@ $(function () {
 			if (userspans.length < Object.keys(message.group).length) {
 				$(".groupWrapper").append("<span></span>");
 			} else if (userspans.length > Object.keys(message.group).length) {
-				$(".groupWrapper").remove("<span></span>");
+				$(".groupWrapper span:last").remove();
 			}
 
 			if (message["group"]["register"]) {
@@ -82,6 +82,7 @@ $(function () {
 					send(message);
 					$(".modal-wrapperGroup").toggleClass("open");
 					$("#groupModal").toggleClass("open");
+					$(".groupWrapper").append("<span></span>");
 				});
 				$("#dontAcceptUser").click(ev => {
 					ev.preventDefault();
