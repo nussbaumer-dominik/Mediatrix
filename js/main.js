@@ -67,8 +67,8 @@ $(function () {
 		}
 
 		if (message.group) {
-			if (message.group.admin == false) {
-				$("#slots").prop('disabled', true);
+			if (message.group.admin) {
+				$("#slots").prop('disabled', false);
 			}
 
 			if (message["group"]["register"]) {
