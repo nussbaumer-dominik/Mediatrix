@@ -62,7 +62,7 @@ $(function () {
 		console.log(userspans.length);
 		console.log(message);
 
-		if(message.live.slots){
+		if(message.slots){
 			$("#slots").val(message.live.slots);
 		}
 
