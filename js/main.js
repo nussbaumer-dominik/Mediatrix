@@ -695,14 +695,13 @@ $(function () {
 	function updateLive(live) {
 		console.log("In der updateLive-Methode gelandet Live: ");
 		console.log(live);
-		console.log(live.av);
 
 		if(live.av.volume !== null){
 			setSlider("avSlider1", live.av.volume);
 		}
 
 		for(let i=0; i<Object.keys(live.dmx).length; i++){
-			console.log(live.dmx[i].length);
+			console.log(Object.keys(live.dmx[i]).length);
 			if(live.dmx[i].channels.length == 1){
 				setSlider("Scheinwerfer"+i+"Slider", live.dmx[i].hue);
 			}
