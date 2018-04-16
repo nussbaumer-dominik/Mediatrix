@@ -690,17 +690,16 @@ $(function () {
 		document.getElementById(id + "Value").innerHTML = val;
 	};
 
-	function setDMXSlider(container, val, col) {
-		var lichtBoxen = document.querySelectorAll(".lichtBox");
+	function setDMXSlider(id, val, col) {
+		/*var lichtBoxen = document.querySelectorAll(".lichtBox");
 		console.log(lichtBoxen);
-		console.log(lichtBoxen[0]);
-		var slider = $("#"+container+"Slider[data-col="+ col +"]")
-		console.log(container + " " + val + " " + col);
+		console.log(lichtBoxen[0]);*/
+		var slider = $("#"+ id +"Slider[data-col="+ col +"]")
+		console.log(id + " " + val + " " + col);
 		console.log(slider);
-		//var slider = document.querySelector(container);
 		
-		//slider.noUiSlider.set(val);
-		//document.getElementById(id + "Value").innerHTML = val;
+		slider.noUiSlider.set(val);
+		document.getElementById(id + "Value").innerHTML = val;
 	};
 
 	function updateLive(live) {
@@ -722,10 +721,16 @@ $(function () {
 			if (Object.keys(live.dmx[i].channels).length == 3) {
 				console.log("SetDMXSlider wird aufgerufen \n");
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].r, "r");
+				setDMXSlider("Scheinwerfer" + i, live.dmx[i].g, "g");
+				setDMXSlider("Scheinwerfer" + i, live.dmx[i].b, "b");
 			}
 
 			if (Object.keys(live.dmx[i].channels).length == 4) {
-
+				console.log("SetDMXSlider wird aufgerufen \n");
+				setDMXSlider("Scheinwerfer" + i, live.dmx[i].r, "r");
+				setDMXSlider("Scheinwerfer" + i, live.dmx[i].g, "g");
+				setDMXSlider("Scheinwerfer" + i, live.dmx[i].b, "b");
+				setDMXSlider("Scheinwerfer" + i, live.dmx[i].w-100-ns, "w");
 			}
 		}
 		
