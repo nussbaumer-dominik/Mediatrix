@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/Scheinwerfer.php" afterPath="$PROJECT_DIR$/php/src/Scheinwerfer.php" />
+      <change beforePath="$PROJECT_DIR$/php/src/Group.php" afterPath="$PROJECT_DIR$/php/src/Group.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +28,7 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2232">
+            <state relative-caret-position="576">
               <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
                 <marker date="1523884856740" expanded="true" signature="14891:14931" ph="SELECT * FRO... preset" />
@@ -38,11 +38,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Scheinwerfer.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/php/src/Scheinwerfer.php">
+      <file leaf-file-name="Group.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/php/src/Group.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="76" column="8" lean-forward="true" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+              <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Scheinwerfer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/src/Scheinwerfer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="74" column="45" lean-forward="false" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -51,8 +61,8 @@
       <file leaf-file-name="RGBWScheinwerfer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/RGBWScheinwerfer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1080">
-              <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+            <state relative-caret-position="342">
+              <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -169,8 +179,8 @@
         <option value="$PROJECT_DIR$/php/test.php" />
         <option value="$PROJECT_DIR$/sqlite/db.sqlite" />
         <option value="$PROJECT_DIR$/php/src/Application.php" />
-        <option value="$PROJECT_DIR$/php/src/Group.php" />
         <option value="$PROJECT_DIR$/php/src/Scheinwerfer.php" />
+        <option value="$PROJECT_DIR$/php/src/Group.php" />
       </list>
     </option>
   </component>
@@ -252,6 +262,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -284,7 +295,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -992,21 +1002,8 @@
       <workItem from="1522924199783" duration="3998000" />
       <workItem from="1523110524525" duration="171000" />
       <workItem from="1523897505338" duration="70000" />
-      <workItem from="1523903879683" duration="131000" />
-    </task>
-    <task id="LOCAL-00258" summary="debug micro 2 js">
-      <created>1522843298840</created>
-      <option name="number" value="00258" />
-      <option name="presentableId" value="LOCAL-00258" />
-      <option name="project" value="LOCAL" />
-      <updated>1522843298840</updated>
-    </task>
-    <task id="LOCAL-00259" summary="Merge branch 'AllesNeu' of https://github.com/nussi98/Mediatrix into AllesNeu&#10;&#10;# Conflicts:&#10;#&#9;js/main.js">
-      <created>1522843333478</created>
-      <option name="number" value="00259" />
-      <option name="presentableId" value="LOCAL-00259" />
-      <option name="project" value="LOCAL" />
-      <updated>1522843333478</updated>
+      <workItem from="1523903879683" duration="444000" />
+      <workItem from="1523907174392" duration="21000" />
     </task>
     <task id="LOCAL-00260" summary="python">
       <created>1522847515620</created>
@@ -1337,18 +1334,32 @@
       <option name="project" value="LOCAL" />
       <updated>1523897546256</updated>
     </task>
-    <option name="localTasksCounter" value="307" />
+    <task id="LOCAL-00307" summary="fix scheinwerfer live">
+      <created>1523904033662</created>
+      <option name="number" value="00307" />
+      <option name="presentableId" value="LOCAL-00307" />
+      <option name="project" value="LOCAL" />
+      <updated>1523904033662</updated>
+    </task>
+    <task id="LOCAL-00308" summary="fix scheinwerfer live">
+      <created>1523904237982</created>
+      <option name="number" value="00308" />
+      <option name="presentableId" value="LOCAL-00308" />
+      <option name="project" value="LOCAL" />
+      <updated>1523904237982</updated>
+    </task>
+    <option name="localTasksCounter" value="309" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241644000" />
+    <option name="totallyTimeSpent" value="241978000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19794345" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20051414" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -1450,7 +1461,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="debug python" />
     <MESSAGE value="fix python" />
     <MESSAGE value="debug mixer mute" />
     <MESSAGE value="debug micro 2 js" />
@@ -1475,7 +1485,8 @@
     <MESSAGE value="add live group" />
     <MESSAGE value="check if admin when changing slots" />
     <MESSAGE value="add missing }" />
-    <option name="LAST_COMMIT_MESSAGE" value="add missing }" />
+    <MESSAGE value="fix scheinwerfer live" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix scheinwerfer live" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1810,25 +1821,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Group.php">
+    <entry file="file://$PROJECT_DIR$/php/src/RGBWScheinwerfer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="26" column="53" lean-forward="false" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
+        <state relative-caret-position="342">
+          <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/RGBWScheinwerfer.php">
+    <entry file="file://$PROJECT_DIR$/php/src/Scheinwerfer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1080">
-          <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+        <state relative-caret-position="180">
+          <caret line="74" column="45" lean-forward="false" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2232">
+        <state relative-caret-position="576">
           <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <marker date="1523884856740" expanded="true" signature="14891:14931" ph="SELECT * FRO... preset" />
@@ -1837,10 +1848,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Scheinwerfer.php">
+    <entry file="file://$PROJECT_DIR$/php/src/Group.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="76" column="8" lean-forward="true" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
           <folding />
         </state>
       </provider>
