@@ -563,6 +563,14 @@ class Application implements MessageComponentInterface
 
         $live['beamer'] = array('on' => $this->beamer->isOn());
 
+        $live['group'] = array();
+
+        foreach ($this->group->getUsers() as $user){
+
+            array_push($live['group'], $user->resourceId);
+
+        }
+
 
         $this->group->send(json_encode(array('live' => $live)));
 
