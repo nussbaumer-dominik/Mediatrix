@@ -91,24 +91,33 @@ $(function () {
 		if(message.live.group){
 			let activeUsers = Object.keys(message.live.group).length;
 			console.log("Anzahl an Spans:" + $(".groupWrapper").length + " Anzahl an usern in der Gruppe: " + activeUsers);
-			if ($(".groupWrapper").length == 1 && activeUsers == 2) {
+
+			if(userspans.length < activeUsers){
 				$(".groupWrapper").append("<span></span>");
 				console.log("Ein Span hinzugefügt");
-			} else if ($(".groupWrapper").length == 2 && activeUsers == 2) {
-				console.log("nix gemacht");
-			}
-			if ($(".groupWrapper").length == 2 && activeUsers == 3) {
+			} else if (userspans.length > activeUsers){
 				$(".groupWrapper").append("<span></span>");
-				console.log("Ein Span hinzugefügt");
-			}
-			if ($(".groupWrapper").length == 3 && activeUsers == 2) {
-				$(".groupWrapper span:last").remove();
 				console.log("Ein Span removed");
 			}
-			if ($(".groupWrapper").length == 2 && activeUsers == 1) {
-				$(".groupWrapper span:last").remove();
-				console.log("Ein Span removed");
-			}
+
+			// if ($(".groupWrapper").length == 1 && activeUsers == 2) {
+			// 	$(".groupWrapper").append("<span></span>");
+			// 	console.log("Ein Span hinzugefügt");
+			// } else if ($(".groupWrapper").length == 2 && activeUsers == 2) {
+			// 	console.log("nix gemacht");
+			// }
+			// if ($(".groupWrapper").length == 2 && activeUsers == 3) {
+			// 	$(".groupWrapper").append("<span></span>");
+			// 	console.log("Ein Span hinzugefügt");
+			// }
+			// if ($(".groupWrapper").length == 3 && activeUsers == 2) {
+			// 	$(".groupWrapper span:last").remove();
+			// 	console.log("Ein Span removed");
+			// }
+			// if ($(".groupWrapper").length == 2 && activeUsers == 1) {
+			// 	$(".groupWrapper span:last").remove();
+			// 	console.log("Ein Span removed");
+			// }
 		}
 		
 		if (message.ini) {
@@ -782,7 +791,6 @@ $(function () {
 	}
 
 	$("#slots").on("change", function (ev) {
-		console.log(this.value);
 		let slots = {
 			group: {
 				slots: parseInt(this.value)
