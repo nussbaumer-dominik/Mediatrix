@@ -356,6 +356,25 @@ $(function () {
 				t = t.replace( /{:lightNumber}/, scheinwerferObj.id + 1 );
 				t = t.replace( /{{:id}}/, "Scheinwerfer" + (scheinwerferObj.id + 1) );
 				$(".flex-container").append(t);
+			} else if (scheinwerferObj.numberChannels == "5") {
+				scheinwerfer[scheinwerferObj.id] = {
+					r: 0,
+					g: 0,
+					b: 0,
+					w: 0,
+					hue: 0
+				};
+
+				var t = document.querySelector("#rgbwhTemplate").innerHTML;
+
+				for (let j = 0; j < 2 * parseInt(scheinwerferObj.numberChannels); j++) {
+					t = t.replace(/{:id}/, scheinwerferObj.id);
+					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id);
+				}
+
+				t = t.replace(/{:lightNumber}/, scheinwerferObj.id + 1);
+				t = t.replace(/{{:id}}/, "Scheinwerfer" + (scheinwerferObj.id + 1));
+				$(".flex-container").append(t);
 			} else if (scheinwerferObj.numberChannels == "1") {
 				scheinwerfer[scheinwerferObj.id] = { hue: 0 };
 

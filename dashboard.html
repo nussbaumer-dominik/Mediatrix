@@ -268,6 +268,49 @@
     </div>
   </script>
 
+<!-- RGBWH -->
+<script type="text/template" class="template" id="rgbwhTemplate">
+  <div class="box lichtBox" data-box="4">
+    <h1>Scheinwerfer {:lightNumber}</h1>
+    <div class="flex-wrapper space-between">
+      <!-- Licht Slider 1 -->
+      <div class="lichtSliderWrapper">
+        <div class="slider lichtSlider" id="{{:sliderId}}Slider" data-type="dmx" data-col="r" data-id="{:id}" data-val="0"></div>
+        <div class="valueField lichtValue" id="{{:sliderId}}Value">0</div>
+        <div class="textField">Rot</div>
+      </div>
+
+      <!-- Licht Slider 2 -->
+      <div class="lichtSliderWrapper">
+        <div class="slider lichtSlider" id="{{:sliderId}}Slider" data-type="dmx" data-col="g" data-id="{:id}" data-val="0"></div>
+        <div class="valueField lichtValue" id="{{:sliderId}}Value">0</div>
+        <div class="textField">Grün</div>
+      </div>
+
+      <!-- Licht Slider 3 -->
+      <div class="lichtSliderWrapper">
+        <div class="slider lichtSlider" id="{{:sliderId}}Slider" data-type="dmx" data-col="b" data-id="{:id}" data-val="0"></div>
+        <div class="valueField lichtValue" id="{{:sliderId}}Value">0</div>
+        <div class="textField">Blau</div>
+      </div>
+
+      <!-- Licht Helligkeit Slider -->
+      <div class="lichtWeissSliderWrapper">
+        <div class="slider lichtSlider" id="{{:sliderId}}Slider" data-type="dmx" data-col="w" data-id="{:id}" data-val="0"></div>
+        <div class="valueField lichtValue" id="{{:sliderId}}Value">0</div>
+        <div class="textField">Weiß</div>
+      </div>
+
+      <!-- Licht Slider Hue -->
+      <div class="lichtSliderWrapper">
+        <div class="slider lichtSlider" id="{{:sliderId}}Slider" data-type="dmx" data-col="b" data-id="{:id}" data-val="0"></div>
+        <div class="valueField lichtValue" id="{{:sliderId}}Value">0</div>
+        <div class="textField">Hue</div>
+      </div>
+    </div>
+  </div>
+</script>
+
   <!-- Licht Box -->
   <!-- Hue -->
   <script type="text/template" class="template" id="hueTemplate">
