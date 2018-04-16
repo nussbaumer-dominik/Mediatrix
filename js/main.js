@@ -79,7 +79,6 @@ $(function () {
 					send(message);
 					$(".modal-wrapperGroup").toggleClass("open");
 					$("#groupModal").toggleClass("open");
-					// $(".groupWrapper").append("<span></span>");
 				});
 				$("#dontAcceptUser").click(ev => {
 					ev.preventDefault();
@@ -720,10 +719,7 @@ $(function () {
 	};
 
 	function setDMXSlider(id, val, col) {
-		var slider = document.querySelector("#" + id + "Slider[data-col=" + col + "]");
-		console.log(id + " " + val + " " + col);
-		console.log(slider);
-		
+		var slider = document.querySelector("#" + id + "Slider[data-col=" + col + "]");		
 		slider.noUiSlider.set(val);
 		$("#" + id + "Slider[data-col=" + col + "]").parent().find("#" + id + "Value").html(val);
 	};
@@ -738,7 +734,6 @@ $(function () {
 		}
 
 		for(let i=0; i<Object.keys(live.dmx).length; i++){
-			console.log(Object.keys(live.dmx).length);
 			if (Object.keys(live.dmx[i].channels).length == 1) {
 				document.getElementById("Scheinwerfer" + i + "Slider").noUiSlider.set(live.dmx[i].channels.hue);
 				document.getElementById("Scheinwerfer" + i + "Value").innerHTML = live.dmx[i].channels.hue;
