@@ -348,9 +348,9 @@ $(function () {
 
 				var t = document.querySelector("#rgbwTemplate").innerHTML;
 
-				for ( let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++ ) {
+				for ( let j = 0; j < 2*parseInt(scheinwerferObj.numberChannels); j++ ) {
 					t = t.replace(/{:id}/, scheinwerferObj.id);
-					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id + "Slider");
+					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id);
 				}
 
 				t = t.replace( /{:lightNumber}/, scheinwerferObj.id + 1 );
@@ -360,14 +360,11 @@ $(function () {
 				scheinwerfer[scheinwerferObj.id] = { hue: 0 };
 
 				var t = document.querySelector("#hueTemplate").innerHTML;
-				for ( let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++ ) {
+				for ( let j = 0; j < 2*parseInt(scheinwerferObj.numberChannels); j++ ) {
 					t = t.replace(/{:id}/, scheinwerferObj.id);
-					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id + "Slider");
-				}
-
-				for (let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++) {
 					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id);
 				}
+
 				t = t.replace(/{:lightNumber}/, scheinwerferObj.id + 1);
 				$(".flex-container").append(t);
 			} else if (scheinwerferObj.numberChannels == "3") {
@@ -375,12 +372,8 @@ $(function () {
 
 				var t = document.querySelector("#rgbTemplate").innerHTML;
 
-				for ( let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++ ) {
+				for ( let j = 0; j < 2*parseInt(scheinwerferObj.numberChannels); j++ ) {
 					t = t.replace(/{:id}/, scheinwerferObj.id);
-					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id + "Slider");
-				}
-
-				for (let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++) {
 					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id);
 				}
 
