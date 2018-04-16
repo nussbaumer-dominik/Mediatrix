@@ -681,6 +681,9 @@ $(function () {
 	};
 
 	function setDMXSlider(container, val, col) {
+		var lichtBoxen = document.querySelectorAll(".lichtBox");
+		console.log(lichtBoxen);
+		console.log(lichtBoxen[0]);
 		var slider = document.querySelector(container);
 		
 		slider.noUiSlider.set(val);
