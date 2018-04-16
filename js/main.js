@@ -727,12 +727,16 @@ $(function () {
 			if (Object.keys(live.dmx[i].channels).length == 1) {
 				document.getElementById("Scheinwerfer" + i + "Slider").noUiSlider.set(live.dmx[i].channels.hue);
 				document.getElementById("Scheinwerfer" + i + "Value").innerHTML = live.dmx[i].channels.hue;
+				scheinwerfer[i].hue = live.dmx[i].channels.hue;
 			}
 
 			if (Object.keys(live.dmx[i].channels).length == 3) {
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.r, "r");
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.g, "g");
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.b, "b");
+				scheinwerfer[i].r = live.dmx[i].channels.r;
+				scheinwerfer[i].g = live.dmx[i].channels.g;
+				scheinwerfer[i].b = live.dmx[i].channels.b;
 			}
 
 			if (Object.keys(live.dmx[i].channels).length == 4) {
@@ -740,6 +744,10 @@ $(function () {
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.g, "g");
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.b, "b");
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.w, "w");
+				scheinwerfer[i].r = live.dmx[i].channels.r;
+				scheinwerfer[i].g = live.dmx[i].channels.g;
+				scheinwerfer[i].b = live.dmx[i].channels.b;
+				scheinwerfer[i].w = live.dmx[i].channels.w;
 			}
 		}
 		
