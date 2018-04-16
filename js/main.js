@@ -67,8 +67,8 @@ $(function () {
 		}*/
 
 		if (message.group) {
-			if (message.group.admin == true) {
-				$("#slots").prop('disabled', false);
+			if (message.group.admin == false) {
+				$("#slots").prop('disabled', true);
 			}
 
 			if (message["group"]["register"]) {
@@ -102,7 +102,7 @@ $(function () {
 			console.log("das ist der ini-string: " + event.data);
 			ini = (JSON && JSON.parse(event.data)) || $.parseJSON(event.data);
 			presets = ini.ini.presets;
-			$(".lenz").prepend('<input type="number" min="1" max="3" value="' + ini.live.slots + '" id="slots" disabled>');
+			$(".lenz").prepend('<input type="number" min="1" max="3" value="' + ini.live.slots + '" id="slots">');
 			console.log(presets);
 			firstLiveStatus();
 			getPresets();
