@@ -103,6 +103,15 @@ $(function () {
 			ini = (JSON && JSON.parse(event.data)) || $.parseJSON(event.data);
 			presets = ini.ini.presets;
 			$(".lenz").prepend('<input type="number" min="1" max="3" value="' + ini.live.slots + '" id="slots">');
+				$("#slots").on("change", function (ev) {
+					console.log(this.value);
+					let slots = {
+						group: {
+							slots: parseInt(this.value)
+						}
+					}
+					send(slots);
+				});
 			console.log(presets);
 			firstLiveStatus();
 			getPresets();
@@ -759,16 +768,6 @@ $(function () {
 		}
 		
 	}
-
-	$("#slots").on("change", function(ev){
-		console.log(this.value);
-		let slots = {
-			group: {
-				slots: parseInt(this.value)
-			}
-		}
-		send(slots);
-	});
 
 	function buildStatus(key, value, unit, id) {
 		var div = $("<div id='" + id + "'>");
