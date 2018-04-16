@@ -367,13 +367,7 @@ $(function () {
 				t = t.replace( /{{:id}}/, "Scheinwerfer" + (scheinwerferObj.id + 1) );
 				$(".flex-container").append(t);
 			} else if (scheinwerferObj.numberChannels == "5") {
-				scheinwerfer[scheinwerferObj.id] = {
-					r: 0,
-					g: 0,
-					b: 0,
-					w: 0,
-					hue: 0
-				};
+				scheinwerfer[scheinwerferObj.id] = { r: 0, g: 0, b: 0, w: 0, hue: 0 };
 
 				var t = document.querySelector("#rgbwhTemplate").innerHTML;
 
@@ -433,6 +427,8 @@ $(function () {
 		sliders.each(function (i, slider) {
 			this.noUiSlider.on("change", function (values, handle) {
 				Slider(this);
+			});
+			this.noUiSlider.on("slide", function (values, handle) {
 				valueFields.get(i).innerHTML = values[handle];
 			});
 		});
