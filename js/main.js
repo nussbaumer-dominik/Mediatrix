@@ -699,15 +699,15 @@ $(function () {
 		}
 
 		for(let i=0;i<Object.keys(live.dmx).length;i++){
-			if(live.dmx[i].length == 1){
+			if(live.dmx[i].channels.length == 1){
 				setSlider("Scheinwerfer"+i+"Slider", live.dmx[i].hue);
 			}
 
-			if(live.dmx[i].length == 3){
+			if(live.dmx[i].channels.length == 3){
 				setDMXSlider("Scheinwerfer" + i + "Slider", live.dmx[i].r, "r");
 			}
 
-			if (live.dmx[i].length == 4) {
+			if (live.dmx[i].channels.length == 4) {
 
 			}
 		}
