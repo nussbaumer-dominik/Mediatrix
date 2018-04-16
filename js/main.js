@@ -90,20 +90,20 @@ $(function () {
 
 		if(message.live.group){
 			let activeUsers = Object.keys(message.live.group).length;
-			console.log("Anzahl an Spans:" + userspans.length + " Anzahl an usern in der Gruppe: " + activeUsers);
-			if (userspans.length == 1 && activeUsers == 2) {
+			console.log("Anzahl an Spans:" + $(".groupWrapper").length + " Anzahl an usern in der Gruppe: " + activeUsers);
+			if ($(".groupWrapper").length == 1 && activeUsers == 2) {
 				$(".groupWrapper").append("<span></span>");
 				console.log("Ein Span hinzugefügt");
 			}
-			if (userspans.length == 2 && activeUsers == 3) {
+			if ($(".groupWrapper").length == 2 && activeUsers == 3) {
 				$(".groupWrapper").append("<span></span>");
 				console.log("Ein Span hinzugefügt");
 			}
-			if (userspans.length == 3 && activeUsers == 2) {
+			if ($(".groupWrapper").length == 3 && activeUsers == 2) {
 				$(".groupWrapper span:last").remove();
 				console.log("Ein Span removed");
 			}
-			if (userspans.length == 2 && activeUsers == 1) {
+			if ($(".groupWrapper").length == 2 && activeUsers == 1) {
 				$(".groupWrapper span:last").remove();
 				console.log("Ein Span removed");
 			}
