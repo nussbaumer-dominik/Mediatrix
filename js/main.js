@@ -73,36 +73,36 @@ $(function () {
 				$("#beamerState").attr("data-state", "1");
 			}
 			return true;
-		} else {
-			console.log("message: " + { message });
-			updateLive(message.live);
-			liveStatus(message.live);
-		}
+		} else if (message["group"]) {
+				console.log("Group ist angekommen");
+				console.log(object);
+				if (message["group"].admin == true) {
+					$("#slots").prop('disabled', false);
+				}
 
-		if (message["group"]) {
-			console.log("Group ist angekommen");
-			console.log(object);
-			if (message["group"].admin == true) {
-				$("#slots").prop('disabled', false);
-			}
-			
-			if (message["group"]["register"]) {
-				$(".modal-wrapperGroup").toggleClass("open");
-				$("#groupModal").toggleClass("open");
-				$("#acceptUser").click(ev => {
-					ev.preventDefault();
-					send(message);
+				if (message["group"]["register"]) {
 					$(".modal-wrapperGroup").toggleClass("open");
 					$("#groupModal").toggleClass("open");
+					$("#acceptUser").click(ev => {
+						ev.preventDefault();
+						send(message);
+						$(".modal-wrapperGroup").toggleClass("open");
+						$("#groupModal").toggleClass("open");
+					});
+					$("#dontAcceptUser").click(ev => {
+						ev.preventDefault();
+						$(".modal-wrapperGroup").toggleClass("open");
+						$("#groupModal").toggleClass("open");
+					});
+				}
+			} else {
+				console.log("message: " + {
+					message
 				});
-				$("#dontAcceptUser").click(ev => {
-					ev.preventDefault();
-					$(".modal-wrapperGroup").toggleClass("open");
-					$("#groupModal").toggleClass("open");
-				});
+				updateLive(message.live);
+				liveStatus(message.live);
 			}
-		}
-	}
+		} 
 
 	//wird getriggered, wenn die Verbindung gekappt wurde
 	socket.onclose = event => {
