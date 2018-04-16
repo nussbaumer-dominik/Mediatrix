@@ -702,17 +702,17 @@ $(function () {
 
 		for(let i=0; i<Object.keys(live.dmx).length; i++){
 			console.log("i: " + i);
-			console.log(live.dmx[i]);
-			if(live.dmx[i].channels.length == 1){
+			console.log(Object.keys(live.dmx[i].channels).length);
+			if (Object.keys(live.dmx[i].channels).length == 1) {
 				setSlider("Scheinwerfer"+i+"Slider", live.dmx[i].hue);
 			}
 
-			if(live.dmx[i].channels.length == 3){
+			if (Object.keys(live.dmx[i].channels).length == 3) {
 				console.log("SETDMXSlider wird aufgerufen \n");
 				setDMXSlider(i, live.dmx[i].r, "r");
 			}
 
-			if (live.dmx[i].channels.length == 4) {
+			if (Object.keys(live.dmx[i].channels).length == 4) {
 
 			}
 		}
