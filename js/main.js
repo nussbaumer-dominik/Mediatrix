@@ -57,7 +57,7 @@ $(function () {
 	socket.onmessage = event => {
 		console.log("Message: ");
 		let message = JSON.parse(event.data);
-		let userspans = document.querySelector(".groupWrapper");
+		let userspans = $(".groupWrapper");
 		console.log(userspans);
 		console.log(userspans.length);
 		console.log(message);
