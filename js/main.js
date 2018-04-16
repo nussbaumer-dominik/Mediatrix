@@ -57,7 +57,8 @@ $(function () {
 	socket.onmessage = event => {
 		console.log("Message: ");
 		console.log(event.data);
-		if (JSON.parse(event.data)["ini"]) {
+		let message = JSON.parse(event.data);
+		if (message["ini"]) {
 			console.log("das ist der ini-string: " + event.data);
 			ini = (JSON && JSON.parse(event.data)) || $.parseJSON(event.data);
 			presets = ini.ini.presets;
@@ -72,22 +73,24 @@ $(function () {
 			}
 			return true;
 		} else {
-			let msg = JSON.parse(event.data);
-			console.log("message: " + { msg });
-			updateLive(msg.live);
-			liveStatus(msg.live);
+			console.log("message: " + { message });
+			updateLive(message.live);
+			liveStatus(message.live);
 		}
-		if(JSON.parse(event.data)["group"]){
-			if (JSON.parse(event.data)["group"].admin == true){
+
+		if (message["group"]) {
+			console.log("Group ist angekommen");
+			console.log(object);
+			if (message["group"].admin == true) {
 				$("#slots").prop('disabled', false);
 			}
 			
-			if (JSON.parse(event.data)["group"]["register"]) {
+			if (message["group"]["register"]) {
 				$(".modal-wrapperGroup").toggleClass("open");
 				$("#groupModal").toggleClass("open");
 				$("#acceptUser").click(ev => {
 					ev.preventDefault();
-					send(JSON.parse(event.data));
+					send(message);
 					$(".modal-wrapperGroup").toggleClass("open");
 					$("#groupModal").toggleClass("open");
 				});
