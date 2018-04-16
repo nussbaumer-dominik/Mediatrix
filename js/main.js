@@ -67,13 +67,6 @@ $(function () {
 				$("#slots").prop('disabled', false);
 			}
 
-			console.log("Anzahl an Spans:" + userspans.length + " Anzahl an usern in der Gruppe: " + Object.keys(message.group).length);
-			if (userspans.length < Object.keys(message.group).length) {
-				$(".groupWrapper").append("<span></span>");
-			} else if (userspans.length > Object.keys(message.group).length) {
-				$(".groupWrapper span:last").remove();
-			}
-
 			if (message["group"]["register"]) {
 				$(".modal-wrapperGroup").toggleClass("open");
 				$("#groupModal").toggleClass("open");
@@ -89,6 +82,15 @@ $(function () {
 					$(".modal-wrapperGroup").toggleClass("open");
 					$("#groupModal").toggleClass("open");
 				});
+			}
+		}
+
+		if(message.live.group){
+			console.log("Anzahl an Spans:" + userspans.length + " Anzahl an usern in der Gruppe: " + Object.keys(message.group).length);
+			if (userspans.length < Object.keys(message.group).length) {
+				$(".groupWrapper").append("<span></span>");
+			} else if (userspans.length > Object.keys(message.group).length) {
+				$(".groupWrapper span:last").remove();
 			}
 		}
 		
