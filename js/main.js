@@ -729,8 +729,8 @@ $(function () {
 			if (Object.keys(live.dmx[i].channels).length == 1) {
 				console.log("Hue Wert: " + live.dmx[i].channels.hue);
 				console.log("Scheinwerfer" + i);
-				document.getElementById("Scheinwerfer" + i + "Slider").noUiSlider.set(val);
-				document.getElementById("Scheinwerfer" + i + "Value").innerHTML = val;
+				document.getElementById("Scheinwerfer" + i + "Slider").noUiSlider.set(live.dmx[i].channels.hue);
+				document.getElementById("Scheinwerfer" + i + "Value").innerHTML = live.dmx[i].channels.hue;
 			}
 
 			if (Object.keys(live.dmx[i].channels).length == 3) {
