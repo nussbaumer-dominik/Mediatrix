@@ -86,10 +86,10 @@ $(function () {
 		}
 
 		if(message.live.group){
-			console.log("Anzahl an Spans:" + userspans.length + " Anzahl an usern in der Gruppe: " + Object.keys(message.group).length);
-			if (userspans.length < Object.keys(message.group).length) {
+			console.log("Anzahl an Spans:" + userspans.length + " Anzahl an usern in der Gruppe: " + Object.keys(message.live.group).length);
+			if (userspans.length < Object.keys(message.live.group).length) {
 				$(".groupWrapper").append("<span></span>");
-			} else if (userspans.length > Object.keys(message.group).length) {
+			} else if (userspans.length > Object.keys(message.live.group).length) {
 				$(".groupWrapper span:last").remove();
 			}
 		}
@@ -98,6 +98,7 @@ $(function () {
 			console.log("das ist der ini-string: " + event.data);
 			ini = (JSON && JSON.parse(event.data)) || $.parseJSON(event.data);
 			presets = ini.ini.presets;
+			$(".lenz").prepend('<input type="number" min="1" max="3" value="' + ini.live.slots + '" id="slots" disabled>');
 			console.log(presets);
 			firstLiveStatus();
 			getPresets();
