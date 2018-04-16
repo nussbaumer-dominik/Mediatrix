@@ -715,7 +715,7 @@ $(function () {
 		console.log(slider);
 		
 		slider.noUiSlider.set(val);
-		$("#" + id + "Slider[data-col=" + col + "]").closest("div").html(val);
+		$("#" + id + "Slider[data-col=" + col + "]").parent().find("#" + id + "Value").html(val);
 		//console.log($("#" + id + "Slider[data-col=" + col + "]").closest("#" + id + "Value"));
 		//document.getElementById(id + "Value").innerHTML = val;
 	};
