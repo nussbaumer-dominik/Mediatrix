@@ -70,9 +70,9 @@ $(function () {
 
 			if (userspans.length < Object.keys(message.group).length) {
 				$(".groupWrapper").append("<span></span>");
-
+			} else if (userspans.length > Object.keys(message.group).length) {
+				$(".groupWrapper").remove("<span></span>");
 			}
-
 
 			if (message["group"]["register"]) {
 				$(".modal-wrapperGroup").toggleClass("open");
@@ -714,7 +714,8 @@ $(function () {
 		console.log(slider);
 		
 		slider.noUiSlider.set(val);
-		document.getElementById(id + "Value").innerHTML = val;
+		$("#" + id + "Slider[data-col=" + col + "]").closest("#" + id + "Value").innerHTML = val;
+		//document.getElementById(id + "Value").innerHTML = val;
 	};
 
 	function updateLive(live) {
