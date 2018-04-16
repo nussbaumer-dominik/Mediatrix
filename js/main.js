@@ -75,9 +75,10 @@ $(function () {
 			return true;
 		} else if (message["group"]) {
 				console.log("Group ist angekommen");
-				console.log(object);
+				console.log(message.group.admin);
+
 				if (message["group"].admin == true) {
-					$("#slots").prop('disabled', false);
+					$("#slots").prop('disabled', true);
 				}
 
 				if (message["group"]["register"]) {
@@ -96,9 +97,6 @@ $(function () {
 					});
 				}
 			} else {
-				console.log("message: " + {
-					message
-				});
 				updateLive(message.live);
 				liveStatus(message.live);
 			}
@@ -698,6 +696,7 @@ $(function () {
 	function updateLive(live) {
 		console.log("In der updateLive-Methode gelandet Live: ");
 		console.log(live);
+		console.log(live.av);
 
 		if(live.av.volume !== null){
 			setSlider("avSlider1", live.av.volume);
