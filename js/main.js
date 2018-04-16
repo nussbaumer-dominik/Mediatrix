@@ -701,6 +701,7 @@ $(function () {
 		}
 
 		for(let i=0; i<Object.keys(live.dmx).length; i++){
+			console.log(Object.keys(live.dmx).length);
 			if (Object.keys(live.dmx[i].channels).length == 1) {
 				console.log("Hue Wert: " + live.dmx[i].channels.hue);
 				console.log("Scheinwerfer" + i);
