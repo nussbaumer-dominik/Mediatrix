@@ -30,3 +30,4 @@ $result = $stm->execute();
  while($res = $result->fetchArray(SQLITE3_ASSOC)){
         print_r($res);
     }
+
