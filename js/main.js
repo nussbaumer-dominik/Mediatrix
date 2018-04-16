@@ -729,7 +729,7 @@ $(function () {
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].r, "r");
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].g, "g");
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].b, "b");
-				setDMXSlider("Scheinwerfer" + i, live.dmx[i].w-100-ns, "w");
+				setDMXSlider("Scheinwerfer" + i, live.dmx[i].w, "w");
 			}
 		}
 		
