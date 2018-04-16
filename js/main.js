@@ -71,19 +71,26 @@ $(function () {
 				$("#beamerState").attr("data-state", "1");
 			}
 		} else if(JSON.parse(event.data)["group"]){
-			$(".modal-wrapperGroup").toggleClass("open");
-			$("#groupModal").toggleClass("open");
-			$("#acceptUser").click( ev => { 
-				ev.preventDefault();
-				send(JSON.parse(event.data));
+			if (JSON.parse(event.data)["group"]["admin"]){
+				$("#slots").prop('disabled', true);
+			}
+			
+			if (JSON.parse(event.data)["group"]["register"]) {
 				$(".modal-wrapperGroup").toggleClass("open");
 				$("#groupModal").toggleClass("open");
-			} );
-			$("#dontAcceptUser").click(ev => {
-				ev.preventDefault();
-				$(".modal-wrapperGroup").toggleClass("open");
-				$("#groupModal").toggleClass("open");
-			});
+				$("#acceptUser").click(ev => {
+					ev.preventDefault();
+					send(JSON.parse(event.data));
+					$(".modal-wrapperGroup").toggleClass("open");
+					$("#groupModal").toggleClass("open");
+				});
+				$("#dontAcceptUser").click(ev => {
+					ev.preventDefault();
+					$(".modal-wrapperGroup").toggleClass("open");
+					$("#groupModal").toggleClass("open");
+				});
+			}
+			
 		} else {
 			let msg = JSON.parse(event.data);
 			console.log("message: " +{ msg });
