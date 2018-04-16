@@ -350,7 +350,7 @@ $(function () {
 
 				for ( let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++ ) {
 					t = t.replace(/{:id}/, scheinwerferObj.id);
-					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id);
+					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id + "Slider");
 				}
 
 				for (let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++) {
@@ -366,9 +366,9 @@ $(function () {
 				var t = document.querySelector("#hueTemplate").innerHTML;
 				for ( let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++ ) {
 					t = t.replace(/{:id}/, scheinwerferObj.id);
-					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id);
+					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id + "Slider");
 				}
-				
+
 				for (let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++) {
 					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id);
 				}
@@ -381,7 +381,7 @@ $(function () {
 
 				for ( let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++ ) {
 					t = t.replace(/{:id}/, scheinwerferObj.id);
-					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id );
+					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id + "Slider");
 				}
 
 				for (let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++) {
