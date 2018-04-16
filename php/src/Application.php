@@ -117,6 +117,11 @@ class Application implements MessageComponentInterface
                         $user['conn']->send(json_encode($this->addLiveStatus($this->getIniString($user['username']))));
 
                         unset($this->forRegister[$commands['group']['register']]);
+
+                    }elseif(isset($commands['group']['slots'])){
+
+                        $this->group->setSlots($commands['group']['slots']);
+
                     }else{
                         array_push($result, json_decode('{"success":false,"err":"Connection Id not valid"}'));
                     }
