@@ -682,6 +682,12 @@ $(function () {
 		document.getElementById(id + "Value").innerHTML = val;
 	};
 
+	var setDMXSlider = (id, val, col) => {
+		var slider = document.getElementById(id);
+		slider.noUiSlider.set(val);
+		document.getElementById(id + "Value").innerHTML = val;
+	};
+
 	function updateLive(live) {
 		console.log("In der updateLive-Methode gelandet Live: ");
 		console.log(live);
@@ -690,8 +696,18 @@ $(function () {
 			setSlider("avSlider1", live.av.volume);
 		}
 
-		for(let i=0;i<Object.keys(live).length;i++){
-			
+		for(let i=0;i<Object.keys(live.dmx).length;i++){
+			if(live.dmx[i].length == 1){
+				setSlider("Scheinwerfer"+i+"Slider", live.dmx[i].hue);
+			}
+
+			if(live.dmx[i].length == 3){
+				setDMXSlider("Scheinwerfer" + i + "Slider", live.dmx[i].r, "r");
+			}
+
+			if (live.dmx[i].length == 4) {
+
+			}
 		}
 		
 		//setSlider(id, val);
