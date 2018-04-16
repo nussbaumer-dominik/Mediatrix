@@ -71,7 +71,12 @@ class Scheinwerfer
        $channels = json_decode($this->dmx::getStatus());
        $erg = array();
 
-       foreach ($this->channels as $key => $channel){
+       $ch = $this->channels;
+       if(isset($ch['hue'])){
+           unset($ch['hue']);
+       }
+
+       foreach ($ch as $key => $channel){
            $erg[$key] = $channels[$channel];
        }
 
