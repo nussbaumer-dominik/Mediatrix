@@ -57,11 +57,21 @@ $(function () {
 	socket.onmessage = event => {
 		console.log("Message: ");
 		let message = JSON.parse(event.data);
+		let userspans = $(".groupWrapper");
+		console.log(userspans);
+		console.log(userspans.length);
 		console.log(message);
 
 		if (message.group) {
 			if (message.group.admin == true) {
 				$("#slots").prop('disabled', false);
+			}
+
+
+			if (userspans.length < Object.keys(message.group).length) {
+				$(".groupWrapper").append("<span></span>");
+			} else if (userspans.length > Object.keys(message.group).length) {
+				$(".groupWrapper span:last").remove();
 			}
 
 			if (message["group"]["register"]) {
@@ -72,6 +82,7 @@ $(function () {
 					send(message);
 					$(".modal-wrapperGroup").toggleClass("open");
 					$("#groupModal").toggleClass("open");
+					$(".groupWrapper").append("<span></span>");
 				});
 				$("#dontAcceptUser").click(ev => {
 					ev.preventDefault();
@@ -357,13 +368,7 @@ $(function () {
 				t = t.replace( /{{:id}}/, "Scheinwerfer" + (scheinwerferObj.id + 1) );
 				$(".flex-container").append(t);
 			} else if (scheinwerferObj.numberChannels == "5") {
-				scheinwerfer[scheinwerferObj.id] = {
-					r: 0,
-					g: 0,
-					b: 0,
-					w: 0,
-					hue: 0
-				};
+				scheinwerfer[scheinwerferObj.id] = { r: 0, g: 0, b: 0, w: 0, hue: 0 };
 
 				var t = document.querySelector("#rgbwhTemplate").innerHTML;
 
@@ -423,6 +428,8 @@ $(function () {
 		sliders.each(function (i, slider) {
 			this.noUiSlider.on("change", function (values, handle) {
 				Slider(this);
+			});
+			this.noUiSlider.on("slide", function (values, handle) {
 				valueFields.get(i).innerHTML = values[handle];
 			});
 		});
@@ -687,7 +694,8 @@ $(function () {
 	}
 
 	function updateAvSlider() {
-		setSlider("avSlider1", ini.live.av.volume);
+		document.getElementById("avSlider1").noUiSlider.set(val);
+		document.getElementById("avSlider1Value").innerHTML = val;
 		if(ini.live.av.volume !== undefined){
 			document.getElementById("avSlider1Value").innerHTML = ini.live.av.volume;
 			return true;
@@ -696,19 +704,15 @@ $(function () {
 		}
 	};
 
-	var setSlider = (id, val) => {
-		var slider = document.getElementById(id + "Slider");
-		slider.noUiSlider.set(val);
-		document.getElementById(id + "Value").innerHTML = val;
-	};
-
 	function setDMXSlider(id, val, col) {
 		var slider = document.querySelector("#" + id + "Slider[data-col=" + col + "]");
 		console.log(id + " " + val + " " + col);
 		console.log(slider);
 		
 		slider.noUiSlider.set(val);
-		document.getElementById(id + "Value").innerHTML = val;
+		$("#" + id + "Slider[data-col=" + col + "]").parent().find("#" + id + "Value").html(val);
+		//console.log($("#" + id + "Slider[data-col=" + col + "]").closest("#" + id + "Value"));
+		//document.getElementById(id + "Value").innerHTML = val;
 	};
 
 	function updateLive(live) {
@@ -716,7 +720,8 @@ $(function () {
 		console.log(live);
 
 		if(live.av.volume !== null){
-			setSlider("avSlider1", live.av.volume);
+			document.getElementById("avSlider1").noUiSlider.set(val);
+			document.getElementById("avSlider1Value").innerHTML = val;
 		}
 
 		for(let i=0; i<Object.keys(live.dmx).length; i++){
@@ -724,7 +729,8 @@ $(function () {
 			if (Object.keys(live.dmx[i].channels).length == 1) {
 				console.log("Hue Wert: " + live.dmx[i].channels.hue);
 				console.log("Scheinwerfer" + i);
-				setSlider("Scheinwerfer" + i, live.dmx[i].channels.hue);
+				document.getElementById("Scheinwerfer" + i + "Slider").noUiSlider.set(live.dmx[i].channels.hue);
+				document.getElementById("Scheinwerfer" + i + "Value").innerHTML = live.dmx[i].channels.hue;
 			}
 
 			if (Object.keys(live.dmx[i].channels).length == 3) {
@@ -765,6 +771,10 @@ $(function () {
 		$.snackbar({
 			content: message
 		});
+	}
+
+	function users(){
+
 	}
 
 	$(".tgl").on("click", () => {
