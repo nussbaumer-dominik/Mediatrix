@@ -694,10 +694,10 @@ $(function () {
 		var lichtBoxen = document.querySelectorAll(".lichtBox");
 		console.log(lichtBoxen);
 		console.log(lichtBoxen[0]);
-		var slider = document.querySelector(container);
+		//var slider = document.querySelector(container);
 		
-		slider.noUiSlider.set(val);
-		document.getElementById(id + "Value").innerHTML = val;
+		//slider.noUiSlider.set(val);
+		//document.getElementById(id + "Value").innerHTML = val;
 	};
 
 	function updateLive(live) {
