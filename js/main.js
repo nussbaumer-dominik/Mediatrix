@@ -70,7 +70,14 @@ $(function () {
 				$("#power").prop("checked", true);
 				$("#beamerState").attr("data-state", "1");
 			}
-		} else if(JSON.parse(event.data)["group"]){
+			return true;
+		} else {
+			let msg = JSON.parse(event.data);
+			console.log("message: " + { msg });
+			updateLive(msg.live);
+			liveStatus(msg.live);
+		}
+		if(JSON.parse(event.data)["group"]){
 			if (JSON.parse(event.data)["group"]["admin"]){
 				$("#slots").prop('disabled', true);
 			}
@@ -90,14 +97,8 @@ $(function () {
 					$("#groupModal").toggleClass("open");
 				});
 			}
-			
-		} else {
-			let msg = JSON.parse(event.data);
-			console.log("message: " +{ msg });
-			updateLive(msg.live);
-			liveStatus(msg.live);
 		}
-	};
+	}
 
 	//wird getriggered, wenn die Verbindung gekappt wurde
 	socket.onclose = event => {
@@ -704,7 +705,7 @@ $(function () {
 			}
 
 			if(live.dmx[i].channels.length == 3){
-				setDMXSlider("Scheinwerfer" + i + "Slider", live.dmx[i].r, "r");
+				setDMXSlider(i, live.dmx[i].r, "r");
 			}
 
 			if (live.dmx[i].channels.length == 4) {
