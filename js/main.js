@@ -78,8 +78,8 @@ $(function () {
 			liveStatus(msg.live);
 		}
 		if(JSON.parse(event.data)["group"]){
-			if (JSON.parse(event.data)["group"]["admin"]){
-				$("#slots").prop('disabled', true);
+			if (JSON.parse(event.data)["group"].admin == true){
+				$("#slots").prop('disabled', false);
 			}
 			
 			if (JSON.parse(event.data)["group"]["register"]) {
@@ -714,7 +714,6 @@ $(function () {
 			}
 		}
 		
-		//setSlider(id, val);
 	}
 
 	$("#slots").on("change", function(ev){
