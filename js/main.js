@@ -60,9 +60,6 @@ $(function () {
 		console.log(message);
 
 		if (message.group) {
-			console.log("Group ist angekommen");
-			console.log(message.group.admin);
-
 			if (message.group.admin == true) {
 				$("#slots").prop('disabled', false);
 			}
@@ -704,7 +701,8 @@ $(function () {
 			setSlider("avSlider1", live.av.volume);
 		}
 
-		for(let i=0;i<Object.keys(live.dmx).length;i++){
+		for(let i=0; i<Object.keys(live.dmx).length; i++){
+			console.log(live.dmx[i].length);
 			if(live.dmx[i].channels.length == 1){
 				setSlider("Scheinwerfer"+i+"Slider", live.dmx[i].hue);
 			}
