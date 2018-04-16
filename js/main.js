@@ -59,6 +59,7 @@ $(function () {
 		let message = JSON.parse(event.data);
 		let userspans = document.querySelector(".groupWrapper");
 		console.log(userspans);
+		console.log(userspans.length);
 		console.log(message);
 
 		if (message.group) {
@@ -67,8 +68,9 @@ $(function () {
 			}
 
 
-			if (Object.keys(message.group).length < userspans.length){
-				console.log("object");
+			if (userspans.length < Object.keys(message.group).length) {
+				$(".groupWrapper").append("<span></span>");
+
 			}
 
 
