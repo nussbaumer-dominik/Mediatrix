@@ -701,7 +701,8 @@ $(function () {
 		}
 
 		for(let i=0; i<Object.keys(live.dmx).length; i++){
-			console.log(Object.keys(live.dmx[i]).length);
+			console.log("i: " + i);
+			console.log(live.dmx[i]);
 			if(live.dmx[i].channels.length == 1){
 				setSlider("Scheinwerfer"+i+"Slider", live.dmx[i].hue);
 			}
