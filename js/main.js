@@ -59,7 +59,7 @@ $(function () {
 		let message = JSON.parse(event.data);
 		console.log(message);
 		
-		if (message["ini"]) {
+		if (message.ini) {
 			console.log("das ist der ini-string: " + event.data);
 			ini = (JSON && JSON.parse(event.data)) || $.parseJSON(event.data);
 			presets = ini.ini.presets;
@@ -73,11 +73,11 @@ $(function () {
 				$("#beamerState").attr("data-state", "1");
 			}
 			return true;
-		} else if (message["group"]) {
+		} else if (message.group) {
 				console.log("Group ist angekommen");
 				console.log(message.group.admin);
 
-				if (message["group"].admin == true) {
+				if (message.group.admin == true) {
 					$("#slots").prop('disabled', true);
 				}
 
