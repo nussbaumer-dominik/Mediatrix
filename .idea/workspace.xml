@@ -25,20 +25,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="569" column="58" lean-forward="false" selection-start-line="569" selection-start-column="58" selection-end-line="569" selection-end-column="58" />
+            <state relative-caret-position="288">
+              <caret line="123" column="0" lean-forward="true" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
               <folding>
-                <marker date="1523882464269" expanded="true" signature="14830:14870" ph="SELECT * FRO... preset" />
-                <marker date="1523882464269" expanded="true" signature="15608:15650" ph="SELECT isext... user" />
+                <marker date="1523882734306" expanded="true" signature="14891:14931" ph="SELECT * FRO... preset" />
+                <marker date="1523882734306" expanded="true" signature="15669:15711" ph="SELECT isext... user" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Group.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Group.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Group.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
@@ -982,13 +982,6 @@
       <workItem from="1522924199783" duration="3998000" />
       <workItem from="1523110524525" duration="171000" />
     </task>
-    <task id="LOCAL-00255" summary="debug mixer mute">
-      <created>1522841336646</created>
-      <option name="number" value="00255" />
-      <option name="presentableId" value="LOCAL-00255" />
-      <option name="project" value="LOCAL" />
-      <updated>1522841336646</updated>
-    </task>
     <task id="LOCAL-00256" summary="debug micro 2 js">
       <created>1522842825618</created>
       <option name="number" value="00256" />
@@ -1325,11 +1318,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523882028168</updated>
     </task>
-    <option name="localTasksCounter" value="304" />
+    <task id="LOCAL-00304" summary="add live group">
+      <created>1523882670038</created>
+      <option name="number" value="00304" />
+      <option name="presentableId" value="LOCAL-00304" />
+      <option name="project" value="LOCAL" />
+      <updated>1523882670038</updated>
+    </task>
+    <option name="localTasksCounter" value="305" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239261000" />
+    <option name="totallyTimeSpent" value="239342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1450,7 +1450,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change rpm cooling.py" />
     <MESSAGE value="python dev" />
     <MESSAGE value="change high to low" />
     <MESSAGE value="debug python" />
@@ -1475,7 +1474,8 @@
     <MESSAGE value="debug register multiuser" />
     <MESSAGE value="add user to group" />
     <MESSAGE value="add slots command&#10;send admin to user when he is group admin&#10;add isadmin colum to db and add admin user pi in database" />
-    <option name="LAST_COMMIT_MESSAGE" value="add slots command&#10;send admin to user when he is group admin&#10;add isadmin colum to db and add admin user pi in database" />
+    <MESSAGE value="add live group" />
+    <option name="LAST_COMMIT_MESSAGE" value="add live group" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1839,22 +1839,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="569" column="58" lean-forward="false" selection-start-line="569" selection-start-column="58" selection-end-line="569" selection-end-column="58" />
-          <folding>
-            <marker date="1523882464269" expanded="true" signature="14830:14870" ph="SELECT * FRO... preset" />
-            <marker date="1523882464269" expanded="true" signature="15608:15650" ph="SELECT isext... user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Group.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="123" column="0" lean-forward="true" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+          <folding>
+            <marker date="1523882734306" expanded="true" signature="14891:14931" ph="SELECT * FRO... preset" />
+            <marker date="1523882734306" expanded="true" signature="15669:15711" ph="SELECT isext... user" />
+          </folding>
         </state>
       </provider>
     </entry>

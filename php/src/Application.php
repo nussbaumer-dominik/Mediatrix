@@ -118,7 +118,7 @@ class Application implements MessageComponentInterface
 
                         unset($this->forRegister[$commands['group']['register']]);
 
-                    }elseif(isset($commands['group']['slots'])){
+                    }elseif(isset($commands['group']['slots']) && $from->resourceId == $this->group->getAdmin()->resourceId){
 
                         $this->group->setSlots($commands['group']['slots']);
 
