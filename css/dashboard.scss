@@ -56,7 +56,8 @@ a {
 	overflow: hidden;
 }
 
-.modal-wrapper {
+.modal-wrapperPreset,
+.modal-wrapperGroup {
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
@@ -72,7 +73,8 @@ a {
 	transition: all 0.25s ease-in-out;
 }
 
-.modal-wrapper.open {
+.modal-wrapperPreset.open,
+.modal-wrapperGroup.open {
 	opacity: 1;
 	visibility: visible; //display: block;
 }
@@ -180,7 +182,7 @@ a {
 				box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
 			}
 		}
-		input[type="submit"] {
+		input[type="submit"], #acceptUser {
 			background: var(--green);
 			&:hover {
 				background: darken($green, 12%);
@@ -260,8 +262,9 @@ a {
 			position: absolute;
 			visibility: hidden;
 			width: 250px;
-			height: 250px;
+			height: 350px;
 			bottom: 0;
+			z-index: 7;
 			left: 80px;
 			color: var(--color);
 			background: var(--tooltip);
@@ -373,9 +376,10 @@ a {
 					}
 				}
 			}
+
 			.colorOptions {
 				width: 100%;
-				height: auto;
+				height: 60px;
 				padding: 10px;
 				box-sizing: border-box;
 				h3 {
@@ -409,6 +413,68 @@ a {
 					}
 				}
 			}
+
+			.groupView {
+				width: 100%;
+				height: auto;
+				padding: 10px;
+				box-sizing: border-box;
+
+				h3 {
+					margin: 0;
+				}
+
+				.lenz{
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+					width: 100%;
+					height: 100%;
+
+					input[type="number"]{
+						border: none;
+						color: inherit;
+						font-size: 1.5rem;
+						background: var(--body);
+						padding: .5rem;
+						border-radius: 10px;
+					}
+
+					.groupWrapper {
+						position: relative;
+						display: flex;
+						width: 50%;
+						align-items: center;
+						justify-content: flex-end;
+
+						span {
+							width: 40px;
+							height: 40px;
+							border-radius: 100%;
+							position: absolute;
+							&:nth-child(1) {
+								background-color: #08AEEA;
+								background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+								right: 10px;
+								z-index: 10;
+							}
+							&:nth-child(2) {
+								background-color: #FEE140;
+								background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
+								right: 35px;
+								z-index: 9;
+							}
+							&:nth-child(3) {
+								background-color: #85FFBD;
+								background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+								right: 60px;
+								z-index: 8;
+							}
+						}
+					}
+				}
+			}
+
 			&::before {
 				content: "";
 				display: block;
@@ -424,11 +490,14 @@ a {
 				width: 0;
 			}
 		}
+
+
+		}
 		&:hover .tooltip,
 		&:active .tooltip {
 			visibility: visible;
 		}
-	}
+
 	ul {
 		width: 100%;
 		margin: 0;
@@ -1007,7 +1076,7 @@ button {
 			}
 		}
 	}
-	.modal {
+	.modal #presetModal {
 		form {
 			input[type="text"] {
 				width: 75%;

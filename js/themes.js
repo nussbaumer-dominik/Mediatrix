@@ -99,13 +99,18 @@ $(() => {
 		}
 	});
 
-	$(".trigger").click(function() {
-		$(".modal-wrapper").toggleClass("open");
-		$(".modal").toggleClass("open");
+	$(".presetTrigger").click(function() {
+		$(".modal-wrapperPreset").toggleClass("open");
+		$("#presetModal").toggleClass("open");
 	});
 
-	$(".modal-wrapper").click(function() {
-		$(".modal-wrapper").toggleClass("open");
-		$(".modal").toggleClass("open");
+	$(".modal-wrapperPreset").click(function() {
+		$(".modal-wrapperPreset").toggleClass("open");
+		$("#presetModal").toggleClass("open");
+	});
+
+	$(".modal-wrapperGroup").click(function() {
+		$(".modal-wrapperGroup").toggleClass("open");
+		$("#groupModal").toggleClass("open");
 	});
 });

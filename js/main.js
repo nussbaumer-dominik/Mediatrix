@@ -37,8 +37,8 @@ $(function () {
 		}
 	};
 	let scheinwerfer = {};
-	let socket = new WebSocket("wss://192.168.1.235/wss");
-	//let socket = new WebSocket("wss://10.0.0.144/wss");
+	//let socket = new WebSocket("wss://192.168.1.235/wss");
+	let socket = new WebSocket("wss://10.0.0.144/wss");
 
 	//wirft eine Exception
 	socket.onerror = error => {
@@ -71,8 +71,19 @@ $(function () {
 				$("#beamerState").attr("data-state", "1");
 			}
 		} else if(JSON.parse(event.data)["group"]){
-			alert(event.data);
-			send(JSON.parse(event.data));
+			$(".modal-wrapperGroup").toggleClass("open");
+			$("#groupModal").toggleClass("open");
+			$("#acceptUser").click( ev => { 
+				ev.preventDefault();
+				send(JSON.parse(event.data));
+				$(".modal-wrapperGroup").toggleClass("open");
+				$("#groupModal").toggleClass("open");
+			} );
+			$("#dontAcceptUser").click(ev => {
+				ev.preventDefault();
+				$(".modal-wrapperGroup").toggleClass("open");
+				$("#groupModal").toggleClass("open");
+			});
 		} else {
 			let msg = JSON.parse(event.data);
 			console.log("message: " +{ msg });
@@ -455,7 +466,7 @@ $(function () {
 				"<div> <i class='fas fa-volume-up'> </i> <h3> - </h3> </div>"
 			);
 		}
-		if (typeof data.conf.beamer !== "undefined") {
+		if (typeof data.conf.beamer.on !== "undefined") {
 			if (data.conf.beamer.on) {
 				div.append(
 					"<div> <i class='fas fa-video'> </i> <h3>ein</h3> </div>"
@@ -465,8 +476,10 @@ $(function () {
 					"<div> <i class='fas fa-video'> </i> <h3>aus</h3> </div>"
 				);
 			}
+		} else {
+			div.append("<div> <i class='fas fa-video'> </i> <h3>aus</h3> </div>");
 		}
-		if (typeof data.conf.mixer !== "undefined") {
+		if (typeof data.conf.mixer.mikrofone !== "undefined") {
 			div.append(
 				"<div> <i class='fas fa-microphone'> </i> <h3>" +
 				Object.keys(data.conf.mixer.mikrofone) +
@@ -515,7 +528,7 @@ $(function () {
 					"<div> <i class='fas fa-volume-up'> </i> <h3> - </h3> </div>"
 				);
 			}
-			if (typeof presets[i].conf.beamer !== "undefined") {
+			if (typeof presets[i].conf.beamer.on !== "undefined") {
 				if (presets[i].conf.beamer.on) {
 					div.append(
 						"<div> <i class='fas fa-video'> </i> <h3>ein</h3> </div>"
@@ -525,8 +538,10 @@ $(function () {
 						"<div> <i class='fas fa-video'> </i> <h3>aus</h3> </div>"
 					);
 				}
+			}else {
+				div.append("<div> <i class='fas fa-video'> </i> <h3> aus </h3> </div>");
 			}
-			if (typeof presets[i].conf.mixer !== "undefined") {
+			if (typeof presets[i].conf.mixer.mikrofone !== "undefined") {
 				div.append(
 					"<div> <i class='fas fa-microphone'> </i> <h3>" +
 					Object.keys(presets[i].conf.mixer.mikrofone).length +
@@ -664,12 +679,26 @@ $(function () {
 		console.log("In der updateLive-Methode gelandet Live: ");
 		console.log(live);
 
-		/*if(){
+		if(live.av.volume !== null){
+			setSlider("avSlider1", live.av.volume);
+		}
 
-		}*/
+		for(let i=0;i<Object.keys(live).length;i++){
+			
+		}
 		
 		//setSlider(id, val);
 	}
+
+	$("#slots").on("change", function(ev){
+		console.log(this.value);
+		let slots = {
+			group: {
+				slots: parseInt(this.value)
+			}
+		}
+		send(slots);
+	});
 
 	function buildStatus(key, value, unit, id) {
 		var div = $("<div id='" + id + "'>");

@@ -11,7 +11,7 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/material.css">
   <link rel="stylesheet" href="css/snackbar.css">
-  <link rel="stylesheet" href="css/vertical-slider.css">
+  <!-- <link rel="stylesheet" href="css/vertical-slider.css"> -->
   <link rel="stylesheet" href="css/nouislider.min.css">
   <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/fontawesome-all.min.css">
@@ -27,10 +27,10 @@
 
 <body>
   <div class="parent">
-    <div class="modal-wrapper">
-    </div>
-    <div class="modal">
-      <a class="btn-close trigger" href=""></a>
+    <div class="modal-wrapperPreset"></div>
+    <div class="modal-wrapperGroup"></div>
+    <div class="modal" id="presetModal">
+      <a class="btn-close presetTrigger" href=""></a>
       <div class="modal-content">
         <form action="">
           <p>Derzeitige Konfiguration als Preset abspeichern?</p>
@@ -42,8 +42,20 @@
         </form>
       </div>
     </div>
+    <div class="modal" id="groupModal">
+      <a class="btn-close trigger" href=""></a>
+      <div class="modal-content">
+        <form action="">
+          <p>Möchten Sie dem neuen Benutzer Zugriff gewähren?</p>
+          <div class="formBtns">
+            <input type="button" value="Ja" id="acceptUser">
+            <input type="button" value="Nein" id="dontAcceptUser">
+          </div>
+        </form>
+      </div>
+    </div>
     <div class="side-nav">
-      <div class="savePreset trigger">
+      <div class="savePreset presetTrigger">
         <i class="fas fa-save" aria-hidden="true"></i>
       </div>
       <ul>
@@ -91,6 +103,17 @@
               <div class="dark themeBtn" value="dark"></div>
               <div class="minimalLight themeBtn" value="minimalLight"></div>
               <div class="minimalDark themeBtn" value="minimalDark"></div>
+            </div>
+          </div>
+          <div class="groupView">
+            <h3>Gruppe</h3>
+            <div class="lenz">
+              <input type="number" min="1" max="3" value="1" id="slots">
+              <div class="groupWrapper">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </div>
           </div>
         </div>
