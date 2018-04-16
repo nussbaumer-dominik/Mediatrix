@@ -700,7 +700,7 @@ $(function () {
 			setSlider("avSlider1", live.av.volume);
 		}
 
-		for(let i=0; i<Object.keys(live.dmx).length; i++){
+		for(let i=1; i<=Object.keys(live.dmx).length; i++){
 			if (Object.keys(live.dmx[i].channels).length == 1) {
 				console.log("Hue Wert: " + live.dmx[i].channels.hue);
 				setSlider("Scheinwerfer" + i, live.dmx[i].channels.hue);
