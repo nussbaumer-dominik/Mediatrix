@@ -56,7 +56,6 @@ $(function () {
 	//wird bei Response des Servers ausgelöst
 	socket.onmessage = event => {
 		console.log("Message: ");
-		console.log(event.data);
 		let message = JSON.parse(event.data);
 		console.log(message);
 
@@ -65,7 +64,7 @@ $(function () {
 			console.log(message.group.admin);
 
 			if (message.group.admin == true) {
-				$("#slots").prop('disabled', true);
+				$("#slots").prop('disabled', false);
 			}
 
 			if (message["group"]["register"]) {
