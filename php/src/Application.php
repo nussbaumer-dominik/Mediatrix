@@ -571,6 +571,8 @@ class Application implements MessageComponentInterface
 
         }
 
+        $live['slots'] = $this->group->getSlots();
+
 
         $this->group->send(json_encode(array('live' => $live)));
 
