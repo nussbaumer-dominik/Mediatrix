@@ -102,6 +102,7 @@ a {
 	-moz-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
+	
 	.btn-close {
 		width: 32px;
 		height: 32px;
@@ -117,6 +118,7 @@ a {
 			display: block;
 			background: var(--modal-btn);
 		}
+
 		&::before {
 			margin-top: 12px;
 			border-radius: 6px;
@@ -125,6 +127,7 @@ a {
 			-o-transform: rotate(45deg);
 			transform: rotate(45deg);
 		}
+
 		&:after {
 			margin-top: -6px;
 			border-radius: 6px;
@@ -139,6 +142,7 @@ a {
 		height: 100%;
 		box-sizing: border-box;
 	}
+
 	form {
 		width: 100%;
 		height: 100%;
@@ -147,10 +151,12 @@ a {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+
 		p {
 			font-size: 1.4rem;
 			text-align: center;
 		}
+		
 		input[type="text"] {
 			border: none;
 			color: inherit;
@@ -160,12 +166,14 @@ a {
 			border-radius: 10px;
 			width: 50%;
 		}
+
 		.formBtns {
 			width: 50%;
 			display: flex;
 			align-items: center;
 			justify-content: space-around;
 		}
+
 		input[type="submit"],
 		input[type="button"] {
 			border: none;
@@ -182,12 +190,14 @@ a {
 				box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
 			}
 		}
+
 		input[type="submit"], #acceptUser {
 			background: var(--green);
 			&:hover {
 				background: darken($green, 12%);
 			}
 		}
+
 		input[type="button"] {
 			background: var(--main);
 			&:hover {
@@ -213,6 +223,7 @@ a {
 	align-items: center;
 	flex-direction: column;
 	color: var(--icons);
+
 	.savePreset,
 	.savePreset-mobile {
 		width: 64px;
@@ -225,6 +236,7 @@ a {
 		transition: all 0.25s;
 		background-image: linear-gradient(to right, #4481eb 0%, #04befe 100%);
 		cursor: pointer;
+
 		.fas {
 			font-size: 1.6rem;
 			position: relative;
@@ -232,6 +244,7 @@ a {
 			top: 50%;
 			transform: translate(-50%, -50%);
 		}
+
 		&:hover,
 		&:focus {
 			background: var(--main);
@@ -251,13 +264,21 @@ a {
 		background-image: linear-gradient(to right, #4481eb 0%, #04befe 100%);
 		background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
 		background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+
 		.img {
 			overflow: hidden;
 			border-radius: 50%;
 		}
+
 		i {
 			font-size: 2.6rem;
 		}
+
+		&:hover .tooltip,
+		&:active .tooltip {
+			visibility: visible;
+		}
+
 		.tooltip {
 			position: absolute;
 			visibility: hidden;
@@ -491,11 +512,6 @@ a {
 			}
 		}
 
-
-		}
-		&:hover .tooltip,
-		&:active .tooltip {
-			visibility: visible;
 		}
 
 	ul {

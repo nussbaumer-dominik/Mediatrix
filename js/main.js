@@ -50,14 +50,42 @@ $(function () {
 		if (jwt != null) {
 			socket.send('{"jwt":"' + jwt + '","ini":1}');
 		}
-		console.log("socket open: " + socket + " " + event);
+		console.log("socket wurde geöffnet");
 	};
 
 	//wird bei Response des Servers ausgelöst
 	socket.onmessage = event => {
 		console.log("Message: ");
 		console.log(event.data);
-		if (JSON.parse(event.data)["ini"]) {
+		let message = JSON.parse(event.data);
+		console.log(message);
+
+		if (message.group) {
+			console.log("Group ist angekommen");
+			console.log(message.group.admin);
+
+			if (message.group.admin == true) {
+				$("#slots").prop('disabled', true);
+			}
+
+			if (message["group"]["register"]) {
+				$(".modal-wrapperGroup").toggleClass("open");
+				$("#groupModal").toggleClass("open");
+				$("#acceptUser").click(ev => {
+					ev.preventDefault();
+					send(message);
+					$(".modal-wrapperGroup").toggleClass("open");
+					$("#groupModal").toggleClass("open");
+				});
+				$("#dontAcceptUser").click(ev => {
+					ev.preventDefault();
+					$(".modal-wrapperGroup").toggleClass("open");
+					$("#groupModal").toggleClass("open");
+				});
+			}
+		}
+		
+		if (message.ini) {
 			console.log("das ist der ini-string: " + event.data);
 			ini = (JSON && JSON.parse(event.data)) || $.parseJSON(event.data);
 			presets = ini.ini.presets;
@@ -70,34 +98,12 @@ $(function () {
 				$("#power").prop("checked", true);
 				$("#beamerState").attr("data-state", "1");
 			}
-		} else if(JSON.parse(event.data)["group"]){
-			if (JSON.parse(event.data)["group"]["admin"]){
-				$("#slots").prop('disabled', true);
-			}
-			
-			if (JSON.parse(event.data)["group"]["register"]) {
-				$(".modal-wrapperGroup").toggleClass("open");
-				$("#groupModal").toggleClass("open");
-				$("#acceptUser").click(ev => {
-					ev.preventDefault();
-					send(JSON.parse(event.data));
-					$(".modal-wrapperGroup").toggleClass("open");
-					$("#groupModal").toggleClass("open");
-				});
-				$("#dontAcceptUser").click(ev => {
-					ev.preventDefault();
-					$(".modal-wrapperGroup").toggleClass("open");
-					$("#groupModal").toggleClass("open");
-				});
-			}
-			
+			return true;
 		} else {
-			let msg = JSON.parse(event.data);
-			console.log("message: " +{ msg });
-			updateLive(msg.live);
-			liveStatus(msg.live);
-		}
-	};
+				updateLive(message.live);
+				liveStatus(message.live);
+			}
+		} 
 
 	//wird getriggered, wenn die Verbindung gekappt wurde
 	socket.onclose = event => {
@@ -672,8 +678,6 @@ $(function () {
 		} else {
 			document.getElementById("avSlider1Value").innerHTML = "0";
 		}
-
-		
 	};
 
 	var setSlider = (id, val) => {
@@ -682,19 +686,40 @@ $(function () {
 		document.getElementById(id + "Value").innerHTML = val;
 	};
 
+	function setDMXSlider(container, val, col) {
+		var lichtBoxen = document.querySelectorAll(".lichtBox");
+		console.log(lichtBoxen);
+		console.log(lichtBoxen[0]);
+		var slider = document.querySelector(container);
+		
+		slider.noUiSlider.set(val);
+		document.getElementById(id + "Value").innerHTML = val;
+	};
+
 	function updateLive(live) {
 		console.log("In der updateLive-Methode gelandet Live: ");
 		console.log(live);
+		console.log(live.av);
 
 		if(live.av.volume !== null){
 			setSlider("avSlider1", live.av.volume);
 		}
 
-		for(let i=0;i<Object.keys(live).length;i++){
-			
+		for(let i=0;i<Object.keys(live.dmx).length;i++){
+			if(live.dmx[i].channels.length == 1){
+				setSlider("Scheinwerfer"+i+"Slider", live.dmx[i].hue);
+			}
+
+			if(live.dmx[i].channels.length == 3){
+				console.log("SETDMXSlider wird aufgerufen \n");
+				setDMXSlider(i, live.dmx[i].r, "r");
+			}
+
+			if (live.dmx[i].channels.length == 4) {
+
+			}
 		}
 		
-		//setSlider(id, val);
 	}
 
 	$("#slots").on("change", function(ev){
