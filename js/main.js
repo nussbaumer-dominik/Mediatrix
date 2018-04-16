@@ -711,10 +711,8 @@ $(function () {
 		}
 
 		for(let i=0; i<Object.keys(live.dmx).length; i++){
-			console.log("i: " + i);
-			console.log(Object.keys(live.dmx[i].channels).length);
-			console.log("Hue Wert: " + live.dmx[i].hue);
 			if (Object.keys(live.dmx[i].channels).length == 1) {
+				console.log("Hue Wert: " + live.dmx[i].hue);
 				setSlider("Scheinwerfer"+i, live.dmx[i].hue);
 			}
 
