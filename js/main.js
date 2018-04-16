@@ -57,12 +57,20 @@ $(function () {
 	socket.onmessage = event => {
 		console.log("Message: ");
 		let message = JSON.parse(event.data);
+		let userspans = document.querySelector(".groupWrapper");
+		console.log(userspans);
 		console.log(message);
 
 		if (message.group) {
 			if (message.group.admin == true) {
 				$("#slots").prop('disabled', false);
 			}
+
+
+			if (Object.keys(message.group).length < userspans.length){
+				console.log("object");
+			}
+
 
 			if (message["group"]["register"]) {
 				$(".modal-wrapperGroup").toggleClass("open");
@@ -765,6 +773,10 @@ $(function () {
 		$.snackbar({
 			content: message
 		});
+	}
+
+	function users(){
+
 	}
 
 	$(".tgl").on("click", () => {
