@@ -90,14 +90,18 @@ $(function () {
 		}
 
 		if(message.live.group){
-			console.log("Anzahl an Spans:" + userspans.length + " Anzahl an usern in der Gruppe: " + Object.keys(message.live.group).length);
-			if (userspans.length < Object.keys(message.live.group).length && Object.keys(message.live.group).length == 2) {
+			let activeUsers = Object.keys(message.live.group).length;
+			console.log("Anzahl an Spans:" + userspans.length + " Anzahl an usern in der Gruppe: " + activeUsers);
+			if (userspans.length == 1 && activeUsers == 2) {
 				$(".groupWrapper").append("<span></span>");
-			} else if (userspans.length < Object.keys(message.live.group).length && Object.keys(message.live.group).length == 3) {
+			}
+			if (userspans.length == 2 && activeUsers == 3) {
 				$(".groupWrapper").append("<span></span>");
-			} else if (userspans.length > Object.keys(message.live.group).length && Object.keys(message.live.group).length == 3) {
+			}
+			if (userspans.length == 3 && activeUsers == 2) {
 				$(".groupWrapper span:last").remove();
-			} else if (userspans.length > Object.keys(message.live.group).length && Object.keys(message.live.group).length == 2) {
+			}
+			if (userspans.length == 2 && activeUsers == 1) {
 				$(".groupWrapper span:last").remove();
 			}
 		}
