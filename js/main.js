@@ -704,7 +704,7 @@ $(function () {
 	};
 
 	var setSlider = (id, val) => {
-		var slider = document.getElementById(id + "Slider");
+		var slider = document.getElementById(id);
 		slider.noUiSlider.set(val);
 		document.getElementById(id + "Value").innerHTML = val;
 	};
@@ -733,7 +733,7 @@ $(function () {
 			if (Object.keys(live.dmx[i].channels).length == 1) {
 				console.log("Hue Wert: " + live.dmx[i].channels.hue);
 				console.log("Scheinwerfer" + i);
-				setSlider("Scheinwerfer" + i, live.dmx[i].channels.hue);
+				setSlider("Scheinwerfer" + i + "Slider", live.dmx[i].channels.hue);
 			}
 
 			if (Object.keys(live.dmx[i].channels).length == 3) {
