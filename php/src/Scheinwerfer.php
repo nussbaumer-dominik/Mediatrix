@@ -72,7 +72,7 @@ class Scheinwerfer
        $erg = array();
 
        $ch = $this->channels;
-       if(isset($ch['hue'])){
+       if(isset($ch['hue']) && count($ch) > 1){
            unset($ch['hue']);
        }
 
