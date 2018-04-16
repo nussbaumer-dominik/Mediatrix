@@ -24,7 +24,7 @@ class Group
             $this->users->attach($conn);
             if(is_null($this->admin)){
                 $this->admin = $conn;
-                $conn->send('{"group":{"admin":true}');
+                $conn->send('{"group":{"admin":true}}');
             }
         }
     }
@@ -35,7 +35,7 @@ class Group
             $this->admin = null;
         }elseif ($this->admin == $conn && $this->users->count() > 0){
             $this->admin = $this->users->current();
-            $this->users->current()->send('{"group":{"admin":true}');
+            $this->users->current()->send('{"group":{"admin":true}}');
         }
     }
 
