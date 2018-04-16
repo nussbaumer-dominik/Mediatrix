@@ -694,7 +694,8 @@ $(function () {
 		/*var lichtBoxen = document.querySelectorAll(".lichtBox");
 		console.log(lichtBoxen);
 		console.log(lichtBoxen[0]);*/
-		var slider = $("#"+ id +"Slider[data-col="+ col +"]")
+		var slider = document.querySelector("#" + id + "Slider[data-col=" + col + "]");
+		//var slider = $("#"+ id +"Slider[data-col="+ col +"]")
 		console.log(id + " " + val + " " + col);
 		console.log(slider);
 		
