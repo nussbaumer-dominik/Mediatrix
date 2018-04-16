@@ -62,9 +62,9 @@ $(function () {
 		console.log(userspans.length);
 		console.log(message);
 
-		if(message.live.slots){
+		/*if(message.live.slots){
 			$("#slots").val(message.live.slots);
-		}
+		}*/
 
 		if (message.group) {
 			if (message.group.admin == true) {
@@ -116,8 +116,8 @@ $(function () {
 		} else {
 				updateLive(message.live);
 				liveStatus(message.live);
-			}
-		} 
+		}
+	} 
 
 	//wird getriggered, wenn die Verbindung gekappt wurde
 	socket.onclose = event => {
