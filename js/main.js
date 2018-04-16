@@ -62,9 +62,9 @@ $(function () {
 		console.log(userspans.length);
 		console.log(message);
 
-		/*if(message.live.slots){
+		if(message.live.slots){
 			$("#slots").val(message.live.slots);
-		}*/
+		}
 
 		if (message.group) {
 			if (message.group.admin == false) {
@@ -79,7 +79,7 @@ $(function () {
 					send(message);
 					$(".modal-wrapperGroup").toggleClass("open");
 					$("#groupModal").toggleClass("open");
-					$(".groupWrapper").append("<span></span>");
+					// $(".groupWrapper").append("<span></span>");
 				});
 				$("#dontAcceptUser").click(ev => {
 					ev.preventDefault();
@@ -106,16 +106,7 @@ $(function () {
 			console.log("das ist der ini-string: " + event.data);
 			ini = (JSON && JSON.parse(event.data)) || $.parseJSON(event.data);
 			presets = ini.ini.presets;
-			$(".lenz").prepend('<input type="number" min="1" max="3" value="' + ini.live.slots + '" id="slots">');
-				$("#slots").on("change", function (ev) {
-					console.log(this.value);
-					let slots = {
-						group: {
-							slots: parseInt(this.value)
-						}
-					}
-					send(slots);
-				});
+			$("#slots").val(ini.live.slots);
 			console.log(presets);
 			firstLiveStatus();
 			getPresets();
@@ -785,9 +776,15 @@ $(function () {
 		});
 	}
 
-	function users(){
-
-	}
+	$("#slots").on("change", function (ev) {
+		console.log(this.value);
+		let slots = {
+			group: {
+				slots: parseInt(this.value)
+			}
+		}
+		send(slots);
+	});
 
 	$(".tgl").on("click", () => {
 		var mode = $(".tgl").prop("checked");
