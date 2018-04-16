@@ -94,7 +94,7 @@ $(function () {
 				console.log("Ein Span hinzugefügt");
 			}
 			if ($(".groupWrapper").length > activeUsers) {
-				$(".groupWrapper").append("<span></span>");
+				$(".groupWrapper span:last").remove();
 				console.log("Ein Span removed");
 			}
 		}
