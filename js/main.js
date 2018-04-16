@@ -694,6 +694,8 @@ $(function () {
 		var lichtBoxen = document.querySelectorAll(".lichtBox");
 		console.log(lichtBoxen);
 		console.log(lichtBoxen[0]);
+		var slider = $("#"+container+"Slider[data-col="+ col +"]")
+		console.log(slider);
 		//var slider = document.querySelector(container);
 		
 		//slider.noUiSlider.set(val);
@@ -717,8 +719,8 @@ $(function () {
 			}
 
 			if (Object.keys(live.dmx[i].channels).length == 3) {
-				console.log("SETDMXSlider wird aufgerufen \n");
-				setDMXSlider(i, live.dmx[i].r, "r");
+				console.log("SetDMXSlider wird aufgerufen \n");
+				setDMXSlider("Scheinwerfer" + i, live.dmx[i].r, "r");
 			}
 
 			if (Object.keys(live.dmx[i].channels).length == 4) {
