@@ -94,6 +94,8 @@ $(function () {
 			if ($(".groupWrapper").length == 1 && activeUsers == 2) {
 				$(".groupWrapper").append("<span></span>");
 				console.log("Ein Span hinzugefügt");
+			} else if ($(".groupWrapper").length == 2 && activeUsers == 2) {
+				console.log("nix gemacht");
 			}
 			if ($(".groupWrapper").length == 2 && activeUsers == 3) {
 				$(".groupWrapper").append("<span></span>");
