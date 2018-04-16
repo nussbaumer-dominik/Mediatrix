@@ -685,7 +685,7 @@ $(function () {
 	};
 
 	var setSlider = (id, val) => {
-		var slider = document.getElementById(id);
+		var slider = document.getElementById(id + "Slider");
 		slider.noUiSlider.set(val);
 		document.getElementById(id + "Value").innerHTML = val;
 	};
@@ -711,8 +711,9 @@ $(function () {
 		for(let i=0; i<Object.keys(live.dmx).length; i++){
 			console.log("i: " + i);
 			console.log(Object.keys(live.dmx[i].channels).length);
+			console.log("Hue Wert: " + live.dmx[i].hue);
 			if (Object.keys(live.dmx[i].channels).length == 1) {
-				setSlider("Scheinwerfer"+i+"Slider", live.dmx[i].hue);
+				setSlider("Scheinwerfer"+i, live.dmx[i].hue);
 			}
 
 			if (Object.keys(live.dmx[i].channels).length == 3) {
