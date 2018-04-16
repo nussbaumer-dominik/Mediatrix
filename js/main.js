@@ -56,16 +56,12 @@ $(function () {
 	//wird bei Response des Servers ausgelöst
 	socket.onmessage = event => {
 		console.log("Message: ");
-		console.log(event.data);
 		let message = JSON.parse(event.data);
 		console.log(message);
 
 		if (message.group) {
-			console.log("Group ist angekommen");
-			console.log(message.group.admin);
-
 			if (message.group.admin == true) {
-				$("#slots").prop('disabled', true);
+				$("#slots").prop('disabled', false);
 			}
 
 			if (message["group"]["register"]) {
@@ -352,7 +348,7 @@ $(function () {
 
 				var t = document.querySelector("#rgbwTemplate").innerHTML;
 
-				for ( let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++ ) {
+				for ( let j = 0; j < 2*parseInt(scheinwerferObj.numberChannels); j++ ) {
 					t = t.replace(/{:id}/, scheinwerferObj.id);
 					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id);
 				}
@@ -360,14 +356,34 @@ $(function () {
 				t = t.replace( /{:lightNumber}/, scheinwerferObj.id + 1 );
 				t = t.replace( /{{:id}}/, "Scheinwerfer" + (scheinwerferObj.id + 1) );
 				$(".flex-container").append(t);
+			} else if (scheinwerferObj.numberChannels == "5") {
+				scheinwerfer[scheinwerferObj.id] = {
+					r: 0,
+					g: 0,
+					b: 0,
+					w: 0,
+					hue: 0
+				};
+
+				var t = document.querySelector("#rgbwhTemplate").innerHTML;
+
+				for (let j = 0; j < 2 * parseInt(scheinwerferObj.numberChannels); j++) {
+					t = t.replace(/{:id}/, scheinwerferObj.id);
+					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id);
+				}
+
+				t = t.replace(/{:lightNumber}/, scheinwerferObj.id + 1);
+				t = t.replace(/{{:id}}/, "Scheinwerfer" + (scheinwerferObj.id + 1));
+				$(".flex-container").append(t);
 			} else if (scheinwerferObj.numberChannels == "1") {
 				scheinwerfer[scheinwerferObj.id] = { hue: 0 };
 
 				var t = document.querySelector("#hueTemplate").innerHTML;
-				for ( let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++ ) {
+				for ( let j = 0; j < 2*parseInt(scheinwerferObj.numberChannels); j++ ) {
 					t = t.replace(/{:id}/, scheinwerferObj.id);
 					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id);
 				}
+
 				t = t.replace(/{:lightNumber}/, scheinwerferObj.id + 1);
 				$(".flex-container").append(t);
 			} else if (scheinwerferObj.numberChannels == "3") {
@@ -375,9 +391,9 @@ $(function () {
 
 				var t = document.querySelector("#rgbTemplate").innerHTML;
 
-				for ( let j = 0; j < parseInt(scheinwerferObj.numberChannels); j++ ) {
+				for ( let j = 0; j < 2*parseInt(scheinwerferObj.numberChannels); j++ ) {
 					t = t.replace(/{:id}/, scheinwerferObj.id);
-					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id );
+					t = t.replace(/{{:sliderId}}/, "Scheinwerfer" + scheinwerferObj.id);
 				}
 
 				t = t.replace(/{:lightNumber}/, scheinwerferObj.id + 1);
@@ -405,7 +421,7 @@ $(function () {
 		});
 
 		sliders.each(function (i, slider) {
-			this.noUiSlider.on("slide", function (values, handle) {
+			this.noUiSlider.on("change", function (values, handle) {
 				Slider(this);
 				valueFields.get(i).innerHTML = values[handle];
 			});
@@ -681,16 +697,15 @@ $(function () {
 	};
 
 	var setSlider = (id, val) => {
-		var slider = document.getElementById(id);
+		var slider = document.getElementById(id + "Slider");
 		slider.noUiSlider.set(val);
 		document.getElementById(id + "Value").innerHTML = val;
 	};
 
-	function setDMXSlider(container, val, col) {
-		var lichtBoxen = document.querySelectorAll(".lichtBox");
-		console.log(lichtBoxen);
-		console.log(lichtBoxen[0]);
-		var slider = document.querySelector(container);
+	function setDMXSlider(id, val, col) {
+		var slider = document.querySelector("#" + id + "Slider[data-col=" + col + "]");
+		console.log(id + " " + val + " " + col);
+		console.log(slider);
 		
 		slider.noUiSlider.set(val);
 		document.getElementById(id + "Value").innerHTML = val;
@@ -699,24 +714,32 @@ $(function () {
 	function updateLive(live) {
 		console.log("In der updateLive-Methode gelandet Live: ");
 		console.log(live);
-		console.log(live.av);
 
 		if(live.av.volume !== null){
 			setSlider("avSlider1", live.av.volume);
 		}
 
-		for(let i=0;i<Object.keys(live.dmx).length;i++){
-			if(live.dmx[i].channels.length == 1){
-				setSlider("Scheinwerfer"+i+"Slider", live.dmx[i].hue);
+		for(let i=0; i<Object.keys(live.dmx).length; i++){
+			console.log(Object.keys(live.dmx).length);
+			if (Object.keys(live.dmx[i].channels).length == 1) {
+				console.log("Hue Wert: " + live.dmx[i].channels.hue);
+				console.log("Scheinwerfer" + i);
+				setSlider("Scheinwerfer" + i, live.dmx[i].channels.hue);
 			}
 
-			if(live.dmx[i].channels.length == 3){
-				console.log("SETDMXSlider wird aufgerufen \n");
-				setDMXSlider(i, live.dmx[i].r, "r");
+			if (Object.keys(live.dmx[i].channels).length == 3) {
+				console.log("Scheinwerfer" + i);
+				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.r, "r");
+				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.g, "g");
+				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.b, "b");
 			}
 
-			if (live.dmx[i].channels.length == 4) {
-
+			if (Object.keys(live.dmx[i].channels).length == 4) {
+				console.log("Scheinwerfer"+i);
+				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.r, "r");
+				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.g, "g");
+				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.b, "b");
+				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.w, "w");
 			}
 		}
 		
