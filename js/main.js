@@ -57,9 +57,6 @@ $(function () {
 	socket.onmessage = event => {
 		console.log("Message: ");
 		let message = JSON.parse(event.data);
-		let userspans = $(".groupWrapper");
-		console.log(userspans);
-		console.log(userspans.length);
 		console.log(message);
 
 		if(message.slots){
@@ -92,32 +89,14 @@ $(function () {
 			let activeUsers = Object.keys(message.live.group).length;
 			console.log("Anzahl an Spans:" + $(".groupWrapper").length + " Anzahl an usern in der Gruppe: " + activeUsers);
 
-			if(userspans.length < activeUsers){
+			if ($(".groupWrapper").length < activeUsers) {
 				$(".groupWrapper").append("<span></span>");
 				console.log("Ein Span hinzugefügt");
-			} else if (userspans.length > activeUsers){
+			}
+			if ($(".groupWrapper").length > activeUsers) {
 				$(".groupWrapper").append("<span></span>");
 				console.log("Ein Span removed");
 			}
-
-			// if ($(".groupWrapper").length == 1 && activeUsers == 2) {
-			// 	$(".groupWrapper").append("<span></span>");
-			// 	console.log("Ein Span hinzugefügt");
-			// } else if ($(".groupWrapper").length == 2 && activeUsers == 2) {
-			// 	console.log("nix gemacht");
-			// }
-			// if ($(".groupWrapper").length == 2 && activeUsers == 3) {
-			// 	$(".groupWrapper").append("<span></span>");
-			// 	console.log("Ein Span hinzugefügt");
-			// }
-			// if ($(".groupWrapper").length == 3 && activeUsers == 2) {
-			// 	$(".groupWrapper span:last").remove();
-			// 	console.log("Ein Span removed");
-			// }
-			// if ($(".groupWrapper").length == 2 && activeUsers == 1) {
-			// 	$(".groupWrapper span:last").remove();
-			// 	console.log("Ein Span removed");
-			// }
 		}
 		
 		if (message.ini) {
