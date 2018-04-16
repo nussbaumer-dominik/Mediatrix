@@ -684,9 +684,9 @@ $(function () {
 	};
 
 	function setDMXSlider(id, val, col) {
-		var slider = document.querySelector("#" + id + "Slider[data-col=" + col + "]");
+		/*var slider = document.querySelector("#" + id + "Slider[data-col=" + col + "]");
 		console.log(id + " " + val + " " + col);
-		console.log(slider);
+		console.log(slider);*/
 		
 		slider.noUiSlider.set(val);
 		document.getElementById(id + "Value").innerHTML = val;
