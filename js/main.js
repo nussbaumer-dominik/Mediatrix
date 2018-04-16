@@ -58,6 +58,31 @@ $(function () {
 		console.log("Message: ");
 		let message = JSON.parse(event.data);
 		console.log(message);
+
+		if (message.group) {
+			console.log("Group ist angekommen");
+			console.log(message.group.admin);
+
+			if (message.group.admin == true) {
+				$("#slots").prop('disabled', true);
+			}
+
+			if (message["group"]["register"]) {
+				$(".modal-wrapperGroup").toggleClass("open");
+				$("#groupModal").toggleClass("open");
+				$("#acceptUser").click(ev => {
+					ev.preventDefault();
+					send(message);
+					$(".modal-wrapperGroup").toggleClass("open");
+					$("#groupModal").toggleClass("open");
+				});
+				$("#dontAcceptUser").click(ev => {
+					ev.preventDefault();
+					$(".modal-wrapperGroup").toggleClass("open");
+					$("#groupModal").toggleClass("open");
+				});
+			}
+		}
 		
 		if (message.ini) {
 			console.log("das ist der ini-string: " + event.data);
@@ -73,30 +98,7 @@ $(function () {
 				$("#beamerState").attr("data-state", "1");
 			}
 			return true;
-		} else if (message.group) {
-				console.log("Group ist angekommen");
-				console.log(message.group.admin);
-
-				if (message.group.admin == true) {
-					$("#slots").prop('disabled', true);
-				}
-
-				if (message["group"]["register"]) {
-					$(".modal-wrapperGroup").toggleClass("open");
-					$("#groupModal").toggleClass("open");
-					$("#acceptUser").click(ev => {
-						ev.preventDefault();
-						send(message);
-						$(".modal-wrapperGroup").toggleClass("open");
-						$("#groupModal").toggleClass("open");
-					});
-					$("#dontAcceptUser").click(ev => {
-						ev.preventDefault();
-						$(".modal-wrapperGroup").toggleClass("open");
-						$("#groupModal").toggleClass("open");
-					});
-				}
-			} else {
+		} else {
 				updateLive(message.live);
 				liveStatus(message.live);
 			}
