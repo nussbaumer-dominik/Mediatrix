@@ -705,6 +705,7 @@ $(function () {
 			}
 
 			if(live.dmx[i].channels.length == 3){
+				console.log("SETDMXSlider wird aufgerufen \n");
 				setDMXSlider(i, live.dmx[i].r, "r");
 			}
 
