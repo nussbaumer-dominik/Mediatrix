@@ -700,21 +700,22 @@ $(function () {
 			setSlider("avSlider1", live.av.volume);
 		}
 
-		for(let i=1; i<=Object.keys(live.dmx).length; i++){
+		for(let i=0; i<Object.keys(live.dmx).length; i++){
 			if (Object.keys(live.dmx[i].channels).length == 1) {
 				console.log("Hue Wert: " + live.dmx[i].channels.hue);
+				console.log("Scheinwerfer" + i);
 				setSlider("Scheinwerfer" + i, live.dmx[i].channels.hue);
 			}
 
 			if (Object.keys(live.dmx[i].channels).length == 3) {
-				console.log("SetDMXSlider wird aufgerufen \n");
+				console.log("Scheinwerfer" + i);
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.r, "r");
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.g, "g");
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.b, "b");
 			}
 
 			if (Object.keys(live.dmx[i].channels).length == 4) {
-				console.log("SetDMXSlider wird aufgerufen \n");
+				console.log("Scheinwerfer"+i);
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.r, "r");
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.g, "g");
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.b, "b");
