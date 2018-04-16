@@ -672,8 +672,6 @@ $(function () {
 		} else {
 			document.getElementById("avSlider1Value").innerHTML = "0";
 		}
-
-		
 	};
 
 	var setSlider = (id, val) => {
@@ -682,8 +680,9 @@ $(function () {
 		document.getElementById(id + "Value").innerHTML = val;
 	};
 
-	var setDMXSlider = (id, val, col) => {
-		var slider = document.getElementById(id);
+	function setDMXSlider(container, val, col) {
+		var slider = document.querySelector(container);
+		
 		slider.noUiSlider.set(val);
 		document.getElementById(id + "Value").innerHTML = val;
 	};
