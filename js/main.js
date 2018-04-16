@@ -67,7 +67,7 @@ $(function () {
 				$("#slots").prop('disabled', false);
 			}
 
-
+			console.log("Anzahl an Spans:" + userspans.length + " Anzahl an usern in der Gruppe: " + Object.keys(message.group).length);
 			if (userspans.length < Object.keys(message.group).length) {
 				$(".groupWrapper").append("<span></span>");
 			} else if (userspans.length > Object.keys(message.group).length) {
@@ -711,8 +711,6 @@ $(function () {
 		
 		slider.noUiSlider.set(val);
 		$("#" + id + "Slider[data-col=" + col + "]").parent().find("#" + id + "Value").html(val);
-		//console.log($("#" + id + "Slider[data-col=" + col + "]").closest("#" + id + "Value"));
-		//document.getElementById(id + "Value").innerHTML = val;
 	};
 
 	function updateLive(live) {
@@ -727,25 +725,29 @@ $(function () {
 		for(let i=0; i<Object.keys(live.dmx).length; i++){
 			console.log(Object.keys(live.dmx).length);
 			if (Object.keys(live.dmx[i].channels).length == 1) {
-				console.log("Hue Wert: " + live.dmx[i].channels.hue);
-				console.log("Scheinwerfer" + i);
 				document.getElementById("Scheinwerfer" + i + "Slider").noUiSlider.set(live.dmx[i].channels.hue);
 				document.getElementById("Scheinwerfer" + i + "Value").innerHTML = live.dmx[i].channels.hue;
+				scheinwerfer[i].hue = live.dmx[i].channels.hue;
 			}
 
 			if (Object.keys(live.dmx[i].channels).length == 3) {
-				console.log("Scheinwerfer" + i);
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.r, "r");
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.g, "g");
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.b, "b");
+				scheinwerfer[i].r = live.dmx[i].channels.r;
+				scheinwerfer[i].g = live.dmx[i].channels.g;
+				scheinwerfer[i].b = live.dmx[i].channels.b;
 			}
 
 			if (Object.keys(live.dmx[i].channels).length == 4) {
-				console.log("Scheinwerfer"+i);
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.r, "r");
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.g, "g");
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.b, "b");
 				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.w, "w");
+				scheinwerfer[i].r = live.dmx[i].channels.r;
+				scheinwerfer[i].g = live.dmx[i].channels.g;
+				scheinwerfer[i].b = live.dmx[i].channels.b;
+				scheinwerfer[i].w = live.dmx[i].channels.w;
 			}
 		}
 		
