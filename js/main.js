@@ -714,7 +714,8 @@ $(function () {
 		console.log(slider);
 		
 		slider.noUiSlider.set(val);
-		$("#" + id + "Slider[data-col=" + col + "]").closest("#" + id + "Value").innerHTML = val;
+		$("#" + id + "Slider[data-col=" + col + "]").closest("#" + id + "Value").html(val);
+		//console.log($("#" + id + "Slider[data-col=" + col + "]").closest("#" + id + "Value"));
 		//document.getElementById(id + "Value").innerHTML = val;
 	};
 
