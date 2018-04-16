@@ -50,12 +50,13 @@ $(function () {
 		if (jwt != null) {
 			socket.send('{"jwt":"' + jwt + '","ini":1}');
 		}
-		console.log("socket open: " + socket + " " + event);
+		console.log("socket wurde geöffnet");
 	};
 
 	//wird bei Response des Servers ausgelöst
 	socket.onmessage = event => {
 		console.log("Message: ");
+		console.log(event.data);
 		let message = JSON.parse(event.data);
 		console.log(message);
 
