@@ -402,7 +402,7 @@ $(function () {
 		});
 
 		sliders.each(function (i, slider) {
-			this.noUiSlider.on("slide", function (values, handle) {
+			this.noUiSlider.on("change", function (values, handle) {
 				Slider(this);
 				valueFields.get(i).innerHTML = values[handle];
 			});
