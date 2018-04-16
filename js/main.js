@@ -702,23 +702,23 @@ $(function () {
 
 		for(let i=0; i<Object.keys(live.dmx).length; i++){
 			if (Object.keys(live.dmx[i].channels).length == 1) {
-				console.log("Hue Wert: " + live.dmx[i].hue);
-				setSlider("Scheinwerfer"+i, live.dmx[i].hue);
+				console.log("Hue Wert: " + live.dmx[i].channels.hue);
+				setSlider("Scheinwerfer" + i, live.dmx[i].channels.hue);
 			}
 
 			if (Object.keys(live.dmx[i].channels).length == 3) {
 				console.log("SetDMXSlider wird aufgerufen \n");
-				setDMXSlider("Scheinwerfer" + i, live.dmx[i].r, "r");
-				setDMXSlider("Scheinwerfer" + i, live.dmx[i].g, "g");
-				setDMXSlider("Scheinwerfer" + i, live.dmx[i].b, "b");
+				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.r, "r");
+				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.g, "g");
+				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.b, "b");
 			}
 
 			if (Object.keys(live.dmx[i].channels).length == 4) {
 				console.log("SetDMXSlider wird aufgerufen \n");
-				setDMXSlider("Scheinwerfer" + i, live.dmx[i].r, "r");
-				setDMXSlider("Scheinwerfer" + i, live.dmx[i].g, "g");
-				setDMXSlider("Scheinwerfer" + i, live.dmx[i].b, "b");
-				setDMXSlider("Scheinwerfer" + i, live.dmx[i].w, "w");
+				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.r, "r");
+				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.g, "g");
+				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.b, "b");
+				setDMXSlider("Scheinwerfer" + i, live.dmx[i].channels.w, "w");
 			}
 		}
 		
