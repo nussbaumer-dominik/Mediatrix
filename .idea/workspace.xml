@@ -28,12 +28,12 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="102" column="17" lean-forward="false" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
+            <state relative-caret-position="162">
+              <caret line="90" column="40" lean-forward="false" selection-start-line="90" selection-start-column="40" selection-end-line="90" selection-end-column="40" />
               <folding>
-                <marker date="1523970005282" expanded="true" signature="2282:2332" ph="SELECT * FRO... user" />
-                <marker date="1523970005282" expanded="true" signature="15807:15847" ph="SELECT * FRO... preset" />
-                <marker date="1523970005282" expanded="true" signature="16585:16627" ph="SELECT isext... user" />
+                <marker date="1523970333443" expanded="true" signature="2279:2329" ph="SELECT * FRO... user" />
+                <marker date="1523970333443" expanded="true" signature="15804:15844" ph="SELECT * FRO... preset" />
+                <marker date="1523970333443" expanded="true" signature="16582:16624" ph="SELECT isext... user" />
               </folding>
             </state>
           </provider>
@@ -1009,14 +1009,7 @@
       <workItem from="1523903879683" duration="444000" />
       <workItem from="1523907174392" duration="72000" />
       <workItem from="1523907696033" duration="106000" />
-      <workItem from="1523967401968" duration="1103000" />
-    </task>
-    <task id="LOCAL-00263" summary="fix readCode">
-      <created>1522855870682</created>
-      <option name="number" value="00263" />
-      <option name="presentableId" value="LOCAL-00263" />
-      <option name="project" value="LOCAL" />
-      <updated>1522855870682</updated>
+      <workItem from="1523967401968" duration="1444000" />
     </task>
     <task id="LOCAL-00264" summary="debug">
       <created>1522856152304</created>
@@ -1354,11 +1347,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523967576118</updated>
     </task>
-    <option name="localTasksCounter" value="312" />
+    <task id="LOCAL-00312" summary="try admin login">
+      <created>1523970029580</created>
+      <option name="number" value="00312" />
+      <option name="presentableId" value="LOCAL-00312" />
+      <option name="project" value="LOCAL" />
+      <updated>1523970029580</updated>
+    </task>
+    <option name="localTasksCounter" value="313" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243238000" />
+    <option name="totallyTimeSpent" value="243579000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1467,7 +1467,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merge branch 'AllesNeu' of https://github.com/nussi98/Mediatrix into AllesNeu&#10;&#10;# Conflicts:&#10;#&#9;js/main.js" />
     <MESSAGE value="python" />
     <MESSAGE value="fix readCode" />
     <MESSAGE value="debug" />
@@ -1492,7 +1491,8 @@
     <MESSAGE value="set standard slots auf 1" />
     <MESSAGE value="add slots to live" />
     <MESSAGE value="set slots on 1 when no connection" />
-    <option name="LAST_COMMIT_MESSAGE" value="set slots on 1 when no connection" />
+    <MESSAGE value="try admin login" />
+    <option name="LAST_COMMIT_MESSAGE" value="try admin login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1850,12 +1850,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="102" column="17" lean-forward="false" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
+        <state relative-caret-position="162">
+          <caret line="90" column="40" lean-forward="false" selection-start-line="90" selection-start-column="40" selection-end-line="90" selection-end-column="40" />
           <folding>
-            <marker date="1523970005282" expanded="true" signature="2282:2332" ph="SELECT * FRO... user" />
-            <marker date="1523970005282" expanded="true" signature="15807:15847" ph="SELECT * FRO... preset" />
-            <marker date="1523970005282" expanded="true" signature="16585:16627" ph="SELECT isext... user" />
+            <marker date="1523970333443" expanded="true" signature="2279:2329" ph="SELECT * FRO... user" />
+            <marker date="1523970333443" expanded="true" signature="15804:15844" ph="SELECT * FRO... preset" />
+            <marker date="1523970333443" expanded="true" signature="16582:16624" ph="SELECT isext... user" />
           </folding>
         </state>
       </provider>

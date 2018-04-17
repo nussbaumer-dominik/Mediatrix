@@ -88,7 +88,7 @@ class Application implements MessageComponentInterface
             //handle registration and send ini string
             if (isset($commands["ini"])) {
 
-                $sqlite = new \SQLite3("../../sqlite/db.sqlite");
+                $sqlite = new \SQLite3("../sqlite/db.sqlite");
 
                 $stm = $sqlite->prepare("SELECT * FROM user WHERE id = :id AND issadmin = 1");
 
