@@ -90,7 +90,7 @@ class Application implements MessageComponentInterface
 
                 $sqlite = new \SQLite3("../sqlite/db.sqlite");
 
-                $stm = $sqlite->prepare("SELECT * FROM user WHERE id = :id AND issadmin = 1");
+                $stm = $sqlite->prepare("SELECT * FROM user WHERE id = :id AND isadmin = 1");
 
                 $stm->bindParam(":id", $jwt->data->userName);
 

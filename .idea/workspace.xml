@@ -28,12 +28,12 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="90" column="40" lean-forward="false" selection-start-line="90" selection-start-column="40" selection-end-line="90" selection-end-column="40" />
+            <state relative-caret-position="198">
+              <caret line="92" column="81" lean-forward="true" selection-start-line="92" selection-start-column="81" selection-end-line="92" selection-end-column="81" />
               <folding>
-                <marker date="1523970333443" expanded="true" signature="2279:2329" ph="SELECT * FRO... user" />
-                <marker date="1523970333443" expanded="true" signature="15804:15844" ph="SELECT * FRO... preset" />
-                <marker date="1523970333443" expanded="true" signature="16582:16624" ph="SELECT isext... user" />
+                <marker date="1523970406015" expanded="true" signature="2279:2328" ph="SELECT * FRO... user" />
+                <marker date="1523970406015" expanded="true" signature="15803:15843" ph="SELECT * FRO... preset" />
+                <marker date="1523970406015" expanded="true" signature="16581:16623" ph="SELECT isext... user" />
               </folding>
             </state>
           </provider>
@@ -1009,14 +1009,7 @@
       <workItem from="1523903879683" duration="444000" />
       <workItem from="1523907174392" duration="72000" />
       <workItem from="1523907696033" duration="106000" />
-      <workItem from="1523967401968" duration="1444000" />
-    </task>
-    <task id="LOCAL-00264" summary="debug">
-      <created>1522856152304</created>
-      <option name="number" value="00264" />
-      <option name="presentableId" value="LOCAL-00264" />
-      <option name="project" value="LOCAL" />
-      <updated>1522856152304</updated>
+      <workItem from="1523967401968" duration="1503000" />
     </task>
     <task id="LOCAL-00265" summary="debug">
       <created>1522856755595</created>
@@ -1354,11 +1347,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523970029580</updated>
     </task>
-    <option name="localTasksCounter" value="313" />
+    <task id="LOCAL-00313" summary="try admin login">
+      <created>1523970351396</created>
+      <option name="number" value="00313" />
+      <option name="presentableId" value="LOCAL-00313" />
+      <option name="project" value="LOCAL" />
+      <updated>1523970351396</updated>
+    </task>
+    <option name="localTasksCounter" value="314" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243579000" />
+    <option name="totallyTimeSpent" value="243638000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1850,12 +1850,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="90" column="40" lean-forward="false" selection-start-line="90" selection-start-column="40" selection-end-line="90" selection-end-column="40" />
+        <state relative-caret-position="198">
+          <caret line="92" column="81" lean-forward="true" selection-start-line="92" selection-start-column="81" selection-end-line="92" selection-end-column="81" />
           <folding>
-            <marker date="1523970333443" expanded="true" signature="2279:2329" ph="SELECT * FRO... user" />
-            <marker date="1523970333443" expanded="true" signature="15804:15844" ph="SELECT * FRO... preset" />
-            <marker date="1523970333443" expanded="true" signature="16582:16624" ph="SELECT isext... user" />
+            <marker date="1523970406015" expanded="true" signature="2279:2328" ph="SELECT * FRO... user" />
+            <marker date="1523970406015" expanded="true" signature="15803:15843" ph="SELECT * FRO... preset" />
+            <marker date="1523970406015" expanded="true" signature="16581:16623" ph="SELECT isext... user" />
           </folding>
         </state>
       </provider>
