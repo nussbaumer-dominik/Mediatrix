@@ -41,8 +41,6 @@ class Application implements MessageComponentInterface
     {
         // Store the new connection to send messages to later
 
-            var_dump($this->group->getUsers()->count());
-            var_dump($this->group->getSlots());
             if($this->group->getSlots() > $this->group->getUsers()->count()) {
                 $this->forRegister[$conn->resourceId] = array('username' => "", 'conn' => $conn);
 
@@ -89,12 +87,45 @@ class Application implements MessageComponentInterface
 
             //handle registration and send ini string
             if (isset($commands["ini"])) {
-                if(is_null($this->group->getAdmin())) {
-                    $this->group->addUser($from);
-                    $from->send(json_encode($this->addLiveStatus($this->getIniString($jwt->data->userName))));
+
+                $sqlite = new \SQLite3("../../sqlite/db.sqlite");
+
+                $stm = $sqlite->prepare("SELECT * FROM user WHERE id = :id AND issadmin = 1");
+
+                $stm->bindParam(":id", $jwt->data->userName);
+
+                $result = $stm->execute();
+
+                $hasResult = false;
+
+                while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
+                    $hasResult = true;
+                }
+
+                if($hasResult){
+                    unset($this->group);
+                    $this->group = new Group();
+                }
+
+                if($this->group->getSlots() > $this->group->getUsers()->count()) {
+
+                    $this->forRegister[$from->resourceId] = array('username' => "", 'conn' => $from);
+
+                    echo "New connection! ({$from->resourceId})\n";
+
+                    if(is_null($this->group->getAdmin())) {
+                        $this->group->addUser($from);
+                        $from->send(json_encode($this->addLiveStatus($this->getIniString($jwt->data->userName))));
+                    }else{
+                        $this->forRegister[$from->resourceId]['username'] = $jwt->data->userName;
+                        $this->group->getAdmin()->send('{"group":{"register":"' . $from->resourceId . '"}}');
+                    }
+
                 }else{
-                    $this->forRegister[$from->resourceId]['username'] = $jwt->data->userName;
-                    $this->group->getAdmin()->send('{"group":{"register":"' . $from->resourceId . '"}}');
+
+                    $from->send('{"success":false,"err":"No open Slot in Group"');
+                    $from->close();
+
                 }
                 echo "Connection {$from->resourceId} registered";
                 return;
