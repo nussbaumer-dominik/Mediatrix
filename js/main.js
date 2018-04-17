@@ -37,7 +37,7 @@ $(function () {
 		}
 	};
 	let scheinwerfer = {};
-	//let socket = new WebSocket("wss://192.168.1.235/wss");
+	//let socket = new WebSocket("wss://192.168.1.2/wss");
 	let socket = new WebSocket("wss://10.0.0.144/wss");
 
 	//wirft eine Exception
@@ -87,18 +87,18 @@ $(function () {
 
 		if(message.live.group){
 			let activeUsers = Object.keys(message.live.group).length;
-			console.log("Anzahl an Spans:" + $(".groupWrapper").length + " Anzahl an usern in der Gruppe: " + activeUsers);
+			console.log("Anzahl an Spans:" + $(".groupWrapper").children().length + " Anzahl an usern in der Gruppe: " + activeUsers);
 
-			if ($(".groupWrapper").length < activeUsers) {
+			if ($(".groupWrapper").children().length < activeUsers) {
 				$(".groupWrapper").append("<span></span>");
 				console.log("Ein Span hinzugefügt");
 			}
-			if ($(".groupWrapper").length > activeUsers) {
+			if ($(".groupWrapper").children().length > activeUsers) {
 				$(".groupWrapper span:last").remove();
 				console.log("Ein Span removed");
 			}
 		}
-		
+
 		if (message.ini) {
 			console.log("das ist der ini-string: " + event.data);
 			ini = (JSON && JSON.parse(event.data)) || $.parseJSON(event.data);
@@ -118,7 +118,7 @@ $(function () {
 				updateLive(message.live);
 				liveStatus(message.live);
 		}
-	} 
+	}
 
 	//wird getriggered, wenn die Verbindung gekappt wurde
 	socket.onclose = event => {
@@ -713,7 +713,7 @@ $(function () {
 	};
 
 	function setDMXSlider(id, val, col) {
-		var slider = document.querySelector("#" + id + "Slider[data-col=" + col + "]");		
+		var slider = document.querySelector("#" + id + "Slider[data-col=" + col + "]");
 		slider.noUiSlider.set(val);
 		$("#" + id + "Slider[data-col=" + col + "]").parent().find("#" + id + "Value").html(val);
 	};
@@ -754,7 +754,7 @@ $(function () {
 				scheinwerfer[i].w = live.dmx[i].channels.w;
 			}
 		}
-		
+
 	}
 
 	function buildStatus(key, value, unit, id) {
