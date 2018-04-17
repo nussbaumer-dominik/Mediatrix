@@ -41,15 +41,10 @@ class Application implements MessageComponentInterface
     {
         // Store the new connection to send messages to later
 
-            if($this->group->getSlots() > $this->group->getUsers()->count()) {
+
                 $this->forRegister[$conn->resourceId] = array('username' => "", 'conn' => $conn);
 
                 echo "New connection! ({$conn->resourceId})\n";
-            }else{
-
-                $conn->send('{"success":false,"err":"No open Slot in Group"');
-                $conn->close();
-            }
 
     }
 

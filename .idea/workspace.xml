@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/createDB.php" afterPath="$PROJECT_DIR$/php/src/createDB.php" />
+      <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,15 +25,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="92" column="81" lean-forward="true" selection-start-line="92" selection-start-column="81" selection-end-line="92" selection-end-column="81" />
+            <state relative-caret-position="234">
+              <caret line="46" column="63" lean-forward="false" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
               <folding>
-                <marker date="1523970406015" expanded="true" signature="2279:2328" ph="SELECT * FRO... user" />
-                <marker date="1523970406015" expanded="true" signature="15803:15843" ph="SELECT * FRO... preset" />
-                <marker date="1523970406015" expanded="true" signature="16581:16623" ph="SELECT isext... user" />
+                <marker date="1523970908997" expanded="true" signature="2056:2105" ph="SELECT * FRO... user" />
+                <marker date="1523970908997" expanded="true" signature="15580:15620" ph="SELECT * FRO... preset" />
+                <marker date="1523970908997" expanded="true" signature="16358:16400" ph="SELECT isext... user" />
               </folding>
             </state>
           </provider>
@@ -69,7 +69,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createDB.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="createDB.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
@@ -183,8 +183,8 @@
         <option value="$PROJECT_DIR$/sqlite/db.sqlite" />
         <option value="$PROJECT_DIR$/php/src/Scheinwerfer.php" />
         <option value="$PROJECT_DIR$/php/src/Group.php" />
-        <option value="$PROJECT_DIR$/php/src/Application.php" />
         <option value="$PROJECT_DIR$/php/src/createDB.php" />
+        <option value="$PROJECT_DIR$/php/src/Application.php" />
       </list>
     </option>
   </component>
@@ -1009,14 +1009,7 @@
       <workItem from="1523903879683" duration="444000" />
       <workItem from="1523907174392" duration="72000" />
       <workItem from="1523907696033" duration="106000" />
-      <workItem from="1523967401968" duration="1791000" />
-    </task>
-    <task id="LOCAL-00266" summary="debug">
-      <created>1522856948363</created>
-      <option name="number" value="00266" />
-      <option name="presentableId" value="LOCAL-00266" />
-      <option name="project" value="LOCAL" />
-      <updated>1522856948363</updated>
+      <workItem from="1523967401968" duration="2014000" />
     </task>
     <task id="LOCAL-00267" summary="debug">
       <created>1522857073370</created>
@@ -1354,11 +1347,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523970425939</updated>
     </task>
-    <option name="localTasksCounter" value="315" />
+    <task id="LOCAL-00315" summary="change pi hash">
+      <created>1523970715941</created>
+      <option name="number" value="00315" />
+      <option name="presentableId" value="LOCAL-00315" />
+      <option name="project" value="LOCAL" />
+      <updated>1523970715941</updated>
+    </task>
+    <option name="localTasksCounter" value="316" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243926000" />
+    <option name="totallyTimeSpent" value="244149000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1467,7 +1467,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="python" />
     <MESSAGE value="fix readCode" />
     <MESSAGE value="debug" />
     <MESSAGE value="fix Leistungsmessung" />
@@ -1492,7 +1491,8 @@
     <MESSAGE value="add slots to live" />
     <MESSAGE value="set slots on 1 when no connection" />
     <MESSAGE value="try admin login" />
-    <option name="LAST_COMMIT_MESSAGE" value="try admin login" />
+    <MESSAGE value="change pi hash" />
+    <option name="LAST_COMMIT_MESSAGE" value="change pi hash" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1834,18 +1834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="92" column="81" lean-forward="true" selection-start-line="92" selection-start-column="81" selection-end-line="92" selection-end-column="81" />
-          <folding>
-            <marker date="1523970406015" expanded="true" signature="2279:2328" ph="SELECT * FRO... user" />
-            <marker date="1523970406015" expanded="true" signature="15803:15843" ph="SELECT * FRO... preset" />
-            <marker date="1523970406015" expanded="true" signature="16581:16623" ph="SELECT isext... user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1856,6 +1844,18 @@
             <marker date="1523970697364" expanded="true" signature="527:589" ph="INSERT INTO USER... " />
             <marker date="1523970697364" expanded="true" signature="527:657" ph="INSERT INTO USER... " />
             <marker date="1523970697364" expanded="true" signature="527:659" ph="INSERT INTO USER... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="46" column="63" lean-forward="false" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
+          <folding>
+            <marker date="1523970908997" expanded="true" signature="2056:2105" ph="SELECT * FRO... user" />
+            <marker date="1523970908997" expanded="true" signature="15580:15620" ph="SELECT * FRO... preset" />
+            <marker date="1523970908997" expanded="true" signature="16358:16400" ph="SELECT isext... user" />
           </folding>
         </state>
       </provider>
