@@ -37,8 +37,8 @@ $(function () {
 		}
 	};
 	let scheinwerfer = {};
-	//let socket = new WebSocket("wss://192.168.1.235/wss");
-	let socket = new WebSocket("wss://10.0.0.144/wss");
+	let socket = new WebSocket("wss://192.168.1.2/wss");
+	//let socket = new WebSocket("wss://10.0.0.144/wss");
 
 	//wirft eine Exception
 	socket.onerror = error => {
@@ -57,21 +57,15 @@ $(function () {
 	socket.onmessage = event => {
 		console.log("Message: ");
 		let message = JSON.parse(event.data);
-		let userspans = $(".groupWrapper");
-		console.log(userspans);
-		console.log(userspans.length);
 		console.log(message);
+
+		if(message.slots){
+			$("#slots").val(message.live.slots);
+		}
 
 		if (message.group) {
 			if (message.group.admin == true) {
 				$("#slots").prop('disabled', false);
-			}
-
-			console.log("Anzahl an Spans:" + userspans.length + " Anzahl an usern in der Gruppe: " + Object.keys(message.group).length);
-			if (userspans.length < Object.keys(message.group).length) {
-				$(".groupWrapper").append("<span></span>");
-			} else if (userspans.length > Object.keys(message.group).length) {
-				$(".groupWrapper span:last").remove();
 			}
 
 			if (message["group"]["register"]) {
@@ -82,7 +76,6 @@ $(function () {
 					send(message);
 					$(".modal-wrapperGroup").toggleClass("open");
 					$("#groupModal").toggleClass("open");
-					$(".groupWrapper").append("<span></span>");
 				});
 				$("#dontAcceptUser").click(ev => {
 					ev.preventDefault();
@@ -91,11 +84,26 @@ $(function () {
 				});
 			}
 		}
-		
+
+		if(message.live.group){
+			let activeUsers = Object.keys(message.live.group).length;
+			console.log("Anzahl an Spans:" + $(".groupWrapper").children().length + " Anzahl an usern in der Gruppe: " + activeUsers);
+
+			if ($(".groupWrapper").children().length < activeUsers) {
+				$(".groupWrapper").append("<span></span>");
+				console.log("Ein Span hinzugefügt");
+			}
+			if ($(".groupWrapper").children().length > activeUsers) {
+				$(".groupWrapper span:last").remove();
+				console.log("Ein Span removed");
+			}
+		}
+
 		if (message.ini) {
 			console.log("das ist der ini-string: " + event.data);
 			ini = (JSON && JSON.parse(event.data)) || $.parseJSON(event.data);
 			presets = ini.ini.presets;
+			$("#slots").val(ini.live.slots);
 			console.log(presets);
 			firstLiveStatus();
 			getPresets();
@@ -109,8 +117,8 @@ $(function () {
 		} else {
 				updateLive(message.live);
 				liveStatus(message.live);
-			}
-		} 
+		}
+	}
 
 	//wird getriggered, wenn die Verbindung gekappt wurde
 	socket.onclose = event => {
@@ -706,9 +714,6 @@ $(function () {
 
 	function setDMXSlider(id, val, col) {
 		var slider = document.querySelector("#" + id + "Slider[data-col=" + col + "]");
-		console.log(id + " " + val + " " + col);
-		console.log(slider);
-		
 		slider.noUiSlider.set(val);
 		$("#" + id + "Slider[data-col=" + col + "]").parent().find("#" + id + "Value").html(val);
 	};
@@ -723,7 +728,6 @@ $(function () {
 		}
 
 		for(let i=0; i<Object.keys(live.dmx).length; i++){
-			console.log(Object.keys(live.dmx).length);
 			if (Object.keys(live.dmx[i].channels).length == 1) {
 				document.getElementById("Scheinwerfer" + i + "Slider").noUiSlider.set(live.dmx[i].channels.hue);
 				document.getElementById("Scheinwerfer" + i + "Value").innerHTML = live.dmx[i].channels.hue;
@@ -750,18 +754,8 @@ $(function () {
 				scheinwerfer[i].w = live.dmx[i].channels.w;
 			}
 		}
-		
-	}
 
-	$("#slots").on("change", function(ev){
-		console.log(this.value);
-		let slots = {
-			group: {
-				slots: parseInt(this.value)
-			}
-		}
-		send(slots);
-	});
+	}
 
 	function buildStatus(key, value, unit, id) {
 		var div = $("<div id='" + id + "'>");
@@ -775,9 +769,14 @@ $(function () {
 		});
 	}
 
-	function users(){
-
-	}
+	$("#slots").on("change", function (ev) {
+		let slots = {
+			group: {
+				slots: parseInt(this.value)
+			}
+		}
+		send(slots);
+	});
 
 	$(".tgl").on("click", () => {
 		var mode = $(".tgl").prop("checked");
