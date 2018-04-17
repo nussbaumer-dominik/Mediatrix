@@ -33,6 +33,7 @@ class Group
         $this->users->detach($conn);
         if($this->admin == $conn && $this->users->count() == 0){
             $this->admin = null;
+            $this->slots = 1;
         }elseif ($this->admin == $conn && $this->users->count() > 0){
             $this->admin = $this->users->current();
             $this->users->current()->send('{"group":{"admin":true}}');
