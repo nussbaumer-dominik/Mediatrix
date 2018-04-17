@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
+      <change beforePath="$PROJECT_DIR$/php/src/createDB.php" afterPath="$PROJECT_DIR$/php/src/createDB.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,7 +25,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
@@ -69,17 +69,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createDB.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="createDB.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="25" column="106" lean-forward="false" selection-start-line="25" selection-start-column="106" selection-end-line="25" selection-end-column="106" />
+              <caret line="25" column="148" lean-forward="true" selection-start-line="25" selection-start-column="148" selection-end-line="25" selection-end-column="148" />
               <folding>
-                <marker date="1523800329588" expanded="true" signature="152:301" ph="create table... if" />
-                <marker date="1523800329588" expanded="true" signature="322:506" ph="create table... if" />
-                <marker date="1523800329588" expanded="true" signature="527:589" ph="INSERT INTO USER... " />
-                <marker date="1523800329588" expanded="true" signature="527:659" ph="INSERT INTO USER... " />
-                <marker date="1523800329588" expanded="true" signature="527:661" ph="INSERT INTO USER... " />
+                <marker date="1523970697364" expanded="true" signature="152:301" ph="create table... if" />
+                <marker date="1523970697364" expanded="true" signature="322:506" ph="create table... if" />
+                <marker date="1523970697364" expanded="true" signature="527:589" ph="INSERT INTO USER... " />
+                <marker date="1523970697364" expanded="true" signature="527:657" ph="INSERT INTO USER... " />
+                <marker date="1523970697364" expanded="true" signature="527:659" ph="INSERT INTO USER... " />
               </folding>
             </state>
           </provider>
@@ -179,12 +179,12 @@
         <option value="$PROJECT_DIR$/php/src/websocket.php" />
         <option value="$PROJECT_DIR$/php/src/MyIoServer.php" />
         <option value="$PROJECT_DIR$/conf/Mediatrix.json" />
-        <option value="$PROJECT_DIR$/php/src/createDB.php" />
         <option value="$PROJECT_DIR$/php/test.php" />
         <option value="$PROJECT_DIR$/sqlite/db.sqlite" />
         <option value="$PROJECT_DIR$/php/src/Scheinwerfer.php" />
         <option value="$PROJECT_DIR$/php/src/Group.php" />
         <option value="$PROJECT_DIR$/php/src/Application.php" />
+        <option value="$PROJECT_DIR$/php/src/createDB.php" />
       </list>
     </option>
   </component>
@@ -1009,14 +1009,7 @@
       <workItem from="1523903879683" duration="444000" />
       <workItem from="1523907174392" duration="72000" />
       <workItem from="1523907696033" duration="106000" />
-      <workItem from="1523967401968" duration="1503000" />
-    </task>
-    <task id="LOCAL-00265" summary="debug">
-      <created>1522856755595</created>
-      <option name="number" value="00265" />
-      <option name="presentableId" value="LOCAL-00265" />
-      <option name="project" value="LOCAL" />
-      <updated>1522856755595</updated>
+      <workItem from="1523967401968" duration="1791000" />
     </task>
     <task id="LOCAL-00266" summary="debug">
       <created>1522856948363</created>
@@ -1354,11 +1347,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523970351396</updated>
     </task>
-    <option name="localTasksCounter" value="314" />
+    <task id="LOCAL-00314" summary="try admin login">
+      <created>1523970425939</created>
+      <option name="number" value="00314" />
+      <option name="presentableId" value="LOCAL-00314" />
+      <option name="project" value="LOCAL" />
+      <updated>1523970425939</updated>
+    </task>
+    <option name="localTasksCounter" value="315" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243638000" />
+    <option name="totallyTimeSpent" value="243926000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1834,20 +1834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="25" column="106" lean-forward="false" selection-start-line="25" selection-start-column="106" selection-end-line="25" selection-end-column="106" />
-          <folding>
-            <marker date="1523800329588" expanded="true" signature="152:301" ph="create table... if" />
-            <marker date="1523800329588" expanded="true" signature="322:506" ph="create table... if" />
-            <marker date="1523800329588" expanded="true" signature="527:589" ph="INSERT INTO USER... " />
-            <marker date="1523800329588" expanded="true" signature="527:659" ph="INSERT INTO USER... " />
-            <marker date="1523800329588" expanded="true" signature="527:661" ph="INSERT INTO USER... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1856,6 +1842,20 @@
             <marker date="1523970406015" expanded="true" signature="2279:2328" ph="SELECT * FRO... user" />
             <marker date="1523970406015" expanded="true" signature="15803:15843" ph="SELECT * FRO... preset" />
             <marker date="1523970406015" expanded="true" signature="16581:16623" ph="SELECT isext... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="25" column="148" lean-forward="true" selection-start-line="25" selection-start-column="148" selection-end-line="25" selection-end-column="148" />
+          <folding>
+            <marker date="1523970697364" expanded="true" signature="152:301" ph="create table... if" />
+            <marker date="1523970697364" expanded="true" signature="322:506" ph="create table... if" />
+            <marker date="1523970697364" expanded="true" signature="527:589" ph="INSERT INTO USER... " />
+            <marker date="1523970697364" expanded="true" signature="527:657" ph="INSERT INTO USER... " />
+            <marker date="1523970697364" expanded="true" signature="527:659" ph="INSERT INTO USER... " />
           </folding>
         </state>
       </provider>

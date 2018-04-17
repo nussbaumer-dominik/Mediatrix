@@ -23,4 +23,4 @@ $sqlite->exec('create table if not exists preset(
     FOREIGN KEY(user_id) REFERENCES user(id)
 );');
 
-$sqlite->exec("INSERT INTO USER(id,password,isextendet,isadmin) VALUES ('pi','\$2y\$10\$e5meLcCUBd1MvH6G.VaQc.jqQZUX9FZ1voZHoDamumIMMB5CBZ9OO',1,1)");
+$sqlite->exec("INSERT INTO USER(id,password,isextendet,isadmin) VALUES ('pi','$2y$10\$XTrGXcIPTw1gQXZsXihqJ.YE1ci5oA1w/6N61ZhQvW04lCa48EoRi',1,1)");
