@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
+      <change beforePath="$PROJECT_DIR$/conf/Mediatrix.json" afterPath="$PROJECT_DIR$/conf/Mediatrix.json" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,7 +25,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
@@ -63,6 +63,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="423">
               <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mediatrix.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="116" column="15" lean-forward="true" selection-start-line="116" selection-start-column="15" selection-end-line="116" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -129,7 +139,6 @@
         <option value="$PROJECT_DIR$/cpp/IR/IR.cpp" />
         <option value="$PROJECT_DIR$/cpp/DMX/DMX.cpp" />
         <option value="$PROJECT_DIR$/php/src/savePreset.php" />
-        <option value="$PROJECT_DIR$/conf/Mediatrix.json" />
         <option value="$PROJECT_DIR$/php/src/AV.php" />
         <option value="$PROJECT_DIR$/php/composer.json" />
         <option value="$PROJECT_DIR$/php/src/Group.php" />
@@ -142,6 +151,7 @@
         <option value="$PROJECT_DIR$/php/src/websocket.php" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/php/src/Application.php" />
+        <option value="$PROJECT_DIR$/conf/Mediatrix.json" />
       </list>
     </option>
   </component>
@@ -230,6 +240,11 @@
             <path>
               <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="conf" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
@@ -963,13 +978,6 @@
       <workItem from="1523554078740" duration="2224000" />
       <workItem from="1523613631969" duration="5854000" />
     </task>
-    <task id="LOCAL-00251" summary="debug mixer mute">
-      <created>1522839113819</created>
-      <option name="number" value="00251" />
-      <option name="presentableId" value="LOCAL-00251" />
-      <option name="project" value="LOCAL" />
-      <updated>1522839113819</updated>
-    </task>
     <task id="LOCAL-00252" summary="debug mixer mute">
       <created>1522839231309</created>
       <option name="number" value="00252" />
@@ -1306,11 +1314,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524087580769</updated>
     </task>
-    <option name="localTasksCounter" value="300" />
+    <task id="LOCAL-00300" summary="dev login preset">
+      <created>1524087653742</created>
+      <option name="number" value="00300" />
+      <option name="presentableId" value="LOCAL-00300" />
+      <option name="project" value="LOCAL" />
+      <updated>1524087653742</updated>
+    </task>
+    <option name="localTasksCounter" value="301" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237569000" />
+    <option name="totallyTimeSpent" value="237675000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1756,14 +1771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="65" column="12" lean-forward="false" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cpp/IR/IR.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2322">
@@ -1812,6 +1819,14 @@
             <marker date="1524087646366" expanded="true" signature="13629:13669" ph="SELECT * FRO... preset" />
             <marker date="1524087646366" expanded="true" signature="14407:14449" ph="SELECT isext... user" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="116" column="15" lean-forward="true" selection-start-line="116" selection-start-column="15" selection-end-line="116" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -116,8 +116,10 @@
       "name": "oneSpot",
       "conf": {
         "dmx": {
-          "id": 1,
-          "hue": 255
+          "scheinwerfer1": {
+            "id": 1,
+            "hue": 255
+          }
         }
       }
     },
