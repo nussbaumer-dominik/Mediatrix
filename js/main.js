@@ -37,8 +37,9 @@ $(function () {
 		}
 	};
 	let scheinwerfer = {};
-	let socket = new WebSocket("wss://10.20.255.100/wss");
+	//let socket = new WebSocket("wss://10.20.255.100/wss");
 	//let socket = new WebSocket("wss://10.0.0.144/wss");
+	let socket = new WebSocket("wss.//192.168.1.2/wss");
 
 	//wirft eine Exception
 	socket.onerror = error => {

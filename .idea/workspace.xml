@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/MyIoServer.php" afterPath="$PROJECT_DIR$/php/src/MyIoServer.php" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,14 +41,24 @@
       <file leaf-file-name="websocket.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            <state relative-caret-position="144">
+              <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyIoServer.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="41" column="4" lean-forward="false" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyIoServer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/MyIoServer.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="423">
@@ -123,15 +133,15 @@
         <option value="$PROJECT_DIR$/php/src/AV.php" />
         <option value="$PROJECT_DIR$/php/composer.json" />
         <option value="$PROJECT_DIR$/php/src/Group.php" />
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/Elektronik/speaker.py" />
         <option value="$PROJECT_DIR$/php/src/Beamer.php" />
         <option value="$PROJECT_DIR$/Elektronik/power.py" />
         <option value="$PROJECT_DIR$/Elektronik/cooling.py" />
         <option value="$PROJECT_DIR$/php/src/Mixer.php" />
         <option value="$PROJECT_DIR$/php/src/Application.php" />
-        <option value="$PROJECT_DIR$/php/src/websocket.php" />
         <option value="$PROJECT_DIR$/php/src/MyIoServer.php" />
+        <option value="$PROJECT_DIR$/php/src/websocket.php" />
+        <option value="$PROJECT_DIR$/js/main.js" />
       </list>
     </option>
   </component>
@@ -220,6 +230,11 @@
             <path>
               <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
@@ -948,20 +963,6 @@
       <workItem from="1523554078740" duration="2224000" />
       <workItem from="1523613631969" duration="5854000" />
     </task>
-    <task id="LOCAL-00245" summary="debug python">
-      <created>1522697295591</created>
-      <option name="number" value="00245" />
-      <option name="presentableId" value="LOCAL-00245" />
-      <option name="project" value="LOCAL" />
-      <updated>1522697295591</updated>
-    </task>
-    <task id="LOCAL-00246" summary="debug python">
-      <created>1522697464292</created>
-      <option name="number" value="00246" />
-      <option name="presentableId" value="LOCAL-00246" />
-      <option name="project" value="LOCAL" />
-      <updated>1522697464292</updated>
-    </task>
     <task id="LOCAL-00247" summary="debug python">
       <created>1522697545439</created>
       <option name="number" value="00247" />
@@ -1291,11 +1292,25 @@
       <option name="project" value="LOCAL" />
       <updated>1524087114489</updated>
     </task>
-    <option name="localTasksCounter" value="294" />
+    <task id="LOCAL-00294" summary="deactivate mixer">
+      <created>1524087211126</created>
+      <option name="number" value="00294" />
+      <option name="presentableId" value="LOCAL-00294" />
+      <option name="project" value="LOCAL" />
+      <updated>1524087211126</updated>
+    </task>
+    <task id="LOCAL-00295" summary="deactivate mixer">
+      <created>1524087240564</created>
+      <option name="number" value="00295" />
+      <option name="presentableId" value="LOCAL-00295" />
+      <option name="project" value="LOCAL" />
+      <updated>1524087240564</updated>
+    </task>
+    <option name="localTasksCounter" value="296" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237129000" />
+    <option name="totallyTimeSpent" value="237265000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1683,13 +1698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Mikrofon.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1783,18 +1791,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/MyIoServer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
           <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="41" column="4" lean-forward="false" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
           <folding />
         </state>
       </provider>
