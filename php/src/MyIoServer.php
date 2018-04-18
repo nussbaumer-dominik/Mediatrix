@@ -25,10 +25,11 @@ class MyIoServer extends \Ratchet\Server\IoServer
 
 
         //$loop->addPeriodicTimer(0.1, function() use (&$mixer) {
+        /*
         $loop->addPeriodicTimer(1, function() use (&$mixer) {
-            //$mixer->alive();
+            $mixer->alive();
         });
-
+    */
         $socket = new Reactor($address . ':' . $port, $loop);
 
         return new static($component, $socket, $loop);

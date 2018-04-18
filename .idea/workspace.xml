@@ -4,7 +4,6 @@
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/php/src/MyIoServer.php" afterPath="$PROJECT_DIR$/php/src/MyIoServer.php" />
-      <change beforePath="$PROJECT_DIR$/php/src/websocket.php" afterPath="$PROJECT_DIR$/php/src/websocket.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,8 +51,8 @@
       <file leaf-file-name="MyIoServer.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/MyIoServer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+            <state relative-caret-position="423">
+              <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -949,13 +948,6 @@
       <workItem from="1523554078740" duration="2224000" />
       <workItem from="1523613631969" duration="5854000" />
     </task>
-    <task id="LOCAL-00244" summary="debug python">
-      <created>1522696979045</created>
-      <option name="number" value="00244" />
-      <option name="presentableId" value="LOCAL-00244" />
-      <option name="project" value="LOCAL" />
-      <updated>1522696979045</updated>
-    </task>
     <task id="LOCAL-00245" summary="debug python">
       <created>1522697295591</created>
       <option name="number" value="00245" />
@@ -1292,11 +1284,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524087040466</updated>
     </task>
-    <option name="localTasksCounter" value="293" />
+    <task id="LOCAL-00293" summary="deactivate mixer">
+      <created>1524087114489</created>
+      <option name="number" value="00293" />
+      <option name="presentableId" value="LOCAL-00293" />
+      <option name="project" value="LOCAL" />
+      <updated>1524087114489</updated>
+    </task>
+    <option name="localTasksCounter" value="294" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237026000" />
+    <option name="totallyTimeSpent" value="237129000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1417,7 +1416,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add mute function" />
     <MESSAGE value="fix live status" />
     <MESSAGE value="change rpm cooling.py" />
     <MESSAGE value="python dev" />
@@ -1442,7 +1440,8 @@
     <MESSAGE value="fix speaker.py" />
     <MESSAGE value="fix cooling.py" />
     <MESSAGE value="dev default preset login" />
-    <option name="LAST_COMMIT_MESSAGE" value="dev default preset login" />
+    <MESSAGE value="deactivate mixer" />
+    <option name="LAST_COMMIT_MESSAGE" value="deactivate mixer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1794,8 +1793,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/MyIoServer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+        <state relative-caret-position="423">
+          <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
           <folding />
         </state>
       </provider>
