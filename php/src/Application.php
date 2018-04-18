@@ -93,9 +93,7 @@ class Application implements MessageComponentInterface
                 echo "Connection {$from->resourceId} registered, Ini-String sent\n";
 
                 $preset = $this->defaultPresets[0]['conf'];
-
-                    var_dump($preset);
-                $preset['jwt'] = $jwt;
+                $preset['jwt'] = $commands['jwt'];
 
                 $this->onMessage($from, json_encode((object) $preset));
 
