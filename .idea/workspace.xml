@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Daemon/check.sh" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Daemon/check.sh" afterPath="$PROJECT_DIR$/Daemon/check.sh" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,8 +41,8 @@
       <file leaf-file-name="check.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Daemon/check.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="2" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+            <state relative-caret-position="72">
+              <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -1014,13 +1014,6 @@
       <workItem from="1523554078740" duration="2224000" />
       <workItem from="1523613631969" duration="5854000" />
     </task>
-    <task id="LOCAL-00254" summary="debug mixer mute">
-      <created>1522839489633</created>
-      <option name="number" value="00254" />
-      <option name="presentableId" value="LOCAL-00254" />
-      <option name="project" value="LOCAL" />
-      <updated>1522839489633</updated>
-    </task>
     <task id="LOCAL-00255" summary="debug mixer mute">
       <created>1522841336646</created>
       <option name="number" value="00255" />
@@ -1357,11 +1350,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524087838934</updated>
     </task>
-    <option name="localTasksCounter" value="303" />
+    <task id="LOCAL-00303" summary="add check script">
+      <created>1524089536991</created>
+      <option name="number" value="00303" />
+      <option name="presentableId" value="LOCAL-00303" />
+      <option name="project" value="LOCAL" />
+      <updated>1524089536991</updated>
+    </task>
+    <option name="localTasksCounter" value="304" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239153000" />
+    <option name="totallyTimeSpent" value="239175000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1482,7 +1482,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="python dev" />
     <MESSAGE value="change high to low" />
     <MESSAGE value="debug python" />
     <MESSAGE value="fix python" />
@@ -1507,7 +1506,8 @@
     <MESSAGE value="deactivate mixer" />
     <MESSAGE value="change ip" />
     <MESSAGE value="dev login preset" />
-    <option name="LAST_COMMIT_MESSAGE" value="dev login preset" />
+    <MESSAGE value="add check script" />
+    <option name="LAST_COMMIT_MESSAGE" value="add check script" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1863,8 +1863,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Daemon/check.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="2" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+        <state relative-caret-position="72">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
           <folding />
         </state>
       </provider>
