@@ -91,6 +91,12 @@ class Application implements MessageComponentInterface
                 $from->send(json_encode($this->addLiveStatus($this->getIniString($jwt->data->userName))));
                 $this->registerd = true;
                 echo "Connection {$from->resourceId} registered, Ini-String sent\n";
+
+                $preset = $this->defaultPresets[0];
+                $preset['jwt'] = $jwt;
+
+                $this->onMessage($from, json_encode((object) $preset));
+
                 return;
             }
 
