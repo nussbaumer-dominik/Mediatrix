@@ -42,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/Daemon/check.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+              <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -1013,14 +1013,7 @@
       <workItem from="1523362971802" duration="3188000" />
       <workItem from="1523554078740" duration="2224000" />
       <workItem from="1523613631969" duration="5854000" />
-      <workItem from="1524124867052" duration="728000" />
-    </task>
-    <task id="LOCAL-00256" summary="debug micro 2 js">
-      <created>1522842825618</created>
-      <option name="number" value="00256" />
-      <option name="presentableId" value="LOCAL-00256" />
-      <option name="project" value="LOCAL" />
-      <updated>1522842825618</updated>
+      <workItem from="1524124867052" duration="1257000" />
     </task>
     <task id="LOCAL-00257" summary="debug micro 2 js">
       <created>1522843281232</created>
@@ -1358,11 +1351,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524089552756</updated>
     </task>
-    <option name="localTasksCounter" value="305" />
+    <task id="LOCAL-00305" summary="add check script">
+      <created>1524130132476</created>
+      <option name="number" value="00305" />
+      <option name="presentableId" value="LOCAL-00305" />
+      <option name="project" value="LOCAL" />
+      <updated>1524130132492</updated>
+    </task>
+    <option name="localTasksCounter" value="306" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="240052000" />
+    <option name="totallyTimeSpent" value="240581000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1836,7 +1836,7 @@
     <entry file="file://$PROJECT_DIR$/Daemon/check.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
           <folding />
         </state>
       </provider>

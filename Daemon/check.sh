@@ -2,6 +2,7 @@
 
 while true
 do
+    echo $(sudo kill -0 $1)
     if [$(sudo kill -0 $1)];  then
         echo "running"
     else
