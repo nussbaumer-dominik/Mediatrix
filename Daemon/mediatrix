@@ -109,8 +109,8 @@ case "$1" in
         ;;
     restart|force-reload)
         echo -n "Restarting $DESC: "
-        /sbin/start-stop-daemon $STOP_OPTS
-        sleep 1
+        /sbin/start-stop-daemon $STOP_OPTS >> $LOGFILE
+        sleep 2
         /sbin/start-stop-daemon $START_OPTS >> $LOGFILE
         echo "$NAME."
         ;;
