@@ -14,28 +14,15 @@ $(function () {
 			av: {},
 			dmx: {},
 			mixer: {
-				mikrofone: [{
-					id: "0",
-					value: 0
-				}, {
-					id: "1",
-					value: 0
-				}]
+				mikrofone: [
+					{ id: "0", value: 0 }, 
+					{ id: "1", value: 0 }
+				]
 			},
 			beamer: {}
 		};
 
-	let mixerData = {
-		mixer: {
-			mikrofone: [{
-				id: "0",
-				value: 0
-			}, {
-				id: "1",
-				value: 0
-			}]
-		}
-	};
+	let mixerData = { mixer: { mikrofone: [{ id: "0", value: 0 }, { id: "1", value: 0 }] } };
 	let scheinwerfer = {};
 	let socket = new WebSocket("wss://192.168.1.2/wss");
 	//let socket = new WebSocket("wss://10.0.0.144/wss");
