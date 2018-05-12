@@ -14,7 +14,7 @@ require __DIR__ . '/../vendor/autoload.php';
 $loop = LoopFactory::create();
 
 $loop->addPeriodicTimer(1, function() {
-    if(!is_null($GLOBALS['mixer'])) {
+    if(!( isset($GLOBALS['mixer']) || is_null($GLOBALS['mixer']))) {
         $GLOBALS['mixer']->alive();
     }
     echo "Test";

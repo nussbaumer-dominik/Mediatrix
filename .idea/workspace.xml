@@ -72,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/php/src/mixerLoop.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
-              <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+              <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
               <folding>
                 <element signature="e#89#132#0#PHP" expanded="true" />
               </folding>
@@ -986,14 +986,7 @@
       <workItem from="1524124867052" duration="6592000" />
       <workItem from="1524676971326" duration="287000" />
       <workItem from="1525984041913" duration="596000" />
-      <workItem from="1526156674310" duration="4176000" />
-    </task>
-    <task id="LOCAL-00265" summary="debug">
-      <created>1522856755595</created>
-      <option name="number" value="00265" />
-      <option name="presentableId" value="LOCAL-00265" />
-      <option name="project" value="LOCAL" />
-      <updated>1522856755595</updated>
+      <workItem from="1526156674310" duration="4261000" />
     </task>
     <task id="LOCAL-00266" summary="debug">
       <created>1522856948363</created>
@@ -1331,11 +1324,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526161106990</updated>
     </task>
-    <option name="localTasksCounter" value="314" />
+    <task id="LOCAL-00314" summary="dev loop error">
+      <created>1526161241557</created>
+      <option name="number" value="00314" />
+      <option name="presentableId" value="LOCAL-00314" />
+      <option name="project" value="LOCAL" />
+      <updated>1526161241557</updated>
+    </task>
+    <option name="localTasksCounter" value="315" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250975000" />
+    <option name="totallyTimeSpent" value="251060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1810,7 +1810,7 @@
     <entry file="file://$PROJECT_DIR$/php/src/mixerLoop.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
-          <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
           <folding>
             <element signature="e#89#132#0#PHP" expanded="true" />
           </folding>
