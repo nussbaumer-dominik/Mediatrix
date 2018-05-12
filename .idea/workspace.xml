@@ -41,8 +41,8 @@
       <file leaf-file-name="websocket.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+            <state relative-caret-position="180">
+              <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -953,14 +953,7 @@
       <workItem from="1524124867052" duration="6592000" />
       <workItem from="1524676971326" duration="287000" />
       <workItem from="1525984041913" duration="596000" />
-      <workItem from="1526156674310" duration="1708000" />
-    </task>
-    <task id="LOCAL-00262" summary="fix readCode">
-      <created>1522852111206</created>
-      <option name="number" value="00262" />
-      <option name="presentableId" value="LOCAL-00262" />
-      <option name="project" value="LOCAL" />
-      <updated>1522852111206</updated>
+      <workItem from="1526156674310" duration="1809000" />
     </task>
     <task id="LOCAL-00263" summary="fix readCode">
       <created>1522855870682</created>
@@ -1298,11 +1291,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526158187161</updated>
     </task>
-    <option name="localTasksCounter" value="311" />
+    <task id="LOCAL-00311" summary="dev loop error">
+      <created>1526158756218</created>
+      <option name="number" value="00311" />
+      <option name="presentableId" value="LOCAL-00311" />
+      <option name="project" value="LOCAL" />
+      <updated>1526158756218</updated>
+    </task>
+    <option name="localTasksCounter" value="312" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248507000" />
+    <option name="totallyTimeSpent" value="248608000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1775,8 +1775,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        <state relative-caret-position="180">
+          <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
           <folding />
         </state>
       </provider>
