@@ -15,6 +15,8 @@ require __DIR__ . '/../vendor/autoload.php';
 
     $GLOBALS['mixer'] = $mixer;
 
+    var_dump($GLOBALS);
+
     $server = MyIoServer::factory(
         new HttpServer(
             new WsServer(
