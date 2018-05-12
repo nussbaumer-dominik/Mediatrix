@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Daemon/check.sh" afterPath="$PROJECT_DIR$/Daemon/check.sh" />
+      <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
+      <change beforePath="$PROJECT_DIR$/php/src/websocket.php" afterPath="$PROJECT_DIR$/php/src/websocket.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,45 +26,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1566">
-              <caret line="95" column="49" lean-forward="false" selection-start-line="95" selection-start-column="49" selection-end-line="95" selection-end-column="49" />
+            <state relative-caret-position="234">
+              <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
               <folding>
-                <marker date="1524087830245" expanded="true" signature="13601:13641" ph="SELECT * FRO... preset" />
-                <marker date="1524087830245" expanded="true" signature="14379:14421" ph="SELECT isext... user" />
+                <marker date="1526158159751" expanded="true" signature="13638:13678" ph="SELECT * FRO... preset" />
+                <marker date="1526158159751" expanded="true" signature="14416:14458" ph="SELECT isext... user" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="check.sh" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Daemon/check.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="34" lean-forward="false" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="run.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/run.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mediatrix" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Daemon/mediatrix">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="43" column="6" lean-forward="true" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -71,38 +42,8 @@
       <file leaf-file-name="websocket.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="34" column="24" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyIoServer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/src/MyIoServer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Mediatrix.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2088">
-              <caret line="116" column="15" lean-forward="false" selection-start-line="116" selection-start-column="15" selection-end-line="116" selection-end-column="15" />
+            <state relative-caret-position="180">
+              <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -178,12 +119,12 @@
         <option value="$PROJECT_DIR$/Elektronik/cooling.py" />
         <option value="$PROJECT_DIR$/php/src/Mixer.php" />
         <option value="$PROJECT_DIR$/php/src/MyIoServer.php" />
-        <option value="$PROJECT_DIR$/php/src/websocket.php" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/conf/Mediatrix.json" />
-        <option value="$PROJECT_DIR$/php/src/Application.php" />
         <option value="$PROJECT_DIR$/Daemon/mediatrix" />
         <option value="$PROJECT_DIR$/Daemon/check.sh" />
+        <option value="$PROJECT_DIR$/php/src/websocket.php" />
+        <option value="$PROJECT_DIR$/php/src/Application.php" />
       </list>
     </option>
   </component>
@@ -245,9 +186,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="793" />
-    <option name="width" value="814" />
-    <option name="height" value="867" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -264,7 +206,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -285,11 +227,6 @@
             <path>
               <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="php" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -302,7 +239,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -1014,21 +951,10 @@
       <workItem from="1523362971802" duration="3188000" />
       <workItem from="1523554078740" duration="2224000" />
       <workItem from="1523613631969" duration="5854000" />
-      <workItem from="1524124867052" duration="5006000" />
-    </task>
-    <task id="LOCAL-00259" summary="Merge branch 'AllesNeu' of https://github.com/nussi98/Mediatrix into AllesNeu&#10;&#10;# Conflicts:&#10;#&#9;js/main.js">
-      <created>1522843333478</created>
-      <option name="number" value="00259" />
-      <option name="presentableId" value="LOCAL-00259" />
-      <option name="project" value="LOCAL" />
-      <updated>1522843333478</updated>
-    </task>
-    <task id="LOCAL-00260" summary="python">
-      <created>1522847515620</created>
-      <option name="number" value="00260" />
-      <option name="presentableId" value="LOCAL-00260" />
-      <option name="project" value="LOCAL" />
-      <updated>1522847515620</updated>
+      <workItem from="1524124867052" duration="6592000" />
+      <workItem from="1524676971326" duration="287000" />
+      <workItem from="1525984041913" duration="596000" />
+      <workItem from="1526156674310" duration="1133000" />
     </task>
     <task id="LOCAL-00261" summary="python">
       <created>1522847664055</created>
@@ -1359,23 +1285,36 @@
       <option name="project" value="LOCAL" />
       <updated>1524551512598</updated>
     </task>
-    <option name="localTasksCounter" value="308" />
+    <task id="LOCAL-00308" summary="dev check script">
+      <created>1524561805604</created>
+      <option name="number" value="00308" />
+      <option name="presentableId" value="LOCAL-00308" />
+      <option name="project" value="LOCAL" />
+      <updated>1524561805604</updated>
+    </task>
+    <task id="LOCAL-00309" summary="dev check script">
+      <created>1524561984117</created>
+      <option name="number" value="00309" />
+      <option name="presentableId" value="LOCAL-00309" />
+      <option name="project" value="LOCAL" />
+      <updated>1524561984117</updated>
+    </task>
+    <option name="localTasksCounter" value="310" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244330000" />
+    <option name="totallyTimeSpent" value="247932000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13239075" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13624679" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22311828" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22311828" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3729097" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1791,14 +1730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2088">
@@ -1807,14 +1738,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
+    <entry file="file://$PROJECT_DIR$/Daemon/mediatrix">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1566">
-          <caret line="95" column="49" lean-forward="false" selection-start-line="95" selection-start-column="49" selection-end-line="95" selection-end-column="49" />
-          <folding>
-            <marker date="1524087830245" expanded="true" signature="13601:13641" ph="SELECT * FRO... preset" />
-            <marker date="1524087830245" expanded="true" signature="14379:14421" ph="SELECT isext... user" />
-          </folding>
+        <state relative-caret-position="774">
+          <caret line="43" column="6" lean-forward="false" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Daemon/check.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1826,19 +1762,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Daemon/mediatrix">
+    <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="43" column="6" lean-forward="true" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+        <state relative-caret-position="180">
+          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Daemon/check.sh">
+    <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="34" lean-forward="false" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="234">
+          <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+          <folding>
+            <marker date="1526158159751" expanded="true" signature="13638:13678" ph="SELECT * FRO... preset" />
+            <marker date="1526158159751" expanded="true" signature="14416:14458" ph="SELECT isext... user" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -31,6 +31,7 @@ class Application implements MessageComponentInterface
     public function __construct($mixer)
     {
         $this->mixer = $mixer;
+        var_dump($GLOBALS['mixer']);
         $this->iniMe();
     }
 

@@ -13,6 +13,8 @@ require __DIR__ . '/../vendor/autoload.php';
     //$mixer = new \Mediatrix\Mixer('10.0.0.53');
     $mixer = null;
 
+    $GLOBALS['mixer'] = $mixer;
+
     $server = MyIoServer::factory(
         new HttpServer(
             new WsServer(
