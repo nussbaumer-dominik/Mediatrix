@@ -23,7 +23,7 @@
 #ref http://unix.stackexchange.com/questions/85033/use-start-stop-daemon-for-a-php-server/85570#85570
 #ref http://serverfault.com/questions/229759/launching-a-php-daemon-from-an-lsb-init-script-w-start-stop-daemon
 
-NAME=mediatrix
+NAME=Mediatrix
 DESC="Daemon for the mediatrix websocket server"
 PIDFILE="/var/run/${NAME}.pid"
 LOGFILE="/var/log/${NAME}.log"

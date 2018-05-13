@@ -1,6 +1,6 @@
 #! /bin/bash
 
-NAME=mediatrix
+NAME=Mediatrix
 DESC="Daemon for the mediatrix websocket server"
 PIDFILE="/var/run/${NAME}.pid"
 LOGFILE="/var/log/${NAME}.log"
@@ -12,7 +12,7 @@ START_OPTS="--start --background --make-pidfile --pidfile ${PIDFILE} --chuid www
 STOP_OPTS="--stop --pidfile ${PIDFILE}"
 
 shopt -s nullglob
-array=(/var/run/mediatrix*)
+array=(/var/run/Mediatrix*)
 
 while true
 do
