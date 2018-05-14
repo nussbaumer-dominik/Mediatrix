@@ -25,7 +25,7 @@
 
 NAME=Mediatrix
 DESC="Daemon for the mediatrix websocket server"
-PIDFILE="/var/run/${NAME}.pid"
+PIDFILE="/var/run/${NAME}-server.pid"
 LOGFILE="/var/log/${NAME}.log"
 
 DAEMON="/usr/bin/php"
