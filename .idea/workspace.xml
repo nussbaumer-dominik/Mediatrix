@@ -62,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/Daemon/mediatrix">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
-              <caret line="91" column="155" lean-forward="false" selection-start-line="91" selection-start-column="155" selection-end-line="91" selection-end-column="155" />
+              <caret line="91" column="143" lean-forward="false" selection-start-line="91" selection-start-column="143" selection-end-line="91" selection-end-column="143" />
               <folding />
             </state>
           </provider>
@@ -1225,14 +1225,7 @@
       <workItem from="1524124867052" duration="6592000" />
       <workItem from="1524676971326" duration="287000" />
       <workItem from="1525984041913" duration="596000" />
-      <workItem from="1526156674310" duration="17320000" />
-    </task>
-    <task id="LOCAL-00288" summary="fix:&#10;&#10;temperatur alle 60s&#10;send IR-Code 3x bei Beamer&#10;speaker nur wenn power gedrückt wurde&#10;Lüfter erst ab 30%">
-      <created>1523615066005</created>
-      <option name="number" value="00288" />
-      <option name="presentableId" value="LOCAL-00288" />
-      <option name="project" value="LOCAL" />
-      <updated>1523615066005</updated>
+      <workItem from="1526156674310" duration="17604000" />
     </task>
     <task id="LOCAL-00289" summary="fix speaker.py">
       <created>1523617526979</created>
@@ -1570,11 +1563,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526312529538</updated>
     </task>
-    <option name="localTasksCounter" value="337" />
+    <task id="LOCAL-00337" summary="daemon dev">
+      <created>1526312953446</created>
+      <option name="number" value="00337" />
+      <option name="presentableId" value="LOCAL-00337" />
+      <option name="project" value="LOCAL" />
+      <updated>1526312953446</updated>
+    </task>
+    <option name="localTasksCounter" value="338" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="264119000" />
+    <option name="totallyTimeSpent" value="264403000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -2052,7 +2052,7 @@
     <entry file="file://$PROJECT_DIR$/Daemon/mediatrix">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="91" column="155" lean-forward="false" selection-start-line="91" selection-start-column="155" selection-end-line="91" selection-end-column="155" />
+          <caret line="91" column="143" lean-forward="false" selection-start-line="91" selection-start-column="143" selection-end-line="91" selection-end-column="143" />
           <folding />
         </state>
       </provider>
