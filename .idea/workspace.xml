@@ -61,8 +61,8 @@
       <file leaf-file-name="mediatrix" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Daemon/mediatrix">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="91" column="150" lean-forward="false" selection-start-line="91" selection-start-column="150" selection-end-line="91" selection-end-column="150" />
+            <state relative-caret-position="1854">
+              <caret line="103" column="29" lean-forward="true" selection-start-line="103" selection-start-column="29" selection-end-line="103" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -1225,14 +1225,7 @@
       <workItem from="1524124867052" duration="6592000" />
       <workItem from="1524676971326" duration="287000" />
       <workItem from="1525984041913" duration="596000" />
-      <workItem from="1526156674310" duration="16312000" />
-    </task>
-    <task id="LOCAL-00285" summary="Merge branch 'AllesNeu' into Multiuser&#10;&#10;# Conflicts:&#10;#&#9;php/src/Application.php&#10;#&#9;php/src/Beamer.php&#10;#&#9;php/src/MyIoServer.php&#10;#&#9;php/src/websocket.php">
-      <created>1523212218497</created>
-      <option name="number" value="00285" />
-      <option name="presentableId" value="LOCAL-00285" />
-      <option name="project" value="LOCAL" />
-      <updated>1523212218497</updated>
+      <workItem from="1526156674310" duration="16640000" />
     </task>
     <task id="LOCAL-00286" summary="change ip address">
       <created>1523369961467</created>
@@ -1570,11 +1563,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526311201466</updated>
     </task>
-    <option name="localTasksCounter" value="334" />
+    <task id="LOCAL-00334" summary="daemon dev">
+      <created>1526311944257</created>
+      <option name="number" value="00334" />
+      <option name="presentableId" value="LOCAL-00334" />
+      <option name="project" value="LOCAL" />
+      <updated>1526311944257</updated>
+    </task>
+    <option name="localTasksCounter" value="335" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="263111000" />
+    <option name="totallyTimeSpent" value="263439000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1683,7 +1683,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix readCode" />
     <MESSAGE value="debug" />
     <MESSAGE value="fix Leistungsmessung" />
     <MESSAGE value="add daemon file" />
@@ -1708,7 +1707,8 @@
     <MESSAGE value="loop test" />
     <MESSAGE value="loop dev" />
     <MESSAGE value="check.sh dev" />
-    <option name="LAST_COMMIT_MESSAGE" value="check.sh dev" />
+    <MESSAGE value="daemon dev" />
+    <option name="LAST_COMMIT_MESSAGE" value="daemon dev" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2051,8 +2051,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Daemon/mediatrix">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="91" column="150" lean-forward="false" selection-start-line="91" selection-start-column="150" selection-end-line="91" selection-end-column="150" />
+        <state relative-caret-position="1854">
+          <caret line="103" column="29" lean-forward="true" selection-start-line="103" selection-start-column="29" selection-end-line="103" selection-end-column="29" />
           <folding />
         </state>
       </provider>

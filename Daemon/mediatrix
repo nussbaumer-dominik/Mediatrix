@@ -95,6 +95,7 @@ case "$1" in
 
        echo "Stopping Check.sh"
        /sbin/start-stop-daemon --stop --pidfile "/var/run/Mediatrix-check.pid"  >> $LOGFILE
+       rm -f "/var/run/Mediatrix-check.pid"
 
         echo -n "Stopping $DESC: " >> $LOGFILE
 	    echo -n "Stopping $DESC: "
@@ -105,6 +106,7 @@ case "$1" in
 
         echo "Stopping Mediatrix-websocket to Mixer"
         /sbin/start-stop-daemon --stop --pidfile /var/run/Mediatrix-websocket.pid >> $LOGFILE
+        rm -f "/var/run/Mediatrix-websocket.pid"
 	
 	    echo  "Stopping power.py: " >> $LOGFILE
         echo  "Stopping power.py: "
