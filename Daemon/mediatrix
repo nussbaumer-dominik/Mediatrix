@@ -89,7 +89,7 @@ case "$1" in
 
 
     	echo "Starting Check.sh"
-    	/sbin/start-stop-daemon $CKSTART_OPS --pidfile "/var/run/Mediatrix-check.pid" --exec "/bin/bash /var/www/html/Mediatrix/Daemon/check.sh"  >> $LOGFILE
+    	/sbin/start-stop-daemon $CKSTART_OPS --pidfile "/var/run/Mediatrix-check.pid" --exec /bin/bash /var/www/html/Mediatrix/Daemon/check.sh  >> $LOGFILE
 	;;
     stop)
 
