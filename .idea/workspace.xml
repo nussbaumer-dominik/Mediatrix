@@ -986,14 +986,7 @@
       <workItem from="1524124867052" duration="6592000" />
       <workItem from="1524676971326" duration="287000" />
       <workItem from="1525984041913" duration="596000" />
-      <workItem from="1526156674310" duration="7192000" />
-    </task>
-    <task id="LOCAL-00269" summary="debug">
-      <created>1522858733890</created>
-      <option name="number" value="00269" />
-      <option name="presentableId" value="LOCAL-00269" />
-      <option name="project" value="LOCAL" />
-      <updated>1522858733890</updated>
+      <workItem from="1526156674310" duration="8109000" />
     </task>
     <task id="LOCAL-00270" summary="debug">
       <created>1522858871896</created>
@@ -1331,11 +1324,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526202265295</updated>
     </task>
-    <option name="localTasksCounter" value="318" />
+    <task id="LOCAL-00318" summary="check.sh and daemon dev">
+      <created>1526297123248</created>
+      <option name="number" value="00318" />
+      <option name="presentableId" value="LOCAL-00318" />
+      <option name="project" value="LOCAL" />
+      <updated>1526297123248</updated>
+    </task>
+    <option name="localTasksCounter" value="319" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="253991000" />
+    <option name="totallyTimeSpent" value="254908000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
