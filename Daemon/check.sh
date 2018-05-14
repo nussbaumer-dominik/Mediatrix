@@ -1,5 +1,7 @@
 #! /bin/bash
 
+set -x
+
 NAME=Mediatrix
 DESC="Daemon for the mediatrix websocket server"
 PIDFILE="/var/run/${NAME}.pid"
@@ -18,7 +20,7 @@ while true
 do
     for i in ${array[@]}; do
         echo $i;
-        if [[ $(sudo kill -0 $(cat $i)) ]];  then
+        if [-n [ $(sudo kill -0 $(cat $i)) ]];  then
             $(/sbin/start-stop-daemon $START_OPTS >> $LOGFILE)
         else
             echo "running"
