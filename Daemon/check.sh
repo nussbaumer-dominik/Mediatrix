@@ -1,7 +1,5 @@
 #! /bin/bash
 
-set -x
-
 NAME=Mediatrix
 DESC="Daemon for the mediatrix.sh websocket server"
 PIDFILE="/var/run/${NAME}-server.pid"
@@ -24,7 +22,6 @@ array=(/var/run/Mediatrix*)
 while true
 do
     for i in ${array[@]}; do
-        echo $i;
         if [ -z "$(ps -p $(cat $i) -o pid=)" ];  then
             case "$(echo $i | cut -d '-' -f 2 | cut -d '.' -f 1)" in
             speaker)
@@ -54,7 +51,7 @@ do
             ;;
             esac
         else
-            echo "python and php running"
+            echo "$i running"
         fi
     done;
     if [ -z "$(ps -C "olad" -o pid=)" ];  then
