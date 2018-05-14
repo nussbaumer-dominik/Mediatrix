@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Daemon/check.sh" afterPath="$PROJECT_DIR$/Daemon/check.sh" />
       <change beforePath="$PROJECT_DIR$/Daemon/mediatrix" afterPath="$PROJECT_DIR$/Daemon/mediatrix" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -42,8 +41,8 @@
       <file leaf-file-name="check.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Daemon/check.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="190">
+              <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -62,8 +61,8 @@
       <file leaf-file-name="mediatrix" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Daemon/mediatrix">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1890">
-              <caret line="105" column="8" lean-forward="false" selection-start-line="105" selection-start-column="8" selection-end-line="105" selection-end-column="8" />
+            <state relative-caret-position="1364">
+              <caret line="81" column="29" lean-forward="true" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -168,8 +167,8 @@
         <option value="$PROJECT_DIR$/php/src/mixerLoop.php" />
         <option value="$PROJECT_DIR$/php/src/websocket.php" />
         <option value="$PROJECT_DIR$/Daemon/check.sh" />
-        <option value="$PROJECT_DIR$/Daemon/mediatrix" />
         <option value="$PROJECT_DIR$/Daemon/mediatrix.sh" />
+        <option value="$PROJECT_DIR$/Daemon/mediatrix" />
       </list>
     </option>
   </component>
@@ -1226,14 +1225,7 @@
       <workItem from="1524124867052" duration="6592000" />
       <workItem from="1524676971326" duration="287000" />
       <workItem from="1525984041913" duration="596000" />
-      <workItem from="1526156674310" duration="14150000" />
-    </task>
-    <task id="LOCAL-00278" summary="debug">
-      <created>1522864029078</created>
-      <option name="number" value="00278" />
-      <option name="presentableId" value="LOCAL-00278" />
-      <option name="project" value="LOCAL" />
-      <updated>1522864029078</updated>
+      <workItem from="1526156674310" duration="14569000" />
     </task>
     <task id="LOCAL-00279" summary="fix Leistungsmessung">
       <created>1522914158937</created>
@@ -1571,18 +1563,26 @@
       <option name="project" value="LOCAL" />
       <updated>1526308998554</updated>
     </task>
-    <option name="localTasksCounter" value="327" />
+    <task id="LOCAL-00327" summary="check.sh and daemon dev">
+      <created>1526309764498</created>
+      <option name="number" value="00327" />
+      <option name="presentableId" value="LOCAL-00327" />
+      <option name="project" value="LOCAL" />
+      <updated>1526309764498</updated>
+    </task>
+    <option name="localTasksCounter" value="328" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260949000" />
+    <option name="totallyTimeSpent" value="261368000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22311828" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22311828" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3729097" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -1706,9 +1706,9 @@
     <MESSAGE value="dev check script" />
     <MESSAGE value="dev loop error" />
     <MESSAGE value="check.sh dev" />
-    <MESSAGE value="check.sh and daemon dev" />
     <MESSAGE value="check.sh and daemon dev&#10;loop dev" />
-    <option name="LAST_COMMIT_MESSAGE" value="check.sh and daemon dev&#10;loop dev" />
+    <MESSAGE value="check.sh and daemon dev" />
+    <option name="LAST_COMMIT_MESSAGE" value="check.sh and daemon dev" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2015,14 +2015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/mixerLoop.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -2043,16 +2035,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Daemon/check.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="190">
+          <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Daemon/mediatrix">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="105" column="8" lean-forward="false" selection-start-line="105" selection-start-column="8" selection-end-line="105" selection-end-column="8" />
+        <state relative-caret-position="1364">
+          <caret line="81" column="29" lean-forward="true" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
           <folding />
         </state>
       </provider>
