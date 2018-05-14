@@ -22,7 +22,7 @@ do
         echo $i;
         if [ -z "$(ps -p $(cat $i) -o pid=)" ];  then
             #$(/sbin/start-stop-daemon $START_OPTS >> $LOGFILE)
-            echo $i | cut -d '-' -f 2
+            echo $i | cut -d '-' -f 2 | cut -d '.' -f 1
         else
             echo "running"
         fi
