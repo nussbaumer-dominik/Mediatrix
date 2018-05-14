@@ -23,7 +23,6 @@ $loop->addPeriodicTimer(1, function() {
     if(!( isset($GLOBALS['mixer']) || is_null($GLOBALS['mixer']))) {
         $GLOBALS['mixer']->alive();
     }
-    echo "Test";
 });
 
 $loop->run();

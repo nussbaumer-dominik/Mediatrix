@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/src/mixerLoop.php" afterPath="$PROJECT_DIR$/php/src/mixerLoop.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,8 +80,8 @@
       <file leaf-file-name="mixerLoop.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/mixerLoop.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="342">
+              <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding>
                 <element signature="e#89#132#0#PHP" expanded="true" />
               </folding>
@@ -1225,14 +1224,7 @@
       <workItem from="1524124867052" duration="6592000" />
       <workItem from="1524676971326" duration="287000" />
       <workItem from="1525984041913" duration="596000" />
-      <workItem from="1526156674310" duration="15236000" />
-    </task>
-    <task id="LOCAL-00282" summary="fixing">
-      <created>1522932094231</created>
-      <option name="number" value="00282" />
-      <option name="presentableId" value="LOCAL-00282" />
-      <option name="project" value="LOCAL" />
-      <updated>1522932094231</updated>
+      <workItem from="1526156674310" duration="15264000" />
     </task>
     <task id="LOCAL-00283" summary="change webscoket library version">
       <created>1522932962813</created>
@@ -1570,11 +1562,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526310643318</updated>
     </task>
-    <option name="localTasksCounter" value="331" />
+    <task id="LOCAL-00331" summary="loop test">
+      <created>1526310856250</created>
+      <option name="number" value="00331" />
+      <option name="presentableId" value="LOCAL-00331" />
+      <option name="project" value="LOCAL" />
+      <updated>1526310856250</updated>
+    </task>
+    <option name="localTasksCounter" value="332" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="262035000" />
+    <option name="totallyTimeSpent" value="262063000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1683,7 +1682,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merge branch 'AllesNeu' of https://github.com/nussi98/Mediatrix into AllesNeu&#10;&#10;# Conflicts:&#10;#&#9;js/main.js" />
     <MESSAGE value="python" />
     <MESSAGE value="fix readCode" />
     <MESSAGE value="debug" />
@@ -1708,7 +1706,8 @@
     <MESSAGE value="check.sh dev" />
     <MESSAGE value="check.sh and daemon dev&#10;loop dev" />
     <MESSAGE value="check.sh and daemon dev" />
-    <option name="LAST_COMMIT_MESSAGE" value="check.sh and daemon dev" />
+    <MESSAGE value="loop test" />
+    <option name="LAST_COMMIT_MESSAGE" value="loop test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2049,8 +2048,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/mixerLoop.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="342">
+          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="e#89#132#0#PHP" expanded="true" />
           </folding>
