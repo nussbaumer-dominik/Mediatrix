@@ -10,16 +10,11 @@ use WebSocket\Client;
 require __DIR__ . '/../vendor/autoload.php';
 
     $GLOBALS['mixer'] = null;
-    //$mixer = new \Mediatrix\Mixer('192.168.1.100');
-    //$mixer = new \Mediatrix\Mixer('10.0.0.53');
-    $mixer = null;
-
-    $GLOBALS['mixer'] = $mixer;
 
     $server = IoServer::factory(
         new HttpServer(
             new WsServer(
-                new Application($mixer)
+                new Application($GLOBALS['mixer'])
             )
         ),
             10000,

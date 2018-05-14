@@ -11,6 +11,12 @@ use Mediatrix\Mixer;
 
 require __DIR__ . '/../vendor/autoload.php';
 
+//$mixer = new \Mediatrix\Mixer('192.168.1.100');
+//$mixer = new \Mediatrix\Mixer('10.0.0.53');
+$mixer = null;
+
+$GLOBALS['mixer'] = $mixer;
+
 $loop = LoopFactory::create();
 
 $loop->addPeriodicTimer(1, function() {

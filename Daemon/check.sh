@@ -53,6 +53,11 @@ do
             echo "running"
         fi
     done;
+    if [ -z "$(ps -C "olad" -o pid=)" ];  then
+        echo "olad"
+    else
+        echo "running";
+    fi
     sleep 10
 
 done
