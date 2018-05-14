@@ -39,6 +39,8 @@ STOP_OPTS="--stop --pidfile ${PIDFILE}"
 
 WSSTART_OPS="--start --background --make-pidfile --pidfile /var/run/Mediatrix-websocket.pid --chuid www-data --chdir /var/www/html/Mediatrix/php --exec ${DAEMON} /var/www/html/Mediatrix/php/src/mixerLoop.php"
 
+CKSTART_OPS="--start --background --make-pidfile --chdir /var/www/html/Mediatrix/Daemon"
+
 test -x $DAEMON || exit 0
 
 sudo chown www-data /var/log/mediatrix.log
@@ -83,8 +85,17 @@ case "$1" in
 
     	echo "Starting Mediatrix-websocket to Mixer"
     	/sbin/start-stop-daemon $WSSTART_OPS >> $LOGFILE
+
+
+
+    	echo "Starting Check.sh"
+    	/sbin/start-stop-daemon $CKSTART_OPS --pidfile "/var/run/Mediatrix-check.pid" --exec "bash /var/www/html/Mediatrix/Daemon/check.sh >> $LOGFILE"  >> $LOGFILE
 	;;
     stop)
+
+       echo "Stopping Check.sh"
+       /sbin/start-stop-daemon --stop --pidfile "/var/run/Mediatrix-check.pid"  >> $LOGFILE
+
         echo -n "Stopping $DESC: " >> $LOGFILE
 	    echo -n "Stopping $DESC: "
         /sbin/start-stop-daemon $STOP_OPTS
