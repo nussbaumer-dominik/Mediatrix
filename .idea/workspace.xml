@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Daemon/mediatrix" afterPath="$PROJECT_DIR$/Daemon/mediatrix" />
+      <change beforePath="$PROJECT_DIR$/Daemon/check.sh" afterPath="$PROJECT_DIR$/Daemon/check.sh" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="check.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="check.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Daemon/check.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="21" />
+            <state relative-caret-position="540">
+              <caret line="54" column="16" lean-forward="true" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -58,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mediatrix" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mediatrix" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Daemon/mediatrix">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1364">
-              <caret line="81" column="29" lean-forward="true" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
+            <state relative-caret-position="144">
+              <caret line="56" column="37" lean-forward="true" selection-start-line="56" selection-start-column="7" selection-end-line="56" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -166,9 +166,9 @@
         <option value="$PROJECT_DIR$/php/src/Application.php" />
         <option value="$PROJECT_DIR$/php/src/mixerLoop.php" />
         <option value="$PROJECT_DIR$/php/src/websocket.php" />
-        <option value="$PROJECT_DIR$/Daemon/check.sh" />
         <option value="$PROJECT_DIR$/Daemon/mediatrix.sh" />
         <option value="$PROJECT_DIR$/Daemon/mediatrix" />
+        <option value="$PROJECT_DIR$/Daemon/check.sh" />
       </list>
     </option>
   </component>
@@ -1225,14 +1225,7 @@
       <workItem from="1524124867052" duration="6592000" />
       <workItem from="1524676971326" duration="287000" />
       <workItem from="1525984041913" duration="596000" />
-      <workItem from="1526156674310" duration="14569000" />
-    </task>
-    <task id="LOCAL-00279" summary="fix Leistungsmessung">
-      <created>1522914158937</created>
-      <option name="number" value="00279" />
-      <option name="presentableId" value="LOCAL-00279" />
-      <option name="project" value="LOCAL" />
-      <updated>1522914158941</updated>
+      <workItem from="1526156674310" duration="14704000" />
     </task>
     <task id="LOCAL-00280" summary="add daemon file">
       <created>1522930098261</created>
@@ -1570,11 +1563,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526309764498</updated>
     </task>
-    <option name="localTasksCounter" value="328" />
+    <task id="LOCAL-00328" summary="check.sh and daemon dev">
+      <created>1526310181528</created>
+      <option name="number" value="00328" />
+      <option name="presentableId" value="LOCAL-00328" />
+      <option name="project" value="LOCAL" />
+      <updated>1526310181528</updated>
+    </task>
+    <option name="localTasksCounter" value="329" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="261368000" />
+    <option name="totallyTimeSpent" value="261503000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -2033,14 +2033,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Daemon/check.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -2051,8 +2043,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Daemon/mediatrix">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1364">
-          <caret line="81" column="29" lean-forward="true" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
+        <state relative-caret-position="144">
+          <caret line="56" column="37" lean-forward="true" selection-start-line="56" selection-start-column="7" selection-end-line="56" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Daemon/check.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="54" column="16" lean-forward="true" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
           <folding />
         </state>
       </provider>

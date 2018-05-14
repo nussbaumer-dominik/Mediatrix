@@ -16,6 +16,8 @@ PYTHON="/usr/bin/python"
 START_OPTS="--start --background --make-pidfile --pidfile ${PIDFILE} --chuid www-data --chdir /var/www/html/Mediatrix/php --exec ${DAEMON} ${DAEMON_OPTS}"
 STOP_OPTS="--stop --pidfile ${PIDFILE}"
 
+WSSTART_OPS="--start --background --make-pidfile --pidfile /var/run/Mediatrix-websocket.pid --chuid www-data --chdir /var/www/html/Mediatrix/php --exec ${DAEMON} /var/www/html/Mediatrix/php/src/mixerLoop.php"
+
 shopt -s nullglob
 array=(/var/run/Mediatrix*)
 
@@ -41,6 +43,8 @@ do
                 echo $i;
             ;;
             websocket)
+                echo "Restarting Mediatrix-websocket to Mixer"
+    	        /sbin/start-stop-daemon $WSSTART_OPS >> $LOGFILE
                 echo $i;
             ;;
             server)
@@ -50,13 +54,14 @@ do
             ;;
             esac
         else
-            echo "running"
+            echo "python and php running"
         fi
     done;
     if [ -z "$(ps -C "olad" -o pid=)" ];  then
-        echo "olad"
+        echo "Restarting Olad" >> $LOGFILE
+        sudo -u pi olad -f >> $LOGFILE
     else
-        echo "running";
+        echo "olad running";
     fi
     sleep 10
 
