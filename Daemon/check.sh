@@ -21,8 +21,23 @@ do
     for i in ${array[@]}; do
         echo $i;
         if [ -z "$(ps -p $(cat $i) -o pid=)" ];  then
-            #$(/sbin/start-stop-daemon $START_OPTS >> $LOGFILE)
-            echo $i | cut -d '-' -f 2 | cut -d '.' -f 1
+            case "$(echo $i | cut -d '-' -f 2 | cut -d '.' -f 1)" in
+            speaker)
+                echo $i;
+            ;;
+            cooling)
+                echo $i;
+            ;;
+            power)
+                echo $i;
+            ;;
+            websocket)
+                echo $i;
+            ;;
+            server)
+                echo $i;
+            ;;
+            esac
         else
             echo "running"
         fi
