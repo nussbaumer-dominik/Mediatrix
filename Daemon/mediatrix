@@ -58,53 +58,52 @@ case "$1" in
        printf "\n#####check DB:#####\n" >> $LOGFILE
        sudo php src/createDB.php >> $LOGFILE
        sudo chown www-data ../sqlite -R >> $LOGFILE
-
-
-        echo -n "Starting ${DESC}: " >> $LOGFILE
-	echo -n "Starting ${DESC}: "
-        /sbin/start-stop-daemon $START_OPTS >> $LOGFILE
-        echo "$NAME." >> $LOGFILE
-	echo "$NAME."
         
-	echo  "Starting power.py: " >> $LOGFILE
+	    echo  "Starting power.py: " >> $LOGFILE
         echo  "Starting power.py: "
 
-	/sbin/start-stop-daemon $PYTHON_OPTS --pidfile "/var/run/Mediatrix-power.pid" --exec $PYTHON power.py
+	    /sbin/start-stop-daemon $PYTHON_OPTS --pidfile "/var/run/Mediatrix-power.pid" --exec $PYTHON power.py
 	
-	echo  "Starting speaker.py: " >> $LOGFILE
+	    echo  "Starting speaker.py: " >> $LOGFILE
         echo  "Starting speaker.py: "
 
-	/sbin/start-stop-daemon $PYTHON_OPTS --pidfile "/var/run/Mediatrix-speaker.pid" --exec $PYTHON speaker.py
+	    /sbin/start-stop-daemon $PYTHON_OPTS --pidfile "/var/run/Mediatrix-speaker.pid" --exec $PYTHON speaker.py
 	
-	echo  "Starting cooling.py " >> $LOGFILE
+	    echo  "Starting cooling.py " >> $LOGFILE
         echo  "Starting cooling.py"
-	/sbin/start-stop-daemon $PYTHON_OPTS --pidfile "/var/run/Mediatrix-cooling.pid" --exec $PYTHON cooling.py
+	    /sbin/start-stop-daemon $PYTHON_OPTS --pidfile "/var/run/Mediatrix-cooling.pid" --exec $PYTHON cooling.py
+
+	    echo -n "Starting ${DESC}: " >> $LOGFILE
+    	echo -n "Starting ${DESC}: "
+            /sbin/start-stop-daemon $START_OPTS >> $LOGFILE
+            echo "$NAME." >> $LOGFILE
+    	echo "$NAME."
 	;;
     stop)
         echo -n "Stopping $DESC: " >> $LOGFILE
-	echo -n "Stopping $DESC: "
+	    echo -n "Stopping $DESC: "
         /sbin/start-stop-daemon $STOP_OPTS
-        echo "$NAME." >> $LOGFILE
-	 echo "$NAME."
+        echo "$NAME-server." >> $LOGFILE
+	     echo "$NAME-server."
         rm -f $PIDFILE
 	
-	echo  "Stopping power.py: " >> $LOGFILE
+	    echo  "Stopping power.py: " >> $LOGFILE
         echo  "Stopping power.py: "
         /sbin/start-stop-daemon --stop --pidfile "/var/run/Mediatrix-power.pid"
         rm -f "/var/run/Mediatrix-power.pid"
 
-	echo  "Stopping speaker.py: " >> $LOGFILE
+	    echo  "Stopping speaker.py: " >> $LOGFILE
         echo  "Stopping speaker.py: "
         /sbin/start-stop-daemon --stop --pidfile "/var/run/Mediatrix-speaker.pid"
         rm -f "/var/run/Mediatrix-speaker.pid"
 
-	echo  "Stopping cooling.py: " >> $LOGFILE
+	    echo  "Stopping cooling.py: " >> $LOGFILE
         echo  "Stopping cooling.py: "
         /sbin/start-stop-daemon --stop --pidfile "/var/run/Mediatrix-cooling.pid"
         rm -f "/var/run/Mediatrix-cooling.pid"
 
         echo "Stop Ola" >> $LOGFILE
-	sudo killall olad >> $LOGFILE
+	    sudo killall olad >> $LOGFILE
 
         ;;
     restart|force-reload)

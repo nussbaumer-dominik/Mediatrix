@@ -3,7 +3,7 @@
 set -x
 
 NAME=Mediatrix
-DESC="Daemon for the mediatrix websocket server"
+DESC="Daemon for the mediatrix.sh websocket server"
 PIDFILE="/var/run/${NAME}-server.pid"
 LOGFILE="/var/log/${NAME}.log"
 
