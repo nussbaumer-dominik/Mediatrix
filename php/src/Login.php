@@ -72,7 +72,7 @@ class Login
 
                 $sqlite = new \SQLite3("../../sqlite/db.sqlite");
 
-                $stm = $sqlite->prepare("SELECT password FROM user WHERE id = :id");
+                $stm = $sqlite->prepare("SELECT * FROM user WHERE id = :id");
 
                 $stm->bindParam(":id", $username);
 
@@ -82,7 +82,6 @@ class Login
 
                 while ($res = $result->fetchArray(SQLITE3_ASSOC)) {
                     $hasResult = true;
-                    password_verify($password,$res['password']) or die('{"success":false,"err":"Wrong Password"}');
                 }
 
                 $result->finalize();
@@ -90,12 +89,10 @@ class Login
                 $stm->close();
 
                 if(!$hasResult) {
-                    $password = password_hash($password,PASSWORD_DEFAULT);
 
-                    $stm = $sqlite->prepare("INSERT INTO USER(id,password) VALUES (:id,:password)");
+                    $stm = $sqlite->prepare("INSERT INTO USER(id) VALUES (:id)");
 
                     $stm->bindParam(":id", $username);
-                    $stm->bindParam(":password", $password);
 
                     $stm->execute();
 
@@ -111,7 +108,7 @@ class Login
 
 
             }else{
-                echo "Login false";
+                echo "{'success':false,'err':'Login false'}";
             }
 
         } catch (\Adldap\Auth\UsernameRequiredException $e) {

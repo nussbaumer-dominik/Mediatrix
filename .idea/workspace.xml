@@ -4,6 +4,7 @@
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/php/src/Login.php" afterPath="$PROJECT_DIR$/php/src/Login.php" />
+      <change beforePath="$PROJECT_DIR$/php/src/createDB.php" afterPath="$PROJECT_DIR$/php/src/createDB.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,11 +62,24 @@
       <file leaf-file-name="Login.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="165" column="0" lean-forward="true" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+            <state relative-caret-position="347">
+              <caret line="114" column="51" lean-forward="true" selection-start-line="114" selection-start-column="51" selection-end-line="114" selection-end-column="51" />
               <folding>
-                <marker date="1526319525930" expanded="true" signature="2201:2241" ph="SELECT passw... user" />
-                <marker date="1526319525930" expanded="true" signature="2846:2898" ph="INSERT INTO USER... " />
+                <marker date="1526320143572" expanded="true" signature="2201:2234" ph="SELECT passw... user" />
+                <marker date="1526320143572" expanded="true" signature="2648:2681" ph="INSERT INTO USER... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createDB.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+              <folding>
+                <marker date="1526319899610" expanded="true" signature="152:243" ph="create table... if" />
+                <marker date="1526319899610" expanded="true" signature="264:448" ph="create table... if" />
               </folding>
             </state>
           </provider>
@@ -181,6 +195,7 @@
         <option value="$PROJECT_DIR$/php/src/mixerLoop.php" />
         <option value="$PROJECT_DIR$/Daemon/check.sh" />
         <option value="$PROJECT_DIR$/Daemon/mediatrix" />
+        <option value="$PROJECT_DIR$/php/src/createDB.php" />
         <option value="$PROJECT_DIR$/php/src/Login.php" />
       </list>
     </option>
@@ -1238,14 +1253,7 @@
       <workItem from="1524124867052" duration="6592000" />
       <workItem from="1524676971326" duration="287000" />
       <workItem from="1525984041913" duration="596000" />
-      <workItem from="1526156674310" duration="21606000" />
-    </task>
-    <task id="LOCAL-00291" summary="fix cooling.py">
-      <created>1523619256840</created>
-      <option name="number" value="00291" />
-      <option name="presentableId" value="LOCAL-00291" />
-      <option name="project" value="LOCAL" />
-      <updated>1523619256840</updated>
+      <workItem from="1526156674310" duration="22261000" />
     </task>
     <task id="LOCAL-00292" summary="dev default preset login">
       <created>1524087040466</created>
@@ -1583,18 +1591,26 @@
       <option name="project" value="LOCAL" />
       <updated>1526313771473</updated>
     </task>
-    <option name="localTasksCounter" value="340" />
+    <task id="LOCAL-00340" summary="login with LDAP">
+      <created>1526319551781</created>
+      <option name="number" value="00340" />
+      <option name="presentableId" value="LOCAL-00340" />
+      <option name="project" value="LOCAL" />
+      <updated>1526319551781</updated>
+    </task>
+    <option name="localTasksCounter" value="341" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268405000" />
+    <option name="totallyTimeSpent" value="269060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22311828" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22311828" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37231183" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -1695,7 +1711,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="debug" />
     <MESSAGE value="fix Leistungsmessung" />
     <MESSAGE value="add daemon file" />
     <MESSAGE value="fixing" />
@@ -1720,7 +1735,8 @@
     <MESSAGE value="loop dev" />
     <MESSAGE value="check.sh dev" />
     <MESSAGE value="daemon dev" />
-    <option name="LAST_COMMIT_MESSAGE" value="daemon dev" />
+    <MESSAGE value="login with LDAP" />
+    <option name="LAST_COMMIT_MESSAGE" value="login with LDAP" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1928,13 +1944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Elektronik/speaker.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="972">
@@ -2062,13 +2071,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/createDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <marker date="1526319899610" expanded="true" signature="152:243" ph="create table... if" />
+            <marker date="1526319899610" expanded="true" signature="264:448" ph="create table... if" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="165" column="0" lean-forward="true" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+        <state relative-caret-position="347">
+          <caret line="114" column="51" lean-forward="true" selection-start-line="114" selection-start-column="51" selection-end-line="114" selection-end-column="51" />
           <folding>
-            <marker date="1526319525930" expanded="true" signature="2201:2241" ph="SELECT passw... user" />
-            <marker date="1526319525930" expanded="true" signature="2846:2898" ph="INSERT INTO USER... " />
+            <marker date="1526320143572" expanded="true" signature="2201:2234" ph="SELECT passw... user" />
+            <marker date="1526320143572" expanded="true" signature="2648:2681" ph="INSERT INTO USER... " />
           </folding>
         </state>
       </provider>
