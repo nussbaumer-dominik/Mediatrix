@@ -66,18 +66,18 @@ case "$1" in
         echo "$NAME." >> $LOGFILE
 	echo "$NAME."
         
-	echo -n "Starting power.py: " >> $LOGFILE
-        echo -n "Starting power.py: "
+	echo  "Starting power.py: " >> $LOGFILE
+        echo  "Starting power.py: "
 
 	/sbin/start-stop-daemon $PYTHON_OPTS --pidfile "/var/run/Mediatrix-power.pid" --exec $PYTHON power.py
 	
-	echo -n "Starting speaker.py: " >> $LOGFILE
-        echo -n "Starting speaker.py: "
+	echo  "Starting speaker.py: " >> $LOGFILE
+        echo  "Starting speaker.py: "
 
 	/sbin/start-stop-daemon $PYTHON_OPTS --pidfile "/var/run/Mediatrix-speaker.pid" --exec $PYTHON speaker.py
 	
-	echo -n "Starting cooling.py " >> $LOGFILE
-        echo -n "Starting cooling.py"
+	echo  "Starting cooling.py " >> $LOGFILE
+        echo  "Starting cooling.py"
 	/sbin/start-stop-daemon $PYTHON_OPTS --pidfile "/var/run/Mediatrix-cooling.pid" --exec $PYTHON cooling.py
 	;;
     stop)
@@ -88,18 +88,18 @@ case "$1" in
 	 echo "$NAME."
         rm -f $PIDFILE
 	
-	echo -n "Stopping power.py: " >> $LOGFILE
-        echo -n "Stopping power.py: "
+	echo  "Stopping power.py: " >> $LOGFILE
+        echo  "Stopping power.py: "
         /sbin/start-stop-daemon --stop --pidfile "/var/run/Mediatrix-power.pid"
         rm -f "/var/run/Mediatrix-power.pid"
 
-	echo -n "Stopping speaker.py: " >> $LOGFILE
-        echo -n "Stopping speaker.py: "
+	echo  "Stopping speaker.py: " >> $LOGFILE
+        echo  "Stopping speaker.py: "
         /sbin/start-stop-daemon --stop --pidfile "/var/run/Mediatrix-speaker.pid"
         rm -f "/var/run/Mediatrix-speaker.pid"
 
-	echo -n "Stopping cooling.py: " >> $LOGFILE
-        echo -n "Stopping cooling.py: "
+	echo  "Stopping cooling.py: " >> $LOGFILE
+        echo  "Stopping cooling.py: "
         /sbin/start-stop-daemon --stop --pidfile "/var/run/Mediatrix-cooling.pid"
         rm -f "/var/run/Mediatrix-cooling.pid"
 

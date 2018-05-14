@@ -26,17 +26,17 @@ do
         if [ -z "$(ps -p $(cat $i) -o pid=)" ];  then
             case "$(echo $i | cut -d '-' -f 2 | cut -d '.' -f 1)" in
             speaker)
-                echo -n "Restarting speaker.py: " >> $LOGFILE
+                echo  "Restarting speaker.py: " >> $LOGFILE
 	            /sbin/start-stop-daemon $PYTHON_OPTS --pidfile "/var/run/Mediatrix-speaker.pid" --exec $PYTHON speaker.py
                 echo $i;
             ;;
             cooling)
-                echo -n "Restarting cooling.py " >> $LOGFILE
+                echo  "Restarting cooling.py " >> $LOGFILE
 	            /sbin/start-stop-daemon $PYTHON_OPTS --pidfile "/var/run/Mediatrix-cooling.pid" --exec $PYTHON cooling.py
                 echo $i;
             ;;
             power)
-                echo -n "Restarting power.py: " >> $LOGFILE
+                echo  "Restarting power.py: " >> $LOGFILE
                 /sbin/start-stop-daemon $PYTHON_OPTS --pidfile "/var/run/Mediatrix-power.pid" --exec $PYTHON power.py
                 echo $i;
             ;;
@@ -44,7 +44,7 @@ do
                 echo $i;
             ;;
             server)
-                echo -n "Restarting ${DESC}: Server" >> $LOGFILE
+                echo  "Restarting ${DESC}: Server" >> $LOGFILE
                 /sbin/start-stop-daemon $START_OPTS >> $LOGFILE
                 echo $i;
             ;;
