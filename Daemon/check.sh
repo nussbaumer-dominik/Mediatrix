@@ -21,7 +21,8 @@ do
     for i in ${array[@]}; do
         echo $i;
         if [ -z "$(ps -p $(cat $i) -o pid=)" ];  then
-            $(/sbin/start-stop-daemon $START_OPTS >> $LOGFILE)
+            #$(/sbin/start-stop-daemon $START_OPTS >> $LOGFILE)
+            echo $i | cut -d '-' -f 2
         else
             echo "running"
         fi
