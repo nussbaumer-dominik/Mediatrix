@@ -20,7 +20,7 @@ while true
 do
     for i in ${array[@]}; do
         echo $i;
-        if [ -n "$(ps -p $(cat $i) -o pid=)" ];  then
+        if [ -z "$(ps -p $(cat $i) -o pid=)" ];  then
             $(/sbin/start-stop-daemon $START_OPTS >> $LOGFILE)
         else
             echo "running"
