@@ -27,27 +27,27 @@ do
             speaker)
                 echo  "Restarting speaker.py: " >> $LOGFILE
 	            /sbin/start-stop-daemon $PYTHON_OPTS --pidfile "/var/run/Mediatrix-speaker.pid" --exec $PYTHON speaker.py
-                echo $i;
+                echo "$i restarting";
             ;;
             cooling)
                 echo  "Restarting cooling.py " >> $LOGFILE
 	            /sbin/start-stop-daemon $PYTHON_OPTS --pidfile "/var/run/Mediatrix-cooling.pid" --exec $PYTHON cooling.py
-                echo $i;
+                echo "$i restarting";
             ;;
             power)
                 echo  "Restarting power.py: " >> $LOGFILE
                 /sbin/start-stop-daemon $PYTHON_OPTS --pidfile "/var/run/Mediatrix-power.pid" --exec $PYTHON power.py
-                echo $i;
+                echo "$i restarting";
             ;;
             websocket)
                 echo "Restarting Mediatrix-websocket to Mixer"
     	        /sbin/start-stop-daemon $WSSTART_OPS >> $LOGFILE
-                echo $i;
+                echo "$i restarting";
             ;;
             server)
                 echo  "Restarting ${DESC}: Server" >> $LOGFILE
                 /sbin/start-stop-daemon $START_OPTS >> $LOGFILE
-                echo $i;
+                echo "$i restarting";
             ;;
             esac
         else
