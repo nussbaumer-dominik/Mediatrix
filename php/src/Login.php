@@ -27,6 +27,7 @@ class Login
     ];
     private $key;
     private $expireSec = 3600;
+    private $url = "https://moodle.htl.rennweg.at/login/index.php";
 
     public function __construct()
     {
@@ -53,9 +54,11 @@ class Login
                 print_r($provider);
             }*/
 
+            $url = $this->get_redirect_target($this->url,$username,$password);
 
+            $session = explode('?',$url);
 
-            if(true){
+            if(isset($session[1])){
                 $data = [
                     'iat'  => time(),         // Issued at: time when the token was generated
                     'jti'  => base64_encode(random_bytes(32)),          // Json Token Id: an unique identifier for the token
@@ -138,6 +141,26 @@ class Login
         $this->config = $config;
     }
 
+    function get_redirect_target($url, $username, $password)
+    {
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_HEADER, 1);
+        curl_setopt($ch, CURLOPT_NOBODY, 1);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS,
+            "password=$password&username=$username");
+        // receive server response ...
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $headers = curl_exec($ch);
+        curl_close($ch);
+        // Check if there's a Location: header (redirect)
+        if (preg_match('/^Location: (.+)$/im', $headers, $matches))
+            return trim($matches[1]);
+        // If not, there was no redirect so return the original URL
+        // (Alternatively change this to return false)
+        return $url;
+    }
 
 }
 
