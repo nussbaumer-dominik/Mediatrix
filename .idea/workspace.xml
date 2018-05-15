@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/php/src/beamerOff.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Elektronik/power.py" afterPath="$PROJECT_DIR$/Elektronik/power.py" />
-      <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9027">
-              <caret line="658" column="29" lean-forward="true" selection-start-line="658" selection-start-column="29" selection-end-line="658" selection-end-column="29" />
+            <state relative-caret-position="165">
+              <caret line="259" column="16" lean-forward="false" selection-start-line="259" selection-start-column="16" selection-end-line="259" selection-end-column="16" />
               <folding>
                 <marker date="1526382103258" expanded="true" signature="13638:13678" ph="SELECT * FRO... preset" />
                 <marker date="1526382103258" expanded="true" signature="14416:14458" ph="SELECT isext... user" />
@@ -53,8 +51,8 @@
       <file leaf-file-name="websocket.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+            <state relative-caret-position="180">
+              <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -81,6 +79,16 @@
               <folding>
                 <element signature="e#6#87#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="84" column="43" lean-forward="false" selection-start-line="84" selection-start-column="43" selection-end-line="84" selection-end-column="43" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -128,18 +136,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mixerLoop.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/src/mixerLoop.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-              <folding>
-                <element signature="e#89#132#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -157,6 +153,7 @@
       <find>live</find>
       <find>GPIO.HIGH</find>
       <find>-n</find>
+      <find>Setup</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -209,7 +206,6 @@
         <option value="$PROJECT_DIR$/Elektronik/cooling.py" />
         <option value="$PROJECT_DIR$/php/src/Mixer.php" />
         <option value="$PROJECT_DIR$/php/src/MyIoServer.php" />
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/conf/Mediatrix.json" />
         <option value="$PROJECT_DIR$/php/src/websocket.php" />
         <option value="$PROJECT_DIR$/Daemon/mediatrix.sh" />
@@ -221,6 +217,7 @@
         <option value="$PROJECT_DIR$/Elektronik/power.py" />
         <option value="$PROJECT_DIR$/php/src/Application.php" />
         <option value="$PROJECT_DIR$/php/src/beamerOff.php" />
+        <option value="$PROJECT_DIR$/js/main.js" />
       </list>
     </option>
   </component>
@@ -550,6 +547,11 @@
               <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Elektronik" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
@@ -1282,14 +1284,7 @@
       <workItem from="1524124867052" duration="6592000" />
       <workItem from="1524676971326" duration="287000" />
       <workItem from="1525984041913" duration="596000" />
-      <workItem from="1526156674310" duration="23512000" />
-    </task>
-    <task id="LOCAL-00293" summary="deactivate mixer">
-      <created>1524087114489</created>
-      <option name="number" value="00293" />
-      <option name="presentableId" value="LOCAL-00293" />
-      <option name="project" value="LOCAL" />
-      <updated>1524087114489</updated>
+      <workItem from="1526156674310" duration="25007000" />
     </task>
     <task id="LOCAL-00294" summary="deactivate mixer">
       <created>1524087211126</created>
@@ -1627,11 +1622,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526320215428</updated>
     </task>
-    <option name="localTasksCounter" value="342" />
+    <task id="LOCAL-00342" summary="add beamer off to power off">
+      <created>1526382430551</created>
+      <option name="number" value="00342" />
+      <option name="presentableId" value="LOCAL-00342" />
+      <option name="project" value="LOCAL" />
+      <updated>1526382430551</updated>
+    </task>
+    <option name="localTasksCounter" value="343" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="270311000" />
+    <option name="totallyTimeSpent" value="271806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1740,7 +1742,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix Leistungsmessung" />
     <MESSAGE value="add daemon file" />
     <MESSAGE value="fixing" />
     <MESSAGE value="change webscoket library version" />
@@ -1765,7 +1766,8 @@
     <MESSAGE value="check.sh dev" />
     <MESSAGE value="daemon dev" />
     <MESSAGE value="login with LDAP" />
-    <option name="LAST_COMMIT_MESSAGE" value="login with LDAP" />
+    <MESSAGE value="add beamer off to power off" />
+    <option name="LAST_COMMIT_MESSAGE" value="add beamer off to power off" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2007,14 +2009,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="34" column="24" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/conf/Mediatrix.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2088">
@@ -2061,14 +2055,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="91" column="142" lean-forward="false" selection-start-line="91" selection-start-column="142" selection-end-line="91" selection-end-column="142" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -2123,12 +2109,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9027">
-          <caret line="658" column="29" lean-forward="true" selection-start-line="658" selection-start-column="29" selection-end-line="658" selection-end-column="29" />
+        <state relative-caret-position="165">
+          <caret line="259" column="16" lean-forward="false" selection-start-line="259" selection-start-column="16" selection-end-line="259" selection-end-column="16" />
           <folding>
             <marker date="1526382103258" expanded="true" signature="13638:13678" ph="SELECT * FRO... preset" />
             <marker date="1526382103258" expanded="true" signature="14416:14458" ph="SELECT isext... user" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="84" column="43" lean-forward="false" selection-start-line="84" selection-start-column="43" selection-end-line="84" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
