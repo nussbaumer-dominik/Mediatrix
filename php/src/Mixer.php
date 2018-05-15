@@ -1,5 +1,6 @@
 <?php
 namespace Mediatrix;
+use Ddeboer\Imap\Exception\Exception;
 use WebSocket\Client;
 
 class Mixer {
@@ -33,11 +34,16 @@ class Mixer {
 
 		$session_id = substr($result, 0, 20);
 
+
 		echo $session_id . " ";
 		curl_close ($req);
 
 		try {
-			echo($this->mixer);
+			if($session_id == ""){
+                throw new Exception('Connection to Mixer impossible');
+            }
+
+		    echo($this->mixer);
 			$this->mixer = new Client("ws://" . $ipAddress . "/socket.io/1/websocket/" . $session_id);
 
 			return array("success" => true, "err" => "");
