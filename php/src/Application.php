@@ -650,6 +650,7 @@ class Application implements MessageComponentInterface
              * BEAMER:
              */
             $this->beamer = new Beamer($ini['beamer']['source'], $ini['beamer']['power'],$ini['beamer']['freeze'],$ini['beamer']['blackout'],$ini['beamer']['gpio']);
+            $GLOBALS['beamer'] = $this->beamer;
 
 
             /*

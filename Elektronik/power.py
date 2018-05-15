@@ -3,6 +3,8 @@
 import RPi.GPIO as GPIO
 from time import sleep
 
+import subprocess
+
 GPIO.setwarnings(False)			#disable warnings
 
 GPIO.setmode(GPIO.BCM) # GPIO Nummern statt Board Nummern
@@ -52,6 +54,8 @@ def switchPower(pstate):
         file = open("deviceson","w")
         file.write("0")
         file.close()
+
+        subprocess.call("php /var/www/html/Mediatrix/php/src/beamerOff.php.php")
 
     return pstate
 
