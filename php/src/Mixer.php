@@ -1,6 +1,5 @@
 <?php
 namespace Mediatrix;
-use Ddeboer\Imap\Exception\Exception;
 use WebSocket\Client;
 
 class Mixer {
@@ -40,14 +39,14 @@ class Mixer {
 
 		try {
 			if($session_id == ""){
-                throw new Exception('Connection to Mixer impossible');
+                throw new \Exception('Connection to Mixer impossible');
             }
 
 		    echo($this->mixer);
 			$this->mixer = new Client("ws://" . $ipAddress . "/socket.io/1/websocket/" . $session_id);
 
 			return array("success" => true, "err" => "");
-		} catch (Exception $ex){
+		} catch (\Exception $ex){
 			return array("success" => false, "err" => $ex);
 			echo "Error beim Verbindungsaufbau " . $ex;
 		}
