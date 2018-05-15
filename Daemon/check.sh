@@ -60,6 +60,6 @@ do
     else
         echo "olad running";
     fi
-    sleep 10
+    sleep 60
 
 done
