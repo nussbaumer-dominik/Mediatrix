@@ -13,7 +13,10 @@ class Mixer {
 
 	//Konstruktor
 	public function __construct(string $ipAddress) {
-		$this->connectToScui($ipAddress);
+		$erg = $this->connectToScui($ipAddress);
+		if(!$erg['success']){
+		    throw new \Exception('Connection to Mixer impossible');
+        }
 		echo $ipAddress;
 	}
 
