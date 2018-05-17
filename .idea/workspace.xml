@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Daemon/mediatrix" afterPath="$PROJECT_DIR$/Daemon/mediatrix" />
+      <change beforePath="$PROJECT_DIR$/Daemon/check.sh" afterPath="$PROJECT_DIR$/Daemon/check.sh" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +28,7 @@
       <file leaf-file-name="Beamer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
+            <state relative-caret-position="0">
               <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
@@ -45,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mediatrix" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Daemon/mediatrix">
+      <file leaf-file-name="check.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Daemon/check.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="37" column="21" lean-forward="false" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+            <state relative-caret-position="392">
+              <caret line="62" column="11" lean-forward="false" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -77,7 +77,11 @@
       <find>login.html</find>
       <find>onclo</find>
       <find>isOn</find>
+      <find>--oknodo</find>
     </findStrings>
+    <replaceStrings>
+      <replace>-o</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
@@ -135,12 +139,12 @@
         <option value="$PROJECT_DIR$/php/src/Login.php" />
         <option value="$PROJECT_DIR$/Elektronik/power.py" />
         <option value="$PROJECT_DIR$/php/src/beamerOff.php" />
-        <option value="$PROJECT_DIR$/Daemon/check.sh" />
         <option value="$PROJECT_DIR$/php/src/Mixer.php" />
         <option value="$PROJECT_DIR$/php/src/mixerLoop.php" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/php/src/Application.php" />
         <option value="$PROJECT_DIR$/Daemon/mediatrix" />
+        <option value="$PROJECT_DIR$/Daemon/check.sh" />
       </list>
     </option>
   </component>
@@ -1208,14 +1212,7 @@
       <workItem from="1524676971326" duration="287000" />
       <workItem from="1525984041913" duration="596000" />
       <workItem from="1526156674310" duration="39276000" />
-      <workItem from="1526587174159" duration="2465000" />
-    </task>
-    <task id="LOCAL-00315" summary="dev loop error">
-      <created>1526161327551</created>
-      <option name="number" value="00315" />
-      <option name="presentableId" value="LOCAL-00315" />
-      <option name="project" value="LOCAL" />
-      <updated>1526161327551</updated>
+      <workItem from="1526587174159" duration="2638000" />
     </task>
     <task id="LOCAL-00316" summary="check.sh dev">
       <created>1526201902510</created>
@@ -1553,11 +1550,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526591325096</updated>
     </task>
-    <option name="localTasksCounter" value="364" />
+    <task id="LOCAL-00364" summary="daemon dev">
+      <created>1526591642636</created>
+      <option name="number" value="00364" />
+      <option name="presentableId" value="LOCAL-00364" />
+      <option name="project" value="LOCAL" />
+      <updated>1526591642636</updated>
+    </task>
+    <option name="localTasksCounter" value="365" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="288540000" />
+    <option name="totallyTimeSpent" value="288713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1940,13 +1944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Daemon/check.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="56" column="46" lean-forward="true" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Mixer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -2012,8 +2009,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Beamer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
+        <state relative-caret-position="0">
           <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Daemon/mediatrix">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="37" column="21" lean-forward="false" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -2026,10 +2031,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Daemon/mediatrix">
+    <entry file="file://$PROJECT_DIR$/Daemon/check.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="37" column="21" lean-forward="false" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+        <state relative-caret-position="392">
+          <caret line="62" column="11" lean-forward="false" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
           <folding />
         </state>
       </provider>
