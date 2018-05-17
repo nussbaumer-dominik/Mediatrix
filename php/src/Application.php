@@ -49,13 +49,13 @@ class Application implements MessageComponentInterface
 
 
             } else {
-                $conn->send('{"success",false,"err":"Already a connection"}');
+                $conn->send('{"success":false,"err":"Already a connection"}');
                 $conn->close();
 
                 echo "Connection denied! ({$conn->resourceId})\n";
             }
         }else{
-            $conn->send('{"success",false,"err":"No Connection to the Mixer"}');
+            $conn->send('{"success":false,"err":"No Connection to the Mixer"}');
             $conn->close();
 
             echo "No Connection to the Mixer ({$conn->resourceId})\n";

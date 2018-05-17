@@ -28,11 +28,11 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="60" column="44" lean-forward="false" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
+            <state relative-caret-position="342">
+              <caret line="57" column="36" lean-forward="false" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
               <folding>
-                <marker date="1526579061916" expanded="true" signature="14029:14069" ph="SELECT * FRO... preset" />
-                <marker date="1526579061916" expanded="true" signature="14807:14849" ph="SELECT isext... user" />
+                <marker date="1526579260050" expanded="true" signature="14029:14069" ph="SELECT * FRO... preset" />
+                <marker date="1526579260050" expanded="true" signature="14807:14849" ph="SELECT isext... user" />
               </folding>
             </state>
           </provider>
@@ -76,8 +76,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="84" column="8" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+            <state relative-caret-position="438">
+              <caret line="71" column="34" lean-forward="true" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -1234,14 +1234,7 @@
       <workItem from="1524124867052" duration="6592000" />
       <workItem from="1524676971326" duration="287000" />
       <workItem from="1525984041913" duration="596000" />
-      <workItem from="1526156674310" duration="33239000" />
-    </task>
-    <task id="LOCAL-00306" summary="dev check script">
-      <created>1524130666480</created>
-      <option name="number" value="00306" />
-      <option name="presentableId" value="LOCAL-00306" />
-      <option name="project" value="LOCAL" />
-      <updated>1524130666480</updated>
+      <workItem from="1526156674310" duration="33434000" />
     </task>
     <task id="LOCAL-00307" summary="dev check script">
       <created>1524551512598</created>
@@ -1579,11 +1572,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526578625695</updated>
     </task>
-    <option name="localTasksCounter" value="355" />
+    <task id="LOCAL-00355" summary="php dev">
+      <created>1526579074907</created>
+      <option name="number" value="00355" />
+      <option name="presentableId" value="LOCAL-00355" />
+      <option name="project" value="LOCAL" />
+      <updated>1526579074907</updated>
+    </task>
+    <option name="localTasksCounter" value="356" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="280038000" />
+    <option name="totallyTimeSpent" value="280233000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -2067,19 +2067,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="84" column="8" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+        <state relative-caret-position="438">
+          <caret line="71" column="34" lean-forward="true" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="60" column="44" lean-forward="false" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
+        <state relative-caret-position="342">
+          <caret line="57" column="36" lean-forward="false" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
           <folding>
-            <marker date="1526579061916" expanded="true" signature="14029:14069" ph="SELECT * FRO... preset" />
-            <marker date="1526579061916" expanded="true" signature="14807:14849" ph="SELECT isext... user" />
+            <marker date="1526579260050" expanded="true" signature="14029:14069" ph="SELECT * FRO... preset" />
+            <marker date="1526579260050" expanded="true" signature="14807:14849" ph="SELECT isext... user" />
           </folding>
         </state>
       </provider>
