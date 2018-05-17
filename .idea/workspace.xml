@@ -28,11 +28,11 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="39" column="36" lean-forward="false" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+            <state relative-caret-position="144">
+              <caret line="40" column="17" lean-forward="true" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
               <folding>
-                <marker date="1526578319224" expanded="true" signature="13807:13847" ph="SELECT * FRO... preset" />
-                <marker date="1526578319224" expanded="true" signature="14585:14627" ph="SELECT isext... user" />
+                <marker date="1526578512153" expanded="true" signature="13779:13819" ph="SELECT * FRO... preset" />
+                <marker date="1526578512153" expanded="true" signature="14557:14599" ph="SELECT isext... user" />
               </folding>
             </state>
           </provider>
@@ -1234,14 +1234,7 @@
       <workItem from="1524124867052" duration="6592000" />
       <workItem from="1524676971326" duration="287000" />
       <workItem from="1525984041913" duration="596000" />
-      <workItem from="1526156674310" duration="32516000" />
-    </task>
-    <task id="LOCAL-00303" summary="add check script">
-      <created>1524089536991</created>
-      <option name="number" value="00303" />
-      <option name="presentableId" value="LOCAL-00303" />
-      <option name="project" value="LOCAL" />
-      <updated>1524089536991</updated>
+      <workItem from="1526156674310" duration="32691000" />
     </task>
     <task id="LOCAL-00304" summary="add check script">
       <created>1524089552756</created>
@@ -1579,11 +1572,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526577958458</updated>
     </task>
-    <option name="localTasksCounter" value="352" />
+    <task id="LOCAL-00352" summary="js dev">
+      <created>1526578345140</created>
+      <option name="number" value="00352" />
+      <option name="presentableId" value="LOCAL-00352" />
+      <option name="project" value="LOCAL" />
+      <updated>1526578345140</updated>
+    </task>
+    <option name="localTasksCounter" value="353" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="279315000" />
+    <option name="totallyTimeSpent" value="279490000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -2075,11 +2075,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="39" column="36" lean-forward="false" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+        <state relative-caret-position="144">
+          <caret line="40" column="17" lean-forward="true" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
           <folding>
-            <marker date="1526578319224" expanded="true" signature="13807:13847" ph="SELECT * FRO... preset" />
-            <marker date="1526578319224" expanded="true" signature="14585:14627" ph="SELECT isext... user" />
+            <marker date="1526578512153" expanded="true" signature="13779:13819" ph="SELECT * FRO... preset" />
+            <marker date="1526578512153" expanded="true" signature="14557:14599" ph="SELECT isext... user" />
           </folding>
         </state>
       </provider>
