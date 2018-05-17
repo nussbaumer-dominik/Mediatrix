@@ -51,6 +51,9 @@ set -e
 
 case "$1" in
     start)
+       gpio -g mode $GPIO out
+       gpio -g write $GPIO 0
+
        cd /var/www/html/Mediatrix/php
 
        printf "\n#####Restart Apche:#####\n" >> $LOGFILE

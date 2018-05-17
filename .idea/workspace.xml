@@ -48,8 +48,8 @@
       <file leaf-file-name="mediatrix" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Daemon/mediatrix">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="43" column="6" lean-forward="false" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+            <state relative-caret-position="324">
+              <caret line="54" column="28" lean-forward="false" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -1208,14 +1208,7 @@
       <workItem from="1524676971326" duration="287000" />
       <workItem from="1525984041913" duration="596000" />
       <workItem from="1526156674310" duration="39276000" />
-      <workItem from="1526587174159" duration="599000" />
-    </task>
-    <task id="LOCAL-00311" summary="dev loop error">
-      <created>1526158756218</created>
-      <option name="number" value="00311" />
-      <option name="presentableId" value="LOCAL-00311" />
-      <option name="project" value="LOCAL" />
-      <updated>1526158756218</updated>
+      <workItem from="1526587174159" duration="1225000" />
     </task>
     <task id="LOCAL-00312" summary="dev loop error">
       <created>1526158865745</created>
@@ -1553,11 +1546,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526584351844</updated>
     </task>
-    <option name="localTasksCounter" value="360" />
+    <task id="LOCAL-00360" summary="change gpio">
+      <created>1526588725410</created>
+      <option name="number" value="00360" />
+      <option name="presentableId" value="LOCAL-00360" />
+      <option name="project" value="LOCAL" />
+      <updated>1526588725410</updated>
+    </task>
+    <option name="localTasksCounter" value="361" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286674000" />
+    <option name="totallyTimeSpent" value="287300000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1666,7 +1666,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix speaker.py" />
     <MESSAGE value="fix cooling.py" />
     <MESSAGE value="dev default preset login" />
     <MESSAGE value="deactivate mixer" />
@@ -1691,7 +1690,8 @@
     <MESSAGE value="js dev" />
     <MESSAGE value="php dev" />
     <MESSAGE value="add led to daemon" />
-    <option name="LAST_COMMIT_MESSAGE" value="add led to daemon" />
+    <MESSAGE value="change gpio" />
+    <option name="LAST_COMMIT_MESSAGE" value="change gpio" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2028,8 +2028,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Daemon/mediatrix">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="43" column="6" lean-forward="false" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+        <state relative-caret-position="324">
+          <caret line="54" column="28" lean-forward="false" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
           <folding />
         </state>
       </provider>
