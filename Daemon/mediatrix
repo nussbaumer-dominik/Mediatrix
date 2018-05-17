@@ -41,7 +41,7 @@ WSSTART_OPS="--start --background --make-pidfile --pidfile /var/run/Mediatrix-we
 
 CKSTART_OPS="--start --background --make-pidfile --chdir /var/www/html/Mediatrix/Daemon"
 
-GPIO = "6"
+GPIO=6
 
 test -x $DAEMON || exit 0
 

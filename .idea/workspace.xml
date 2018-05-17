@@ -63,8 +63,8 @@
       <file leaf-file-name="mediatrix" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Daemon/mediatrix">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="43" column="9" lean-forward="false" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+            <state relative-caret-position="126">
+              <caret line="43" column="6" lean-forward="false" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -1264,14 +1264,7 @@
       <workItem from="1524124867052" duration="6592000" />
       <workItem from="1524676971326" duration="287000" />
       <workItem from="1525984041913" duration="596000" />
-      <workItem from="1526156674310" duration="36317000" />
-    </task>
-    <task id="LOCAL-00309" summary="dev check script">
-      <created>1524561984117</created>
-      <option name="number" value="00309" />
-      <option name="presentableId" value="LOCAL-00309" />
-      <option name="project" value="LOCAL" />
-      <updated>1524561984117</updated>
+      <workItem from="1526156674310" duration="37101000" />
     </task>
     <task id="LOCAL-00310" summary="dev loop error">
       <created>1526158187161</created>
@@ -1609,11 +1602,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526579620055</updated>
     </task>
-    <option name="localTasksCounter" value="358" />
+    <task id="LOCAL-00358" summary="add led to daemon">
+      <created>1526582170550</created>
+      <option name="number" value="00358" />
+      <option name="presentableId" value="LOCAL-00358" />
+      <option name="project" value="LOCAL" />
+      <updated>1526582170550</updated>
+    </task>
+    <option name="localTasksCounter" value="359" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="283116000" />
+    <option name="totallyTimeSpent" value="283900000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1722,7 +1722,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix:&#10;&#10;temperatur alle 60s&#10;send IR-Code 3x bei Beamer&#10;speaker nur wenn power gedrückt wurde&#10;Lüfter erst ab 30%" />
     <MESSAGE value="fix speaker.py" />
     <MESSAGE value="fix cooling.py" />
     <MESSAGE value="dev default preset login" />
@@ -1747,7 +1746,8 @@
     <MESSAGE value="add timeout befor link to login js" />
     <MESSAGE value="js dev" />
     <MESSAGE value="php dev" />
-    <option name="LAST_COMMIT_MESSAGE" value="php dev" />
+    <MESSAGE value="add led to daemon" />
+    <option name="LAST_COMMIT_MESSAGE" value="add led to daemon" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2109,8 +2109,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Daemon/mediatrix">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="43" column="9" lean-forward="false" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+        <state relative-caret-position="126">
+          <caret line="43" column="6" lean-forward="false" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
           <folding />
         </state>
       </provider>
