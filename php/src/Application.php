@@ -38,7 +38,7 @@ class Application implements MessageComponentInterface
     public function onOpen(ConnectionInterface $conn)
     {
         var_dump($GLOBALS['mixer']);
-        var_dump(!is_null($GLOBALS['mixer']));
+        var_dump(isset($GLOBALS['mixer']));
         if(isset($GLOBALS['mixer']) && !is_null($GLOBALS['mixer'])) {
             //check if there is already a connection
             if (!isset($this->client)) {

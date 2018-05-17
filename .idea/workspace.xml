@@ -29,10 +29,10 @@
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="40" column="17" lean-forward="true" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+              <caret line="40" column="41" lean-forward="false" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
               <folding>
-                <marker date="1526578512153" expanded="true" signature="13779:13819" ph="SELECT * FRO... preset" />
-                <marker date="1526578512153" expanded="true" signature="14557:14599" ph="SELECT isext... user" />
+                <marker date="1526578617442" expanded="true" signature="13776:13816" ph="SELECT * FRO... preset" />
+                <marker date="1526578617442" expanded="true" signature="14554:14596" ph="SELECT isext... user" />
               </folding>
             </state>
           </provider>
@@ -1234,14 +1234,7 @@
       <workItem from="1524124867052" duration="6592000" />
       <workItem from="1524676971326" duration="287000" />
       <workItem from="1525984041913" duration="596000" />
-      <workItem from="1526156674310" duration="32691000" />
-    </task>
-    <task id="LOCAL-00304" summary="add check script">
-      <created>1524089552756</created>
-      <option name="number" value="00304" />
-      <option name="presentableId" value="LOCAL-00304" />
-      <option name="project" value="LOCAL" />
-      <updated>1524089552756</updated>
+      <workItem from="1526156674310" duration="32798000" />
     </task>
     <task id="LOCAL-00305" summary="add check script">
       <created>1524130132476</created>
@@ -1579,11 +1572,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526578345140</updated>
     </task>
-    <option name="localTasksCounter" value="353" />
+    <task id="LOCAL-00353" summary="php dev">
+      <created>1526578523839</created>
+      <option name="number" value="00353" />
+      <option name="presentableId" value="LOCAL-00353" />
+      <option name="project" value="LOCAL" />
+      <updated>1526578523839</updated>
+    </task>
+    <option name="localTasksCounter" value="354" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="279490000" />
+    <option name="totallyTimeSpent" value="279597000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1692,7 +1692,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add file to python" />
     <MESSAGE value="fix:&#10;&#10;temperatur alle 60s&#10;send IR-Code 3x bei Beamer&#10;speaker nur wenn power gedrückt wurde&#10;Lüfter erst ab 30%" />
     <MESSAGE value="fix speaker.py" />
     <MESSAGE value="fix cooling.py" />
@@ -1717,7 +1716,8 @@
     <MESSAGE value="add except only if mixer connection etablished" />
     <MESSAGE value="add timeout befor link to login js" />
     <MESSAGE value="js dev" />
-    <option name="LAST_COMMIT_MESSAGE" value="js dev" />
+    <MESSAGE value="php dev" />
+    <option name="LAST_COMMIT_MESSAGE" value="php dev" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2076,10 +2076,10 @@
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="40" column="17" lean-forward="true" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+          <caret line="40" column="41" lean-forward="false" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
           <folding>
-            <marker date="1526578512153" expanded="true" signature="13779:13819" ph="SELECT * FRO... preset" />
-            <marker date="1526578512153" expanded="true" signature="14557:14599" ph="SELECT isext... user" />
+            <marker date="1526578617442" expanded="true" signature="13776:13816" ph="SELECT * FRO... preset" />
+            <marker date="1526578617442" expanded="true" signature="14554:14596" ph="SELECT isext... user" />
           </folding>
         </state>
       </provider>
