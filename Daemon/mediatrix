@@ -35,7 +35,7 @@ PYTHON_OPTS="--start --background --make-pidfile --chdir /var/www/html/Mediatrix
 PYTHON="/usr/bin/python" 
 
 START_OPTS="--start --background --make-pidfile --pidfile ${PIDFILE} --chuid www-data --chdir /var/www/html/Mediatrix/php --exec ${DAEMON} ${DAEMON_OPTS}"
-STOP_OPTS="--stop --oknodo--pidfile ${PIDFILE}"
+STOP_OPTS="--stop -o--pidfile ${PIDFILE}"
 
 WSSTART_OPS="--start --background --make-pidfile --pidfile /var/run/Mediatrix-websocket.pid --chuid www-data --chdir /var/www/html/Mediatrix/php --exec ${DAEMON} /var/www/html/Mediatrix/php/src/mixerLoop.php"
 
@@ -106,7 +106,7 @@ case "$1" in
         gpio -g write $GPIO 0
 
        echo "Stopping Check.sh"
-       /sbin/start-stop-daemon --stop --oknodo --pidfile "/var/run/Mediatrix-check.pid"  >> $LOGFILE
+       /sbin/start-stop-daemon --stop -o --pidfile "/var/run/Mediatrix-check.pid"  >> $LOGFILE
        rm -f "/var/run/Mediatrix-check.pid"
 
         echo -n "Stopping $DESC: " >> $LOGFILE
@@ -117,22 +117,22 @@ case "$1" in
         rm -f $PIDFILE
 
         echo "Stopping Mediatrix-websocket to Mixer"
-        /sbin/start-stop-daemon --stop --oknodo --pidfile /var/run/Mediatrix-websocket.pid >> $LOGFILE
+        /sbin/start-stop-daemon --stop -o --pidfile /var/run/Mediatrix-websocket.pid >> $LOGFILE
         rm -f "/var/run/Mediatrix-websocket.pid"
 	
 	    echo  "Stopping power.py: " >> $LOGFILE
         echo  "Stopping power.py: "
-        /sbin/start-stop-daemon --stop --oknodo --pidfile "/var/run/Mediatrix-power.pid"
+        /sbin/start-stop-daemon --stop -o --pidfile "/var/run/Mediatrix-power.pid"
         rm -f "/var/run/Mediatrix-power.pid"
 
 	    echo  "Stopping speaker.py: " >> $LOGFILE
         echo  "Stopping speaker.py: "
-        /sbin/start-stop-daemon --stop --oknodo --pidfile "/var/run/Mediatrix-speaker.pid"
+        /sbin/start-stop-daemon --stop -o --pidfile "/var/run/Mediatrix-speaker.pid"
         rm -f "/var/run/Mediatrix-speaker.pid"
 
 	    echo  "Stopping cooling.py: " >> $LOGFILE
         echo  "Stopping cooling.py: "
-        /sbin/start-stop-daemon --stop --oknodo --pidfile "/var/run/Mediatrix-cooling.pid"
+        /sbin/start-stop-daemon --stop -o --pidfile "/var/run/Mediatrix-cooling.pid"
         rm -f "/var/run/Mediatrix-cooling.pid"
 
         echo "Stop Ola" >> $LOGFILE
