@@ -48,8 +48,8 @@
       <file leaf-file-name="mediatrix" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Daemon/mediatrix">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="108" column="46" lean-forward="false" selection-start-line="108" selection-start-column="46" selection-end-line="108" selection-end-column="46" />
+            <state relative-caret-position="117">
+              <caret line="37" column="21" lean-forward="false" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -1208,21 +1208,7 @@
       <workItem from="1524676971326" duration="287000" />
       <workItem from="1525984041913" duration="596000" />
       <workItem from="1526156674310" duration="39276000" />
-      <workItem from="1526587174159" duration="1891000" />
-    </task>
-    <task id="LOCAL-00313" summary="dev loop error">
-      <created>1526161106990</created>
-      <option name="number" value="00313" />
-      <option name="presentableId" value="LOCAL-00313" />
-      <option name="project" value="LOCAL" />
-      <updated>1526161106990</updated>
-    </task>
-    <task id="LOCAL-00314" summary="dev loop error">
-      <created>1526161241557</created>
-      <option name="number" value="00314" />
-      <option name="presentableId" value="LOCAL-00314" />
-      <option name="project" value="LOCAL" />
-      <updated>1526161241557</updated>
+      <workItem from="1526587174159" duration="2465000" />
     </task>
     <task id="LOCAL-00315" summary="dev loop error">
       <created>1526161327551</created>
@@ -1553,11 +1539,25 @@
       <option name="project" value="LOCAL" />
       <updated>1526589563354</updated>
     </task>
-    <option name="localTasksCounter" value="362" />
+    <task id="LOCAL-00362" summary="daemon dev">
+      <created>1526591065807</created>
+      <option name="number" value="00362" />
+      <option name="presentableId" value="LOCAL-00362" />
+      <option name="project" value="LOCAL" />
+      <updated>1526591065807</updated>
+    </task>
+    <task id="LOCAL-00363" summary="daemon dev">
+      <created>1526591325096</created>
+      <option name="number" value="00363" />
+      <option name="presentableId" value="LOCAL-00363" />
+      <option name="project" value="LOCAL" />
+      <updated>1526591325096</updated>
+    </task>
+    <option name="localTasksCounter" value="364" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="287966000" />
+    <option name="totallyTimeSpent" value="288540000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -2028,8 +2028,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Daemon/mediatrix">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="108" column="46" lean-forward="false" selection-start-line="108" selection-start-column="46" selection-end-line="108" selection-end-column="46" />
+        <state relative-caret-position="117">
+          <caret line="37" column="21" lean-forward="false" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
           <folding />
         </state>
       </provider>

@@ -35,7 +35,7 @@ PYTHON_OPTS="--start --background --make-pidfile --chdir /var/www/html/Mediatrix
 PYTHON="/usr/bin/python" 
 
 START_OPTS="--start --background --make-pidfile --pidfile ${PIDFILE} --chuid www-data --chdir /var/www/html/Mediatrix/php --exec ${DAEMON} ${DAEMON_OPTS}"
-STOP_OPTS="--stop -o--pidfile ${PIDFILE}"
+STOP_OPTS="--stop -o --pidfile ${PIDFILE}"
 
 WSSTART_OPS="--start --background --make-pidfile --pidfile /var/run/Mediatrix-websocket.pid --chuid www-data --chdir /var/www/html/Mediatrix/php --exec ${DAEMON} /var/www/html/Mediatrix/php/src/mixerLoop.php"
 
