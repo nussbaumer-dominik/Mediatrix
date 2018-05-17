@@ -37,21 +37,21 @@ class Application implements MessageComponentInterface
 
     public function onOpen(ConnectionInterface $conn)
     {
-        // Store the new connection to send messages to later
+        if(isset($GLOBALS['mixer']) && !is_null($GLOBALS['mixer'])) {
+            //check if there is already a connection
+            if (!isset($this->client)) {
+                $this->client = $conn;
+                $this->registerd = false;
 
-        //check if there is already a connection
-        if (!isset($this->client)) {
-            $this->client = $conn;
-            $this->registerd = false;
-
-            echo "New connection! ({$conn->resourceId})\n";
+                echo "New connection! ({$conn->resourceId})\n";
 
 
-        } else {
-            $conn->send("Already a connection");
-            $conn->close();
+            } else {
+                $conn->send("Already a connection");
+                $conn->close();
 
-            echo "Connection denied! ({$conn->resourceId})\n";
+                echo "Connection denied! ({$conn->resourceId})\n";
+            }
         }
     }
 

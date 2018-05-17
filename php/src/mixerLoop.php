@@ -20,7 +20,7 @@ $GLOBALS['mixer'] = $mixer;
 $loop = LoopFactory::create();
 
 $loop->addPeriodicTimer(1, function() {
-    if(!( isset($GLOBALS['mixer']) || is_null($GLOBALS['mixer']))) {
+    if(isset($GLOBALS['mixer']) && !is_null($GLOBALS['mixer'])) {
         $GLOBALS['mixer']->alive();
     }
 });
