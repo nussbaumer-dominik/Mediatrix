@@ -82,7 +82,7 @@ $(function () {
 	socket.onclose = event => {
 		console.log("socket closed: " + socket + " " + event);
 		outputMessage("Die Verbindung mit dem Server wurde geschlossen");
-		//setTimeout(() => {window.location.replace('login.html')},1000);
+		setTimeout(() => {window.location.replace('login.html')},1000);
 	};
 
 	//Daten versenden
