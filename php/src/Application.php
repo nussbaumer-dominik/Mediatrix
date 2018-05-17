@@ -38,7 +38,7 @@ class Application implements MessageComponentInterface
     public function onOpen(ConnectionInterface $conn)
     {
         var_dump($GLOBALS['mixer']);
-        var_dump(isset($GLOBALS['mixer']));
+        var_dump(isset($GLOBALS['mixer']) && !is_null($GLOBALS['mixer']));
         if(isset($GLOBALS['mixer']) && !is_null($GLOBALS['mixer'])) {
             //check if there is already a connection
             if (!isset($this->client)) {
@@ -49,11 +49,16 @@ class Application implements MessageComponentInterface
 
 
             } else {
-                $conn->send("Already a connection");
+                $conn->send('{"success",false,"err":"Already a connection"}');
                 $conn->close();
 
                 echo "Connection denied! ({$conn->resourceId})\n";
             }
+        }else{
+            $conn->send('{"success",false,"err":"No Connection to the Mixer"}');
+            $conn->close();
+
+            echo "No Connection to the Mixer ({$conn->resourceId})\n";
         }
     }
 
