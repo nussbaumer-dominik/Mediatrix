@@ -497,13 +497,15 @@ $(function () {
 					"<div> <i class='fas fa-lightbulb'> </i> <h3>0</h3> </div>"
 				);
 			}
-			if (presets[i].conf.av.mode) {
-				div.append(
-					"<div> <i class='fas fa-volume-up'> </i> <h3>" +
-					presets[i].conf.av.mode +
-					"</h3> </div>"
-				);
-			} else {
+			if(presets[i].conf.av) {
+                if (presets[i].conf.av.mode) {
+                    div.append(
+                        "<div> <i class='fas fa-volume-up'> </i> <h3>" +
+                        presets[i].conf.av.mode +
+                        "</h3> </div>"
+                    );
+                }
+            }else {
 				div.append(
 					"<div> <i class='fas fa-volume-up'> </i> <h3> - </h3> </div>"
 				);

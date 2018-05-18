@@ -48,8 +48,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="39" column="4" lean-forward="false" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+            <state relative-caret-position="180">
+              <caret line="499" column="33" lean-forward="false" selection-start-line="499" selection-start-column="33" selection-end-line="499" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -1213,14 +1213,7 @@
       <workItem from="1525984041913" duration="596000" />
       <workItem from="1526156674310" duration="39276000" />
       <workItem from="1526587174159" duration="2719000" />
-      <workItem from="1526648849860" duration="55000" />
-    </task>
-    <task id="LOCAL-00317" summary="check.sh and daemon dev">
-      <created>1526202265295</created>
-      <option name="number" value="00317" />
-      <option name="presentableId" value="LOCAL-00317" />
-      <option name="project" value="LOCAL" />
-      <updated>1526202265295</updated>
+      <workItem from="1526648849860" duration="716000" />
     </task>
     <task id="LOCAL-00318" summary="check.sh and daemon dev">
       <created>1526297123248</created>
@@ -1558,11 +1551,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526591830499</updated>
     </task>
-    <option name="localTasksCounter" value="366" />
+    <task id="LOCAL-00366" summary="change ip js">
+      <created>1526648937796</created>
+      <option name="number" value="00366" />
+      <option name="presentableId" value="LOCAL-00366" />
+      <option name="project" value="LOCAL" />
+      <updated>1526648937796</updated>
+    </task>
+    <option name="localTasksCounter" value="367" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="288849000" />
+    <option name="totallyTimeSpent" value="289510000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1641,7 +1641,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix cooling.py" />
     <MESSAGE value="dev default preset login" />
     <MESSAGE value="deactivate mixer" />
     <MESSAGE value="change ip" />
@@ -1666,7 +1665,8 @@
     <MESSAGE value="add led to daemon" />
     <MESSAGE value="change gpio" />
     <MESSAGE value="daemon dev" />
-    <option name="LAST_COMMIT_MESSAGE" value="daemon dev" />
+    <MESSAGE value="change ip js" />
+    <option name="LAST_COMMIT_MESSAGE" value="change ip js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2006,8 +2006,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="39" column="4" lean-forward="false" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+        <state relative-caret-position="180">
+          <caret line="499" column="33" lean-forward="false" selection-start-line="499" selection-start-column="33" selection-end-line="499" selection-end-column="33" />
           <folding />
         </state>
       </provider>
