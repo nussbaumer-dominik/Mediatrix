@@ -48,8 +48,8 @@
       <file leaf-file-name="Mixer.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Mixer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="33" column="34" lean-forward="true" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+            <state relative-caret-position="288">
+              <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -1235,14 +1235,7 @@
       <workItem from="1525984041913" duration="596000" />
       <workItem from="1526156674310" duration="39276000" />
       <workItem from="1526587174159" duration="2719000" />
-      <workItem from="1526648849860" duration="1750000" />
-    </task>
-    <task id="LOCAL-00322" summary="check.sh and daemon dev">
-      <created>1526299041809</created>
-      <option name="number" value="00322" />
-      <option name="presentableId" value="LOCAL-00322" />
-      <option name="project" value="LOCAL" />
-      <updated>1526299041809</updated>
+      <workItem from="1526648849860" duration="1835000" />
     </task>
     <task id="LOCAL-00323" summary="check.sh and daemon dev">
       <created>1526301662771</created>
@@ -1580,11 +1573,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526652683380</updated>
     </task>
-    <option name="localTasksCounter" value="371" />
+    <task id="LOCAL-00371" summary="php dev">
+      <created>1526652780307</created>
+      <option name="number" value="00371" />
+      <option name="presentableId" value="LOCAL-00371" />
+      <option name="project" value="LOCAL" />
+      <updated>1526652780307</updated>
+    </task>
+    <option name="localTasksCounter" value="372" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="290544000" />
+    <option name="totallyTimeSpent" value="290629000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -2030,8 +2030,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Mixer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="33" column="34" lean-forward="true" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+        <state relative-caret-position="288">
+          <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
           <folding />
         </state>
       </provider>

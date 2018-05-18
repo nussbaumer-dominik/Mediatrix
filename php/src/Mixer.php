@@ -31,6 +31,9 @@ class Mixer {
 		curl_setopt($req, CURLOPT_AUTOREFERER, TRUE);
 		curl_setopt($req, CURLOPT_CONNECTTIMEOUT, 400);
         curl_setopt($req, CURLOPT_TIMEOUT, 400);
+
+        echo "Test";
+
 		$result = curl_exec($req);
 
 		$session_id = substr($result, 0, 20);
