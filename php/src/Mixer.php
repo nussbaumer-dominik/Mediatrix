@@ -29,8 +29,8 @@ class Mixer {
 		curl_setopt($req, CURLOPT_RETURNTRANSFER, TRUE);
 		curl_setopt($req, CURLOPT_FOLLOWLOCATION, TRUE);
 		curl_setopt($req, CURLOPT_AUTOREFERER, TRUE);
-		curl_setopt($req, CURLOPT_CONNECTTIMEOUT, 400);
-        curl_setopt($req, CURLOPT_TIMEOUT, 400);
+		curl_setopt($req, CURLOPT_CONNECTTIMEOUT, 1);
+        curl_setopt($req, CURLOPT_TIMEOUT, 1);
 
         echo "Test";
 
