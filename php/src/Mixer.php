@@ -35,7 +35,7 @@ class Mixer {
 		$session_id = substr($result, 0, 20);
 
 
-		echo $session_id . " ";
+		echo "Session_Id: ". $session_id . " ";
 		curl_close ($req);
 
 		try {
