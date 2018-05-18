@@ -29,6 +29,7 @@ class Mixer {
 		curl_setopt($req, CURLOPT_RETURNTRANSFER, TRUE);
 		curl_setopt($req, CURLOPT_FOLLOWLOCATION, TRUE);
 		curl_setopt($req, CURLOPT_AUTOREFERER, TRUE);
+		curl_setopt($req, CURLOPT_CONNECTTIMEOUT, 400);
 		$result = curl_exec($req);
 
 		$session_id = substr($result, 0, 20);
