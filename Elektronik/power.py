@@ -3,7 +3,7 @@
 import RPi.GPIO as GPIO
 from time import sleep
 
-import subprocess
+import os
 
 GPIO.setwarnings(False)			#disable warnings
 
@@ -55,7 +55,7 @@ def switchPower(pstate):
         file.write("0")
         file.close()
 
-        subprocess.call("php /var/www/html/Mediatrix/php/src/beamerOff.php")
+        os.system("php /var/www/html/Mediatrix/php/src/beamerOff.php")
 
     return pstate
 
