@@ -10,5 +10,9 @@ use Mediatrix\Beamer;
 if(isset($GLOBALS['beamer'])){
     $beamer = $GLOBALS['beamer'];
 
-    $beamer->off();
+
+
+    if(!$beamer->isOn()){
+        $beamer->off();
+    }
 }

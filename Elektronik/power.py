@@ -55,7 +55,7 @@ def switchPower(pstate):
         file.write("0")
         file.close()
 
-        subprocess.call("php /var/www/html/Mediatrix/php/src/beamerOff.php.php")
+        subprocess.call("php /var/www/html/Mediatrix/php/src/beamerOff.php")
 
     return pstate
 
