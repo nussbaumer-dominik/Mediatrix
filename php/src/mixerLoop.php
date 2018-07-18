@@ -15,7 +15,7 @@ $mixer = new \Mediatrix\Mixer('192.168.1.100');
 //$mixer = new \Mediatrix\Mixer('10.0.0.53');
 //$mixer = null;
 
-$GLOBALS['mixer'] = $mixer;
+$GLOBALS['mixer'] = 2;
 
 var_dump($GLOBALS['mixer']);
 
