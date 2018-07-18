@@ -28,7 +28,7 @@ class Application implements MessageComponentInterface
     private $av;
     protected $mixer;
 
-    public function __construct($mixer)
+    public function __construct(&$mixer)
     {
         $this->mixer = $mixer;
         var_dump($GLOBALS['mixer']);
