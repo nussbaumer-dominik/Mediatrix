@@ -17,16 +17,15 @@ $mixer = new \Mediatrix\Mixer('192.168.1.100');
 
 $GLOBALS['mixer'] = 2;
 
-/*
+
 var_dump($GLOBALS['mixer']);
 
 $loop = LoopFactory::create();
 
 $loop->addPeriodicTimer(1, function() {
-    if(isset($GLOBALS['mixer']) && !is_null($GLOBALS['mixer'])) {
+    /*if(isset($GLOBALS['mixer']) && !is_null($GLOBALS['mixer'])) {
         $GLOBALS['mixer']->alive();
-    }
+    }*/
 });
 
 $loop->run();
-*/
