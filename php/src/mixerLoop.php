@@ -18,7 +18,7 @@ $mixer = new \Mediatrix\Mixer('192.168.1.100');
 $GLOBALS['mixer'] = 2;
 
 
-var_dump($GLOBALS['mixer']);
+var_dump($GLOBALS);
 
 $loop = LoopFactory::create();
 
