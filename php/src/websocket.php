@@ -1,5 +1,5 @@
 <?php
-
+/*
 use Mediatrix\MyIoServer;
 use Ratchet\Http\HttpServer;
 use Ratchet\Server\IoServer;
@@ -10,7 +10,7 @@ use WebSocket\Client;
 require __DIR__ . '/../vendor/autoload.php';
 
     //$GLOBALS['mixer'] =
-
+*/
     var_dump($GLOBALS['mixer']);
     /*
     $server = IoServer::factory(
