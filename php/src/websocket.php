@@ -9,7 +9,7 @@ use WebSocket\Client;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-    $GLOBALS['mixer'] = null;
+    //$GLOBALS['mixer'] = null;
 
     $server = IoServer::factory(
         new HttpServer(
