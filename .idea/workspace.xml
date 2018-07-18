@@ -52,7 +52,7 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
+            <state relative-caret-position="1980">
               <caret line="132" column="39" lean-forward="true" selection-start-line="132" selection-start-column="39" selection-end-line="132" selection-end-column="39" />
               <folding>
                 <marker date="1531901414702" expanded="true" signature="14034:14074" ph="SELECT * FRO... preset" />
@@ -75,8 +75,8 @@
       <file leaf-file-name="websocket.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            <state relative-caret-position="144">
+              <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -1255,14 +1255,7 @@
       <workItem from="1527085079628" duration="2243000" />
       <workItem from="1527088207523" duration="2995000" />
       <workItem from="1527689158046" duration="1869000" />
-      <workItem from="1531900755721" duration="1346000" />
-    </task>
-    <task id="LOCAL-00332" summary="loop dev">
-      <created>1526310887114</created>
-      <option name="number" value="00332" />
-      <option name="presentableId" value="LOCAL-00332" />
-      <option name="project" value="LOCAL" />
-      <updated>1526310887114</updated>
+      <workItem from="1531900755721" duration="1509000" />
     </task>
     <task id="LOCAL-00333" summary="check.sh dev">
       <created>1526311201466</created>
@@ -1600,11 +1593,18 @@
       <option name="project" value="LOCAL" />
       <updated>1531901752888</updated>
     </task>
-    <option name="localTasksCounter" value="381" />
+    <task id="LOCAL-00381" summary="debug php">
+      <created>1531902114105</created>
+      <option name="number" value="00381" />
+      <option name="presentableId" value="LOCAL-00381" />
+      <option name="project" value="LOCAL" />
+      <updated>1531902114105</updated>
+    </task>
+    <option name="localTasksCounter" value="382" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="300866000" />
+    <option name="totallyTimeSpent" value="301029000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -2036,7 +2036,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="1980">
           <caret line="132" column="39" lean-forward="true" selection-start-line="132" selection-start-column="39" selection-end-line="132" selection-end-column="39" />
           <folding>
             <marker date="1531901414702" expanded="true" signature="14034:14074" ph="SELECT * FRO... preset" />
@@ -2055,8 +2055,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/src/websocket.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        <state relative-caret-position="144">
+          <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
           <folding />
         </state>
       </provider>
