@@ -12,7 +12,7 @@ require __DIR__ . '/../vendor/autoload.php';
     //$GLOBALS['mixer'] =
 
     var_dump($GLOBALS['mixer']);
-
+    /*
     $server = IoServer::factory(
         new HttpServer(
             new WsServer(
@@ -24,3 +24,4 @@ require __DIR__ . '/../vendor/autoload.php';
     );
 
     $server->run();
+    */
