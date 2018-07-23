@@ -7,3 +7,8 @@
  */
 
 var_dump($GLOBALS);
+
+while(true){
+    sleep(3);
+    var_dump($GLOBALS);
+}

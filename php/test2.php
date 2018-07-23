@@ -7,4 +7,9 @@
  */
 
 $GLOABALS['test'] = "test";
-
+$i = 0;
+while(true){
+    $i++;
+    $GLOABALS['test'] = "test"+$i;
+    sleep(3);
+}
