@@ -4,7 +4,6 @@
     <list default="true" id="86a6af96-3114-481b-8977-fc2dd10d05b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/php/src/Application.php" afterPath="$PROJECT_DIR$/php/src/Application.php" />
-      <change beforePath="$PROJECT_DIR$/php/src/websocket.php" afterPath="$PROJECT_DIR$/php/src/websocket.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,12 +52,22 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="655" column="54" lean-forward="false" selection-start-line="655" selection-start-column="54" selection-end-line="655" selection-end-column="54" />
+            <state relative-caret-position="288">
+              <caret line="647" column="54" lean-forward="false" selection-start-line="647" selection-start-column="54" selection-end-line="647" selection-end-column="54" />
               <folding>
-                <marker date="1532450472658" expanded="true" signature="13996:14036" ph="SELECT * FRO... preset" />
-                <marker date="1532450472658" expanded="true" signature="14774:14816" ph="SELECT isext... user" />
+                <marker date="1532450649819" expanded="true" signature="13959:13999" ph="SELECT * FRO... preset" />
+                <marker date="1532450649819" expanded="true" signature="14737:14779" ph="SELECT isext... user" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mikrofon.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/src/Mikrofon.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -544,6 +553,12 @@
               <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="php" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Mediatrix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mediatrix" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="php" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -1270,14 +1285,7 @@
       <workItem from="1527689158046" duration="1869000" />
       <workItem from="1531900755721" duration="3660000" />
       <workItem from="1531942680431" duration="1413000" />
-      <workItem from="1532342845821" duration="8446000" />
-    </task>
-    <task id="LOCAL-00348" summary="add except only if mixer connection etablished">
-      <created>1526576483170</created>
-      <option name="number" value="00348" />
-      <option name="presentableId" value="LOCAL-00348" />
-      <option name="project" value="LOCAL" />
-      <updated>1526576483170</updated>
+      <workItem from="1532342845821" duration="8625000" />
     </task>
     <task id="LOCAL-00349" summary="add timeout befor link to login js">
       <created>1526576834434</created>
@@ -1615,11 +1623,18 @@
       <option name="project" value="LOCAL" />
       <updated>1532449968972</updated>
     </task>
-    <option name="localTasksCounter" value="397" />
+    <task id="LOCAL-00397" summary="dev php">
+      <created>1532450483862</created>
+      <option name="number" value="00397" />
+      <option name="presentableId" value="LOCAL-00397" />
+      <option name="project" value="LOCAL" />
+      <updated>1532450483863</updated>
+    </task>
+    <option name="localTasksCounter" value="398" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="313039000" />
+    <option name="totallyTimeSpent" value="313218000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1882,13 +1897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/src/Mikrofon.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Elektronik/speaker.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="972">
@@ -2082,13 +2090,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/php/src/Mikrofon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="655" column="54" lean-forward="false" selection-start-line="655" selection-start-column="54" selection-end-line="655" selection-end-column="54" />
+        <state relative-caret-position="288">
+          <caret line="647" column="54" lean-forward="false" selection-start-line="647" selection-start-column="54" selection-end-line="647" selection-end-column="54" />
           <folding>
-            <marker date="1532450472658" expanded="true" signature="13996:14036" ph="SELECT * FRO... preset" />
-            <marker date="1532450472658" expanded="true" signature="14774:14816" ph="SELECT isext... user" />
+            <marker date="1532450649819" expanded="true" signature="13959:13999" ph="SELECT * FRO... preset" />
+            <marker date="1532450649819" expanded="true" signature="14737:14779" ph="SELECT isext... user" />
           </folding>
         </state>
       </provider>

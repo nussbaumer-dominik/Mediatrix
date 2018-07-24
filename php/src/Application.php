@@ -30,7 +30,6 @@ class Application implements MessageComponentInterface
 
     public function __construct()
     {
-        var_dump($GLOBALS['mixer']);
         $this->iniMe();
     }
 
@@ -645,6 +644,9 @@ class Application implements MessageComponentInterface
             /*
              * Mikrofon
              */
+
+            $this->mixer = new Mixer('192.168.1.100');
+
             $mikrofone = array();
 
             foreach ($ini['mixer']['mikrofon'] as $key => $mic){
@@ -652,8 +654,6 @@ class Application implements MessageComponentInterface
             }
 
             $this->mikrofone = $mikrofone;
-
-            $this->mixer = new Mixer('192.168.1.100');
 
             /*
              * BEAMER:
