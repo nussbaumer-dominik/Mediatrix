@@ -27,6 +27,7 @@ class Application implements MessageComponentInterface
     private $registerd;
     private $av;
     protected $mixer;
+    private $mikrofone;
 
     public function __construct()
     {
@@ -132,7 +133,6 @@ class Application implements MessageComponentInterface
 
                         if(isset($val['mute']) && !(is_null($this->mikrofone[$val['id']]))){
                             echo "Test\n";
-                            var_dump($GLOBALS['mixer']);
                             var_dump($this->mixer);
                             $r = $this->mikrofone[$val['id']]->mute($val['mute']);
                             $r['success'] ?: array_push($result, $r);
