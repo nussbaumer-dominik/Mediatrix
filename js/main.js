@@ -16,10 +16,10 @@ $(function () {
 			mixer: {
 				mikrofone: [{
 					id: "0",
-					value: 0
+					value: 0.0
 				}, {
 					id: "1",
-					value: 0
+					value: 0.0
 				}]
 			},
 			beamer: {}
@@ -29,10 +29,10 @@ $(function () {
 		mixer: {
 			mikrofone: [{
 				id: "0",
-				value: 0
+				value: 0.0
 			}, {
 				id: "1",
-				value: 0
+				value: 0.0
 			}]
 		}
 	};
