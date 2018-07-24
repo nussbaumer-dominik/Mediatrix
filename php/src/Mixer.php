@@ -10,19 +10,16 @@ class Mixer {
 	protected $count = 1;
 	protected $lastVolume = 0.0;
 	protected $command = "3:::SETD^i.";
+	protected $ipAdress;
 
 	//Konstruktor
 	public function __construct(string $ipAddress) {
-		$erg = $this->connectToScui($ipAddress);
-		if(!$erg['success']){
-		    throw new \Exception('Connection to Mixer impossible');
-        }
-		echo $ipAddress;
+		$this->ipAdress = $ipAddress;
 	}
 
 	//Verbindung mit Mischpult herstellen
 	public function connectToScui($ipAddress) {
-		echo "connectToScui";
+		echo "connectToScui\n";
 		$url = $ipAddress . "/socket.io/";
 		$req = curl_init();
 		curl_setopt($req, CURLOPT_URL, $url);
@@ -32,17 +29,15 @@ class Mixer {
 		curl_setopt($req, CURLOPT_CONNECTTIMEOUT, 1);
         curl_setopt($req, CURLOPT_TIMEOUT, 1);
 
-        echo "Test";
-
 		$result = curl_exec($req);
 
 		$session_id = substr($result, 0, 20);
 
 
-		echo "Session_Id: ". $session_id . " ";
+		echo "Session_Id: ". $session_id . " \n";
 		curl_close ($req);
 
-		try {
+
 			if($session_id == ""){
                 throw new \Exception('Connection to Mixer impossible');
             }
@@ -51,10 +46,7 @@ class Mixer {
 			$this->mixer = new Client("ws://" . $ipAddress . "/socket.io/1/websocket/" . $session_id);
 
 			return array("success" => true, "err" => "");
-		} catch (\Exception $ex){
-			return array("success" => false, "err" => $ex);
-			echo "Error beim Verbindungsaufbau " . $ex;
-		}
+
 	}
 
 	//Mute Befehl erstellen
@@ -63,11 +55,18 @@ class Mixer {
 		try {
 			echo "im Try Block der Mute-Funktion gelandet \n";
 			echo "Der Mute Wert ist: " . $mute . " und der Kanal: " . $channel . "\n";
+
+			$this->connectToScui($this->ipAdress);
+
 			$this->mixer->send($this->command . $channel . ".mute^" . $mute);
+
+			$this->mixer = null;
+
 			return array("success" => true, "err" => "");
-		} catch(Exception $ex) {
-			return array("success" => false, "err" => $ex);
-			echo "Error beim muten " . $ex;
+		} catch(\Exception $ex) {
+            echo "Error beim muten " . $ex;
+		    return array("success" => false, "err" => $ex);
+
 		}
 	}
 
@@ -76,15 +75,22 @@ class Mixer {
 		try {
 			echo "im Try Block der mix-Funktion gelandet \n"; 
 			echo "die Lautstärke ist: " . $val . " und der Channel: " . $channel . "\n";
+
+            $this->connectToScui($this->ipAdress);
+
 			$this->mixer->send($this->command . $channel . ".mix^" . $val);
+
+            $this->mixer = null;
+
 			echo "success";
 			if($channel == "0"){
 				$this->lastVolume = $val;
 			}
 			return array("success" => true, "err" => "");
-		} catch(Exception $ex) {
-			return array("success" => false, "err" => $ex);
-			echo "stellen der Lautstärke fehlgeschlagen - Fehlermeldung: " . $ex;
+		} catch(\Exception $ex) {
+            echo "stellen der Lautstärke fehlgeschlagen - Fehlermeldung: " . $ex;
+		    return array("success" => false, "err" => $ex);
+
 		}
 	}
 
@@ -100,19 +106,26 @@ class Mixer {
 			//}
 			$this->count++;
 			return array("success" => true, "err" => "");
-		} catch(Exception $ex) {
-			return array("success" => false, "err" => $ex);
-			echo "Alive fehlgeschlagen - Fehlermeldung: " . $ex;
+		} catch(\Exception $ex) {
+            echo "Alive fehlgeschlagen - Fehlermeldung: " . $ex;
+		    return array("success" => false, "err" => $ex);
+
 		}
 	}
 
 	public function setLineVolume($val) {
 		echo $val . "";
 		try {
-			$this->mixer->send("3:::SETD^l.0.mix^" . $val);
+
+            $this->connectToScui($this->ipAdress);
+
+		    $this->mixer->send("3:::SETD^l.0.mix^" . $val);
 			$this->mixer->send("3:::SETD^l.1.mix^" . $val);
+
+            $this->mixer = null;
+
 			return array("success" => true, "err" => "");
-		} catch(Exception $ex) {
+		} catch(\Exception $ex) {
 			return array("success" => false, "err" => $ex);
 		}
 	}
@@ -120,9 +133,15 @@ class Mixer {
 	public function setMasterVolume($val) {
 		echo $val . "";
 		try {
-			$this->mixer->send("3:::SETD^m.mix^" . $val);
+
+            $this->connectToScui($this->ipAdress);
+
+		    $this->mixer->send("3:::SETD^m.mix^" . $val);
+
+            $this->mixer = null;
+
 			return array("success" => true, "err" => "");
-		} catch(Exception $ex) {
+		} catch(\Exception $ex) {
 			return array("success" => false, "err" => $ex);
 		}
 	}
