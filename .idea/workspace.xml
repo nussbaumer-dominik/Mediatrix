@@ -52,16 +52,16 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="129" column="70" lean-forward="false" selection-start-line="129" selection-start-column="70" selection-end-line="129" selection-end-column="70" />
+            <state relative-caret-position="288">
+              <caret line="132" column="48" lean-forward="false" selection-start-line="132" selection-start-column="48" selection-end-line="132" selection-end-column="48" />
               <folding>
-                <element signature="e#9315#9594#0#PHP" expanded="false" />
-                <element signature="e#9600#9762#0#PHP" expanded="false" />
-                <element signature="e#9843#13523#0#PHP" expanded="false" />
-                <element signature="e#13585#15763#0#PHP" expanded="false" />
-                <element signature="e#15770#16425#0#PHP" expanded="false" />
-                <marker date="1532452599355" expanded="true" signature="13790:13830" ph="SELECT * FRO... preset" />
-                <marker date="1532452599355" expanded="true" signature="14568:14610" ph="SELECT isext... user" />
+                <element signature="e#9439#9718#0#PHP" expanded="false" />
+                <element signature="e#9724#9886#0#PHP" expanded="false" />
+                <element signature="e#9967#13647#0#PHP" expanded="false" />
+                <element signature="e#13709#15887#0#PHP" expanded="false" />
+                <element signature="e#15894#16549#0#PHP" expanded="false" />
+                <marker date="1532453115078" expanded="true" signature="13914:13954" ph="SELECT * FRO... preset" />
+                <marker date="1532453115078" expanded="true" signature="14692:14734" ph="SELECT isext... user" />
               </folding>
             </state>
           </provider>
@@ -70,8 +70,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6156">
-              <caret line="102" column="22" lean-forward="true" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="22" />
+            <state relative-caret-position="226">
+              <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -167,6 +167,7 @@
       <find>default</find>
       <find>each</find>
       <find>$count</find>
+      <find>mixerData</find>
     </findStrings>
     <replaceStrings>
       <replace>-o</replace>
@@ -1306,14 +1307,7 @@
       <workItem from="1527689158046" duration="1869000" />
       <workItem from="1531900755721" duration="3660000" />
       <workItem from="1531942680431" duration="1413000" />
-      <workItem from="1532342845821" duration="10571000" />
-    </task>
-    <task id="LOCAL-00353" summary="php dev">
-      <created>1526578523839</created>
-      <option name="number" value="00353" />
-      <option name="presentableId" value="LOCAL-00353" />
-      <option name="project" value="LOCAL" />
-      <updated>1526578523839</updated>
+      <workItem from="1532342845821" duration="11086000" />
     </task>
     <task id="LOCAL-00354" summary="php dev">
       <created>1526578625695</created>
@@ -1651,11 +1645,18 @@
       <option name="project" value="LOCAL" />
       <updated>1532451953667</updated>
     </task>
-    <option name="localTasksCounter" value="402" />
+    <task id="LOCAL-00402" summary="dev php">
+      <created>1532452607394</created>
+      <option name="number" value="00402" />
+      <option name="presentableId" value="LOCAL-00402" />
+      <option name="project" value="LOCAL" />
+      <updated>1532452607394</updated>
+    </task>
+    <option name="localTasksCounter" value="403" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="315164000" />
+    <option name="totallyTimeSpent" value="315679000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -2104,14 +2105,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6156">
-          <caret line="102" column="22" lean-forward="true" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Mikrofon.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -2120,18 +2113,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="129" column="70" lean-forward="false" selection-start-line="129" selection-start-column="70" selection-end-line="129" selection-end-column="70" />
+        <state relative-caret-position="288">
+          <caret line="132" column="48" lean-forward="false" selection-start-line="132" selection-start-column="48" selection-end-line="132" selection-end-column="48" />
           <folding>
-            <element signature="e#9315#9594#0#PHP" expanded="false" />
-            <element signature="e#9600#9762#0#PHP" expanded="false" />
-            <element signature="e#9843#13523#0#PHP" expanded="false" />
-            <element signature="e#13585#15763#0#PHP" expanded="false" />
-            <element signature="e#15770#16425#0#PHP" expanded="false" />
-            <marker date="1532452599355" expanded="true" signature="13790:13830" ph="SELECT * FRO... preset" />
-            <marker date="1532452599355" expanded="true" signature="14568:14610" ph="SELECT isext... user" />
+            <element signature="e#9439#9718#0#PHP" expanded="false" />
+            <element signature="e#9724#9886#0#PHP" expanded="false" />
+            <element signature="e#9967#13647#0#PHP" expanded="false" />
+            <element signature="e#13709#15887#0#PHP" expanded="false" />
+            <element signature="e#15894#16549#0#PHP" expanded="false" />
+            <marker date="1532453115078" expanded="true" signature="13914:13954" ph="SELECT * FRO... preset" />
+            <marker date="1532453115078" expanded="true" signature="14692:14734" ph="SELECT isext... user" />
           </folding>
         </state>
       </provider>
