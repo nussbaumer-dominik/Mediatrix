@@ -13,7 +13,7 @@ require __DIR__ . '/../vendor/autoload.php';
     $server = IoServer::factory(
         new HttpServer(
             new WsServer(
-                new Application($GLOBALS['mixer'])
+                new Application()
             )
         ),
             10000,

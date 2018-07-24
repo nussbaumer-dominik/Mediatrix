@@ -28,9 +28,8 @@ class Application implements MessageComponentInterface
     private $av;
     protected $mixer;
 
-    public function __construct(&$mixer)
+    public function __construct()
     {
-        $this->mixer = $mixer;
         var_dump($GLOBALS['mixer']);
         $this->iniMe();
     }
@@ -653,6 +652,8 @@ class Application implements MessageComponentInterface
             }
 
             $this->mikrofone = $mikrofone;
+
+            $this->mixer = new Mixer('192.168.1.100');
 
             /*
              * BEAMER:
