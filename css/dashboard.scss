@@ -36,6 +36,10 @@ body {
 	color: var(--color);
 }
 
+body * {
+	box-sizing: border-box;
+}
+
 a {
 	color: inherit;
 }
